@@ -41,10 +41,10 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\Feel\NiceVibrations\Scripts\Editor\HapticImporter.cs" />
-     <Compile Include="Assets\Feel\NiceVibrations\Scripts\Editor\HapticSourceInspector.cs" />
-     <None Include="Assets\Feel\NiceVibrations\Scripts\Editor\Lofelt.NiceVibrations.Editor.asmdef" />
-     <Folder Include="Assets\Feel\NiceVibrations\Scripts\Editor" />
+     <Compile Include="Assets\Plugins\Feel\NiceVibrations\Scripts\Editor\HapticImporter.cs" />
+     <Compile Include="Assets\Plugins\Feel\NiceVibrations\Scripts\Editor\HapticSourceInspector.cs" />
+     <None Include="Assets\Plugins\Feel\NiceVibrations\Scripts\Editor\Lofelt.NiceVibrations.Editor.asmdef" />
+     <Folder Include="Assets\Plugins\Feel\NiceVibrations\Scripts\Editor" />
      <Reference Include="UnityEngine">
      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.25f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
      </Reference>

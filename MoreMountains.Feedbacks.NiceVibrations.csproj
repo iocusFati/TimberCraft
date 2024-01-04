@@ -41,23 +41,23 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\Feel\MMFeedbacks\MMFeedbacksForThirdParty\NiceVibrations\Feedbacks\MMF_NVControl.cs" />
-     <Compile Include="Assets\Feel\MMFeedbacks\MMFeedbacksForThirdParty\NiceVibrations\Feedbacks\Legacy\MMFeedbackNVSettings.cs" />
-     <Compile Include="Assets\Feel\MMFeedbacks\MMFeedbacksForThirdParty\NiceVibrations\Feedbacks\Legacy\MMFeedbackNVEmphasis.cs" />
-     <Compile Include="Assets\Feel\MMFeedbacks\MMFeedbacksForThirdParty\NiceVibrations\Feedbacks\Legacy\MMFeedbackNVControl.cs" />
-     <Compile Include="Assets\Feel\MMFeedbacks\MMFeedbacksForThirdParty\NiceVibrations\Feedbacks\Legacy\MMFeedbackNVClip.cs" />
-     <Compile Include="Assets\Feel\MMFeedbacks\MMFeedbacksForThirdParty\NiceVibrations\Feedbacks\MMF_NVPreset.cs" />
-     <Compile Include="Assets\Feel\MMFeedbacks\MMFeedbacksForThirdParty\NiceVibrations\Feedbacks\MMF_Haptics.cs" />
-     <Compile Include="Assets\Feel\MMFeedbacks\MMFeedbacksForThirdParty\NiceVibrations\Feedbacks\Legacy\MMFeedbackHaptics.cs" />
-     <Compile Include="Assets\Feel\MMFeedbacks\MMFeedbacksForThirdParty\NiceVibrations\Feedbacks\Legacy\MMFeedbackNVPreset.cs" />
-     <Compile Include="Assets\Feel\MMFeedbacks\MMFeedbacksForThirdParty\NiceVibrations\Feedbacks\MMF_NVEmphasis.cs" />
-     <Compile Include="Assets\Feel\MMFeedbacks\MMFeedbacksForThirdParty\NiceVibrations\Feedbacks\MMF_NVClip.cs" />
-     <Compile Include="Assets\Feel\MMFeedbacks\MMFeedbacksForThirdParty\NiceVibrations\Feedbacks\Legacy\MMFeedbackNVContinuous.cs" />
-     <Compile Include="Assets\Feel\MMFeedbacks\MMFeedbacksForThirdParty\NiceVibrations\Feedbacks\MMF_NVContinuous.cs" />
-     <Folder Include="Assets\Feel\MMFeedbacks\MMFeedbacksForThirdParty\NiceVibrations\Feedbacks" />
-     <Folder Include="Assets\Feel\MMFeedbacks\MMFeedbacksForThirdParty\NiceVibrations" />
-     <None Include="Assets\Feel\MMFeedbacks\MMFeedbacksForThirdParty\NiceVibrations\MoreMountains.Feedbacks.NiceVibrations.asmdef" />
-     <Folder Include="Assets\Feel\MMFeedbacks\MMFeedbacksForThirdParty\NiceVibrations\Feedbacks\Legacy" />
+     <Compile Include="Assets\Plugins\Feel\MMFeedbacks\MMFeedbacksForThirdParty\NiceVibrations\Feedbacks\MMF_NVControl.cs" />
+     <Compile Include="Assets\Plugins\Feel\MMFeedbacks\MMFeedbacksForThirdParty\NiceVibrations\Feedbacks\Legacy\MMFeedbackNVSettings.cs" />
+     <Compile Include="Assets\Plugins\Feel\MMFeedbacks\MMFeedbacksForThirdParty\NiceVibrations\Feedbacks\Legacy\MMFeedbackNVEmphasis.cs" />
+     <Compile Include="Assets\Plugins\Feel\MMFeedbacks\MMFeedbacksForThirdParty\NiceVibrations\Feedbacks\Legacy\MMFeedbackNVControl.cs" />
+     <Compile Include="Assets\Plugins\Feel\MMFeedbacks\MMFeedbacksForThirdParty\NiceVibrations\Feedbacks\Legacy\MMFeedbackNVClip.cs" />
+     <Compile Include="Assets\Plugins\Feel\MMFeedbacks\MMFeedbacksForThirdParty\NiceVibrations\Feedbacks\MMF_NVPreset.cs" />
+     <Compile Include="Assets\Plugins\Feel\MMFeedbacks\MMFeedbacksForThirdParty\NiceVibrations\Feedbacks\MMF_Haptics.cs" />
+     <Compile Include="Assets\Plugins\Feel\MMFeedbacks\MMFeedbacksForThirdParty\NiceVibrations\Feedbacks\Legacy\MMFeedbackHaptics.cs" />
+     <Compile Include="Assets\Plugins\Feel\MMFeedbacks\MMFeedbacksForThirdParty\NiceVibrations\Feedbacks\Legacy\MMFeedbackNVPreset.cs" />
+     <Compile Include="Assets\Plugins\Feel\MMFeedbacks\MMFeedbacksForThirdParty\NiceVibrations\Feedbacks\MMF_NVEmphasis.cs" />
+     <Compile Include="Assets\Plugins\Feel\MMFeedbacks\MMFeedbacksForThirdParty\NiceVibrations\Feedbacks\MMF_NVClip.cs" />
+     <Compile Include="Assets\Plugins\Feel\MMFeedbacks\MMFeedbacksForThirdParty\NiceVibrations\Feedbacks\Legacy\MMFeedbackNVContinuous.cs" />
+     <Compile Include="Assets\Plugins\Feel\MMFeedbacks\MMFeedbacksForThirdParty\NiceVibrations\Feedbacks\MMF_NVContinuous.cs" />
+     <Folder Include="Assets\Plugins\Feel\MMFeedbacks\MMFeedbacksForThirdParty\NiceVibrations\Feedbacks" />
+     <Folder Include="Assets\Plugins\Feel\MMFeedbacks\MMFeedbacksForThirdParty\NiceVibrations" />
+     <None Include="Assets\Plugins\Feel\MMFeedbacks\MMFeedbacksForThirdParty\NiceVibrations\MoreMountains.Feedbacks.NiceVibrations.asmdef" />
+     <Folder Include="Assets\Plugins\Feel\MMFeedbacks\MMFeedbacksForThirdParty\NiceVibrations\Feedbacks\Legacy" />
      <Reference Include="UnityEngine">
      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.25f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
      </Reference>

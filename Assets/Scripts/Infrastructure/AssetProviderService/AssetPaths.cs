@@ -6,5 +6,6 @@ namespace Infrastructure.AssetProviderService
         public const string MainLocation = "Prefabs/Locations/MainLocation";
 
         public const string PlayerData = "StaticData/Player";
+        public const string UIRoot = "UIRoot";
     }
 }

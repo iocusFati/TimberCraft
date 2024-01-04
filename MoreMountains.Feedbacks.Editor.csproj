@@ -41,32 +41,32 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\Feel\MMFeedbacks\Editor\Core\MMF_PlayerCopy.cs" />
-     <Compile Include="Assets\Feel\MMFeedbacks\Editor\Shakers\MMWiggleEditor.cs" />
-     <Compile Include="Assets\Feel\MMFeedbacks\Editor\Core\MMF_PlayerEditor.cs" />
-     <Compile Include="Assets\Feel\MMFeedbacks\Editor\Core\MMFeedbacksColors.cs" />
-     <Compile Include="Assets\Feel\MMFeedbacks\Editor\Sequencing\MMInputSequenceRecorderEditor.cs" />
-     <Compile Include="Assets\Feel\MMFeedbacks\Editor\Core\MMF_PlayerStyling.cs" />
-     <Compile Include="Assets\Feel\MMFeedbacks\Editor\Core\MMF_PlayerConfiguration.cs" />
-     <Compile Include="Assets\Feel\MMFeedbacks\Editor\Core\MMFeedbacksConfiguration.cs" />
-     <Compile Include="Assets\Feel\MMFeedbacks\Editor\FeedbackListOutputter\FeedbackListOutputer.cs" />
-     <Compile Include="Assets\Feel\MMFeedbacks\Editor\Sequencing\MMSequencerEditor.cs" />
-     <Compile Include="Assets\Feel\MMFeedbacks\Editor\Core\MMFeedbackStyling.cs" />
-     <Compile Include="Assets\Feel\MMFeedbacks\Editor\Core\AttributeDrawers.cs" />
-     <Compile Include="Assets\Feel\MMFeedbacks\Editor\Core\MMF_FeedbackInspector.cs" />
-     <Compile Include="Assets\Feel\MMFeedbacks\Editor\Legacy\MMFeedbacksEditor.cs" />
-     <Compile Include="Assets\Feel\MMFeedbacks\Editor\Core\MMF_FeedbackInspectorStyle.cs" />
-     <Folder Include="Assets\Feel\MMFeedbacks\Editor\Core" />
-     <Folder Include="Assets\Feel\MMFeedbacks\Editor" />
-     <Folder Include="Assets\Feel\MMFeedbacks\Editor\Legacy" />
-     <Folder Include="Assets\Feel\MMFeedbacks\Editor\Curves" />
-     <Folder Include="Assets\Feel\MMFeedbacks\Editor\Shakers" />
-     <Folder Include="Assets\Feel\MMFeedbacks\Editor\Sequencing\Resources" />
-     <None Include="Assets\Feel\MMFeedbacks\Editor\MoreMountains.Feedbacks.Editor.asmdef" />
-     <Folder Include="Assets\Feel\MMFeedbacks\Editor\Resources" />
-     <Folder Include="Assets\Feel\MMFeedbacks\Editor\Sequencing" />
-     <Folder Include="Assets\Feel\MMFeedbacks\Editor\FeedbackListOutputter" />
-     <Folder Include="Assets\Feel\MMFeedbacks\Editor\Curves\Editor" />
+     <Compile Include="Assets\Plugins\Feel\MMFeedbacks\Editor\Core\MMF_PlayerCopy.cs" />
+     <Compile Include="Assets\Plugins\Feel\MMFeedbacks\Editor\Shakers\MMWiggleEditor.cs" />
+     <Compile Include="Assets\Plugins\Feel\MMFeedbacks\Editor\Core\MMF_PlayerEditor.cs" />
+     <Compile Include="Assets\Plugins\Feel\MMFeedbacks\Editor\Core\MMFeedbacksColors.cs" />
+     <Compile Include="Assets\Plugins\Feel\MMFeedbacks\Editor\Sequencing\MMInputSequenceRecorderEditor.cs" />
+     <Compile Include="Assets\Plugins\Feel\MMFeedbacks\Editor\Core\MMF_PlayerStyling.cs" />
+     <Compile Include="Assets\Plugins\Feel\MMFeedbacks\Editor\Core\MMF_PlayerConfiguration.cs" />
+     <Compile Include="Assets\Plugins\Feel\MMFeedbacks\Editor\Core\MMFeedbacksConfiguration.cs" />
+     <Compile Include="Assets\Plugins\Feel\MMFeedbacks\Editor\FeedbackListOutputter\FeedbackListOutputer.cs" />
+     <Compile Include="Assets\Plugins\Feel\MMFeedbacks\Editor\Sequencing\MMSequencerEditor.cs" />
+     <Compile Include="Assets\Plugins\Feel\MMFeedbacks\Editor\Core\MMFeedbackStyling.cs" />
+     <Compile Include="Assets\Plugins\Feel\MMFeedbacks\Editor\Core\AttributeDrawers.cs" />
+     <Compile Include="Assets\Plugins\Feel\MMFeedbacks\Editor\Core\MMF_FeedbackInspector.cs" />
+     <Compile Include="Assets\Plugins\Feel\MMFeedbacks\Editor\Legacy\MMFeedbacksEditor.cs" />
+     <Compile Include="Assets\Plugins\Feel\MMFeedbacks\Editor\Core\MMF_FeedbackInspectorStyle.cs" />
+     <Folder Include="Assets\Plugins\Feel\MMFeedbacks\Editor\Core" />
+     <Folder Include="Assets\Plugins\Feel\MMFeedbacks\Editor" />
+     <Folder Include="Assets\Plugins\Feel\MMFeedbacks\Editor\Legacy" />
+     <Folder Include="Assets\Plugins\Feel\MMFeedbacks\Editor\Curves" />
+     <Folder Include="Assets\Plugins\Feel\MMFeedbacks\Editor\Shakers" />
+     <Folder Include="Assets\Plugins\Feel\MMFeedbacks\Editor\Sequencing\Resources" />
+     <None Include="Assets\Plugins\Feel\MMFeedbacks\Editor\MoreMountains.Feedbacks.Editor.asmdef" />
+     <Folder Include="Assets\Plugins\Feel\MMFeedbacks\Editor\Resources" />
+     <Folder Include="Assets\Plugins\Feel\MMFeedbacks\Editor\Sequencing" />
+     <Folder Include="Assets\Plugins\Feel\MMFeedbacks\Editor\FeedbackListOutputter" />
+     <Folder Include="Assets\Plugins\Feel\MMFeedbacks\Editor\Curves\Editor" />
      <Reference Include="UnityEngine">
      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.25f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
      </Reference>

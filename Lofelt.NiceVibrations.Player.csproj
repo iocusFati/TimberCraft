@@ -41,17 +41,17 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\Feel\NiceVibrations\Scripts\Components\AssemblyInfo.cs" />
-     <Compile Include="Assets\Feel\NiceVibrations\Scripts\Components\Gamepad.cs" />
-     <Compile Include="Assets\Feel\NiceVibrations\Scripts\Components\LofeltHaptics.cs" />
-     <Compile Include="Assets\Feel\NiceVibrations\Scripts\Components\HapticClip.cs" />
-     <Compile Include="Assets\Feel\NiceVibrations\Scripts\Components\JNIHelpers.cs" />
-     <Compile Include="Assets\Feel\NiceVibrations\Scripts\Components\HapticSource.cs" />
-     <Compile Include="Assets\Feel\NiceVibrations\Scripts\Components\HapticReceiver.cs" />
-     <Compile Include="Assets\Feel\NiceVibrations\Scripts\Components\HapticPatterns.cs" />
-     <Compile Include="Assets\Feel\NiceVibrations\Scripts\Components\HapticController.cs" />
-     <Compile Include="Assets\Feel\NiceVibrations\Scripts\Components\DeviceCapabilities.cs" />
-     <Compile Include="Assets\Feel\NiceVibrations\Define\NiceVibrationsDefineSymbols.cs" />
+     <Compile Include="Assets\Plugins\Feel\NiceVibrations\Scripts\Components\AssemblyInfo.cs" />
+     <Compile Include="Assets\Plugins\Feel\NiceVibrations\Scripts\Components\Gamepad.cs" />
+     <Compile Include="Assets\Plugins\Feel\NiceVibrations\Scripts\Components\LofeltHaptics.cs" />
+     <Compile Include="Assets\Plugins\Feel\NiceVibrations\Scripts\Components\HapticClip.cs" />
+     <Compile Include="Assets\Plugins\Feel\NiceVibrations\Scripts\Components\JNIHelpers.cs" />
+     <Compile Include="Assets\Plugins\Feel\NiceVibrations\Scripts\Components\HapticSource.cs" />
+     <Compile Include="Assets\Plugins\Feel\NiceVibrations\Scripts\Components\HapticReceiver.cs" />
+     <Compile Include="Assets\Plugins\Feel\NiceVibrations\Scripts\Components\HapticPatterns.cs" />
+     <Compile Include="Assets\Plugins\Feel\NiceVibrations\Scripts\Components\HapticController.cs" />
+     <Compile Include="Assets\Plugins\Feel\NiceVibrations\Scripts\Components\DeviceCapabilities.cs" />
+     <Compile Include="Assets\Plugins\Feel\NiceVibrations\Define\NiceVibrationsDefineSymbols.cs" />
      <Reference Include="UnityEngine">
      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.25f1\Editor\Data\PlaybackEngines\WindowsStandaloneSupport\Variations\mono\Managed\UnityEngine.dll</HintPath>
      </Reference>

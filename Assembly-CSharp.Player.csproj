@@ -41,24 +41,17 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\Easy Character Movement\Scripts\@Obsolete\BoxGroundDetection.cs" />
-     <Compile Include="Assets\Easy Character Movement\Scripts\Controllers\BaseFirstPersonController.cs" />
-     <Compile Include="Assets\Easy Character Movement\Scripts\Components\GroundDetection\BaseGroundDetection.cs" />
      <Compile Include="Assets\Scripts\Infrastructure\Services\PersistentProgress\PersistentProgressService.cs" />
      <Compile Include="Assets\Scripts\Infrastructure\Data\DataExtensions.cs" />
      <Compile Include="Assets\Scripts\Infrastructure\States\GameLoopState.cs" />
      <Compile Include="Assets\Scripts\Infrastructure\ITickable.cs" />
      <Compile Include="Assets\Scripts\Infrastructure\Services\SaveLoad\ISaveLoadService.cs" />
-     <Compile Include="Assets\Easy Character Movement\Scripts\Components\GroundDetection\GroundHit.cs" />
      <Compile Include="Assets\Scripts\Infrastructure\Services\AllServices.cs" />
      <Compile Include="Assets\Scripts\Infrastructure\States\LoadProgressState.cs" />
      <Compile Include="Assets\Scripts\Infrastructure\AssetProviderService\AssetProvider.cs" />
      <Compile Include="Assets\Scripts\Infrastructure\AssetProviderService\IAssets.cs" />
-     <Compile Include="Assets\Easy Character Movement\Scripts\Components\GroundDetection\GroundDetection.cs" />
      <Compile Include="Assets\Scripts\Infrastructure\StatesFactory.cs" />
-     <Compile Include="Assets\Easy Character Movement\Scripts\Controllers\BaseCharacterController.cs" />
      <Compile Include="Assets\Scripts\Infrastructure\States\BootstrapState.cs" />
-     <Compile Include="Assets\Easy Character Movement\Scripts\Controllers\BaseAgentController.cs" />
      <Compile Include="Assets\Scripts\Infrastructure\Ticker.cs" />
      <Compile Include="Assets\Scripts\Infrastructure\AssetProviderService\AssetPaths.cs" />
      <Compile Include="Assets\Scripts\Infrastructure\Services\Input\StandaloneInput.cs" />
@@ -70,38 +63,37 @@
      <Compile Include="Assets\Scripts\Infrastructure\Services\PersistentProgress\ISavedProgressReader.cs" />
      <Compile Include="Assets\Scripts\Infrastructure\Services\StaticDataService\StaticDataService.cs" />
      <Compile Include="Assets\Scripts\Infrastructure\Services\SaveLoad\OnExitSave.cs" />
-     <Compile Include="Assets\Easy Character Movement\Scripts\@Obsolete\RaycastGroundDetection.cs" />
      <Compile Include="Assets\Scripts\Infrastructure\Installers\BootstrapInstaller.cs" />
-     <Compile Include="Assets\Easy Character Movement\Scripts\Helpers\RootMotionController.cs" />
      <Compile Include="Assets\Scripts\Infrastructure\Factories\PlayerFactoryFolder\PlayerFactory.cs" />
      <Compile Include="Assets\Scripts\Infrastructure\SceneLoader.cs" />
      <Compile Include="Assets\Scripts\Infrastructure\States\Interfaces\IPayloadedState.cs" />
-     <Compile Include="Assets\Easy Character Movement\Scripts\Components\MouseLook.cs" />
      <Compile Include="Assets\Scripts\Infrastructure\ITicker.cs" />
      <Compile Include="Assets\Scripts\Infrastructure\Services\IService.cs" />
-     <Compile Include="Assets\Easy Character Movement\Scripts\Common\Extensions.cs" />
      <Compile Include="Assets\Scripts\Infrastructure\States\GameStateMachine.cs" />
-     <Compile Include="Assets\Easy Character Movement\Scripts\@Obsolete\OrientModelToGround.cs" />
      <Compile Include="Assets\Scripts\Infrastructure\StaticData\PlayerData\PlayerStaticData.cs" />
      <Compile Include="Assets\Scripts\Infrastructure\Bootstrapper.cs" />
      <Compile Include="Assets\Scripts\Infrastructure\States\GameLostState.cs" />
      <Compile Include="Assets\Scripts\Infrastructure\States\LoadLevelState.cs" />
      <Compile Include="Assets\Scripts\Infrastructure\Factories\PlayerFactoryFolder\IPlayerFactory.cs" />
      <Compile Include="Assets\Scripts\Infrastructure\Factories\IFactoriesHolderService.cs" />
-     <Compile Include="Assets\Easy Character Movement\Scripts\Components\CharacterMovement.cs" />
      <Compile Include="Assets\Scripts\Infrastructure\Data\PlayerProgress.cs" />
      <Compile Include="Assets\Scripts\Gameplay\Locations\MainLocation.cs" />
      <Compile Include="Assets\Scripts\Infrastructure\Factories\FactoriesHolderService.cs" />
      <Compile Include="Assets\Scripts\Gameplay\Player\Player.cs" />
      <Compile Include="Assets\Scripts\Infrastructure\Services\Input\InputService.cs" />
      <Compile Include="Assets\Scripts\Infrastructure\States\Interfaces\IExitState.cs" />
-     <Compile Include="Assets\Easy Character Movement\Scripts\Common\MathLibrary.cs" />
      <Compile Include="Assets\Scripts\Infrastructure\Installers\GameSceneInstaller.cs" />
-     <Compile Include="Assets\Easy Character Movement\Scripts\@Obsolete\SphereGroundDetection.cs" />
      <Compile Include="Assets\Scripts\Infrastructure\States\Interfaces\IGameStateMachine.cs" />
      <Compile Include="Assets\Scripts\Infrastructure\ICoroutineRunner.cs" />
      <Compile Include="Assets\Scripts\Infrastructure\Services\Input\MobileInput.cs" />
      <Compile Include="Assets\Scripts\Infrastructure\Services\Input\IInputService.cs" />
+     <Compile Include="Assets\Scripts\UI\Factory\UIFactory.cs" />
+     <Compile Include="Assets\Scripts\UI\Entities\Windows\Window.cs" />
+     <Compile Include="Assets\Scripts\UI\Entities\Windows\WinWindow.cs" />
+     <Compile Include="Assets\Scripts\UI\Factory\IUIHolder.cs" />
+     <Compile Include="Assets\Scripts\UI\Factory\IUIEntity.cs" />
+     <Compile Include="Assets\Scripts\UI\Factory\UIHolder.cs" />
+     <Compile Include="Assets\Scripts\UI\Factory\IUIFactory.cs" />
      <Reference Include="UnityEngine">
      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.25f1\Editor\Data\PlaybackEngines\WindowsStandaloneSupport\Variations\mono\Managed\UnityEngine.dll</HintPath>
      </Reference>
@@ -677,6 +669,10 @@
      </Reference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="Assembly-CSharp-firstpass.Player.csproj">
+      <Project>{bbd360f0-2369-b486-35aa-38cd8cc029d6}</Project>
+      <Name>Assembly-CSharp-firstpass.Player</Name>
+    </ProjectReference>
     <ProjectReference Include="MoreMountains.Feedbacks.HDRP.Player.csproj">
       <Project>{a697767c-7746-5e4e-cd2f-24726b565403}</Project>
       <Name>MoreMountains.Feedbacks.HDRP.Player</Name>
@@ -736,6 +732,10 @@
     <ProjectReference Include="Zenject.Player.csproj">
       <Project>{0c65196b-e0ba-4e45-c0ac-ad1d92ec41cd}</Project>
       <Name>Zenject.Player</Name>
+    </ProjectReference>
+    <ProjectReference Include="SimpleInput.Runtime.Player.csproj">
+      <Project>{2db20ea8-4d6c-5bba-e320-323d95cea084}</Project>
+      <Name>SimpleInput.Runtime.Player</Name>
     </ProjectReference>
     <ProjectReference Include="MoreMountains.Feedbacks.Player.csproj">
       <Project>{51808121-8046-b784-1c70-81dc706c1a37}</Project>

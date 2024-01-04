@@ -41,9 +41,9 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\Feel\MMFeedbacks\Authorizations\MMFeedbacksAuthorizations.cs" />
-     <None Include="Assets\Feel\MMFeedbacks\Authorizations\MoreMountains.Feedbacks.Authorizations.asmdef" />
-     <Folder Include="Assets\Feel\MMFeedbacks\Authorizations" />
+     <Compile Include="Assets\Plugins\Feel\MMFeedbacks\Authorizations\MMFeedbacksAuthorizations.cs" />
+     <None Include="Assets\Plugins\Feel\MMFeedbacks\Authorizations\MoreMountains.Feedbacks.Authorizations.asmdef" />
+     <Folder Include="Assets\Plugins\Feel\MMFeedbacks\Authorizations" />
      <Reference Include="UnityEngine">
      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.25f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
      </Reference>

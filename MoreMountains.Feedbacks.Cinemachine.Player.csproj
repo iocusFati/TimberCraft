@@ -41,21 +41,21 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\Feel\MMFeedbacks\MMFeedbacksForThirdParty\Cinemachine\Shakers\MMCinemachineOrthographicSizeShaker.cs" />
-     <Compile Include="Assets\Feel\MMFeedbacks\MMFeedbacksForThirdParty\Cinemachine\Feedbacks\Legacy\MMFeedbackCinemachineImpulse.cs" />
-     <Compile Include="Assets\Feel\MMFeedbacks\MMFeedbacksForThirdParty\Cinemachine\Shakers\MMCinemachineFieldOfViewShaker.cs" />
-     <Compile Include="Assets\Feel\MMFeedbacks\MMFeedbacksForThirdParty\Cinemachine\Shakers\MMCinemachineClippingPlanesShaker.cs" />
-     <Compile Include="Assets\Feel\MMFeedbacks\MMFeedbacksForThirdParty\Cinemachine\Feedbacks\Legacy\MMFeedbackCinemachineImpulseClear.cs" />
-     <Compile Include="Assets\Feel\MMFeedbacks\MMFeedbacksForThirdParty\Cinemachine\Shakers\MMCinemachineZoom.cs" />
-     <Compile Include="Assets\Feel\MMFeedbacks\MMFeedbacksForThirdParty\Cinemachine\Shakers\MMCinemachinePriorityListener.cs" />
-     <Compile Include="Assets\Feel\MMFeedbacks\MMFeedbacksForThirdParty\Cinemachine\Shakers\MMCinemachineFreeLookZoom.cs" />
-     <Compile Include="Assets\Feel\MMFeedbacks\MMFeedbacksForThirdParty\Cinemachine\Shakers\MMCinemachinePriorityBrainListener.cs" />
-     <Compile Include="Assets\Feel\MMFeedbacks\MMFeedbacksForThirdParty\Cinemachine\Feedbacks\MMF_CinemachineImpulseSource.cs" />
-     <Compile Include="Assets\Feel\MMFeedbacks\MMFeedbacksForThirdParty\Cinemachine\Feedbacks\MMF_CinemachineTransition.cs" />
-     <Compile Include="Assets\Feel\MMFeedbacks\MMFeedbacksForThirdParty\Cinemachine\Feedbacks\MMF_CinemachineImpulseClear.cs" />
-     <Compile Include="Assets\Feel\MMFeedbacks\MMFeedbacksForThirdParty\Cinemachine\Feedbacks\Legacy\MMFeedbackCinemachineTransition.cs" />
-     <Compile Include="Assets\Feel\MMFeedbacks\MMFeedbacksForThirdParty\Cinemachine\Shakers\MMCinemachineCameraShaker.cs" />
-     <Compile Include="Assets\Feel\MMFeedbacks\MMFeedbacksForThirdParty\Cinemachine\Feedbacks\MMF_CinemachineImpulse.cs" />
+     <Compile Include="Assets\Plugins\Feel\MMFeedbacks\MMFeedbacksForThirdParty\Cinemachine\Shakers\MMCinemachineOrthographicSizeShaker.cs" />
+     <Compile Include="Assets\Plugins\Feel\MMFeedbacks\MMFeedbacksForThirdParty\Cinemachine\Feedbacks\Legacy\MMFeedbackCinemachineImpulse.cs" />
+     <Compile Include="Assets\Plugins\Feel\MMFeedbacks\MMFeedbacksForThirdParty\Cinemachine\Shakers\MMCinemachineFieldOfViewShaker.cs" />
+     <Compile Include="Assets\Plugins\Feel\MMFeedbacks\MMFeedbacksForThirdParty\Cinemachine\Shakers\MMCinemachineClippingPlanesShaker.cs" />
+     <Compile Include="Assets\Plugins\Feel\MMFeedbacks\MMFeedbacksForThirdParty\Cinemachine\Feedbacks\Legacy\MMFeedbackCinemachineImpulseClear.cs" />
+     <Compile Include="Assets\Plugins\Feel\MMFeedbacks\MMFeedbacksForThirdParty\Cinemachine\Shakers\MMCinemachineZoom.cs" />
+     <Compile Include="Assets\Plugins\Feel\MMFeedbacks\MMFeedbacksForThirdParty\Cinemachine\Shakers\MMCinemachinePriorityListener.cs" />
+     <Compile Include="Assets\Plugins\Feel\MMFeedbacks\MMFeedbacksForThirdParty\Cinemachine\Shakers\MMCinemachineFreeLookZoom.cs" />
+     <Compile Include="Assets\Plugins\Feel\MMFeedbacks\MMFeedbacksForThirdParty\Cinemachine\Shakers\MMCinemachinePriorityBrainListener.cs" />
+     <Compile Include="Assets\Plugins\Feel\MMFeedbacks\MMFeedbacksForThirdParty\Cinemachine\Feedbacks\MMF_CinemachineImpulseSource.cs" />
+     <Compile Include="Assets\Plugins\Feel\MMFeedbacks\MMFeedbacksForThirdParty\Cinemachine\Feedbacks\MMF_CinemachineTransition.cs" />
+     <Compile Include="Assets\Plugins\Feel\MMFeedbacks\MMFeedbacksForThirdParty\Cinemachine\Feedbacks\MMF_CinemachineImpulseClear.cs" />
+     <Compile Include="Assets\Plugins\Feel\MMFeedbacks\MMFeedbacksForThirdParty\Cinemachine\Feedbacks\Legacy\MMFeedbackCinemachineTransition.cs" />
+     <Compile Include="Assets\Plugins\Feel\MMFeedbacks\MMFeedbacksForThirdParty\Cinemachine\Shakers\MMCinemachineCameraShaker.cs" />
+     <Compile Include="Assets\Plugins\Feel\MMFeedbacks\MMFeedbacksForThirdParty\Cinemachine\Feedbacks\MMF_CinemachineImpulse.cs" />
      <Reference Include="UnityEngine">
      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.25f1\Editor\Data\PlaybackEngines\WindowsStandaloneSupport\Variations\mono\Managed\UnityEngine.dll</HintPath>
      </Reference>
