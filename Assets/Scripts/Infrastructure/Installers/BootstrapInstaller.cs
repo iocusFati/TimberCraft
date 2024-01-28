@@ -1,9 +1,12 @@
 using System;
 using System.Collections;
+using Base.UI.Factory;
 using Infrastructure.AssetProviderService;
 using Infrastructure.Factories;
+using Infrastructure.Services.Input;
 using Infrastructure.Services.PersistentProgress;
 using Infrastructure.Services.SaveLoad;
+using Infrastructure.Services.StaticDataService;
 using Infrastructure.States;
 using UnityEngine;
 using Zenject;
@@ -14,16 +17,74 @@ namespace Infrastructure
     {
         public override void InstallBindings()
         {
+            BindUIHolder(out UIHolder uiHolder);
+            
+            BindStaticDataService();
+
             BindSceneLoader();
+            
             BindStatesFactory();
+            
             BindCoroutineRunner();
+            
             BindGameStateMachine();
+            
             BindSaveLoadService();
+            
             BindPersistentProgress();
+            
             BindAssetsService();
+            
             BindFactories();
+            
+            BindInputService();
+            
+            BindUIFactory(uiHolder);
         }
-        
+
+        private void BindStaticDataService()
+        {
+            StaticDataService staticData = new StaticDataService();
+
+            Container
+                .Bind<IStaticDataService>()
+                .FromInstance(staticData)
+                .AsSingle();
+            
+            staticData.Initialize();
+        }
+
+        private void BindUIHolder(out UIHolder uiHolder)
+        {
+            uiHolder = Container.Instantiate<UIHolder>(); 
+            
+            Container
+                .Bind<IUIHolder>()
+                .To<UIHolder>()
+                .FromInstance(uiHolder)
+                .AsSingle();
+        }
+
+        private void BindUIFactory(UIHolder uiHolder)
+        {
+            UIFactory uiFactory = Container.Instantiate<UIFactory>();
+            uiFactory.Initialize(uiHolder);
+            
+            Container
+                .Bind<IUIFactory>()
+                .To<UIFactory>()
+                .FromInstance(uiFactory)
+                .AsSingle();
+        }
+
+        private void BindInputService()
+        {
+            Container
+                .Bind<IInputService>()
+                .FromMethod(InputService)
+                .AsSingle();
+        }
+
         private void BindAssetsService()
         {
             Container
@@ -90,7 +151,7 @@ namespace Infrastructure
                 .FromInstance(this)
                 .AsSingle();
         }
-        
+
         private void BindGameStateMachine()
         {
             Container
@@ -110,5 +171,10 @@ namespace Infrastructure
             Debug.Log("Action");
             action.Invoke();
         }
+
+        private IInputService InputService() =>
+            Application.isEditor
+                ? new StandaloneInput()
+                : new MobileInput();
     }
 }

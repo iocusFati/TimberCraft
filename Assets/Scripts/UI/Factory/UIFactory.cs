@@ -1,43 +1,60 @@
-﻿using Base.UI.Entities.Windows;
-using Infrastructure.AssetProviderService;
-using Infrastructure.Services.StaticDataService;
-using Infrastructure.States;
+﻿using Infrastructure.AssetProviderService;
 using UnityEngine;
+using Zenject;
 
 namespace Base.UI.Factory
 {
     public class UIFactory : IUIFactory
     {
         private readonly IAssets _assets;
-        private readonly UIHolder _uiContainer;
-        private readonly IGameStateMachine _gameStateMachine;
-        private readonly IStaticDataService _staticData;
+        private UIHolder _uiContainer;
 
+        private const int HudCanvasOrder = 1;
+        
         private Canvas _gameRoot;
 
-        public UIFactory(UIHolder container,
-            IAssets assets,
-            IGameStateMachine gameStateMachine, 
-            IStaticDataService staticData)
+        [Inject]
+        public UIFactory(IAssets assets)
         {
-            _uiContainer = container;
             _assets = assets;
-            _gameStateMachine = gameStateMachine;
-            _staticData = staticData;
         }
+
+        public void Initialize(UIHolder uiHolder) => 
+            _uiContainer = uiHolder;
 
         public void CreateGameUIRoot() => 
             _gameRoot = CreateUIRoot("GameRoot");
-        
-        private TEntity CreateUIEntity<TEntity>(string path) where TEntity : Component, IUIEntity
-        {
-            if (_gameRoot == null) 
-                CreateGameUIRoot();
 
-            TEntity entity = _assets.Instantiate<TEntity>(path, _gameRoot.transform);
+        public HUD CreateHUD()
+        {
+            Canvas hudCanvas = CreateUIRoot("HUD", HudCanvasOrder);
+
+            HUD hud = CreateUIEntity<HUD>(AssetPaths.HUD, hudCanvas);
+
+            return hud;
+        }
+
+        private TEntity CreateUIEntity<TEntity>(string path, Canvas parent = null) where TEntity : Component, IUIEntity
+        {
+            parent = SetParentIfNull();
+
+            TEntity entity = _assets.Instantiate<TEntity>(path, parent.transform);
             _uiContainer.RegisterUIEntity(entity);
 
             return entity;
+
+            Canvas SetParentIfNull()
+            {
+                if (parent is not null) 
+                    return parent;
+                
+                if (_gameRoot == null)
+                    CreateGameUIRoot();
+                else
+                    parent = _gameRoot;
+
+                return parent;
+            }
         }
 
         private Canvas CreateUIRoot(string name, int order = 0)

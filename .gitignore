@@ -50,3 +50,5 @@ Unity
 /Assets/Other
 /Assets/Plugins
 /obj/
+/obj/Debug
+/obj/Debug

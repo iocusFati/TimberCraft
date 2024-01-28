@@ -21,8 +21,8 @@ namespace Infrastructure.AssetProviderService
             TCreatable prefab = Load<TCreatable>(path);
             return Object.Instantiate(prefab);
         }
-        
-        private TCreatable Load<TCreatable>(string path) where TCreatable : Object => 
+
+        public TCreatable Load<TCreatable>(string path) where TCreatable : Object => 
             Resources.Load<TCreatable>(path);
     }
 }

@@ -7,13 +7,15 @@ namespace Infrastructure.Factories
     public class FactoriesHolderService : IFactoriesHolderService, IInitializable
     {
         private readonly IAssets _assets;
-        
-        public PlayerFactory PlayerFactory { get; private set; }
-        public LocationFactory LocationFactory { get; set; }
+        private readonly IInstantiator _instantiator;
 
-        public FactoriesHolderService(IAssets assets)
+        public PlayerFactory PlayerFactory { get; private set; }
+        public LocationFactory LocationFactory { get; private set; }
+
+        public FactoriesHolderService(IAssets assets, IInstantiator instantiator)
         {
             _assets = assets;
+            _instantiator = instantiator;
         }
 
         public void Initialize()
@@ -28,7 +30,7 @@ namespace Infrastructure.Factories
         }
 
         private void InitializePlayerFactory() => 
-            PlayerFactory = new PlayerFactory(_assets);
+            PlayerFactory = new PlayerFactory(_assets, _instantiator);
 
         private void InitializeLocationFactory() => 
             LocationFactory = new LocationFactory(_assets);

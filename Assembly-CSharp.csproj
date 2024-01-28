@@ -42,9 +42,9 @@
   </PropertyGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\Infrastructure\Services\PersistentProgress\PersistentProgressService.cs" />
+     <Compile Include="Assets\Scripts\UI\Factory\IUIEntity.cs" />
      <Compile Include="Assets\Scripts\Infrastructure\Data\DataExtensions.cs" />
      <Compile Include="Assets\Scripts\Infrastructure\States\GameLoopState.cs" />
-     <Compile Include="Assets\Scripts\Infrastructure\ITickable.cs" />
      <Compile Include="Assets\Scripts\Infrastructure\Services\SaveLoad\ISaveLoadService.cs" />
      <Compile Include="Assets\Scripts\Infrastructure\Services\AllServices.cs" />
      <Compile Include="Assets\Scripts\Infrastructure\States\LoadProgressState.cs" />
@@ -56,6 +56,7 @@
      <Compile Include="Assets\Scripts\Infrastructure\AssetProviderService\AssetPaths.cs" />
      <Compile Include="Assets\Scripts\Infrastructure\Services\Input\StandaloneInput.cs" />
      <Compile Include="Assets\Scripts\Infrastructure\Services\SaveLoad\SaveLoadService.cs" />
+     <Compile Include="Assets\Scripts\UI\Factory\UIFactory.cs" />
      <Compile Include="Assets\Scripts\Infrastructure\Services\PersistentProgress\IPersistentProgressService.cs" />
      <Compile Include="Assets\Scripts\Infrastructure\Services\StaticDataService\IStaticDataService.cs" />
      <Compile Include="Assets\Scripts\Infrastructure\Services\PersistentProgress\ISavedProgress.cs" />
@@ -69,8 +70,11 @@
      <Compile Include="Assets\Scripts\Infrastructure\States\Interfaces\IPayloadedState.cs" />
      <Compile Include="Assets\Scripts\Infrastructure\ITicker.cs" />
      <Compile Include="Assets\Scripts\Infrastructure\Services\IService.cs" />
+     <Compile Include="Assets\Scripts\UI\Entities\Windows\HUD.cs" />
      <Compile Include="Assets\Scripts\Infrastructure\States\GameStateMachine.cs" />
-     <Compile Include="Assets\Scripts\Infrastructure\StaticData\PlayerData\PlayerStaticData.cs" />
+     <Compile Include="Assets\Scripts\UI\Entities\Windows\Window.cs" />
+     <Compile Include="Assets\Scripts\Gameplay\Player\PlayerMovement.cs" />
+     <Compile Include="Assets\Scripts\Infrastructure\StaticData\PlayerData\PlayerConfig.cs" />
      <Compile Include="Assets\Scripts\Infrastructure\Bootstrapper.cs" />
      <Compile Include="Assets\Scripts\Infrastructure\States\GameLostState.cs" />
      <Compile Include="Assets\Scripts\Infrastructure\States\LoadLevelState.cs" />
@@ -78,21 +82,26 @@
      <Compile Include="Assets\Scripts\Infrastructure\Factories\IFactoriesHolderService.cs" />
      <Compile Include="Assets\Scripts\Infrastructure\Data\PlayerProgress.cs" />
      <Compile Include="Assets\Scripts\Gameplay\Locations\MainLocation.cs" />
+     <Compile Include="Assets\Scripts\UI\Factory\UIHolder.cs" />
      <Compile Include="Assets\Scripts\Infrastructure\Factories\FactoriesHolderService.cs" />
      <Compile Include="Assets\Scripts\Gameplay\Player\Player.cs" />
+     <Compile Include="Assets\Scripts\UI\Factory\IUIHolder.cs" />
+     <Compile Include="Assets\Scripts\UI\Factory\IUIFactory.cs" />
      <Compile Include="Assets\Scripts\Infrastructure\Services\Input\InputService.cs" />
      <Compile Include="Assets\Scripts\Infrastructure\States\Interfaces\IExitState.cs" />
      <Compile Include="Assets\Scripts\Infrastructure\Installers\GameSceneInstaller.cs" />
      <Compile Include="Assets\Scripts\Infrastructure\States\Interfaces\IGameStateMachine.cs" />
      <Compile Include="Assets\Scripts\Infrastructure\ICoroutineRunner.cs" />
      <Compile Include="Assets\Scripts\Infrastructure\Services\Input\MobileInput.cs" />
+     <Compile Include="Assets\Scripts\Utils\Constants.cs" />
      <Compile Include="Assets\Scripts\Infrastructure\Services\Input\IInputService.cs" />
-     <Compile Include="Assets\Scripts\UI\Factory\UIFactory.cs" />
-     <Compile Include="Assets\Scripts\UI\Entities\Windows\Window.cs" />
-     <Compile Include="Assets\Scripts\UI\Factory\IUIHolder.cs" />
-     <Compile Include="Assets\Scripts\UI\Factory\IUIEntity.cs" />
-     <Compile Include="Assets\Scripts\UI\Factory\UIHolder.cs" />
-     <Compile Include="Assets\Scripts\UI\Factory\IUIFactory.cs" />
+     <Compile Include="Assets\Scripts\Gameplay\Player\Animation\PlayerAnimatorStateMachine.cs" />
+     <Compile Include="Assets\Other\_Gloomy_Hyper\Script\CharacterSelect.cs" />
+     <Compile Include="Assets\Other\_Gloomy_Hyper\Script\MouseOrbitImproved.cs" />
+     <Compile Include="Assets\Scripts\Infrastructure\States\StateMachine.cs" />
+     <Compile Include="Assets\Scripts\Gameplay\Player\Animation\PlayerAnimationChopState.cs" />
+     <Compile Include="Assets\Scripts\Gameplay\Player\Animation\PlayerAnimationIdleState.cs" />
+     <Compile Include="Assets\Scripts\Gameplay\Player\Animation\PlayerAnimationRunState.cs" />
      <Folder Include="Assets" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.4\Lib\Editor\PlasticSCM\Localization\mergetool.ja.txt" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.4\Lib\Editor\PlasticSCM\Localization\images.zh-Hans.txt" />
@@ -102,6 +111,7 @@
      <None Include="Library\PackageCache\com.unity.modules.subsystems@1.0.0\package.json" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.4\Lib\Editor\PlasticSCM\Localization\guihelp.zh-Hant.txt" />
      <Folder Include="Assets\Scripts\UI\Factory" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Library\PackageCache\com.unity.modules.jsonserialize@1.0.0\package.json" />
      <Folder Include="Assets\Scripts\Infrastructure\Services\StaticDataService" />
      <Folder Include="Library\PackageCache\com.unity.test-framework@1.1.31" />
@@ -109,9 +119,11 @@
      <Folder Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing\Textures\LensDirt" />
      <None Include="Library\PackageCache\com.unity.modules.screencapture@1.0.0\package.json" />
      <None Include="Library\PackageCache\com.unity.modules.cloth@1.0.0\package.json" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <Folder Include="Library\PackageCache\com.unity.modules.imgui@1.0.0" />
      <None Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing\Shaders\Builtins\Distortion.hlsl" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.4\Lib\Editor\PlasticSCM\Localization\plastic-gui.zh-Hant.txt" />
+     <Folder Include="Assets\TextMesh Pro\Sprites" />
      <None Include="Library\PackageCache\com.unity.modules.unitywebrequesttexture@1.0.0\package.json" />
      <None Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing\Shaders\Builtins\ExposureHistogram.hlsl" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.4\Lib\Editor\PlasticSCM\Localization\images.es.txt" />
@@ -122,11 +134,13 @@
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.4\Lib\Editor\PlasticSCM\Localization\commontypes.zh-Hans.txt" />
      <Folder Include="Library\PackageCache\com.unity.modules.animation@1.0.0" />
      <None Include="Library\PackageCache\com.unity.inputsystem@1.5.1\ValidationConfig.json" />
+     <Folder Include="Assets\Other\_Gloomy_Hyper\FBX\Materials\Animator" />
      <None Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing\Shaders\Builtins\Texture3DLerp.compute" />
      <None Include="Library\PackageCache\com.unity.ugui@1.0.0\package.json" />
      <Folder Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing\Shaders\Debug" />
      <None Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing\Shaders\Builtins\DeferredFog.shader" />
      <Folder Include="Library\PackageCache\com.unity.modules.xr@1.0.0" />
+     <Folder Include="Assets\TextMesh Pro\Resources\Sprite Assets" />
      <None Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing\Shaders\Builtins\TemporalAntialiasing.shader" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.4\Lib\Editor\PlasticSCM\Localization\mergetool.es.txt" />
      <Folder Include="Library\PackageCache\com.unity.testtools.codecoverage@1.2.3\lib\ReportGenerator" />
@@ -144,6 +158,7 @@
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.4\Lib\Editor\PlasticSCM\Localization\clientcommon.es.txt" />
      <Folder Include="Library\PackageCache\com.unity.cinemachine@2.8.9" />
      <Folder Include="Library\PackageCache\com.unity.textmeshpro@3.0.6\Editor Resources" />
+     <Folder Include="Assets\Other\_Gloomy_Hyper\Script" />
      <None Include="Library\PackageCache\com.unity.modules.assetbundle@1.0.0\package.json" />
      <None Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing\Shaders\Debug\Vectorscope.compute" />
      <Folder Include="Library\PackageCache\com.unity.inputsystem@1.5.1\Tests" />
@@ -153,6 +168,7 @@
      <Folder Include="Assets\Other\Lumber\Texture2D" />
      <Folder Include="Assets\Other" />
      <Folder Include="Assets\Scripts\Infrastructure\Services\PersistentProgress" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
      <None Include="Library\PackageCache\com.unity.textmeshpro@3.0.6\package.json" />
      <Folder Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing\Textures\Cubes" />
      <None Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing\Shaders\Builtins\Lut3DBaker.compute" />
@@ -171,8 +187,11 @@
      <None Include="Library\PackageCache\com.unity.timeline@1.6.5\package.json" />
      <Folder Include="Library\PackageCache\com.unity.ext.nunit@1.0.6\net35\unity-custom" />
      <None Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing\Shaders\API\PSSL.hlsl" />
+     <None Include="Assets\Other\_Gloomy_Hyper\Shaders\Toon_Character.shader" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.4\Lib\Editor\PlasticSCM\Localization\configurehelper.en.txt" />
+     <Folder Include="Assets\Other\Animations\Player" />
      <Folder Include="Library\PackageCache\com.unity.cinemachine@2.8.9\Tests" />
+     <Folder Include="Assets\TextMesh Pro\Resources\Fonts &amp; Materials" />
      <Folder Include="Assets\Other\Lumber\PrefabInstance" />
      <None Include="Library\PackageCache\com.unity.cinemachine@2.8.9\ValidationExceptions.json" />
      <Folder Include="Library\PackageCache\com.unity.visualscripting@1.8.0" />
@@ -181,6 +200,7 @@
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.4\Lib\Editor\PlasticSCM\Localization\basecommands.zh-Hant.txt" />
      <None Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing\Shaders\Debug\LightMeter.shader" />
      <Folder Include="Assets\Scripts\UI\Entities" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Mobile.cginc" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.4\Lib\Editor\PlasticSCM\Localization\cm-help.es.txt" />
      <None Include="Library\PackageCache\com.unity.modules.terrainphysics@1.0.0\package.json" />
      <Folder Include="Library\PackageCache\com.unity.collab-proxy@2.0.4\Lib\Editor\PlasticSCM" />
@@ -188,6 +208,8 @@
      <Folder Include="Assets\Other\Lumber\Resources\shaders" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.4\Lib\Editor\PlasticSCM\Localization\differences.zh-Hant.txt" />
      <Folder Include="Assets\Scripts" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF SSD.shader" />
+     <Folder Include="Assets\TextMesh Pro\Resources" />
      <None Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing\Shaders\Builtins\AutoExposure.compute" />
      <None Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing\Shaders\Builtins\MultiScaleVORender.compute" />
      <None Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing\Shaders\Builtins\Texture2DLerp.shader" />
@@ -223,9 +245,11 @@
      <Folder Include="Assets\Resources" />
      <Folder Include="Assets\Other\Lumber\Sprite" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.4\Lib\Editor\PlasticSCM\Localization\semantic.en.txt" />
+     <Folder Include="Assets\Other\_Gloomy_Hyper\FBX\Materials" />
      <None Include="Library\PackageCache\com.unity.ide.visualstudio@2.0.18\package.json" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.4\Lib\Editor\PlasticSCM\Localization\workspaceserver.ko.txt" />
      <Folder Include="Assets\Scripts\Infrastructure\Services\SaveLoad" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader" />
      <Folder Include="Library\PackageCache\com.unity.modules.imageconversion@1.0.0" />
      <Folder Include="Library\PackageCache\com.unity.modules.terrainphysics@1.0.0" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.4\Lib\Editor\PlasticSCM\Localization\plastic-gui.zh-Hans.txt" />
@@ -239,6 +263,7 @@
      <Folder Include="Assets\Other\Lumber" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.4\Lib\Editor\PlasticSCM\Localization\commontypes.en.txt" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.4\Lib\Editor\PlasticSCM\Localization\commontypes.es.txt" />
+     <Folder Include="Assets\TextMesh Pro" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.4\Lib\Editor\PlasticSCM\Localization\images.zh-Hant.txt" />
      <None Include="Library\PackageCache\com.unity.modules.unityanalytics@1.0.0\package.json" />
      <Folder Include="Library\PackageCache\com.unity.modules.subsystems@1.0.0" />
@@ -266,6 +291,7 @@
      <Folder Include="Library\PackageCache\com.unity.inputsystem@1.5.1" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.4\Lib\Editor\PlasticSCM\Localization\cm-help.en.txt" />
      <None Include="Library\PackageCache\com.unity.modules.particlesystem@1.0.0\package.json" />
+     <Folder Include="Assets\Scripts\Utils" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.4\Lib\Editor\PlasticSCM\Localization\binmergetool.ko.txt" />
      <Folder Include="Assets\Resources\Prefabs\Locations" />
      <None Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing\Shaders\Debug\Vectorscope.shader" />
@@ -280,23 +306,28 @@
      <None Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing\Shaders\Builtins\FinalPass.shader" />
      <None Include="Library\PackageCache\com.unity.modules.physics2d@1.0.0\package.json" />
      <None Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing\Shaders\Debug\Histogram.shader" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface.shader" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.4\Lib\Editor\PlasticSCM\Localization\differences.zh-Hans.txt" />
      <None Include="Library\PackageCache\com.unity.modules.vr@1.0.0\package.json" />
      <None Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing\Shaders\Debug\Histogram.compute" />
      <None Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing\Shaders\API\Switch.hlsl" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.4\Lib\Editor\PlasticSCM\Localization\binmergetool.en.txt" />
      <Folder Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing\Textures" />
+     <None Include="Assets\Other\_Gloomy_Hyper\Shaders\AlphaMask.shader" />
      <Folder Include="Library\PackageCache\com.unity.modules.uielements@1.0.0" />
      <None Include="Library\PackageCache\com.unity.visualscripting@1.8.0\ValidationExceptions.json" />
      <None Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing\Shaders\API\Metal.hlsl" />
      <None Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing\Shaders\Builtins\Uber.shader" />
      <Folder Include="Library\PackageCache\com.unity.modules.unitywebrequestaudio@1.0.0" />
      <Folder Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing\Textures\SMAA" />
+     <None Include="Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
      <Folder Include="Library\PackageCache\com.unity.modules.particlesystem@1.0.0" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.4\Lib\Editor\PlasticSCM\Localization\configurehelper.zh-Hant.txt" />
      <Folder Include="Library\PackageCache\com.unity.settings-manager@1.0.3" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.4\Lib\Editor\PlasticSCM\Localization\cm-help.zh-Hans.txt" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.4\Lib\Editor\PlasticSCM\Localization\semantic.ko.txt" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF.shader" />
      <Folder Include="Assets\Other\Lumber\Avatar" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.4\Lib\Editor\PlasticSCM\Localization\workspaceserver.en.txt" />
      <None Include="Library\PackageCache\com.unity.ide.visualstudio@2.0.18\ValidationExceptions.json" />
@@ -306,9 +337,12 @@
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.4\Lib\Editor\PlasticSCM\Localization\cm-help.zh-Hant.txt" />
      <None Include="Library\PackageCache\com.unity.cinemachine@2.8.9\license.txt" />
      <None Include="Library\PackageCache\com.unity.modules.wind@1.0.0\package.json" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile SSD.shader" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.4\Lib\Editor\PlasticSCM\Localization\clientcommon.zh-Hant.txt" />
      <Folder Include="Library\PackageCache\com.unity.ugui@1.0.0\Tests" />
+     <None Include="Assets\Other\_Gloomy_Hyper\Shaders\Gradient Skybox.shader" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.4\Lib\Editor\PlasticSCM\Localization\xdiff.zh-Hant.txt" />
+     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
      <None Include="Library\PackageCache\com.unity.modules.umbra@1.0.0\package.json" />
      <None Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing\Shaders\Builtins\CopyStdFromDoubleWide.shader" />
      <Folder Include="Library\PackageCache\com.unity.textmeshpro@3.0.6\Editor Resources\Textures" />
@@ -319,15 +353,20 @@
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.4\Lib\Editor\PlasticSCM\Localization\cm.ko.txt" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.4\Lib\Editor\PlasticSCM\Localization\guihelp.zh-Hans.txt" />
      <Folder Include="Library\PackageCache\com.unity.modules.ui@1.0.0" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Properties.cginc" />
      <Folder Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing\Textures\LUTs" />
      <Folder Include="Assets\Scripts\UI\Entities\Windows" />
+     <Folder Include="Assets\Resources\StaticData" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.4\Lib\Editor\PlasticSCM\FileSystemWatcherLicense.txt" />
      <Folder Include="Library\PackageCache\com.unity.modules.androidjni@1.0.0" />
      <Folder Include="Library\PackageCache\com.unity.performance.profile-analyzer@1.2.2\Tests" />
      <None Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing\Shaders\Debug\Overlays.shader" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Surface.cginc" />
      <None Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing\Shaders\API\PSP2.hlsl" />
      <Folder Include="Library\PackageCache\com.unity.cinemachine@2.8.9\Gizmos" />
      <None Include="Library\PackageCache\com.unity.inputsystem@1.5.1\ValidationExceptions.json" />
+     <Folder Include="Assets\TextMesh Pro\Shaders" />
+     <Folder Include="Assets\Other\_Gloomy_Hyper\FBX" />
      <Folder Include="Library\PackageCache\com.unity.textmeshpro@3.0.6\Editor Resources\Gizmos" />
      <None Include="Library\PackageCache\com.unity.modules.audio@1.0.0\package.json" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.4\Lib\Editor\PlasticSCM\Localization\cm-help.ko.txt" />
@@ -337,13 +376,16 @@
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.4\Lib\Editor\PlasticSCM\Localization\clientcommon.en.txt" />
      <None Include="Library\PackageCache\com.unity.modules.physics@1.0.0\package.json" />
      <Folder Include="Library\PackageCache\com.unity.collab-proxy@2.0.4" />
+     <Folder Include="Assets\Other\_Gloomy_Hyper" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.4\Lib\Editor\PlasticSCM\Localization\binmergetool.zh-Hans.txt" />
      <None Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing\Shaders\Builtins\DepthOfField.hlsl" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.4\Lib\Editor\PlasticSCM\Localization\i3.es.txt" />
+     <Folder Include="Assets\TextMesh Pro\Resources\Style Sheets" />
      <None Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing\Shaders\Builtins\DiscardAlpha.shader" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.4\Lib\Editor\PlasticSCM\Localization\mergetool.zh-Hans.txt" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.4\Lib\Editor\PlasticSCM\Localization\commontypes.zh-Hant.txt" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.4\Lib\Editor\PlasticSCM\Localization\differences.ko.txt" />
+     <Folder Include="Assets\TextMesh Pro\Fonts" />
      <None Include="Library\PackageCache\com.unity.modules.vehicles@1.0.0\package.json" />
      <None Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing\Shaders\API\OpenGL.hlsl" />
      <None Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing\Shaders\Builtins\Lut2DBaker.shader" />
@@ -359,13 +401,17 @@
      <Folder Include="Library\PackageCache\com.unity.ide.rider@3.0.21" />
      <None Include="Library\PackageCache\com.unity.modules.unitywebrequestwww@1.0.0\package.json" />
      <Folder Include="Assets\Other\Lumber\Shader" />
+     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
+     <Folder Include="Assets\Other\Animations" />
      <None Include="Library\PackageCache\com.unity.modules.unitywebrequestaudio@1.0.0\package.json" />
      <None Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing\Shaders\Builtins\CopyStd.shader" />
      <None Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing\Shaders\Editor\CurveGrid.shader" />
      <Folder Include="Assets\Scripts\Gameplay" />
+     <Folder Include="Assets\Scripts\Gameplay\Player\Animation" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.4\Lib\Editor\PlasticSCM\Localization\binmergetool.es.txt" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.4\Lib\Editor\PlasticSCM\Localization\cm.ja.txt" />
      <None Include="Library\PackageCache\com.unity.textmeshpro@3.0.6\Editor Resources\Shaders\TMP_SDF_SSD.cginc" />
+     <Folder Include="Assets\Other\_Gloomy_Hyper\Shaders" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.4\ValidationConfig.json" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.4\Lib\Editor\PlasticSCM\Localization\images.ja.txt" />
      <Folder Include="Assets\Scripts\Gameplay\Locations" />
@@ -387,6 +433,7 @@
      <Folder Include="Library\PackageCache\com.unity.modules.umbra@1.0.0" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.4\Lib\Editor\PlasticSCM\Localization\mergetool.zh-Hant.txt" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.4\Lib\Editor\PlasticSCM\Localization\clientcommon.zh-Hans.txt" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.4\Lib\Editor\PlasticSCM\Localization\semantic.ja.txt" />
      <Folder Include="Library\PackageCache\com.unity.modules.unitywebrequestwww@1.0.0" />
      <Folder Include="Library\PackageCache\com.unity.collab-proxy@2.0.4\Lib" />
@@ -397,7 +444,7 @@
      <None Include="Library\PackageCache\com.unity.visualscripting@1.8.0\ValidationConfig.json" />
      <Folder Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing" />
      <None Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing\Shaders\Builtins\GrainBaker.shader" />
-     <None Include="Assets\Other\Lumber\Shader\Hidden_Cibbi's shaders_Toony Standard_Outlined.shader" />
+     <None Include="Assets\Other\Lumber\Shader\Hidden_Cibbi&apos;s shaders_Toony Standard_Outlined.shader" />
      <Folder Include="Library\PackageCache\com.unity.textmeshpro@3.0.6\Editor Resources\Shaders" />
      <Folder Include="Library\PackageCache\com.unity.modules.director@1.0.0" />
      <Folder Include="Library\PackageCache\com.unity.modules.audio@1.0.0" />
@@ -414,7 +461,9 @@
      <None Include="Library\PackageCache\com.unity.modules.androidjni@1.0.0\package.json" />
      <Folder Include="Assets\Scripts\Infrastructure\Installers" />
      <None Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing\Shaders\API\XboxOne.hlsl" />
+     <Folder Include="Assets\Other\_Gloomy_Hyper\Textures" />
      <None Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing\Shaders\Builtins\Copy.shader" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF Overlay.shader" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.4\Lib\Editor\PlasticSCM\Localization\commontypes.ja.txt" />
      <Folder Include="Library\PackageCache\com.unity.modules.video@1.0.0" />
      <None Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing\Shaders\API\D3D12.hlsl" />
@@ -422,14 +471,17 @@
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.4\Lib\Editor\PlasticSCM\Localization\configurehelper.ko.txt" />
      <None Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing\Shaders\Builtins\DepthOfField.shader" />
      <None Include="Library\PackageCache\com.unity.textmeshpro@3.0.6\PackageConversionData_Assets.json" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader" />
      <Folder Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing\Shaders\Builtins" />
      <None Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing\Shaders\Builtins\SubpixelMorphologicalAntialiasing.hlsl" />
      <Folder Include="Library\PackageCache\com.unity.collab-proxy@2.0.4\Editor" />
      <Folder Include="Library\PackageCache\com.unity.textmeshpro@3.0.6\Package Resources" />
      <Folder Include="Assets\Scenes" />
+     <None Include="Assets\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
      <Folder Include="Library\PackageCache\com.unity.modules.terrain@1.0.0" />
      <Folder Include="Assets\Other\Lumber\Material" />
      <None Include="Library\PackageCache\com.unity.modules.animation@1.0.0\package.json" />
+     <Folder Include="Assets\TextMesh Pro\Documentation" />
      <Folder Include="Library\PackageCache\com.unity.modules.uielementsnative@1.0.0" />
      <Folder Include="Assets\Scripts\Infrastructure\StaticData" />
      <Folder Include="Library\PackageCache\com.unity.testtools.codecoverage@1.2.3\lib" />
@@ -438,14 +490,17 @@
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.4\Lib\Editor\PlasticSCM\Localization\differences.en.txt" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.4\Lib\Editor\PlasticSCM\Localization\workspaceserver.ja.txt" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.4\Lib\Editor\PlasticSCM\Localization\mergetool.ko.txt" />
+     <Folder Include="Assets\Other\_Gloomy_Hyper\Animations" />
      <None Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing\Shaders\Editor\Trackball.shader" />
      <Folder Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing\Textures\BlueNoise64px" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.4\Lib\Editor\PlasticSCM\Localization\clientcommon.ko.txt" />
      <Folder Include="Library\PackageCache\com.unity.visualscripting@1.8.0\Editor" />
      <None Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing\Shaders\Editor\ConvertToLog.shader" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.4\Lib\Editor\PlasticSCM\Localization\i3.ja.txt" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile.shader" />
      <Folder Include="Library\PackageCache\com.unity.collab-proxy@2.0.4\Lib\Editor\PlasticSCM\Localization" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.4\Lib\Editor\PlasticSCM\Localization\cm.zh-Hans.txt" />
+     <Folder Include="Assets\Other\Text" />
      <None Include="Library\PackageCache\com.unity.modules.unitywebrequest@1.0.0\package.json" />
      <None Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing\Shaders\API\Vulkan.hlsl" />
      <None Include="Library\PackageCache\com.unity.modules.uielements@1.0.0\package.json" />
@@ -458,11 +513,14 @@
      <None Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing\Shaders\Colors.hlsl" />
      <Folder Include="Assets\Other\Input" />
      <Folder Include="Library\PackageCache\com.unity.cinemachine@2.8.9\Presets\Noise" />
+     <None Include="Assets\TextMesh Pro\Sprites\EmojiOne.json" />
      <Folder Include="Library\PackageCache\com.unity.ugui@1.0.0" />
      <Folder Include="Library\PackageCache\com.unity.settings-manager@1.0.3\Tests" />
      <None Include="Assets\Other\Lumber\Shader\Custom_GroundShader.shader" />
      <Folder Include="Library\PackageCache\com.unity.cinemachine@2.8.9\Presets" />
      <None Include="Library\PackageCache\com.unity.modules.ui@1.0.0\package.json" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMP_Sprite.shader" />
+     <Folder Include="Assets\Resources\Prefabs\UI" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.4\Lib\Editor\PlasticSCM\Localization\semantic.zh-Hans.txt" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.4\Lib\Editor\PlasticSCM\Localization\i3.ko.txt" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.4\Lib\Editor\PlasticSCM\Localization\guihelp.ko.txt" />
@@ -722,6 +780,12 @@
      </Reference>
      <Reference Include="ReportGeneratorMerged">
      <HintPath>C:\Users\fuyca\Desktop\Projects\TimberCraft\Library\PackageCache\com.unity.testtools.codecoverage@1.2.3\lib\ReportGenerator\ReportGeneratorMerged.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEditor.iOS.Extensions.Xcode">
+     <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.25f1\Editor\Data\PlaybackEngines\iOSSupport\UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEditor.iOS.Extensions.Common">
+     <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.25f1\Editor\Data\PlaybackEngines\iOSSupport\UnityEditor.iOS.Extensions.Common.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Android.Types">
      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.25f1\Editor\Data\PlaybackEngines\AndroidPlayer\Unity.Android.Types.dll</HintPath>

@@ -22,15 +22,11 @@ namespace Infrastructure.States
             _gameStateMachine = gameStateMachine;
             // _inputService = inputService;
             // _coroutineRunner = coroutineRunner;
-            
-            Debug.Log("GameLost");
         }
 
         [Inject]
         public void Construct(IGameStateMachine gameStateMachine)
         {
-
-            Debug.Log("GameLost");
         }
 
         public void Enter()

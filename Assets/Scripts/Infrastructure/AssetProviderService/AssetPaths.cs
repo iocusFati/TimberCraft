@@ -5,7 +5,9 @@ namespace Infrastructure.AssetProviderService
         public const string Player = "Prefabs/Player/Player";
         public const string MainLocation = "Prefabs/Locations/MainLocation";
 
-        public const string PlayerData = "StaticData/Player";
-        public const string UIRoot = "UIRoot";
+        public const string UIRoot = "Prefabs/UI/UIRoot";
+        public const string HUD = "Prefabs/UI/HUD";
+        
+        public const string PlayerConfig = "StaticData/PlayerConfig";
     }
 }

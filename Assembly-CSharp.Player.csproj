@@ -42,9 +42,9 @@
   </PropertyGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\Infrastructure\Services\PersistentProgress\PersistentProgressService.cs" />
+     <Compile Include="Assets\Scripts\UI\Factory\IUIEntity.cs" />
      <Compile Include="Assets\Scripts\Infrastructure\Data\DataExtensions.cs" />
      <Compile Include="Assets\Scripts\Infrastructure\States\GameLoopState.cs" />
-     <Compile Include="Assets\Scripts\Infrastructure\ITickable.cs" />
      <Compile Include="Assets\Scripts\Infrastructure\Services\SaveLoad\ISaveLoadService.cs" />
      <Compile Include="Assets\Scripts\Infrastructure\Services\AllServices.cs" />
      <Compile Include="Assets\Scripts\Infrastructure\States\LoadProgressState.cs" />
@@ -56,6 +56,7 @@
      <Compile Include="Assets\Scripts\Infrastructure\AssetProviderService\AssetPaths.cs" />
      <Compile Include="Assets\Scripts\Infrastructure\Services\Input\StandaloneInput.cs" />
      <Compile Include="Assets\Scripts\Infrastructure\Services\SaveLoad\SaveLoadService.cs" />
+     <Compile Include="Assets\Scripts\UI\Factory\UIFactory.cs" />
      <Compile Include="Assets\Scripts\Infrastructure\Services\PersistentProgress\IPersistentProgressService.cs" />
      <Compile Include="Assets\Scripts\Infrastructure\Services\StaticDataService\IStaticDataService.cs" />
      <Compile Include="Assets\Scripts\Infrastructure\Services\PersistentProgress\ISavedProgress.cs" />
@@ -69,8 +70,11 @@
      <Compile Include="Assets\Scripts\Infrastructure\States\Interfaces\IPayloadedState.cs" />
      <Compile Include="Assets\Scripts\Infrastructure\ITicker.cs" />
      <Compile Include="Assets\Scripts\Infrastructure\Services\IService.cs" />
+     <Compile Include="Assets\Scripts\UI\Entities\Windows\HUD.cs" />
      <Compile Include="Assets\Scripts\Infrastructure\States\GameStateMachine.cs" />
-     <Compile Include="Assets\Scripts\Infrastructure\StaticData\PlayerData\PlayerStaticData.cs" />
+     <Compile Include="Assets\Scripts\UI\Entities\Windows\Window.cs" />
+     <Compile Include="Assets\Scripts\Gameplay\Player\PlayerMovement.cs" />
+     <Compile Include="Assets\Scripts\Infrastructure\StaticData\PlayerData\PlayerConfig.cs" />
      <Compile Include="Assets\Scripts\Infrastructure\Bootstrapper.cs" />
      <Compile Include="Assets\Scripts\Infrastructure\States\GameLostState.cs" />
      <Compile Include="Assets\Scripts\Infrastructure\States\LoadLevelState.cs" />
@@ -78,22 +82,26 @@
      <Compile Include="Assets\Scripts\Infrastructure\Factories\IFactoriesHolderService.cs" />
      <Compile Include="Assets\Scripts\Infrastructure\Data\PlayerProgress.cs" />
      <Compile Include="Assets\Scripts\Gameplay\Locations\MainLocation.cs" />
+     <Compile Include="Assets\Scripts\UI\Factory\UIHolder.cs" />
      <Compile Include="Assets\Scripts\Infrastructure\Factories\FactoriesHolderService.cs" />
      <Compile Include="Assets\Scripts\Gameplay\Player\Player.cs" />
+     <Compile Include="Assets\Scripts\UI\Factory\IUIHolder.cs" />
+     <Compile Include="Assets\Scripts\UI\Factory\IUIFactory.cs" />
      <Compile Include="Assets\Scripts\Infrastructure\Services\Input\InputService.cs" />
      <Compile Include="Assets\Scripts\Infrastructure\States\Interfaces\IExitState.cs" />
      <Compile Include="Assets\Scripts\Infrastructure\Installers\GameSceneInstaller.cs" />
      <Compile Include="Assets\Scripts\Infrastructure\States\Interfaces\IGameStateMachine.cs" />
      <Compile Include="Assets\Scripts\Infrastructure\ICoroutineRunner.cs" />
      <Compile Include="Assets\Scripts\Infrastructure\Services\Input\MobileInput.cs" />
+     <Compile Include="Assets\Scripts\Utils\Constants.cs" />
      <Compile Include="Assets\Scripts\Infrastructure\Services\Input\IInputService.cs" />
-     <Compile Include="Assets\Scripts\UI\Factory\UIFactory.cs" />
-     <Compile Include="Assets\Scripts\UI\Entities\Windows\Window.cs" />
-     <Compile Include="Assets\Scripts\UI\Entities\Windows\WinWindow.cs" />
-     <Compile Include="Assets\Scripts\UI\Factory\IUIHolder.cs" />
-     <Compile Include="Assets\Scripts\UI\Factory\IUIEntity.cs" />
-     <Compile Include="Assets\Scripts\UI\Factory\UIHolder.cs" />
-     <Compile Include="Assets\Scripts\UI\Factory\IUIFactory.cs" />
+     <Compile Include="Assets\Scripts\Gameplay\Player\Animation\PlayerAnimatorStateMachine.cs" />
+     <Compile Include="Assets\Other\_Gloomy_Hyper\Script\CharacterSelect.cs" />
+     <Compile Include="Assets\Other\_Gloomy_Hyper\Script\MouseOrbitImproved.cs" />
+     <Compile Include="Assets\Scripts\Infrastructure\States\StateMachine.cs" />
+     <Compile Include="Assets\Scripts\Gameplay\Player\Animation\PlayerAnimationChopState.cs" />
+     <Compile Include="Assets\Scripts\Gameplay\Player\Animation\PlayerAnimationIdleState.cs" />
+     <Compile Include="Assets\Scripts\Gameplay\Player\Animation\PlayerAnimationRunState.cs" />
      <Reference Include="UnityEngine">
      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.25f1\Editor\Data\PlaybackEngines\WindowsStandaloneSupport\Variations\mono\Managed\UnityEngine.dll</HintPath>
      </Reference>

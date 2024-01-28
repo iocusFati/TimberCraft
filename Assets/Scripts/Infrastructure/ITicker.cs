@@ -1,3 +1,5 @@
+using Zenject;
+
 namespace Infrastructure
 {
     public interface ITicker

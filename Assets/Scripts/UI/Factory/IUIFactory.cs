@@ -6,5 +6,6 @@ namespace Base.UI.Factory
     public interface IUIFactory : IService
     {
         void CreateGameUIRoot();
+        HUD CreateHUD();
     }
 }

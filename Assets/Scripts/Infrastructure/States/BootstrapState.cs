@@ -62,8 +62,6 @@ namespace Infrastructure.States
             var saveLoad = services.RegisterService <ISaveLoadService>(
                 new SaveLoadService(persistentProgress));
 
-            var playerFactory = services.RegisterService<IPlayerFactory>(
-                new PlayerFactory(assets));
         }
 
         private IStaticDataService RegisterStaticDataService(AllServices services)
