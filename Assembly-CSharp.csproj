@@ -26,7 +26,7 @@
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
     <OutputPath>Temp\Bin\Debug\Assembly-CSharp\</OutputPath>
-    <DefineConstants>UNITY_2021_3_25;UNITY_2021_3;UNITY_2021;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_2017_1_OR_NEWER;UNITY_2017_2_OR_NEWER;UNITY_2017_3_OR_NEWER;UNITY_2017_4_OR_NEWER;UNITY_2018_1_OR_NEWER;UNITY_2018_2_OR_NEWER;UNITY_2018_3_OR_NEWER;UNITY_2018_4_OR_NEWER;UNITY_2019_1_OR_NEWER;UNITY_2019_2_OR_NEWER;UNITY_2019_3_OR_NEWER;UNITY_2019_4_OR_NEWER;UNITY_2020_1_OR_NEWER;UNITY_2020_2_OR_NEWER;UNITY_2020_3_OR_NEWER;UNITY_2021_1_OR_NEWER;UNITY_2021_2_OR_NEWER;UNITY_2021_3_OR_NEWER;PLATFORM_ARCH_64;UNITY_64;UNITY_INCLUDE_TESTS;ENABLE_AR;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_EVENT_QUEUE;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_TEXTURE_STREAMING;ENABLE_VIRTUALTEXTURING;ENABLE_UNET;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_VR;ENABLE_WEBCAM;ENABLE_UNITYWEBREQUEST;ENABLE_WWW;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_COLLAB_SOFTLOCKS;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_SERVICES_USE_WEBREQUEST;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_HUB_LICENSE;ENABLE_WEBSOCKET_CLIENT;ENABLE_DIRECTOR_AUDIO;ENABLE_DIRECTOR_TEXTURE;ENABLE_MANAGED_JOBS;ENABLE_MANAGED_TRANSFORM_JOBS;ENABLE_MANAGED_ANIMATION_JOBS;ENABLE_MANAGED_AUDIO_JOBS;ENABLE_MANAGED_UNITYTLS;INCLUDE_DYNAMIC_GI;ENABLE_SCRIPTING_GC_WBARRIERS;PLATFORM_SUPPORTS_MONO;RENDER_SOFTWARE_CURSOR;ENABLE_VIDEO;ENABLE_ACCELERATOR_CLIENT_DEBUGGING;PLATFORM_STANDALONE;TEXTCORE_1_0_OR_NEWER;PLATFORM_STANDALONE_WIN;UNITY_STANDALONE_WIN;UNITY_STANDALONE;ENABLE_RUNTIME_GI;ENABLE_MOVIES;ENABLE_NETWORK;ENABLE_NVIDIA;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_UNITY_GAME_SERVICES_ANALYTICS_SUPPORT;ENABLE_OUT_OF_PROCESS_CRASH_HANDLER;ENABLE_CLUSTER_SYNC;ENABLE_CLUSTERINPUT;PLATFORM_UPDATES_TIME_OUTSIDE_OF_PLAYER_LOOP;GFXDEVICE_WAITFOREVENT_MESSAGEPUMP;ENABLE_WEBSOCKET_HOST;ENABLE_MONO;NET_STANDARD_2_0;NET_STANDARD;NET_STANDARD_2_1;NETSTANDARD;NETSTANDARD2_1;ENABLE_PROFILER;DEBUG;TRACE;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_WIN;ENABLE_UNITY_COLLECTIONS_CHECKS;ENABLE_BURST_AOT;UNITY_TEAM_LICENSE;ENABLE_CUSTOM_RENDER_TEXTURE;ENABLE_DIRECTOR;ENABLE_LOCALIZATION;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_TILEMAP;ENABLE_TIMELINE;ENABLE_INPUT_SYSTEM;ENABLE_LEGACY_INPUT_MANAGER;TEXTCORE_FONT_ENGINE_1_5_OR_NEWER;UNITY_POST_PROCESSING_STACK_V2;MOREMOUNTAINS_NICEVIBRATIONS_INSTALLED;CSHARP_7_OR_LATER;CSHARP_7_3_OR_NEWER</DefineConstants>
+    <DefineConstants>UNITY_2021_3_25;UNITY_2021_3;UNITY_2021;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_2017_1_OR_NEWER;UNITY_2017_2_OR_NEWER;UNITY_2017_3_OR_NEWER;UNITY_2017_4_OR_NEWER;UNITY_2018_1_OR_NEWER;UNITY_2018_2_OR_NEWER;UNITY_2018_3_OR_NEWER;UNITY_2018_4_OR_NEWER;UNITY_2019_1_OR_NEWER;UNITY_2019_2_OR_NEWER;UNITY_2019_3_OR_NEWER;UNITY_2019_4_OR_NEWER;UNITY_2020_1_OR_NEWER;UNITY_2020_2_OR_NEWER;UNITY_2020_3_OR_NEWER;UNITY_2021_1_OR_NEWER;UNITY_2021_2_OR_NEWER;UNITY_2021_3_OR_NEWER;UNITY_INCLUDE_TESTS;ENABLE_AR;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_EVENT_QUEUE;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_TEXTURE_STREAMING;ENABLE_UNET;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_VR;ENABLE_WEBCAM;ENABLE_UNITYWEBREQUEST;ENABLE_WWW;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_COLLAB_SOFTLOCKS;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_SERVICES_USE_WEBREQUEST;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_CLOUD_SERVICES_NATIVE_CRASH_REPORTING;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_HUB_LICENSE;ENABLE_WEBSOCKET_CLIENT;ENABLE_DIRECTOR_AUDIO;ENABLE_DIRECTOR_TEXTURE;ENABLE_MANAGED_JOBS;ENABLE_MANAGED_TRANSFORM_JOBS;ENABLE_MANAGED_ANIMATION_JOBS;ENABLE_MANAGED_AUDIO_JOBS;ENABLE_RUNTIME_PERMISSIONS;ENABLE_ENGINE_CODE_STRIPPING;ENABLE_ONSCREEN_KEYBOARD;ENABLE_MANAGED_UNITYTLS;INCLUDE_DYNAMIC_GI;ENABLE_SCRIPTING_GC_WBARRIERS;PLATFORM_SUPPORTS_MONO;ENABLE_VIDEO;ENABLE_ACCELERATOR_CLIENT_DEBUGGING;PLATFORM_ANDROID;TEXTCORE_1_0_OR_NEWER;UNITY_ANDROID;UNITY_ANDROID_API;ENABLE_EGL;ENABLE_NETWORK;ENABLE_RUNTIME_GI;ENABLE_CRUNCH_TEXTURE_COMPRESSION;UNITY_CAN_SHOW_SPLASH_SCREEN;UNITY_HAS_GOOGLEVR;UNITY_HAS_TANGO;ENABLE_SPATIALTRACKING;ENABLE_ETC_COMPRESSION;PLATFORM_EXTENDS_VULKAN_DEVICE;PLATFORM_HAS_MULTIPLE_SWAPCHAINS;UNITY_ANDROID_SUPPORTS_SHADOWFILES;PLATFORM_UPDATES_TIME_OUTSIDE_OF_PLAYER_LOOP;ENABLE_UNITYADS_RUNTIME;UNITY_UNITYADS_API;ENABLE_MONO;NET_STANDARD_2_0;NET_STANDARD;NET_STANDARD_2_1;NETSTANDARD;NETSTANDARD2_1;ENABLE_PROFILER;DEBUG;TRACE;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_WIN;ENABLE_UNITY_COLLECTIONS_CHECKS;ENABLE_BURST_AOT;UNITY_TEAM_LICENSE;ENABLE_CUSTOM_RENDER_TEXTURE;ENABLE_DIRECTOR;ENABLE_LOCALIZATION;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_TILEMAP;ENABLE_TIMELINE;ENABLE_INPUT_SYSTEM;ENABLE_LEGACY_INPUT_MANAGER;TEXTCORE_FONT_ENGINE_1_5_OR_NEWER;UNITY_POST_PROCESSING_STACK_V2;MOREMOUNTAINS_NICEVIBRATIONS_INSTALLED;CSHARP_7_OR_LATER;CSHARP_7_3_OR_NEWER</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <NoWarn>0169,0649</NoWarn>
@@ -41,23 +41,35 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\Gameplay\Player\Tree.cs" />
+     <Compile Include="Assets\Other\_Gloomy_Hyper\Script\CharacterSelect.cs" />
+     <Compile Include="Assets\Other\KriptoFX\MuzzleFlashes\Scripts\Rendering\FPS_UseLight.cs" />
      <Compile Include="Assets\Scripts\Infrastructure\Services\PersistentProgress\PersistentProgressService.cs" />
      <Compile Include="Assets\Scripts\UI\Factory\IUIEntity.cs" />
      <Compile Include="Assets\Scripts\Infrastructure\Data\DataExtensions.cs" />
+     <Compile Include="Assets\Scripts\Gameplay\Player\PlayerAxeEnabler.cs" />
      <Compile Include="Assets\Scripts\Infrastructure\States\GameLoopState.cs" />
      <Compile Include="Assets\Scripts\Infrastructure\Services\SaveLoad\ISaveLoadService.cs" />
      <Compile Include="Assets\Scripts\Infrastructure\Services\AllServices.cs" />
+     <Compile Include="Assets\Scripts\Infrastructure\Services\Pool\BasePool.cs" />
+     <Compile Include="Assets\Scripts\Infrastructure\States\StateMachine.cs" />
      <Compile Include="Assets\Scripts\Infrastructure\States\LoadProgressState.cs" />
      <Compile Include="Assets\Scripts\Infrastructure\AssetProviderService\AssetProvider.cs" />
      <Compile Include="Assets\Scripts\Infrastructure\AssetProviderService\IAssets.cs" />
      <Compile Include="Assets\Scripts\Infrastructure\StatesFactory.cs" />
+     <Compile Include="Assets\Scripts\Gameplay\Player\Animation\PlayerAnimationChop.cs" />
+     <Compile Include="Assets\Scripts\Gameplay\Player\PlayerAxe.cs" />
      <Compile Include="Assets\Scripts\Infrastructure\States\BootstrapState.cs" />
+     <Compile Include="Assets\Scripts\Infrastructure\Services\Pool\WoodHitParticlesPool.cs" />
+     <Compile Include="Assets\Other\KriptoFX\MuzzleFlashes\Scripts\FPSLightCurves.cs" />
      <Compile Include="Assets\Scripts\Infrastructure\Ticker.cs" />
      <Compile Include="Assets\Scripts\Infrastructure\AssetProviderService\AssetPaths.cs" />
      <Compile Include="Assets\Scripts\Infrastructure\Services\Input\StandaloneInput.cs" />
      <Compile Include="Assets\Scripts\Infrastructure\Services\SaveLoad\SaveLoadService.cs" />
      <Compile Include="Assets\Scripts\UI\Factory\UIFactory.cs" />
      <Compile Include="Assets\Scripts\Infrastructure\Services\PersistentProgress\IPersistentProgressService.cs" />
+     <Compile Include="Assets\Scripts\Infrastructure\StaticData\ResourcesData\ResourcesConfig.cs" />
+     <Compile Include="Assets\Other\KriptoFX\MuzzleFlashes\Scripts\FPS_Decal.cs" />
      <Compile Include="Assets\Scripts\Infrastructure\Services\StaticDataService\IStaticDataService.cs" />
      <Compile Include="Assets\Scripts\Infrastructure\Services\PersistentProgress\ISavedProgress.cs" />
      <Compile Include="Assets\Scripts\Infrastructure\Factories\Location\LocationFactory.cs" />
@@ -65,21 +77,29 @@
      <Compile Include="Assets\Scripts\Infrastructure\Services\StaticDataService\StaticDataService.cs" />
      <Compile Include="Assets\Scripts\Infrastructure\Services\SaveLoad\OnExitSave.cs" />
      <Compile Include="Assets\Scripts\Infrastructure\Installers\BootstrapInstaller.cs" />
+     <Compile Include="Assets\Scripts\Gameplay\Player\Animation\PlayerAnimator.cs" />
      <Compile Include="Assets\Scripts\Infrastructure\Factories\PlayerFactoryFolder\PlayerFactory.cs" />
      <Compile Include="Assets\Scripts\Infrastructure\SceneLoader.cs" />
      <Compile Include="Assets\Scripts\Infrastructure\States\Interfaces\IPayloadedState.cs" />
      <Compile Include="Assets\Scripts\Infrastructure\ITicker.cs" />
      <Compile Include="Assets\Scripts\Infrastructure\Services\IService.cs" />
      <Compile Include="Assets\Scripts\UI\Entities\Windows\HUD.cs" />
+     <Compile Include="Assets\Other\KriptoFX\MuzzleFlashes\Scripts\FPSRandomRotateAngle.cs" />
      <Compile Include="Assets\Scripts\Infrastructure\States\GameStateMachine.cs" />
+     <Compile Include="Assets\Scripts\Gameplay\Player\Animation\PlayerAnimationIdleState.cs" />
      <Compile Include="Assets\Scripts\UI\Entities\Windows\Window.cs" />
      <Compile Include="Assets\Scripts\Gameplay\Player\PlayerMovement.cs" />
      <Compile Include="Assets\Scripts\Infrastructure\StaticData\PlayerData\PlayerConfig.cs" />
      <Compile Include="Assets\Scripts\Infrastructure\Bootstrapper.cs" />
      <Compile Include="Assets\Scripts\Infrastructure\States\GameLostState.cs" />
      <Compile Include="Assets\Scripts\Infrastructure\States\LoadLevelState.cs" />
+     <Compile Include="Assets\Other\_Gloomy_Hyper\Script\MouseOrbitImproved.cs" />
      <Compile Include="Assets\Scripts\Infrastructure\Factories\PlayerFactoryFolder\IPlayerFactory.cs" />
      <Compile Include="Assets\Scripts\Infrastructure\Factories\IFactoriesHolderService.cs" />
+     <Compile Include="Assets\Other\KriptoFX\MuzzleFlashes\Scripts\FPSShaderFloatCurves.cs" />
+     <Compile Include="Assets\Other\KriptoFX\MuzzleFlashes\Scripts\MaterialType.cs" />
+     <Compile Include="Assets\Scripts\Gameplay\Player\Animation\PlayerAnimationRunState.cs" />
+     <Compile Include="Assets\Other\KriptoFX\MuzzleFlashes\Scripts\Rendering\FPS_CustomLight.cs" />
      <Compile Include="Assets\Scripts\Infrastructure\Data\PlayerProgress.cs" />
      <Compile Include="Assets\Scripts\Gameplay\Locations\MainLocation.cs" />
      <Compile Include="Assets\Scripts\UI\Factory\UIHolder.cs" />
@@ -90,18 +110,16 @@
      <Compile Include="Assets\Scripts\Infrastructure\Services\Input\InputService.cs" />
      <Compile Include="Assets\Scripts\Infrastructure\States\Interfaces\IExitState.cs" />
      <Compile Include="Assets\Scripts\Infrastructure\Installers\GameSceneInstaller.cs" />
+     <Compile Include="Assets\Scripts\Gameplay\Player\ResourceSource.cs" />
+     <Compile Include="Assets\Scripts\Gameplay\Player\TriggerInteraction.cs" />
+     <Compile Include="Assets\Scripts\Infrastructure\Services\Pool\IPoolService.cs" />
+     <Compile Include="Assets\Scripts\Infrastructure\Services\Pool\PoolService.cs" />
+     <Compile Include="Assets\Other\KriptoFX\MuzzleFlashes\Scripts\FPSShaderColorGradient.cs" />
      <Compile Include="Assets\Scripts\Infrastructure\States\Interfaces\IGameStateMachine.cs" />
      <Compile Include="Assets\Scripts\Infrastructure\ICoroutineRunner.cs" />
      <Compile Include="Assets\Scripts\Infrastructure\Services\Input\MobileInput.cs" />
      <Compile Include="Assets\Scripts\Utils\Constants.cs" />
      <Compile Include="Assets\Scripts\Infrastructure\Services\Input\IInputService.cs" />
-     <Compile Include="Assets\Scripts\Gameplay\Player\Animation\PlayerAnimatorStateMachine.cs" />
-     <Compile Include="Assets\Other\_Gloomy_Hyper\Script\CharacterSelect.cs" />
-     <Compile Include="Assets\Other\_Gloomy_Hyper\Script\MouseOrbitImproved.cs" />
-     <Compile Include="Assets\Scripts\Infrastructure\States\StateMachine.cs" />
-     <Compile Include="Assets\Scripts\Gameplay\Player\Animation\PlayerAnimationChopState.cs" />
-     <Compile Include="Assets\Scripts\Gameplay\Player\Animation\PlayerAnimationIdleState.cs" />
-     <Compile Include="Assets\Scripts\Gameplay\Player\Animation\PlayerAnimationRunState.cs" />
      <Folder Include="Assets" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.4\Lib\Editor\PlasticSCM\Localization\mergetool.ja.txt" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.4\Lib\Editor\PlasticSCM\Localization\images.zh-Hans.txt" />
@@ -113,13 +131,18 @@
      <Folder Include="Assets\Scripts\UI\Factory" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Library\PackageCache\com.unity.modules.jsonserialize@1.0.0\package.json" />
+     <Folder Include="Assets\Other\KriptoFX\MuzzleFlashes\Models\Materials" />
+     <Folder Include="Assets\Other\KriptoFX\MuzzleFlashes\Textures" />
      <Folder Include="Assets\Scripts\Infrastructure\Services\StaticDataService" />
      <Folder Include="Library\PackageCache\com.unity.test-framework@1.1.31" />
+     <Folder Include="Assets\Other\KriptoFX\MuzzleFlashes\Scripts" />
      <None Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing\Shaders\Builtins\MultiScaleVOUpsample.compute" />
+     <Folder Include="Assets\Scripts\Infrastructure\StaticData\ResourcesData" />
      <Folder Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing\Textures\LensDirt" />
      <None Include="Library\PackageCache\com.unity.modules.screencapture@1.0.0\package.json" />
      <None Include="Library\PackageCache\com.unity.modules.cloth@1.0.0\package.json" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
+     <None Include="Assets\Other\KriptoFX\MuzzleFlashes\Shaders\FPSLazer.shader" />
      <Folder Include="Library\PackageCache\com.unity.modules.imgui@1.0.0" />
      <None Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing\Shaders\Builtins\Distortion.hlsl" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.4\Lib\Editor\PlasticSCM\Localization\plastic-gui.zh-Hant.txt" />
@@ -135,10 +158,13 @@
      <Folder Include="Library\PackageCache\com.unity.modules.animation@1.0.0" />
      <None Include="Library\PackageCache\com.unity.inputsystem@1.5.1\ValidationConfig.json" />
      <Folder Include="Assets\Other\_Gloomy_Hyper\FBX\Materials\Animator" />
+     <Folder Include="Assets\Other\JMO Assets\WarFX\Mobile\Textures\MuzzleFlashes" />
+     <None Include="Assets\Other\KriptoFX\MuzzleFlashes\Shaders\Particles.shader" />
      <None Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing\Shaders\Builtins\Texture3DLerp.compute" />
      <None Include="Library\PackageCache\com.unity.ugui@1.0.0\package.json" />
      <Folder Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing\Shaders\Debug" />
      <None Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing\Shaders\Builtins\DeferredFog.shader" />
+     <Folder Include="Assets\Other\JMO Assets\WarFX\Mobile\Textures\Misc" />
      <Folder Include="Library\PackageCache\com.unity.modules.xr@1.0.0" />
      <Folder Include="Assets\TextMesh Pro\Resources\Sprite Assets" />
      <None Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing\Shaders\Builtins\TemporalAntialiasing.shader" />
@@ -153,12 +179,16 @@
      <None Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing\Shaders\Builtins\SubpixelMorphologicalAntialiasing.shader" />
      <Folder Include="Library\PackageCache\com.unity.ide.rider@3.0.21\Rider" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.4\Lib\Editor\PlasticSCM\Localization\semantic.zh-Hant.txt" />
+     <Folder Include="Assets\Other\JMO Assets\WarFX\Mobile\Materials\Smoke" />
      <None Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing\Shaders\Builtins\Dithering.hlsl" />
      <None Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing\Shaders\Builtins\Bloom.shader" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.4\Lib\Editor\PlasticSCM\Localization\clientcommon.es.txt" />
+     <Folder Include="Assets\Other\JMO Assets\WarFX\Mobile\Textures\Smoke" />
      <Folder Include="Library\PackageCache\com.unity.cinemachine@2.8.9" />
      <Folder Include="Library\PackageCache\com.unity.textmeshpro@3.0.6\Editor Resources" />
      <Folder Include="Assets\Other\_Gloomy_Hyper\Script" />
+     <Folder Include="Assets\Other\KriptoFX\MuzzleFlashes\Models\Broadleaf_Desktop 1 Materials\LOD0" />
+     <Folder Include="Assets\Other\KriptoFX\MuzzleFlashes\Models\Broadleaf_Desktop 1 Materials" />
      <None Include="Library\PackageCache\com.unity.modules.assetbundle@1.0.0\package.json" />
      <None Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing\Shaders\Debug\Vectorscope.compute" />
      <Folder Include="Library\PackageCache\com.unity.inputsystem@1.5.1\Tests" />
@@ -170,6 +200,7 @@
      <Folder Include="Assets\Scripts\Infrastructure\Services\PersistentProgress" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
      <None Include="Library\PackageCache\com.unity.textmeshpro@3.0.6\package.json" />
+     <Folder Include="Assets\Other\JMO Assets\WarFX\Mobile\Materials\MuzzleFlashes" />
      <Folder Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing\Textures\Cubes" />
      <None Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing\Shaders\Builtins\Lut3DBaker.compute" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.4\Lib\Editor\PlasticSCM\Localization\guihelp.ja.txt" />
@@ -178,6 +209,7 @@
      <Folder Include="Library\PackageCache\com.unity.visualscripting@1.8.0\Graphics" />
      <Folder Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing\Gizmos" />
      <None Include="Library\PackageCache\com.unity.modules.tilemap@1.0.0\package.json" />
+     <Folder Include="Assets\Resources\StaticData\Configs" />
      <None Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing\Shaders\Debug\Waveform.compute" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.4\Lib\Editor\PlasticSCM\Localization\xdiff.ja.txt" />
      <Folder Include="Assets\Scripts\Infrastructure\AssetProviderService" />
@@ -191,8 +223,10 @@
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.4\Lib\Editor\PlasticSCM\Localization\configurehelper.en.txt" />
      <Folder Include="Assets\Other\Animations\Player" />
      <Folder Include="Library\PackageCache\com.unity.cinemachine@2.8.9\Tests" />
+     <Folder Include="Assets\Other\KriptoFX\MuzzleFlashes\Materials" />
      <Folder Include="Assets\TextMesh Pro\Resources\Fonts &amp; Materials" />
      <Folder Include="Assets\Other\Lumber\PrefabInstance" />
+     <Folder Include="Assets\Other\JMO Assets\WarFX\Mobile\Textures\Bullet Holes" />
      <None Include="Library\PackageCache\com.unity.cinemachine@2.8.9\ValidationExceptions.json" />
      <Folder Include="Library\PackageCache\com.unity.visualscripting@1.8.0" />
      <None Include="Library\PackageCache\com.unity.ide.visualstudio@2.0.18\ValidationConfig.json" />
@@ -229,6 +263,7 @@
      <None Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing\Shaders\Builtins\DiskKernels.hlsl" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.4\Lib\Editor\PlasticSCM\Localization\clientcommon.ja.txt" />
      <Folder Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing\Textures\BlueNoise256px" />
+     <Folder Include="Assets\Other\KriptoFX\MuzzleFlashes\Prefab" />
      <Folder Include="Library\PackageCache\com.unity.modules.cloth@1.0.0" />
      <None Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing\Shaders\API\D3D11.hlsl" />
      <Folder Include="Assets\Scripts\Infrastructure\Factories" />
@@ -266,6 +301,8 @@
      <Folder Include="Assets\TextMesh Pro" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.4\Lib\Editor\PlasticSCM\Localization\images.zh-Hant.txt" />
      <None Include="Library\PackageCache\com.unity.modules.unityanalytics@1.0.0\package.json" />
+     <Folder Include="Assets\Other\KriptoFX\MuzzleFlashes\Shaders" />
+     <Folder Include="Assets\Other\JMO Assets" />
      <Folder Include="Library\PackageCache\com.unity.modules.subsystems@1.0.0" />
      <None Include="Library\PackageCache\com.unity.ide.rider@3.0.21\package.json" />
      <Folder Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing\Shaders" />
@@ -284,6 +321,7 @@
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.4\Lib\Editor\PlasticSCM\Localization\images.ko.txt" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.4\Lib\Editor\PlasticSCM\Localization\workspaceserver.es.txt" />
      <Folder Include="Library\PackageCache\com.unity.modules.physics2d@1.0.0" />
+     <None Include="Assets\Other\KriptoFX\MuzzleFlashes\Shaders\FPS_UberDecal.shader" />
      <None Include="Library\PackageCache\com.unity.performance.profile-analyzer@1.2.2\package.json" />
      <Folder Include="Assets\Scripts\Infrastructure\Data" />
      <Folder Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing\Textures\SpectralLUTs" />
@@ -300,6 +338,7 @@
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.4\Lib\Editor\PlasticSCM\Localization\workspaceserver.zh-Hans.txt" />
      <Folder Include="Library\PackageCache\com.unity.modules.wind@1.0.0" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.4\Lib\Editor\PlasticSCM\Localization\binmergetool.zh-Hant.txt" />
+     <Folder Include="Assets\Other\KriptoFX\MuzzleFlashes\Models\Broadleaf_Desktop 1 Materials\LOD2" />
      <None Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing\Shaders\Builtins\ScalableAO.shader" />
      <None Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing\Shaders\ACES.hlsl" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.4\Lib\Editor\PlasticSCM\Localization\plastic-gui.en.txt" />
@@ -326,11 +365,13 @@
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.4\Lib\Editor\PlasticSCM\Localization\configurehelper.zh-Hant.txt" />
      <Folder Include="Library\PackageCache\com.unity.settings-manager@1.0.3" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.4\Lib\Editor\PlasticSCM\Localization\cm-help.zh-Hans.txt" />
+     <None Include="Assets\Other\KriptoFX\MuzzleFlashes\Shaders\AlphaBlendedAnim.shader" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.4\Lib\Editor\PlasticSCM\Localization\semantic.ko.txt" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF.shader" />
      <Folder Include="Assets\Other\Lumber\Avatar" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.4\Lib\Editor\PlasticSCM\Localization\workspaceserver.en.txt" />
      <None Include="Library\PackageCache\com.unity.ide.visualstudio@2.0.18\ValidationExceptions.json" />
+     <Folder Include="Assets\Other\JMO Assets\WarFX\Mobile" />
      <Folder Include="Library\PackageCache\com.unity.postprocessing@3.2.2\Tests" />
      <None Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing\Shaders\xRLib.hlsl" />
      <None Include="Assets\Other\Lumber\Shader\StylizedWater_Mobile.shader" />
@@ -341,6 +382,7 @@
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.4\Lib\Editor\PlasticSCM\Localization\clientcommon.zh-Hant.txt" />
      <Folder Include="Library\PackageCache\com.unity.ugui@1.0.0\Tests" />
      <None Include="Assets\Other\_Gloomy_Hyper\Shaders\Gradient Skybox.shader" />
+     <Folder Include="Assets\Other\JMO Assets\WarFX\Mobile\Materials\Flames" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.4\Lib\Editor\PlasticSCM\Localization\xdiff.zh-Hant.txt" />
      <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
      <None Include="Library\PackageCache\com.unity.modules.umbra@1.0.0\package.json" />
@@ -357,15 +399,19 @@
      <Folder Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing\Textures\LUTs" />
      <Folder Include="Assets\Scripts\UI\Entities\Windows" />
      <Folder Include="Assets\Resources\StaticData" />
+     <Folder Include="Assets\Scripts\Infrastructure\Services\Pool" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.4\Lib\Editor\PlasticSCM\FileSystemWatcherLicense.txt" />
      <Folder Include="Library\PackageCache\com.unity.modules.androidjni@1.0.0" />
      <Folder Include="Library\PackageCache\com.unity.performance.profile-analyzer@1.2.2\Tests" />
      <None Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing\Shaders\Debug\Overlays.shader" />
+     <None Include="Assets\Other\KriptoFX\MuzzleFlashes\Shaders\FPSGlowAdditive.shader" />
+     <Folder Include="Assets\Other\JMO Assets\WarFX\Mobile\Textures" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro_Surface.cginc" />
      <None Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing\Shaders\API\PSP2.hlsl" />
      <Folder Include="Library\PackageCache\com.unity.cinemachine@2.8.9\Gizmos" />
      <None Include="Library\PackageCache\com.unity.inputsystem@1.5.1\ValidationExceptions.json" />
      <Folder Include="Assets\TextMesh Pro\Shaders" />
+     <Folder Include="Assets\Other\KriptoFX\MuzzleFlashes\Prefab\Impacts\Mobile" />
      <Folder Include="Assets\Other\_Gloomy_Hyper\FBX" />
      <Folder Include="Library\PackageCache\com.unity.textmeshpro@3.0.6\Editor Resources\Gizmos" />
      <None Include="Library\PackageCache\com.unity.modules.audio@1.0.0\package.json" />
@@ -378,6 +424,8 @@
      <Folder Include="Library\PackageCache\com.unity.collab-proxy@2.0.4" />
      <Folder Include="Assets\Other\_Gloomy_Hyper" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.4\Lib\Editor\PlasticSCM\Localization\binmergetool.zh-Hans.txt" />
+     <None Include="Assets\Other\KriptoFX\MuzzleFlashes\Shaders\FPSDistortionGlass.shader" />
+     <Folder Include="Assets\Other\JMO Assets\WarFX\Mobile\Materials\Bullet Holes" />
      <None Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing\Shaders\Builtins\DepthOfField.hlsl" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.4\Lib\Editor\PlasticSCM\Localization\i3.es.txt" />
      <Folder Include="Assets\TextMesh Pro\Resources\Style Sheets" />
@@ -390,11 +438,14 @@
      <None Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing\Shaders\API\OpenGL.hlsl" />
      <None Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing\Shaders\Builtins\Lut2DBaker.shader" />
      <Folder Include="Library\PackageCache\com.unity.collab-proxy@2.0.4\Lib\Editor" />
+     <Folder Include="Assets\Resources\Prefabs\Particles" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.4\Lib\Editor\PlasticSCM\Localization\plastic-gui.es.txt" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.4\Lib\Editor\PlasticSCM\Localization\images.en.txt" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.4\Lib\Editor\PlasticSCM\Localization\binmergetool.ja.txt" />
+     <Folder Include="Assets\_TerrainAutoUpgrade" />
      <Folder Include="Assets\Scripts\Infrastructure" />
      <None Include="Library\PackageCache\com.unity.testtools.codecoverage@1.2.3\package.json" />
+     <Folder Include="Assets\Other\JMO Assets\WarFX\Mobile\Materials\Impacts" />
      <Folder Include="Library\PackageCache\com.unity.textmeshpro@3.0.6" />
      <None Include="Library\PackageCache\com.unity.modules.uielementsnative@1.0.0\package.json" />
      <Folder Include="Assets\Other\Lumber\AnimationClip" />
@@ -405,6 +456,7 @@
      <Folder Include="Assets\Other\Animations" />
      <None Include="Library\PackageCache\com.unity.modules.unitywebrequestaudio@1.0.0\package.json" />
      <None Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing\Shaders\Builtins\CopyStd.shader" />
+     <Folder Include="Assets\Other\JMO Assets\WarFX\Mobile\Materials" />
      <None Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing\Shaders\Editor\CurveGrid.shader" />
      <Folder Include="Assets\Scripts\Gameplay" />
      <Folder Include="Assets\Scripts\Gameplay\Player\Animation" />
@@ -416,16 +468,22 @@
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.4\Lib\Editor\PlasticSCM\Localization\images.ja.txt" />
      <Folder Include="Assets\Scripts\Gameplay\Locations" />
      <Folder Include="Assets\Scripts\Infrastructure\States\Interfaces" />
+     <None Include="Assets\Other\KriptoFX\MuzzleFlashes\Shaders\FPSDistortionParticles.shader" />
      <Folder Include="Library\PackageCache\com.unity.ide.vscode@1.2.5" />
      <Folder Include="Library\PackageCache\com.unity.modules.vehicles@1.0.0" />
+     <Folder Include="Assets\Other\KriptoFX\MuzzleFlashes\Models\Broadleaf_Desktop 1 Materials\LOD1" />
      <None Include="Library\PackageCache\com.unity.modules.xr@1.0.0\package.json" />
      <Folder Include="Library\PackageCache\com.unity.textmeshpro@3.0.6\Tests" />
      <None Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing\Shaders\Builtins\MotionBlur.shader" />
+     <Folder Include="Assets\Other\KriptoFX\MuzzleFlashes\Scripts\Rendering" />
      <None Include="Library\PackageCache\com.unity.textmeshpro@3.0.6\Editor Resources\Shaders\TMP_Properties.cginc" />
      <None Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing\Shaders\Builtins\MultiScaleVODownsample1.compute" />
+     <None Include="Assets\Other\KriptoFX\MuzzleFlashes\Shaders\FPSDistortionWaterParticles.shader" />
      <Folder Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing\Shaders\Editor" />
      <Folder Include="Assets\Other\Lumber\Mesh" />
      <None Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing\Shaders\Builtins\Fog.hlsl" />
+     <Folder Include="Assets\Other\KriptoFX\MuzzleFlashes" />
+     <Folder Include="Assets\Other\JMO Assets\WarFX\Mobile\Textures\Flames" />
      <None Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing\Shaders\Builtins\ExposureHistogram.compute" />
      <None Include="Library\PackageCache\com.unity.textmeshpro@3.0.6\Editor Resources\Shaders\TMP_SDF Internal Editor.shader" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.4\Lib\Editor\PlasticSCM\Localization\xdiff.es.txt" />
@@ -438,6 +496,7 @@
      <Folder Include="Library\PackageCache\com.unity.modules.unitywebrequestwww@1.0.0" />
      <Folder Include="Library\PackageCache\com.unity.collab-proxy@2.0.4\Lib" />
      <None Include="Library\PackageCache\com.unity.modules.director@1.0.0\package.json" />
+     <Folder Include="Assets\Other\KriptoFX\MuzzleFlashes\Models" />
      <Folder Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing\Shaders\API" />
      <None Include="Library\PackageCache\com.unity.ide.vscode@1.2.5\ValidationExceptions.json" />
      <Folder Include="Library\PackageCache\com.unity.modules.jsonserialize@1.0.0" />
@@ -445,6 +504,7 @@
      <Folder Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing" />
      <None Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing\Shaders\Builtins\GrainBaker.shader" />
      <None Include="Assets\Other\Lumber\Shader\Hidden_Cibbi&apos;s shaders_Toony Standard_Outlined.shader" />
+     <Folder Include="Assets\Other\KriptoFX\MuzzleFlashes\Materials\Effects" />
      <Folder Include="Library\PackageCache\com.unity.textmeshpro@3.0.6\Editor Resources\Shaders" />
      <Folder Include="Library\PackageCache\com.unity.modules.director@1.0.0" />
      <Folder Include="Library\PackageCache\com.unity.modules.audio@1.0.0" />
@@ -457,30 +517,36 @@
      <None Include="Library\PackageCache\com.unity.cinemachine@2.8.9\package.json" />
      <Folder Include="Library\PackageCache\com.unity.ide.visualstudio@2.0.18" />
      <None Include="Assets\Other\Lumber\Resources\shaders\TextMeshPro_Bitmap.shader" />
+     <Folder Include="Assets\Other\KriptoFX\MuzzleFlashes\Textures\Effects\Impact" />
      <None Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing\Shaders\Builtins\ScreenSpaceReflections.hlsl" />
      <None Include="Library\PackageCache\com.unity.modules.androidjni@1.0.0\package.json" />
      <Folder Include="Assets\Scripts\Infrastructure\Installers" />
      <None Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing\Shaders\API\XboxOne.hlsl" />
      <Folder Include="Assets\Other\_Gloomy_Hyper\Textures" />
      <None Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing\Shaders\Builtins\Copy.shader" />
+     <Folder Include="Assets\Other\KriptoFX\MuzzleFlashes\Prefab\Impacts" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF Overlay.shader" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.4\Lib\Editor\PlasticSCM\Localization\commontypes.ja.txt" />
      <Folder Include="Library\PackageCache\com.unity.modules.video@1.0.0" />
      <None Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing\Shaders\API\D3D12.hlsl" />
      <Folder Include="Library\PackageCache\com.unity.modules.ai@1.0.0" />
+     <Folder Include="Assets\Other\KriptoFX" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.4\Lib\Editor\PlasticSCM\Localization\configurehelper.ko.txt" />
      <None Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing\Shaders\Builtins\DepthOfField.shader" />
      <None Include="Library\PackageCache\com.unity.textmeshpro@3.0.6\PackageConversionData_Assets.json" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader" />
+     <Folder Include="Assets\Other\KriptoFX\MuzzleFlashes\Textures\Effects" />
      <Folder Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing\Shaders\Builtins" />
      <None Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing\Shaders\Builtins\SubpixelMorphologicalAntialiasing.hlsl" />
      <Folder Include="Library\PackageCache\com.unity.collab-proxy@2.0.4\Editor" />
+     <Folder Include="Assets\Other\Animations\Player\Clips" />
      <Folder Include="Library\PackageCache\com.unity.textmeshpro@3.0.6\Package Resources" />
      <Folder Include="Assets\Scenes" />
      <None Include="Assets\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
      <Folder Include="Library\PackageCache\com.unity.modules.terrain@1.0.0" />
      <Folder Include="Assets\Other\Lumber\Material" />
      <None Include="Library\PackageCache\com.unity.modules.animation@1.0.0\package.json" />
+     <Folder Include="Assets\Other\JMO Assets\WarFX\Mobile\Materials\Misc" />
      <Folder Include="Assets\TextMesh Pro\Documentation" />
      <Folder Include="Library\PackageCache\com.unity.modules.uielementsnative@1.0.0" />
      <Folder Include="Assets\Scripts\Infrastructure\StaticData" />
@@ -498,6 +564,7 @@
      <None Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing\Shaders\Editor\ConvertToLog.shader" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.4\Lib\Editor\PlasticSCM\Localization\i3.ja.txt" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile.shader" />
+     <Folder Include="Assets\Other\JMO Assets\WarFX\_Effects (Mobile)" />
      <Folder Include="Library\PackageCache\com.unity.collab-proxy@2.0.4\Lib\Editor\PlasticSCM\Localization" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.4\Lib\Editor\PlasticSCM\Localization\cm.zh-Hans.txt" />
      <Folder Include="Assets\Other\Text" />
@@ -519,6 +586,9 @@
      <None Include="Assets\Other\Lumber\Shader\Custom_GroundShader.shader" />
      <Folder Include="Library\PackageCache\com.unity.cinemachine@2.8.9\Presets" />
      <None Include="Library\PackageCache\com.unity.modules.ui@1.0.0\package.json" />
+     <Folder Include="Assets\Other\JMO Assets\WarFX" />
+     <None Include="Assets\Other\KriptoFX\MuzzleFlashes\Shaders\Leafs.shader" />
+     <Folder Include="Assets\Other\JMO Assets\WarFX\_Effects (Mobile)\Bullet Impacts" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Sprite.shader" />
      <Folder Include="Assets\Resources\Prefabs\UI" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.4\Lib\Editor\PlasticSCM\Localization\semantic.zh-Hans.txt" />
@@ -552,12 +622,6 @@
      </Reference>
      <Reference Include="UnityEngine.ClothModule">
      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.25f1\Editor\Data\Managed\UnityEngine\UnityEngine.ClothModule.dll</HintPath>
-     </Reference>
-     <Reference Include="UnityEngine.ClusterInputModule">
-     <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.25f1\Editor\Data\Managed\UnityEngine\UnityEngine.ClusterInputModule.dll</HintPath>
-     </Reference>
-     <Reference Include="UnityEngine.ClusterRendererModule">
-     <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.25f1\Editor\Data\Managed\UnityEngine\UnityEngine.ClusterRendererModule.dll</HintPath>
      </Reference>
      <Reference Include="UnityEngine.CoreModule">
      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.25f1\Editor\Data\Managed\UnityEngine\UnityEngine.CoreModule.dll</HintPath>
@@ -718,9 +782,6 @@
      <Reference Include="UnityEngine.VideoModule">
      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.25f1\Editor\Data\Managed\UnityEngine\UnityEngine.VideoModule.dll</HintPath>
      </Reference>
-     <Reference Include="UnityEngine.VirtualTexturingModule">
-     <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.25f1\Editor\Data\Managed\UnityEngine\UnityEngine.VirtualTexturingModule.dll</HintPath>
-     </Reference>
      <Reference Include="UnityEngine.WindModule">
      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.25f1\Editor\Data\Managed\UnityEngine\UnityEngine.WindModule.dll</HintPath>
      </Reference>
@@ -774,6 +835,9 @@
      </Reference>
      <Reference Include="Zenject-usage">
      <HintPath>C:\Users\fuyca\Desktop\Projects\TimberCraft\Assets\Plugins\Zenject\Source\Usage\Zenject-usage.dll</HintPath>
+     </Reference>
+     <Reference Include="DOTween">
+     <HintPath>C:\Users\fuyca\Desktop\Projects\TimberCraft\Assets\Plugins\Demigiant\DOTween\DOTween.dll</HintPath>
      </Reference>
      <Reference Include="Unity.VisualScripting.Antlr3.Runtime">
      <HintPath>C:\Users\fuyca\Desktop\Projects\TimberCraft\Library\PackageCache\com.unity.visualscripting@1.8.0\Runtime\VisualScripting.Flow\Dependencies\NCalc\Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>

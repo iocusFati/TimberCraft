@@ -1,7 +1,6 @@
 ﻿using Infrastructure.Services.Input;
 using Infrastructure.StaticData.PlayerData;
 using UnityEngine;
-using Zenject;
 
 namespace Infrastructure.States
 {

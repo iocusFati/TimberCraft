@@ -10,22 +10,29 @@ namespace Infrastructure.States
     public class Player : MonoBehaviour
     {
         private const string PlayerCameraTag = "PlayerCamera";
+        private const string ResourceTag = "Resource";
 
         [SerializeField] private Animator _animator;
         [SerializeField] private Transform _playerCameraLookAt;
+        [SerializeField] private TriggerInteraction _triggerInteraction;
         [SerializeField] private CharacterController _characterController;
+        [SerializeField] private PlayerAxeEnabler _playerAxeEnabler;
 
         private CinemachineVirtualCamera _playerCamera;
         private PlayerMovement _playerMovement;
-        private PlayerAnimatorStateMachine _playerAnimator;
-        
+        private PlayerAnimator _playerAnimator;
+        // private PlayerAxe _playerAxe;
+
         private bool _isMoving;
 
         [Inject]
         public void Construct(IInputService inputService, IStaticDataService staticData)
         {
             _playerMovement = new PlayerMovement(_characterController, inputService, staticData.PlayerConfig, transform);
-            _playerAnimator = new PlayerAnimatorStateMachine(_animator);
+            _playerAnimator = new PlayerAnimator(_animator);
+            // _playerAxe = new PlayerAxe(_axeHead, staticData.PlayerConfig);
+            
+            // _playerAxeEnabler.Construct(_playerAxe);
         }
 
         private void Start()
@@ -33,6 +40,9 @@ namespace Infrastructure.States
             InitializePlayerCamera();
 
             _playerMovement.SetCamera(_playerCamera.transform);
+            
+            _triggerInteraction.OnTriggerEntered += OnTriggerEntered;
+            _triggerInteraction.OnTriggerExited += OnTriggerExited;
         }
 
         private void Update()
@@ -40,20 +50,51 @@ namespace Infrastructure.States
             Vector3 movementVector = _playerMovement.GetMovementVector();
 
             Move(movementVector);
+
+            // if (_playerAxe.HasHitTheTree(out var hitResourceSources))
+            // {
+            //     foreach (var resourceSource in hitResourceSources)
+            //     {
+            //         _playerAxe.DamageResourceSource(resourceSource);
+            //     }
+            // }
         }
 
+        private void OnTriggerEntered(Collider other)
+        {
+            if (other.CompareTag(ResourceTag))
+            {
+                _playerAnimator.Chop();
+                _playerAxeEnabler.EnableAxeCollider();
+            }
+        }
+
+        private void OnTriggerExited(Collider other)
+        {
+            if (other.CompareTag(ResourceTag))
+            {
+                _playerAnimator.StopChopping();
+                _playerAxeEnabler.DisableAxeCollider();
+            }
+        }
+        
         private void Move(Vector3 movementVector)
         {
             Vector2 movementVector2D = new Vector2(movementVector.x, movementVector.z);
             _playerMovement.MoveCharacter(movementVector);
 
             if (movementVector2D != Vector2.zero)
+                IsMoving();
+            else
+                IsStatic();
+
+            void IsMoving()
             {
                 _playerAnimator.Enter<PlayerAnimationRunState>();
 
                 _isMoving = true;
             }
-            else
+            void IsStatic()
             {
                 if (_isMoving)
                 {
@@ -63,8 +104,7 @@ namespace Infrastructure.States
                 }
             }
         }
-
-
+        
         private void InitializePlayerCamera()
         {
             _playerCamera = GameObject

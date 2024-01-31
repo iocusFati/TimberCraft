@@ -5,6 +5,7 @@ using Infrastructure.AssetProviderService;
 using Infrastructure.Factories;
 using Infrastructure.Services.Input;
 using Infrastructure.Services.PersistentProgress;
+using Infrastructure.Services.Pool;
 using Infrastructure.Services.SaveLoad;
 using Infrastructure.Services.StaticDataService;
 using Infrastructure.States;
@@ -40,6 +41,8 @@ namespace Infrastructure
             BindInputService();
             
             BindUIFactory(uiHolder);
+            
+            BindPoolService();
         }
 
         private void BindStaticDataService()
@@ -52,6 +55,18 @@ namespace Infrastructure
                 .AsSingle();
             
             staticData.Initialize();
+        }
+        
+        private void BindPoolService()
+        {
+            PoolService poolService = new PoolService(Container.Resolve<IAssets>());
+            
+            Container
+                .Bind<IPoolService>()
+                .FromInstance(poolService)
+                .AsSingle();
+            
+            poolService.Initialize();
         }
 
         private void BindUIHolder(out UIHolder uiHolder)

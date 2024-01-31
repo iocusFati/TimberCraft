@@ -1,5 +1,6 @@
 ﻿using Infrastructure.AssetProviderService;
 using Infrastructure.StaticData.PlayerData;
+using Infrastructure.StaticData.ResourcesData;
 using UnityEngine;
 
 namespace Infrastructure.Services.StaticDataService
@@ -7,15 +8,18 @@ namespace Infrastructure.Services.StaticDataService
     public class StaticDataService : IStaticDataService
     {
         public PlayerConfig PlayerConfig { get; set; }
+        public ResourcesConfig ResourcesConfig { get; set; }
 
         public void Initialize()
         {
-            InitializePlayerData();
+            InitializePlayerConfig();
+            InitializeResourcesConfig();
         }
 
-        private void InitializePlayerData()
-        {
+        private void InitializePlayerConfig() => 
             PlayerConfig = Resources.Load<PlayerConfig>(AssetPaths.PlayerConfig);
-        }
+        
+        private void InitializeResourcesConfig() => 
+            ResourcesConfig = Resources.Load<ResourcesConfig>(AssetPaths.ResourcesConfig);
     }
 }
