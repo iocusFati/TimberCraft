@@ -17,6 +17,7 @@ namespace Infrastructure.States
         [SerializeField] private TriggerInteraction _triggerInteraction;
         [SerializeField] private CharacterController _characterController;
         [SerializeField] private PlayerAxeEnabler _playerAxeEnabler;
+        [SerializeField] private PlayerAxe _playerAxe;
 
         private CinemachineVirtualCamera _playerCamera;
         private PlayerMovement _playerMovement;
@@ -40,9 +41,12 @@ namespace Infrastructure.States
             InitializePlayerCamera();
 
             _playerMovement.SetCamera(_playerCamera.transform);
+            _playerAxeEnabler.Construct(_playerAxe);
             
             _triggerInteraction.OnTriggerEntered += OnTriggerEntered;
             _triggerInteraction.OnTriggerExited += OnTriggerExited;
+
+            _playerAxe.OnDestroyedResourceSource += StopChopping;
         }
 
         private void Update()
@@ -50,14 +54,6 @@ namespace Infrastructure.States
             Vector3 movementVector = _playerMovement.GetMovementVector();
 
             Move(movementVector);
-
-            // if (_playerAxe.HasHitTheTree(out var hitResourceSources))
-            // {
-            //     foreach (var resourceSource in hitResourceSources)
-            //     {
-            //         _playerAxe.DamageResourceSource(resourceSource);
-            //     }
-            // }
         }
 
         private void OnTriggerEntered(Collider other)
@@ -65,19 +61,21 @@ namespace Infrastructure.States
             if (other.CompareTag(ResourceTag))
             {
                 _playerAnimator.Chop();
-                _playerAxeEnabler.EnableAxeCollider();
             }
         }
 
         private void OnTriggerExited(Collider other)
         {
-            if (other.CompareTag(ResourceTag))
-            {
-                _playerAnimator.StopChopping();
-                _playerAxeEnabler.DisableAxeCollider();
-            }
+            if (other.CompareTag(ResourceTag)) 
+                StopChopping();
         }
         
+        private void StopChopping()
+        {
+            _playerAnimator.StopChopping();
+            _playerAxeEnabler.DisableAxeCollider();
+        }
+
         private void Move(Vector3 movementVector)
         {
             Vector2 movementVector2D = new Vector2(movementVector.x, movementVector.z);
@@ -104,7 +102,7 @@ namespace Infrastructure.States
                 }
             }
         }
-        
+
         private void InitializePlayerCamera()
         {
             _playerCamera = GameObject

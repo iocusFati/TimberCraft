@@ -9,6 +9,8 @@ namespace Infrastructure.AssetProviderService
         public const string HUD = "Prefabs/UI/HUD";
 
         public const string WoodHitParticle = "Prefabs/Particles/WoodImpact";
+
+        public const string LogPrefab = "Prefabs/ResourceDropouts/Log";
         
         public const string PlayerConfig = "StaticData/Configs/PlayerConfig";
         public const string ResourcesConfig = "StaticData/Configs/ResourcesConfig";

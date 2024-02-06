@@ -4489,6 +4489,7 @@ MonoBehaviour:
   _triggerInteraction: {fileID: 1838815323040396064}
   _characterController: {fileID: 847610611928790337}
   _playerAxeEnabler: {fileID: 2771472769614374295}
+  _playerAxe: {fileID: 1961299594083539585}
 --- !u!114 &2771472769614374295
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4501,7 +4502,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 144a4ff1e2a3470b9ab33d83ad062f96, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _axe: {fileID: 1961299594083539585}
 --- !u!95 &3298326732074232320
 Animator:
   serializedVersion: 5

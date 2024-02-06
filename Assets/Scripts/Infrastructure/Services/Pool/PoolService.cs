@@ -1,4 +1,5 @@
 ﻿using Infrastructure.AssetProviderService;
+using Infrastructure.States;
 
 namespace Infrastructure.Services.Pool
 {
@@ -7,6 +8,7 @@ namespace Infrastructure.Services.Pool
         private readonly IAssets _assets;
         
         public WoodHitParticlesPool WoodHitParticlesPool { get; private set; }
+        public BasePool<DropoutResource> LogsPool { get; private set; }
 
 
         public PoolService(IAssets assets)
@@ -17,11 +19,13 @@ namespace Infrastructure.Services.Pool
         public void Initialize()
         {
             InitializeWoodHitParticles();
+            InitializeLogsPool();
         }
 
-        private void InitializeWoodHitParticles()
-        {
+        private void InitializeWoodHitParticles() => 
             WoodHitParticlesPool = new WoodHitParticlesPool(_assets);
-        }
+        
+        private void InitializeLogsPool() => 
+            LogsPool = new LogsPool(_assets);
     }
 }
