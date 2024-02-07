@@ -7,75 +7,41 @@ using Zenject;
 
 namespace Infrastructure.States
 {
-    public class Player : MonoBehaviour
+    public class Player : LumberjackBase
     {
-        private const string PlayerCameraTag = "PlayerCamera";
-        private const string ResourceTag = "Resource";
-
-        [SerializeField] private Animator _animator;
         [SerializeField] private Transform _playerCameraLookAt;
-        [SerializeField] private TriggerInteraction _triggerInteraction;
         [SerializeField] private CharacterController _characterController;
-        [SerializeField] private PlayerAxeEnabler _playerAxeEnabler;
-        [SerializeField] private PlayerAxe _playerAxe;
 
         private CinemachineVirtualCamera _playerCamera;
-        private PlayerMovement _playerMovement;
-        private PlayerAnimator _playerAnimator;
-        // private PlayerAxe _playerAxe;
 
+        private PlayerMovement _playerMovement;
         private bool _isMoving;
 
         [Inject]
-        public void Construct(IInputService inputService, IStaticDataService staticData)
+        public override void Construct(IInputService inputService, IStaticDataService staticData,
+            ICacheService cacheService)
         {
+            base.Construct(inputService, staticData, cacheService);
+            
             _playerMovement = new PlayerMovement(_characterController, inputService, staticData.PlayerConfig, transform);
-            _playerAnimator = new PlayerAnimator(_animator);
-            // _playerAxe = new PlayerAxe(_axeHead, staticData.PlayerConfig);
-            
-            // _playerAxeEnabler.Construct(_playerAxe);
         }
 
-        private void Start()
+        protected override void Start()
         {
-            InitializePlayerCamera();
-
-            _playerMovement.SetCamera(_playerCamera.transform);
-            _playerAxeEnabler.Construct(_playerAxe);
+            base.Start();
             
-            _triggerInteraction.OnTriggerEntered += OnTriggerEntered;
-            _triggerInteraction.OnTriggerExited += OnTriggerExited;
-
-            _playerAxe.OnDestroyedResourceSource += StopChopping;
+            InitializePlayerCamera();
+            
+            _playerMovement.SetCamera(_playerCamera.transform);
         }
-
+        
         private void Update()
         {
             Vector3 movementVector = _playerMovement.GetMovementVector();
 
             Move(movementVector);
         }
-
-        private void OnTriggerEntered(Collider other)
-        {
-            if (other.CompareTag(ResourceTag))
-            {
-                _playerAnimator.Chop();
-            }
-        }
-
-        private void OnTriggerExited(Collider other)
-        {
-            if (other.CompareTag(ResourceTag)) 
-                StopChopping();
-        }
         
-        private void StopChopping()
-        {
-            _playerAnimator.StopChopping();
-            _playerAxeEnabler.DisableAxeCollider();
-        }
-
         private void Move(Vector3 movementVector)
         {
             Vector2 movementVector2D = new Vector2(movementVector.x, movementVector.z);
@@ -88,7 +54,7 @@ namespace Infrastructure.States
 
             void IsMoving()
             {
-                _playerAnimator.Enter<PlayerAnimationRunState>();
+                _lumberjackAnimator.Enter<PlayerAnimationRunState>();
 
                 _isMoving = true;
             }
@@ -96,13 +62,13 @@ namespace Infrastructure.States
             {
                 if (_isMoving)
                 {
-                    _playerAnimator.Enter<PlayerAnimationIdleState>();
+                    _lumberjackAnimator.Enter<PlayerAnimationIdleState>();
 
                     _isMoving = false;
                 }
             }
         }
-
+        
         private void InitializePlayerCamera()
         {
             _playerCamera = GameObject

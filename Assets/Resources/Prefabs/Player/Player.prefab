@@ -31,6 +31,37 @@ Transform:
   m_Father: {fileID: 5243268220091193053}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!1 &3546909062320397810
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7638881381066207561}
+  m_Layer: 0
+  m_Name: ResourceCollector
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7638881381066207561
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3546909062320397810}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.98, z: -0.35}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5250455016260565175}
+  m_RootOrder: 13
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5246734157388332188
 GameObject:
   m_ObjectHideFlags: 0
@@ -336,7 +367,8 @@ GameObject:
   - component: {fileID: 5234899119727340468}
   - component: {fileID: 5226077488465208049}
   - component: {fileID: 5274762426573461842}
-  m_Layer: 16
+  - component: {fileID: 8780838407757697837}
+  m_Layer: 8
   m_Name: Trigger_LootHolder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -421,6 +453,18 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &8780838407757697837
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5246811062191263791}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0dae98de5544f78ba71e7e41923a874, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5246819699674238047
 GameObject:
   m_ObjectHideFlags: 0
@@ -4386,7 +4430,7 @@ GameObject:
   - component: {fileID: 5275608909396301869}
   - component: {fileID: 5193403218894833513}
   - component: {fileID: 847610611928790337}
-  - component: {fileID: -6406698652904072199}
+  - component: {fileID: 5610746687764024729}
   - component: {fileID: 2771472769614374295}
   - component: {fileID: 3298326732074232320}
   m_Layer: 6
@@ -4421,6 +4465,7 @@ Transform:
   - {fileID: 5242871144587156844}
   - {fileID: 5243014965311657604}
   - {fileID: 2254303845142963462}
+  - {fileID: 7638881381066207561}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: -0, z: -0}
@@ -4472,7 +4517,7 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0.89, z: 0}
---- !u!114 &-6406698652904072199
+--- !u!114 &5610746687764024729
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4481,15 +4526,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 5248379871325424286}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf6581faf0694b068c2c00b65589ab71, type: 3}
+  m_Script: {fileID: 11500000, guid: 842e3d07c1c74e69b9c797d111cd9ce5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _animator: {fileID: 3298326732074232320}
-  _playerCameraLookAt: {fileID: 2254303845142963462}
   _triggerInteraction: {fileID: 1838815323040396064}
-  _characterController: {fileID: 847610611928790337}
+  _lootTrigger: {fileID: 8780838407757697837}
   _playerAxeEnabler: {fileID: 2771472769614374295}
   _playerAxe: {fileID: 1961299594083539585}
+  _resourceCollector: {fileID: 7638881381066207561}
+  _playerCameraLookAt: {fileID: 2254303845142963462}
+  _characterController: {fileID: 847610611928790337}
 --- !u!114 &2771472769614374295
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5249,7 +5296,7 @@ GameObject:
   - component: {fileID: 5226344151740132703}
   - component: {fileID: 5274657141007520715}
   - component: {fileID: 1838815323040396064}
-  m_Layer: 12
+  m_Layer: 8
   m_Name: Trigger_Interaction
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -42,7 +42,7 @@ namespace Infrastructure.Services.Pool
             return poolable;
         }
 
-        public void Release(TPoolable poolable)
+        public virtual void Release(TPoolable poolable)
         {
             if (!_activePoolables.Contains(poolable))
                 return;

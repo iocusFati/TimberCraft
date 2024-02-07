@@ -5,11 +5,11 @@ using UnityEngine;
 
 namespace Infrastructure.States
 {
-    public class PlayerAnimator : StateMachine
+    public class LumberjackAnimator : StateMachine
     {
         private readonly PlayerAnimationChop _chopAnimation;
 
-        public PlayerAnimator(Animator animator)
+        public LumberjackAnimator(Animator animator)
         {
             _chopAnimation = new PlayerAnimationChop(animator);
             

@@ -43,6 +43,20 @@ namespace Infrastructure
             BindUIFactory(uiHolder);
             
             BindPoolService();
+            
+            BindCacheService();
+        }
+
+        private void BindCacheService()
+        {
+            CacheService cacheService = new CacheService();
+
+            Container
+                .Bind<ICacheService>()
+                .FromInstance(cacheService)
+                .AsSingle();
+            
+            cacheService.Initialize();
         }
 
         private void BindStaticDataService()

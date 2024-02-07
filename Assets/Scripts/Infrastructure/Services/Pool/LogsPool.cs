@@ -14,6 +14,8 @@ namespace Infrastructure.Services.Pool
         {
             DropoutResource dropoutResource = _assets.Instantiate<DropoutResource>(AssetPaths.LogPrefab);
             dropoutResource.Destination.SetParent(null);
+
+            dropoutResource.SetReleaseDelegate(() => Release(dropoutResource));
             
             return dropoutResource;
         }

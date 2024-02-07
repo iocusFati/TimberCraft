@@ -17,7 +17,7 @@ namespace Infrastructure.States
 
         public void CreatePlayer(Vector3 at)
         {
-            Player player = _container.InstantiatePrefabResourceForComponent<Player>(AssetPaths.Player, at, Quaternion.identity,
+            LumberjackBase player = _container.InstantiatePrefabResourceForComponent<LumberjackBase>(AssetPaths.Player, at, Quaternion.identity,
                 new GameObject("Holder").transform);
 
             player.transform.SetParent(null);
