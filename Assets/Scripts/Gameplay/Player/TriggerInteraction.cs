@@ -1,7 +1,7 @@
 ﻿using System;
 using UnityEngine;
 
-namespace Infrastructure.States
+namespace Gameplay.Player
 {
     public class TriggerInteraction : MonoBehaviour
     {

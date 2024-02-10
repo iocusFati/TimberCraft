@@ -1,7 +1,7 @@
-namespace Infrastructure
+namespace Infrastructure.States.Interfaces
 {
     public interface IPayloadedState<TPayload> : IExitState
     {
-        public void Enter(TPayload sceneName);
+        public void Enter(TPayload payload);
     }
 }

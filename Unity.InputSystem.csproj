@@ -56,10 +56,10 @@
      <Compile Include="Library\PackageCache\com.unity.inputsystem@1.5.1\InputSystem\Plugins\HID\HIDDescriptorWindow.cs" />
      <Compile Include="Library\PackageCache\com.unity.inputsystem@1.5.1\InputSystem\Plugins\UI\VirtualMouseInput.cs" />
      <Compile Include="Library\PackageCache\com.unity.inputsystem@1.5.1\InputSystem\Utilities\InlinedArray.cs" />
-     <Compile Include="Library\PackageCache\com.unity.inputsystem@1.5.1\InputSystem\Controls\Processors\NormalizeVector2Processor.cs" />
      <Compile Include="Library\PackageCache\com.unity.inputsystem@1.5.1\InputSystem\Events\StateEvent.cs" />
      <Compile Include="Library\PackageCache\com.unity.inputsystem@1.5.1\InputSystem\Editor\Settings\EditorPlayerSettingHelpers.cs" />
      <Compile Include="Library\PackageCache\com.unity.inputsystem@1.5.1\InputSystem\Editor\Internal\AdvancedDropdown\CallbackDataSource.cs" />
+     <Compile Include="Library\PackageCache\com.unity.inputsystem@1.5.1\InputSystem\Controls\Processors\NormalizeVector2Processor.cs" />
      <Compile Include="Library\PackageCache\com.unity.inputsystem@1.5.1\InputSystem\Plugins\XInput\XInputController.cs" />
      <Compile Include="Library\PackageCache\com.unity.inputsystem@1.5.1\InputSystem\Plugins\Users\InputUserAccountHandle.cs" />
      <Compile Include="Library\PackageCache\com.unity.inputsystem@1.5.1\InputSystem\Devices\Commands\QuerySamplingFrequencyCommand.cs" />
@@ -132,8 +132,8 @@
      <Compile Include="Library\PackageCache\com.unity.inputsystem@1.5.1\InputSystem\Plugins\DualShock\IDualShockHaptics.cs" />
      <Compile Include="Library\PackageCache\com.unity.inputsystem@1.5.1\InputSystem\Plugins\XR\Haptics\BufferedRumble.cs" />
      <Compile Include="Library\PackageCache\com.unity.inputsystem@1.5.1\InputSystem\Editor\AssetEditor\InputActionTreeView.cs" />
-     <Compile Include="Library\PackageCache\com.unity.inputsystem@1.5.1\InputSystem\Editor\AssetEditor\NameAndParameterListView.cs" />
      <Compile Include="Library\PackageCache\com.unity.inputsystem@1.5.1\InputSystem\Devices\Commands\QueryKeyboardLayoutCommand.cs" />
+     <Compile Include="Library\PackageCache\com.unity.inputsystem@1.5.1\InputSystem\Editor\AssetEditor\NameAndParameterListView.cs" />
      <Compile Include="Library\PackageCache\com.unity.inputsystem@1.5.1\InputSystem\Controls\TouchPressControl.cs" />
      <Compile Include="Library\PackageCache\com.unity.inputsystem@1.5.1\InputSystem\Devices\Haptics\DualMotorRumbleCommand.cs" />
      <Compile Include="Library\PackageCache\com.unity.inputsystem@1.5.1\InputSystem\Utilities\InternedString.cs" />
@@ -346,8 +346,8 @@
      <Compile Include="Library\PackageCache\com.unity.inputsystem@1.5.1\InputSystem\Actions\InputActionPhase.cs" />
      <Compile Include="Library\PackageCache\com.unity.inputsystem@1.5.1\InputSystem\Devices\Pen.cs" />
      <Compile Include="Library\PackageCache\com.unity.inputsystem@1.5.1\InputSystem\Devices\Commands\WarpMousePositionCommand.cs" />
-     <Compile Include="Library\PackageCache\com.unity.inputsystem@1.5.1\InputSystem\Editor\ControlPicker\InputControlPickerState.cs" />
      <Compile Include="Library\PackageCache\com.unity.inputsystem@1.5.1\InputSystem\Events\InputEventTrace.cs" />
+     <Compile Include="Library\PackageCache\com.unity.inputsystem@1.5.1\InputSystem\Editor\ControlPicker\InputControlPickerState.cs" />
      <Compile Include="Library\PackageCache\com.unity.inputsystem@1.5.1\InputSystem\Devices\Commands\QueryDimensionsCommand.cs" />
      <Compile Include="Library\PackageCache\com.unity.inputsystem@1.5.1\InputSystem\Devices\Precompiled\FastMouse.partial.cs" />
      <Compile Include="Library\PackageCache\com.unity.inputsystem@1.5.1\InputSystem\Plugins\UI\MultiplayerEventSystem.cs" />
@@ -371,8 +371,8 @@
      <Compile Include="Library\PackageCache\com.unity.inputsystem@1.5.1\InputSystem\Utilities\Observables\Observable.cs" />
      <Compile Include="Library\PackageCache\com.unity.inputsystem@1.5.1\InputSystem\Plugins\PlayerInput\PlayerInputManager.cs" />
      <Compile Include="Library\PackageCache\com.unity.inputsystem@1.5.1\InputSystem\InputManagerStateMonitors.cs" />
-     <Compile Include="Library\PackageCache\com.unity.inputsystem@1.5.1\InputSystem\Plugins\XR\Haptics\SendHapticImpulseCommand.cs" />
      <Compile Include="Library\PackageCache\com.unity.inputsystem@1.5.1\InputSystem\Plugins\UI\ExtendedAxisEventData.cs" />
+     <Compile Include="Library\PackageCache\com.unity.inputsystem@1.5.1\InputSystem\Plugins\XR\Haptics\SendHapticImpulseCommand.cs" />
      <Compile Include="Library\PackageCache\com.unity.inputsystem@1.5.1\InputSystem\InputMetrics.cs" />
      <Compile Include="Library\PackageCache\com.unity.inputsystem@1.5.1\InputSystem\Editor\Internal\AdvancedDropdown\AdvancedDropdownItem.cs" />
      <Compile Include="Library\PackageCache\com.unity.inputsystem@1.5.1\InputSystem\Plugins\Android\AndroidSensors.cs" />
@@ -712,6 +712,9 @@
      <Reference Include="Unity.VisualScripting.IonicZip">
      <HintPath>C:\Users\fuyca\Desktop\Projects\TimberCraft\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll</HintPath>
      </Reference>
+     <Reference Include="Pathfinding.Ionic.Zip.Reduced">
+     <HintPath>C:\Users\fuyca\Desktop\Projects\TimberCraft\Assets\AstarPathfindingProject\Plugins\DotNetZip\Pathfinding.Ionic.Zip.Reduced.dll</HintPath>
+     </Reference>
      <Reference Include="unityplastic">
      <HintPath>C:\Users\fuyca\Desktop\Projects\TimberCraft\Library\PackageCache\com.unity.collab-proxy@2.0.4\Lib\Editor\PlasticSCM\unityplastic.dll</HintPath>
      </Reference>
@@ -724,6 +727,9 @@
      <Reference Include="Sirenix.Utilities">
      <HintPath>C:\Users\fuyca\Desktop\Projects\TimberCraft\Assets\Plugins\Sirenix\Assemblies\Sirenix.Utilities.dll</HintPath>
      </Reference>
+     <Reference Include="Pathfinding.ClipperLib">
+     <HintPath>C:\Users\fuyca\Desktop\Projects\TimberCraft\Assets\AstarPathfindingProject\Plugins\Clipper\Pathfinding.ClipperLib.dll</HintPath>
+     </Reference>
      <Reference Include="Unity.VisualScripting.Antlr3.Runtime">
      <HintPath>C:\Users\fuyca\Desktop\Projects\TimberCraft\Library\PackageCache\com.unity.visualscripting@1.8.0\Runtime\VisualScripting.Flow\Dependencies\NCalc\Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
      </Reference>
@@ -735,6 +741,9 @@
      </Reference>
      <Reference Include="Sirenix.Serialization">
      <HintPath>C:\Users\fuyca\Desktop\Projects\TimberCraft\Assets\Plugins\Sirenix\Assemblies\Sirenix.Serialization.dll</HintPath>
+     </Reference>
+     <Reference Include="Pathfinding.Poly2Tri">
+     <HintPath>C:\Users\fuyca\Desktop\Projects\TimberCraft\Assets\AstarPathfindingProject\Plugins\Poly2Tri\Pathfinding.Poly2Tri.dll</HintPath>
      </Reference>
      <Reference Include="Sirenix.Utilities.Editor">
      <HintPath>C:\Users\fuyca\Desktop\Projects\TimberCraft\Assets\Plugins\Sirenix\Assemblies\Sirenix.Utilities.Editor.dll</HintPath>

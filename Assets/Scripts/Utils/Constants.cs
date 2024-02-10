@@ -1,4 +1,4 @@
-﻿namespace Infrastructure.States
+﻿namespace Utils
 {
     public static class Constants
     {

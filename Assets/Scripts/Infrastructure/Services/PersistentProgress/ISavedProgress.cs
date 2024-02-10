@@ -1,6 +1,6 @@
 ﻿using Infrastructure.Data;
 
-namespace UI.Entities
+namespace Infrastructure.Services.PersistentProgress
 {
     public interface ISavedProgress : ISavedProgressReader
     {

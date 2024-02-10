@@ -1,4 +1,7 @@
 ﻿using Infrastructure.AssetProviderService;
+using Infrastructure.Factories.BotFactoryFolder;
+using Infrastructure.Factories.Location;
+using Infrastructure.Factories.PlayerFactoryFolder;
 using Infrastructure.States;
 using Zenject;
 
@@ -11,6 +14,7 @@ namespace Infrastructure.Factories
 
         public PlayerFactory PlayerFactory { get; private set; }
         public LocationFactory LocationFactory { get; private set; }
+        public BotFactory BotFactory { get; set; }
 
         public FactoriesHolderService(IAssets assets, IInstantiator instantiator)
         {
@@ -27,12 +31,16 @@ namespace Infrastructure.Factories
         {
             InitializePlayerFactory();
             InitializeLocationFactory();
+            InitializeBotFactory();
         }
 
         private void InitializePlayerFactory() => 
-            PlayerFactory = new PlayerFactory(_assets, _instantiator);
+            PlayerFactory = new PlayerFactory(_instantiator);
 
         private void InitializeLocationFactory() => 
             LocationFactory = new LocationFactory(_assets);
+        
+        private void InitializeBotFactory() => 
+            BotFactory = new BotFactory(_instantiator);
     }
 }

@@ -1,33 +1,36 @@
 ﻿using System;
 using System.Collections.Generic;
-using Gameplay.Player.Animation;
+using Infrastructure.States;
+using Infrastructure.States.Interfaces;
 using UnityEngine;
 
-namespace Infrastructure.States
+namespace Gameplay.Player.Animation
 {
     public class LumberjackAnimator : StateMachine
     {
-        private readonly PlayerAnimationChop _chopAnimation;
+        private readonly LumberjackAnimationChop _chopAnimation;
 
         public LumberjackAnimator(Animator animator)
         {
-            _chopAnimation = new PlayerAnimationChop(animator);
+            _chopAnimation = new LumberjackAnimationChop(animator);
             
             _states = new Dictionary<Type, IExitState>
             {
-                [typeof(PlayerAnimationRunState)] = new PlayerAnimationRunState(animator),
-                [typeof(PlayerAnimationIdleState)] = new PlayerAnimationIdleState(animator),
+                [typeof(LumberjackAnimationRunState)] = new LumberjackAnimationRunState(animator),
+                [typeof(LumberjackAnimationIdleState)] = new LumberjackAnimationIdleState(animator),
             };
         }
 
-        public void Chop()
-        {
+        public void Chop() => 
             _chopAnimation.StartChopping();
-        }
 
-        public void StopChopping()
-        {
+        public void StopChopping() => 
             _chopAnimation.StopChopping();
-        }
+        
+        public void Run() => 
+            Enter<LumberjackAnimationRunState>();
+
+        public void Idle() => 
+            Enter<LumberjackAnimationIdleState>();
     }
 }

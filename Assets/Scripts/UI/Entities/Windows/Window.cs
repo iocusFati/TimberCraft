@@ -1,7 +1,7 @@
-﻿using Base.UI.Factory;
+﻿using UI.Factory;
 using UnityEngine;
 
-namespace Base.UI.Entities.Windows
+namespace UI.Entities.Windows
 {
     public class Window : MonoBehaviour, IUIEntity
     {

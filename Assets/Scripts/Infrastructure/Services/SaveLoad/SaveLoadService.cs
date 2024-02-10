@@ -1,7 +1,6 @@
 ﻿using System.Collections.Generic;
 using Infrastructure.Data;
 using Infrastructure.Services.PersistentProgress;
-using UI.Entities;
 using UnityEngine;
 
 namespace Infrastructure.Services.SaveLoad

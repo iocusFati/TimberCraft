@@ -1,6 +1,7 @@
-﻿using Infrastructure.AssetProviderService;
+﻿using Gameplay.Locations;
+using Infrastructure.AssetProviderService;
 
-namespace Infrastructure.States
+namespace Infrastructure.Factories.Location
 {
     public class LocationFactory
     {

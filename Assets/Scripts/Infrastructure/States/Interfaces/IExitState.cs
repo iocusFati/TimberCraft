@@ -1,4 +1,4 @@
-namespace Infrastructure
+namespace Infrastructure.States.Interfaces
 {
     public interface IExitState
     {

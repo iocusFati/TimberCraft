@@ -1,8 +1,9 @@
 ﻿using Infrastructure.AssetProviderService;
+using UI.Entities.Windows;
 using UnityEngine;
 using Zenject;
 
-namespace Base.UI.Factory
+namespace UI.Factory
 {
     public class UIFactory : IUIFactory
     {

@@ -1,4 +1,4 @@
-﻿namespace Base.UI.Factory
+﻿namespace UI.Factory
 {
     public class UIHolder : IUIHolder
     {

@@ -1,8 +1,8 @@
-﻿using Infrastructure.States;
+﻿using Gameplay.Locations;
 using UnityEngine;
 using Zenject;
 
-namespace Infrastructure
+namespace Infrastructure.Installers
 {
     public class GameSceneInstaller : MonoInstaller
     {

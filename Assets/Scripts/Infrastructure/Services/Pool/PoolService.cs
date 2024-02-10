@@ -1,4 +1,5 @@
-﻿using Infrastructure.AssetProviderService;
+﻿using Gameplay.Resource;
+using Infrastructure.AssetProviderService;
 using Infrastructure.States;
 
 namespace Infrastructure.Services.Pool

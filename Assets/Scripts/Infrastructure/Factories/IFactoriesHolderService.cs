@@ -1,4 +1,7 @@
-﻿using Infrastructure.Services;
+﻿using Infrastructure.Factories.BotFactoryFolder;
+using Infrastructure.Factories.Location;
+using Infrastructure.Factories.PlayerFactoryFolder;
+using Infrastructure.Services;
 using Infrastructure.States;
 
 namespace Infrastructure.Factories
@@ -7,5 +10,6 @@ namespace Infrastructure.Factories
     {
         PlayerFactory PlayerFactory { get; }
         LocationFactory LocationFactory { get; }
+        BotFactory BotFactory { get; }
     }
 }

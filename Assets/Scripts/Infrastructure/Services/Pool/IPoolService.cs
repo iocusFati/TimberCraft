@@ -1,4 +1,5 @@
-﻿using Infrastructure.States;
+﻿using Gameplay.Resource;
+using Infrastructure.States;
 
 namespace Infrastructure.Services.Pool
 {

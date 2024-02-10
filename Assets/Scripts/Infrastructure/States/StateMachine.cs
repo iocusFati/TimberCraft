@@ -1,9 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using Infrastructure.States.Interfaces;
 
 namespace Infrastructure.States
 {
-    public class StateMachine : IGameStateMachine
+    public class StateMachine : IStateMachine
     {
         protected Dictionary<Type, IExitState> _states;
         private IExitState _currentState;

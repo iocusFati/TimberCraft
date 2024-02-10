@@ -1,12 +1,13 @@
 ﻿using System.Collections.Generic;
 using DG.Tweening;
+using Gameplay.Player;
 using Infrastructure.Services.Pool;
 using Infrastructure.Services.StaticDataService;
 using UnityEngine;
 using UnityEngine.Serialization;
 using Zenject;
 
-namespace Infrastructure.States
+namespace Gameplay.Resource
 {
     public class Tree : ResourceSource
     {

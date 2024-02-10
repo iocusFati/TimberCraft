@@ -1,7 +1,7 @@
-﻿using Base.UI.Entities;
-using Infrastructure.Services;
+﻿using Infrastructure.Services;
+using UI.Entities.Windows;
 
-namespace Base.UI.Factory
+namespace UI.Factory
 {
     public interface IUIFactory : IService
     {

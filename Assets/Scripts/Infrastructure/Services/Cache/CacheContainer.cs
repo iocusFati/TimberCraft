@@ -1,24 +1,16 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 
-namespace Infrastructure.States
+namespace Infrastructure.Services.Cache
 {
     public class CacheContainer<TCached> where TCached : MonoBehaviour
     {
         private readonly Dictionary<GameObject, TCached> _cacheDictionary = new();
 
-        public TCached Get(GameObject key)
-        {
-            if (!_cacheDictionary.TryGetValue(key, out var cachedValue))
-            {
-                return CacheNewValue(key);
-            }
-            else
-            {
-                Debug.Log(cachedValue);
-                return cachedValue;
-            }
-        }
+        public TCached Get(GameObject key) =>
+            !_cacheDictionary.TryGetValue(key, out var cachedValue) 
+                ? CacheNewValue(key) 
+                : cachedValue;
 
         private TCached CacheNewValue(GameObject key)
         {

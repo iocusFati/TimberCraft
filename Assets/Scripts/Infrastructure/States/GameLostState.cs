@@ -1,4 +1,5 @@
 ﻿using Infrastructure.Services.Input;
+using Infrastructure.States.Interfaces;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using Zenject;
@@ -7,7 +8,7 @@ namespace Infrastructure.States
 {
     public class GameLostState : IState
     {
-        private readonly IGameStateMachine _gameStateMachine;
+        private readonly IStateMachine _gameStateMachine;
         private readonly IInputService _inputService;
         private ICoroutineRunner _coroutineRunner;
         
@@ -15,7 +16,7 @@ namespace Infrastructure.States
         private readonly float _cameraRotateDuration;
         
         public GameLostState(
-            IGameStateMachine gameStateMachine)
+            IStateMachine gameStateMachine)
             // IInputService inputService,
             // ICoroutineRunner coroutineRunner)
         {
@@ -25,7 +26,7 @@ namespace Infrastructure.States
         }
 
         [Inject]
-        public void Construct(IGameStateMachine gameStateMachine)
+        public void Construct(IStateMachine gameStateMachine)
         {
         }
 

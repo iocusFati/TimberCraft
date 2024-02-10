@@ -1,18 +1,21 @@
 using System;
 using System.Collections;
-using Base.UI.Factory;
 using Infrastructure.AssetProviderService;
 using Infrastructure.Factories;
+using Infrastructure.Factories.PlayerFactoryFolder;
+using Infrastructure.Services.Cache;
 using Infrastructure.Services.Input;
 using Infrastructure.Services.PersistentProgress;
 using Infrastructure.Services.Pool;
 using Infrastructure.Services.SaveLoad;
 using Infrastructure.Services.StaticDataService;
 using Infrastructure.States;
+using Infrastructure.States.Interfaces;
+using UI.Factory;
 using UnityEngine;
 using Zenject;
 
-namespace Infrastructure
+namespace Infrastructure.Installers
 {
     public class BootstrapInstaller : MonoInstaller, ICoroutineRunner
     {
@@ -184,7 +187,7 @@ namespace Infrastructure
         private void BindGameStateMachine()
         {
             Container
-                .Bind<IGameStateMachine>()
+                .Bind<IStateMachine>()
                 .To<GameStateMachine>()
                 .FromInstance(new GameStateMachine())
                 .AsSingle();

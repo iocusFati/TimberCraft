@@ -1,4 +1,6 @@
-using Base.UI.Factory;
+using Infrastructure.States.Interfaces;
+using UI.Entities.Windows;
+using UI.Factory;
 
 namespace Infrastructure.States
 {

@@ -1,6 +1,4 @@
-﻿using Base.UI.Entities.Windows;
-
-namespace Base.UI.Factory
+﻿namespace UI.Entities.Windows
 {
     public class HUD : Window 
     {

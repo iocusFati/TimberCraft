@@ -1,5 +1,5 @@
 ﻿using Infrastructure.Data;
-using UI.Entities;
+using Infrastructure.Services.PersistentProgress;
 
 namespace Infrastructure.Services.SaveLoad
 {

@@ -1,8 +1,9 @@
 ﻿using Infrastructure.Services.Input;
-using Infrastructure.StaticData.PlayerData;
+using Infrastructure.StaticData.LumberjackData;
 using UnityEngine;
+using Utils;
 
-namespace Infrastructure.States
+namespace Gameplay.Player
 {
     public class PlayerMovement
     {

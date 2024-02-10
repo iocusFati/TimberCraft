@@ -4532,8 +4532,8 @@ MonoBehaviour:
   _animator: {fileID: 3298326732074232320}
   _triggerInteraction: {fileID: 1838815323040396064}
   _lootTrigger: {fileID: 8780838407757697837}
-  _playerAxeEnabler: {fileID: 2771472769614374295}
-  _playerAxe: {fileID: 1961299594083539585}
+  _lumberjackAxeEnabler: {fileID: 2771472769614374295}
+  _lumberjackAxe: {fileID: 1961299594083539585}
   _resourceCollector: {fileID: 7638881381066207561}
   _playerCameraLookAt: {fileID: 2254303845142963462}
   _characterController: {fileID: 847610611928790337}

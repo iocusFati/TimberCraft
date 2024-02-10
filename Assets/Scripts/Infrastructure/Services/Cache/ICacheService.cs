@@ -1,8 +1,6 @@
-﻿using System.Linq;
-using Infrastructure.Services;
-using Unity.VisualScripting;
+﻿using Gameplay.Resource;
 
-namespace Infrastructure.States
+namespace Infrastructure.Services.Cache
 {
     public interface ICacheService : IService
     {

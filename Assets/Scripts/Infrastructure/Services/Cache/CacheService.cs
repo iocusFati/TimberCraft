@@ -1,4 +1,6 @@
-﻿namespace Infrastructure.States
+﻿using Gameplay.Resource;
+
+namespace Infrastructure.Services.Cache
 {
     public class CacheService : ICacheService
     {

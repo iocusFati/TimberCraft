@@ -11,8 +11,11 @@ namespace Infrastructure.AssetProviderService
         public const string WoodHitParticle = "Prefabs/Particles/WoodImpact";
 
         public const string LogPrefab = "Prefabs/ResourceDropouts/Log";
-        
+
+        public const string LumberjackBot = "Prefabs/Bots/LumberjackBot";
+
         public const string PlayerConfig = "StaticData/Configs/PlayerConfig";
         public const string ResourcesConfig = "StaticData/Configs/ResourcesConfig";
+        public const string LumberjackBotConfig = "StaticData/Configs/LumberjackBotConfig";
     }
 }

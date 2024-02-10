@@ -1,6 +1,7 @@
 ﻿using Infrastructure.Data;
 using Infrastructure.Services.PersistentProgress;
 using Infrastructure.Services.SaveLoad;
+using Infrastructure.States.Interfaces;
 using Zenject;
 
 namespace Infrastructure.States
@@ -9,14 +10,14 @@ namespace Infrastructure.States
     {
         private const string MainSceneName = "Game";
         
-        private readonly IGameStateMachine _gameStateMachine;
+        private readonly IStateMachine _gameStateMachine;
         private readonly IPersistentProgressService _progressService;
         private readonly ISaveLoadService _saveLoadService;
 
         public LoadProgressState() { }
         
         public LoadProgressState(
-            IGameStateMachine gameStateMachine, 
+            IStateMachine gameStateMachine, 
             IPersistentProgressService progressService,
             ISaveLoadService saveLoadService)
         {

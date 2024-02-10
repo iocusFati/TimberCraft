@@ -9,5 +9,6 @@ namespace Infrastructure.AssetProviderService
         TCreatable Instantiate<TCreatable>(string path, Vector3 at) where TCreatable : Object;
         TCreatable Instantiate<TCreatable>(string path) where TCreatable : Object;
         TCreatable Load<TCreatable>(string path) where TCreatable : Object;
+        TCreatable InstantiateDI<TCreatable>(string path) where TCreatable : Object;
     }
 }

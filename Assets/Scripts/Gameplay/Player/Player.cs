@@ -1,11 +1,14 @@
 ﻿using Cinemachine;
+using Gameplay.Lumberjack;
 using Gameplay.Player.Animation;
+using Gameplay.Resource;
+using Infrastructure.Services.Cache;
 using Infrastructure.Services.Input;
 using Infrastructure.Services.StaticDataService;
 using UnityEngine;
 using Zenject;
 
-namespace Infrastructure.States
+namespace Gameplay.Player
 {
     public class Player : LumberjackBase
     {
@@ -41,7 +44,14 @@ namespace Infrastructure.States
 
             Move(movementVector);
         }
-        
+
+        protected override void CollectDropout(DropoutResource dropout)
+        {
+            base.CollectDropout(dropout);
+            
+            dropout.GetCollectedAndReleasedTo(_resourceCollector);
+        }
+
         private void Move(Vector3 movementVector)
         {
             Vector2 movementVector2D = new Vector2(movementVector.x, movementVector.z);
@@ -54,7 +64,7 @@ namespace Infrastructure.States
 
             void IsMoving()
             {
-                _lumberjackAnimator.Enter<PlayerAnimationRunState>();
+                _lumberjackAnimator.Enter<LumberjackAnimationRunState>();
 
                 _isMoving = true;
             }
@@ -62,7 +72,7 @@ namespace Infrastructure.States
             {
                 if (_isMoving)
                 {
-                    _lumberjackAnimator.Enter<PlayerAnimationIdleState>();
+                    _lumberjackAnimator.Enter<LumberjackAnimationIdleState>();
 
                     _isMoving = false;
                 }

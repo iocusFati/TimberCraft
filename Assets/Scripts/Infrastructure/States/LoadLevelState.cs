@@ -1,5 +1,10 @@
+using Gameplay.Locations;
 using Infrastructure.Factories;
+using Infrastructure.Factories.BotFactoryFolder;
+using Infrastructure.Factories.Location;
+using Infrastructure.Factories.PlayerFactoryFolder;
 using Infrastructure.Services.SaveLoad;
+using Infrastructure.States.Interfaces;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -7,17 +12,17 @@ namespace Infrastructure.States
 {
     public class LoadLevelState : IPayloadedState<string>
     {
-        private const string PlayerSpawnTag = "PlayerSpawn";
-        
         private readonly ISaveLoadService _saveLoadService;
-        private readonly IGameStateMachine _gameStateMachine;
+        private readonly IStateMachine _gameStateMachine;
+        private readonly SceneLoader _sceneLoader;
+        
         private readonly PlayerFactory _playerFactory;
         private readonly LocationFactory _locationFactory;
-        private readonly SceneLoader _sceneLoader;
-
+        private readonly BotFactory _botFactory;
+        
         private Vector3 _initialPoint;
 
-        public LoadLevelState(IGameStateMachine gameStateMachine,
+        public LoadLevelState(IStateMachine gameStateMachine,
             ISaveLoadService saveLoadService,
             IFactoriesHolderService factoriesHolder, 
             SceneLoader sceneLoader)
@@ -28,13 +33,14 @@ namespace Infrastructure.States
             
             _playerFactory = factoriesHolder.PlayerFactory;
             _locationFactory = factoriesHolder.LocationFactory;
+            _botFactory = factoriesHolder.BotFactory;
         }
 
-        public void Enter(string sceneName)
+        public void Enter(string payload)
         {
-            if (sceneName != SceneManager.GetActiveScene().name)
+            if (payload != SceneManager.GetActiveScene().name)
             {
-                _sceneLoader.Load(sceneName, OnLoaded);
+                _sceneLoader.Load(payload, OnLoaded);
             }
             else
             {
@@ -50,6 +56,7 @@ namespace Infrastructure.States
         private void OnLoaded()
         {
             MainLocation mainLocation = Object.FindObjectOfType<MainLocation>();
+            mainLocation.Initialize();
 
             _playerFactory.CreatePlayer(mainLocation.PlayerInitialPosition);
             

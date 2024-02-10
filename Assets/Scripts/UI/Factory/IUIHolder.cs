@@ -1,6 +1,6 @@
 ﻿using Infrastructure.Services;
 
-namespace Base.UI.Factory
+namespace UI.Factory
 {
     public interface IUIHolder : IService
     {

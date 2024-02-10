@@ -1,4 +1,5 @@
-﻿using Zenject;
+﻿using Infrastructure.States.Interfaces;
+using Zenject;
 
 namespace Infrastructure
 {

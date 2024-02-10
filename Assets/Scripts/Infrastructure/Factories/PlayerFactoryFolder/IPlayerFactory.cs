@@ -1,7 +1,7 @@
 ﻿using Infrastructure.Services;
 using UnityEngine;
 
-namespace Infrastructure.States
+namespace Infrastructure.Factories.PlayerFactoryFolder
 {
     public interface IPlayerFactory : IService
     {

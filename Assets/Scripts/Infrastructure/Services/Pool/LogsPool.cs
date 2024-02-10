@@ -1,4 +1,5 @@
-﻿using Infrastructure.AssetProviderService;
+﻿using Gameplay.Resource;
+using Infrastructure.AssetProviderService;
 using Infrastructure.States;
 using UnityEngine;
 
@@ -12,7 +13,7 @@ namespace Infrastructure.Services.Pool
 
         protected override DropoutResource Spawn()
         {
-            DropoutResource dropoutResource = _assets.Instantiate<DropoutResource>(AssetPaths.LogPrefab);
+            DropoutResource dropoutResource = _assets.InstantiateDI<DropoutResource>(AssetPaths.LogPrefab);
             dropoutResource.Destination.SetParent(null);
 
             dropoutResource.SetReleaseDelegate(() => Release(dropoutResource));
