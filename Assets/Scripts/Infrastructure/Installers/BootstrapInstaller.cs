@@ -33,8 +33,6 @@ namespace Infrastructure.Installers
             
             BindGameStateMachine();
             
-            BindSaveLoadService();
-            
             BindPersistentProgress();
             
             BindAssetsService();
@@ -48,6 +46,17 @@ namespace Infrastructure.Installers
             BindPoolService();
             
             BindCacheService();
+            
+            BindPersistentProgressService();
+            
+            BindSaveLoadService();
+        }
+        private void BindPersistentProgressService()
+        {
+            Container
+                .Bind<IPersistentProgressService>()
+                .To<PersistentProgressService>()
+                .AsSingle();
         }
 
         private void BindCacheService()

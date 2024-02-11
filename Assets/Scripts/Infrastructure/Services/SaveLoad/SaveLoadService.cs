@@ -1,7 +1,6 @@
 ﻿using System.Collections.Generic;
 using Infrastructure.Data;
 using Infrastructure.Services.PersistentProgress;
-using UnityEngine;
 
 namespace Infrastructure.Services.SaveLoad
 {
@@ -25,15 +24,20 @@ namespace Infrastructure.Services.SaveLoad
             foreach (var writer in _progressWriters) 
                 writer.UpdateProgress(_persistentProgress.Progress);
             
-            PlayerPrefs.SetString(ProgressKey, _persistentProgress.Progress.ToJson());
-            PlayerPrefs.SetString(ReadersKey, _progressReaders.ToJson());
+            ES3.Save(ProgressKey, _persistentProgress.Progress);
+            ES3.Save(ReadersKey, _progressReaders);
+            
+            // PlayerPrefs.SetString(ProgressKey, _persistentProgress.Progress.ToJson());
+            // PlayerPrefs.SetString(ReadersKey, _progressReaders.ToJson());
         }
 
         public PlayerProgress LoadProgress() => 
-            PlayerPrefs.GetString(ProgressKey)?.ToDeserialized<PlayerProgress>();
+            ES3.Load<PlayerProgress>(ProgressKey);
 
         public void InformReaders()
         {
+            
+            
             foreach (var reader in _progressReaders)
                 reader.LoadProgress(_persistentProgress.Progress);
         }

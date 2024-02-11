@@ -8,13 +8,11 @@ namespace Infrastructure.States
 {
     public class LoadProgressState : IState
     {
-        private const string MainSceneName = "Game";
+        private const string GameSceneName = "Game";
         
         private readonly IStateMachine _gameStateMachine;
         private readonly IPersistentProgressService _progressService;
         private readonly ISaveLoadService _saveLoadService;
-
-        public LoadProgressState() { }
         
         public LoadProgressState(
             IStateMachine gameStateMachine, 
@@ -30,7 +28,7 @@ namespace Infrastructure.States
         {
             LoadProgressOrInitNew();
             
-            _gameStateMachine.Enter<LoadLevelState, string>(MainSceneName);
+            _gameStateMachine.Enter<LoadLevelState, string>(GameSceneName);
         }
 
         public void Exit()
@@ -38,11 +36,11 @@ namespace Infrastructure.States
             
         }
 
-        private void LoadProgressOrInitNew()
-        {
-            _progressService.Progress =
-                _saveLoadService.LoadProgress() != null ? _saveLoadService.LoadProgress() : NewProgress();
-        }
+        private void LoadProgressOrInitNew() =>
+            _progressService.Progress = 
+                _saveLoadService.LoadProgress() != null 
+                    ? _saveLoadService.LoadProgress() 
+                    : NewProgress();
 
         private PlayerProgress NewProgress() => new();
     }
