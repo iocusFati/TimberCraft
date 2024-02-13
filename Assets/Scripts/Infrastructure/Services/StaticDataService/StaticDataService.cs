@@ -1,21 +1,24 @@
-﻿using Infrastructure.AssetProviderService;
-using Infrastructure.StaticData.LumberjackData;
+﻿using Infrastructure.StaticData.LumberjackData;
 using Infrastructure.StaticData.ResourcesData;
+using Infrastructure.StaticData.uiData;
 using UnityEngine;
+using Utils;
 
 namespace Infrastructure.Services.StaticDataService
 {
     public class StaticDataService : IStaticDataService
     {
-        public PlayerConfig PlayerConfig { get; set; }
+        public PlayerConfig PlayerConfig { get; private set; }
         public ResourcesConfig ResourcesConfig { get; private set; }
-        public LumberjackBotConfig LumberjackBotConfig { get; set; }
+        public LumberjackBotConfig LumberjackBotConfig { get; private set; }
+        public UIConfig UIConfig { get; private set; }
 
         public void Initialize()
         {
             InitializePlayerConfig();
             InitializeResourcesConfig();
             InitializeLumberjackBotConfig();
+            InitializeUIConfig();
         }
 
         private void InitializePlayerConfig() => 
@@ -26,5 +29,8 @@ namespace Infrastructure.Services.StaticDataService
         
         private void InitializeLumberjackBotConfig() => 
             LumberjackBotConfig = Resources.Load<LumberjackBotConfig>(AssetPaths.LumberjackBotConfig);
+        
+        private void InitializeUIConfig() => 
+            UIConfig = Resources.Load<UIConfig>(AssetPaths.UIConfig);
     }
 }

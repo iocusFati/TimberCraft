@@ -92,8 +92,8 @@
      <Compile Include="Library\PackageCache\com.unity.timeline@1.6.5\Editor\treeview\TrackGui\TrackResizeHandle.cs" />
      <Compile Include="Library\PackageCache\com.unity.timeline@1.6.5\Editor\Manipulators\Move\IMoveItemMode.cs" />
      <Compile Include="Library\PackageCache\com.unity.timeline@1.6.5\Editor\Window\TimelineWindowAnalytics.cs" />
-     <Compile Include="Library\PackageCache\com.unity.timeline@1.6.5\Editor\Animation\AnimationClipActions.cs" />
      <Compile Include="Library\PackageCache\com.unity.timeline@1.6.5\Editor\inspectors\BuiltInCurvePresets.cs" />
+     <Compile Include="Library\PackageCache\com.unity.timeline@1.6.5\Editor\Animation\AnimationClipActions.cs" />
      <Compile Include="Library\PackageCache\com.unity.timeline@1.6.5\Editor\inspectors\GroupTrackInspector.cs" />
      <Compile Include="Library\PackageCache\com.unity.timeline@1.6.5\Editor\Recording\TimelineRecording.cs" />
      <Compile Include="Library\PackageCache\com.unity.timeline@1.6.5\Editor\Audio\AudioPlayableAssetEditor.cs" />
@@ -114,9 +114,9 @@
      <Compile Include="Library\PackageCache\com.unity.timeline@1.6.5\Editor\MenuPriority.cs" />
      <Compile Include="Library\PackageCache\com.unity.timeline@1.6.5\Editor\Animation\ClipCurveEditor.cs" />
      <Compile Include="Library\PackageCache\com.unity.timeline@1.6.5\Editor\Actions\TimelineAction.cs" />
-     <Compile Include="Library\PackageCache\com.unity.timeline@1.6.5\Editor\Actions\TrackActions.cs" />
      <Compile Include="Library\PackageCache\com.unity.timeline@1.6.5\Editor\treeview\TimelineClipHandle.cs" />
      <Compile Include="Library\PackageCache\com.unity.timeline@1.6.5\Editor\Items\MarkerItem.cs" />
+     <Compile Include="Library\PackageCache\com.unity.timeline@1.6.5\Editor\Actions\TrackActions.cs" />
      <Compile Include="Library\PackageCache\com.unity.timeline@1.6.5\Editor\Manipulators\AddDelete\AddDeleteItemModeMix.cs" />
      <Compile Include="Library\PackageCache\com.unity.timeline@1.6.5\Editor\Window\TimelineWindow.cs" />
      <Compile Include="Library\PackageCache\com.unity.timeline@1.6.5\Editor\Signals\Styles.cs" />

@@ -41,6 +41,7 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\Editor\UniqueIdEditor.cs" />
      <Compile Include="Assets\Scripts\Editor\RemoveMissingScripts.cs" />
      <Compile Include="Assets\Other\KriptoFX\MuzzleFlashes\Shaders\Editor\FPS_UberDecalGUI.cs" />
      <Folder Include="Assets\Other\KriptoFX\MuzzleFlashes\Shaders\Editor" />

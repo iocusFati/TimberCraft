@@ -10,19 +10,19 @@ namespace Gameplay.Bots.StateMachine.States
         private readonly AIPath _aiPath;
         private readonly MinionHut _hut;
         private readonly LumberjackAnimator _lumberjackAnimator;
-        private readonly LumberjackStorageResourceShare _lumberjackStorageResourceShare;
+        private readonly LumberjackBotStorageResourceShare _lumberjackBotStorageResourceShare;
         private readonly IStateMachine _botStateMachine;
 
         public BringResourcesToHutLumberjackBotState(AIPath aiPath,
             MinionHut hut,
             LumberjackAnimator lumberjackAnimator,
-            LumberjackStorageResourceShare lumberjackStorageResourceShare, 
+            LumberjackBotStorageResourceShare lumberjackBotStorageResourceShare, 
             IStateMachine botStateMachine)
         {
             _aiPath = aiPath;
             _hut = hut;
             _lumberjackAnimator = lumberjackAnimator;
-            _lumberjackStorageResourceShare = lumberjackStorageResourceShare;
+            _lumberjackBotStorageResourceShare = lumberjackBotStorageResourceShare;
             _botStateMachine = botStateMachine;
         }
 
@@ -38,7 +38,7 @@ namespace Gameplay.Bots.StateMachine.States
         private void OnHutReached()
         {
             _lumberjackAnimator.Idle();
-            _lumberjackStorageResourceShare.ShareAllResources(_hut);
+            _lumberjackBotStorageResourceShare.ShareAllResources(_hut);
             
             _botStateMachine.Enter<GoToResourceSourceLumberjackBotState>();
             

@@ -1,11 +1,15 @@
 ﻿using Cinemachine;
+using Gameplay.Bots.StateMachine.States;
 using Gameplay.Lumberjack;
 using Gameplay.Player.Animation;
 using Gameplay.Resource;
+using Infrastructure;
 using Infrastructure.Services.Cache;
 using Infrastructure.Services.Input;
+using Infrastructure.Services.Pool;
 using Infrastructure.Services.StaticDataService;
 using UnityEngine;
+using Utils;
 using Zenject;
 
 namespace Gameplay.Player
@@ -13,20 +17,28 @@ namespace Gameplay.Player
     public class Player : LumberjackBase
     {
         [SerializeField] private Transform _playerCameraLookAt;
+        [SerializeField] private Transform _resourcesSpawnTransform;
         [SerializeField] private CharacterController _characterController;
 
         private CinemachineVirtualCamera _playerCamera;
 
         private PlayerMovement _playerMovement;
         private bool _isMoving;
+        private PlayerResourceShare _resourceShare;
 
         [Inject]
-        public override void Construct(IInputService inputService, IStaticDataService staticData,
-            ICacheService cacheService)
+        public void Construct(IInputService inputService,
+            IStaticDataService staticData,
+            ICacheService cacheService,
+            ICoroutineRunner coroutineRunner,
+            IGameResourceStorage gameResourceStorage, 
+            IPoolService poolService)
         {
-            base.Construct(inputService, staticData, cacheService);
+            base.Construct(inputService, staticData, cacheService, coroutineRunner, gameResourceStorage);
             
             _playerMovement = new PlayerMovement(_characterController, inputService, staticData.PlayerConfig, transform);
+            _resourceShare = new PlayerResourceShare(gameResourceStorage, _resourcesSpawnTransform,
+                staticData.PlayerConfig, poolService, coroutineRunner);
         }
 
         protected override void Start()
@@ -45,11 +57,24 @@ namespace Gameplay.Player
             Move(movementVector);
         }
 
+        protected override void OnTriggerStayed(Collider other)
+        {
+            base.OnTriggerStayed(other);
+            
+            if (other.CompareTag(Tags.Building))
+            {
+                Building building = _cacheService.Buildings.Get(other.gameObject);
+
+                _resourceShare.ShareForConstructionWith(building);
+            }
+        }
+
         protected override void CollectDropout(DropoutResource dropout)
         {
             base.CollectDropout(dropout);
             
             dropout.GetCollectedAndReleasedTo(_resourceCollector);
+            _gameResourceStorage.TakeResource(dropout.Type, dropout.ResourceValue);
         }
 
         private void Move(Vector3 movementVector)
@@ -61,6 +86,7 @@ namespace Gameplay.Player
                 IsMoving();
             else
                 IsStatic();
+            return;
 
             void IsMoving()
             {

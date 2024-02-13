@@ -324,8 +324,8 @@
      <Compile Include="Assets\Plugins\Feel\MMTools\Tools\MMHelpers\MMMovement.cs" />
      <Compile Include="Assets\Plugins\Feel\MMTools\Tools\MMDebugMenu\Scripts\MMDebugMenuItems\MMDebugMenuItemButton.cs" />
      <Compile Include="Assets\Plugins\Feel\MMTools\Tools\MMAttributes\MMColorAttribute.cs" />
-     <Compile Include="Assets\Plugins\Feel\MMTools\Tools\MMControls\MMTouchRepositionableJoystick.cs" />
      <Compile Include="Assets\Plugins\Feel\MMTools\Tools\MMActivation\MMToggleActive.cs" />
+     <Compile Include="Assets\Plugins\Feel\MMTools\Tools\MMControls\MMTouchRepositionableJoystick.cs" />
      <Compile Include="Assets\Plugins\Feel\MMTools\Tools\MMAchievements\Scripts\MMAchievementRules.cs" />
      <Compile Include="Assets\Plugins\Feel\MMTools\Tools\MMAttributes\MMRequiresConstantRepaintAttribute.cs" />
      <Compile Include="Assets\Plugins\Feel\MMTools\Tools\MMUtilities\MMTransformRandomizer.cs" />

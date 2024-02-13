@@ -1,6 +1,7 @@
 using Gameplay.Lumberjack;
 using Infrastructure.AssetProviderService;
 using UnityEngine;
+using Utils;
 using Zenject;
 
 namespace Infrastructure.Factories.PlayerFactoryFolder

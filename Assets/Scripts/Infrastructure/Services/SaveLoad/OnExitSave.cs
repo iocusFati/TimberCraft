@@ -1,17 +1,29 @@
 ﻿using System;
 using UnityEngine;
+using Zenject;
 
 namespace Infrastructure.Services.SaveLoad
 {
     public class OnExitSave : MonoBehaviour
     {
-        // private void OnApplicationFocus(bool hasFocus) => 
-        //     AllServices.Container.Single<ISaveLoadService>().SaveProgress();
+        private ISaveLoadService _saveLoadService;
+
+        [Inject]
+        public void Construct(ISaveLoadService saveLoadService)
+        {
+            _saveLoadService = saveLoadService;
+        }
+
+        private void Awake() => 
+            DontDestroyOnLoad(gameObject);
 
         private void OnApplicationQuit() => 
-            AllServices.Container.Single<ISaveLoadService>().SaveProgress();
+            _saveLoadService.SaveProgress();
 
-        private void OnApplicationPause(bool pauseStatus) => 
-            AllServices.Container.Single<ISaveLoadService>().SaveProgress();
+        private void OnApplicationPause(bool pauseStatus)
+        {
+            if (pauseStatus) 
+                _saveLoadService.SaveProgress();
+        }
     }
 }

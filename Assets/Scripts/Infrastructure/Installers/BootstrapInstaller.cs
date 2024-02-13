@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using Gameplay.Resource;
 using Infrastructure.AssetProviderService;
 using Infrastructure.Factories;
 using Infrastructure.Factories.PlayerFactoryFolder;
@@ -33,8 +34,6 @@ namespace Infrastructure.Installers
             
             BindGameStateMachine();
             
-            BindPersistentProgress();
-            
             BindAssetsService();
             
             BindFactories();
@@ -50,7 +49,18 @@ namespace Infrastructure.Installers
             BindPersistentProgressService();
             
             BindSaveLoadService();
+            
+            BindGameResourceStorage();
         }
+
+        private void BindGameResourceStorage()
+        {
+            Container
+                .Bind<IGameResourceStorage>()
+                .To<GameResourceStorage>()
+                .AsSingle();
+        }
+
         private void BindPersistentProgressService()
         {
             Container
@@ -133,15 +143,7 @@ namespace Infrastructure.Installers
                 .To<AssetProvider>()
                 .AsSingle();
         }
-
-        private void BindPersistentProgress()
-        {
-            Container
-                .Bind<IPersistentProgressService>()
-                .To<PersistentProgressService>()
-                .AsSingle();
-        }
-
+        
         private void BindSaveLoadService()
         {
             Container

@@ -1,5 +1,6 @@
 ﻿using Infrastructure.StaticData.LumberjackData;
 using Infrastructure.StaticData.ResourcesData;
+using Infrastructure.StaticData.uiData;
 
 namespace Infrastructure.Services.StaticDataService
 {
@@ -8,5 +9,6 @@ namespace Infrastructure.Services.StaticDataService
         PlayerConfig PlayerConfig { get; }
         ResourcesConfig ResourcesConfig { get; }
         LumberjackBotConfig LumberjackBotConfig { get; }
+        UIConfig UIConfig { get; }
     }
 }

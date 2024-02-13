@@ -2,6 +2,7 @@
 using Gameplay.Player;
 using Gameplay.Player.Animation;
 using Gameplay.Resource;
+using Infrastructure;
 using Infrastructure.Services.Cache;
 using Infrastructure.Services.Input;
 using Infrastructure.Services.StaticDataService;
@@ -26,17 +27,22 @@ namespace Gameplay.Lumberjack
         protected LumberjackAnimator _lumberjackAnimator;
         protected LumberjackStorage _lumberjackStorage;
 
-        private ICacheService _cacheService;
-        
+        protected ICoroutineRunner _coroutineRunner;
+        protected ICacheService _cacheService;
+        protected IGameResourceStorage _gameResourceStorage;
+
         private readonly HashSet<GameObject> _enteredResources = new();
 
         [Inject]
-        public virtual void Construct(
-            IInputService inputService, 
+        public virtual void Construct(IInputService inputService,
             IStaticDataService staticData,
-            ICacheService cacheService)
+            ICacheService cacheService,
+            ICoroutineRunner coroutineRunner, 
+            IGameResourceStorage gameResourceStorage)
         {
             _cacheService = cacheService;
+            _coroutineRunner = coroutineRunner;
+            _gameResourceStorage = gameResourceStorage;
             
             _lumberjackAnimator = new LumberjackAnimator(_animator);
         }
@@ -46,6 +52,7 @@ namespace Gameplay.Lumberjack
             _lumberjackAxeEnabler.Construct(_lumberjackAxe);
 
             _triggerInteraction.OnTriggerEntered += OnTriggerEntered;
+            _triggerInteraction.OnTriggerStayed += OnTriggerStayed;
             _triggerInteraction.OnTriggerExited += OnTriggerExited;
 
             _lootTrigger.OnTriggerEntered += OnLootTriggerEntered;
@@ -53,8 +60,8 @@ namespace Gameplay.Lumberjack
 
             _lumberjackAxe.OnDestroyedResourceSource += StopChopping;
         }
-        
-        private void OnTriggerEntered(Collider other)
+
+        protected virtual void OnTriggerEntered(Collider other)
         {
             if (other.CompareTag(ResourceTag))
             {
@@ -63,7 +70,12 @@ namespace Gameplay.Lumberjack
             }
         }
 
-        private void OnTriggerExited(Collider other)
+        protected virtual void OnTriggerStayed(Collider other)
+        {
+            
+        }
+
+        protected virtual void OnTriggerExited(Collider other)
         {
             if (other.CompareTag(ResourceTag))
             {
@@ -87,7 +99,6 @@ namespace Gameplay.Lumberjack
 
         protected virtual void CollectDropout(DropoutResource dropout)
         {
-            
         }
 
         private void TryCollectDropout(DropoutResource dropout)

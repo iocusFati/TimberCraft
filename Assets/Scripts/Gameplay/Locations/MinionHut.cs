@@ -7,16 +7,17 @@ using Zenject;
 
 namespace Gameplay.Locations
 {
-    public class MinionHut : MonoBehaviour, IResourceBuildingReceivable
+    public class MinionHut : Building
     {
+        [Header("Minion hut")]
         public Transform TriggerZoneTransform;
-        public ResourceType BotResourceType;
-        
-        [SerializeField] private Transform _receiveResourceTransform;
 
         private BotFactory _botFactory;
 
-        public Transform ReceiveResourceTransform => _receiveResourceTransform;
+        public override void InteractWithPlayer()
+        {
+            
+        }
 
         [Inject]
         public void Construct(IFactoriesHolderService factoriesHolder)

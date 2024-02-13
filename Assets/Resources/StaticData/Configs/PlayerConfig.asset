@@ -13,7 +13,6 @@ MonoBehaviour:
   m_Name: PlayerConfig
   m_EditorClassIdentifier: 
   _movementSpeed: 5
-  _axeChopRadius: 0.5
-  _hitLayer:
-    serializedVersion: 2
-    m_Bits: 64
+  _resourcesInOneDropout: 12
+  _deliverResourceDuration: 1
+  _resourceDeliveryCooldown: 0.2

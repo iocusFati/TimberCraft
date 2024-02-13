@@ -2490,7 +2490,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   FeedbackPlayer: {fileID: 5192432849232208260}
-  _getCollectedByLumberjackFeedbackPlayer: {fileID: 1961322825}
   _minRandomizeDropOffset: 0.1
   _maxRandomizeDropOffset: 0.2
   _dropToHeight: 0.3
@@ -2498,6 +2497,7 @@ MonoBehaviour:
   Destination: {fileID: 7190668251471397322}
   _collider: {fileID: 6084266664511514431}
   _model: {fileID: 1053008276455291203}
+  Type: 1
 --- !u!1 &8158820583259372560
 GameObject:
   m_ObjectHideFlags: 0

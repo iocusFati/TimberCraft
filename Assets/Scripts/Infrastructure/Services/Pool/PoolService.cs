@@ -1,4 +1,5 @@
-﻿using Gameplay.Resource;
+﻿using System.Collections.Generic;
+using Gameplay.Resource;
 using Infrastructure.AssetProviderService;
 using Infrastructure.States;
 
@@ -9,7 +10,7 @@ namespace Infrastructure.Services.Pool
         private readonly IAssets _assets;
         
         public WoodHitParticlesPool WoodHitParticlesPool { get; private set; }
-        public BasePool<DropoutResource> LogsPool { get; private set; }
+        public Dictionary<ResourceType, DropoutPool> DropoutsPool { get; private set; }
 
 
         public PoolService(IAssets assets)
@@ -26,7 +27,11 @@ namespace Infrastructure.Services.Pool
         private void InitializeWoodHitParticles() => 
             WoodHitParticlesPool = new WoodHitParticlesPool(_assets);
         
-        private void InitializeLogsPool() => 
-            LogsPool = new LogsPool(_assets);
+        private void InitializeLogsPool() =>
+            DropoutsPool = new Dictionary<ResourceType, DropoutPool>
+            {
+                {ResourceType.Wood, new DropoutPool(_assets)}, 
+                {ResourceType.Stone, new DropoutPool(_assets)} 
+            };
     }
 }

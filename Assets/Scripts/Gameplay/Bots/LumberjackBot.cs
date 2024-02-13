@@ -4,6 +4,8 @@ using Gameplay.Locations;
 using Gameplay.Lumberjack;
 using Gameplay.Resource;
 using Infrastructure;
+using Infrastructure.Services.Cache;
+using Infrastructure.Services.Input;
 using Infrastructure.Services.StaticDataService;
 using Infrastructure.StaticData.ResourcesData;
 using Pathfinding;
@@ -21,23 +23,28 @@ namespace Gameplay.Bots
         private MinionHut _hut;
 
         private LumberjackBotStateMachine _botStateMachine;
-        private LumberjackStorageResourceShare _lumberjackResourceShare;
-        private ICoroutineRunner _coroutineRunner;
+        private LumberjackBotStorageResourceShare _lumberjackBotResourceShare;
+        
         private ResourcesConfig _resourcesConfig;
 
         public ResourceType TargetResourceType { get; private set; }
-
+        
         [Inject]
-        public void Construct(ICoroutineRunner coroutineRunner, IStaticDataService staticData)
+        public override void Construct(IInputService inputService,
+            IStaticDataService staticData,
+            ICacheService cacheService,
+            ICoroutineRunner coroutineRunner, 
+            IGameResourceStorage gameResourceStorage)
         {
-            _coroutineRunner = coroutineRunner;
+            base.Construct(inputService, staticData, cacheService, coroutineRunner, gameResourceStorage);
+            
             _resourcesConfig = staticData.ResourcesConfig;
 
             _lumberjackStorage = new LumberjackStorage(staticData.LumberjackBotConfig, _lootStackBottom);
             _lumberjackStorage.Initialize();
             
-            _lumberjackResourceShare = new LumberjackStorageResourceShare(
-                _lumberjackStorage, _coroutineRunner, staticData.ResourcesConfig);
+            _lumberjackBotResourceShare = new LumberjackBotStorageResourceShare(
+                _lumberjackStorage, _coroutineRunner, staticData.ResourcesConfig, gameResourceStorage);
         }
 
         private void Awake()
@@ -48,7 +55,7 @@ namespace Gameplay.Bots
         public void Initialize(ResourceSourcesHolder island, MinionHut hut)
         {
             _botStateMachine = new LumberjackBotStateMachine();
-            TargetResourceType = hut.BotResourceType;
+            TargetResourceType = hut.ResourceType;
             _hut = hut;
 
             RegisterBotStates(island, _aiPath);
@@ -84,7 +91,7 @@ namespace Gameplay.Bots
             _botStateMachine.RegisterState(
                 new MineResourceLumberjackBotState(_botStateMachine, _lumberjackAnimator, _lumberjackStorage));
             _botStateMachine.RegisterState(
-                new BringResourcesToHutLumberjackBotState(aiPath, _hut, _lumberjackAnimator, _lumberjackResourceShare,
+                new BringResourcesToHutLumberjackBotState(aiPath, _hut, _lumberjackAnimator, _lumberjackBotResourceShare,
                     _botStateMachine));
         }
     }

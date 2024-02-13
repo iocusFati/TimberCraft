@@ -30,6 +30,8 @@ namespace Gameplay.Resource
         [Header("Other")] 
         [SerializeField] private Collider _collider;
         [SerializeField] private Transform _model;
+        
+        public ResourceType Type;
 
         private float _collectDuration;
         private Vector3 _initialScale;
@@ -37,6 +39,7 @@ namespace Gameplay.Resource
         private Release _release;
 
         public bool IsCollected { get; private set; }
+        public int ResourceValue { get; set; }
 
         [Inject]
         public void Construct(IStaticDataService staticData)

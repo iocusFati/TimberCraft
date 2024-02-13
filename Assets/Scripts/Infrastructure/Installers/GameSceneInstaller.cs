@@ -1,4 +1,5 @@
 ﻿using Gameplay.Locations;
+using Gameplay.Resource;
 using UnityEngine;
 using Zenject;
 
@@ -11,6 +12,12 @@ namespace Infrastructure.Installers
         public override void InstallBindings()
         {
             BindMainLocation();
+            
+            BindGameResourceStorage();
+        }
+
+        private void BindGameResourceStorage()
+        {
         }
 
         private void BindMainLocation()

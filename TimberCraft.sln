@@ -115,9 +115,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unity.TestTools.CodeCoverag
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unity.VisualScripting.Shared.Editor", "Unity.VisualScripting.Shared.Editor.csproj", "{25ae2cd6-3b1d-61d7-18d7-0e0e06a9c8d8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lofelt.NiceVibrations.Editor", "Lofelt.NiceVibrations.Editor.csproj", "{321d1274-8c47-b399-aae9-044e954b2feb}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp-Editor", "Assembly-CSharp-Editor.csproj", "{d4df1a1b-0c6c-cb40-f34d-82a4eecf4dfe}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lofelt.NiceVibrations.Editor", "Lofelt.NiceVibrations.Editor.csproj", "{321d1274-8c47-b399-aae9-044e954b2feb}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnityEngine.UI", "UnityEngine.UI.Player.csproj", "{ffddfe77-9d36-6b39-9ff3-1dedaeb93596}"
 EndProject
@@ -320,10 +320,10 @@ Global
 		{2f258d5b-bc94-164d-30cf-9d2caee9d7d2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{25ae2cd6-3b1d-61d7-18d7-0e0e06a9c8d8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{25ae2cd6-3b1d-61d7-18d7-0e0e06a9c8d8}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{321d1274-8c47-b399-aae9-044e954b2feb}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{321d1274-8c47-b399-aae9-044e954b2feb}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{d4df1a1b-0c6c-cb40-f34d-82a4eecf4dfe}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{d4df1a1b-0c6c-cb40-f34d-82a4eecf4dfe}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{321d1274-8c47-b399-aae9-044e954b2feb}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{321d1274-8c47-b399-aae9-044e954b2feb}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ffddfe77-9d36-6b39-9ff3-1dedaeb93596}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{ffddfe77-9d36-6b39-9ff3-1dedaeb93596}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{945ed572-57e4-e8fc-7133-0316dcf5c7fc}.Debug|Any CPU.ActiveCfg = Debug|Any CPU

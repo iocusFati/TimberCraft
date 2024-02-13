@@ -36,11 +36,18 @@ namespace Infrastructure.States
             
         }
 
-        private void LoadProgressOrInitNew() =>
-            _progressService.Progress = 
-                _saveLoadService.LoadProgress() != null 
-                    ? _saveLoadService.LoadProgress() 
-                    : NewProgress();
+        private void LoadProgressOrInitNew()
+        {
+            if (_saveLoadService.LoadProgress() != null)
+            {
+                _progressService.Progress = _saveLoadService.LoadProgress();
+                _progressService.Progress.WasLoaded = true;
+            }
+            else
+            {
+                _progressService.Progress = NewProgress();
+            }
+        }
 
         private PlayerProgress NewProgress() => new();
     }

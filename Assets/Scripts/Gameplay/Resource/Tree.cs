@@ -25,7 +25,7 @@ namespace Gameplay.Resource
         {
             _poolService = poolService;
             _particlePool = _poolService.WoodHitParticlesPool;
-            _dropoutPool = _poolService.LogsPool;
+            _logPool = _poolService.DropoutsPool[ResourceType.Wood];
             
             _restoreSourceAfter = staticData.ResourcesConfig.RestoreTreeAfter;
         }

@@ -43,8 +43,8 @@
   <ItemGroup>
      <Compile Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing\Editor\Tools\ProfileFactory.cs" />
      <Compile Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing\Editor\PostProcessDebugEditor.cs" />
-     <Compile Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing\Editor\Effects\ColorGradingEditor.cs" />
      <Compile Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing\Editor\Utils\GlobalSettings.cs" />
+     <Compile Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing\Editor\Effects\ColorGradingEditor.cs" />
      <Compile Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing\Editor\Effects\MotionBlurEditor.cs" />
      <Compile Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing\Editor\Effects\ChromaticAberrationEditor.cs" />
      <Compile Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing\Editor\Tools\CubeLutAssetFactory.cs" />

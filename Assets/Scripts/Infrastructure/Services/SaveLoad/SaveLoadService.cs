@@ -1,6 +1,9 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using System.IO;
 using Infrastructure.Data;
 using Infrastructure.Services.PersistentProgress;
+using UnityEngine;
 
 namespace Infrastructure.Services.SaveLoad
 {
@@ -31,12 +34,23 @@ namespace Infrastructure.Services.SaveLoad
             // PlayerPrefs.SetString(ReadersKey, _progressReaders.ToJson());
         }
 
-        public PlayerProgress LoadProgress() => 
-            ES3.Load<PlayerProgress>(ProgressKey);
+        public PlayerProgress LoadProgress()
+        {
+            try
+            {
+                return ES3.Load<PlayerProgress>(ProgressKey);
+            }
+            catch (FileNotFoundException exception)
+            {
+                Debug.LogError(exception);
+                return null;
+            }
+        }
 
         public void InformReaders()
         {
-            
+            if (!_persistentProgress.Progress.WasLoaded)
+                return;
             
             foreach (var reader in _progressReaders)
                 reader.LoadProgress(_persistentProgress.Progress);
