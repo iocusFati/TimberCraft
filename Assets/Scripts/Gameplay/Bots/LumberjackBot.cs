@@ -26,7 +26,8 @@ namespace Gameplay.Bots
         private LumberjackBotStorageResourceShare _lumberjackBotResourceShare;
         
         private ResourcesConfig _resourcesConfig;
-
+        
+        public LumberjackBotStorage BotStorage { get; private set; }
         public ResourceType TargetResourceType { get; private set; }
         
         [Inject]
@@ -40,11 +41,11 @@ namespace Gameplay.Bots
             
             _resourcesConfig = staticData.ResourcesConfig;
 
-            _lumberjackStorage = new LumberjackStorage(staticData.LumberjackBotConfig, _lootStackBottom);
-            _lumberjackStorage.Initialize();
+            BotStorage = new LumberjackBotStorage(staticData.LumberjackBotConfig, _lootStackBottom);
+            BotStorage.Initialize();
             
             _lumberjackBotResourceShare = new LumberjackBotStorageResourceShare(
-                _lumberjackStorage, _coroutineRunner, staticData.ResourcesConfig, gameResourceStorage);
+                BotStorage, _coroutineRunner, staticData.ResourcesConfig, gameResourceStorage);
         }
 
         private void Awake()
@@ -55,7 +56,7 @@ namespace Gameplay.Bots
         public void Initialize(ResourceSourcesHolder island, MinionHut hut)
         {
             _botStateMachine = new LumberjackBotStateMachine();
-            TargetResourceType = hut.ResourceType;
+            TargetResourceType = hut.ConstructionResourceType;
             _hut = hut;
 
             RegisterBotStates(island, _aiPath);
@@ -67,29 +68,29 @@ namespace Gameplay.Bots
         {
             base.CollectDropout(dropout);
 
-            if (_lumberjackStorage.IsFull)
+            if (BotStorage.IsFull)
             {
                 dropout.GetCollectedAndReleasedTo(_resourceCollector);
             }
             else
             {
-                dropout.GetCollectedAndKeptTo(_lumberjackStorage.GetFreeCell());
-                _lumberjackStorage.OccupyFreePosition(dropout);
+                dropout.GetCollectedAndKeptTo(BotStorage.GetFreeCell());
+                BotStorage.OccupyFreePosition(dropout);
             }
         }
 
         protected override bool CanCollectDropout(DropoutResource dropout) => 
-            base.CanCollectDropout(dropout) && !_lumberjackStorage.IsFull;
+            base.CanCollectDropout(dropout) && !BotStorage.IsFull;
 
         private void RegisterBotStates(ResourceSourcesHolder island, AIPath aiPath)
         {
             _botStateMachine.RegisterState(
                 new GoToResourceSourceLumberjackBotState(island, this, aiPath, _botStateMachine, _lumberjackAnimator,
-                    _lumberjackStorage, _coroutineRunner, _resourcesConfig));
+                    BotStorage, _coroutineRunner, _resourcesConfig));
             _botStateMachine.RegisterState(
                 new IsOnTheWayToResourceSourceLumberjackBotState(_botStateMachine, _coroutineRunner, aiPath));
             _botStateMachine.RegisterState(
-                new MineResourceLumberjackBotState(_botStateMachine, _lumberjackAnimator, _lumberjackStorage));
+                new MineResourceLumberjackBotState(_botStateMachine, _lumberjackAnimator, BotStorage));
             _botStateMachine.RegisterState(
                 new BringResourcesToHutLumberjackBotState(aiPath, _hut, _lumberjackAnimator, _lumberjackBotResourceShare,
                     _botStateMachine));

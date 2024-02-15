@@ -17,7 +17,7 @@ namespace Infrastructure.Factories.BotFactoryFolder
             _instantiator = instantiator;
         }
 
-        public void CreateLumberjackBotFrom(MinionHut minionHut, ResourceSourcesHolder resourceSourcesHolder)
+        public LumberjackBot CreateLumberjackBotFrom(MinionHut minionHut, ResourceSourcesHolder resourceSourcesHolder)
         {
             LumberjackBot lumberjackBot = _instantiator
                 .InstantiatePrefabResourceForComponent<LumberjackBot>(AssetPaths.LumberjackBot,
@@ -26,6 +26,8 @@ namespace Infrastructure.Factories.BotFactoryFolder
             lumberjackBot.Initialize(resourceSourcesHolder, minionHut);
 
             lumberjackBot.transform.SetParent(null);
+            
+            return lumberjackBot;
         }
     }
 }

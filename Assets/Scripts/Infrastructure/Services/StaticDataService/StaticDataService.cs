@@ -1,4 +1,5 @@
-﻿using Infrastructure.StaticData.LumberjackData;
+﻿using Infrastructure.StaticData.BuildingsData;
+using Infrastructure.StaticData.LumberjackData;
 using Infrastructure.StaticData.ResourcesData;
 using Infrastructure.StaticData.uiData;
 using UnityEngine;
@@ -12,6 +13,8 @@ namespace Infrastructure.Services.StaticDataService
         public ResourcesConfig ResourcesConfig { get; private set; }
         public LumberjackBotConfig LumberjackBotConfig { get; private set; }
         public UIConfig UIConfig { get; private set; }
+        public BuildingsConfig BuildingsConfig { get; private set; }
+        public MinionHutUpgradeData MinionHutUpgradeData { get; private set; }
 
         public void Initialize()
         {
@@ -19,6 +22,8 @@ namespace Infrastructure.Services.StaticDataService
             InitializeResourcesConfig();
             InitializeLumberjackBotConfig();
             InitializeUIConfig();
+            InitializeBuildingsConfig();
+            InitializeMinionHutUpgradeData();
         }
 
         private void InitializePlayerConfig() => 
@@ -32,5 +37,11 @@ namespace Infrastructure.Services.StaticDataService
         
         private void InitializeUIConfig() => 
             UIConfig = Resources.Load<UIConfig>(AssetPaths.UIConfig);
+        
+        private void InitializeBuildingsConfig() => 
+            BuildingsConfig = Resources.Load<BuildingsConfig>(AssetPaths.BuildingsConfig);
+        
+        private void InitializeMinionHutUpgradeData() => 
+            MinionHutUpgradeData = Resources.Load<MinionHutUpgradeData>(AssetPaths.MinionHutUpgradeData);
     }
 }

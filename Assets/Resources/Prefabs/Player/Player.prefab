@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5441789317191270071}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Head
   m_TagString: Untagged
   m_Icon: {fileID: -5397416234189338067, guid: 0000000000000000d000000000000000, type: 0}
@@ -2992,7 +2992,7 @@ GameObject:
   - component: {fileID: 5250323370369335157}
   - component: {fileID: 5234885100078115775}
   - component: {fileID: 5226348812319737286}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Cylinder_Handle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5740,7 +5740,7 @@ GameObject:
   - component: {fileID: 5243268220091193053}
   - component: {fileID: 5234527509203009104}
   - component: {fileID: 5224434304382696432}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: axe2h10_grey
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7079,7 +7079,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5243259203497712563}
   - component: {fileID: 5297891910497671905}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Trail
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12674,7 +12674,7 @@ GameObject:
   - component: {fileID: 5242858097565835069}
   - component: {fileID: 5204376898834582862}
   - component: {fileID: 1961299594083539585}
-  m_Layer: 10
+  m_Layer: 11
   m_Name: Weapon
   m_TagString: ResourceHitter
   m_Icon: {fileID: 0}

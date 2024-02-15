@@ -5,5 +5,6 @@ namespace Infrastructure.Services.PersistentProgress
     public interface ISavedProgressReader
     {
         void LoadProgress(PlayerProgress progress);
+        void OnProgressCouldNotBeLoaded();
     }
 }

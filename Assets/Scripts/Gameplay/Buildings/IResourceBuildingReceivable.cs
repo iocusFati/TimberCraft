@@ -6,7 +6,7 @@ namespace Gameplay.Bots.StateMachine.States
     public interface IResourceBuildingReceivable
     {
         Transform ReceiveResourceTransform { get; }
-        ResourceType ResourceType { get; }
+        ResourceType ConstructionResourceType { get; }
         
         void ReceiveResource(int resourceQuantity);
     }

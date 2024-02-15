@@ -1,4 +1,5 @@
-﻿using Cinemachine;
+﻿using System;
+using Cinemachine;
 using Gameplay.Bots.StateMachine.States;
 using Gameplay.Lumberjack;
 using Gameplay.Player.Animation;
@@ -25,6 +26,7 @@ namespace Gameplay.Player
         private PlayerMovement _playerMovement;
         private bool _isMoving;
         private PlayerResourceShare _resourceShare;
+        protected LumberjackBotStorage LumberjackBotStorage;
 
         [Inject]
         public void Construct(IInputService inputService,
@@ -57,15 +59,38 @@ namespace Gameplay.Player
             Move(movementVector);
         }
 
-        protected override void OnTriggerStayed(Collider other)
+        private void OnTriggerEnter(Collider other)
         {
-            base.OnTriggerStayed(other);
+            if (other.CompareTag(Tags.Building))
+            {
+                Building building = _cacheService.Buildings.Get(other.gameObject);
+
+                if (building.IsBuilt) 
+                    building.InteractWithPlayer();
+            }
+        }
+
+        private void OnTriggerExit(Collider other)
+        {
+            if (other.CompareTag(Tags.Building))
+            {
+                Building building = _cacheService.Buildings.Get(other.gameObject);
+
+                if (building.IsBuilt) 
+                    building.StopInteractingWithPlayer();
+            }
+        }
+
+        protected override void OnTriggerInteractionStayed(Collider other)
+        {
+            base.OnTriggerInteractionStayed(other);
             
             if (other.CompareTag(Tags.Building))
             {
                 Building building = _cacheService.Buildings.Get(other.gameObject);
 
-                _resourceShare.ShareForConstructionWith(building);
+                if (!building.IsBuilt) 
+                    _resourceShare.ShareForConstructionWith(building);
             }
         }
 

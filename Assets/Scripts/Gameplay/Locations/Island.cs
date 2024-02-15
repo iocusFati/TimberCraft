@@ -1,5 +1,7 @@
 ﻿using System.Collections.Generic;
+using Infrastructure.Services.SaveLoad;
 using UnityEngine;
+using Zenject;
 
 namespace Gameplay.Locations
 {
@@ -9,13 +11,21 @@ namespace Gameplay.Locations
         [SerializeField] private ResourceSourcesHolder _resourceSourcesHolder;
         
         [SerializeField] private List<MinionHut> _minionHuts;
+        
+        private ISaveLoadService _saveLoad;
 
         public List<MinionHut> MinionHuts => _minionHuts;
         public ResourceSourcesHolder ResourceSourcesHolder => _resourceSourcesHolder;
 
+        [Inject]
+        public void Construct(ISaveLoadService saveLoad)
+        {
+            _saveLoad = saveLoad;
+        }
+
         public void Initialize()
         {
-            SpawnBots();
+            InitializeMinionHuts();
 
             foreach (var resourceSource in ResourceSourcesHolder.AllResourceSources)
             {
@@ -23,10 +33,14 @@ namespace Gameplay.Locations
             }
         }
 
-        private void SpawnBots()
+        private void InitializeMinionHuts()
         {
-            foreach (var minionHut in _minionHuts) 
-                minionHut.SpawnBots(_resourceSourcesHolder);
+            foreach (var minionHut in _minionHuts)
+            {
+                minionHut.Construct(_resourceSourcesHolder);
+                
+                _saveLoad.Register(minionHut);
+            }
         }
     }
 }

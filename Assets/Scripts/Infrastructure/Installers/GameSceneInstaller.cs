@@ -1,30 +1,46 @@
-﻿using Gameplay.Locations;
-using Gameplay.Resource;
-using UnityEngine;
+﻿using Gameplay.Bots.StateMachine.States;
+using Gameplay.Locations;
+using UnityEngine.Serialization;
 using Zenject;
 
 namespace Infrastructure.Installers
 {
     public class GameSceneInstaller : MonoInstaller
     {
-        [SerializeField] private MainLocation _mainLocation;
+        public MainLocation mainLocation;
+        public UIMediator uiMediator;
+        public GuidService guidService;
 
         public override void InstallBindings()
         {
             BindMainLocation();
+
+            BindUIMediator();
             
-            BindGameResourceStorage();
+            BindGuidService();
         }
 
-        private void BindGameResourceStorage()
+        private void BindGuidService()
         {
+            Container
+                .Bind<IGuidService>()
+                .FromInstance(guidService)
+                .AsSingle();
+        }
+
+        private void BindUIMediator()
+        {
+            Container
+                .Bind<IUIMediator>()
+                .FromInstance(uiMediator)
+                .AsSingle();
         }
 
         private void BindMainLocation()
         {
             Container
                 .Bind<MainLocation>()
-                .FromInstance(_mainLocation)
+                .FromInstance(mainLocation)
                 .AsSingle();
         }
     }

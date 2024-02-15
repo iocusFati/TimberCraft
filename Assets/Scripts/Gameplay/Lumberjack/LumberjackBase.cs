@@ -25,7 +25,6 @@ namespace Gameplay.Lumberjack
         [SerializeField] protected Transform _resourceCollector;
 
         protected LumberjackAnimator _lumberjackAnimator;
-        protected LumberjackStorage _lumberjackStorage;
 
         protected ICoroutineRunner _coroutineRunner;
         protected ICacheService _cacheService;
@@ -51,9 +50,9 @@ namespace Gameplay.Lumberjack
         {
             _lumberjackAxeEnabler.Construct(_lumberjackAxe);
 
-            _triggerInteraction.OnTriggerEntered += OnTriggerEntered;
-            _triggerInteraction.OnTriggerStayed += OnTriggerStayed;
-            _triggerInteraction.OnTriggerExited += OnTriggerExited;
+            _triggerInteraction.OnTriggerEntered += OnTriggerInteractionEntered;
+            _triggerInteraction.OnTriggerStayed += OnTriggerInteractionStayed;
+            _triggerInteraction.OnTriggerExited += OnTriggerInteractionExited;
 
             _lootTrigger.OnTriggerEntered += OnLootTriggerEntered;
             _lootTrigger.OnTriggerExited += OnLootTriggerExited; 
@@ -61,7 +60,7 @@ namespace Gameplay.Lumberjack
             _lumberjackAxe.OnDestroyedResourceSource += StopChopping;
         }
 
-        protected virtual void OnTriggerEntered(Collider other)
+        protected virtual void OnTriggerInteractionEntered(Collider other)
         {
             if (other.CompareTag(ResourceTag))
             {
@@ -70,12 +69,12 @@ namespace Gameplay.Lumberjack
             }
         }
 
-        protected virtual void OnTriggerStayed(Collider other)
+        protected virtual void OnTriggerInteractionStayed(Collider other)
         {
             
         }
 
-        protected virtual void OnTriggerExited(Collider other)
+        protected virtual void OnTriggerInteractionExited(Collider other)
         {
             if (other.CompareTag(ResourceTag))
             {

@@ -9,15 +9,15 @@ namespace Gameplay.Bots.StateMachine.States
     {
         private readonly IStateMachine _botStateMachine;
         private readonly LumberjackAnimator _lumberjackAnimator;
-        private readonly LumberjackStorage _lumberjackStorage;
+        private readonly LumberjackBotStorage _lumberjackBotStorage;
         
         private ResourceSource _resourceSource;
 
-        public MineResourceLumberjackBotState(IStateMachine botStateMachine, LumberjackAnimator lumberjackAnimator, LumberjackStorage lumberjackStorage)
+        public MineResourceLumberjackBotState(IStateMachine botStateMachine, LumberjackAnimator lumberjackAnimator, LumberjackBotStorage lumberjackBotStorage)
         {
             _botStateMachine = botStateMachine;
             _lumberjackAnimator = lumberjackAnimator;
-            _lumberjackStorage = lumberjackStorage;
+            _lumberjackBotStorage = lumberjackBotStorage;
         }
 
         public void Enter(ResourceSource resourceSource)
@@ -30,7 +30,7 @@ namespace Gameplay.Bots.StateMachine.States
 
         private void OnResourceMined()
         {
-            if (!_lumberjackStorage.IsFull)
+            if (!_lumberjackBotStorage.IsFull)
                 _botStateMachine.Enter<GoToResourceSourceLumberjackBotState>();
             else
                 _botStateMachine.Enter<BringResourcesToHutLumberjackBotState>();

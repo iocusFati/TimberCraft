@@ -1,33 +1,117 @@
-﻿using Gameplay.Bots.StateMachine.States;
+﻿using System.Collections.Generic;
+using Gameplay.Bots;
+using Gameplay.Bots.StateMachine.States;
 using Gameplay.Resource;
 using Infrastructure.Factories;
 using Infrastructure.Factories.BotFactoryFolder;
+using Infrastructure.Services.StaticDataService;
+using Infrastructure.StaticData.BuildingsData;
 using UnityEngine;
 using Zenject;
 
 namespace Gameplay.Locations
 {
-    public class MinionHut : Building
+    public class MinionHut : UpgradableBuilding
     {
         [Header("Minion hut")]
         public Transform TriggerZoneTransform;
 
+        private IUIMediator _uiMediator;
         private BotFactory _botFactory;
+        private MinionHutUpgradeData _upgradeData;
+        private ResourceSourcesHolder _resourceSourcesHolder;
+
+        private readonly List<LumberjackBot> _bots = new();
+
+
+        [Inject]
+        public void Construct(IFactoriesHolderService factoriesHolder,
+            IStaticDataService staticData,
+            IUIMediator uiMediator,
+            IGameResourceStorage gameResourceStorage, 
+            IGuidService guidService)
+        {
+            base.Construct(gameResourceStorage, guidService);
+            
+            _botFactory = factoriesHolder.BotFactory;
+            _uiMediator = uiMediator;
+            _upgradeData = staticData.MinionHutUpgradeData;
+        }
+
+        public void Construct(ResourceSourcesHolder resourceSourcesHolder)
+        {
+            _resourceSourcesHolder = resourceSourcesHolder;
+        }
 
         public override void InteractWithPlayer()
         {
+            _uiMediator.SwitchMinionHutPopUp(this, show: true); 
+        }
+
+        public override void StopInteractingWithPlayer()
+        {
+            _uiMediator.SwitchMinionHutPopUp(this, show: false); 
+        }
+
+        protected override void Upgrade()
+        {
+            base.Upgrade();
+
+            LevelUpgrade previousUpgradeData = GetLevelUpgradeData(_currentLevel);
             
+            PayForUpgrade(previousUpgradeData.Cost);
+
+            _currentLevel++;
+
+            SpawnBotsUpgrade(_currentLevel);
         }
 
-        [Inject]
-        public void Construct(IFactoriesHolderService factoriesHolder)
+        protected override void SetLevel(int level)
         {
-            _botFactory = factoriesHolder.BotFactory;
+            base.SetLevel(level);
+            
+            SpawnBotsForLevel(level);
         }
 
-        public void SpawnBots(ResourceSourcesHolder resourceSourcesHolder)
+        protected override void OnBuilt()
         {
-            _botFactory.CreateLumberjackBotFrom(this, resourceSourcesHolder);
+            base.OnBuilt();
+            
+            SetLevel(1);
+        }
+
+        private void SpawnBotsUpgrade(int level)
+        {
+            LevelUpgrade previousUpgradeData = GetLevelUpgradeData(level - 1);
+            LevelUpgrade currentUpgradeData = GetLevelUpgradeData(level);
+            
+            int spawnBotsQuantity = currentUpgradeData.MinionsQuantity - previousUpgradeData.MinionsQuantity;
+            
+            SpawnBots(spawnBotsQuantity);
+            UpdateBotStorageCapacity(currentUpgradeData.LootQuantity);
+        }
+        
+        private void SpawnBotsForLevel(int level)
+        {
+            LevelUpgrade currentUpgradeData = GetLevelUpgradeData(level);
+            
+            SpawnBots(currentUpgradeData.MinionsQuantity);
+            UpdateBotStorageCapacity(currentUpgradeData.LootQuantity);
+        }
+
+        private LevelUpgrade GetLevelUpgradeData(int level) => 
+            _upgradeData.LevelUpgrades[level - 1];
+
+        private void UpdateBotStorageCapacity(int capacity)
+        {
+            foreach (var bot in _bots) 
+                bot.BotStorage.StorageCapacity = capacity;
+        }
+
+        private void SpawnBots(int number)
+        {
+            for (int i = 0; i < number; i++) 
+                _bots.Add(_botFactory.CreateLumberjackBotFrom(this, _resourceSourcesHolder));
         }
     }
 }

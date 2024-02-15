@@ -50,8 +50,13 @@ namespace Infrastructure.Services.SaveLoad
         public void InformReaders()
         {
             if (!_persistentProgress.Progress.WasLoaded)
+            {
+                foreach (var reader in _progressReaders)
+                    reader.OnProgressCouldNotBeLoaded();
+
                 return;
-            
+            }
+
             foreach (var reader in _progressReaders)
                 reader.LoadProgress(_persistentProgress.Progress);
         }

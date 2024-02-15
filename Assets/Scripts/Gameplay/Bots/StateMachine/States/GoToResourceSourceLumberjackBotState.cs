@@ -18,7 +18,7 @@ namespace Gameplay.Bots.StateMachine.States
         private readonly AIPath _aiPath;
         private readonly IStateMachine _botStateMachine;
         private readonly LumberjackAnimator _lumberjackAnimator;
-        private readonly LumberjackStorage _lumberjackStorage;
+        private readonly LumberjackBotStorage _lumberjackBotStorage;
         private readonly ICoroutineRunner _coroutineRunner;
         
         private float _tryToFindResourceAgainTime;
@@ -28,7 +28,7 @@ namespace Gameplay.Bots.StateMachine.States
             AIPath aiPath,
             IStateMachine botStateMachine,
             LumberjackAnimator lumberjackAnimator,
-            LumberjackStorage lumberjackStorage,
+            LumberjackBotStorage lumberjackBotStorage,
             ICoroutineRunner coroutineRunner, 
             ResourcesConfig resourceConfig)
         {
@@ -37,7 +37,7 @@ namespace Gameplay.Bots.StateMachine.States
             _aiPath = aiPath;
             _botStateMachine = botStateMachine;
             _lumberjackAnimator = lumberjackAnimator;
-            _lumberjackStorage = lumberjackStorage;
+            _lumberjackBotStorage = lumberjackBotStorage;
             _coroutineRunner = coroutineRunner;
 
             _tryToFindResourceAgainTime = resourceConfig.TryToFindResourceAgainTime;
@@ -73,7 +73,7 @@ namespace Gameplay.Bots.StateMachine.States
             if (resource is not null) 
                 return false;
             
-            if (_lumberjackStorage.ResourceDropouts.Count > 0)
+            if (_lumberjackBotStorage.ResourceDropouts.Count > 0)
                 _botStateMachine.Enter<BringResourcesToHutLumberjackBotState>();
             else
                 _coroutineRunner.StartCoroutine(WaitAndRepeat());
