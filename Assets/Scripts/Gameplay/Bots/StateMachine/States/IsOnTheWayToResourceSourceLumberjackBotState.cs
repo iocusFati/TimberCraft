@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using Gameplay.Player;
+using Gameplay.Resource;
 using Infrastructure;
 using Infrastructure.States.Interfaces;
 using Pathfinding;

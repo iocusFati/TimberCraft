@@ -1,11 +1,13 @@
 ﻿using Gameplay.Resource;
+using Gameplay.Resource.ResourceStorage;
 using Infrastructure.Data;
+using Infrastructure.Services.Guid;
 using Infrastructure.Services.PersistentProgress;
 using TMPro;
 using UnityEngine;
 using Zenject;
 
-namespace Gameplay.Bots.StateMachine.States
+namespace Gameplay.Buildings
 {
     public abstract class UpgradableBuilding : Building, ISavedProgress
     {

@@ -1,4 +1,5 @@
 ﻿using Gameplay.Bots;
+using Gameplay.Buildings;
 using Gameplay.Locations;
 using Infrastructure.AssetProviderService;
 using Infrastructure.States;

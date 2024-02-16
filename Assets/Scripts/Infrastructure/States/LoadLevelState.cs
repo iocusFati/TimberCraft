@@ -5,6 +5,7 @@ using Infrastructure.Factories.Location;
 using Infrastructure.Factories.PlayerFactoryFolder;
 using Infrastructure.Services.SaveLoad;
 using Infrastructure.States.Interfaces;
+using UI.Factory;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -19,18 +20,21 @@ namespace Infrastructure.States
         private readonly PlayerFactory _playerFactory;
         private readonly LocationFactory _locationFactory;
         private readonly BotFactory _botFactory;
-        
+        private readonly IUIFactory _uiFactory;
+
         private Vector3 _initialPoint;
 
         public LoadLevelState(IStateMachine gameStateMachine,
             ISaveLoadService saveLoadService,
             IFactoriesHolderService factoriesHolder, 
+            IUIFactory uiFactory, 
             SceneLoader sceneLoader)
         {
             _gameStateMachine = gameStateMachine;
             _saveLoadService = saveLoadService;
             _sceneLoader = sceneLoader;
-            
+            _uiFactory = uiFactory;
+
             _playerFactory = factoriesHolder.PlayerFactory;
             _locationFactory = factoriesHolder.LocationFactory;
             _botFactory = factoriesHolder.BotFactory;
@@ -59,6 +63,7 @@ namespace Infrastructure.States
             mainLocation.Initialize();
 
             _playerFactory.CreatePlayer(mainLocation.PlayerInitialPosition);
+            _uiFactory.CreateHUD();
             
             _saveLoadService.InformReaders();
             _gameStateMachine.Enter<GameLoopState>();

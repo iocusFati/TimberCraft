@@ -2,9 +2,10 @@
 using System.Collections.Generic;
 using Infrastructure.Data;
 using Infrastructure.Services.PersistentProgress;
+using UI;
 using UnityEngine;
 
-namespace Gameplay.Bots.StateMachine.States
+namespace Gameplay.Buildings
 {
     public class BuildingConstruction : ISavedProgress
     {
@@ -41,7 +42,7 @@ namespace Gameplay.Bots.StateMachine.States
                 return;
             
             _currentlyNeededResourceQuantity -= resourceQuantity;
-            _buildingResourceCounter.SetTextWithScaling(_currentlyNeededResourceQuantity.ToString());
+            _buildingResourceCounter.SetCountWith(_currentlyNeededResourceQuantity);
 
             if (IndexIsCorrect(_currentStageIndex + 1))
             {

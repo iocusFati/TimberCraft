@@ -63,6 +63,7 @@ namespace Gameplay.Resource
             _release();
 
             transform.SetParent(null);
+            transform.localScale = Vector3.one;;
             _model.localScale = _initialScale;
             _model.localPosition = Vector3.zero;
             _collider.enabled = false;

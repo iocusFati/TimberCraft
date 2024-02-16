@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using Gameplay.Resource;
+using Gameplay.Resource.ResourceStorage;
 using Infrastructure.AssetProviderService;
 using Infrastructure.Factories;
 using Infrastructure.Factories.PlayerFactoryFolder;
@@ -22,34 +23,35 @@ namespace Infrastructure.Installers
     {
         public override void InstallBindings()
         {
-            BindUIHolder(out UIHolder uiHolder);
+            BindSaveLoadService();
             
+            BindUIHolder(out UIHolder uiHolder);
+
             BindStaticDataService();
 
             BindSceneLoader();
-            
+
             BindStatesFactory();
-            
+
             BindCoroutineRunner();
-            
+
             BindGameStateMachine();
-            
+
             BindAssetsService();
-            
+
             BindFactories();
-            
+
             BindInputService();
-            
+
             BindUIFactory(uiHolder);
-            
+
             BindPoolService();
-            
+
             BindCacheService();
-            
+
             BindPersistentProgressService();
-            
-            BindSaveLoadService();
-            
+
+
             BindGameResourceStorage();
         }
 

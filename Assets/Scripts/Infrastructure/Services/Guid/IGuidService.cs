@@ -1,7 +1,6 @@
-﻿using Infrastructure.Services;
-using UnityEngine;
+﻿using UnityEngine;
 
-namespace Gameplay.Bots.StateMachine.States
+namespace Infrastructure.Services.Guid
 {
     public interface IGuidService : IService
     {

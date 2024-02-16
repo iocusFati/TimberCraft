@@ -1,7 +1,7 @@
 ﻿using Gameplay.Resource;
 using UnityEngine;
 
-namespace Gameplay.Bots.StateMachine.States
+namespace Gameplay.Buildings
 {
     public interface IResourceBuildingReceivable
     {

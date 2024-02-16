@@ -3,9 +3,10 @@ using Infrastructure.Services.StaticDataService;
 using Infrastructure.StaticData.uiData;
 using TMPro;
 using UnityEngine;
+using Utils;
 using Zenject;
 
-namespace Gameplay.Bots.StateMachine.States
+namespace UI
 {
     public class ResourceCounter : MonoBehaviour
     {
@@ -30,12 +31,18 @@ namespace Gameplay.Bots.StateMachine.States
             _rectTransform = GetComponent<RectTransform>();
         }
         
-        public void SetTextWithScaling(string text)
+        public void SetCountWith(int count, bool doScaleAnimation = true, bool transformThousands = false)
         {
             CanScale = false;
+
+            string text = transformThousands 
+                ? count.TransformThousands() 
+                : count.ToString();
             
             SetText(text);
-            ScaleCounter();
+
+            if (doScaleAnimation) 
+                ScaleCounter();
         }
 
         public void SetText(string text) => 

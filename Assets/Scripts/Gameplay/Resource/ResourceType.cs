@@ -5,6 +5,7 @@
         None = 0,
         Wood = 1,
         Stone = 2,
-        Coin = 3
+        Gold = 3,
+        Coin = 4
     }
 }

@@ -1,11 +1,10 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
-using Gameplay.Resource;
 using Infrastructure.Services.Pool;
 using UnityEngine;
 
-namespace Gameplay.Player
+namespace Gameplay.Resource
 {
     public abstract class ResourceSource : MonoBehaviour
     {

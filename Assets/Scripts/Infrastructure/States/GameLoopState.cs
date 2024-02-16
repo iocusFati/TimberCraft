@@ -1,5 +1,5 @@
 using Infrastructure.States.Interfaces;
-using UI.Entities.Windows;
+using UI.Entities.HUD_Folder;
 using UI.Factory;
 
 namespace Infrastructure.States
@@ -16,7 +16,7 @@ namespace Infrastructure.States
 
         public void Enter()
         {
-            _hud = _uiFactory.CreateHUD();
+            
         }
         
         public void Exit()

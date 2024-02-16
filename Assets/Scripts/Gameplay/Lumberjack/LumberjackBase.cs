@@ -2,6 +2,7 @@
 using Gameplay.Player;
 using Gameplay.Player.Animation;
 using Gameplay.Resource;
+using Gameplay.Resource.ResourceStorage;
 using Infrastructure;
 using Infrastructure.Services.Cache;
 using Infrastructure.Services.Input;

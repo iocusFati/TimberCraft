@@ -1,9 +1,11 @@
 ﻿using System;
 using Cinemachine;
 using Gameplay.Bots.StateMachine.States;
+using Gameplay.Buildings;
 using Gameplay.Lumberjack;
 using Gameplay.Player.Animation;
 using Gameplay.Resource;
+using Gameplay.Resource.ResourceStorage;
 using Infrastructure;
 using Infrastructure.Services.Cache;
 using Infrastructure.Services.Input;

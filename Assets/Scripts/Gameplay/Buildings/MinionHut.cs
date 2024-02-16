@@ -1,15 +1,17 @@
 ﻿using System.Collections.Generic;
 using Gameplay.Bots;
-using Gameplay.Bots.StateMachine.States;
-using Gameplay.Resource;
+using Gameplay.Locations;
+using Gameplay.Resource.ResourceStorage;
 using Infrastructure.Factories;
 using Infrastructure.Factories.BotFactoryFolder;
+using Infrastructure.Services.Guid;
 using Infrastructure.Services.StaticDataService;
 using Infrastructure.StaticData.BuildingsData;
+using UI.Mediator;
 using UnityEngine;
 using Zenject;
 
-namespace Gameplay.Locations
+namespace Gameplay.Buildings
 {
     public class MinionHut : UpgradableBuilding
     {
@@ -22,7 +24,6 @@ namespace Gameplay.Locations
         private ResourceSourcesHolder _resourceSourcesHolder;
 
         private readonly List<LumberjackBot> _bots = new();
-
 
         [Inject]
         public void Construct(IFactoriesHolderService factoriesHolder,

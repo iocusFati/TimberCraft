@@ -3,6 +3,7 @@ using Gameplay.Locations;
 using Gameplay.Lumberjack;
 using Gameplay.Player;
 using Gameplay.Player.Animation;
+using Gameplay.Resource;
 using Infrastructure;
 using Infrastructure.States.Interfaces;
 using Infrastructure.StaticData.ResourcesData;

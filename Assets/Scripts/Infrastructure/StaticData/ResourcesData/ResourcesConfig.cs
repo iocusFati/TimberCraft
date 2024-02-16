@@ -14,9 +14,11 @@ namespace Infrastructure.StaticData.ResourcesData
         [Header("Resource sharing")]
         [SerializeField] private float _deliverResourceDuration;
         [SerializeField] private float _timeGapBetweenResourcesDelivery;
+        [SerializeField] private int _resourceUnitsPerCoin;
         
         [Header("Bot")]
         [SerializeField] private float _tryToFindResourceAgainTime;
+
 
         public float FadeDuration => _fadeDuration;
 
@@ -29,5 +31,7 @@ namespace Infrastructure.StaticData.ResourcesData
         public float TimeGapBetweenResourcesDelivery => _timeGapBetweenResourcesDelivery;
 
         public float TryToFindResourceAgainTime => _tryToFindResourceAgainTime;
+
+        public int ResourceUnitsPerCoin => _resourceUnitsPerCoin;
     }
 }

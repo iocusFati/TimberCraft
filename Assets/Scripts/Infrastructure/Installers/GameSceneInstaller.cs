@@ -1,5 +1,7 @@
 ﻿using Gameplay.Bots.StateMachine.States;
 using Gameplay.Locations;
+using Infrastructure.Services.Guid;
+using UI.Mediator;
 using UnityEngine.Serialization;
 using Zenject;
 

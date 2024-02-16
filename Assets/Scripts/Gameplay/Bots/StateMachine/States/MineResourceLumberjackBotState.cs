@@ -1,6 +1,7 @@
 ﻿using Gameplay.Lumberjack;
 using Gameplay.Player;
 using Gameplay.Player.Animation;
+using Gameplay.Resource;
 using Infrastructure.States.Interfaces;
 
 namespace Gameplay.Bots.StateMachine.States

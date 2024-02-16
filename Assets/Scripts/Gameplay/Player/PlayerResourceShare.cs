@@ -2,7 +2,9 @@
 using System.Collections.Generic;
 using DG.Tweening;
 using Gameplay.Bots.StateMachine.States;
+using Gameplay.Buildings;
 using Gameplay.Resource;
+using Gameplay.Resource.ResourceStorage;
 using Infrastructure;
 using Infrastructure.Services.Pool;
 using Infrastructure.StaticData.LumberjackData;

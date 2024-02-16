@@ -1,11 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using Sirenix.OdinInspector;
 using Sirenix.Serialization;
 using UnityEngine;
 
-namespace Gameplay.Bots.StateMachine.States
+namespace Infrastructure.Services.Guid
 {
     public class GuidService : SerializedMonoBehaviour, IGuidService
     {
@@ -39,6 +38,6 @@ namespace Gameplay.Bots.StateMachine.States
         }
 
         private string GenerateId() => 
-            Guid.NewGuid().ToString();
+            System.Guid.NewGuid().ToString();
     }
 }

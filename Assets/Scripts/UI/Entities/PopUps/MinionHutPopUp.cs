@@ -1,11 +1,9 @@
-﻿using DG.Tweening;
-using Gameplay.Bots.StateMachine.States;
-using Infrastructure.Data;
+﻿using Infrastructure.Data;
+using Infrastructure.Services.Guid;
 using Infrastructure.Services.PersistentProgress;
 using Infrastructure.Services.SaveLoad;
 using Infrastructure.Services.StaticDataService;
 using Infrastructure.StaticData.BuildingsData;
-using Infrastructure.StaticData.uiData;
 using Sirenix.OdinInspector;
 using TMPro;
 using UI.Entities.Windows;
@@ -32,58 +30,27 @@ namespace UI.Entities.PopUps
         [SerializeField] private TextMeshProUGUI _currentLevelText;
         
         private MinionHutUpgradeData _minionHutUpgradeData;
-
-        private float _appearDuration;
-        private float _disappearDuration;
-        private float _startScaleModifier;
-        private float _appearAmplitude;
-
-        private Tween _activeTween;
+        
         private int _currentLevel = 1;
         private string _id;
 
         [Inject]
         public void Construct(IStaticDataService staticData, IGuidService guidService, ISaveLoadService saveLoad)
         {
-            UIConfig uiConfig = staticData.UIConfig;
-            
-            _appearDuration = uiConfig.PopUpsAppearDuration;
-            _disappearDuration = uiConfig.PopUpsDisappearDuration;
-            _startScaleModifier = uiConfig.PopUpsStartScaleModifier;
-            _appearAmplitude = uiConfig.PopUpsAppearAmplitude;
+            base.Construct(staticData);
             
             saveLoad.Register(this);
 
             _minionHutUpgradeData = staticData.MinionHutUpgradeData;
 
             _id = guidService.GetGuidFor(gameObject);
-            
+        }
+
+        private void Awake()
+        {
             _upgradeButton.onClick.AddListener(LevelUp);
         }
         
-        public override void Show()
-        {
-            base.Show();
-            
-            Debug.Log(transform.localScale);
-            KillActiveTweenIfActive();
-            
-            transform.localScale = Vector3.one * _startScaleModifier;
-            _activeTween = transform
-                .DOScale(Vector3.one, _appearDuration)
-                .SetEase(Ease.OutElastic, _appearAmplitude, 0);
-        }
-
-        public override void Hide()
-        {
-            KillActiveTweenIfActive();
-            
-            _activeTween = transform
-                .DOScale(Vector3.zero, _disappearDuration)
-                .SetEase(Ease.InOutSine)
-                .OnComplete(() => gameObject.SetActive(false));
-        }
-
         public void LoadProgress(PlayerProgress progress)
         {
             _currentLevel = progress.GetBuildingSaveData(_id).BuildingLevel;
@@ -137,11 +104,5 @@ namespace UI.Entities.PopUps
 
         private static string PlusText(int quantity) => 
             $"+{quantity.ToString()}";
-
-        private void KillActiveTweenIfActive()
-        {
-            if (_activeTween is not null && _activeTween.active) 
-                _activeTween.Kill();
-        }
     }
 }

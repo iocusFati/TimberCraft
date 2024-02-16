@@ -1,19 +1,26 @@
 ﻿using System.Collections.Generic;
+using Gameplay.Buildings;
 using Sirenix.OdinInspector;
 using Sirenix.Serialization;
 using UI.Entities.PopUps;
 using UI.Entities.Windows;
 
-namespace Gameplay.Locations
+namespace UI.Mediator
 {
     public class UIMediator : SerializedMonoBehaviour, IUIMediator
     {
-        [OdinSerialize] private Dictionary<MinionHut, MinionHutPopUp> _minionHutPopUs;
+        [OdinSerialize] private Dictionary<MinionHut, MinionHutPopUp> _minionHutPopUps;
+        [OdinSerialize] private Dictionary<ResourcesShop, ResourcesShopPopUp> _resourcesShopPopUps;
 
         public void SwitchMinionHutPopUp(MinionHut minionHutKey, bool show) => 
-            SwitchWindow(_minionHutPopUs[minionHutKey], show);
+            SwitchPopUp(_minionHutPopUps[minionHutKey], show);
 
-        private static void SwitchWindow(Window window, bool show)
+        public void SwitchSellResourcesPopUp(ResourcesShop shopKey, bool show)
+        {
+            SwitchPopUp(_resourcesShopPopUps[shopKey], show);
+        }
+
+        private static void SwitchPopUp(Window window, bool show)
         {
             if (show) 
                 window.Show();

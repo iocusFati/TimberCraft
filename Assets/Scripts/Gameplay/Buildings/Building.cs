@@ -3,11 +3,12 @@ using Gameplay.Resource;
 using Infrastructure.Services.SaveLoad;
 using Sirenix.OdinInspector;
 using Sirenix.Serialization;
+using UI;
 using UnityEngine;
 using Utils;
 using Zenject;
 
-namespace Gameplay.Bots.StateMachine.States
+namespace Gameplay.Buildings
 {
     [RequireComponent(typeof(UniqueId))]
     public abstract class Building : SerializedMonoBehaviour, IResourceBuildingReceivable

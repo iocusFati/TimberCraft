@@ -1,12 +1,14 @@
 ﻿using System.Collections;
 using DG.Tweening;
+using Gameplay.Buildings;
 using Gameplay.Lumberjack;
 using Gameplay.Resource;
+using Gameplay.Resource.ResourceStorage;
 using Infrastructure;
 using Infrastructure.StaticData.ResourcesData;
 using UnityEngine;
 
-namespace Gameplay.Bots.StateMachine.States
+namespace Gameplay.Bots
 {
     public class LumberjackBotStorageResourceShare
     {

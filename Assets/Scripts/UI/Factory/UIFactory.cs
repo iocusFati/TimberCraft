@@ -1,5 +1,5 @@
 ﻿using Infrastructure.AssetProviderService;
-using UI.Entities.Windows;
+using UI.Entities.HUD_Folder;
 using UnityEngine;
 using Utils;
 using Zenject;
@@ -9,16 +9,18 @@ namespace UI.Factory
     public class UIFactory : IUIFactory
     {
         private readonly IAssets _assets;
+        private readonly IInstantiator _instantiator;
         private UIHolder _uiContainer;
 
         private const int HudCanvasOrder = 1;
-        
+
         private Canvas _gameRoot;
 
         [Inject]
-        public UIFactory(IAssets assets)
+        public UIFactory(IAssets assets, IInstantiator instantiator)
         {
             _assets = assets;
+            _instantiator = instantiator;
         }
 
         public void Initialize(UIHolder uiHolder) => 
@@ -40,7 +42,7 @@ namespace UI.Factory
         {
             parent = SetParentIfNull();
 
-            TEntity entity = _assets.Instantiate<TEntity>(path, parent.transform);
+            TEntity entity = _instantiator.InstantiatePrefabResourceForComponent<TEntity>(path, parent.transform);
             _uiContainer.RegisterUIEntity(entity);
 
             return entity;

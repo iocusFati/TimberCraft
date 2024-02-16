@@ -1,5 +1,6 @@
 ﻿using System;
 using Gameplay.Player;
+using Gameplay.Resource;
 using UnityEngine;
 
 namespace Gameplay.Lumberjack
