@@ -65,6 +65,8 @@ namespace Gameplay.Buildings
 
         protected virtual void SetLevel(int level)
         {
+            _currentLevel = level;
+            
             SetLevelText(level);
         }
 
@@ -78,9 +80,16 @@ namespace Gameplay.Buildings
         protected void PayForUpgrade(int cost) => 
             _gameResourceStorage.TakeResource(ResourceType.Coin, cost);
 
+        protected override void OnBuilt()
+        {
+            base.OnBuilt();
+            
+            SetLevel(0);
+        }
+
         private void SetLevelText(int level)
         {
-            _levelText.text = $"Level {level.ToString()}";
+            _levelText.text = $"Level {(level + 1).ToString()}";
         }
     }
 }

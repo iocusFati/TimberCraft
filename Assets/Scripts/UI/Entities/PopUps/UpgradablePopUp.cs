@@ -31,21 +31,24 @@ namespace UI.Entities.PopUps
             _id = guidService.GetGuidFor(gameObject);
         }
 
+        public void OnProgressCouldNotBeLoaded()
+        {
+            SetLevel(_currentLevel);
+        }
+
         public void LoadProgress(PlayerProgress progress)
         {
-            _currentLevel = progress.GetBuildingSaveData(_id).BuildingLevel;
-            
+            int loadedLevel = progress.GetBuildingSaveData(_id).BuildingLevel;
+
+            if (loadedLevel != 0)
+                _currentLevel = loadedLevel;
+
             SetLevel(_currentLevel);
         }
 
         protected virtual void SetLevel(int level)
         {
             _currentLevelText.text = $"Level {level.ToString()}";
-        }
-
-        public void OnProgressCouldNotBeLoaded()
-        {
-            SetLevel(_currentLevel);
         }
 
         protected void LevelUp()

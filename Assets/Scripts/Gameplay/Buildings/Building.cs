@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using Gameplay.Resource;
+using Infrastructure.Services.Guid;
 using Infrastructure.Services.SaveLoad;
 using Sirenix.OdinInspector;
 using Sirenix.Serialization;
@@ -36,17 +37,17 @@ namespace Gameplay.Buildings
         public abstract void StopInteractingWithPlayer();
 
         [Inject]
-        public void Construct(ISaveLoadService saveLoadService)
+        public void Construct(ISaveLoadService saveLoadService, IGuidService guidService)
         {
             _saveLoadService = saveLoadService;
+            
+            string id = guidService.GetGuidFor(gameObject);
+            
+            BuildingConstruction = new BuildingConstruction(id, _constructionStagesAndResources, _resourceCounter);
         }
 
         private void Start()
         {
-            UniqueId id = GetComponent<UniqueId>();
-            
-            BuildingConstruction = new BuildingConstruction(id.Id, _constructionStagesAndResources, _resourceCounter);
-            
             _saveLoadService.Register(BuildingConstruction);
         }
 

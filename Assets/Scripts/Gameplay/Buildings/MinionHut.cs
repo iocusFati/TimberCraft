@@ -76,13 +76,6 @@ namespace Gameplay.Buildings
             SpawnBotsForLevel(level);
         }
 
-        protected override void OnBuilt()
-        {
-            base.OnBuilt();
-            
-            SetLevel(1);
-        }
-
         private void SpawnBotsUpgrade(int level)
         {
             MinionHutLevelUpgrade previousUpgradeData = GetLevelUpgradeData(level - 1);
@@ -103,7 +96,7 @@ namespace Gameplay.Buildings
         }
 
         private MinionHutLevelUpgrade GetLevelUpgradeData(int level) => 
-            _upgradeData.LevelUpgrades[level - 1];
+            _upgradeData.LevelUpgrades[level];
 
         private void UpdateBotStorageCapacity(int capacity)
         {

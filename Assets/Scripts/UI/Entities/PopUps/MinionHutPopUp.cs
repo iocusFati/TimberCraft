@@ -35,6 +35,7 @@ namespace UI.Entities.PopUps
         private void Awake()
         {
             _upgradeButton.onClick.AddListener(LevelUp);
+            
         }
 
         protected override void OnFinalLevelReached()
@@ -46,7 +47,7 @@ namespace UI.Entities.PopUps
         {
             base.SetLevel(level);
             
-            MinionHutLevelUpgrade currentLevelUpgrade = _minionHutUpgradeData.LevelUpgrades[level - 1];
+            MinionHutLevelUpgrade currentLevelUpgrade = _minionHutUpgradeData.LevelUpgrades[level];
 
             _minionsQuantityText.text = currentLevelUpgrade.MinionsQuantity.ToString();
             _lootQuantityText.text = currentLevelUpgrade.LootQuantity.ToString();
@@ -54,7 +55,7 @@ namespace UI.Entities.PopUps
             if (IsTheLastLevel(level)) 
                 return;
             
-            MinionHutLevelUpgrade nextLevelUpgrade = _minionHutUpgradeData.LevelUpgrades[level];
+            MinionHutLevelUpgrade nextLevelUpgrade = _minionHutUpgradeData.LevelUpgrades[level + 1];
             
             int minionsQuantityDifference = 
                 nextLevelUpgrade.MinionsQuantity - currentLevelUpgrade.MinionsQuantity;
