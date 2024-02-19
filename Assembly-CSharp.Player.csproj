@@ -83,6 +83,7 @@
      <Compile Include="Assets\Doozy\Engine\Layouts\RadialLayout.cs" />
      <Compile Include="Assets\Doozy\Engine\Touchy\Enums\GestureType.cs" />
      <Compile Include="Assets\Doozy\Integrations\Playmaker\Actions\DoozyUI\DisableBackButton.cs" />
+     <Compile Include="Assets\Scripts\UI\Buttons\BuyButtonDisabler.cs" />
      <Compile Include="Assets\Doozy\Engine\Nody\Scripts\NodySettings.cs" />
      <Compile Include="Assets\Doozy\Engine\UI\Nodes\ActivateLoadedScenesNode.cs" />
      <Compile Include="Assets\Doozy\Engine\Themes\Targets\SpriteTargetSelectable.cs" />
@@ -126,6 +127,7 @@
      <Compile Include="Assets\Scripts\Infrastructure\Factories\Location\LocationFactory.cs" />
      <Compile Include="Assets\Doozy\Engine\Progress\Enums\TargetProgress.cs" />
      <Compile Include="Assets\Doozy\Engine\UI\Input\KeyToAction.cs" />
+     <Compile Include="Assets\Scripts\Gameplay\Buildings\MainHouse.cs" />
      <Compile Include="Assets\Doozy\Integrations\Playmaker\Actions\DoozyUI\ApplicationQuit.cs" />
      <Compile Include="Assets\Doozy\Engine\Progress\ProgressTargets\ProgressTargetAnimator.cs" />
      <Compile Include="Assets\Scripts\Infrastructure\Services\SaveLoad\OnExitSave.cs" />
@@ -150,6 +152,7 @@
      <Compile Include="Assets\Other\KriptoFX\MuzzleFlashes\Scripts\FPSRandomRotateAngle.cs" />
      <Compile Include="Assets\Doozy\Engine\Progress\Enums\ProgressorVariable.cs" />
      <Compile Include="Assets\Doozy\Engine\UI\Nodes\TimeScaleNode.cs" />
+     <Compile Include="Assets\Scripts\UI\Entities\PopUps\MainHousePopUp.cs" />
      <Compile Include="Assets\Scripts\Infrastructure\StaticData\LumberjackData\LumberjackBotConfig.cs" />
      <Compile Include="Assets\Doozy\Engine\Extensions\RectTransformExtensions.cs" />
      <Compile Include="Assets\Doozy\Engine\Themes\Targets\ThemeTarget.cs" />
@@ -203,12 +206,14 @@
      <Compile Include="Assets\Scripts\Gameplay\Resource\ResourceSource.cs" />
      <Compile Include="Assets\Scripts\UI\Entities\PopUps\ResourcesShopPopUp.cs" />
      <Compile Include="Assets\Doozy\Engine\Themes\ThemesSettings.cs" />
+     <Compile Include="Assets\Scripts\UI\Entities\HUD_Folder\ResourcesDashboard.cs" />
      <Compile Include="Assets\Doozy\Engine\UI\UIButton\UIButtonEvent.cs" />
      <Compile Include="Assets\Doozy\Engine\Scripts\GameEventManager.cs" />
      <Compile Include="Assets\Scripts\Gameplay\Player\TriggerInteraction.cs" />
      <Compile Include="Assets\Doozy\Engine\UI\Enums\TargetOrientation.cs" />
      <Compile Include="Assets\Scripts\Infrastructure\Services\Pool\IPoolService.cs" />
      <Compile Include="Assets\Scripts\Gameplay\Bots\StateMachine\States\MineResourceLumberjackBotState.cs" />
+     <Compile Include="Assets\Scripts\UI\Buttons\ButtonDisabler.cs" />
      <Compile Include="Assets\Doozy\Engine\UI\UIDrawer\UIDrawerBehavior.cs" />
      <Compile Include="Assets\Scripts\UI\Mediator\IUIMediator.cs" />
      <Compile Include="Assets\Other\KriptoFX\MuzzleFlashes\Scripts\FPSShaderColorGradient.cs" />
@@ -225,6 +230,7 @@
      <Compile Include="Assets\Doozy\Engine\Scripts\MessageExtensions.cs" />
      <Compile Include="Assets\Doozy\Engine\Themes\Targets\TextureTargetUnityEvent.cs" />
      <Compile Include="Assets\Doozy\Engine\UI\Nodes\ThemeNode.cs" />
+     <Compile Include="Assets\Scripts\Gameplay\Cameras\IGameCameraController.cs" />
      <Compile Include="Assets\Doozy\Engine\Themes\Targets\SpriteTargetSpriteRenderer.cs" />
      <Compile Include="Assets\Doozy\Integrations\Playmaker\Actions\Soundy\PlayAudioClip.cs" />
      <Compile Include="Assets\Doozy\Engine\SceneManagement\SceneDirector.cs" />
@@ -282,6 +288,8 @@
      <Compile Include="Assets\Doozy\Engine\Utils\FileUtils.cs" />
      <Compile Include="Assets\Doozy\Engine\Utils\ColorModels\HSL.cs" />
      <Compile Include="Assets\Scripts\Gameplay\Resource\ResourceStorage\GameResourceStorage.cs" />
+     <Compile Include="Assets\Scripts\UI\Entities\PopUps\UpgradablePopUp.cs" />
+     <Compile Include="Assets\Scripts\Gameplay\Cameras\GameCameraController.cs" />
      <Compile Include="Assets\Doozy\Engine\UI\Enums\PopupDisplayOn.cs" />
      <Compile Include="Assets\Doozy\Engine\UI\UIPopup\UIPopup.cs" />
      <Compile Include="Assets\Doozy\Engine\Soundy\AudioData.cs" />
@@ -382,7 +390,9 @@
      <Compile Include="Assets\Doozy\Engine\Utils\ColorUtils.cs" />
      <Compile Include="Assets\Doozy\Engine\Events\TextureEvent.cs" />
      <Compile Include="Assets\Scripts\Infrastructure\StaticData\BuildingsData\BuildingsConfig.cs" />
+     <Compile Include="Assets\Scripts\UI\Buttons\UpgradeButtonDisabler.cs" />
      <Compile Include="Assets\Doozy\Engine\UI\UIPopup\UIPopupSettings.cs" />
+     <Compile Include="Assets\Scripts\Gameplay\Resource\IResourcesSelling.cs" />
      <Compile Include="Assets\Doozy\Engine\Scripts\GameEventListener.cs" />
      <Compile Include="Assets\Doozy\Engine\UI\UIView\UIViewSettings.cs" />
      <Compile Include="Assets\Doozy\Engine\Soundy\SoundyController.cs" />
@@ -403,6 +413,7 @@
      <Compile Include="Assets\Doozy\Engine\UI\Enums\UIEffectBehavior.cs" />
      <Compile Include="Assets\Doozy\Engine\Touchy\Enums\Swipe.cs" />
      <Compile Include="Assets\Doozy\Engine\Progress\ProgressTargets\ProgressTargetTextMeshPro.cs" />
+     <Compile Include="Assets\Scripts\Utils\IntExtensions.cs" />
      <Compile Include="Assets\Scripts\Infrastructure\Services\Pool\PoolService.cs" />
      <Compile Include="Assets\Doozy\Engine\Utils\AssetUtils.cs" />
      <Compile Include="Assets\Scripts\Gameplay\Bots\StateMachine\States\IsOnTheWayToResourceSourceLumberjackBotState.cs" />
@@ -427,8 +438,8 @@
      <Compile Include="Assets\Scripts\Utils\Constants.cs" />
      <Compile Include="Assets\Scripts\Infrastructure\Services\Input\IInputService.cs" />
      <Compile Include="Assets\Doozy\Engine\Progress\ProgressTargets\ProgressTargetImage.cs" />
-     <Compile Include="Assets\Scripts\Utils\IntExtensions.cs" />
-     <Compile Include="Assets\Scripts\UI\Entities\HUD_Folder\ResourcesDashboard.cs" />
+     <Compile Include="Assets\Scripts\Infrastructure\StaticData\BuildingsData\MainHouseUpgradeData.cs" />
+     <Compile Include="Assets\Scripts\Infrastructure\StaticData\BuildingsData\MinionHutLevelUpgrade.cs" />
      <Reference Include="UnityEngine">
      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.25f1\Editor\Data\PlaybackEngines\AndroidPlayer\Variations\mono\Managed\UnityEngine.dll</HintPath>
      </Reference>

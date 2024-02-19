@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿using System;
+using Gameplay.Resource;
+using UnityEngine;
 
 namespace Infrastructure.StaticData.ResourcesData
 {
@@ -14,8 +16,13 @@ namespace Infrastructure.StaticData.ResourcesData
         [Header("Resource sharing")]
         [SerializeField] private float _deliverResourceDuration;
         [SerializeField] private float _timeGapBetweenResourcesDelivery;
-        [SerializeField] private int _resourceUnitsPerCoin;
-        
+
+        [Header("Resource selling")]
+        [SerializeField] private int _woodUnitsPerCoin;
+        [SerializeField] private int _stoneUnitsPerCoin;
+        [SerializeField] private int _goldUnitsPerCoin;
+
+
         [Header("Bot")]
         [SerializeField] private float _tryToFindResourceAgainTime;
 
@@ -31,7 +38,20 @@ namespace Infrastructure.StaticData.ResourcesData
         public float TimeGapBetweenResourcesDelivery => _timeGapBetweenResourcesDelivery;
 
         public float TryToFindResourceAgainTime => _tryToFindResourceAgainTime;
-
-        public int ResourceUnitsPerCoin => _resourceUnitsPerCoin;
+        
+        public int GetResourceUnitsPerCoin(ResourceType resourceType)
+        {
+            switch (resourceType)
+            {
+                case ResourceType.Wood:
+                    return _woodUnitsPerCoin;
+                case ResourceType.Stone:
+                    return _stoneUnitsPerCoin;
+                case ResourceType.Gold:
+                    return _goldUnitsPerCoin;
+                default:
+                    throw new ArgumentOutOfRangeException(nameof(resourceType), resourceType, null);
+            }
+        }
     }
 }

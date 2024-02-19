@@ -1,33 +1,31 @@
 ﻿using Gameplay.Resource.ResourceStorage;
-using Infrastructure.StaticData.ResourcesData;
 
 namespace Gameplay.Resource
 {
-    public class ResourcesSelling
+    public class ResourcesSelling : IResourcesSelling
     {
         private readonly IGameResourceStorage _gameResourceStorage;
         
         private readonly int _resourceUnitsPerCoin;
 
-        public ResourcesSelling(IGameResourceStorage gameResourceStorage, ResourcesConfig resourcesConfig)
+        public ResourcesSelling(IGameResourceStorage gameResourceStorage)
         {
             _gameResourceStorage = gameResourceStorage;
-
-            _resourceUnitsPerCoin = resourcesConfig.ResourceUnitsPerCoin;
         }
 
-        public void SellAllPossibleOfType(ResourceType type)
+        public void SellAllPossibleOfType(ResourceType type, int resourceUnitsPerCoin)
         {
-            int sellResourcesCount = GetSellResourceCount(type, out var receiveCoins);
+            int sellResourcesCount = GetSellResourceCount(type, resourceUnitsPerCoin, out var receiveCoins);
 
             _gameResourceStorage.TryGiveResource(type, sellResourcesCount);
             _gameResourceStorage.TakeResource(ResourceType.Coin, receiveCoins);
         }
 
-        public int GetSellResourceCount(ResourceType type, out int receiveCoins)
+        public int GetSellResourceCount(ResourceType type, int resourceUnitsPerCoin, out int receiveCoins)
         {
-            receiveCoins = _gameResourceStorage.GetResourceCountOfType(type) / _resourceUnitsPerCoin;
-            int sellResourcesCount = receiveCoins * _resourceUnitsPerCoin;
+            receiveCoins = _gameResourceStorage.GetResourceCountOfType(type) / resourceUnitsPerCoin;
+            int sellResourcesCount = receiveCoins * resourceUnitsPerCoin;
+            
             return sellResourcesCount;
         }
     }

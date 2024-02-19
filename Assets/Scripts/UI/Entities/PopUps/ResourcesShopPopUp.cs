@@ -16,11 +16,6 @@ namespace UI.Entities.PopUps
         [Title("Resources shop", titleAlignment: TitleAlignments.Centered)]
         [SerializeField] private Button _sellResourceButton;
         [SerializeField] private ResourceType _resourceType;
-        [SerializeField] private Color _disableColor;
-
-        [Header("Images")] 
-        [SerializeField] private Image _resourceImage;
-        [SerializeField] private Image _coinImage;
         
         [Header("Text")]
         [SerializeField] private TextMeshProUGUI _resourceCountText;
@@ -36,9 +31,9 @@ namespace UI.Entities.PopUps
         {
             _gameResourceStorage = gameResourceStorage;
 
-            _resourceUnitsPerCoin = staticData.ResourcesConfig.ResourceUnitsPerCoin;
+            _resourceUnitsPerCoin = staticData.ResourcesConfig.GetResourceUnitsPerCoin(_resourceType);
 
-            _resourcesSelling = new ResourcesSelling(gameResourceStorage, staticData.ResourcesConfig);
+            _resourcesSelling = new ResourcesSelling(gameResourceStorage);
 
             SubscribeToResourceCountChange();
         }
@@ -48,48 +43,24 @@ namespace UI.Entities.PopUps
             SetNewResourceCount();
             
             _sellResourceButton.onClick
-                .AddListener(() =>_resourcesSelling.SellAllPossibleOfType(_resourceType));
+                .AddListener(() =>_resourcesSelling.SellAllPossibleOfType(_resourceType, _resourceUnitsPerCoin));
         }
 
         private void SetNewResourceCount(int newResourceCount)
         {
-            int sellResourceCount = _resourcesSelling.GetSellResourceCount(_resourceType, out int receiveCoins);
+            int sellResourceCount = 
+                _resourcesSelling.GetSellResourceCount(_resourceType, _resourceUnitsPerCoin, out int receiveCoins);
 
             if (sellResourceCount == 0)
             {
-                SetButtonInteractable(false);
                 sellResourceCount = _resourceUnitsPerCoin;
                 receiveCoins = 1;
             }
-            else
-            {
-                _sellResourceButton.interactable = true;
-            }
-
+            
             _resourceCountText.text = sellResourceCount.ToString();
             _coinsCountText.text = receiveCoins.ToString();
         }
-
-        private void SetButtonInteractable(bool interactable)
-        {
-            _sellResourceButton.interactable = interactable;
-
-            if (interactable) 
-                SetButtonExtrasToColor(Color.white);
-            else
-            {
-                SetButtonExtrasToColor(_disableColor);
-            }
-
-            void SetButtonExtrasToColor(Color color)
-            {
-                _resourceImage.color = color;
-                _coinImage.color = color;
-                // _coinsCountText.color = color;
-                _resourceCountText.color = color;
-            }
-        }
-
+        
         private void SetNewResourceCount()
         {
             switch (_resourceType)

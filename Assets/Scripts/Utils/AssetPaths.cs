@@ -19,6 +19,8 @@ namespace Utils
         public const string LumberjackBotConfig = "StaticData/Configs/LumberjackBotConfig";
         public const string UIConfig = "StaticData/Configs/UIConfig";
         public const string BuildingsConfig = "StaticData/Configs/BuildingsConfig";
+        
         public const string MinionHutUpgradeData = "StaticData/GameData/MinionHutUpgradeData";
+        public const string MainHouseUpgradeData = "StaticData/GameData/MainHouseUpgradeData";
     }
 }

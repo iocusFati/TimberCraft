@@ -5,6 +5,7 @@ using Gameplay.Resource.ResourceStorage;
 using Infrastructure.Factories;
 using Infrastructure.Factories.BotFactoryFolder;
 using Infrastructure.Services.Guid;
+using Infrastructure.Services.SaveLoad;
 using Infrastructure.Services.StaticDataService;
 using Infrastructure.StaticData.BuildingsData;
 using UI.Mediator;
@@ -29,7 +30,7 @@ namespace Gameplay.Buildings
         public void Construct(IFactoriesHolderService factoriesHolder,
             IStaticDataService staticData,
             IUIMediator uiMediator,
-            IGameResourceStorage gameResourceStorage, 
+            IGameResourceStorage gameResourceStorage,
             IGuidService guidService)
         {
             base.Construct(gameResourceStorage, guidService);
@@ -54,18 +55,19 @@ namespace Gameplay.Buildings
             _uiMediator.SwitchMinionHutPopUp(this, show: false); 
         }
 
-        protected override void Upgrade()
+        public override void Upgrade()
         {
             base.Upgrade();
 
-            LevelUpgrade previousUpgradeData = GetLevelUpgradeData(_currentLevel);
+            MinionHutLevelUpgrade previousUpgradeData = GetLevelUpgradeData(_currentLevel - 1);
             
             PayForUpgrade(previousUpgradeData.Cost);
-
-            _currentLevel++;
-
+            
             SpawnBotsUpgrade(_currentLevel);
         }
+
+        public override int GetCurrentUpgradeCost() => 
+            _upgradeData.LevelUpgrades[_currentLevel].Cost;
 
         protected override void SetLevel(int level)
         {
@@ -83,8 +85,8 @@ namespace Gameplay.Buildings
 
         private void SpawnBotsUpgrade(int level)
         {
-            LevelUpgrade previousUpgradeData = GetLevelUpgradeData(level - 1);
-            LevelUpgrade currentUpgradeData = GetLevelUpgradeData(level);
+            MinionHutLevelUpgrade previousUpgradeData = GetLevelUpgradeData(level - 1);
+            MinionHutLevelUpgrade currentUpgradeData = GetLevelUpgradeData(level);
             
             int spawnBotsQuantity = currentUpgradeData.MinionsQuantity - previousUpgradeData.MinionsQuantity;
             
@@ -94,13 +96,13 @@ namespace Gameplay.Buildings
         
         private void SpawnBotsForLevel(int level)
         {
-            LevelUpgrade currentUpgradeData = GetLevelUpgradeData(level);
+            MinionHutLevelUpgrade currentUpgradeData = GetLevelUpgradeData(level);
             
             SpawnBots(currentUpgradeData.MinionsQuantity);
             UpdateBotStorageCapacity(currentUpgradeData.LootQuantity);
         }
 
-        private LevelUpgrade GetLevelUpgradeData(int level) => 
+        private MinionHutLevelUpgrade GetLevelUpgradeData(int level) => 
             _upgradeData.LevelUpgrades[level - 1];
 
         private void UpdateBotStorageCapacity(int capacity)

@@ -13,5 +13,6 @@ namespace Infrastructure.Services.StaticDataService
         UIConfig UIConfig { get; }
         BuildingsConfig BuildingsConfig { get; }
         MinionHutUpgradeData MinionHutUpgradeData { get; }
+        MainHouseUpgradeData MainHouseUpgradeData { get; }
     }
 }

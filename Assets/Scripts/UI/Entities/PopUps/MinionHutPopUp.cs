@@ -1,19 +1,14 @@
-﻿using Infrastructure.Data;
-using Infrastructure.Services.Guid;
-using Infrastructure.Services.PersistentProgress;
-using Infrastructure.Services.SaveLoad;
-using Infrastructure.Services.StaticDataService;
+﻿using Infrastructure.Services.StaticDataService;
 using Infrastructure.StaticData.BuildingsData;
 using Sirenix.OdinInspector;
 using TMPro;
-using UI.Entities.Windows;
 using UnityEngine;
 using UnityEngine.UI;
 using Zenject;
 
 namespace UI.Entities.PopUps
 {
-    public class MinionHutPopUp : Window, ISavedProgressReader
+    public class MinionHutPopUp : UpgradablePopUp
     {
         [SerializeField] private Button _upgradeButton;
         
@@ -27,64 +22,39 @@ namespace UI.Entities.PopUps
 
         [Header("Other")]
         [SerializeField] private TextMeshProUGUI _costText;
-        [SerializeField] private TextMeshProUGUI _currentLevelText;
         
         private MinionHutUpgradeData _minionHutUpgradeData;
-        
-        private int _currentLevel = 1;
-        private string _id;
 
         [Inject]
-        public void Construct(IStaticDataService staticData, IGuidService guidService, ISaveLoadService saveLoad)
+        public new void Construct(IStaticDataService staticData)
         {
-            base.Construct(staticData);
-            
-            saveLoad.Register(this);
-
             _minionHutUpgradeData = staticData.MinionHutUpgradeData;
-
-            _id = guidService.GetGuidFor(gameObject);
+            _upgradeLevelsCount = _minionHutUpgradeData.LevelUpgrades.Count;
         }
 
         private void Awake()
         {
             _upgradeButton.onClick.AddListener(LevelUp);
         }
-        
-        public void LoadProgress(PlayerProgress progress)
+
+        protected override void OnFinalLevelReached()
         {
-            _currentLevel = progress.GetBuildingSaveData(_id).BuildingLevel;
+            _upgradeButton.gameObject.SetActive(false);
+        }
+
+        protected override void SetLevel(int level)
+        {
+            base.SetLevel(level);
             
-            SetLevel(_currentLevel);
-        }
-
-        public void OnProgressCouldNotBeLoaded()
-        {
-            SetLevel(_currentLevel);
-        }
-
-        private void LevelUp()
-        {
-            _currentLevel++;
-            SetLevel(_currentLevel);
-        }
-
-        private void SetLevel(int level)
-        {
-            _currentLevelText.text = $"Level {level.ToString()}";
-            
-            LevelUpgrade currentLevelUpgrade = _minionHutUpgradeData.LevelUpgrades[level - 1];
+            MinionHutLevelUpgrade currentLevelUpgrade = _minionHutUpgradeData.LevelUpgrades[level - 1];
 
             _minionsQuantityText.text = currentLevelUpgrade.MinionsQuantity.ToString();
             _lootQuantityText.text = currentLevelUpgrade.LootQuantity.ToString();
 
-            if (_minionHutUpgradeData.LevelIsTheLastOne(level))
-            {
-                _upgradeButton.enabled = false;
+            if (IsTheLastLevel(level)) 
                 return;
-            }
             
-            LevelUpgrade nextLevelUpgrade = _minionHutUpgradeData.LevelUpgrades[level];
+            MinionHutLevelUpgrade nextLevelUpgrade = _minionHutUpgradeData.LevelUpgrades[level];
             
             int minionsQuantityDifference = 
                 nextLevelUpgrade.MinionsQuantity - currentLevelUpgrade.MinionsQuantity;
@@ -100,6 +70,17 @@ namespace UI.Entities.PopUps
                 : string.Empty;
 
             _costText.text = nextLevelUpgrade.Cost.ToString();
+        }
+
+        private bool IsTheLastLevel(int level)
+        {
+            if (_minionHutUpgradeData.LevelIsTheLastOne(level))
+            {
+                _upgradeButton.gameObject.SetActive(false);
+                return true;
+            }
+
+            return false;
         }
 
         private static string PlusText(int quantity) => 

@@ -13,14 +13,19 @@ namespace Gameplay.Buildings
     [RequireComponent(typeof(UniqueId))]
     public abstract class Building : SerializedMonoBehaviour, IResourceBuildingReceivable
     {
-        [Header("Main building")]
-        [SerializeField] private Transform _receiveResourceTransform;
-        [SerializeField] private ResourceCounter _resourceCounter;
-        [SerializeField] private ResourceType _constructionResourceType;
+        [Header("Main building")] 
+        [SerializeField] private bool _isConstructedByDefault;
         
+        [HideIf("_isConstructedByDefault")]
+        [SerializeField] private Transform _receiveResourceTransform;
+        [HideIf("_isConstructedByDefault")]
+        [SerializeField] private ResourceCounter _resourceCounter;
+        [HideIf("_isConstructedByDefault")]
+        [SerializeField] private ResourceType _constructionResourceType;
+        [HideIf("_isConstructedByDefault")]
         [OdinSerialize] private List<(GameObject Stage, int ResourceQuantity)> _constructionStagesAndResources;
 
-        private ISaveLoadService _saveLoadService;
+        protected ISaveLoadService _saveLoadService;
 
         private BuildingConstruction BuildingConstruction { get; set; }
         public Transform ReceiveResourceTransform => _receiveResourceTransform;

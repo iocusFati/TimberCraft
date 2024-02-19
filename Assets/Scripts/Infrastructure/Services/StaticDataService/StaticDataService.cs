@@ -15,6 +15,8 @@ namespace Infrastructure.Services.StaticDataService
         public UIConfig UIConfig { get; private set; }
         public BuildingsConfig BuildingsConfig { get; private set; }
         public MinionHutUpgradeData MinionHutUpgradeData { get; private set; }
+        public MainHouseUpgradeData MainHouseUpgradeData { get; private set; }
+
 
         public void Initialize()
         {
@@ -24,6 +26,7 @@ namespace Infrastructure.Services.StaticDataService
             InitializeUIConfig();
             InitializeBuildingsConfig();
             InitializeMinionHutUpgradeData();
+            InitializeMainHouseUpgradeData();
         }
 
         private void InitializePlayerConfig() => 
@@ -43,5 +46,8 @@ namespace Infrastructure.Services.StaticDataService
         
         private void InitializeMinionHutUpgradeData() => 
             MinionHutUpgradeData = Resources.Load<MinionHutUpgradeData>(AssetPaths.MinionHutUpgradeData);
+        
+        private void InitializeMainHouseUpgradeData() => 
+            MainHouseUpgradeData = Resources.Load<MainHouseUpgradeData>(AssetPaths.MainHouseUpgradeData);
     }
 }

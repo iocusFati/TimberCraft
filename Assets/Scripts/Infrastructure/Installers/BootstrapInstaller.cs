@@ -23,8 +23,6 @@ namespace Infrastructure.Installers
     {
         public override void InstallBindings()
         {
-            BindSaveLoadService();
-            
             BindUIHolder(out UIHolder uiHolder);
 
             BindStaticDataService();
@@ -50,8 +48,9 @@ namespace Infrastructure.Installers
             BindCacheService();
 
             BindPersistentProgressService();
-
-
+            
+            BindSaveLoadService();
+            
             BindGameResourceStorage();
         }
 

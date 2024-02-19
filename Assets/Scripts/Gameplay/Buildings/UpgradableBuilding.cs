@@ -1,8 +1,10 @@
-﻿using Gameplay.Resource;
+﻿using System;
+using Gameplay.Resource;
 using Gameplay.Resource.ResourceStorage;
 using Infrastructure.Data;
 using Infrastructure.Services.Guid;
 using Infrastructure.Services.PersistentProgress;
+using Infrastructure.Services.SaveLoad;
 using TMPro;
 using UnityEngine;
 using Zenject;
@@ -16,8 +18,10 @@ namespace Gameplay.Buildings
         private IGameResourceStorage _gameResourceStorage;
         private IGuidService _guidService;
 
-        protected int _currentLevel = 1;
+        protected int _currentLevel;
         private string _guid;
+
+        public abstract int GetCurrentUpgradeCost();
 
         [Inject]
         public void Construct(IGameResourceStorage gameResourceStorage, IGuidService guidService)
@@ -25,6 +29,11 @@ namespace Gameplay.Buildings
             _gameResourceStorage = gameResourceStorage;
             
             _guid = guidService.GetGuidFor(gameObject);
+        }
+
+        private void Awake()
+        {
+            _saveLoadService.Register(this);
         }
 
         public void UpdateProgress(PlayerProgress progress)
@@ -42,7 +51,7 @@ namespace Gameplay.Buildings
 
             if (saveData is null)
                 return;
-            if (saveData.IsBuilt)
+            if (!saveData.IsBuilt)
                 return;
 
             _currentLevel = saveData.BuildingLevel;
@@ -59,9 +68,11 @@ namespace Gameplay.Buildings
             SetLevelText(level);
         }
 
-        protected virtual void Upgrade()
+        public virtual void Upgrade()
         {
-            SetLevelText(_currentLevel + 1);
+            _currentLevel++;
+
+            SetLevelText(_currentLevel);
         }
 
         protected void PayForUpgrade(int cost) => 
@@ -69,7 +80,7 @@ namespace Gameplay.Buildings
 
         private void SetLevelText(int level)
         {
-            _levelText.text = level.ToString();
+            _levelText.text = $"Level {level.ToString()}";
         }
     }
 }

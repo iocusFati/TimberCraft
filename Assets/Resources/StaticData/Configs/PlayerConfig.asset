@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dcbadd9f8f4f4d4489a77d574687c82f, type: 3}
   m_Name: PlayerConfig
   m_EditorClassIdentifier: 
-  _movementSpeed: 5
+  _movementSpeed: 10
   _resourcesInOneDropout: 12
   _deliverResourceDuration: 1
   _resourceDeliveryCooldown: 0.2

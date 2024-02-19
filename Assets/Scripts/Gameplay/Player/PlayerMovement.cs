@@ -1,4 +1,5 @@
-﻿using Infrastructure.Services.Input;
+﻿using ECM.Components;
+using Infrastructure.Services.Input;
 using Infrastructure.StaticData.LumberjackData;
 using UnityEngine;
 using Utils;
@@ -7,19 +8,19 @@ namespace Gameplay.Player
 {
     public class PlayerMovement
     {
-        private readonly CharacterController _characterController;
+        private readonly CharacterMovement _characterMovement;
         private readonly IInputService _inputService;
         private readonly float _movementSpeed;
 
         private Transform _cameraTransform;
         private Transform _playerTransform;
 
-        public PlayerMovement(CharacterController characterController,
+        public PlayerMovement(CharacterMovement characterMovement,
             IInputService inputService,
             PlayerConfig playerConfig, 
             Transform playerTransform)
         {
-            _characterController = characterController;
+            _characterMovement = characterMovement;
             _movementSpeed = playerConfig.MovementSpeed;
             _inputService = inputService;
             _playerTransform = playerTransform;
@@ -30,8 +31,10 @@ namespace Gameplay.Player
             _cameraTransform = cameraTransform;
         }
 
-        public void MoveCharacter(Vector3 movementVector) => 
-            _characterController.Move(movementVector * (_movementSpeed * Time.deltaTime));
+        public void MoveCharacter(Vector3 movementVector)
+        {
+            _characterMovement.Move(movementVector * _movementSpeed, _movementSpeed);
+        }
 
         public Vector3 GetMovementVector()
         {

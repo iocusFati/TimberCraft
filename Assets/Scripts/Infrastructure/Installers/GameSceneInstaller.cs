@@ -1,8 +1,8 @@
-﻿using Gameplay.Bots.StateMachine.States;
+﻿using Gameplay.Buildings;
 using Gameplay.Locations;
+using Gameplay.Resource;
 using Infrastructure.Services.Guid;
 using UI.Mediator;
-using UnityEngine.Serialization;
 using Zenject;
 
 namespace Infrastructure.Installers
@@ -12,6 +12,7 @@ namespace Infrastructure.Installers
         public MainLocation mainLocation;
         public UIMediator uiMediator;
         public GuidService guidService;
+        public GameCameraController gameCameraController;
 
         public override void InstallBindings()
         {
@@ -20,6 +21,26 @@ namespace Infrastructure.Installers
             BindUIMediator();
             
             BindGuidService();
+
+            BindResourcesSelling();
+            
+            BindGameCameraController();
+        }
+
+        private void BindGameCameraController()
+        {
+            Container
+                .Bind<IGameCameraController>()
+                .FromInstance(gameCameraController)
+                .AsSingle();
+        }
+
+        private void BindResourcesSelling()
+        {
+            Container
+                .Bind<IResourcesSelling>()
+                .To<ResourcesSelling>()
+                .AsSingle();
         }
 
         private void BindGuidService()

@@ -1,5 +1,6 @@
 ﻿using System;
 using Cinemachine;
+using ECM.Components;
 using Gameplay.Bots.StateMachine.States;
 using Gameplay.Buildings;
 using Gameplay.Lumberjack;
@@ -12,6 +13,7 @@ using Infrastructure.Services.Input;
 using Infrastructure.Services.Pool;
 using Infrastructure.Services.StaticDataService;
 using UnityEngine;
+using UnityEngine.Serialization;
 using Utils;
 using Zenject;
 
@@ -21,7 +23,7 @@ namespace Gameplay.Player
     {
         [SerializeField] private Transform _playerCameraLookAt;
         [SerializeField] private Transform _resourcesSpawnTransform;
-        [SerializeField] private CharacterController _characterController;
+        [FormerlySerializedAs("_characterController")] [SerializeField] private CharacterMovement _characterMovement;
 
         private CinemachineVirtualCamera _playerCamera;
 
@@ -40,7 +42,7 @@ namespace Gameplay.Player
         {
             base.Construct(inputService, staticData, cacheService, coroutineRunner, gameResourceStorage);
             
-            _playerMovement = new PlayerMovement(_characterController, inputService, staticData.PlayerConfig, transform);
+            _playerMovement = new PlayerMovement(_characterMovement, inputService, staticData.PlayerConfig, transform);
             _resourceShare = new PlayerResourceShare(gameResourceStorage, _resourcesSpawnTransform,
                 staticData.PlayerConfig, poolService, coroutineRunner);
         }
@@ -54,7 +56,7 @@ namespace Gameplay.Player
             _playerMovement.SetCamera(_playerCamera.transform);
         }
         
-        private void Update()
+        private void FixedUpdate()
         {
             Vector3 movementVector = _playerMovement.GetMovementVector();
 
@@ -63,7 +65,7 @@ namespace Gameplay.Player
 
         private void OnTriggerEnter(Collider other)
         {
-            if (other.CompareTag(Tags.Building))
+            if (other.CompareTag(Tags.BuildingTrigger))
             {
                 Building building = _cacheService.Buildings.Get(other.gameObject);
 
@@ -74,7 +76,7 @@ namespace Gameplay.Player
 
         private void OnTriggerExit(Collider other)
         {
-            if (other.CompareTag(Tags.Building))
+            if (other.CompareTag(Tags.BuildingTrigger))
             {
                 Building building = _cacheService.Buildings.Get(other.gameObject);
 

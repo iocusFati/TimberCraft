@@ -36,26 +36,6 @@ namespace Gameplay.Buildings
 
         }
 
-        public void BuildWith(int resourceQuantity, Action onBuilt)
-        {
-            if (!_buildingResourceCounter.CanScale)
-                return;
-            
-            _currentlyNeededResourceQuantity -= resourceQuantity;
-            _buildingResourceCounter.SetCountWith(_currentlyNeededResourceQuantity);
-
-            if (IndexIsCorrect(_currentStageIndex + 1))
-            {
-                LevelUp();
-            }
-
-            if (_currentlyNeededResourceQuantity <= 0)
-            {
-                FinishConstruction();
-                onBuilt.Invoke();
-            }
-        }
-
         public void OnProgressCouldNotBeLoaded()
         {
             _currentStageIndex = 0;
@@ -80,9 +60,6 @@ namespace Gameplay.Buildings
             
             SetCurrentResourcesQuantityText();
         }
-        
-        private bool IsConstructed() => 
-            _currentStageIndex == _stagesAndResourcesNeeded.Count - 1;
 
         public void UpdateProgress(PlayerProgress progress)
         {
@@ -92,6 +69,29 @@ namespace Gameplay.Buildings
             
             buildingsSaveData[_id].CurrentlyConstructionNeededResourceNumber = _currentlyNeededResourceQuantity;
         }
+
+        public void BuildWith(int resourceQuantity, Action onBuilt)
+        {
+            if (!_buildingResourceCounter.CanScale)
+                return;
+            
+            _currentlyNeededResourceQuantity -= resourceQuantity;
+            _buildingResourceCounter.SetCountWith(_currentlyNeededResourceQuantity);
+
+            if (IndexIsCorrect(_currentStageIndex + 1))
+            {
+                LevelUp();
+            }
+
+            if (_currentlyNeededResourceQuantity <= 0)
+            {
+                FinishConstruction();
+                onBuilt.Invoke();
+            }
+        }
+
+        private bool IsConstructed() => 
+            _currentStageIndex == _stagesAndResourcesNeeded.Count - 1;
 
         private void SetStageActive(int currentStageIndex)
         {
@@ -129,7 +129,7 @@ namespace Gameplay.Buildings
         {
             int alreadySpentResources = _maxNeededResourceQuantity - _currentlyNeededResourceQuantity;
             
-            return alreadySpentResources > _stagesAndResourcesNeeded[index].ResourceQuantity;
+            return alreadySpentResources >= _stagesAndResourcesNeeded[index].ResourceQuantity;
         }
 
         private void SetCurrentResourcesQuantityText() => 

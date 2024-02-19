@@ -4,6 +4,7 @@ using Sirenix.OdinInspector;
 using Sirenix.Serialization;
 using UI.Entities.PopUps;
 using UI.Entities.Windows;
+using UnityEngine;
 
 namespace UI.Mediator
 {
@@ -11,6 +12,7 @@ namespace UI.Mediator
     {
         [OdinSerialize] private Dictionary<MinionHut, MinionHutPopUp> _minionHutPopUps;
         [OdinSerialize] private Dictionary<ResourcesShop, ResourcesShopPopUp> _resourcesShopPopUps;
+        [OdinSerialize] private MainHousePopUp _mainHousePopUp;
 
         public void SwitchMinionHutPopUp(MinionHut minionHutKey, bool show) => 
             SwitchPopUp(_minionHutPopUps[minionHutKey], show);
@@ -19,6 +21,12 @@ namespace UI.Mediator
         {
             SwitchPopUp(_resourcesShopPopUps[shopKey], show);
         }
+
+        public void SwitchMainHousePopUp(bool show)
+        {
+            SwitchPopUp(_mainHousePopUp, show);
+        }
+
 
         private static void SwitchPopUp(Window window, bool show)
         {
