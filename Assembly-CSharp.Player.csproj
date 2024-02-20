@@ -440,6 +440,7 @@
      <Compile Include="Assets\Doozy\Engine\Progress\ProgressTargets\ProgressTargetImage.cs" />
      <Compile Include="Assets\Scripts\Infrastructure\StaticData\BuildingsData\MainHouseUpgradeData.cs" />
      <Compile Include="Assets\Scripts\Infrastructure\StaticData\BuildingsData\MinionHutLevelUpgrade.cs" />
+     <Compile Include="Assets\Scripts\Utils\TransformExtensions.cs" />
      <Reference Include="UnityEngine">
      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.25f1\Editor\Data\PlaybackEngines\AndroidPlayer\Variations\mono\Managed\UnityEngine.dll</HintPath>
      </Reference>

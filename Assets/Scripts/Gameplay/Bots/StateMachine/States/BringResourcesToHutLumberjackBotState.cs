@@ -29,8 +29,8 @@ namespace Gameplay.Bots.StateMachine.States
 
         public void Enter()
         {
-            _aiPath.destination = _hut.TriggerZoneTransform.position;
-            
+            _aiPath.destination = _hut.SpawnBotsTransform.position;
+                    
             _lumberjackAnimator.Run();
 
             _aiPath.OnTargetWasReached += OnHutReached;

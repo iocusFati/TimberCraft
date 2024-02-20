@@ -22,7 +22,7 @@ namespace Gameplay.Bots.StateMachine.States
         private readonly LumberjackBotStorage _lumberjackBotStorage;
         private readonly ICoroutineRunner _coroutineRunner;
         
-        private float _tryToFindResourceAgainTime;
+        private readonly float _tryToFindResourceAgainTime;
 
         public GoToResourceSourceLumberjackBotState(ResourceSourcesHolder resourceSourcesHolder,
             LumberjackBot bot,
@@ -51,6 +51,7 @@ namespace Gameplay.Bots.StateMachine.States
             if (FailToFindResourceSource(resource)) 
                 return;
 
+            resource.StartMining();
             _aiPath.destination = resource.transform.position;
             _lumberjackAnimator.Run();
             
@@ -64,6 +65,8 @@ namespace Gameplay.Bots.StateMachine.States
 
         private IEnumerator WaitAndRepeat()
         {
+            _lumberjackAnimator.Idle();
+            
             yield return new WaitForSeconds(_tryToFindResourceAgainTime);
             
             Enter();

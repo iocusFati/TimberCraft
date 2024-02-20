@@ -77,10 +77,11 @@ namespace Gameplay.Resource
             OnResourceMined?.Invoke();
         }
 
-        protected virtual void RestoreSource()
-        {
+        protected virtual void RestoreSource() => 
             CurrentState = ResourceSourceState.Untouched;
-        }
+
+        public void StartMining() => 
+            CurrentState = ResourceSourceState.BeingMined;
 
         private IEnumerator WaitAndRestoreSource()
         {

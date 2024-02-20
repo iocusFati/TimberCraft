@@ -22,7 +22,7 @@ namespace Infrastructure.Factories.BotFactoryFolder
         {
             LumberjackBot lumberjackBot = _instantiator
                 .InstantiatePrefabResourceForComponent<LumberjackBot>(AssetPaths.LumberjackBot,
-                    minionHut.TriggerZoneTransform.position, Quaternion.identity, new GameObject("Holder").transform);
+                    minionHut.SpawnBotsTransform.position, Quaternion.identity, new GameObject("Holder").transform);
 
             lumberjackBot.Initialize(resourceSourcesHolder, minionHut);
 

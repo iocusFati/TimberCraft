@@ -5,7 +5,6 @@ using Gameplay.Resource.ResourceStorage;
 using Infrastructure.Factories;
 using Infrastructure.Factories.BotFactoryFolder;
 using Infrastructure.Services.Guid;
-using Infrastructure.Services.SaveLoad;
 using Infrastructure.Services.StaticDataService;
 using Infrastructure.StaticData.BuildingsData;
 using UI.Mediator;
@@ -18,6 +17,7 @@ namespace Gameplay.Buildings
     {
         [Header("Minion hut")]
         public Transform TriggerZoneTransform;
+        public Transform SpawnBotsTransform;
 
         private IUIMediator _uiMediator;
         private BotFactory _botFactory;

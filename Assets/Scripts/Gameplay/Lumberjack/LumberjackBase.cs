@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using Gameplay.Player;
 using Gameplay.Player.Animation;
 using Gameplay.Resource;
@@ -8,6 +9,7 @@ using Infrastructure.Services.Cache;
 using Infrastructure.Services.Input;
 using Infrastructure.Services.StaticDataService;
 using UnityEngine;
+using Utils;
 using Zenject;
 
 namespace Gameplay.Lumberjack
@@ -30,6 +32,9 @@ namespace Gameplay.Lumberjack
         protected ICoroutineRunner _coroutineRunner;
         protected ICacheService _cacheService;
         protected IGameResourceStorage _gameResourceStorage;
+        private CacheContainer<ResourceSource> _resourceSourceCache;
+        
+        private ResourceSource _currentlyMinedResourceSource;
 
         private readonly HashSet<GameObject> _enteredResources = new();
 
@@ -43,6 +48,8 @@ namespace Gameplay.Lumberjack
             _cacheService = cacheService;
             _coroutineRunner = coroutineRunner;
             _gameResourceStorage = gameResourceStorage;
+
+            _resourceSourceCache = cacheService.ResourceSources;
             
             _lumberjackAnimator = new LumberjackAnimator(_animator);
         }
@@ -57,22 +64,36 @@ namespace Gameplay.Lumberjack
 
             _lootTrigger.OnTriggerEntered += OnLootTriggerEntered;
             _lootTrigger.OnTriggerExited += OnLootTriggerExited; 
-
-            _lumberjackAxe.OnDestroyedResourceSource += StopChopping;
         }
 
         protected virtual void OnTriggerInteractionEntered(Collider other)
         {
             if (other.CompareTag(ResourceTag))
             {
+                if (_enteredResources.Count == 0) 
+                    _lumberjackAnimator.Chop();
+                
                 _enteredResources.Add(other.gameObject);
-                _lumberjackAnimator.Chop();
+
+                ResourceSource resourceSource = TryGetResourceSource(other.transform);
+
+                if (resourceSource is not null && resourceSource != _currentlyMinedResourceSource)
+                {
+                    _currentlyMinedResourceSource = resourceSource;
+                    resourceSource.OnResourceMined += StopChopping;
+                }
             }
+        }
+
+        private ResourceSource TryGetResourceSource(Transform otherTransform)
+        {
+            Transform resourceSourceTransform = otherTransform.FindParentWithTag(Tags.ResourceSource);
+            ResourceSource resourceSource = _resourceSourceCache.Get(resourceSourceTransform.gameObject);
+            return resourceSource;
         }
 
         protected virtual void OnTriggerInteractionStayed(Collider other)
         {
-            
         }
 
         protected virtual void OnTriggerInteractionExited(Collider other)
@@ -80,6 +101,8 @@ namespace Gameplay.Lumberjack
             if (other.CompareTag(ResourceTag))
             {
                 _enteredResources.Remove(other.gameObject);
+
+                ClearInactiveObjects(_enteredResources);
                 
                 if (_enteredResources.Count == 0) 
                     StopChopping();
@@ -117,6 +140,21 @@ namespace Gameplay.Lumberjack
         {
             _lumberjackAnimator.StopChopping();
             _lumberjackAxeEnabler.DisableAxeCollider();
+            
+            _enteredResources.Clear();
+
+            _currentlyMinedResourceSource.OnResourceMined -= StopChopping;
+        }
+        
+        private void ClearInactiveObjects(HashSet<GameObject> hashSet)
+        {
+            HashSet<GameObject> objectsToRemove = new HashSet<GameObject>();
+
+            foreach (var obj in hashSet.Where(obj => !obj.activeSelf)) 
+                objectsToRemove.Add(obj);
+
+            foreach (GameObject objToRemove in objectsToRemove) 
+                hashSet.Remove(objToRemove);
         }
     }
 }

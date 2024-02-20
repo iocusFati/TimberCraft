@@ -8,5 +8,6 @@ namespace Infrastructure.Services.Cache
     {
         CacheContainer<DropoutResource> ResourceDropout { get; }
         CacheContainer<Building> Buildings { get; }
+        CacheContainer<ResourceSource> ResourceSources { get; }
     }
 }

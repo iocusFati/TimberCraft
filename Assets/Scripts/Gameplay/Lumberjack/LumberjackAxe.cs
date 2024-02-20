@@ -1,28 +1,31 @@
-﻿using System;
-using Gameplay.Player;
-using Gameplay.Resource;
+﻿using Gameplay.Resource;
+using Infrastructure.Services.Cache;
 using UnityEngine;
+using Utils;
+using Zenject;
 
 namespace Gameplay.Lumberjack
 {
     public class LumberjackAxe : MonoBehaviour
     {
+        private CacheContainer<ResourceSource> _resourceSourcesCache;
+        
         private bool _disableHitCheck = true;
 
-        public event Action OnDestroyedResourceSource;
-
+        [Inject]
+        public void Construct(ICacheService cacheService)
+        {
+            _resourceSourcesCache = cacheService.ResourceSources;
+        }
+        
         private void OnTriggerEnter(Collider other)
         {
-            if (!_disableHitCheck && other.CompareTag("Resource"))
+            if (!_disableHitCheck && other.CompareTag(Tags.Resource))
             {
-                other
-                    .GetComponentInParent<ResourceSource>()
-                    .GetDamage(hitPoint: other.ClosestPoint(transform.position), transform, out bool resourceSourceDestroyed);
+                ResourceSource resourceSource = _resourceSourcesCache.Get(other.gameObject);
+                resourceSource.GetDamage(hitPoint: other.ClosestPoint(transform.position), transform, out _);
                 
                 DisableHitCheck(true);
-
-                if (resourceSourceDestroyed) 
-                    OnDestroyedResourceSource.Invoke();
             }
         }
 

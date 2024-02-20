@@ -440,6 +440,7 @@
      <Compile Include="Assets\Doozy\Engine\Progress\ProgressTargets\ProgressTargetImage.cs" />
      <Compile Include="Assets\Scripts\Infrastructure\StaticData\BuildingsData\MainHouseUpgradeData.cs" />
      <Compile Include="Assets\Scripts\Infrastructure\StaticData\BuildingsData\MinionHutLevelUpgrade.cs" />
+     <Compile Include="Assets\Scripts\Utils\TransformExtensions.cs" />
      <Folder Include="Assets" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.4\Lib\Editor\PlasticSCM\Localization\mergetool.ja.txt" />
      <Folder Include="Assets\Doozy\Logos" />

@@ -11,6 +11,6 @@ namespace Infrastructure.StaticData.BuildingsData
         public List<MinionHutLevelUpgrade> LevelUpgrades => _levelUpgrades;
 
         public bool LevelIsTheLastOne(int level) => 
-            level == _levelUpgrades.Count;
+            level == _levelUpgrades.Count - 1;
     }
 }

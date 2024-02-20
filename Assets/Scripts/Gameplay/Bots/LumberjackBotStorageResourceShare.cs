@@ -18,6 +18,8 @@ namespace Gameplay.Bots
 
         private readonly float _deliverResourceDuration;
         private readonly float _timeGapBetweenResourcesDelivery;
+        
+        private bool _isSharing;
 
         public LumberjackBotStorageResourceShare(LumberjackBotStorage lumberjackBotStorage, ICoroutineRunner coroutineRunner,
             ResourcesConfig resourcesConfig, IGameResourceStorage gameResourceStorage)
@@ -32,6 +34,9 @@ namespace Gameplay.Bots
 
         public void ShareAllResources(IResourceBuildingReceivable shareWithBuilding)
         {
+            if (_isSharing || _lumberjackBotStorage.ResourceDropouts.Count == 0)
+                 return;
+            
             DropoutResource dropout = _lumberjackBotStorage.ResourceDropouts.Peek();
             
             _lumberjackBotStorage.LeaveResources();
@@ -44,6 +49,7 @@ namespace Gameplay.Bots
         private IEnumerator ShareResourcesAnimation(IResourceBuildingReceivable shareWithBuilding)
         {
             int resourcesCount = _lumberjackBotStorage.ResourceDropouts.Count;
+            _isSharing = true;
             
             for (int index = 0; index < resourcesCount; index++)
             {
@@ -55,6 +61,8 @@ namespace Gameplay.Bots
 
                 yield return new WaitForSeconds(_timeGapBetweenResourcesDelivery);
             }
+
+            _isSharing = false;
         }
 
         private void OnResourceDelivered(DropoutResource resource)
