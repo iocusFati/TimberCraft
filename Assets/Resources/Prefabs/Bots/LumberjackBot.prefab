@@ -3305,7 +3305,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 5
-  radius: 0.5
+  radius: 0.3
   height: 2
   canMove: 1
   maxSpeed: 4
@@ -3319,18 +3319,18 @@ MonoBehaviour:
   orientation: 0
   enableRotation: 1
   autoRepath:
-    mode: 2
-    period: 0.5
+    mode: 1
+    period: 1
     sensitivity: 10
     maximumPeriod: 2
     visualizeSensitivity: 0
   targetCompatibility: {fileID: 0}
   maxAcceleration: -2.5
   rotationSpeed: 360
-  slowdownDistance: 0.6
-  pickNextWaypointDist: 2
+  slowdownDistance: 0.8
+  pickNextWaypointDist: 1
   endReachedDistance: 0.6
-  alwaysDrawGizmos: 0
+  alwaysDrawGizmos: 1
   slowWhenNotFacingTarget: 1
   whenCloseToDestination: 0
   constrainInsideGraph: 1
@@ -3374,7 +3374,7 @@ MonoBehaviour:
   collidesWith: -1
   wallAvoidForce: 1
   wallAvoidFalloff: 1
-  priority: 0.5
+  priority: 0.791
   debug: 0
 --- !u!95 &1551198927634296868
 Animator:
@@ -9388,8 +9388,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.6621166, y: 2.2164185, z: 0.10808429}
-  m_Center: {x: 0.0015551015, y: 0.15111578, z: 0.00000014471013}
+  m_Size: {x: 0.6621166, y: 1.8598741, z: 0.10808432}
+  m_Center: {x: 0.0015549975, y: 0.32938564, z: -0.000000046283297}
 --- !u!114 &2555539978714726565
 MonoBehaviour:
   m_ObjectHideFlags: 0

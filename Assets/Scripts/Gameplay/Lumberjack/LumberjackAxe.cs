@@ -24,14 +24,13 @@ namespace Gameplay.Lumberjack
             {
                 ResourceSource resourceSource = _resourceSourcesCache.Get(other.gameObject);
                 resourceSource.GetDamage(hitPoint: other.ClosestPoint(transform.position), transform, out _);
-                
-                DisableHitCheck(true);
             }
         }
 
         public void DisableHitCheck(bool disable)
         {
             _disableHitCheck = disable;
+            Debug.Log("Hit check: " + _disableHitCheck);
         }
     }
 }

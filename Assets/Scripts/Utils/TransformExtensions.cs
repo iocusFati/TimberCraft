@@ -13,5 +13,16 @@ namespace Utils
 
             return currentChild.parent;
         }
+
+        public static void GetRidOfChildren(this Transform transform)
+        {
+            int childCount = transform.childCount;
+            for (int i = childCount - 1; i >= 0; i--)
+            {
+                Transform child = transform.GetChild(i);
+                Object.DestroyImmediate(child.gameObject);
+                Debug.Log("DESTROY");
+            }
+        }
     }
 }
