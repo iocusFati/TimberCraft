@@ -2,20 +2,19 @@
 using System.Collections;
 using System.Collections.Generic;
 using Infrastructure.Services.Pool;
+using MoreMountains.Feedbacks;
 using UnityEngine;
 
 namespace Gameplay.Resource
 {
     public abstract class ResourceSource : MonoBehaviour
     {
-        [SerializeField] private Animator _animator;
+        [SerializeField] private MMF_Player _appearFeedback;
         [SerializeField] protected Transform _hitParticleAppearAt;
         [SerializeField] protected List<Transform> _segments;
 
         protected float _restoreSourceAfter;
         private int _resourcesValue;
-
-        private ResourceSourceAnimation _sourceAnimation;
 
         protected BasePool<DropoutResource> _logPool;
         protected BasePool<ParticleSystem> _particlePool;
@@ -25,16 +24,14 @@ namespace Gameplay.Resource
         public ResourceSourceState CurrentState { get; private set; } = ResourceSourceState.Untouched;
         
         public event Action OnResourceMined;
-
+        
         public void Construct(int resourcesValue)
         {
             _resourcesValue = resourcesValue;
 
             _segmentsCopy = _segments.ToArray();
-
-            _sourceAnimation = new ResourceSourceAnimation(_animator);
         }
-        
+
         public virtual void GetDamage(Vector3 hitPoint, Transform hitTransform, out bool resourceSourceDestroyed)
         {
             PlayHitParticle(hitPoint, hitTransform);
@@ -91,7 +88,7 @@ namespace Gameplay.Resource
         {
             CurrentState = ResourceSourceState.Untouched;
 
-            _sourceAnimation.Appear();
+            _appearFeedback.PlayFeedbacks();
         }
 
         private void DestroyStage()

@@ -443,7 +443,6 @@
      <Compile Include="Assets\Scripts\Infrastructure\Services\Input\IInputService.cs" />
      <Compile Include="Assets\Doozy\Engine\Progress\ProgressTargets\ProgressTargetImage.cs" />
      <Compile Include="Assets\Scripts\Gameplay\Resource\StoneFolder\StoneSource.cs" />
-     <Compile Include="Assets\Scripts\Gameplay\Resource\ResourceSourceAnimation.cs" />
      <Compile Include="Assets\Scripts\Infrastructure\Services\Pool\StoneHitParticlePool.cs" />
      <Folder Include="Assets" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.4\Lib\Editor\PlasticSCM\Localization\mergetool.ja.txt" />
@@ -1044,6 +1043,7 @@
      <None Include="Library\PackageCache\com.unity.textmeshpro@3.0.6\Editor Resources\Shaders\TMP_SDF Internal Editor.shader" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.4\Lib\Editor\PlasticSCM\Localization\xdiff.es.txt" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.4\Lib\Editor\PlasticSCM\Localization\configurehelper.zh-Hans.txt" />
+     <Folder Include="Assets\Lumber\PrefabInstance" />
      <Folder Include="Library\PackageCache\com.unity.modules.umbra@1.0.0" />
      <Folder Include="Assets\Scripts\UI\Buttons" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.4\Lib\Editor\PlasticSCM\Localization\mergetool.zh-Hant.txt" />

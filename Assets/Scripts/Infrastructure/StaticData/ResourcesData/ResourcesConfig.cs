@@ -1,4 +1,5 @@
 ﻿using System;
+using DG.Tweening;
 using Gameplay.Resource;
 using UnityEngine;
 
@@ -29,6 +30,10 @@ namespace Infrastructure.StaticData.ResourcesData
         [Header("Bot")]
         [SerializeField] private float _tryToFindResourceAgainTime;
 
+        [Header("Animation")]
+        [SerializeField] private float _sourceAppearDuration;
+        [SerializeField] private AnimationCurve _sourceAppearCurve;
+
         public float FadeDuration => _fadeDuration;
 
         public float RestoreTreeAfter => _restoreTreeAfter;
@@ -44,6 +49,10 @@ namespace Infrastructure.StaticData.ResourcesData
         public float TreeFadeDuration => _treeFadeDuration;
 
         public float FadeDelay => _fadeDelay;
+
+        public float SourceAppearDuration => _sourceAppearDuration;
+
+        public AnimationCurve SourceAppearCurve => _sourceAppearCurve;
 
         public int GetResourceUnitsPerCoin(ResourceType resourceType)
         {

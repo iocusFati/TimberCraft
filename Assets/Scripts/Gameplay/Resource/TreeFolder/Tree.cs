@@ -41,7 +41,15 @@ namespace Gameplay.Resource
             
             InitializeInitialPositions();
         }
-        
+
+        public void SetKinematic(bool kinematic)
+        {
+            foreach (var segment in _segmentForces) 
+                segment.isKinematic = kinematic;
+
+            _treeTipRB.isKinematic = kinematic;
+        }
+
         protected override void OnLastStageDestroyed()
         {
             base.OnLastStageDestroyed();
@@ -57,18 +65,9 @@ namespace Gameplay.Resource
             foreach (var segment in _segmentPositions.Keys) 
                 AddSegment(segment);
             
-            SetKinematic(true);
             SetTreeTipToInitialState();
             
             base.RestoreSource();
-        }
-
-        private void SetKinematic(bool kinematic)
-        {
-            foreach (var segment in _segmentForces) 
-                segment.isKinematic = kinematic;
-
-            _treeTipRB.isKinematic = kinematic;
         }
 
         private void SetTreeTipToInitialState()
