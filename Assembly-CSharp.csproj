@@ -442,6 +442,9 @@
      <Compile Include="Assets\Scripts\Utils\Constants.cs" />
      <Compile Include="Assets\Scripts\Infrastructure\Services\Input\IInputService.cs" />
      <Compile Include="Assets\Doozy\Engine\Progress\ProgressTargets\ProgressTargetImage.cs" />
+     <Compile Include="Assets\Scripts\Gameplay\Resource\StoneFolder\StoneSource.cs" />
+     <Compile Include="Assets\Scripts\Gameplay\Resource\ResourceSourceAnimation.cs" />
+     <Compile Include="Assets\Scripts\Infrastructure\Services\Pool\StoneHitParticlePool.cs" />
      <Folder Include="Assets" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.4\Lib\Editor\PlasticSCM\Localization\mergetool.ja.txt" />
      <Folder Include="Assets\Doozy\Logos" />
@@ -1128,6 +1131,7 @@
      <Folder Include="Assets\Other\Animations\Player\Clips" />
      <Folder Include="Assets\Doozy\Engine\Nody\Nodes" />
      <Folder Include="Library\PackageCache\com.unity.textmeshpro@3.0.6\Package Resources" />
+     <Folder Include="Assets\Other\Prefabs\Stone" />
      <Folder Include="Assets\Scenes" />
      <None Include="Assets\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
      <Folder Include="Library\PackageCache\com.unity.modules.terrain@1.0.0" />
@@ -1192,6 +1196,7 @@
      <Folder Include="Assets\Doozy\Engine\Nody\Resources" />
      <Folder Include="Assets\Doozy\Examples\Fonts\Quicksand" />
      <Folder Include="Library\PackageCache\com.unity.cinemachine@2.8.9\Presets" />
+     <Folder Include="Assets\Scripts\Gameplay\Resource\StoneFolder" />
      <Folder Include="Assets\GUI PRO Kit - Simple Casual\Sprite\Component\Popup\Popup_Demo_Light" />
      <Folder Include="Assets\Other\Low_Poly_Environment_World\Prefabs" />
      <None Include="Library\PackageCache\com.unity.modules.ui@1.0.0\package.json" />

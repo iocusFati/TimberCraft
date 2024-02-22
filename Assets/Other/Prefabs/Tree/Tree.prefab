@@ -46,7 +46,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.1, y: 1, z: 0.1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: 0, y: -0.52, z: 0}
 --- !u!54 &2003592849955706682
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -59,7 +59,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 1
+  m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 122
   m_CollisionDetection: 0
@@ -75,7 +75,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 3, y: 1, z: 3}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: 0, y: -0.43, z: 0}
 --- !u!1 &4687408333503671447
 GameObject:
   m_ObjectHideFlags: 0
@@ -285,6 +285,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c1b0f266b3342b2ab23e519db2215a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _animator: {fileID: 8333187670215113692}
   _hitParticleAppearAt: {fileID: 7116794986422953847}
   _segments:
   - {fileID: 0}

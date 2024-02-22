@@ -14,9 +14,16 @@ namespace Gameplay.Buildings
     public class MainHouse : UpgradableBuilding
     {
         [Header("Main house")]
-        [OdinSerialize, ValidateInput("DataCountShouldBeEqualToCostCount",
-            "Data count should be equal to cost count in StaticData/GameData/MainHouseUpgradeData")] 
+        
+        [OdinSerialize, ListDrawerSettings(ShowIndexLabels = true), 
+         ValidateInput("DataCountShouldBeEqualToCostCount", 
+             "Data count should be equal to cost count in StaticData/GameData/MainHouseUpgradeData")] 
         private List<ІslandHouseFacadePair> _upgradeData;
+        
+        [ListDrawerSettings(ShowIndexLabels = true, DraggableItems = true),
+            ValidateInput("DataCountShouldBeEqualToCostCount", 
+                "Data count should be equal to cost count in StaticData/GameData/MainHouseUpgradeData")]
+        [SerializeField] private List<List<GameObject>> _walls;
 
         private IUIMediator _uiMediator;
         private IGameCameraController _gameCameraController;
@@ -72,8 +79,21 @@ namespace Gameplay.Buildings
                 UnlockIsland(islandIndex);
         }
 
-        private void UnlockIsland(int islandIndex) => 
+        private void UnlockIsland(int islandIndex)
+        {
             _upgradeData[islandIndex].UnlockIsland.gameObject.SetActive(true);
+
+            DeactivateWalls(islandIndex);
+        }
+
+        private void DeactivateWalls(int islandIndex)
+        {
+            if (_walls.Count == 0)
+                return;
+            
+            foreach (var wall in _walls[islandIndex]) 
+                wall.SetActive(false);
+        }
 
         private void UpdateHouseLook(int facadeIndex)
         {

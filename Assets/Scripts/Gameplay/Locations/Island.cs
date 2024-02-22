@@ -34,6 +34,8 @@ namespace Gameplay.Locations
         {
             if (_graphUpdateScene != null) 
                 AstarPath.active.UpdateGraphs(_graphUpdateScene.GetGraphUpdate());
+            
+            
         }
 
         public void Initialize()

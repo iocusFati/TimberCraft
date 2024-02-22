@@ -8,31 +8,38 @@ namespace Gameplay.Resource
 {
     public abstract class ResourceSource : MonoBehaviour
     {
-        [SerializeField] private Transform _hitParticleAppearAt;
+        [SerializeField] private Animator _animator;
+        [SerializeField] protected Transform _hitParticleAppearAt;
         [SerializeField] protected List<Transform> _segments;
 
         protected float _restoreSourceAfter;
         private int _resourcesValue;
-        
+
+        private ResourceSourceAnimation _sourceAnimation;
+
         protected BasePool<DropoutResource> _logPool;
         protected BasePool<ParticleSystem> _particlePool;
+
+        protected Transform[] _segmentsCopy;
 
         public ResourceSourceState CurrentState { get; private set; } = ResourceSourceState.Untouched;
         
         public event Action OnResourceMined;
 
-        protected abstract void RemoveFirstStage();
-
         public void Construct(int resourcesValue)
         {
             _resourcesValue = resourcesValue;
-        }
 
+            _segmentsCopy = _segments.ToArray();
+
+            _sourceAnimation = new ResourceSourceAnimation(_animator);
+        }
+        
         public virtual void GetDamage(Vector3 hitPoint, Transform hitTransform, out bool resourceSourceDestroyed)
         {
             PlayHitParticle(hitPoint, hitTransform);
 
-            RemoveFirstStage();
+            DestroyStage();
 
             if (_segments.Count == 0)
             {
@@ -46,6 +53,9 @@ namespace Gameplay.Resource
 
             ExtractDropouts();
         }
+
+        public void StartMining() => 
+            CurrentState = ResourceSourceState.BeingMined;
 
         protected virtual void ExtractDropouts()
         {
@@ -77,11 +87,18 @@ namespace Gameplay.Resource
             OnResourceMined?.Invoke();
         }
 
-        protected virtual void RestoreSource() => 
+        protected virtual void RestoreSource()
+        {
             CurrentState = ResourceSourceState.Untouched;
 
-        public void StartMining() => 
-            CurrentState = ResourceSourceState.BeingMined;
+            _sourceAnimation.Appear();
+        }
+
+        private void DestroyStage()
+        {
+            _segments[0].gameObject.SetActive(false);
+            _segments.RemoveAt(0);
+        }
 
         private IEnumerator WaitAndRestoreSource()
         {

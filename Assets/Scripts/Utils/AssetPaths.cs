@@ -8,9 +8,12 @@ namespace Utils
         public const string UIRoot = "Prefabs/UI/UIRoot";
         public const string HUD = "Prefabs/UI/HUD";
 
+        //Particles
         public const string WoodHitParticle = "Prefabs/Particles/WoodImpact";
+        public const string StoneHitParticle = "Prefabs/Particles/StoneImpact";
 
         public const string LogPrefab = "Prefabs/ResourceDropouts/Log";
+        public const string StoneBlockPrefab = "Prefabs/ResourceDropouts/StoneBlock";
 
         public const string LumberjackBot = "Prefabs/Bots/LumberjackBot";
 
@@ -19,7 +22,7 @@ namespace Utils
         public const string LumberjackBotConfig = "StaticData/Configs/LumberjackBotConfig";
         public const string UIConfig = "StaticData/Configs/UIConfig";
         public const string BuildingsConfig = "StaticData/Configs/BuildingsConfig";
-        
+
         public const string MinionHutUpgradeData = "StaticData/GameData/MinionHutUpgradeData";
         public const string MainHouseUpgradeData = "StaticData/GameData/MainHouseUpgradeData";
     }

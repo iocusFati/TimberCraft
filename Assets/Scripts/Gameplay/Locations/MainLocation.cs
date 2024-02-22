@@ -8,23 +8,21 @@ namespace Gameplay.Locations
     public class MainLocation : MonoBehaviour
     {
         [SerializeField] private Transform _playerInitialPoint;
-        [SerializeField] private Island _mainIsland;
-        
-        private IInputService _inputService;
+        [SerializeField] private List<Island> _islands;
 
         public Vector3 PlayerInitialPosition => _playerInitialPoint.position;
-        public Island MainIsland => _mainIsland;
-        public List<Island> OpenedIslands { get; } = new();
 
         [Inject]
         public void Construct(IInputService inputService)
         {
-            _inputService = inputService;
         }
 
         public void Initialize()
         {
-            _mainIsland.Initialize();
+            foreach (var island in _islands)
+            {
+                island.Initialize();
+            }
         }
     }
 }

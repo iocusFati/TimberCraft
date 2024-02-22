@@ -22,10 +22,12 @@ namespace Infrastructure.StaticData.ResourcesData
         [SerializeField] private int _stoneUnitsPerCoin;
         [SerializeField] private int _goldUnitsPerCoin;
 
+        [Header("Tree")]
+        [SerializeField] private float _treeFadeDuration;
+        [SerializeField] private float _fadeDelay;
 
         [Header("Bot")]
         [SerializeField] private float _tryToFindResourceAgainTime;
-
 
         public float FadeDuration => _fadeDuration;
 
@@ -38,7 +40,11 @@ namespace Infrastructure.StaticData.ResourcesData
         public float TimeGapBetweenResourcesDelivery => _timeGapBetweenResourcesDelivery;
 
         public float TryToFindResourceAgainTime => _tryToFindResourceAgainTime;
-        
+
+        public float TreeFadeDuration => _treeFadeDuration;
+
+        public float FadeDelay => _fadeDelay;
+
         public int GetResourceUnitsPerCoin(ResourceType resourceType)
         {
             switch (resourceType)
