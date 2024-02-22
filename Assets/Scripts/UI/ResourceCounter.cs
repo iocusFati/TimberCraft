@@ -33,16 +33,17 @@ namespace UI
         
         public void SetCountWith(int count, bool doScaleAnimation = true, bool transformThousands = false)
         {
-            CanScale = false;
-
             string text = transformThousands 
                 ? count.TransformThousands() 
                 : count.ToString();
             
             SetText(text);
 
-            if (doScaleAnimation) 
+            if (doScaleAnimation && CanScale)
+            {
                 ScaleCounter();
+                CanScale = false;
+            }
         }
 
         public void SetText(string text) => 

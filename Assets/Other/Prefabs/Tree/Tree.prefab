@@ -202,7 +202,7 @@ MonoBehaviour:
         DebugActive: 0
         SquashAndStretchTarget: {fileID: 8279474147142370983}
         Mode: 0
-        Axis: 4
+        Axis: 3
         AnimateScaleDuration: 0.7
         RemapCurveZero: 0.1
         RemapCurveOne: 1
@@ -597,7 +597,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3692383612373984479}
-  - component: {fileID: 4542476477015087275}
   m_Layer: 10
   m_Name: ResourceStack_Base_2
   m_TagString: Untagged
@@ -620,20 +619,6 @@ Transform:
   m_Father: {fileID: 8279474147142370983}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!136 &4542476477015087275
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4687408333503671447}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  m_Radius: 0.3
-  m_Height: 5.08
-  m_Direction: 1
-  m_Center: {x: 0, y: 2.52, z: 0}
 --- !u!1 &5236250385625909638
 GameObject:
   m_ObjectHideFlags: 0
@@ -792,6 +777,7 @@ GameObject:
   - component: {fileID: 8279565238274964849}
   - component: {fileID: 7039224364554036683}
   - component: {fileID: 8952710052462148222}
+  - component: {fileID: 6189845528549112374}
   m_Layer: 10
   m_Name: Tree
   m_TagString: ResourceSource
@@ -831,6 +817,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _appearFeedback: {fileID: 6030669328184561020}
+  "_\u0441ollider": {fileID: 6189845528549112374}
   _hitParticleAppearAt: {fileID: 7116794986422953847}
   _segments:
   - {fileID: 0}
@@ -856,6 +843,20 @@ MonoBehaviour:
   _resourceParent: {fileID: 3692383612373984479}
   _treeTipParent: {fileID: 2376072269217046408}
   _treeTipMaterial: {fileID: 2100000, guid: 8850e391778cb794d90d153ed3e3e3e8, type: 2}
+--- !u!136 &6189845528549112374
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8282846888561611210}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.3
+  m_Height: 5.08
+  m_Direction: 1
+  m_Center: {x: 0, y: 2.52, z: 0}
 --- !u!1 &8283113124873564104
 GameObject:
   m_ObjectHideFlags: 0
@@ -948,7 +949,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8279474147142370983}
-  - component: {fileID: 8333187670215113692}
   m_Layer: 10
   m_Name: TreeObject
   m_TagString: Untagged
@@ -973,24 +973,3 @@ Transform:
   m_Father: {fileID: 8279565238274964849}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!95 &8333187670215113692
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8283122606731287136}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 0c3b96715a4de584d857b824c37848bc, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0

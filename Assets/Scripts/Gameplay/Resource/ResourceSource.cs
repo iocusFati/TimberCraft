@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using Infrastructure.Services.Pool;
 using MoreMountains.Feedbacks;
 using UnityEngine;
@@ -10,6 +11,7 @@ namespace Gameplay.Resource
     public abstract class ResourceSource : MonoBehaviour
     {
         [SerializeField] private MMF_Player _appearFeedback;
+        [SerializeField] private Collider _сollider;
         [SerializeField] protected Transform _hitParticleAppearAt;
         [SerializeField] protected List<Transform> _segments;
 
@@ -20,16 +22,19 @@ namespace Gameplay.Resource
         protected BasePool<ParticleSystem> _particlePool;
 
         protected Transform[] _segmentsCopy;
+        protected Dictionary<GameObject,Collider> _segmentColliders;
 
         public ResourceSourceState CurrentState { get; private set; } = ResourceSourceState.Untouched;
         
-        public event Action OnResourceMined;
+        public event Action<ResourceSource> OnResourceMined;
         
         public void Construct(int resourcesValue)
         {
             _resourcesValue = resourcesValue;
 
             _segmentsCopy = _segments.ToArray();
+            
+            ExtractSegmentColliders();
         }
 
         public virtual void GetDamage(Vector3 hitPoint, Transform hitTransform, out bool resourceSourceDestroyed)
@@ -79,22 +84,37 @@ namespace Gameplay.Resource
         {
             StartCoroutine(WaitAndRestoreSource());
 
+            _сollider.enabled = false;
+
             CurrentState = ResourceSourceState.Mined;
             
-            OnResourceMined?.Invoke();
+            OnResourceMined?.Invoke(this);
         }
 
         protected virtual void RestoreSource()
         {
             CurrentState = ResourceSourceState.Untouched;
+            
+            _сollider.enabled = true;
 
             _appearFeedback.PlayFeedbacks();
         }
 
-        private void DestroyStage()
+        protected virtual void DestroyStage()
         {
             _segments[0].gameObject.SetActive(false);
             _segments.RemoveAt(0);
+        }
+
+        private void ExtractSegmentColliders()
+        {
+            Collider[] segmentColliders = _segments
+                .Select(segment => segment.GetComponent<Collider>())
+                .ToArray();
+            
+            _segmentColliders = segmentColliders.ToDictionary(
+                keySelector => keySelector.gameObject, 
+                segmentCollider => segmentCollider);
         }
 
         private IEnumerator WaitAndRestoreSource()

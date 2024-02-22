@@ -24,8 +24,6 @@ namespace Gameplay.Lumberjack
             {
                 ResourceSource resourceSource = _resourceSourcesCache.Get(other.gameObject);
                 resourceSource.GetDamage(hitPoint: other.ClosestPoint(transform.position), transform, out _);
-                
-                DisableHitCheck(true);
             }
         }
 

@@ -50,12 +50,8 @@ namespace Gameplay.Locations
 
         private void InitializeMinionHuts()
         {
-            foreach (var minionHut in _minionHuts)
-            {
+            foreach (var minionHut in _minionHuts) 
                 minionHut.Construct(_resourceSourcesHolder);
-                
-                _saveLoad.Register(minionHut);
-            }
         }
     }
 }

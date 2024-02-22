@@ -29,7 +29,7 @@ namespace Gameplay.Bots.StateMachine.States
             _lumberjackAnimator.Idle();
         }
 
-        private void OnResourceMined()
+        private void OnResourceMined(ResourceSource resourceSource)
         {
             if (!_lumberjackBotStorage.IsFull)
                 _botStateMachine.Enter<GoToResourceSourceLumberjackBotState>();

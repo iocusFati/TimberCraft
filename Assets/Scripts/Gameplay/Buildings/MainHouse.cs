@@ -76,7 +76,7 @@ namespace Gameplay.Buildings
         private void UnlockAllIslandsUntil(int islandIndex)
         {
             for (int i = 1; i <= islandIndex; i++) 
-                UnlockIsland(islandIndex);
+                UnlockIsland(i);
         }
 
         private void UnlockIsland(int islandIndex)

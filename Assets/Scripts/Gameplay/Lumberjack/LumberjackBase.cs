@@ -68,45 +68,38 @@ namespace Gameplay.Lumberjack
 
         protected virtual void OnTriggerInteractionEntered(Collider other)
         {
-            if (other.CompareTag(ResourceTag))
+            if (other.CompareTag(Tags.ResourceSource))
             {
                 if (_enteredResources.Count == 0) 
                     _lumberjackAnimator.Chop();
                 
                 _enteredResources.Add(other.gameObject);
 
-                ResourceSource resourceSource = TryGetResourceSource(other.transform);
+                ResourceSource resourceSource = _resourceSourceCache.Get(other.gameObject);
 
-                if (resourceSource is not null && resourceSource != _currentlyMinedResourceSource)
-                {
-                    _currentlyMinedResourceSource = resourceSource;
-                    resourceSource.OnResourceMined += StopChopping;
-                }
+                resourceSource.OnResourceMined += RemoveSource;
             }
-        }
-
-        private ResourceSource TryGetResourceSource(Transform otherTransform)
-        {
-            Transform resourceSourceTransform = otherTransform.FindParentWithTag(Tags.ResourceSource);
-            ResourceSource resourceSource = _resourceSourceCache.Get(resourceSourceTransform.gameObject);
-            return resourceSource;
-        }
-
-        protected virtual void OnTriggerInteractionStayed(Collider other)
-        {
         }
 
         protected virtual void OnTriggerInteractionExited(Collider other)
         {
-            if (other.CompareTag(ResourceTag))
+            if (other.CompareTag(Tags.ResourceSource))
             {
+                // ClearInactiveObjects(_enteredResources);
+
+                ResourceSource resourceSource = _resourceSourceCache.Get(other.gameObject);
+
+                if (_enteredResources.Contains(resourceSource.gameObject)) 
+                    resourceSource.OnResourceMined -= RemoveSource;
+                
                 _enteredResources.Remove(other.gameObject);
 
-                ClearInactiveObjects(_enteredResources);
-                
-                if (_enteredResources.Count == 0) 
-                    StopChopping();
+                StopChoppingIfNoResources();
             }
+        }
+
+        protected virtual void OnTriggerInteractionStayed(Collider other)
+        {
         }
 
         private void OnLootTriggerEntered(Collider other)
@@ -122,6 +115,19 @@ namespace Gameplay.Lumberjack
 
         protected virtual void CollectDropout(DropoutResource dropout)
         {
+        }
+
+        private void RemoveSource(ResourceSource resourceSource)
+        {
+            _enteredResources.Remove(resourceSource.gameObject);
+            
+            StopChoppingIfNoResources();
+        }
+
+        private void StopChoppingIfNoResources()
+        {
+            if (_enteredResources.Count == 0) 
+                StopChopping();
         }
 
         private void TryCollectDropout(DropoutResource dropout)
@@ -140,10 +146,6 @@ namespace Gameplay.Lumberjack
         {
             _lumberjackAnimator.StopChopping();
             _lumberjackAxeEnabler.DisableAxeCollider();
-            
-            _enteredResources.Clear();
-
-            _currentlyMinedResourceSource.OnResourceMined -= StopChopping;
         }
         
         private void ClearInactiveObjects(HashSet<GameObject> hashSet)

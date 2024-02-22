@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8991efe724c74422a329ee2b1b613d87, type: 3}
   m_Name: UIConfig
   m_EditorClassIdentifier: 
-  _resourceCounterScaleDuration: 0.12
+  _resourceCounterScaleDuration: 0.2
   _resourceCounterScaleModifier: {x: 0.2, y: 0.2, z: 0.2}
   _popUpsAppearDuration: 1
   _popUpsDisappearDuration: 0.1

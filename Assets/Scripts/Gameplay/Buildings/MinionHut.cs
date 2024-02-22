@@ -67,7 +67,7 @@ namespace Gameplay.Buildings
         }
 
         public override int GetCurrentUpgradeCost() => 
-            _upgradeData.LevelUpgrades[_currentLevel].Cost;
+            _upgradeData.LevelUpgrades[_currentLevel - 1].Cost;
 
         protected override void SetLevel(int level)
         {
@@ -78,7 +78,10 @@ namespace Gameplay.Buildings
 
         private void SpawnBotsUpgrade(int level)
         {
-            MinionHutLevelUpgrade previousUpgradeData = GetLevelUpgradeData(level - 1);
+            MinionHutLevelUpgrade previousUpgradeData = level == 1
+                    ? new MinionHutLevelUpgrade()
+                    : GetLevelUpgradeData(level - 1);
+            
             MinionHutLevelUpgrade currentUpgradeData = GetLevelUpgradeData(level);
             
             int spawnBotsQuantity = currentUpgradeData.MinionsQuantity - previousUpgradeData.MinionsQuantity;
@@ -96,7 +99,7 @@ namespace Gameplay.Buildings
         }
 
         private MinionHutLevelUpgrade GetLevelUpgradeData(int level) => 
-            _upgradeData.LevelUpgrades[level];
+            _upgradeData.LevelUpgrades[level - 1];
 
         private void UpdateBotStorageCapacity(int capacity)
         {

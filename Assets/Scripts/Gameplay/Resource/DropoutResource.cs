@@ -34,6 +34,7 @@ namespace Gameplay.Resource
         public ResourceType Type;
 
         private float _collectDuration;
+        private Vector3 _modelInitialScale;
         private Vector3 _initialScale;
 
         private Release _release;
@@ -49,7 +50,8 @@ namespace Gameplay.Resource
 
         private void Awake()
         {
-            _initialScale = _model.localScale;
+            _modelInitialScale = _model.localScale;
+            _initialScale = transform.localScale;
         }
 
         public void SetReleaseDelegate(Release release) => 
@@ -63,8 +65,8 @@ namespace Gameplay.Resource
             _release();
 
             transform.SetParent(null);
-            transform.localScale = Vector3.one;;
-            _model.localScale = _initialScale;
+            transform.localScale = _initialScale;
+            _model.localScale = _modelInitialScale;
             _model.localPosition = Vector3.zero;
             _collider.enabled = false;
 

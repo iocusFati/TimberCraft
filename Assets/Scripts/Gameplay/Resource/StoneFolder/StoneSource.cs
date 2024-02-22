@@ -9,6 +9,7 @@ namespace Gameplay.Resource.StoneFolder
     public class StoneSource : ResourceSource
     {
         [SerializeField] private List<Transform> _particlePositions;
+        [SerializeField] private GameObject _stoneMark;
 
         [Inject]
         public void Construct(IPoolService poolService, IStaticDataService staticData)
@@ -29,7 +30,33 @@ namespace Gameplay.Resource.StoneFolder
         protected override void RestoreSource()
         {
             base.RestoreSource();
+            
+            _stoneMark.SetActive(false);
 
+            RestoreSegments();
+        }
+
+        protected override void OnLastStageDestroyed()
+        {
+            base.OnLastStageDestroyed();
+            
+            _stoneMark.SetActive(true);
+        }
+
+        protected override void DestroyStage()
+        {
+            _segmentColliders[_segments[0].gameObject].enabled = false;
+
+            base.DestroyStage();
+            
+            if (_segments.Count > 0) 
+                _segmentColliders[_segments[0].gameObject].enabled = true;
+            else
+                _segmentColliders[_segmentsCopy[0].gameObject].enabled = true;
+        }
+
+        private void RestoreSegments()
+        {
             foreach (var segment in _segmentsCopy)
             {
                 segment.gameObject.SetActive(true);

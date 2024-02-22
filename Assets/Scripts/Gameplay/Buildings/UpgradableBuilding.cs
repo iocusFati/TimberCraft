@@ -18,7 +18,7 @@ namespace Gameplay.Buildings
         private IGameResourceStorage _gameResourceStorage;
         private IGuidService _guidService;
 
-        protected int _currentLevel;
+        protected int _currentLevel = 1;
         private string _guid;
 
         public abstract int GetCurrentUpgradeCost();
@@ -84,12 +84,12 @@ namespace Gameplay.Buildings
         {
             base.OnBuilt();
             
-            SetLevel(0);
+            SetLevel(1);
         }
 
         private void SetLevelText(int level)
         {
-            _levelText.text = $"Level {(level + 1).ToString()}";
+            _levelText.text = $"Level {(level).ToString()}";
         }
     }
 }
