@@ -1306,6 +1306,14 @@
       <Project>{c3e211f3-e96a-2ae4-ca66-0430cc88d20e}</Project>
       <Name>MoreMountains.Feedbacks.Cinemachine</Name>
     </ProjectReference>
+    <ProjectReference Include="MeshBakerEditor.csproj">
+      <Project>{d87696ec-9c7e-9fc1-8c4f-5ad5a66af6bb}</Project>
+      <Name>MeshBakerEditor</Name>
+    </ProjectReference>
+    <ProjectReference Include="MeshBakerCore.csproj">
+      <Project>{4edae445-10ef-1586-e2c7-3fdc061fc9b2}</Project>
+      <Name>MeshBakerCore</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

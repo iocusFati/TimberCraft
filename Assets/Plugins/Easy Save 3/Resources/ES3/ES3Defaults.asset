@@ -36,6 +36,7 @@ MonoBehaviour:
     - Cinemachine
     - Lofelt.NiceVibrations
     - Lofelt.NiceVibrations.Demo
+    - MeshBakerCore
     - MoreMountains.Feedbacks
     - MoreMountains.Feedbacks.Authorizations
     - MoreMountains.Feedbacks.Cinemachine

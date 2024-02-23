@@ -913,6 +913,10 @@
       <Project>{e636f1f1-d0ba-1d74-19bb-a402f90b30b8}</Project>
       <Name>MoreMountains.Feedbacks.Cinemachine.Player</Name>
     </ProjectReference>
+    <ProjectReference Include="MeshBakerCore.Player.csproj">
+      <Project>{1354b362-5c9f-aeff-6130-22f74cc2d629}</Project>
+      <Name>MeshBakerCore.Player</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
