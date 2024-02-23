@@ -51,65 +51,7 @@ MonoBehaviour:
       y: 0
       width: 1
       height: 1
-    srcObjName: floor (16)
-    textureArraySliceIdx: -1
-    allPropsUseSameTiling: 1
-    allPropsUseSameTiling_sourceMaterialTiling:
-      serializedVersion: 2
-      x: 0
-      y: 0
-      width: 1
-      height: 1
-    allPropsUseSameTiling_samplingEncapsulatinRect:
-      serializedVersion: 2
-      x: 0
-      y: 0
-      width: 1
-      height: 1
-    propsUseDifferntTiling_srcUVsamplingRect:
-      serializedVersion: 2
-      x: 0
-      y: 0
-      width: 0
-      height: 0
-    tilingTreatment: 4
-  - material: {fileID: 2100000, guid: caaadf87ef274464a89fc75e74c4a7c8, type: 2}
-    atlasRect:
-      serializedVersion: 2
-      x: 0
-      y: 0
-      width: 1
-      height: 1
-    srcObjName: Cylinder (1)
-    textureArraySliceIdx: -1
-    allPropsUseSameTiling: 1
-    allPropsUseSameTiling_sourceMaterialTiling:
-      serializedVersion: 2
-      x: 0
-      y: 0
-      width: 1
-      height: 1
-    allPropsUseSameTiling_samplingEncapsulatinRect:
-      serializedVersion: 2
-      x: 0
-      y: 0
-      width: 1
-      height: 1
-    propsUseDifferntTiling_srcUVsamplingRect:
-      serializedVersion: 2
-      x: 0
-      y: 0
-      width: 0
-      height: 0
-    tilingTreatment: 4
-  - material: {fileID: 2100000, guid: fa6f0844e124dd84ea5a3edccef02f72, type: 2}
-    atlasRect:
-      serializedVersion: 2
-      x: 0
-      y: 0
-      width: 1
-      height: 1
-    srcObjName: Log (8)
+    srcObjName: Cube
     textureArraySliceIdx: -1
     allPropsUseSameTiling: 1
     allPropsUseSameTiling_sourceMaterialTiling:
@@ -132,21 +74,13 @@ MonoBehaviour:
       height: 0
     tilingTreatment: 4
   resultMaterials:
-  - combinedMaterial: {fileID: 2100000, guid: 9381ca6aa8f73b043bbfa9b31299e214, type: 2}
+  - combinedMaterial: {fileID: 0}
     considerMeshUVs: 0
     sourceMaterials:
     - {fileID: 2100000, guid: 67e578a1bb5307644b311257aa5f017e, type: 2}
-  - combinedMaterial: {fileID: 2100000, guid: 8526e5804c247d44b869f9fc0e72868b, type: 2}
+  - combinedMaterial: {fileID: 0}
     considerMeshUVs: 0
     sourceMaterials:
     - {fileID: 2100000, guid: 92c7ab293c3bc944d8c1b31a2209edee, type: 2}
-  - combinedMaterial: {fileID: 2100000, guid: 66c31893a0c589641b48b46e5140ae2e, type: 2}
-    considerMeshUVs: 0
-    sourceMaterials:
-    - {fileID: 2100000, guid: caaadf87ef274464a89fc75e74c4a7c8, type: 2}
-  - combinedMaterial: {fileID: 2100000, guid: e9b2b5b3b71630f448406707c3199229, type: 2}
-    considerMeshUVs: 0
-    sourceMaterials:
-    - {fileID: 2100000, guid: fa6f0844e124dd84ea5a3edccef02f72, type: 2}
   resultMaterialsTexArray: []
   doMultiMaterial: 1
