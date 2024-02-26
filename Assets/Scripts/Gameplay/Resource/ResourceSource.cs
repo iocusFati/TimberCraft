@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Gameplay.Resource.StoneFolder;
 using Infrastructure.Services.Pool;
+using JetBrains.Annotations;
 using MoreMountains.Feedbacks;
 using UnityEngine;
 
@@ -68,9 +69,9 @@ namespace Gameplay.Resource
 
         public bool CanBeMinedByBotWithType(ResourceType botTargetResourceType) =>
             (Type == ResourceType.Wood 
-                && botTargetResourceType is ResourceType.Gold or ResourceType.Stone)
-             || Type == ResourceType.Wood 
-                && botTargetResourceType is ResourceType.Gold or ResourceType.Wood;
+                && botTargetResourceType == ResourceType.Wood) 
+            || Type == ResourceType.Stone 
+                && botTargetResourceType == ResourceType.Stone;
 
         protected virtual void ExtractDropouts()
         {

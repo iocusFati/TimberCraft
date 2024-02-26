@@ -77,7 +77,7 @@ namespace Gameplay.Bots
             {
                 ResourceSource resourceSource = _resourceSourceCache.Get(other.gameObject);
 
-                if (resourceSource.CanBeMinedByBotWithType(TargetResourceType))
+                if (!resourceSource.CanBeMinedByBotWithType(TargetResourceType))
                     return;
             }
             

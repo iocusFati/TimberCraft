@@ -64,7 +64,7 @@ namespace Gameplay.Player.ObstacleFade
         public void EnableCheckFor(MeshRenderer meshRenderer) => 
             _checkDisabledObjects.Remove(meshRenderer);
 
-        public void KillTweenIfActiveExistsFor(MeshRenderer meshRenderer)
+        private void KillTweenIfActiveExistsFor(MeshRenderer meshRenderer)
         {
             if (_objectsBlockingView.Contains(meshRenderer))
             {

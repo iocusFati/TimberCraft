@@ -1,4 +1,5 @@
-﻿using System;
+﻿
+using System;
 using System.Collections.Generic;
 using Gameplay.Resource;
 using Infrastructure.StaticData.LumberjackData;
@@ -13,13 +14,15 @@ namespace Gameplay.Lumberjack
         private readonly float _lootPositionOffset;
         private readonly float _storageFloors;
 
-        private int _freePositionIndex => ResourceDropouts.Count;
+        private int FreePositionIndex => ResourceDropouts.Count;
 
         private readonly Transform _lootStackBottom;
         private readonly Transform[] _resourceCells;
 
         public int StorageCapacity { get; set; }
         public bool IsFull => ResourceDropouts.Count >= StorageCapacity;
+        
+        public event Action OnStorageFull;
 
         public LumberjackBotStorage(LumberjackBotConfig lumberjackBotConfig, Transform lootStackBottom)
         {
@@ -38,14 +41,21 @@ namespace Gameplay.Lumberjack
         }
 
         public Transform GetFreeCell() => 
-            _resourceCells[_freePositionIndex];
+            _resourceCells[FreePositionIndex];
 
         public void OccupyFreePosition(DropoutResource dropout)
         {
-            if (_freePositionIndex < StorageCapacity)
+            if (FreePositionIndex < StorageCapacity)
+            {
                 ResourceDropouts.Push(dropout);
+
+                if (IsFull) 
+                    OnStorageFull?.Invoke();
+            }
             else
+            {
                 Debug.LogError("There is no free position left");
+            }
         }
 
         public void LeaveResources()

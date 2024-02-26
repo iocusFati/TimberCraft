@@ -63,8 +63,6 @@ namespace Gameplay.Resource
             base.OnLastStageDestroyed();
 
             StartCoroutine(ActionAfterDelay(_fadeDelay, FadeOut));
-            
-            FadeOut();
         }
 
         protected override void RestoreSource()
