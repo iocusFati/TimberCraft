@@ -1,6 +1,9 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections;
+using System.Collections.Generic;
 using System.Linq;
 using DG.Tweening;
+using Gameplay.Player.ObstacleFade;
 using Infrastructure.Services.Pool;
 using Infrastructure.Services.StaticDataService;
 using Infrastructure.StaticData.ResourcesData;
@@ -15,6 +18,8 @@ namespace Gameplay.Resource
 
         private float _fadeDuration;
         private float _fadeDelay;
+        
+        private FadeObscurePlayerObjects _fadeObscurePlayerObjects;
 
         private Transform _treeTip;
         private Rigidbody _treeTipRB;
@@ -23,10 +28,13 @@ namespace Gameplay.Resource
         private List<Rigidbody> _segmentForces;
 
         [Inject]
-        public void Construct(IPoolService poolService, IStaticDataService staticData)
+        public void Construct(IPoolService poolService,
+            IStaticDataService staticData,
+            FadeObscurePlayerObjects fadeObscurePlayerObjects)
         {
             _particlePool = poolService.WoodHitParticlesPool;
             _logPool = poolService.DropoutsPool[ResourceType.Wood];
+            _fadeObscurePlayerObjects = fadeObscurePlayerObjects;
 
             ResourcesConfig resourcesConfig = staticData.ResourcesConfig;
             _restoreSourceAfter = resourcesConfig.RestoreTreeAfter;
@@ -53,11 +61,10 @@ namespace Gameplay.Resource
         protected override void OnLastStageDestroyed()
         {
             base.OnLastStageDestroyed();
+
+            StartCoroutine(ActionAfterDelay(_fadeDelay, FadeOut));
             
-            _treeTipMeshRenderer.material
-                .DOFade(0, _fadeDuration)
-                .SetDelay(_fadeDelay)
-                .OnComplete(() => _treeTip.gameObject.SetActive(false));
+            FadeOut();
         }
 
         protected override void RestoreSource()
@@ -70,10 +77,24 @@ namespace Gameplay.Resource
             base.RestoreSource();
         }
 
+        private void FadeOut()
+        {
+            _fadeObscurePlayerObjects.DisableCheckFor(_treeTipMeshRenderer);
+            
+            _treeTipMeshRenderer.material
+                .DOFade(0, _fadeDuration)
+                .OnComplete(() =>
+                {
+                    _treeTip.gameObject.SetActive(false);
+                    _fadeObscurePlayerObjects.EnableCheckFor(_treeTipMeshRenderer);
+                });
+        }
+
         private void SetTreeTipToInitialState()
         {
             _treeTip.gameObject.SetActive(true);
             _treeTip.transform.localPosition = _treeTipInitialPosition;
+
             _treeTipMeshRenderer.material.DOFade(1, 0);
         }
 
@@ -86,23 +107,13 @@ namespace Gameplay.Resource
                 .Select(segment => segment.GetComponent<Rigidbody>())
                 .ToList();
         }
-        
+
         private void InitializeInitialPositions()
         {
             InitializeSegmentPositionsDictionary();
             _treeTipInitialPosition = _treeTip.transform.localPosition;
         }
-
-        // protected override void PlayHitParticle(Vector3 hitPoint, Transform hitTransform)
-        // {
-        //     Vector3 firstSegmentPosition = _segments[0].position;
-        //
-        //     ParticleSystem particle = _poolService.WoodHitParticlesPool.Get();
-        //     
-        //     particle.transform.position = new Vector3(firstSegmentPosition.x, hitPoint.y, firstSegmentPosition.z);
-        //     particle.transform.rotation = hitTransform.rotation;
-        // }
-
+        
         private void AddSegment(Transform segment)
         {
             segment.gameObject.SetActive(true);
@@ -112,6 +123,13 @@ namespace Gameplay.Resource
             
             void SetSegmentToInitialPosition() => 
                 segment.position = _segmentPositions[segment];
+        }
+
+        private IEnumerator ActionAfterDelay(float delay, Action fadeOut)
+        {
+            yield return new WaitForSeconds(delay);
+            
+            fadeOut.Invoke();
         }
     }
 }

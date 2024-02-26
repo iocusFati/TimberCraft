@@ -456,7 +456,7 @@
      <Compile Include="Assets\Scripts\Infrastructure\Services\Input\IInputService.cs" />
      <Compile Include="Assets\Doozy\Engine\Progress\ProgressTargets\ProgressTargetImage.cs" />
      <Compile Include="Assets\Scripts\Gameplay\Player\ObstacleFade\ObscurePlayerObject.cs" />
-     <Compile Include="Assets\Scripts\Gameplay\Player\ObstacleFade\FadeObscurePlayerObject.cs" />
+     <Compile Include="Assets\Scripts\Gameplay\Player\ObstacleFade\FadeObscurePlayerObjects.cs" />
      <Reference Include="UnityEngine">
      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.25f1\Editor\Data\PlaybackEngines\AndroidPlayer\Variations\mono\Managed\UnityEngine.dll</HintPath>
      </Reference>

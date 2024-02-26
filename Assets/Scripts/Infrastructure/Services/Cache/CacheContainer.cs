@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace Infrastructure.Services.Cache
 {
-    public class CacheContainer<TCached> where TCached : MonoBehaviour
+    public class CacheContainer<TCached> where TCached : Component
     {
         private readonly Dictionary<GameObject, TCached> _cacheDictionary = new();
 

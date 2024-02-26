@@ -1,5 +1,6 @@
 ﻿using Gameplay.Buildings;
 using Gameplay.Locations;
+using Gameplay.Player.ObstacleFade;
 using Gameplay.Resource;
 using Infrastructure.Services.Guid;
 using UI.Mediator;
@@ -13,6 +14,7 @@ namespace Infrastructure.Installers
         public UIMediator uiMediator;
         public GuidService guidService;
         public GameCameraStateController gameCameraController;
+        public FadeObscurePlayerObjects fadeObscurePlayerObjects;
 
         public override void InstallBindings()
         {
@@ -25,6 +27,16 @@ namespace Infrastructure.Installers
             BindResourcesSelling();
             
             BindGameCameraController();
+            
+            BindFadeObscurePlayerObjects();
+        }
+
+        private void BindFadeObscurePlayerObjects()
+        {
+            Container
+                .Bind<FadeObscurePlayerObjects>()
+                .FromInstance(fadeObscurePlayerObjects)
+                .AsSingle();
         }
 
         private void BindGameCameraController()
