@@ -1,5 +1,10 @@
-﻿using Gameplay.Resource;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using Gameplay.Resource;
 using Infrastructure.Services.Cache;
+using Infrastructure.Services.StaticDataService;
+using Infrastructure.StaticData.LumberjackData;
 using UnityEngine;
 using Utils;
 using Zenject;
@@ -12,10 +17,21 @@ namespace Gameplay.Lumberjack
         
         private bool _disableHitCheck = true;
 
+        private int _treeMaxDamagesPerSwing;
+        private int _stoneMaxDamagesPerSwing;
+
+        private ResourceType _targetResourceType = ResourceType.None;
+
+        private readonly List<GameObject> _damagedSources = new();
+
         [Inject]
-        public void Construct(ICacheService cacheService)
+        public void Construct(ICacheService cacheService, IStaticDataService staticData)
         {
             _resourceSourcesCache = cacheService.ResourceSources;
+
+            PlayerConfig playerConfig = staticData.PlayerConfig;
+            _treeMaxDamagesPerSwing = playerConfig.TreeMaxDamagesPerSwing;
+            _stoneMaxDamagesPerSwing = playerConfig.StoneMaxDamagesPerSwing;
         }
         
         private void OnTriggerEnter(Collider other)
@@ -23,13 +39,55 @@ namespace Gameplay.Lumberjack
             if (!_disableHitCheck && other.CompareTag(Tags.Resource))
             {
                 ResourceSource resourceSource = _resourceSourcesCache.Get(other.gameObject);
-                resourceSource.GetDamage(hitPoint: other.ClosestPoint(transform.position), transform, out _);
+
+                TryDamageSource(other, resourceSource);
             }
+        }
+
+        public void SetTargetResourceType(ResourceType targetResourceType)
+        {
+            _targetResourceType = targetResourceType;
+        }
+
+        public void Recharge()
+        {
+            DisableHitCheck(true);
+            _damagedSources.Clear();
         }
 
         public void DisableHitCheck(bool disable)
         {
             _disableHitCheck = disable;
+        }
+
+        private void TryDamageSource(Collider other, ResourceSource resourceSource)
+        {
+            if ((_targetResourceType == ResourceType.None ||
+                 resourceSource.CanBeMinedByBotWithType(_targetResourceType)) &&
+                !HaveBeenDamagedTooMuchTimes(resourceSource))
+            {
+                resourceSource.GetDamage(hitPoint: other.ClosestPoint(transform.position), transform, out _);
+                _damagedSources.Add(resourceSource.gameObject);
+            }
+        }
+
+        private bool HaveBeenDamagedTooMuchTimes(ResourceSource resourceSource)
+        {
+            int maxDamagesPerSwing;
+
+            switch (resourceSource.Type)
+            {
+                case ResourceType.Wood:
+                    maxDamagesPerSwing = _treeMaxDamagesPerSwing;
+                    break;
+                case ResourceType.Stone:
+                    maxDamagesPerSwing = _stoneMaxDamagesPerSwing;
+                    break;
+                default:
+                    throw new ArgumentOutOfRangeException();
+            }
+
+            return _damagedSources.Count(source => source.gameObject == resourceSource.gameObject) >= maxDamagesPerSwing;
         }
     }
 }

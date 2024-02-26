@@ -65,6 +65,7 @@
      <Compile Include="Assets\Doozy\Engine\Nody\Nodes\SubGraphNode.cs" />
      <Compile Include="Assets\Doozy\Engine\Utils\UnityResources.cs" />
      <Compile Include="Assets\Doozy\Engine\Progress\ProgressTargets\ProgressTargetAction.cs" />
+     <Compile Include="Assets\MeshBaker\Examples\Scripts\MB_MigrateMaterialsToDifferentPipeline.cs" />
      <Compile Include="Assets\Doozy\Engine\Nody\Nodes\StartNode.cs" />
      <Compile Include="Assets\Scripts\Infrastructure\States\StateMachine.cs" />
      <Compile Include="Assets\Doozy\Engine\UI\UIToggle\UIToggleMessage.cs" />
@@ -130,6 +131,7 @@
      <Compile Include="Assets\Scripts\Gameplay\Buildings\MainHouse.cs" />
      <Compile Include="Assets\Doozy\Integrations\Playmaker\Actions\DoozyUI\ApplicationQuit.cs" />
      <Compile Include="Assets\Doozy\Engine\Progress\ProgressTargets\ProgressTargetAnimator.cs" />
+     <Compile Include="Assets\Scripts\Infrastructure\Services\Pool\StoneHitParticlePool.cs" />
      <Compile Include="Assets\Scripts\Infrastructure\StaticData\BuildingsData\MinionHutLevelUpgrade.cs" />
      <Compile Include="Assets\Scripts\Infrastructure\Services\SaveLoad\OnExitSave.cs" />
      <Compile Include="Assets\Doozy\Engine\Extensions\ColorExtensions.cs" />
@@ -159,6 +161,7 @@
      <Compile Include="Assets\Doozy\Engine\Themes\Targets\ThemeTarget.cs" />
      <Compile Include="Assets\Doozy\Engine\Progress\Enums\ResetValue.cs" />
      <Compile Include="Assets\Doozy\Engine\UI\UIDrawer\UIDrawerArrow.cs" />
+     <Compile Include="Assets\MeshBaker\Examples\SceneRuntimeExample\MB_ExampleSkinnedMeshDescription.cs" />
      <Compile Include="Assets\Doozy\Engine\Touchy\SimulatedTouch.cs" />
      <Compile Include="Assets\Doozy\Engine\Themes\Targets\ColorTargetUnityEvent.cs" />
      <Compile Include="Assets\Doozy\Examples\Scripts\E11PopupScriptOne.cs" />
@@ -284,6 +287,7 @@
      <Compile Include="Assets\Scripts\Gameplay\Player\Animation\LumberjackAnimationChop.cs" />
      <Compile Include="Assets\Doozy\Engine\Themes\Structs\FontId.cs" />
      <Compile Include="Assets\Scripts\Gameplay\Lumberjack\LumberjackAxe.cs" />
+     <Compile Include="Assets\MeshBaker\Examples\SceneDynamicAddDelete\MB_DynamicAddDeleteExample.cs" />
      <Compile Include="Assets\Scripts\Gameplay\Player\PlayerResourceShare.cs" />
      <Compile Include="Assets\Doozy\Engine\Nody\Models\Graph.cs" />
      <Compile Include="Assets\Doozy\Engine\UI\Enums\VisibilityState.cs" />
@@ -293,8 +297,9 @@
      <Compile Include="Assets\Doozy\Engine\Utils\ColorModels\HSL.cs" />
      <Compile Include="Assets\Scripts\Gameplay\Resource\ResourceStorage\GameResourceStorage.cs" />
      <Compile Include="Assets\Scripts\UI\Entities\PopUps\UpgradablePopUp.cs" />
-     <Compile Include="Assets\Scripts\Gameplay\Cameras\GameCameraController.cs" />
+     <Compile Include="Assets\Scripts\Gameplay\Cameras\GameCameraStateController.cs" />
      <Compile Include="Assets\Doozy\Engine\UI\Enums\PopupDisplayOn.cs" />
+     <Compile Include="Assets\MeshBaker\Examples\SceneRuntimeExample\MB_Example.cs" />
      <Compile Include="Assets\Doozy\Engine\UI\UIPopup\UIPopup.cs" />
      <Compile Include="Assets\Doozy\Engine\Soundy\AudioData.cs" />
      <Compile Include="Assets\Scripts\Gameplay\Buildings\Building.cs" />
@@ -318,6 +323,7 @@
      <Compile Include="Assets\Doozy\Engine\Progress\ProgressTargets\ProgressTargetAudioMixer.cs" />
      <Compile Include="Assets\Doozy\Engine\Enums\SetupMode.cs" />
      <Compile Include="Assets\Doozy\Engine\Enums\Language.cs" />
+     <Compile Include="Assets\MeshBaker\Examples\PrepareObjectsForDynamicBatching\MB_PrepareObjectsForDynamicBatchingDescription.cs" />
      <Compile Include="Assets\Doozy\Engine\Themes\Targets\ColorTargetParticleSystem.cs" />
      <Compile Include="Assets\Doozy\Engine\UI\Nodes\BackButtonNode.cs" />
      <Compile Include="Assets\Scripts\Infrastructure\Factories\PlayerFactoryFolder\PlayerFactory.cs" />
@@ -333,6 +339,7 @@
      <Compile Include="Assets\Doozy\Engine\UI\Nodes\GameEventNode.cs" />
      <Compile Include="Assets\Scripts\Infrastructure\States\Interfaces\IPayloadedState.cs" />
      <Compile Include="Assets\Scripts\Infrastructure\ITicker.cs" />
+     <Compile Include="Assets\MeshBaker\Examples\BatchPrepareObjectsForDynamicBatching\MB_BatchPrepareObjectsForDynamicBatchingDescription.cs" />
      <Compile Include="Assets\Doozy\Engine\UI\UIPopup\UIPopupContentReferences.cs" />
      <Compile Include="Assets\Doozy\Engine\Events\AnimatorEvent.cs" />
      <Compile Include="Assets\Scripts\Infrastructure\Services\Guid\IGuidService.cs" />
@@ -358,6 +365,7 @@
      <Compile Include="Assets\Doozy\Engine\UI\UIView\UIViewMessage.cs" />
      <Compile Include="Assets\Scripts\Gameplay\Locations\Island.cs" />
      <Compile Include="Assets\Doozy\Engine\UI\UIDrawer\Enums\UIDrawerContainerSize.cs" />
+     <Compile Include="Assets\Scripts\Gameplay\Resource\StoneFolder\StoneSource.cs" />
      <Compile Include="Assets\Doozy\Engine\Orientation\OrientationEvent.cs" />
      <Compile Include="Assets\Scripts\Infrastructure\States\GameLostState.cs" />
      <Compile Include="Assets\Doozy\Engine\Themes\Targets\FontTargetText.cs" />
@@ -388,6 +396,7 @@
      <Compile Include="Assets\Doozy\Engine\UI\Input\KeyToGameEvent.cs" />
      <Compile Include="Assets\Doozy\Engine\UI\UIToggle\UIToggleSettings.cs" />
      <Compile Include="Assets\Doozy\Engine\Events\GameObjectEvent.cs" />
+     <Compile Include="Assets\MeshBaker\Examples\SceneRuntimeExample\MB_ExampleMover.cs" />
      <Compile Include="Assets\Scripts\Gameplay\Locations\MainLocation.cs" />
      <Compile Include="Assets\Doozy\Integrations\Playmaker\Scripts\PlaymakerEventDispatcher.cs" />
      <Compile Include="Assets\Scripts\UI\Factory\UIHolder.cs" />
@@ -401,6 +410,7 @@
      <Compile Include="Assets\Doozy\Engine\UI\UIView\UIViewSettings.cs" />
      <Compile Include="Assets\Doozy\Engine\Soundy\SoundyController.cs" />
      <Compile Include="Assets\Scripts\Infrastructure\Services\Input\InputService.cs" />
+     <Compile Include="Assets\MeshBaker\Examples\SwitchBakedObjectsTexture\MB_SwitchBakedObjectsTexture.cs" />
      <Compile Include="Assets\Scripts\Infrastructure\States\Interfaces\IExitState.cs" />
      <Compile Include="Assets\Doozy\Engine\Scripts\Coroutiner.cs" />
      <Compile Include="Assets\Doozy\Engine\Utils\DoozyExecutionOrder.cs" />
@@ -417,6 +427,7 @@
      <Compile Include="Assets\Doozy\Engine\UI\Enums\UIEffectBehavior.cs" />
      <Compile Include="Assets\Doozy\Engine\Touchy\Enums\Swipe.cs" />
      <Compile Include="Assets\Doozy\Engine\Progress\ProgressTargets\ProgressTargetTextMeshPro.cs" />
+     <Compile Include="Assets\MeshBaker\Examples\BakeTexturesAtRuntime\BakeTexturesAtRuntime.cs" />
      <Compile Include="Assets\Scripts\Utils\IntExtensions.cs" />
      <Compile Include="Assets\Scripts\Infrastructure\Services\Pool\PoolService.cs" />
      <Compile Include="Assets\Doozy\Engine\Utils\AssetUtils.cs" />
@@ -429,12 +440,14 @@
      <Compile Include="Assets\Doozy\Engine\Utils\DataUtils.cs" />
      <Compile Include="Assets\Scripts\Gameplay\Buildings\BuildingConstruction.cs" />
      <Compile Include="Assets\Doozy\Engine\Touchy\CardinalDirection.cs" />
+     <Compile Include="Assets\MeshBaker\Examples\CharacterCustomization\MB_SwapShirts.cs" />
      <Compile Include="Assets\Doozy\Integrations\Playmaker\Actions\Soundy\MuteAllSounds.cs" />
      <Compile Include="Assets\Doozy\Examples\Scripts\UIButtonAutomatedTextValue.cs" />
      <Compile Include="Assets\Doozy\Engine\UI\Input\InputData.cs" />
      <Compile Include="Assets\Doozy\Integrations\Playmaker\Actions\DoozyUI\HideUIView.cs" />
      <Compile Include="Assets\Scripts\Gameplay\Buildings\IResourceBuildingReceivable.cs" />
      <Compile Include="Assets\Doozy\Engine\Touchy\GestureListener.cs" />
+     <Compile Include="Assets\MeshBaker\Examples\SkinnedMeshRenderer\MB_SkinnedMeshSceneController.cs" />
      <Compile Include="Assets\Doozy\Integrations\Playmaker\Actions\DoozyUI\ShowUIView.cs" />
      <Compile Include="Assets\Scripts\Infrastructure\ICoroutineRunner.cs" />
      <Compile Include="Assets\Doozy\Engine\Utils\ColorModels\XYZ.cs" />
@@ -442,19 +455,8 @@
      <Compile Include="Assets\Scripts\Utils\Constants.cs" />
      <Compile Include="Assets\Scripts\Infrastructure\Services\Input\IInputService.cs" />
      <Compile Include="Assets\Doozy\Engine\Progress\ProgressTargets\ProgressTargetImage.cs" />
-     <Compile Include="Assets\Scripts\Gameplay\Resource\StoneFolder\StoneSource.cs" />
-     <Compile Include="Assets\Scripts\Infrastructure\Services\Pool\StoneHitParticlePool.cs" />
-     <Compile Include="Assets\MeshBaker\Examples\BatchPrepareObjectsForDynamicBatching\MB_BatchPrepareObjectsForDynamicBatchingDescription.cs" />
-     <Compile Include="Assets\MeshBaker\Examples\SkinnedMeshRenderer\MB_SkinnedMeshSceneController.cs" />
-     <Compile Include="Assets\MeshBaker\Examples\SceneRuntimeExample\MB_Example.cs" />
-     <Compile Include="Assets\MeshBaker\Examples\SceneDynamicAddDelete\MB_DynamicAddDeleteExample.cs" />
-     <Compile Include="Assets\MeshBaker\Examples\SceneRuntimeExample\MB_ExampleMover.cs" />
-     <Compile Include="Assets\MeshBaker\Examples\SceneRuntimeExample\MB_ExampleSkinnedMeshDescription.cs" />
-     <Compile Include="Assets\MeshBaker\Examples\SwitchBakedObjectsTexture\MB_SwitchBakedObjectsTexture.cs" />
-     <Compile Include="Assets\MeshBaker\Examples\BakeTexturesAtRuntime\BakeTexturesAtRuntime.cs" />
-     <Compile Include="Assets\MeshBaker\Examples\PrepareObjectsForDynamicBatching\MB_PrepareObjectsForDynamicBatchingDescription.cs" />
-     <Compile Include="Assets\MeshBaker\Examples\CharacterCustomization\MB_SwapShirts.cs" />
-     <Compile Include="Assets\MeshBaker\Examples\Scripts\MB_MigrateMaterialsToDifferentPipeline.cs" />
+     <Compile Include="Assets\Scripts\Gameplay\Player\ObstacleFade\ObscurePlayerObject.cs" />
+     <Compile Include="Assets\Scripts\Gameplay\Player\ObstacleFade\FadeObscurePlayerObject.cs" />
      <Reference Include="UnityEngine">
      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.25f1\Editor\Data\PlaybackEngines\AndroidPlayer\Variations\mono\Managed\UnityEngine.dll</HintPath>
      </Reference>
@@ -1108,6 +1110,10 @@
       <Project>{65696eab-817a-9327-a047-367e32ad6f5f}</Project>
       <Name>Unity.Postprocessing.Runtime.Player</Name>
     </ProjectReference>
+    <ProjectReference Include="MeshBakerCore.Player.csproj">
+      <Project>{1354b362-5c9f-aeff-6130-22f74cc2d629}</Project>
+      <Name>MeshBakerCore.Player</Name>
+    </ProjectReference>
     <ProjectReference Include="Zenject.Player.csproj">
       <Project>{0c65196b-e0ba-4e45-c0ac-ad1d92ec41cd}</Project>
       <Name>Zenject.Player</Name>
@@ -1147,10 +1153,6 @@
     <ProjectReference Include="MoreMountains.Feedbacks.Cinemachine.Player.csproj">
       <Project>{e636f1f1-d0ba-1d74-19bb-a402f90b30b8}</Project>
       <Name>MoreMountains.Feedbacks.Cinemachine.Player</Name>
-    </ProjectReference>
-    <ProjectReference Include="MeshBakerCore.Player.csproj">
-      <Project>{1354b362-5c9f-aeff-6130-22f74cc2d629}</Project>
-      <Name>MeshBakerCore.Player</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

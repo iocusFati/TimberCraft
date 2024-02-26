@@ -56,21 +56,29 @@ namespace Gameplay.Buildings
         {
             base.Upgrade();
             
-            PayForUpgrade(_upgradeCosts[_currentLevel]);
+            PayForUpgrade(_upgradeCosts[CurrentUpgradeIndex]);
             
-            UnlockIsland(_currentLevel);
-            UpdateHouseLook(_currentLevel);
+            UnlockIsland(CurrentUpgradeIndex);
+            UpdateHouseLook(CurrentUpgradeIndex);
         }
 
         public override int GetCurrentUpgradeCost() => 
-            _upgradeCosts[_currentLevel];
+            _upgradeCosts[CurrentUpgradeIndex];
 
         protected override void SetLevel(int level)
         {
             base.SetLevel(level);
 
-            UnlockAllIslandsUntil(level);
-            UpdateHouseLook(level);
+            DisableAllFacades();
+            
+            UnlockAllIslandsUntil(CurrentUpgradeIndex);
+            UpdateHouseLook(CurrentUpgradeIndex);
+        }
+
+        private void DisableAllFacades()
+        {
+            foreach (var data in _upgradeData) 
+                data.UpgradeMainHouseFacade.SetActive(false);
         }
 
         private void UnlockAllIslandsUntil(int islandIndex)

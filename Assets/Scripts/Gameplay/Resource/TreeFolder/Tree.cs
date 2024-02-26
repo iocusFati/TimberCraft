@@ -57,7 +57,7 @@ namespace Gameplay.Resource
             _treeTipMeshRenderer.material
                 .DOFade(0, _fadeDuration)
                 .SetDelay(_fadeDelay)
-                .OnComplete(() => _treeTip.gameObject.SetActive(true));
+                .OnComplete(() => _treeTip.gameObject.SetActive(false));
         }
 
         protected override void RestoreSource()

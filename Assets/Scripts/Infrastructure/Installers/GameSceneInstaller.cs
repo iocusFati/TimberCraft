@@ -12,7 +12,7 @@ namespace Infrastructure.Installers
         public MainLocation mainLocation;
         public UIMediator uiMediator;
         public GuidService guidService;
-        public GameCameraController gameCameraController;
+        public GameCameraStateController gameCameraController;
 
         public override void InstallBindings()
         {

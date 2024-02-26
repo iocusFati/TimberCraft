@@ -24,7 +24,7 @@ namespace Gameplay.Lumberjack
         [SerializeField] private TriggerInteraction _triggerInteraction;
         [SerializeField] private TriggerInteraction _lootTrigger;
         [SerializeField] protected LumberjackAxeEnabler _lumberjackAxeEnabler;
-        [SerializeField] private LumberjackAxe _lumberjackAxe;
+        [SerializeField] protected LumberjackAxe _lumberjackAxe;
         [SerializeField] protected Transform _resourceCollector;
 
         protected LumberjackAnimator _lumberjackAnimator;
@@ -32,7 +32,7 @@ namespace Gameplay.Lumberjack
         protected ICoroutineRunner _coroutineRunner;
         protected ICacheService _cacheService;
         protected IGameResourceStorage _gameResourceStorage;
-        private CacheContainer<ResourceSource> _resourceSourceCache;
+        protected CacheContainer<ResourceSource> _resourceSourceCache;
         
         private ResourceSource _currentlyMinedResourceSource;
 

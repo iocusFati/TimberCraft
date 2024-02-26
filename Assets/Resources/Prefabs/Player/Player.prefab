@@ -4526,7 +4526,7 @@ MonoBehaviour:
   _resourceCollector: {fileID: 7638881381066207561}
   _playerCameraLookAt: {fileID: 2254303845142963462}
   _resourcesSpawnTransform: {fileID: 8117986971994957363}
-  _characterController: {fileID: 4434589726605521139}
+  _characterMovement: {fileID: 4434589726605521139}
 --- !u!114 &2771472769614374295
 MonoBehaviour:
   m_ObjectHideFlags: 0

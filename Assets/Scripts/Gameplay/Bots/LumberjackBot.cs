@@ -5,6 +5,7 @@ using Gameplay.Locations;
 using Gameplay.Lumberjack;
 using Gameplay.Resource;
 using Gameplay.Resource.ResourceStorage;
+using Gameplay.Resource.StoneFolder;
 using Infrastructure;
 using Infrastructure.Services.Cache;
 using Infrastructure.Services.Input;
@@ -12,7 +13,9 @@ using Infrastructure.Services.StaticDataService;
 using Infrastructure.StaticData.ResourcesData;
 using Pathfinding;
 using UnityEngine;
+using Utils;
 using Zenject;
+using Tree = Gameplay.Resource.Tree;
 
 namespace Gameplay.Bots
 {
@@ -53,6 +56,8 @@ namespace Gameplay.Bots
         private void Awake()
         {
             _aiPath = GetComponent<AIPath>();
+
+            _lumberjackAxe.SetTargetResourceType(TargetResourceType);
         }
 
         public void Initialize(ResourceSourcesHolder island, MinionHut hut)
@@ -66,6 +71,19 @@ namespace Gameplay.Bots
             _botStateMachine.Enter<GoToResourceSourceLumberjackBotState>();
         }
 
+        protected override void OnTriggerInteractionEntered(Collider other)
+        {
+            if (other.CompareTag(Tags.ResourceSource))
+            {
+                ResourceSource resourceSource = _resourceSourceCache.Get(other.gameObject);
+
+                if (resourceSource.CanBeMinedByBotWithType(TargetResourceType))
+                    return;
+            }
+            
+            base.OnTriggerInteractionEntered(other);
+        }
+        
         protected override void CollectDropout(DropoutResource dropout)
         {
             base.CollectDropout(dropout);
@@ -82,7 +100,7 @@ namespace Gameplay.Bots
         }
 
         protected override bool CanCollectDropout(DropoutResource dropout) => 
-            base.CanCollectDropout(dropout) && !BotStorage.IsFull;
+            base.CanCollectDropout(dropout) && !BotStorage.IsFull && dropout.Type == TargetResourceType;
 
         private void RegisterBotStates(ResourceSourcesHolder island, AIPath aiPath)
         {

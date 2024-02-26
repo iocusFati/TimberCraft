@@ -18,8 +18,10 @@ namespace Gameplay.Buildings
         private IGameResourceStorage _gameResourceStorage;
         private IGuidService _guidService;
 
-        protected int _currentLevel = 1;
         private string _guid;
+        protected int _currentLevel = 1;
+        
+        protected int CurrentUpgradeIndex => _currentLevel - 1;
 
         public abstract int GetCurrentUpgradeCost();
 

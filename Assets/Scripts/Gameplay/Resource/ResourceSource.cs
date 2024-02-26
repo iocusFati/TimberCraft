@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using Gameplay.Resource.StoneFolder;
 using Infrastructure.Services.Pool;
 using MoreMountains.Feedbacks;
 using UnityEngine;
@@ -25,7 +26,8 @@ namespace Gameplay.Resource
         protected Dictionary<GameObject,Collider> _segmentColliders;
 
         public ResourceSourceState CurrentState { get; private set; } = ResourceSourceState.Untouched;
-        
+        public ResourceType Type { get; private set; }
+
         public event Action<ResourceSource> OnResourceMined;
         
         public void Construct(int resourcesValue)
@@ -35,6 +37,11 @@ namespace Gameplay.Resource
             _segmentsCopy = _segments.ToArray();
             
             ExtractSegmentColliders();
+        }
+
+        private void Awake()
+        {
+            SetResourceType();
         }
 
         public virtual void GetDamage(Vector3 hitPoint, Transform hitTransform, out bool resourceSourceDestroyed)
@@ -58,6 +65,12 @@ namespace Gameplay.Resource
 
         public void StartMining() => 
             CurrentState = ResourceSourceState.BeingMined;
+
+        public bool CanBeMinedByBotWithType(ResourceType botTargetResourceType) =>
+            (Type == ResourceType.Wood 
+                && botTargetResourceType is ResourceType.Gold or ResourceType.Stone)
+             || Type == ResourceType.Wood 
+                && botTargetResourceType is ResourceType.Gold or ResourceType.Wood;
 
         protected virtual void ExtractDropouts()
         {
@@ -115,6 +128,16 @@ namespace Gameplay.Resource
             _segmentColliders = segmentColliders.ToDictionary(
                 keySelector => keySelector.gameObject, 
                 segmentCollider => segmentCollider);
+        }
+
+        private void SetResourceType()
+        {
+            Type = this switch
+            {
+                Tree => ResourceType.Wood,
+                StoneSource => ResourceType.Stone,
+                _ => Type
+            };
         }
 
         private IEnumerator WaitAndRestoreSource()

@@ -873,6 +873,10 @@
       <Project>{65696eab-817a-9327-a047-367e32ad6f5f}</Project>
       <Name>Unity.Postprocessing.Runtime.Player</Name>
     </ProjectReference>
+    <ProjectReference Include="MeshBakerCore.Player.csproj">
+      <Project>{1354b362-5c9f-aeff-6130-22f74cc2d629}</Project>
+      <Name>MeshBakerCore.Player</Name>
+    </ProjectReference>
     <ProjectReference Include="Zenject.Player.csproj">
       <Project>{0c65196b-e0ba-4e45-c0ac-ad1d92ec41cd}</Project>
       <Name>Zenject.Player</Name>
@@ -912,10 +916,6 @@
     <ProjectReference Include="MoreMountains.Feedbacks.Cinemachine.Player.csproj">
       <Project>{e636f1f1-d0ba-1d74-19bb-a402f90b30b8}</Project>
       <Name>MoreMountains.Feedbacks.Cinemachine.Player</Name>
-    </ProjectReference>
-    <ProjectReference Include="MeshBakerCore.Player.csproj">
-      <Project>{1354b362-5c9f-aeff-6130-22f74cc2d629}</Project>
-      <Name>MeshBakerCore.Player</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

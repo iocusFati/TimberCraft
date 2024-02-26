@@ -915,6 +915,10 @@
       <Project>{7e5ddd76-ccea-783b-fd6f-fcb9da63b211}</Project>
       <Name>Unity.PlasticSCM.Editor</Name>
     </ProjectReference>
+    <ProjectReference Include="MeshBakerEditor.csproj">
+      <Project>{d87696ec-9c7e-9fc1-8c4f-5ad5a66af6bb}</Project>
+      <Name>MeshBakerEditor</Name>
+    </ProjectReference>
     <ProjectReference Include="Unity.VisualScripting.Core.csproj">
       <Project>{2fac6370-1547-e0d5-31f9-7181424cee0b}</Project>
       <Name>Unity.VisualScripting.Core</Name>
@@ -950,6 +954,10 @@
     <ProjectReference Include="Unity.Postprocessing.Runtime.csproj">
       <Project>{4a73b5b0-25a0-8fb5-d4dd-aae878df6674}</Project>
       <Name>Unity.Postprocessing.Runtime</Name>
+    </ProjectReference>
+    <ProjectReference Include="MeshBakerCore.csproj">
+      <Project>{4edae445-10ef-1586-e2c7-3fdc061fc9b2}</Project>
+      <Name>MeshBakerCore</Name>
     </ProjectReference>
     <ProjectReference Include="Zenject.csproj">
       <Project>{b9587be0-f17e-cf04-1544-11b8848901b3}</Project>
@@ -1010,14 +1018,6 @@
     <ProjectReference Include="MoreMountains.Feedbacks.Cinemachine.csproj">
       <Project>{c3e211f3-e96a-2ae4-ca66-0430cc88d20e}</Project>
       <Name>MoreMountains.Feedbacks.Cinemachine</Name>
-    </ProjectReference>
-    <ProjectReference Include="MeshBakerEditor.csproj">
-      <Project>{d87696ec-9c7e-9fc1-8c4f-5ad5a66af6bb}</Project>
-      <Name>MeshBakerEditor</Name>
-    </ProjectReference>
-    <ProjectReference Include="MeshBakerCore.csproj">
-      <Project>{4edae445-10ef-1586-e2c7-3fdc061fc9b2}</Project>
-      <Name>MeshBakerCore</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

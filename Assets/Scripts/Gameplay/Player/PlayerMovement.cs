@@ -13,7 +13,7 @@ namespace Gameplay.Player
         private readonly float _movementSpeed;
 
         private Transform _cameraTransform;
-        private Transform _playerTransform;
+        private readonly Transform _playerTransform;
 
         public PlayerMovement(CharacterMovement characterMovement,
             IInputService inputService,

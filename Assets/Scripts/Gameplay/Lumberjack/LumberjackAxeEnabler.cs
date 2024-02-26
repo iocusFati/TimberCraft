@@ -12,7 +12,7 @@ namespace Gameplay.Lumberjack
         }
 
         public void DisableAxeCollider() => 
-            _axe.DisableHitCheck(true);
+            _axe.Recharge();
 
         public void EnableAxeCollider() => 
             _axe.DisableHitCheck(false);

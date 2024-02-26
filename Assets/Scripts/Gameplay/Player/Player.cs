@@ -1,7 +1,5 @@
-﻿using System;
-using Cinemachine;
+﻿using Cinemachine;
 using ECM.Components;
-using Gameplay.Bots.StateMachine.States;
 using Gameplay.Buildings;
 using Gameplay.Lumberjack;
 using Gameplay.Player.Animation;
@@ -13,7 +11,6 @@ using Infrastructure.Services.Input;
 using Infrastructure.Services.Pool;
 using Infrastructure.Services.StaticDataService;
 using UnityEngine;
-using UnityEngine.Serialization;
 using Utils;
 using Zenject;
 
@@ -23,14 +20,13 @@ namespace Gameplay.Player
     {
         [SerializeField] private Transform _playerCameraLookAt;
         [SerializeField] private Transform _resourcesSpawnTransform;
-        [FormerlySerializedAs("_characterController")] [SerializeField] private CharacterMovement _characterMovement;
-
-        private CinemachineVirtualCamera _playerCamera;
+        [SerializeField] private CharacterMovement _characterMovement;
 
         private PlayerMovement _playerMovement;
         private bool _isMoving;
         private PlayerResourceShare _resourceShare;
-        protected LumberjackBotStorage LumberjackBotStorage;
+        
+        public CinemachineVirtualCamera PlayerCamera { get; private set; }
 
         [Inject]
         public void Construct(IInputService inputService,
@@ -53,7 +49,7 @@ namespace Gameplay.Player
             
             InitializePlayerCamera();
             
-            _playerMovement.SetCamera(_playerCamera.transform);
+            _playerMovement.SetCamera(PlayerCamera.transform);
         }
         
         private void FixedUpdate()
@@ -136,12 +132,12 @@ namespace Gameplay.Player
         
         private void InitializePlayerCamera()
         {
-            _playerCamera = GameObject
+            PlayerCamera = GameObject
                 .FindWithTag(PlayerCameraTag)
                 .GetComponent<CinemachineVirtualCamera>();
 
-            _playerCamera.m_Follow = transform;
-            _playerCamera.m_LookAt = _playerCameraLookAt;
+            PlayerCamera.m_Follow = transform;
+            PlayerCamera.m_LookAt = _playerCameraLookAt;
         }
     }
 }

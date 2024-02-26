@@ -16,3 +16,5 @@ MonoBehaviour:
   _resourcesInOneDropout: 12
   _deliverResourceDuration: 1
   _resourceDeliveryCooldown: 0.2
+  _treeMaxDamagesPerSwing: 1
+  _stoneMaxDamagesPerSwing: 2

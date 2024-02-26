@@ -1,4 +1,7 @@
+using System;
+using Cinemachine;
 using Gameplay.Lumberjack;
+using Gameplay.Player;
 using Infrastructure.AssetProviderService;
 using UnityEngine;
 using Utils;
@@ -10,6 +13,8 @@ namespace Infrastructure.Factories.PlayerFactoryFolder
     {
         private readonly IInstantiator _container;
 
+        public event Action<Player> OnPlayerCreated;
+
         public PlayerFactory(IInstantiator container)
         {
             _container = container;
@@ -17,11 +22,13 @@ namespace Infrastructure.Factories.PlayerFactoryFolder
 
         public void CreatePlayer(Vector3 at)
         {
-            LumberjackBase player = _container.InstantiatePrefabResourceForComponent<LumberjackBase>(AssetPaths.Player,
+            Player player = _container.InstantiatePrefabResourceForComponent<Player>(AssetPaths.Player,
                 at, Quaternion.identity,
                 new GameObject("Holder").transform);
 
             player.transform.SetParent(null);
+            
+            OnPlayerCreated?.Invoke(player);
         }
     }
 }

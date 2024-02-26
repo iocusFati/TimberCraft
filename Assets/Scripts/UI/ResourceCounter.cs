@@ -15,8 +15,8 @@ namespace UI
         private float _duration;
         private Vector3 _punchScale;
 
-        public bool CanScale { get; private set; } = true;
         private RectTransform _rectTransform;
+        public bool CanScale { get; private set; } = true;
 
         [Inject]
         public void Construct(IStaticDataService staticDataService)
