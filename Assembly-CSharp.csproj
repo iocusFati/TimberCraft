@@ -274,6 +274,7 @@
      <Compile Include="Assets\Doozy\Integrations\Playmaker\Actions\DoozyUI\ActivateLoadedScenes.cs" />
      <Compile Include="Assets\Doozy\Engine\Progress\Events\ProgressEvent.cs" />
      <Compile Include="Assets\Doozy\Engine\Extensions\RectExtensions.cs" />
+     <Compile Include="Assets\Scripts\Gameplay\Buildings\DecorationBuilding.cs" />
      <Compile Include="Assets\Doozy\Engine\UI\Animation\AnimationClasses.cs" />
      <Compile Include="Assets\Doozy\Engine\UI\UIToggle\UIToggleEvent.cs" />
      <Compile Include="Assets\Doozy\Engine\Themes\Targets\ColorTargetRawImage.cs" />
@@ -516,7 +517,6 @@
      <Folder Include="Assets\Scripts\Infrastructure\Factories\Location" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.4\Lib\Editor\PlasticSCM\Localization\differences.es.txt" />
      <Folder Include="Assets\Doozy\Examples\Materials" />
-     <Folder Include="Assets\Scripts\Gameplay\Animation" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.4\Lib\Editor\PlasticSCM\Localization\commontypes.zh-Hans.txt" />
      <Folder Include="Assets\Doozy\Engine\UI\Resources\UIAnimations\Punch" />
      <None Include="Assets\Doozy\Examples\Fonts\Montserrat\OFL.txt" />

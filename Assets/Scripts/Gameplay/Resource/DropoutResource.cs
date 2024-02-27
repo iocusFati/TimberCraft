@@ -73,6 +73,7 @@ namespace Gameplay.Resource
             transform.localScale = _initialScale;
             _model.localScale = _modelInitialScale;
             _model.localPosition = Vector3.zero;
+            _model.localRotation = Quaternion.identity;
             _collider.enabled = false;
 
             IsCollected = false;

@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using Gameplay.Locations;
 using Gameplay.Lumberjack;
-using Gameplay.Player;
 using Gameplay.Player.Animation;
 using Gameplay.Resource;
 using Infrastructure;
@@ -23,6 +22,8 @@ namespace Gameplay.Bots.StateMachine.States
         private readonly ICoroutineRunner _coroutineRunner;
         
         private readonly float _tryToFindResourceAgainTime;
+        
+        private ResourceSource _targetResource;
 
         public GoToResourceSourceLumberjackBotState(ResourceSourcesHolder resourceSourcesHolder,
             LumberjackBot bot,
@@ -42,25 +43,33 @@ namespace Gameplay.Bots.StateMachine.States
             _coroutineRunner = coroutineRunner;
 
             _tryToFindResourceAgainTime = resourceConfig.TryToFindResourceAgainTime;
+            
+            _lumberjackBotStorage.OnStorageFull += BringResourcesToHut;
         }
 
         public void Enter()
         {
-            ResourceSource resource = GetTargetResource();
+            _targetResource = GetTargetResource();
 
-            if (FailToFindResourceSource(resource)) 
+            if (FailToFindResourceSource(_targetResource)) 
                 return;
 
-            resource.StartMining();
-            _aiPath.destination = resource.transform.position;
+            _targetResource.StartMining();
+            _aiPath.destination = _targetResource.transform.position;
             _lumberjackAnimator.Run();
             
-            _botStateMachine.Enter<IsOnTheWayToResourceSourceLumberjackBotState, ResourceSource>(resource);
+            _botStateMachine.Enter<IsOnTheWayToResourceSourceLumberjackBotState, ResourceSource>(_targetResource);
         }
 
         public void Exit()
         {
             
+        }
+
+        private void BringResourcesToHut()
+        {
+            _targetResource.LeaveMining();
+            _botStateMachine.Enter<BringResourcesToHutLumberjackBotState>();
         }
 
         private IEnumerator WaitAndRepeat()

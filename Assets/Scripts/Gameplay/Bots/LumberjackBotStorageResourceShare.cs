@@ -51,13 +51,10 @@ namespace Gameplay.Bots
 
         private IEnumerator ShareResourcesAnimation(IResourceBuildingReceivable shareWithBuilding)
         {
-            int resourcesCount = shareWithBuilding.NeededResources < _lumberjackBotStorage.ResourceDropouts.Count
-                ? shareWithBuilding.NeededResources
-                : _lumberjackBotStorage.ResourceDropouts.Count;
-            
             _isSharing = true;
+            int dropoutsCount = _lumberjackBotStorage.ResourceDropouts.Count;
             
-            for (int index = 0; index < resourcesCount; index++)
+            for (int index = 0; index < dropoutsCount; index++)
             {
                 DropoutResource resource = _lumberjackBotStorage.ResourceDropouts.Pop();
 

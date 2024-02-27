@@ -67,6 +67,9 @@ namespace Gameplay.Resource
         public void StartMining() => 
             CurrentState = ResourceSourceState.BeingMined;
 
+        public void LeaveMining() => 
+            CurrentState = ResourceSourceState.Untouched;
+
         public bool CanBeMinedByBotWithType(ResourceType botTargetResourceType) =>
             (Type == ResourceType.Wood 
                 && botTargetResourceType == ResourceType.Wood) 

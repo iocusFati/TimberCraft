@@ -11,13 +11,15 @@ using Zenject;
 
 namespace Gameplay.Buildings
 {
-    [RequireComponent(typeof(UniqueId))]
     public abstract class Building : SerializedMonoBehaviour, IResourceBuildingReceivable
     {
         [Header("Main building")] 
-        [SerializeField] private bool _isConstructedByDefault;
         
         [SerializeField] private Transform _receiveResourceTransform;
+        [SerializeField] private bool _useServiceGuid = true;
+        [SerializeField] private bool _resourceCounterNeeded;
+        
+        [ShowIf("_resourceCounterNeeded")]
         [SerializeField] private ResourceCounter _resourceCounter;
         [SerializeField] private ResourceType _constructionResourceType;
         [OdinSerialize] private List<(GameObject Stage, int ResourceQuantity)> _constructionStagesAndResources;
@@ -39,9 +41,21 @@ namespace Gameplay.Buildings
         {
             _saveLoadService = saveLoadService;
             
-            string id = guidService.GetGuidFor(gameObject);
+            string id = GetID(guidService);
             
             BuildingConstruction = new BuildingConstruction(id, _constructionStagesAndResources, _resourceCounter);
+        }
+
+        private string GetID(IGuidService guidService)
+        {
+            if (_useServiceGuid)
+            {
+                return guidService.GetGuidFor(gameObject);
+            }
+            else
+            {
+                return GetComponent<UniqueId>().Id;
+            }
         }
 
         private void Start()

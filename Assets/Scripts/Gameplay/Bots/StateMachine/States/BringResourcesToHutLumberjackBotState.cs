@@ -3,6 +3,7 @@ using Gameplay.Locations;
 using Gameplay.Player.Animation;
 using Infrastructure.States.Interfaces;
 using Pathfinding;
+using UnityEngine;
 
 namespace Gameplay.Bots.StateMachine.States
 {
@@ -29,8 +30,14 @@ namespace Gameplay.Bots.StateMachine.States
 
         public void Enter()
         {
+            if (_aiPath.hasPath)
+            {
+                _aiPath.SetPath(null);
+                Debug.Log("Has path");
+            }
+
             _aiPath.destination = _hut.SpawnBotsTransform.position;
-                    
+
             _lumberjackAnimator.Run();
 
             _aiPath.OnTargetWasReached += OnHutReached;
@@ -42,7 +49,6 @@ namespace Gameplay.Bots.StateMachine.States
             _lumberjackBotStorageResourceShare.ShareAllResources(_hut);
             
             _botStateMachine.Enter<GoToResourceSourceLumberjackBotState>();
-            
             _aiPath.OnTargetWasReached -= OnHutReached;
         }
 

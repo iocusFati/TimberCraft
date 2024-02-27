@@ -26,14 +26,13 @@ namespace Gameplay.Bots.StateMachine.States
             _resourceSource = resourceSource;
             
             _resourceSource.OnResourceMined += OnResourceMined;
-            _lumberjackBotStorage.OnStorageFull += ReturnToHut;  
 
             _lumberjackAnimator.Idle();
         }
 
         public void Exit()
         {
-            
+            _resourceSource.OnResourceMined -= OnResourceMined;
         }
 
         private void OnResourceMined(ResourceSource resourceSource)
@@ -41,13 +40,7 @@ namespace Gameplay.Bots.StateMachine.States
             if (!_lumberjackBotStorage.IsFull)
                 _botStateMachine.Enter<GoToResourceSourceLumberjackBotState>();
             else
-                ReturnToHut();
-            
-            _lumberjackBotStorage.OnStorageFull -= ReturnToHut;
-            _resourceSource.OnResourceMined -= OnResourceMined;
+                _botStateMachine.Enter<BringResourcesToHutLumberjackBotState>();
         }
-
-        private void ReturnToHut() => 
-            _botStateMachine.Enter<BringResourcesToHutLumberjackBotState>();
     }
 }

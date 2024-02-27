@@ -15,6 +15,7 @@ namespace Gameplay.Buildings
         private readonly ResourceCounter _buildingResourceCounter;
 
         private int _currentStageIndex;
+        private readonly bool _shouldSetCounter;
 
         private readonly List<(GameObject Stage, int ResourceQuantity)> _stagesAndResourcesNeeded;
 
@@ -30,10 +31,10 @@ namespace Gameplay.Buildings
             _id = id;
             _stagesAndResourcesNeeded = stagesAndResourcesNeeded;
             _buildingResourceCounter = buildingResourceCounter;
+            _shouldSetCounter = _buildingResourceCounter is not null;
             
             CurrentlyNeededResourceQuantity = _maxNeededResourceQuantity 
                 = stagesAndResourcesNeeded[^1].ResourceQuantity;
-
         }
 
         public void OnProgressCouldNotBeLoaded()
@@ -57,7 +58,7 @@ namespace Gameplay.Buildings
 
             if (IsConstructed()) 
                 FinishConstruction();
-            
+
             SetCurrentResourcesQuantityText();
         }
 
@@ -72,11 +73,13 @@ namespace Gameplay.Buildings
 
         public void BuildWith(int resourceQuantity, Action onBuilt)
         {
-            if (!_buildingResourceCounter.CanScale)
+            if (_shouldSetCounter && !_buildingResourceCounter.CanScale)
                 return;
             
             CurrentlyNeededResourceQuantity -= resourceQuantity;
-            _buildingResourceCounter.SetCountWith(CurrentlyNeededResourceQuantity);
+            
+            if (_shouldSetCounter) 
+                _buildingResourceCounter.SetCountWith(CurrentlyNeededResourceQuantity);
 
             if (IndexIsCorrect(_currentStageIndex + 1))
             {
@@ -109,7 +112,8 @@ namespace Gameplay.Buildings
 
         private void FinishConstruction()
         {
-            _buildingResourceCounter.Deactivate();
+            if (_shouldSetCounter) 
+                _buildingResourceCounter.Deactivate();
 
             IsBuilt = true;
         }
@@ -132,8 +136,11 @@ namespace Gameplay.Buildings
             return alreadySpentResources >= _stagesAndResourcesNeeded[index].ResourceQuantity;
         }
 
-        private void SetCurrentResourcesQuantityText() => 
-            _buildingResourceCounter.SetText(CurrentlyNeededResourceQuantity.ToString());
+        private void SetCurrentResourcesQuantityText()
+        {
+            if (_shouldSetCounter) 
+                _buildingResourceCounter.SetText(CurrentlyNeededResourceQuantity.ToString());
+        }
 
         private void DeactivateAllStages()
         {

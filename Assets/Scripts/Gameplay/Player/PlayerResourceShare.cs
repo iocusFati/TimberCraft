@@ -47,34 +47,47 @@ namespace Gameplay.Player
 
         public void ShareForConstructionWith(IResourceBuildingReceivable receivable)
         {
-            if (!_canShare)
+            if (!_canShare || receivable.NeededResources <= 0)
                 return;
             
             ResourceType resourceType = receivable.ConstructionResourceType;
 
-            if (!_gameResourceStorage.TryGiveResource(resourceType, _resourcesInOneDropout))
+            if (!TryShareResourceForConstruction(receivable, resourceType))
                 return;
-
-            DropoutResource resource = _dropoutsPool[resourceType].Get();
-            resource.transform.position = _resourcesSpawnTransform.position;
             
-            receivable.ReceiveResource(_resourcesInOneDropout);
-
-            _currentAnimationDirection = (PositivityEnum)((int)_currentAnimationDirection * -1);
+            AnimateShare(receivable, resourceType);
             
-            resource.PlayShareAnimationTo(receivable.ReceiveResourceTransform.position, _currentAnimationDirection,
-                OnResourceDelivered);
-
-            // resource.transform
-            //     .DOMove(receivable.ReceiveResourceTransform.position, _deliverResourceDuration)
-            //     .OnComplete(() => OnResourceDelivered(resource, receivable));
-
             _coroutineRunner.StartCoroutine(WaitForCooldown());
         }
 
         private void OnResourceDelivered(DropoutResource resource)
         {
             resource.Release();
+        }
+
+        private void AnimateShare(IResourceBuildingReceivable receivable, ResourceType resourceType)
+        {
+            DropoutResource resource = _dropoutsPool[resourceType].Get();
+            resource.transform.position = _resourcesSpawnTransform.position;
+
+            _currentAnimationDirection = (PositivityEnum)((int)_currentAnimationDirection * -1);
+            
+            resource.PlayShareAnimationTo(receivable.ReceiveResourceTransform.position, _currentAnimationDirection,
+                OnResourceDelivered);
+        }
+
+        private bool TryShareResourceForConstruction(IResourceBuildingReceivable receivable, ResourceType resourceType)
+        {
+            int resourceShareQuantity = receivable.NeededResources < _resourcesInOneDropout 
+                ? receivable.NeededResources
+                : _resourcesInOneDropout;
+
+            if (!_gameResourceStorage.TryGiveResource(resourceType, resourceShareQuantity))
+                return false;
+            
+            receivable.ReceiveResource(resourceShareQuantity);
+
+            return true;
         }
 
         private IEnumerator WaitForCooldown()

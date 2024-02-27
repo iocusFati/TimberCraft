@@ -274,6 +274,7 @@
      <Compile Include="Assets\Doozy\Integrations\Playmaker\Actions\DoozyUI\ActivateLoadedScenes.cs" />
      <Compile Include="Assets\Doozy\Engine\Progress\Events\ProgressEvent.cs" />
      <Compile Include="Assets\Doozy\Engine\Extensions\RectExtensions.cs" />
+     <Compile Include="Assets\Scripts\Gameplay\Buildings\DecorationBuilding.cs" />
      <Compile Include="Assets\Doozy\Engine\UI\Animation\AnimationClasses.cs" />
      <Compile Include="Assets\Doozy\Engine\UI\UIToggle\UIToggleEvent.cs" />
      <Compile Include="Assets\Doozy\Engine\Themes\Targets\ColorTargetRawImage.cs" />
