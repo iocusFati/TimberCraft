@@ -14,6 +14,8 @@ namespace Gameplay.Resource
     {
         [Header("Feedbacks")]
         public MMF_Player FeedbackPlayer;
+        [SerializeField] private MMF_Player _shareFeedbackPlayer;
+        [SerializeField] private string _shareFeedbackPositionName;
 
         [Header("Randomization")]
         [SerializeField, HorizontalGroup("Randomization")] 
@@ -38,6 +40,7 @@ namespace Gameplay.Resource
         private Vector3 _initialScale;
 
         private Release _release;
+        private MMF_Position _shareAnimationFeedback;
 
         public bool IsCollected { get; private set; }
         public int ResourceValue { get; set; }
@@ -52,6 +55,8 @@ namespace Gameplay.Resource
         {
             _modelInitialScale = _model.localScale;
             _initialScale = transform.localScale;
+
+            _shareAnimationFeedback = _shareFeedbackPlayer.GetFeedbackOfType<MMF_Position>(_shareFeedbackPositionName);
         }
 
         public void SetReleaseDelegate(Release release) => 
@@ -84,6 +89,17 @@ namespace Gameplay.Resource
             GetCollectedTo(to);
             transform.DOScale(Vector3.one, _collectDuration);
             transform.DOLocalRotate(Vector3.zero, _collectDuration);
+        }
+
+        public void PlayShareAnimationTo(Vector3 target,
+            PositivityEnum animationDirection,
+            Action<DropoutResource> onResourceDelivered)
+        {
+            Destination.position = target;
+            _shareAnimationFeedback.AnimationDirectionX = animationDirection;
+            
+            _shareFeedbackPlayer.PlayFeedbacks();
+            _shareFeedbackPlayer.Events.OnComplete.AddListener(() => onResourceDelivered.Invoke(this));
         }
 
         private void GetCollectedTo(Transform to, Action onComplete = null)

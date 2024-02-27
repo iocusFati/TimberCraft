@@ -371,6 +371,7 @@
      <Compile Include="Assets\Doozy\Engine\Themes\Targets\FontTargetText.cs" />
      <Compile Include="Assets\Doozy\Engine\Extensions\ClassUtils.cs" />
      <Compile Include="Assets\Scripts\Infrastructure\States\LoadLevelState.cs" />
+     <Compile Include="Assets\Scripts\Gameplay\Player\ObstacleFade\FadeObscurePlayerObjects.cs" />
      <Compile Include="Assets\Doozy\Engine\UI\Animation\UIAnimatorConstants.cs" />
      <Compile Include="Assets\Doozy\Engine\Progress\Progressor.cs" />
      <Compile Include="Assets\Doozy\Engine\UI\Connections\WeightedConnection.cs" />
@@ -455,7 +456,6 @@
      <Compile Include="Assets\Scripts\Utils\Constants.cs" />
      <Compile Include="Assets\Scripts\Infrastructure\Services\Input\IInputService.cs" />
      <Compile Include="Assets\Doozy\Engine\Progress\ProgressTargets\ProgressTargetImage.cs" />
-     <Compile Include="Assets\Scripts\Gameplay\Player\ObstacleFade\FadeObscurePlayerObjects.cs" />
      <Reference Include="UnityEngine">
      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.25f1\Editor\Data\PlaybackEngines\AndroidPlayer\Variations\mono\Managed\UnityEngine.dll</HintPath>
      </Reference>

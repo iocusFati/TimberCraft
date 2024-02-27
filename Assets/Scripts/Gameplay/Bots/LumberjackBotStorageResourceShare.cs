@@ -1,11 +1,11 @@
 ﻿using System.Collections;
-using DG.Tweening;
 using Gameplay.Buildings;
 using Gameplay.Lumberjack;
 using Gameplay.Resource;
 using Gameplay.Resource.ResourceStorage;
 using Infrastructure;
 using Infrastructure.StaticData.ResourcesData;
+using MoreMountains.Feedbacks;
 using UnityEngine;
 
 namespace Gameplay.Bots
@@ -20,9 +20,12 @@ namespace Gameplay.Bots
         private readonly float _timeGapBetweenResourcesDelivery;
         
         private bool _isSharing;
+        private PositivityEnum _currentAnimationDirection = PositivityEnum.Negative;
 
-        public LumberjackBotStorageResourceShare(LumberjackBotStorage lumberjackBotStorage, ICoroutineRunner coroutineRunner,
-            ResourcesConfig resourcesConfig, IGameResourceStorage gameResourceStorage)
+        public LumberjackBotStorageResourceShare(LumberjackBotStorage lumberjackBotStorage,
+            ICoroutineRunner coroutineRunner,
+            ResourcesConfig resourcesConfig, 
+            IGameResourceStorage gameResourceStorage)
         {
             _lumberjackBotStorage = lumberjackBotStorage;
             _coroutineRunner = coroutineRunner;
@@ -48,16 +51,20 @@ namespace Gameplay.Bots
 
         private IEnumerator ShareResourcesAnimation(IResourceBuildingReceivable shareWithBuilding)
         {
-            int resourcesCount = _lumberjackBotStorage.ResourceDropouts.Count;
+            int resourcesCount = shareWithBuilding.NeededResources < _lumberjackBotStorage.ResourceDropouts.Count
+                ? shareWithBuilding.NeededResources
+                : _lumberjackBotStorage.ResourceDropouts.Count;
+            
             _isSharing = true;
             
             for (int index = 0; index < resourcesCount; index++)
             {
                 DropoutResource resource = _lumberjackBotStorage.ResourceDropouts.Pop();
 
-                resource.transform
-                    .DOMove(shareWithBuilding.ReceiveResourceTransform.position, _deliverResourceDuration)
-                    .OnComplete(() => OnResourceDelivered(resource));
+                _currentAnimationDirection = (PositivityEnum)((int)_currentAnimationDirection * -1);
+
+                resource.PlayShareAnimationTo(
+                    shareWithBuilding.ReceiveResourceTransform.position, _currentAnimationDirection, OnResourceDelivered);
 
                 yield return new WaitForSeconds(_timeGapBetweenResourcesDelivery);
             }

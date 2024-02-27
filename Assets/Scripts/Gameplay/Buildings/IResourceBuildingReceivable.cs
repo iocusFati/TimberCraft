@@ -7,7 +7,8 @@ namespace Gameplay.Buildings
     {
         Transform ReceiveResourceTransform { get; }
         ResourceType ConstructionResourceType { get; }
-        
+        int NeededResources { get; }
+
         void ReceiveResource(int resourceQuantity);
     }
 }

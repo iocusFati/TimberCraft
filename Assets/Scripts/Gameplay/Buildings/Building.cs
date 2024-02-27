@@ -17,13 +17,9 @@ namespace Gameplay.Buildings
         [Header("Main building")] 
         [SerializeField] private bool _isConstructedByDefault;
         
-        [HideIf("_isConstructedByDefault")]
         [SerializeField] private Transform _receiveResourceTransform;
-        [HideIf("_isConstructedByDefault")]
         [SerializeField] private ResourceCounter _resourceCounter;
-        [HideIf("_isConstructedByDefault")]
         [SerializeField] private ResourceType _constructionResourceType;
-        [HideIf("_isConstructedByDefault")]
         [OdinSerialize] private List<(GameObject Stage, int ResourceQuantity)> _constructionStagesAndResources;
 
         protected ISaveLoadService _saveLoadService;
@@ -31,7 +27,9 @@ namespace Gameplay.Buildings
         private BuildingConstruction BuildingConstruction { get; set; }
         public Transform ReceiveResourceTransform => _receiveResourceTransform;
         public ResourceType ConstructionResourceType => _constructionResourceType;
+        
         public bool IsBuilt => BuildingConstruction.IsBuilt;
+        public int NeededResources => BuildingConstruction.CurrentlyNeededResourceQuantity;
 
         public abstract void InteractWithPlayer();
         public abstract void StopInteractingWithPlayer();

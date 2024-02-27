@@ -1,5 +1,4 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using MoreMountains.Tools;
 using UnityEngine;
 using UnityEngine.Serialization;
@@ -80,8 +79,12 @@ namespace MoreMountains.Feedbacks
 		public float RemapCurveOneAlt = 1f;
 		/// if this is true, the x position will be animated
 		[Tooltip("if this is true, the x position will be animated")]
-		[MMFEnumCondition("Mode", (int)Modes.AlongCurve)]
+		[MMFEnumCondition("Mode", (int)Modes.AlongCurve, (int)Modes.ToDestinationAlongCurve)]
 		public bool AnimateX;
+		// go to right, left, or middle
+		[Tooltip("go to right, left, or middle")]
+		[MMFCondition("AnimateX", true)]
+		public PositivityEnum AnimationDirectionX;
 		/// the acceleration of the movement
 		[Tooltip("the acceleration of the movement")]
 		[MMFCondition("AnimateX", true)]
@@ -99,7 +102,7 @@ namespace MoreMountains.Feedbacks
 		public MMTweenType AnimatePositionTweenY = new MMTweenType(new AnimationCurve(new Keyframe(0, 0), new Keyframe(0.3f, 1f), new Keyframe(0.6f, -1f), new Keyframe(1, 0f)));
 		/// if this is true, the z position will be animated
 		[Tooltip("if this is true, the z position will be animated")]
-		[MMFEnumCondition("Mode", (int)Modes.AlongCurve)]
+		[MMFEnumCondition("Mode", (int)Modes.AlongCurve, (int)Modes.ToDestinationAlongCurve)]
 		public bool AnimateZ;
 		/// the acceleration of the movement
 		[Tooltip("the acceleration of the movement")]
@@ -316,18 +319,43 @@ namespace MoreMountains.Feedbacks
 		private IEnumerator ToDestinationAlongCurve(Vector3 start, Vector3 finish)
 		{
 			var timePast = 0f;
-            
+
+			float randomMultiplier = ComputedRandomMultiplier;
 			while (timePast < FeedbackDuration)
 			{
 				timePast += Time.deltaTime;
 				
-				float linearTime = timePast / FeedbackDuration; //0 to 1 time
-				float heightTime = AnimatePositionTweenY.Evaluate(linearTime); //value from curve
+				float linearTime = timePast / FeedbackDuration;
 
-				var height = Mathf.Lerp(0f, MaxHeight, heightTime); //clamped between the max height and 0
+				float xLerp = 0;
+				if (AnimateX)
+				{
+					float timeX = AnimatePositionTweenX.Evaluate(linearTime);
+					// xLerp = Mathf.Lerp(0f, fin, timeX);
 
+					xLerp = timeX * (int)AnimationDirectionX;
+				}
+
+				float height = 0;
+				if (AnimateY)
+				{
+					height = AnimatePositionTweenY.Evaluate(linearTime);
+					// height = Mathf.Lerp(0f, MaxHeight, heightTime);
+				}
+
+				float zLerp = 0;
+				if (AnimateZ)
+				{
+					zLerp = AnimatePositionTweenZ.Evaluate(linearTime);
+					// zLerp = Mathf.Lerp(0f, MaxHeight, timeZ);
+				}
+
+
+				float randomOutputMultiplier = RandomizeOutput ? randomMultiplier : 1;
+				
 				AnimatePositionTarget.transform.position =
-					Vector3.Lerp(start, finish, linearTime) + new Vector3(0f, height, 0f); //adding values on y axis
+					Vector3.Lerp(start, finish, linearTime) + 
+					new Vector3(xLerp, height, zLerp) * randomOutputMultiplier;
 
 				yield return null;
 			}
@@ -533,5 +561,12 @@ namespace MoreMountains.Feedbacks
 			MMFeedbacksHelpers.MigrateCurve(AnimatePositionCurveY, AnimatePositionTweenY, Owner);
 			MMFeedbacksHelpers.MigrateCurve(AnimatePositionCurveZ, AnimatePositionTweenZ, Owner);
 		}
+	}
+
+	public enum PositivityEnum
+	{
+		Neutral = 0,
+		Positive = 1,
+		Negative = -1
 	}
 }

@@ -1,13 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using DG.Tweening;
-using Gameplay.Bots.StateMachine.States;
 using Gameplay.Buildings;
 using Gameplay.Resource;
 using Gameplay.Resource.ResourceStorage;
 using Infrastructure;
 using Infrastructure.Services.Pool;
 using Infrastructure.StaticData.LumberjackData;
+using MoreMountains.Feedbacks;
 using UnityEngine;
 
 namespace Gameplay.Player
@@ -24,7 +23,8 @@ namespace Gameplay.Player
         private readonly Transform _resourcesSpawnTransform;
 
         private bool _canShare = true;
-        
+        private PositivityEnum _currentAnimationDirection = PositivityEnum.Negative;
+
         private readonly Dictionary<ResourceType, DropoutPool> _dropoutsPool;
 
 
@@ -59,15 +59,20 @@ namespace Gameplay.Player
             resource.transform.position = _resourcesSpawnTransform.position;
             
             receivable.ReceiveResource(_resourcesInOneDropout);
+
+            _currentAnimationDirection = (PositivityEnum)((int)_currentAnimationDirection * -1);
             
-            resource.transform
-                .DOMove(receivable.ReceiveResourceTransform.position, _deliverResourceDuration)
-                .OnComplete(() => OnResourceDelivered(resource, receivable));
+            resource.PlayShareAnimationTo(receivable.ReceiveResourceTransform.position, _currentAnimationDirection,
+                OnResourceDelivered);
+
+            // resource.transform
+            //     .DOMove(receivable.ReceiveResourceTransform.position, _deliverResourceDuration)
+            //     .OnComplete(() => OnResourceDelivered(resource, receivable));
 
             _coroutineRunner.StartCoroutine(WaitForCooldown());
         }
 
-        private void OnResourceDelivered(DropoutResource resource, IResourceBuildingReceivable receivable)
+        private void OnResourceDelivered(DropoutResource resource)
         {
             resource.Release();
         }

@@ -13,13 +13,13 @@ namespace Gameplay.Buildings
 
         private readonly int _maxNeededResourceQuantity;
         private readonly ResourceCounter _buildingResourceCounter;
-        
-        private int _currentlyNeededResourceQuantity;
+
         private int _currentStageIndex;
-        
+
         private readonly List<(GameObject Stage, int ResourceQuantity)> _stagesAndResourcesNeeded;
-        
+
         public bool IsBuilt { get; private set; }
+        public int CurrentlyNeededResourceQuantity { get; private set; }
 
 
         public BuildingConstruction(
@@ -31,7 +31,7 @@ namespace Gameplay.Buildings
             _stagesAndResourcesNeeded = stagesAndResourcesNeeded;
             _buildingResourceCounter = buildingResourceCounter;
             
-            _currentlyNeededResourceQuantity = _maxNeededResourceQuantity 
+            CurrentlyNeededResourceQuantity = _maxNeededResourceQuantity 
                 = stagesAndResourcesNeeded[^1].ResourceQuantity;
 
         }
@@ -47,7 +47,7 @@ namespace Gameplay.Buildings
 
         public void LoadProgress(PlayerProgress progress)
         {
-            _currentlyNeededResourceQuantity = 
+            CurrentlyNeededResourceQuantity = 
                 progress.BuildingsSaveData[_id].CurrentlyConstructionNeededResourceNumber;
 
             _currentStageIndex = GetCurrentStageIndex();
@@ -67,7 +67,7 @@ namespace Gameplay.Buildings
 
             progress.TryAddBuildingSaveDataPair(_id, new BuildingSaveData());
             
-            buildingsSaveData[_id].CurrentlyConstructionNeededResourceNumber = _currentlyNeededResourceQuantity;
+            buildingsSaveData[_id].CurrentlyConstructionNeededResourceNumber = CurrentlyNeededResourceQuantity;
         }
 
         public void BuildWith(int resourceQuantity, Action onBuilt)
@@ -75,15 +75,15 @@ namespace Gameplay.Buildings
             if (!_buildingResourceCounter.CanScale)
                 return;
             
-            _currentlyNeededResourceQuantity -= resourceQuantity;
-            _buildingResourceCounter.SetCountWith(_currentlyNeededResourceQuantity);
+            CurrentlyNeededResourceQuantity -= resourceQuantity;
+            _buildingResourceCounter.SetCountWith(CurrentlyNeededResourceQuantity);
 
             if (IndexIsCorrect(_currentStageIndex + 1))
             {
                 LevelUp();
             }
 
-            if (_currentlyNeededResourceQuantity <= 0)
+            if (CurrentlyNeededResourceQuantity <= 0)
             {
                 FinishConstruction();
                 onBuilt.Invoke();
@@ -127,13 +127,13 @@ namespace Gameplay.Buildings
 
         private bool IndexIsCorrect(int index)
         {
-            int alreadySpentResources = _maxNeededResourceQuantity - _currentlyNeededResourceQuantity;
+            int alreadySpentResources = _maxNeededResourceQuantity - CurrentlyNeededResourceQuantity;
             
             return alreadySpentResources >= _stagesAndResourcesNeeded[index].ResourceQuantity;
         }
 
         private void SetCurrentResourcesQuantityText() => 
-            _buildingResourceCounter.SetText(_currentlyNeededResourceQuantity.ToString());
+            _buildingResourceCounter.SetText(CurrentlyNeededResourceQuantity.ToString());
 
         private void DeactivateAllStages()
         {
