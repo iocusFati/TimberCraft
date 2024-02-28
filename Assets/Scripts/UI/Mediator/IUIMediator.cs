@@ -7,5 +7,6 @@ namespace UI.Mediator
         void SwitchMinionHutPopUp(MinionHut minionHutKey, bool show);
         void SwitchSellResourcesPopUp(ResourcesShop shopKey, bool show);
         void SwitchMainHousePopUp(bool show);
+        void DisableJoystick(bool disable);
     }
 }

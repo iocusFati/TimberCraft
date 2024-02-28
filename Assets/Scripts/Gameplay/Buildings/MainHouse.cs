@@ -43,12 +43,14 @@ namespace Gameplay.Buildings
         public override void InteractWithPlayer()
         {
             _uiMediator.SwitchMainHousePopUp(true);
+            _uiMediator.DisableJoystick(true);
             _gameCameraController.SwitchToTopViewCamera();
         }
 
         public override void StopInteractingWithPlayer()
         {
             _uiMediator.SwitchMainHousePopUp(false);
+            _uiMediator.DisableJoystick(false);
             _gameCameraController.SwitchToPlayerCamera();
         }
 

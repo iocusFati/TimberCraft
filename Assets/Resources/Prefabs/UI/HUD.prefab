@@ -699,6 +699,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _uiAppearAnimation: 0
   _uiDisappearAnimation: 0
+  _joystick: {fileID: 7752534170968156910}
 --- !u!1 &5357925185000911587
 GameObject:
   m_ObjectHideFlags: 0
@@ -1402,3 +1403,14 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 224977699150327530, guid: e0815e227ed46e445b99930271e8942c, type: 3}
   m_PrefabInstance: {fileID: 7638632957451808658}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &7752534170968156910 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114675716580427132, guid: e0815e227ed46e445b99930271e8942c, type: 3}
+  m_PrefabInstance: {fileID: 7638632957451808658}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

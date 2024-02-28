@@ -57,8 +57,11 @@ namespace Infrastructure.Services.SaveLoad
                 return;
             }
 
-            foreach (var reader in _progressReaders)
+            for (var index = 0; index < _progressReaders.Count; index++)
+            {
+                var reader = _progressReaders[index];
                 reader.LoadProgress(_persistentProgress.Progress);
+            }
         }
 
         public void Register(ISavedProgressReader reader)
