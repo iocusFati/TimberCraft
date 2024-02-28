@@ -104,6 +104,7 @@
      <Compile Include="Assets\Doozy\Editor\GUI\Scripts\DGUI\Property.cs" />
      <Compile Include="Assets\Doozy\Editor\Soundy\SoundyAudioPlayer.cs" />
      <Compile Include="Assets\Doozy\Editor\GUI\Scripts\DGUI\FadeOut.cs" />
+     <Compile Include="Assets\StylizedWater\Scripts\Editor\SWS_ASEDepthNode.cs" />
      <Compile Include="Assets\Doozy\Editor\Enums\Size.cs" />
      <Compile Include="Assets\Doozy\Editor\UI\Nodes\Editors\TimeScaleNodeEditor.cs" />
      <Compile Include="Assets\Doozy\Editor\GUI\StyleName.cs" />
@@ -205,6 +206,7 @@
      <Compile Include="Assets\Doozy\Editor\Windows\DoozyWindowDrawViewDrawers.cs" />
      <Compile Include="Assets\Doozy\Editor\Windows\DoozyWindowDrawViewButtons.cs" />
      <Compile Include="Assets\Doozy\Editor\Themes\SpriteTargetSelectableEditor.cs" />
+     <Compile Include="Assets\StylizedWater\Scripts\Editor\StylizedWaterCore.cs" />
      <Compile Include="Assets\Doozy\Editor\Enums\Skin.cs" />
      <Compile Include="Assets\Doozy\Editor\GUI\Scripts\DGUI\Textures.cs" />
      <Compile Include="Assets\Doozy\Editor\Enums\TabPosition.cs" />
@@ -257,6 +259,7 @@
      <Compile Include="Assets\Doozy\Editor\Nody\NodeGUI\SubGraphNodeGUI.cs" />
      <Compile Include="Assets\Doozy\Editor\UI\Input\KeyToGameEventEditor.cs" />
      <Compile Include="Assets\Doozy\Editor\GUI\Scripts\DGUI\Button.cs" />
+     <Compile Include="Assets\StylizedWater\Scripts\Editor\StylizedWaterInspector.cs" />
      <Compile Include="Assets\Doozy\Editor\UI\Nodes\Editors\BackButtonNodeEditor.cs" />
      <Compile Include="Assets\Doozy\Editor\Themes\SpriteTargetUnityEventEditor.cs" />
      <Compile Include="Assets\Doozy\Editor\GUI\Scripts\DGUI\Background.cs" />
@@ -305,6 +308,7 @@
      <Folder Include="Assets\Doozy\Editor" />
      <Folder Include="Assets\Doozy\Editor\Touchy" />
      <Folder Include="Assets\Doozy\Editor\Nody\Images\NodyToolbarHeader\Dark" />
+     <Folder Include="Assets\StylizedWater\Scripts\Editor" />
      <Folder Include="Assets\Other\KriptoFX\MuzzleFlashes\Shaders\Editor" />
      <Folder Include="Assets\Doozy\Editor\GUI" />
      <Folder Include="Assets\Doozy\Editor\Progress" />
@@ -347,8 +351,10 @@
      <Folder Include="Assets\Doozy\Editor\UI\UIToggle" />
      <Folder Include="Assets\Doozy\Editor\Nody\Skins" />
      <Folder Include="Assets\Doozy\Editor\Nody\Images" />
+     <None Include="Assets\StylizedWater\Scripts\Editor\SWS_NormalMapRenderer.shader" />
      <Folder Include="Assets\Doozy\Editor\Nody\Utils" />
      <Folder Include="Assets\Doozy\Editor\Nody\GUI\Scripts" />
+     <None Include="Assets\StylizedWater\Scripts\Editor\SWS_ShaderMapRenderer.shader" />
      <None Include="Assets\Doozy\Editor\Nody\Shaders\LineDraw.shader" />
      <Folder Include="Assets\Doozy\Editor\Images\CaretFade" />
      <Folder Include="Assets\Doozy\Editor\Images\CaretRotate" />

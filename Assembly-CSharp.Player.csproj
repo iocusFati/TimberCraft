@@ -82,6 +82,7 @@
      <Compile Include="Assets\Scripts\Infrastructure\StatesFactory.cs" />
      <Compile Include="Assets\Scripts\Infrastructure\StaticData\BuildingsData\MinionHutUpgradeData.cs" />
      <Compile Include="Assets\Doozy\Engine\Layouts\RadialLayout.cs" />
+     <Compile Include="Assets\StylizedWater\Scripts\StylizedWaterShadowCaster.cs" />
      <Compile Include="Assets\Doozy\Engine\Touchy\Enums\GestureType.cs" />
      <Compile Include="Assets\Doozy\Integrations\Playmaker\Actions\DoozyUI\DisableBackButton.cs" />
      <Compile Include="Assets\Scripts\UI\Buttons\BuyButtonDisabler.cs" />
@@ -137,6 +138,7 @@
      <Compile Include="Assets\Doozy\Engine\Extensions\ColorExtensions.cs" />
      <Compile Include="Assets\Doozy\Engine\Soundy\Enums\SoundSource.cs" />
      <Compile Include="Assets\Doozy\Engine\UI\Enums\DynamicSorting.cs" />
+     <Compile Include="Assets\StylizedWater\Scripts\StylizedWaterUtilities.cs" />
      <Compile Include="Assets\Doozy\Examples\Scripts\E11PopupScriptThree.cs" />
      <Compile Include="Assets\Scripts\Infrastructure\Installers\BootstrapInstaller.cs" />
      <Compile Include="Assets\Doozy\Engine\Utils\UILanguagePack.cs" />
@@ -231,6 +233,7 @@
      <Compile Include="Assets\Scripts\Infrastructure\States\Interfaces\IStateMachine.cs" />
      <Compile Include="Assets\Doozy\Engine\UI\Enums\TargetLabel.cs" />
      <Compile Include="Assets\Doozy\Examples\Scripts\ExampleProgressTargetAudioMixer.cs" />
+     <Compile Include="Assets\StylizedWater\Scripts\EnableDepthBuffer.cs" />
      <Compile Include="Assets\Scripts\Gameplay\Resource\TreeFolder\EditorTreeCreator.cs" />
      <Compile Include="Assets\Doozy\Engine\UI\Animation\Enums\AnimationAction.cs" />
      <Compile Include="Assets\Doozy\Engine\Themes\Targets\TextureTargetRawImage.cs" />
@@ -239,6 +242,7 @@
      <Compile Include="Assets\Doozy\Engine\UI\Nodes\ThemeNode.cs" />
      <Compile Include="Assets\Scripts\Gameplay\Cameras\IGameCameraController.cs" />
      <Compile Include="Assets\Doozy\Engine\Themes\Targets\SpriteTargetSpriteRenderer.cs" />
+     <Compile Include="Assets\StylizedWater\Scripts\StylizedWaterBlur.cs" />
      <Compile Include="Assets\Doozy\Integrations\Playmaker\Actions\Soundy\PlayAudioClip.cs" />
      <Compile Include="Assets\Doozy\Engine\SceneManagement\SceneDirector.cs" />
      <Compile Include="Assets\Doozy\Engine\UI\Animation\UIAnimationDatabase.cs" />
@@ -305,7 +309,9 @@
      <Compile Include="Assets\Doozy\Engine\Soundy\AudioData.cs" />
      <Compile Include="Assets\Scripts\Gameplay\Buildings\Building.cs" />
      <Compile Include="Assets\Doozy\Engine\Progress\ProgressorGroup.cs" />
+     <Compile Include="Assets\StylizedWater\Scripts\StylizedWaterRenderer.cs" />
      <Compile Include="Assets\Doozy\Integrations\Playmaker\Actions\DoozyUI\LoadScene.cs" />
+     <Compile Include="Assets\StylizedWater\Scripts\StylizedWaterResources.cs" />
      <Compile Include="Assets\Doozy\Engine\Progress\Enums\CompareType.cs" />
      <Compile Include="Assets\Scripts\Infrastructure\StaticData\ResourcesData\ResourcesConfig.cs" />
      <Compile Include="Assets\Other\KriptoFX\MuzzleFlashes\Scripts\FPS_Decal.cs" />
@@ -430,6 +436,7 @@
      <Compile Include="Assets\Doozy\Engine\Touchy\Enums\Swipe.cs" />
      <Compile Include="Assets\Doozy\Engine\Progress\ProgressTargets\ProgressTargetTextMeshPro.cs" />
      <Compile Include="Assets\MeshBaker\Examples\BakeTexturesAtRuntime\BakeTexturesAtRuntime.cs" />
+     <Compile Include="Assets\StylizedWater\Scripts\StylizedWater.cs" />
      <Compile Include="Assets\Scripts\Utils\IntExtensions.cs" />
      <Compile Include="Assets\Scripts\Infrastructure\Services\Pool\PoolService.cs" />
      <Compile Include="Assets\Doozy\Engine\Utils\AssetUtils.cs" />
