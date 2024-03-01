@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4586280528437201}
   - component: {fileID: -4040889225786598761}
-  m_Layer: 8
+  m_Layer: 6
   m_Name: StoneBlock
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -71,7 +71,7 @@ GameObject:
   - component: {fileID: 33983697585737595}
   - component: {fileID: 23331229003798079}
   - component: {fileID: 8112434987701258882}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Model
   m_TagString: ResourceDropout
   m_Icon: {fileID: 0}

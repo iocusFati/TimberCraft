@@ -1410,8 +1410,8 @@ MonoBehaviour:
         Mode: 0
         AnimateScaleTarget: {fileID: 2261017760040351177}
         AnimateScaleDuration: 0.3
-        RemapCurveZero: 1.5
-        RemapCurveOne: 1
+        RemapCurveZero: 1.2
+        RemapCurveOne: 0.7
         Offset: 0
         AnimateX: 1
         AnimateScaleTweenX:

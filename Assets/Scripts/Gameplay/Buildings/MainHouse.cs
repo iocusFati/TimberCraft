@@ -114,7 +114,7 @@ namespace Gameplay.Buildings
         }
 
         private bool DataCountShouldBeEqualToCostCount() => 
-            Resources.Load<MainHouseUpgradeData>(AssetPaths.MainHouseUpgradeData).LevelUpgradeCosts.Count == _upgradeData.Count;
+            Resources.Load<MainHouseUpgradeData>(AssetPaths.MainHouseUpgradeData).LevelUpgradeCosts.Count + 1 == _upgradeData.Count;
     }
 
     [Serializable]

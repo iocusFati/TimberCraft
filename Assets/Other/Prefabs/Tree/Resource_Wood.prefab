@@ -97,7 +97,7 @@ GameObject:
   - component: {fileID: 8831798328151244354}
   - component: {fileID: 8843045952126956581}
   - component: {fileID: 8896233509311323357}
-  m_Layer: 10
+  m_Layer: 6
   m_Name: Resource_Wood
   m_TagString: Resource
   m_Icon: {fileID: 0}
