@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2eb68f57180f40b29be77505f94b5730, type: 3}
   m_Name: MainHouseUpgradeData
   m_EditorClassIdentifier: 
-  _levelUpgradeCosts: 000000000a00000064000000f4010000e803000088130000
+  _levelUpgradeCosts: 0a00000064000000f4010000e803000088130000

@@ -4,9 +4,12 @@ using System.Collections.Generic;
 using System.Linq;
 using Gameplay.Resource.StoneFolder;
 using Infrastructure.Services.Pool;
+using Infrastructure.Services.StaticDataService;
+using Infrastructure.StaticData.ResourcesData;
 using JetBrains.Annotations;
 using MoreMountains.Feedbacks;
 using UnityEngine;
+using Zenject;
 
 namespace Gameplay.Resource
 {
@@ -19,6 +22,7 @@ namespace Gameplay.Resource
 
         protected float _restoreSourceAfter;
         private int _resourcesValue;
+        private ResourcesConfig _resourcesConfig;
 
         protected BasePool<DropoutResource> _logPool;
         protected BasePool<ParticleSystem> _particlePool;
@@ -30,6 +34,12 @@ namespace Gameplay.Resource
         public ResourceType Type { get; private set; }
 
         public event Action<ResourceSource> OnResourceMined;
+
+        [Inject]
+        public void Construct(IStaticDataService staticData)
+        {
+            _resourcesConfig = staticData.ResourcesConfig;
+        }
         
         public void Construct(int resourcesValue)
         {
@@ -78,13 +88,15 @@ namespace Gameplay.Resource
 
         protected virtual void ExtractDropouts()
         {
-            DropoutResource dropout = _logPool.Get();
-            dropout.transform.position = _hitParticleAppearAt.position;
-            dropout.ResourceValue = _resourcesValue;
+            for (int i = 0; i < _resourcesConfig.RandomDropoutsPerExtract; i++)
+            {
+                DropoutResource dropout = _logPool.Get();
+                dropout.transform.position = _hitParticleAppearAt.position;
+                dropout.ResourceValue = _resourcesValue;
 
-
-            dropout.SetTargetPositionFor_MMF_Feedback(transform.position);
-            dropout.FeedbackPlayer.PlayFeedbacks();
+                dropout.SetTargetPositionFor_MMF_Feedback(transform.position);
+                dropout.FeedbackPlayer.PlayFeedbacks();
+            }
         }
 
         protected virtual void PlayHitParticle(Vector3 hitPoint, Transform hitTransform)

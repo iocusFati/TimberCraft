@@ -67,7 +67,7 @@ namespace Gameplay.Buildings
         }
 
         public override int GetCurrentUpgradeCost() => 
-            _upgradeData.LevelUpgrades[_currentLevel - 1].Cost;
+            _upgradeData.LevelUpgrades[_currentLevel].Cost;
 
         protected override void SetLevel(int level)
         {
@@ -80,7 +80,7 @@ namespace Gameplay.Buildings
         {
             MinionHutLevelUpgrade previousUpgradeData = level == 1
                     ? new MinionHutLevelUpgrade()
-                    : GetLevelUpgradeData(level - 1);
+                    : GetLevelUpgradeData(level);
             
             MinionHutLevelUpgrade currentUpgradeData = GetLevelUpgradeData(level);
             

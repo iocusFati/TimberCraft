@@ -2,6 +2,7 @@
 using DG.Tweening;
 using Gameplay.Resource;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 namespace Infrastructure.StaticData.ResourcesData
 {
@@ -13,6 +14,8 @@ namespace Infrastructure.StaticData.ResourcesData
         
         [Header("Dropout")]
         [SerializeField] private float _dropoutCollectDuration;
+        [SerializeField] private int _minDropoutsPerExtract = 3;
+        [SerializeField] private int _maxDropoutsPerExtract = 4;
 
         [Header("Resource sharing")]
         [SerializeField] private float _deliverResourceDuration;
@@ -53,6 +56,7 @@ namespace Infrastructure.StaticData.ResourcesData
         public float SourceAppearDuration => _sourceAppearDuration;
 
         public AnimationCurve SourceAppearCurve => _sourceAppearCurve;
+        public int RandomDropoutsPerExtract => Random.Range(_minDropoutsPerExtract, _maxDropoutsPerExtract); 
 
         public int GetResourceUnitsPerCoin(ResourceType resourceType)
         {

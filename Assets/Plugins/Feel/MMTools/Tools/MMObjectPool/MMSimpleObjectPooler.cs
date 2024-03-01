@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine.SceneManagement;
 
 namespace MoreMountains.Tools
@@ -85,7 +86,10 @@ namespace MoreMountains.Tools
 			// if the pool is empty and can't grow, we return nothing.
 			return null;
 		}
-		
+
+		public override List<GameObject> GetActivePooledObjects() => 
+			_objectPool.PooledGameObjects.Where(pooled => pooled.activeSelf).ToList();
+
 		/// <summary>
 		/// Adds one object of the specified type (in the inspector) to the pool.
 		/// </summary>

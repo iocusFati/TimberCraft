@@ -101,6 +101,10 @@ namespace MoreMountains.Feedbacks
 		[Tooltip("the random max position at which to spawn the text, relative to its intended spawn position")]
 		public Vector3 SpawnOffsetMax = Vector3.zero;
 
+		public float MinSpawnOffsetFromExistingX;
+		public float MinSpawnOffsetFromExistingY;
+		public float MinSpawnOffsetFromExistingZ;
+
 		[MMInspectorGroup("Animate Position", true, 15)] 
         
 		[Header("Movement")]
@@ -242,9 +246,12 @@ namespace MoreMountains.Feedbacks
 		[Tooltip("when getting an intensity multiplier, the value by which to multiply the movement values")]
 		[MMCondition("IntensityImpactsMovement", true)]
 		public float IntensityMovementMultiplier = 1f;
+
+
 		/// whether or not the intensity multiplier should impact scale
 		[Tooltip("whether or not the intensity multiplier should impact scale")]
 		public bool IntensityImpactsScale = false;
+
 		/// when getting an intensity multiplier, the value by which to multiply the scale values
 		[Tooltip("when getting an intensity multiplier, the value by which to multiply the scale values")]
 		[MMCondition("IntensityImpactsScale", true)]
@@ -255,23 +262,26 @@ namespace MoreMountains.Feedbacks
 		/// a random value to display when pressing the TestSpawnOne button
 		[Tooltip("a random value to display when pressing the TestSpawnOne button")]
 		public Vector2Int DebugRandomValue = new Vector2Int(100, 500);
+
 		/// the min and max bounds within which to pick a value to output when pressing the TestSpawnMany button
 		[Tooltip("the min and max bounds within which to pick a value to output when pressing the TestSpawnMany button")]
 		[MMVector("Min", "Max")] 
 		public Vector2 DebugInterval = new Vector2(0.3f, 0.5f);
+
 		/// a button used to test the spawn of one text
 		[Tooltip("a button used to test the spawn of one text")]
 		[MMInspectorButton("TestSpawnOne")]
 		public bool TestSpawnOneBtn;
+
 		/// a button used to start/stop the spawn of texts at regular intervals
 		[Tooltip("a button used to start/stop the spawn of texts at regular intervals")]
 		[MMInspectorButton("TestSpawnMany")]
 		public bool TestSpawnManyBtn;
-        
+
 		protected MMObjectPooler _pooler;
 		protected MMFloatingText _floatingText;
 		protected Coroutine _testSpawnCoroutine;
-        
+
 		protected float _lifetime;
 		protected float _speed;
 		protected Vector3 _spawnOffset;
@@ -390,7 +400,7 @@ namespace MoreMountains.Feedbacks
 		/// <param name="lifetime"></param>
 		/// <param name="forceColor"></param>
 		/// <param name="animateColorGradient"></param>
-		protected virtual void Spawn(string value, Vector3 position, Vector3 direction, float intensity = 1f,
+		public virtual void Spawn(string value, Vector3 position, Vector3 direction, float intensity = 1f,
 			bool forceLifetime = false, float lifetime = 1f, bool forceColor = false, Gradient animateColorGradient = null)
 		{
 			if (!CanSpawn)
@@ -409,7 +419,7 @@ namespace MoreMountains.Feedbacks
 			float scaleMultiplier = IntensityImpactsScale ? intensity * IntensityScaleMultiplier : 1f;
 
 			_lifetime = UnityEngine.Random.Range(Lifetime.x, Lifetime.y) * lifetimeMultiplier;
-			_spawnOffset = MMMaths.RandomVector3(SpawnOffsetMin, SpawnOffsetMax);
+			_spawnOffset = GetSpawnOffset();
 			_animateColor = AnimateColor;
 			_colorGradient = AnimateColorGradient;
 
@@ -458,6 +468,7 @@ namespace MoreMountains.Feedbacks
 				_animateColor, _colorGradient);            
 		}
 
+
 		/// <summary>
 		/// When we get a floating text event on this spawner's Channel, we spawn a new floating text
 		/// </summary>
@@ -480,6 +491,36 @@ namespace MoreMountains.Feedbacks
 
 			UseUnscaledTime = useUnscaledTime;
 			Spawn(value, spawnPosition, direction, intensity, forceLifetime, lifetime, forceColor, animateColorGradient);
+		}
+		
+		private Vector3 GetSpawnOffset()
+		{
+			Vector3 newSpawnPosition = transform.position;
+			Vector3 spawnOffset = MMMaths.RandomVector3(SpawnOffsetMin, SpawnOffsetMax);
+
+			FixOffset();
+
+			return spawnOffset;
+
+			void FixOffset()
+			{
+				var activePooledObjects = _pooler.GetActivePooledObjects();
+				foreach (var pooledObject in activePooledObjects)
+				{
+					float distanceX = Mathf.Abs(pooledObject.transform.position.x - newSpawnPosition.x);
+					float distanceY = Mathf.Abs(pooledObject.transform.position.y - newSpawnPosition.y);
+					float distanceZ = Mathf.Abs(pooledObject.transform.position.z - newSpawnPosition.z);
+					
+					bool trueForX = distanceX >= MinSpawnOffsetFromExistingX;
+					bool trueForY = distanceY >= MinSpawnOffsetFromExistingY;
+					bool trueForZ = distanceZ >= MinSpawnOffsetFromExistingZ;
+
+					if (!trueForY) 
+						spawnOffset += new Vector3(0, MinSpawnOffsetFromExistingY, 0);
+					else if (!trueForX) 
+						spawnOffset += new Vector3(MinSpawnOffsetFromExistingX, 0, 0);
+				}
+			}
 		}
     
 		/// <summary>

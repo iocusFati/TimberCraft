@@ -30,6 +30,8 @@ namespace UI.Buttons
 
         private void Awake()
         {
+            _sellResourceButton = GetComponent<Button>();
+            
             SubscribeToResourceCountChange();
             DisableButtonIfCantBuy(_gameResourceStorage.GetResourceCountOfType(_resourceType));
         }
@@ -60,7 +62,10 @@ namespace UI.Buttons
             SetButtonInteractable(CanBuy(newResourceCount));
         }
 
-        private void SetButtonInteractable(bool interactable) => 
+        private void SetButtonInteractable(bool interactable)
+        {
+            _sellResourceButton.interactable = interactable;
             _buttonBlocker.SetActive(!interactable);
+        }
     }
 }

@@ -79,10 +79,15 @@ namespace Gameplay.Resource
             IsCollected = false;
         }
 
-        public void GetCollectedAndReleasedTo(Transform to)
+        public void GetCollectedAndReleasedTo(Transform to, Action<DropoutResource> OnCollected)
         {
-            transform.DOScale(Vector3.zero, _collectDuration);
-            GetCollectedTo(to, Release);
+            // transform.DOScale(Vector3.zero, _collectDuration);
+            
+            GetCollectedTo(to, () =>
+            {
+                Release();
+                OnCollected.Invoke(this);
+            });
         }
 
         public void GetCollectedAndKeptTo(Transform to)

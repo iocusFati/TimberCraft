@@ -369,8 +369,8 @@ MonoBehaviour:
   FeedbackPlayer: {fileID: 5192432849232208260}
   _shareFeedbackPlayer: {fileID: 1809617090}
   _shareFeedbackPositionName: ReachTargetPosition
-  _minRandomizeDropOffset: 0.45
-  _maxRandomizeDropOffset: 0.6
+  _minRandomizeDropOffset: 1
+  _maxRandomizeDropOffset: 1.5
   _dropToHeight: 0.3
   _baseDistanceToTargetPosition: 2
   Destination: {fileID: 7190668251471397322}

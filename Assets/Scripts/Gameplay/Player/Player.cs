@@ -98,7 +98,7 @@ namespace Gameplay.Player
         {
             base.CollectDropout(dropout);
             
-            dropout.GetCollectedAndReleasedTo(_resourceCollector);
+            dropout.GetCollectedAndReleasedTo(_resourceCollector, OnDropoutCollected);
             _gameResourceStorage.TakeResource(dropout.Type, dropout.ResourceValue);
         }
 

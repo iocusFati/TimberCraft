@@ -90,7 +90,7 @@ namespace Gameplay.Bots
 
             if (BotStorage.IsFull)
             {
-                dropout.GetCollectedAndReleasedTo(_resourceCollector);
+                dropout.GetCollectedAndReleasedTo(_resourceCollector, OnDropoutCollected);
             }
             else
             {

@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 using System.Collections.Generic;
 using UnityEngine.SceneManagement;
 
@@ -173,6 +174,11 @@ namespace MoreMountains.Tools
 			return null;
 		}
 
+		public virtual List<GameObject> GetActivePooledObjects()
+		{
+			return null;
+		}
+
 		/// <summary>
 		/// Destroys the object pool
 		/// </summary>
@@ -214,7 +220,7 @@ namespace MoreMountains.Tools
 				}
 			}
 		}
-        
+
 		/// <summary>
 		/// On Destroy we remove ourselves from the list of poolers 
 		/// </summary>

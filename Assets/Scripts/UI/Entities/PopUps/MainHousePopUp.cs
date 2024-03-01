@@ -37,7 +37,7 @@ namespace UI.Mediator
         {
             base.SetLevel(level);
 
-            _costText.text = _mainHouseUpgradeCosts[level].ToString();
+            _costText.text = _mainHouseUpgradeCosts[level - 1].ToString();
         }
 
         private void Expand()

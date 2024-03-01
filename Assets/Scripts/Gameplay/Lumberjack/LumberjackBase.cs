@@ -8,6 +8,7 @@ using Infrastructure;
 using Infrastructure.Services.Cache;
 using Infrastructure.Services.Input;
 using Infrastructure.Services.StaticDataService;
+using MoreMountains.Feedbacks;
 using UnityEngine;
 using Utils;
 using Zenject;
@@ -26,6 +27,7 @@ namespace Gameplay.Lumberjack
         [SerializeField] protected LumberjackAxeEnabler _lumberjackAxeEnabler;
         [SerializeField] protected LumberjackAxe _lumberjackAxe;
         [SerializeField] protected Transform _resourceCollector;
+        [SerializeField] protected MMFloatingTextSpawner _textSpawner;
 
         protected LumberjackAnimator _lumberjackAnimator;
 
@@ -115,6 +117,7 @@ namespace Gameplay.Lumberjack
 
         protected virtual void CollectDropout(DropoutResource dropout)
         {
+            
         }
 
         private void RemoveSource(ResourceSource resourceSource)
@@ -139,6 +142,12 @@ namespace Gameplay.Lumberjack
         protected virtual bool CanCollectDropout(DropoutResource dropout) => 
             !dropout.IsCollected;
 
+        protected void OnDropoutCollected(DropoutResource dropoutResource)
+        {
+            string text = $"+{dropoutResource.ResourceValue}";
+            _textSpawner.Spawn(text, dropoutResource.transform.position, Vector3.forward);
+        }
+
         private DropoutResource CachedDropout(Component resourceSourceCollider) => 
             _cacheService.ResourceDropout.Get(resourceSourceCollider.gameObject);
 
@@ -147,7 +156,7 @@ namespace Gameplay.Lumberjack
             _lumberjackAnimator.StopChopping();
             _lumberjackAxeEnabler.DisableAxeCollider();
         }
-        
+
         private void ClearInactiveObjects(HashSet<GameObject> hashSet)
         {
             HashSet<GameObject> objectsToRemove = new HashSet<GameObject>();

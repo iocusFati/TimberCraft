@@ -544,7 +544,7 @@ MonoBehaviour:
             m_PostInfinity: 2
             m_RotationOrder: 4
           Initialized: 0
-        AnimateZ: 0
+        AnimateZ: 1
         AnimatePositionTweenZ:
           MMTweenDefinitionType: 1
           MMTweenCurve: 4
@@ -553,39 +553,21 @@ MonoBehaviour:
             m_Curve:
             - serializedVersion: 3
               time: 0
-              value: 0
-              inSlope: 0
-              outSlope: 0
-              tangentMode: 0
-              weightedMode: 0
-              inWeight: 0
-              outWeight: 0
-            - serializedVersion: 3
-              time: 0.3
               value: 1
-              inSlope: 0
-              outSlope: 0
+              inSlope: 0.0073439116
+              outSlope: 0.0073439116
               tangentMode: 0
               weightedMode: 0
               inWeight: 0
-              outWeight: 0
-            - serializedVersion: 3
-              time: 0.6
-              value: -1
-              inSlope: 0
-              outSlope: 0
-              tangentMode: 0
-              weightedMode: 0
-              inWeight: 0
-              outWeight: 0
+              outWeight: 0.32083333
             - serializedVersion: 3
               time: 1
               value: 0
-              inSlope: 0
-              outSlope: 0
+              inSlope: -2.9738877
+              outSlope: -2.9738877
               tangentMode: 0
               weightedMode: 0
-              inWeight: 0
+              inWeight: 0.070833325
               outWeight: 0
             m_PreInfinity: 2
             m_PostInfinity: 2

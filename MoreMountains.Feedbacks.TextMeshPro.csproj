@@ -49,6 +49,7 @@
      <Compile Include="Assets\Plugins\Feel\MMFeedbacks\MMFeedbacksForThirdParty\TextMeshPro\Feedbacks\MMF_TMPOutlineColor.cs" />
      <Compile Include="Assets\Plugins\Feel\MMFeedbacks\MMFeedbacksForThirdParty\TextMeshPro\MMFloatingText\MMFloatingTextMeshPro.cs" />
      <Compile Include="Assets\Plugins\Feel\MMFeedbacks\MMFeedbacksForThirdParty\TextMeshPro\Feedbacks\Legacy\MMFeedbackTMPSoftness.cs" />
+     <Compile Include="Assets\Plugins\Feel\MMFeedbacks\MMFeedbacksForThirdParty\TextMeshPro\MMFloatingText\MMFloatingTextMeshProUGUI.cs" />
      <Compile Include="Assets\Plugins\Feel\MMFeedbacks\MMFeedbacksForThirdParty\TextMeshPro\Feedbacks\MMF_TMPText.cs" />
      <Compile Include="Assets\Plugins\Feel\MMFeedbacks\MMFeedbacksForThirdParty\TextMeshPro\Feedbacks\MMF_TMPOutlineWidth.cs" />
      <Compile Include="Assets\Plugins\Feel\MMFeedbacks\MMFeedbacksForThirdParty\TextMeshPro\Feedbacks\MMF_TMPAlpha.cs" />

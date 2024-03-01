@@ -15,7 +15,7 @@ C:/Users/fuyca/Desktop/Projects/TimberCraft
 -logFile
 Logs/AssetImportWorker1.log
 -srvPort
-55936
+63607
 Successfully changed project path to: C:/Users/fuyca/Desktop/Projects/TimberCraft
 C:/Users/fuyca/Desktop/Projects/TimberCraft
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
@@ -47,11 +47,11 @@ C:/Users/fuyca/Desktop/Projects/TimberCraft
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Player connection [18032] Host "[IP] 192.168.0.104 [Port] 0 [Flags] 2 [Guid] 4159601749 [EditorId] 4159601749 [Version] 1048832 [Id] WindowsEditor(7,Volodymyr) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+Player connection [25748] Host "[IP] 192.168.0.104 [Port] 0 [Flags] 2 [Guid] 1971087720 [EditorId] 1971087720 [Version] 1048832 [Id] WindowsEditor(7,Volodymyr) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
 
-Player connection [18032] Host "[IP] 192.168.0.104 [Port] 0 [Flags] 2 [Guid] 4159601749 [EditorId] 4159601749 [Version] 1048832 [Id] WindowsEditor(7,Volodymyr) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [25748] Host "[IP] 192.168.0.104 [Port] 0 [Flags] 2 [Guid] 1971087720 [EditorId] 1971087720 [Version] 1048832 [Id] WindowsEditor(7,Volodymyr) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
 
-Refreshing native plugins compatible for Editor in 326.24 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 502.18 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2021.3.25f1 (68ef2c4f8861)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2021.3.25f1/Editor/Data/Resources/UnitySubsystems
@@ -68,86 +68,86 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2021.3.25f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2021.3.25f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2021.3.25f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56100
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56268
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.25f1/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.25f1/Editor/Data/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.25f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.008616 seconds.
+Registered in 0.010240 seconds.
 Native extension for WindowsStandalone target not found
 [usbmuxd] Start listen thread
 [usbmuxd] Listen thread started
 Native extension for iOS target not found
 Native extension for Android target not found
-Android Extension - Scanning For ADB Devices 359 ms
-Refreshing native plugins compatible for Editor in 370.44 ms, found 4 plugins.
+Android Extension - Scanning For ADB Devices 334 ms
+Refreshing native plugins compatible for Editor in 387.21 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.573 seconds
+- Completed reload, in  1.771 seconds
 Domain Reload Profiling:
-	ReloadAssembly (1574ms)
-		BeginReloadAssembly (98ms)
+	ReloadAssembly (1771ms)
+		BeginReloadAssembly (125ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (1ms)
-		EndReloadAssembly (1353ms)
-			LoadAssemblies (96ms)
+			CreateAndSetChildDomain (2ms)
+		EndReloadAssembly (1486ms)
+			LoadAssemblies (123ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (135ms)
+			SetupTypeCache (189ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (56ms)
-			SetupLoadedEditorAssemblies (1089ms)
+			RebuildScriptCaches (54ms)
+			SetupLoadedEditorAssemblies (1151ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (526ms)
+				InitializePlatformSupportModulesInManaged (523ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (371ms)
-				BeforeProcessingInitializeOnLoad (2ms)
-				ProcessInitializeOnLoadAttributes (133ms)
-				ProcessInitializeOnLoadMethodAttributes (57ms)
+				RefreshPlugins (387ms)
+				BeforeProcessingInitializeOnLoad (3ms)
+				ProcessInitializeOnLoadAttributes (156ms)
+				ProcessInitializeOnLoadMethodAttributes (82ms)
 				AfterProcessingInitializeOnLoad (0ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.019033 seconds.
+Registered in 0.015224 seconds.
 Begin MonoManager ReloadAssembly
 Symbol file LoadedFromMemory doesn't match image C:\Users\fuyca\Desktop\Projects\TimberCraft\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
 Symbol file LoadedFromMemory doesn't match image C:\Users\fuyca\Desktop\Projects\TimberCraft\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
 Native extension for WindowsStandalone target not found
 Native extension for iOS target not found
 Native extension for Android target not found
-Refreshing native plugins compatible for Editor in 336.16 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 400.89 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.06 seconds
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.07 seconds
 Mono: successfully reloaded assembly
-- Completed reload, in  3.956 seconds
+- Completed reload, in  4.193 seconds
 Domain Reload Profiling:
-	ReloadAssembly (3957ms)
-		BeginReloadAssembly (282ms)
+	ReloadAssembly (4195ms)
+		BeginReloadAssembly (221ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (17ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (40ms)
-		EndReloadAssembly (3448ms)
-			LoadAssemblies (231ms)
+			CreateAndSetChildDomain (36ms)
+		EndReloadAssembly (3748ms)
+			LoadAssemblies (170ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (644ms)
-			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (193ms)
-			SetupLoadedEditorAssemblies (2346ms)
+			SetupTypeCache (737ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (214ms)
+			SetupLoadedEditorAssemblies (2532ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (39ms)
+				InitializePlatformSupportModulesInManaged (44ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (336ms)
-				BeforeProcessingInitializeOnLoad (171ms)
-				ProcessInitializeOnLoadAttributes (1183ms)
-				ProcessInitializeOnLoadMethodAttributes (607ms)
-				AfterProcessingInitializeOnLoad (8ms)
+				RefreshPlugins (401ms)
+				BeforeProcessingInitializeOnLoad (202ms)
+				ProcessInitializeOnLoadAttributes (1341ms)
+				ProcessInitializeOnLoadMethodAttributes (534ms)
+				AfterProcessingInitializeOnLoad (10ms)
 				EditorAssembliesLoaded (1ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (8ms)
@@ -155,12 +155,12 @@ Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
 Shader 'MoreMountains/MMRipple': fallback shader 'Particle/AlphaBlended' not found
-Refreshing native plugins compatible for Editor in 2.49 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 6.78 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 6118 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 160 unused Assets / (1.7 MB). Loaded Objects now: 6643.
-Memory consumption went from 400.4 MB to 398.8 MB.
-Total: 27.058300 ms (FindLiveObjects: 0.634100 ms CreateObjectMapping: 0.727100 ms MarkObjects: 25.130900 ms  DeleteObjects: 0.565000 ms)
+Unloading 6137 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 160 unused Assets / (1.7 MB). Loaded Objects now: 6664.
+Memory consumption went from 408.3 MB to 406.7 MB.
+Total: 32.104000 ms (FindLiveObjects: 0.657300 ms CreateObjectMapping: 0.622500 ms MarkObjects: 30.258500 ms  DeleteObjects: 0.563900 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
@@ -174,16 +174,22 @@ AssetImportParameters requested are different than current active one (requested
   custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
+Received Import Request.
+  Time since last request: 163136.866305 seconds.
+  path: Assets/Resources/Prefabs/Player/Player.prefab
+  artifactKey: Guid(e7bb34a578ef0cf478a42b040480c04c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Player/Player.prefab using Guid(e7bb34a578ef0cf478a42b040480c04c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6d779548c3ec5a786b8beebe72065a72') in 0.636646 seconds 
+========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.012570 seconds.
+Registered in 0.020066 seconds.
 Begin MonoManager ReloadAssembly
 Symbol file LoadedFromMemory doesn't match image C:\Users\fuyca\Desktop\Projects\TimberCraft\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
 Symbol file LoadedFromMemory doesn't match image C:\Users\fuyca\Desktop\Projects\TimberCraft\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
 Native extension for WindowsStandalone target not found
 Native extension for iOS target not found
 Native extension for Android target not found
-Refreshing native plugins compatible for Editor in 3.63 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 4.47 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 System.TypeInitializationException: The type initializer for 'Doozy.Engine.Utils.DoozyPath' threw an exception. ---> System.ArgumentException: The specified path is not of a legal form (empty).
   at System.IO.Path.InsecureGetFullPath (System.String path) [0x00025] in <a40b0ad4a868437393ad434631fb6ff1>:0 
@@ -222,1193 +228,41 @@ UnityEngine.Debug:LogError (object)
 UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
 
 Mono: successfully reloaded assembly
-- Completed reload, in  3.087 seconds
+- Completed reload, in  4.564 seconds
 Domain Reload Profiling:
-	ReloadAssembly (3088ms)
-		BeginReloadAssembly (301ms)
+	ReloadAssembly (4566ms)
+		BeginReloadAssembly (409ms)
 			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (7ms)
+			DisableScriptedObjects (10ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (138ms)
-		EndReloadAssembly (2635ms)
-			LoadAssemblies (159ms)
+			CreateAndSetChildDomain (134ms)
+		EndReloadAssembly (3913ms)
+			LoadAssemblies (291ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (632ms)
+			SetupTypeCache (1003ms)
 			ReleaseScriptCaches (2ms)
-			RebuildScriptCaches (79ms)
-			SetupLoadedEditorAssemblies (1653ms)
+			RebuildScriptCaches (142ms)
+			SetupLoadedEditorAssemblies (2366ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (57ms)
+				InitializePlatformSupportModulesInManaged (76ms)
 				SetLoadedEditorAssemblies (1ms)
-				RefreshPlugins (4ms)
-				BeforeProcessingInitializeOnLoad (119ms)
-				ProcessInitializeOnLoadAttributes (1023ms)
-				ProcessInitializeOnLoadMethodAttributes (441ms)
-				AfterProcessingInitializeOnLoad (7ms)
-				EditorAssembliesLoaded (1ms)
-			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (9ms)
-Platform modules already initialized, skipping
-Shader 'MoreMountains/MMRipple': fallback shader 'Particle/AlphaBlended' not found
-Refreshing native plugins compatible for Editor in 7.14 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 6023 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 54 unused Assets / (1.4 MB). Loaded Objects now: 6657.
-Memory consumption went from 403.6 MB to 402.2 MB.
-Total: 31.691400 ms (FindLiveObjects: 0.757000 ms CreateObjectMapping: 0.785600 ms MarkObjects: 29.689700 ms  DeleteObjects: 0.456900 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.017461 seconds.
-Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image C:\Users\fuyca\Desktop\Projects\TimberCraft\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
-Symbol file LoadedFromMemory doesn't match image C:\Users\fuyca\Desktop\Projects\TimberCraft\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
-Native extension for WindowsStandalone target not found
-Native extension for iOS target not found
-Native extension for Android target not found
-Refreshing native plugins compatible for Editor in 2.57 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-System.TypeInitializationException: The type initializer for 'Doozy.Engine.Utils.DoozyPath' threw an exception. ---> System.ArgumentException: The specified path is not of a legal form (empty).
-  at System.IO.Path.InsecureGetFullPath (System.String path) [0x00025] in <a40b0ad4a868437393ad434631fb6ff1>:0 
-  at System.IO.Path.GetFullPath (System.String path) [0x00000] in <a40b0ad4a868437393ad434631fb6ff1>:0 
-  at System.IO.FileInfo..ctor (System.String originalPath, System.String fullPath, System.String fileName, System.Boolean isNormalized) [0x00024] in <a40b0ad4a868437393ad434631fb6ff1>:0 
-  at System.IO.FileInfo..ctor (System.String fileName) [0x00000] in <a40b0ad4a868437393ad434631fb6ff1>:0 
-  at (wrapper remoting-invoke-with-check) System.IO.FileInfo..ctor(string)
-  at Doozy.Engine.Utils.DoozyPath.get_BasePath () [0x0003b] in C:\Users\fuyca\Desktop\Projects\TimberCraft\Assets\Doozy\Engine\Utils\DoozyPath.cs:158 
-  at Doozy.Engine.Utils.DoozyPath..cctor () [0x00000] in C:\Users\fuyca\Desktop\Projects\TimberCraft\Assets\Doozy\Engine\Utils\DoozyPath.cs:62 
-   --- End of inner exception stack trace ---
-  at Doozy.Editor.Internal.ProcessorsSettings.get_Instance () [0x00018] in C:\Users\fuyca\Desktop\Projects\TimberCraft\Assets\Doozy\Editor\Internal\ProcessorsSettings.cs:23 
-  at Doozy.Editor.Internal.DoozyAssetsProcessor.ExecuteProcessor () [0x0003f] in C:\Users\fuyca\Desktop\Projects\TimberCraft\Assets\Doozy\Editor\Internal\DoozyAssetsProcessor.cs:44 
-  at Doozy.Editor.Internal.DoozyAssetsProcessor..cctor () [0x00001] in C:\Users\fuyca\Desktop\Projects\TimberCraft\Assets\Doozy\Editor\Internal\DoozyAssetsProcessor.cs:25 
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:LogError (object)
-UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
-
-System.TypeInitializationException: The type initializer for 'Doozy.Engine.Utils.DoozyPath' threw an exception. ---> System.ArgumentException: The specified path is not of a legal form (empty).
-  at System.IO.Path.InsecureGetFullPath (System.String path) [0x00025] in <a40b0ad4a868437393ad434631fb6ff1>:0 
-  at System.IO.Path.GetFullPath (System.String path) [0x00000] in <a40b0ad4a868437393ad434631fb6ff1>:0 
-  at System.IO.FileInfo..ctor (System.String originalPath, System.String fullPath, System.String fileName, System.Boolean isNormalized) [0x00024] in <a40b0ad4a868437393ad434631fb6ff1>:0 
-  at System.IO.FileInfo..ctor (System.String fileName) [0x00000] in <a40b0ad4a868437393ad434631fb6ff1>:0 
-  at (wrapper remoting-invoke-with-check) System.IO.FileInfo..ctor(string)
-  at Doozy.Engine.Utils.DoozyPath.get_BasePath () [0x0003b] in C:\Users\fuyca\Desktop\Projects\TimberCraft\Assets\Doozy\Engine\Utils\DoozyPath.cs:158 
-  at Doozy.Engine.Utils.DoozyPath..cctor () [0x00000] in C:\Users\fuyca\Desktop\Projects\TimberCraft\Assets\Doozy\Engine\Utils\DoozyPath.cs:62 
-   --- End of inner exception stack trace ---
-  at Doozy.Editor.Internal.ProcessorsSettings.get_Instance () [0x00018] in C:\Users\fuyca\Desktop\Projects\TimberCraft\Assets\Doozy\Editor\Internal\ProcessorsSettings.cs:23 
-  at Doozy.Editor.Internal.FoldersProcessor.ExecuteProcessor () [0x0000c] in C:\Users\fuyca\Desktop\Projects\TimberCraft\Assets\Doozy\Editor\Internal\FoldersProcessor.cs:20 
-  at Doozy.Editor.Internal.FoldersProcessor..cctor () [0x00001] in C:\Users\fuyca\Desktop\Projects\TimberCraft\Assets\Doozy\Editor\Internal\FoldersProcessor.cs:15 
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:LogError (object)
-UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
-
-Mono: successfully reloaded assembly
-- Completed reload, in  3.320 seconds
-Domain Reload Profiling:
-	ReloadAssembly (3321ms)
-		BeginReloadAssembly (251ms)
-			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (7ms)
-			BackupInstance (0ms)
-			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (82ms)
-		EndReloadAssembly (2833ms)
-			LoadAssemblies (209ms)
-			RebuildTransferFunctionScriptingTraits (1ms)
-			SetupTypeCache (767ms)
-			ReleaseScriptCaches (2ms)
-			RebuildScriptCaches (108ms)
-			SetupLoadedEditorAssemblies (1627ms)
-				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (49ms)
-				SetLoadedEditorAssemblies (1ms)
-				RefreshPlugins (3ms)
-				BeforeProcessingInitializeOnLoad (144ms)
-				ProcessInitializeOnLoadAttributes (982ms)
-				ProcessInitializeOnLoadMethodAttributes (439ms)
-				AfterProcessingInitializeOnLoad (8ms)
-				EditorAssembliesLoaded (1ms)
-			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (10ms)
-Platform modules already initialized, skipping
-Shader 'MoreMountains/MMRipple': fallback shader 'Particle/AlphaBlended' not found
-Refreshing native plugins compatible for Editor in 8.77 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 6023 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 53 unused Assets / (1.4 MB). Loaded Objects now: 6672.
-Memory consumption went from 403.7 MB to 402.2 MB.
-Total: 35.925800 ms (FindLiveObjects: 0.697900 ms CreateObjectMapping: 0.571900 ms MarkObjects: 34.154200 ms  DeleteObjects: 0.499100 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.016022 seconds.
-Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image C:\Users\fuyca\Desktop\Projects\TimberCraft\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
-Symbol file LoadedFromMemory doesn't match image C:\Users\fuyca\Desktop\Projects\TimberCraft\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
-Native extension for WindowsStandalone target not found
-Native extension for iOS target not found
-Native extension for Android target not found
-Refreshing native plugins compatible for Editor in 2.26 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-System.TypeInitializationException: The type initializer for 'Doozy.Engine.Utils.DoozyPath' threw an exception. ---> System.ArgumentException: The specified path is not of a legal form (empty).
-  at System.IO.Path.InsecureGetFullPath (System.String path) [0x00025] in <a40b0ad4a868437393ad434631fb6ff1>:0 
-  at System.IO.Path.GetFullPath (System.String path) [0x00000] in <a40b0ad4a868437393ad434631fb6ff1>:0 
-  at System.IO.FileInfo..ctor (System.String originalPath, System.String fullPath, System.String fileName, System.Boolean isNormalized) [0x00024] in <a40b0ad4a868437393ad434631fb6ff1>:0 
-  at System.IO.FileInfo..ctor (System.String fileName) [0x00000] in <a40b0ad4a868437393ad434631fb6ff1>:0 
-  at (wrapper remoting-invoke-with-check) System.IO.FileInfo..ctor(string)
-  at Doozy.Engine.Utils.DoozyPath.get_BasePath () [0x0003b] in C:\Users\fuyca\Desktop\Projects\TimberCraft\Assets\Doozy\Engine\Utils\DoozyPath.cs:158 
-  at Doozy.Engine.Utils.DoozyPath..cctor () [0x00000] in C:\Users\fuyca\Desktop\Projects\TimberCraft\Assets\Doozy\Engine\Utils\DoozyPath.cs:62 
-   --- End of inner exception stack trace ---
-  at Doozy.Editor.Internal.ProcessorsSettings.get_Instance () [0x00018] in C:\Users\fuyca\Desktop\Projects\TimberCraft\Assets\Doozy\Editor\Internal\ProcessorsSettings.cs:23 
-  at Doozy.Editor.Internal.DoozyAssetsProcessor.ExecuteProcessor () [0x0003f] in C:\Users\fuyca\Desktop\Projects\TimberCraft\Assets\Doozy\Editor\Internal\DoozyAssetsProcessor.cs:44 
-  at Doozy.Editor.Internal.DoozyAssetsProcessor..cctor () [0x00001] in C:\Users\fuyca\Desktop\Projects\TimberCraft\Assets\Doozy\Editor\Internal\DoozyAssetsProcessor.cs:25 
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:LogError (object)
-UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
-
-System.TypeInitializationException: The type initializer for 'Doozy.Engine.Utils.DoozyPath' threw an exception. ---> System.ArgumentException: The specified path is not of a legal form (empty).
-  at System.IO.Path.InsecureGetFullPath (System.String path) [0x00025] in <a40b0ad4a868437393ad434631fb6ff1>:0 
-  at System.IO.Path.GetFullPath (System.String path) [0x00000] in <a40b0ad4a868437393ad434631fb6ff1>:0 
-  at System.IO.FileInfo..ctor (System.String originalPath, System.String fullPath, System.String fileName, System.Boolean isNormalized) [0x00024] in <a40b0ad4a868437393ad434631fb6ff1>:0 
-  at System.IO.FileInfo..ctor (System.String fileName) [0x00000] in <a40b0ad4a868437393ad434631fb6ff1>:0 
-  at (wrapper remoting-invoke-with-check) System.IO.FileInfo..ctor(string)
-  at Doozy.Engine.Utils.DoozyPath.get_BasePath () [0x0003b] in C:\Users\fuyca\Desktop\Projects\TimberCraft\Assets\Doozy\Engine\Utils\DoozyPath.cs:158 
-  at Doozy.Engine.Utils.DoozyPath..cctor () [0x00000] in C:\Users\fuyca\Desktop\Projects\TimberCraft\Assets\Doozy\Engine\Utils\DoozyPath.cs:62 
-   --- End of inner exception stack trace ---
-  at Doozy.Editor.Internal.ProcessorsSettings.get_Instance () [0x00018] in C:\Users\fuyca\Desktop\Projects\TimberCraft\Assets\Doozy\Editor\Internal\ProcessorsSettings.cs:23 
-  at Doozy.Editor.Internal.FoldersProcessor.ExecuteProcessor () [0x0000c] in C:\Users\fuyca\Desktop\Projects\TimberCraft\Assets\Doozy\Editor\Internal\FoldersProcessor.cs:20 
-  at Doozy.Editor.Internal.FoldersProcessor..cctor () [0x00001] in C:\Users\fuyca\Desktop\Projects\TimberCraft\Assets\Doozy\Editor\Internal\FoldersProcessor.cs:15 
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:LogError (object)
-UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
-
-Mono: successfully reloaded assembly
-- Completed reload, in  3.106 seconds
-Domain Reload Profiling:
-	ReloadAssembly (3107ms)
-		BeginReloadAssembly (223ms)
-			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (7ms)
-			BackupInstance (0ms)
-			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (77ms)
-		EndReloadAssembly (2738ms)
-			LoadAssemblies (169ms)
-			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (769ms)
-			ReleaseScriptCaches (2ms)
-			RebuildScriptCaches (106ms)
-			SetupLoadedEditorAssemblies (1565ms)
-				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (48ms)
-				SetLoadedEditorAssemblies (1ms)
-				RefreshPlugins (2ms)
-				BeforeProcessingInitializeOnLoad (119ms)
-				ProcessInitializeOnLoadAttributes (989ms)
-				ProcessInitializeOnLoadMethodAttributes (397ms)
-				AfterProcessingInitializeOnLoad (9ms)
-				EditorAssembliesLoaded (1ms)
-			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (7ms)
-Platform modules already initialized, skipping
-Shader 'MoreMountains/MMRipple': fallback shader 'Particle/AlphaBlended' not found
-Refreshing native plugins compatible for Editor in 6.05 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 6023 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 53 unused Assets / (1.4 MB). Loaded Objects now: 6687.
-Memory consumption went from 403.7 MB to 402.3 MB.
-Total: 31.707500 ms (FindLiveObjects: 0.610000 ms CreateObjectMapping: 0.544300 ms MarkObjects: 30.073600 ms  DeleteObjects: 0.478300 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.015484 seconds.
-Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image C:\Users\fuyca\Desktop\Projects\TimberCraft\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
-Symbol file LoadedFromMemory doesn't match image C:\Users\fuyca\Desktop\Projects\TimberCraft\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
-Native extension for WindowsStandalone target not found
-Native extension for iOS target not found
-Native extension for Android target not found
-Refreshing native plugins compatible for Editor in 2.20 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-System.TypeInitializationException: The type initializer for 'Doozy.Engine.Utils.DoozyPath' threw an exception. ---> System.ArgumentException: The specified path is not of a legal form (empty).
-  at System.IO.Path.InsecureGetFullPath (System.String path) [0x00025] in <a40b0ad4a868437393ad434631fb6ff1>:0 
-  at System.IO.Path.GetFullPath (System.String path) [0x00000] in <a40b0ad4a868437393ad434631fb6ff1>:0 
-  at System.IO.FileInfo..ctor (System.String originalPath, System.String fullPath, System.String fileName, System.Boolean isNormalized) [0x00024] in <a40b0ad4a868437393ad434631fb6ff1>:0 
-  at System.IO.FileInfo..ctor (System.String fileName) [0x00000] in <a40b0ad4a868437393ad434631fb6ff1>:0 
-  at (wrapper remoting-invoke-with-check) System.IO.FileInfo..ctor(string)
-  at Doozy.Engine.Utils.DoozyPath.get_BasePath () [0x0003b] in C:\Users\fuyca\Desktop\Projects\TimberCraft\Assets\Doozy\Engine\Utils\DoozyPath.cs:158 
-  at Doozy.Engine.Utils.DoozyPath..cctor () [0x00000] in C:\Users\fuyca\Desktop\Projects\TimberCraft\Assets\Doozy\Engine\Utils\DoozyPath.cs:62 
-   --- End of inner exception stack trace ---
-  at Doozy.Editor.Internal.ProcessorsSettings.get_Instance () [0x00018] in C:\Users\fuyca\Desktop\Projects\TimberCraft\Assets\Doozy\Editor\Internal\ProcessorsSettings.cs:23 
-  at Doozy.Editor.Internal.DoozyAssetsProcessor.ExecuteProcessor () [0x0003f] in C:\Users\fuyca\Desktop\Projects\TimberCraft\Assets\Doozy\Editor\Internal\DoozyAssetsProcessor.cs:44 
-  at Doozy.Editor.Internal.DoozyAssetsProcessor..cctor () [0x00001] in C:\Users\fuyca\Desktop\Projects\TimberCraft\Assets\Doozy\Editor\Internal\DoozyAssetsProcessor.cs:25 
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:LogError (object)
-UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
-
-System.TypeInitializationException: The type initializer for 'Doozy.Engine.Utils.DoozyPath' threw an exception. ---> System.ArgumentException: The specified path is not of a legal form (empty).
-  at System.IO.Path.InsecureGetFullPath (System.String path) [0x00025] in <a40b0ad4a868437393ad434631fb6ff1>:0 
-  at System.IO.Path.GetFullPath (System.String path) [0x00000] in <a40b0ad4a868437393ad434631fb6ff1>:0 
-  at System.IO.FileInfo..ctor (System.String originalPath, System.String fullPath, System.String fileName, System.Boolean isNormalized) [0x00024] in <a40b0ad4a868437393ad434631fb6ff1>:0 
-  at System.IO.FileInfo..ctor (System.String fileName) [0x00000] in <a40b0ad4a868437393ad434631fb6ff1>:0 
-  at (wrapper remoting-invoke-with-check) System.IO.FileInfo..ctor(string)
-  at Doozy.Engine.Utils.DoozyPath.get_BasePath () [0x0003b] in C:\Users\fuyca\Desktop\Projects\TimberCraft\Assets\Doozy\Engine\Utils\DoozyPath.cs:158 
-  at Doozy.Engine.Utils.DoozyPath..cctor () [0x00000] in C:\Users\fuyca\Desktop\Projects\TimberCraft\Assets\Doozy\Engine\Utils\DoozyPath.cs:62 
-   --- End of inner exception stack trace ---
-  at Doozy.Editor.Internal.ProcessorsSettings.get_Instance () [0x00018] in C:\Users\fuyca\Desktop\Projects\TimberCraft\Assets\Doozy\Editor\Internal\ProcessorsSettings.cs:23 
-  at Doozy.Editor.Internal.FoldersProcessor.ExecuteProcessor () [0x0000c] in C:\Users\fuyca\Desktop\Projects\TimberCraft\Assets\Doozy\Editor\Internal\FoldersProcessor.cs:20 
-  at Doozy.Editor.Internal.FoldersProcessor..cctor () [0x00001] in C:\Users\fuyca\Desktop\Projects\TimberCraft\Assets\Doozy\Editor\Internal\FoldersProcessor.cs:15 
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:LogError (object)
-UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
-
-Mono: successfully reloaded assembly
-- Completed reload, in  3.107 seconds
-Domain Reload Profiling:
-	ReloadAssembly (3108ms)
-		BeginReloadAssembly (242ms)
-			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (7ms)
-			BackupInstance (0ms)
-			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (92ms)
-		EndReloadAssembly (2706ms)
-			LoadAssemblies (147ms)
-			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (792ms)
-			ReleaseScriptCaches (2ms)
-			RebuildScriptCaches (102ms)
-			SetupLoadedEditorAssemblies (1582ms)
-				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (43ms)
-				SetLoadedEditorAssemblies (1ms)
-				RefreshPlugins (2ms)
-				BeforeProcessingInitializeOnLoad (114ms)
-				ProcessInitializeOnLoadAttributes (1012ms)
-				ProcessInitializeOnLoadMethodAttributes (402ms)
-				AfterProcessingInitializeOnLoad (7ms)
-				EditorAssembliesLoaded (1ms)
-			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (7ms)
-Platform modules already initialized, skipping
-Shader 'MoreMountains/MMRipple': fallback shader 'Particle/AlphaBlended' not found
-Refreshing native plugins compatible for Editor in 8.50 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 6023 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 53 unused Assets / (1.4 MB). Loaded Objects now: 6702.
-Memory consumption went from 403.7 MB to 402.3 MB.
-Total: 34.157800 ms (FindLiveObjects: 0.749500 ms CreateObjectMapping: 0.869100 ms MarkObjects: 32.038700 ms  DeleteObjects: 0.498600 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.009069 seconds.
-Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image C:\Users\fuyca\Desktop\Projects\TimberCraft\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
-Symbol file LoadedFromMemory doesn't match image C:\Users\fuyca\Desktop\Projects\TimberCraft\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
-Native extension for WindowsStandalone target not found
-Native extension for iOS target not found
-Native extension for Android target not found
-Refreshing native plugins compatible for Editor in 1.84 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-System.TypeInitializationException: The type initializer for 'Doozy.Engine.Utils.DoozyPath' threw an exception. ---> System.ArgumentException: The specified path is not of a legal form (empty).
-  at System.IO.Path.InsecureGetFullPath (System.String path) [0x00025] in <a40b0ad4a868437393ad434631fb6ff1>:0 
-  at System.IO.Path.GetFullPath (System.String path) [0x00000] in <a40b0ad4a868437393ad434631fb6ff1>:0 
-  at System.IO.FileInfo..ctor (System.String originalPath, System.String fullPath, System.String fileName, System.Boolean isNormalized) [0x00024] in <a40b0ad4a868437393ad434631fb6ff1>:0 
-  at System.IO.FileInfo..ctor (System.String fileName) [0x00000] in <a40b0ad4a868437393ad434631fb6ff1>:0 
-  at (wrapper remoting-invoke-with-check) System.IO.FileInfo..ctor(string)
-  at Doozy.Engine.Utils.DoozyPath.get_BasePath () [0x0003b] in C:\Users\fuyca\Desktop\Projects\TimberCraft\Assets\Doozy\Engine\Utils\DoozyPath.cs:158 
-  at Doozy.Engine.Utils.DoozyPath..cctor () [0x00000] in C:\Users\fuyca\Desktop\Projects\TimberCraft\Assets\Doozy\Engine\Utils\DoozyPath.cs:62 
-   --- End of inner exception stack trace ---
-  at Doozy.Editor.Internal.ProcessorsSettings.get_Instance () [0x00018] in C:\Users\fuyca\Desktop\Projects\TimberCraft\Assets\Doozy\Editor\Internal\ProcessorsSettings.cs:23 
-  at Doozy.Editor.Internal.DoozyAssetsProcessor.ExecuteProcessor () [0x0003f] in C:\Users\fuyca\Desktop\Projects\TimberCraft\Assets\Doozy\Editor\Internal\DoozyAssetsProcessor.cs:44 
-  at Doozy.Editor.Internal.DoozyAssetsProcessor..cctor () [0x00001] in C:\Users\fuyca\Desktop\Projects\TimberCraft\Assets\Doozy\Editor\Internal\DoozyAssetsProcessor.cs:25 
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:LogError (object)
-UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
-
-System.TypeInitializationException: The type initializer for 'Doozy.Engine.Utils.DoozyPath' threw an exception. ---> System.ArgumentException: The specified path is not of a legal form (empty).
-  at System.IO.Path.InsecureGetFullPath (System.String path) [0x00025] in <a40b0ad4a868437393ad434631fb6ff1>:0 
-  at System.IO.Path.GetFullPath (System.String path) [0x00000] in <a40b0ad4a868437393ad434631fb6ff1>:0 
-  at System.IO.FileInfo..ctor (System.String originalPath, System.String fullPath, System.String fileName, System.Boolean isNormalized) [0x00024] in <a40b0ad4a868437393ad434631fb6ff1>:0 
-  at System.IO.FileInfo..ctor (System.String fileName) [0x00000] in <a40b0ad4a868437393ad434631fb6ff1>:0 
-  at (wrapper remoting-invoke-with-check) System.IO.FileInfo..ctor(string)
-  at Doozy.Engine.Utils.DoozyPath.get_BasePath () [0x0003b] in C:\Users\fuyca\Desktop\Projects\TimberCraft\Assets\Doozy\Engine\Utils\DoozyPath.cs:158 
-  at Doozy.Engine.Utils.DoozyPath..cctor () [0x00000] in C:\Users\fuyca\Desktop\Projects\TimberCraft\Assets\Doozy\Engine\Utils\DoozyPath.cs:62 
-   --- End of inner exception stack trace ---
-  at Doozy.Editor.Internal.ProcessorsSettings.get_Instance () [0x00018] in C:\Users\fuyca\Desktop\Projects\TimberCraft\Assets\Doozy\Editor\Internal\ProcessorsSettings.cs:23 
-  at Doozy.Editor.Internal.FoldersProcessor.ExecuteProcessor () [0x0000c] in C:\Users\fuyca\Desktop\Projects\TimberCraft\Assets\Doozy\Editor\Internal\FoldersProcessor.cs:20 
-  at Doozy.Editor.Internal.FoldersProcessor..cctor () [0x00001] in C:\Users\fuyca\Desktop\Projects\TimberCraft\Assets\Doozy\Editor\Internal\FoldersProcessor.cs:15 
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:LogError (object)
-UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
-
-Mono: successfully reloaded assembly
-- Completed reload, in  2.148 seconds
-Domain Reload Profiling:
-	ReloadAssembly (2149ms)
-		BeginReloadAssembly (208ms)
-			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (8ms)
-			BackupInstance (0ms)
-			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (83ms)
-		EndReloadAssembly (1833ms)
-			LoadAssemblies (125ms)
-			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (427ms)
-			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (73ms)
-			SetupLoadedEditorAssemblies (1117ms)
-				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (38ms)
-				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (2ms)
-				BeforeProcessingInitializeOnLoad (81ms)
-				ProcessInitializeOnLoadAttributes (675ms)
-				ProcessInitializeOnLoadMethodAttributes (314ms)
-				AfterProcessingInitializeOnLoad (5ms)
-				EditorAssembliesLoaded (1ms)
-			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (6ms)
-Platform modules already initialized, skipping
-Shader 'MoreMountains/MMRipple': fallback shader 'Particle/AlphaBlended' not found
-Refreshing native plugins compatible for Editor in 4.55 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 6023 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 53 unused Assets / (1.4 MB). Loaded Objects now: 6717.
-Memory consumption went from 403.7 MB to 402.3 MB.
-Total: 18.239100 ms (FindLiveObjects: 0.523100 ms CreateObjectMapping: 0.526500 ms MarkObjects: 16.866600 ms  DeleteObjects: 0.321800 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.008847 seconds.
-Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image C:\Users\fuyca\Desktop\Projects\TimberCraft\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
-Symbol file LoadedFromMemory doesn't match image C:\Users\fuyca\Desktop\Projects\TimberCraft\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
-Native extension for WindowsStandalone target not found
-Native extension for iOS target not found
-Native extension for Android target not found
-Refreshing native plugins compatible for Editor in 1.85 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-System.TypeInitializationException: The type initializer for 'Doozy.Engine.Utils.DoozyPath' threw an exception. ---> System.ArgumentException: The specified path is not of a legal form (empty).
-  at System.IO.Path.InsecureGetFullPath (System.String path) [0x00025] in <a40b0ad4a868437393ad434631fb6ff1>:0 
-  at System.IO.Path.GetFullPath (System.String path) [0x00000] in <a40b0ad4a868437393ad434631fb6ff1>:0 
-  at System.IO.FileInfo..ctor (System.String originalPath, System.String fullPath, System.String fileName, System.Boolean isNormalized) [0x00024] in <a40b0ad4a868437393ad434631fb6ff1>:0 
-  at System.IO.FileInfo..ctor (System.String fileName) [0x00000] in <a40b0ad4a868437393ad434631fb6ff1>:0 
-  at (wrapper remoting-invoke-with-check) System.IO.FileInfo..ctor(string)
-  at Doozy.Engine.Utils.DoozyPath.get_BasePath () [0x0003b] in C:\Users\fuyca\Desktop\Projects\TimberCraft\Assets\Doozy\Engine\Utils\DoozyPath.cs:158 
-  at Doozy.Engine.Utils.DoozyPath..cctor () [0x00000] in C:\Users\fuyca\Desktop\Projects\TimberCraft\Assets\Doozy\Engine\Utils\DoozyPath.cs:62 
-   --- End of inner exception stack trace ---
-  at Doozy.Editor.Internal.ProcessorsSettings.get_Instance () [0x00018] in C:\Users\fuyca\Desktop\Projects\TimberCraft\Assets\Doozy\Editor\Internal\ProcessorsSettings.cs:23 
-  at Doozy.Editor.Internal.DoozyAssetsProcessor.ExecuteProcessor () [0x0003f] in C:\Users\fuyca\Desktop\Projects\TimberCraft\Assets\Doozy\Editor\Internal\DoozyAssetsProcessor.cs:44 
-  at Doozy.Editor.Internal.DoozyAssetsProcessor..cctor () [0x00001] in C:\Users\fuyca\Desktop\Projects\TimberCraft\Assets\Doozy\Editor\Internal\DoozyAssetsProcessor.cs:25 
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:LogError (object)
-UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
-
-System.TypeInitializationException: The type initializer for 'Doozy.Engine.Utils.DoozyPath' threw an exception. ---> System.ArgumentException: The specified path is not of a legal form (empty).
-  at System.IO.Path.InsecureGetFullPath (System.String path) [0x00025] in <a40b0ad4a868437393ad434631fb6ff1>:0 
-  at System.IO.Path.GetFullPath (System.String path) [0x00000] in <a40b0ad4a868437393ad434631fb6ff1>:0 
-  at System.IO.FileInfo..ctor (System.String originalPath, System.String fullPath, System.String fileName, System.Boolean isNormalized) [0x00024] in <a40b0ad4a868437393ad434631fb6ff1>:0 
-  at System.IO.FileInfo..ctor (System.String fileName) [0x00000] in <a40b0ad4a868437393ad434631fb6ff1>:0 
-  at (wrapper remoting-invoke-with-check) System.IO.FileInfo..ctor(string)
-  at Doozy.Engine.Utils.DoozyPath.get_BasePath () [0x0003b] in C:\Users\fuyca\Desktop\Projects\TimberCraft\Assets\Doozy\Engine\Utils\DoozyPath.cs:158 
-  at Doozy.Engine.Utils.DoozyPath..cctor () [0x00000] in C:\Users\fuyca\Desktop\Projects\TimberCraft\Assets\Doozy\Engine\Utils\DoozyPath.cs:62 
-   --- End of inner exception stack trace ---
-  at Doozy.Editor.Internal.ProcessorsSettings.get_Instance () [0x00018] in C:\Users\fuyca\Desktop\Projects\TimberCraft\Assets\Doozy\Editor\Internal\ProcessorsSettings.cs:23 
-  at Doozy.Editor.Internal.FoldersProcessor.ExecuteProcessor () [0x0000c] in C:\Users\fuyca\Desktop\Projects\TimberCraft\Assets\Doozy\Editor\Internal\FoldersProcessor.cs:20 
-  at Doozy.Editor.Internal.FoldersProcessor..cctor () [0x00001] in C:\Users\fuyca\Desktop\Projects\TimberCraft\Assets\Doozy\Editor\Internal\FoldersProcessor.cs:15 
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:LogError (object)
-UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
-
-Mono: successfully reloaded assembly
-- Completed reload, in  2.195 seconds
-Domain Reload Profiling:
-	ReloadAssembly (2196ms)
-		BeginReloadAssembly (187ms)
-			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (6ms)
-			BackupInstance (0ms)
-			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (60ms)
-		EndReloadAssembly (1883ms)
-			LoadAssemblies (121ms)
-			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (398ms)
-			ReleaseScriptCaches (2ms)
-			RebuildScriptCaches (59ms)
-			SetupLoadedEditorAssemblies (1255ms)
-				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (34ms)
-				SetLoadedEditorAssemblies (1ms)
-				RefreshPlugins (2ms)
-				BeforeProcessingInitializeOnLoad (81ms)
-				ProcessInitializeOnLoadAttributes (701ms)
-				ProcessInitializeOnLoadMethodAttributes (426ms)
-				AfterProcessingInitializeOnLoad (10ms)
-				EditorAssembliesLoaded (1ms)
-			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (7ms)
-Platform modules already initialized, skipping
-Shader 'MoreMountains/MMRipple': fallback shader 'Particle/AlphaBlended' not found
-Refreshing native plugins compatible for Editor in 7.13 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 6023 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 53 unused Assets / (1.4 MB). Loaded Objects now: 6732.
-Memory consumption went from 403.8 MB to 402.3 MB.
-Total: 23.895300 ms (FindLiveObjects: 1.053400 ms CreateObjectMapping: 1.048100 ms MarkObjects: 21.409500 ms  DeleteObjects: 0.383200 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.009936 seconds.
-Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image C:\Users\fuyca\Desktop\Projects\TimberCraft\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
-Symbol file LoadedFromMemory doesn't match image C:\Users\fuyca\Desktop\Projects\TimberCraft\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
-Native extension for WindowsStandalone target not found
-Native extension for iOS target not found
-Native extension for Android target not found
-Refreshing native plugins compatible for Editor in 1.83 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-System.TypeInitializationException: The type initializer for 'Doozy.Engine.Utils.DoozyPath' threw an exception. ---> System.ArgumentException: The specified path is not of a legal form (empty).
-  at System.IO.Path.InsecureGetFullPath (System.String path) [0x00025] in <a40b0ad4a868437393ad434631fb6ff1>:0 
-  at System.IO.Path.GetFullPath (System.String path) [0x00000] in <a40b0ad4a868437393ad434631fb6ff1>:0 
-  at System.IO.FileInfo..ctor (System.String originalPath, System.String fullPath, System.String fileName, System.Boolean isNormalized) [0x00024] in <a40b0ad4a868437393ad434631fb6ff1>:0 
-  at System.IO.FileInfo..ctor (System.String fileName) [0x00000] in <a40b0ad4a868437393ad434631fb6ff1>:0 
-  at (wrapper remoting-invoke-with-check) System.IO.FileInfo..ctor(string)
-  at Doozy.Engine.Utils.DoozyPath.get_BasePath () [0x0003b] in C:\Users\fuyca\Desktop\Projects\TimberCraft\Assets\Doozy\Engine\Utils\DoozyPath.cs:158 
-  at Doozy.Engine.Utils.DoozyPath..cctor () [0x00000] in C:\Users\fuyca\Desktop\Projects\TimberCraft\Assets\Doozy\Engine\Utils\DoozyPath.cs:62 
-   --- End of inner exception stack trace ---
-  at Doozy.Editor.Internal.ProcessorsSettings.get_Instance () [0x00018] in C:\Users\fuyca\Desktop\Projects\TimberCraft\Assets\Doozy\Editor\Internal\ProcessorsSettings.cs:23 
-  at Doozy.Editor.Internal.DoozyAssetsProcessor.ExecuteProcessor () [0x0003f] in C:\Users\fuyca\Desktop\Projects\TimberCraft\Assets\Doozy\Editor\Internal\DoozyAssetsProcessor.cs:44 
-  at Doozy.Editor.Internal.DoozyAssetsProcessor..cctor () [0x00001] in C:\Users\fuyca\Desktop\Projects\TimberCraft\Assets\Doozy\Editor\Internal\DoozyAssetsProcessor.cs:25 
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:LogError (object)
-UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
-
-System.TypeInitializationException: The type initializer for 'Doozy.Engine.Utils.DoozyPath' threw an exception. ---> System.ArgumentException: The specified path is not of a legal form (empty).
-  at System.IO.Path.InsecureGetFullPath (System.String path) [0x00025] in <a40b0ad4a868437393ad434631fb6ff1>:0 
-  at System.IO.Path.GetFullPath (System.String path) [0x00000] in <a40b0ad4a868437393ad434631fb6ff1>:0 
-  at System.IO.FileInfo..ctor (System.String originalPath, System.String fullPath, System.String fileName, System.Boolean isNormalized) [0x00024] in <a40b0ad4a868437393ad434631fb6ff1>:0 
-  at System.IO.FileInfo..ctor (System.String fileName) [0x00000] in <a40b0ad4a868437393ad434631fb6ff1>:0 
-  at (wrapper remoting-invoke-with-check) System.IO.FileInfo..ctor(string)
-  at Doozy.Engine.Utils.DoozyPath.get_BasePath () [0x0003b] in C:\Users\fuyca\Desktop\Projects\TimberCraft\Assets\Doozy\Engine\Utils\DoozyPath.cs:158 
-  at Doozy.Engine.Utils.DoozyPath..cctor () [0x00000] in C:\Users\fuyca\Desktop\Projects\TimberCraft\Assets\Doozy\Engine\Utils\DoozyPath.cs:62 
-   --- End of inner exception stack trace ---
-  at Doozy.Editor.Internal.ProcessorsSettings.get_Instance () [0x00018] in C:\Users\fuyca\Desktop\Projects\TimberCraft\Assets\Doozy\Editor\Internal\ProcessorsSettings.cs:23 
-  at Doozy.Editor.Internal.FoldersProcessor.ExecuteProcessor () [0x0000c] in C:\Users\fuyca\Desktop\Projects\TimberCraft\Assets\Doozy\Editor\Internal\FoldersProcessor.cs:20 
-  at Doozy.Editor.Internal.FoldersProcessor..cctor () [0x00001] in C:\Users\fuyca\Desktop\Projects\TimberCraft\Assets\Doozy\Editor\Internal\FoldersProcessor.cs:15 
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:LogError (object)
-UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
-
-Mono: successfully reloaded assembly
-- Completed reload, in  2.262 seconds
-Domain Reload Profiling:
-	ReloadAssembly (2263ms)
-		BeginReloadAssembly (190ms)
-			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (7ms)
-			BackupInstance (0ms)
-			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (71ms)
-		EndReloadAssembly (1918ms)
-			LoadAssemblies (118ms)
-			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (455ms)
-			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (63ms)
-			SetupLoadedEditorAssemblies (1207ms)
-				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (30ms)
-				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (2ms)
-				BeforeProcessingInitializeOnLoad (99ms)
-				ProcessInitializeOnLoadAttributes (743ms)
-				ProcessInitializeOnLoadMethodAttributes (326ms)
-				AfterProcessingInitializeOnLoad (6ms)
-				EditorAssembliesLoaded (1ms)
-			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (7ms)
-Platform modules already initialized, skipping
-Shader 'MoreMountains/MMRipple': fallback shader 'Particle/AlphaBlended' not found
-Refreshing native plugins compatible for Editor in 5.61 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 6023 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 53 unused Assets / (1.4 MB). Loaded Objects now: 6747.
-Memory consumption went from 403.8 MB to 402.4 MB.
-Total: 21.140200 ms (FindLiveObjects: 0.646300 ms CreateObjectMapping: 0.439600 ms MarkObjects: 19.656100 ms  DeleteObjects: 0.396600 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.009573 seconds.
-Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image C:\Users\fuyca\Desktop\Projects\TimberCraft\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
-Symbol file LoadedFromMemory doesn't match image C:\Users\fuyca\Desktop\Projects\TimberCraft\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
-Native extension for WindowsStandalone target not found
-Native extension for iOS target not found
-Native extension for Android target not found
-Refreshing native plugins compatible for Editor in 1.87 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-System.TypeInitializationException: The type initializer for 'Doozy.Engine.Utils.DoozyPath' threw an exception. ---> System.ArgumentException: The specified path is not of a legal form (empty).
-  at System.IO.Path.InsecureGetFullPath (System.String path) [0x00025] in <a40b0ad4a868437393ad434631fb6ff1>:0 
-  at System.IO.Path.GetFullPath (System.String path) [0x00000] in <a40b0ad4a868437393ad434631fb6ff1>:0 
-  at System.IO.FileInfo..ctor (System.String originalPath, System.String fullPath, System.String fileName, System.Boolean isNormalized) [0x00024] in <a40b0ad4a868437393ad434631fb6ff1>:0 
-  at System.IO.FileInfo..ctor (System.String fileName) [0x00000] in <a40b0ad4a868437393ad434631fb6ff1>:0 
-  at (wrapper remoting-invoke-with-check) System.IO.FileInfo..ctor(string)
-  at Doozy.Engine.Utils.DoozyPath.get_BasePath () [0x0003b] in C:\Users\fuyca\Desktop\Projects\TimberCraft\Assets\Doozy\Engine\Utils\DoozyPath.cs:158 
-  at Doozy.Engine.Utils.DoozyPath..cctor () [0x00000] in C:\Users\fuyca\Desktop\Projects\TimberCraft\Assets\Doozy\Engine\Utils\DoozyPath.cs:62 
-   --- End of inner exception stack trace ---
-  at Doozy.Editor.Internal.ProcessorsSettings.get_Instance () [0x00018] in C:\Users\fuyca\Desktop\Projects\TimberCraft\Assets\Doozy\Editor\Internal\ProcessorsSettings.cs:23 
-  at Doozy.Editor.Internal.DoozyAssetsProcessor.ExecuteProcessor () [0x0003f] in C:\Users\fuyca\Desktop\Projects\TimberCraft\Assets\Doozy\Editor\Internal\DoozyAssetsProcessor.cs:44 
-  at Doozy.Editor.Internal.DoozyAssetsProcessor..cctor () [0x00001] in C:\Users\fuyca\Desktop\Projects\TimberCraft\Assets\Doozy\Editor\Internal\DoozyAssetsProcessor.cs:25 
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:LogError (object)
-UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
-
-System.TypeInitializationException: The type initializer for 'Doozy.Engine.Utils.DoozyPath' threw an exception. ---> System.ArgumentException: The specified path is not of a legal form (empty).
-  at System.IO.Path.InsecureGetFullPath (System.String path) [0x00025] in <a40b0ad4a868437393ad434631fb6ff1>:0 
-  at System.IO.Path.GetFullPath (System.String path) [0x00000] in <a40b0ad4a868437393ad434631fb6ff1>:0 
-  at System.IO.FileInfo..ctor (System.String originalPath, System.String fullPath, System.String fileName, System.Boolean isNormalized) [0x00024] in <a40b0ad4a868437393ad434631fb6ff1>:0 
-  at System.IO.FileInfo..ctor (System.String fileName) [0x00000] in <a40b0ad4a868437393ad434631fb6ff1>:0 
-  at (wrapper remoting-invoke-with-check) System.IO.FileInfo..ctor(string)
-  at Doozy.Engine.Utils.DoozyPath.get_BasePath () [0x0003b] in C:\Users\fuyca\Desktop\Projects\TimberCraft\Assets\Doozy\Engine\Utils\DoozyPath.cs:158 
-  at Doozy.Engine.Utils.DoozyPath..cctor () [0x00000] in C:\Users\fuyca\Desktop\Projects\TimberCraft\Assets\Doozy\Engine\Utils\DoozyPath.cs:62 
-   --- End of inner exception stack trace ---
-  at Doozy.Editor.Internal.ProcessorsSettings.get_Instance () [0x00018] in C:\Users\fuyca\Desktop\Projects\TimberCraft\Assets\Doozy\Editor\Internal\ProcessorsSettings.cs:23 
-  at Doozy.Editor.Internal.FoldersProcessor.ExecuteProcessor () [0x0000c] in C:\Users\fuyca\Desktop\Projects\TimberCraft\Assets\Doozy\Editor\Internal\FoldersProcessor.cs:20 
-  at Doozy.Editor.Internal.FoldersProcessor..cctor () [0x00001] in C:\Users\fuyca\Desktop\Projects\TimberCraft\Assets\Doozy\Editor\Internal\FoldersProcessor.cs:15 
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:LogError (object)
-UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
-
-Mono: successfully reloaded assembly
-- Completed reload, in  2.262 seconds
-Domain Reload Profiling:
-	ReloadAssembly (2263ms)
-		BeginReloadAssembly (174ms)
-			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (6ms)
-			BackupInstance (0ms)
-			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (68ms)
-		EndReloadAssembly (1961ms)
-			LoadAssemblies (107ms)
-			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (460ms)
-			ReleaseScriptCaches (2ms)
-			RebuildScriptCaches (61ms)
-			SetupLoadedEditorAssemblies (1233ms)
-				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (41ms)
-				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (2ms)
-				BeforeProcessingInitializeOnLoad (86ms)
-				ProcessInitializeOnLoadAttributes (679ms)
-				ProcessInitializeOnLoadMethodAttributes (412ms)
-				AfterProcessingInitializeOnLoad (10ms)
-				EditorAssembliesLoaded (3ms)
-			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (8ms)
-Platform modules already initialized, skipping
-Shader 'MoreMountains/MMRipple': fallback shader 'Particle/AlphaBlended' not found
-Refreshing native plugins compatible for Editor in 5.16 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 6023 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 53 unused Assets / (1.4 MB). Loaded Objects now: 6762.
-Memory consumption went from 403.8 MB to 402.4 MB.
-Total: 25.214600 ms (FindLiveObjects: 0.519300 ms CreateObjectMapping: 0.431800 ms MarkObjects: 23.904000 ms  DeleteObjects: 0.358900 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.011994 seconds.
-Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image C:\Users\fuyca\Desktop\Projects\TimberCraft\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
-Symbol file LoadedFromMemory doesn't match image C:\Users\fuyca\Desktop\Projects\TimberCraft\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
-Native extension for WindowsStandalone target not found
-Native extension for iOS target not found
-Native extension for Android target not found
-Refreshing native plugins compatible for Editor in 1.82 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-System.TypeInitializationException: The type initializer for 'Doozy.Engine.Utils.DoozyPath' threw an exception. ---> System.ArgumentException: The specified path is not of a legal form (empty).
-  at System.IO.Path.InsecureGetFullPath (System.String path) [0x00025] in <a40b0ad4a868437393ad434631fb6ff1>:0 
-  at System.IO.Path.GetFullPath (System.String path) [0x00000] in <a40b0ad4a868437393ad434631fb6ff1>:0 
-  at System.IO.FileInfo..ctor (System.String originalPath, System.String fullPath, System.String fileName, System.Boolean isNormalized) [0x00024] in <a40b0ad4a868437393ad434631fb6ff1>:0 
-  at System.IO.FileInfo..ctor (System.String fileName) [0x00000] in <a40b0ad4a868437393ad434631fb6ff1>:0 
-  at (wrapper remoting-invoke-with-check) System.IO.FileInfo..ctor(string)
-  at Doozy.Engine.Utils.DoozyPath.get_BasePath () [0x0003b] in C:\Users\fuyca\Desktop\Projects\TimberCraft\Assets\Doozy\Engine\Utils\DoozyPath.cs:158 
-  at Doozy.Engine.Utils.DoozyPath..cctor () [0x00000] in C:\Users\fuyca\Desktop\Projects\TimberCraft\Assets\Doozy\Engine\Utils\DoozyPath.cs:62 
-   --- End of inner exception stack trace ---
-  at Doozy.Editor.Internal.ProcessorsSettings.get_Instance () [0x00018] in C:\Users\fuyca\Desktop\Projects\TimberCraft\Assets\Doozy\Editor\Internal\ProcessorsSettings.cs:23 
-  at Doozy.Editor.Internal.DoozyAssetsProcessor.ExecuteProcessor () [0x0003f] in C:\Users\fuyca\Desktop\Projects\TimberCraft\Assets\Doozy\Editor\Internal\DoozyAssetsProcessor.cs:44 
-  at Doozy.Editor.Internal.DoozyAssetsProcessor..cctor () [0x00001] in C:\Users\fuyca\Desktop\Projects\TimberCraft\Assets\Doozy\Editor\Internal\DoozyAssetsProcessor.cs:25 
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:LogError (object)
-UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
-
-System.TypeInitializationException: The type initializer for 'Doozy.Engine.Utils.DoozyPath' threw an exception. ---> System.ArgumentException: The specified path is not of a legal form (empty).
-  at System.IO.Path.InsecureGetFullPath (System.String path) [0x00025] in <a40b0ad4a868437393ad434631fb6ff1>:0 
-  at System.IO.Path.GetFullPath (System.String path) [0x00000] in <a40b0ad4a868437393ad434631fb6ff1>:0 
-  at System.IO.FileInfo..ctor (System.String originalPath, System.String fullPath, System.String fileName, System.Boolean isNormalized) [0x00024] in <a40b0ad4a868437393ad434631fb6ff1>:0 
-  at System.IO.FileInfo..ctor (System.String fileName) [0x00000] in <a40b0ad4a868437393ad434631fb6ff1>:0 
-  at (wrapper remoting-invoke-with-check) System.IO.FileInfo..ctor(string)
-  at Doozy.Engine.Utils.DoozyPath.get_BasePath () [0x0003b] in C:\Users\fuyca\Desktop\Projects\TimberCraft\Assets\Doozy\Engine\Utils\DoozyPath.cs:158 
-  at Doozy.Engine.Utils.DoozyPath..cctor () [0x00000] in C:\Users\fuyca\Desktop\Projects\TimberCraft\Assets\Doozy\Engine\Utils\DoozyPath.cs:62 
-   --- End of inner exception stack trace ---
-  at Doozy.Editor.Internal.ProcessorsSettings.get_Instance () [0x00018] in C:\Users\fuyca\Desktop\Projects\TimberCraft\Assets\Doozy\Editor\Internal\ProcessorsSettings.cs:23 
-  at Doozy.Editor.Internal.FoldersProcessor.ExecuteProcessor () [0x0000c] in C:\Users\fuyca\Desktop\Projects\TimberCraft\Assets\Doozy\Editor\Internal\FoldersProcessor.cs:20 
-  at Doozy.Editor.Internal.FoldersProcessor..cctor () [0x00001] in C:\Users\fuyca\Desktop\Projects\TimberCraft\Assets\Doozy\Editor\Internal\FoldersProcessor.cs:15 
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:LogError (object)
-UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
-
-Mono: successfully reloaded assembly
-- Completed reload, in  2.235 seconds
-Domain Reload Profiling:
-	ReloadAssembly (2236ms)
-		BeginReloadAssembly (165ms)
-			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (5ms)
-			BackupInstance (0ms)
-			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (53ms)
-		EndReloadAssembly (1963ms)
-			LoadAssemblies (113ms)
-			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (541ms)
-			ReleaseScriptCaches (2ms)
-			RebuildScriptCaches (60ms)
-			SetupLoadedEditorAssemblies (1180ms)
-				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (30ms)
-				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (2ms)
-				BeforeProcessingInitializeOnLoad (89ms)
-				ProcessInitializeOnLoadAttributes (745ms)
-				ProcessInitializeOnLoadMethodAttributes (305ms)
-				AfterProcessingInitializeOnLoad (8ms)
-				EditorAssembliesLoaded (1ms)
-			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (5ms)
-Platform modules already initialized, skipping
-Shader 'MoreMountains/MMRipple': fallback shader 'Particle/AlphaBlended' not found
-Refreshing native plugins compatible for Editor in 5.98 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 6023 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 53 unused Assets / (1.4 MB). Loaded Objects now: 6777.
-Memory consumption went from 403.9 MB to 402.4 MB.
-Total: 21.884200 ms (FindLiveObjects: 0.596500 ms CreateObjectMapping: 0.488600 ms MarkObjects: 20.216800 ms  DeleteObjects: 0.581200 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.008670 seconds.
-Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image C:\Users\fuyca\Desktop\Projects\TimberCraft\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
-Symbol file LoadedFromMemory doesn't match image C:\Users\fuyca\Desktop\Projects\TimberCraft\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
-Native extension for WindowsStandalone target not found
-Native extension for iOS target not found
-Native extension for Android target not found
-Refreshing native plugins compatible for Editor in 1.88 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-System.TypeInitializationException: The type initializer for 'Doozy.Engine.Utils.DoozyPath' threw an exception. ---> System.ArgumentException: The specified path is not of a legal form (empty).
-  at System.IO.Path.InsecureGetFullPath (System.String path) [0x00025] in <a40b0ad4a868437393ad434631fb6ff1>:0 
-  at System.IO.Path.GetFullPath (System.String path) [0x00000] in <a40b0ad4a868437393ad434631fb6ff1>:0 
-  at System.IO.FileInfo..ctor (System.String originalPath, System.String fullPath, System.String fileName, System.Boolean isNormalized) [0x00024] in <a40b0ad4a868437393ad434631fb6ff1>:0 
-  at System.IO.FileInfo..ctor (System.String fileName) [0x00000] in <a40b0ad4a868437393ad434631fb6ff1>:0 
-  at (wrapper remoting-invoke-with-check) System.IO.FileInfo..ctor(string)
-  at Doozy.Engine.Utils.DoozyPath.get_BasePath () [0x0003b] in C:\Users\fuyca\Desktop\Projects\TimberCraft\Assets\Doozy\Engine\Utils\DoozyPath.cs:158 
-  at Doozy.Engine.Utils.DoozyPath..cctor () [0x00000] in C:\Users\fuyca\Desktop\Projects\TimberCraft\Assets\Doozy\Engine\Utils\DoozyPath.cs:62 
-   --- End of inner exception stack trace ---
-  at Doozy.Editor.Internal.ProcessorsSettings.get_Instance () [0x00018] in C:\Users\fuyca\Desktop\Projects\TimberCraft\Assets\Doozy\Editor\Internal\ProcessorsSettings.cs:23 
-  at Doozy.Editor.Internal.DoozyAssetsProcessor.ExecuteProcessor () [0x0003f] in C:\Users\fuyca\Desktop\Projects\TimberCraft\Assets\Doozy\Editor\Internal\DoozyAssetsProcessor.cs:44 
-  at Doozy.Editor.Internal.DoozyAssetsProcessor..cctor () [0x00001] in C:\Users\fuyca\Desktop\Projects\TimberCraft\Assets\Doozy\Editor\Internal\DoozyAssetsProcessor.cs:25 
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:LogError (object)
-UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
-
-System.TypeInitializationException: The type initializer for 'Doozy.Engine.Utils.DoozyPath' threw an exception. ---> System.ArgumentException: The specified path is not of a legal form (empty).
-  at System.IO.Path.InsecureGetFullPath (System.String path) [0x00025] in <a40b0ad4a868437393ad434631fb6ff1>:0 
-  at System.IO.Path.GetFullPath (System.String path) [0x00000] in <a40b0ad4a868437393ad434631fb6ff1>:0 
-  at System.IO.FileInfo..ctor (System.String originalPath, System.String fullPath, System.String fileName, System.Boolean isNormalized) [0x00024] in <a40b0ad4a868437393ad434631fb6ff1>:0 
-  at System.IO.FileInfo..ctor (System.String fileName) [0x00000] in <a40b0ad4a868437393ad434631fb6ff1>:0 
-  at (wrapper remoting-invoke-with-check) System.IO.FileInfo..ctor(string)
-  at Doozy.Engine.Utils.DoozyPath.get_BasePath () [0x0003b] in C:\Users\fuyca\Desktop\Projects\TimberCraft\Assets\Doozy\Engine\Utils\DoozyPath.cs:158 
-  at Doozy.Engine.Utils.DoozyPath..cctor () [0x00000] in C:\Users\fuyca\Desktop\Projects\TimberCraft\Assets\Doozy\Engine\Utils\DoozyPath.cs:62 
-   --- End of inner exception stack trace ---
-  at Doozy.Editor.Internal.ProcessorsSettings.get_Instance () [0x00018] in C:\Users\fuyca\Desktop\Projects\TimberCraft\Assets\Doozy\Editor\Internal\ProcessorsSettings.cs:23 
-  at Doozy.Editor.Internal.FoldersProcessor.ExecuteProcessor () [0x0000c] in C:\Users\fuyca\Desktop\Projects\TimberCraft\Assets\Doozy\Editor\Internal\FoldersProcessor.cs:20 
-  at Doozy.Editor.Internal.FoldersProcessor..cctor () [0x00001] in C:\Users\fuyca\Desktop\Projects\TimberCraft\Assets\Doozy\Editor\Internal\FoldersProcessor.cs:15 
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:LogError (object)
-UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
-
-Mono: successfully reloaded assembly
-- Completed reload, in  2.254 seconds
-Domain Reload Profiling:
-	ReloadAssembly (2254ms)
-		BeginReloadAssembly (183ms)
-			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (5ms)
-			BackupInstance (0ms)
-			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (57ms)
-		EndReloadAssembly (1953ms)
-			LoadAssemblies (118ms)
-			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (557ms)
-			ReleaseScriptCaches (2ms)
-			RebuildScriptCaches (91ms)
-			SetupLoadedEditorAssemblies (1114ms)
-				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (35ms)
-				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (2ms)
-				BeforeProcessingInitializeOnLoad (93ms)
-				ProcessInitializeOnLoadAttributes (680ms)
-				ProcessInitializeOnLoadMethodAttributes (298ms)
-				AfterProcessingInitializeOnLoad (5ms)
-				EditorAssembliesLoaded (1ms)
-			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (5ms)
-Platform modules already initialized, skipping
-Shader 'MoreMountains/MMRipple': fallback shader 'Particle/AlphaBlended' not found
-Refreshing native plugins compatible for Editor in 7.67 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 6023 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 53 unused Assets / (1.4 MB). Loaded Objects now: 6792.
-Memory consumption went from 403.9 MB to 402.5 MB.
-Total: 22.320200 ms (FindLiveObjects: 0.559100 ms CreateObjectMapping: 0.521600 ms MarkObjects: 20.710600 ms  DeleteObjects: 0.528000 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.012572 seconds.
-Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image C:\Users\fuyca\Desktop\Projects\TimberCraft\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
-Symbol file LoadedFromMemory doesn't match image C:\Users\fuyca\Desktop\Projects\TimberCraft\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
-Native extension for WindowsStandalone target not found
-Native extension for iOS target not found
-Native extension for Android target not found
-Refreshing native plugins compatible for Editor in 2.17 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-System.TypeInitializationException: The type initializer for 'Doozy.Engine.Utils.DoozyPath' threw an exception. ---> System.ArgumentException: The specified path is not of a legal form (empty).
-  at System.IO.Path.InsecureGetFullPath (System.String path) [0x00025] in <a40b0ad4a868437393ad434631fb6ff1>:0 
-  at System.IO.Path.GetFullPath (System.String path) [0x00000] in <a40b0ad4a868437393ad434631fb6ff1>:0 
-  at System.IO.FileInfo..ctor (System.String originalPath, System.String fullPath, System.String fileName, System.Boolean isNormalized) [0x00024] in <a40b0ad4a868437393ad434631fb6ff1>:0 
-  at System.IO.FileInfo..ctor (System.String fileName) [0x00000] in <a40b0ad4a868437393ad434631fb6ff1>:0 
-  at (wrapper remoting-invoke-with-check) System.IO.FileInfo..ctor(string)
-  at Doozy.Engine.Utils.DoozyPath.get_BasePath () [0x0003b] in C:\Users\fuyca\Desktop\Projects\TimberCraft\Assets\Doozy\Engine\Utils\DoozyPath.cs:158 
-  at Doozy.Engine.Utils.DoozyPath..cctor () [0x00000] in C:\Users\fuyca\Desktop\Projects\TimberCraft\Assets\Doozy\Engine\Utils\DoozyPath.cs:62 
-   --- End of inner exception stack trace ---
-  at Doozy.Editor.Internal.ProcessorsSettings.get_Instance () [0x00018] in C:\Users\fuyca\Desktop\Projects\TimberCraft\Assets\Doozy\Editor\Internal\ProcessorsSettings.cs:23 
-  at Doozy.Editor.Internal.DoozyAssetsProcessor.ExecuteProcessor () [0x0003f] in C:\Users\fuyca\Desktop\Projects\TimberCraft\Assets\Doozy\Editor\Internal\DoozyAssetsProcessor.cs:44 
-  at Doozy.Editor.Internal.DoozyAssetsProcessor..cctor () [0x00001] in C:\Users\fuyca\Desktop\Projects\TimberCraft\Assets\Doozy\Editor\Internal\DoozyAssetsProcessor.cs:25 
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:LogError (object)
-UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
-
-System.TypeInitializationException: The type initializer for 'Doozy.Engine.Utils.DoozyPath' threw an exception. ---> System.ArgumentException: The specified path is not of a legal form (empty).
-  at System.IO.Path.InsecureGetFullPath (System.String path) [0x00025] in <a40b0ad4a868437393ad434631fb6ff1>:0 
-  at System.IO.Path.GetFullPath (System.String path) [0x00000] in <a40b0ad4a868437393ad434631fb6ff1>:0 
-  at System.IO.FileInfo..ctor (System.String originalPath, System.String fullPath, System.String fileName, System.Boolean isNormalized) [0x00024] in <a40b0ad4a868437393ad434631fb6ff1>:0 
-  at System.IO.FileInfo..ctor (System.String fileName) [0x00000] in <a40b0ad4a868437393ad434631fb6ff1>:0 
-  at (wrapper remoting-invoke-with-check) System.IO.FileInfo..ctor(string)
-  at Doozy.Engine.Utils.DoozyPath.get_BasePath () [0x0003b] in C:\Users\fuyca\Desktop\Projects\TimberCraft\Assets\Doozy\Engine\Utils\DoozyPath.cs:158 
-  at Doozy.Engine.Utils.DoozyPath..cctor () [0x00000] in C:\Users\fuyca\Desktop\Projects\TimberCraft\Assets\Doozy\Engine\Utils\DoozyPath.cs:62 
-   --- End of inner exception stack trace ---
-  at Doozy.Editor.Internal.ProcessorsSettings.get_Instance () [0x00018] in C:\Users\fuyca\Desktop\Projects\TimberCraft\Assets\Doozy\Editor\Internal\ProcessorsSettings.cs:23 
-  at Doozy.Editor.Internal.FoldersProcessor.ExecuteProcessor () [0x0000c] in C:\Users\fuyca\Desktop\Projects\TimberCraft\Assets\Doozy\Editor\Internal\FoldersProcessor.cs:20 
-  at Doozy.Editor.Internal.FoldersProcessor..cctor () [0x00001] in C:\Users\fuyca\Desktop\Projects\TimberCraft\Assets\Doozy\Editor\Internal\FoldersProcessor.cs:15 
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:LogError (object)
-UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
-
-Mono: successfully reloaded assembly
-- Completed reload, in  3.001 seconds
-Domain Reload Profiling:
-	ReloadAssembly (3002ms)
-		BeginReloadAssembly (219ms)
-			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (9ms)
-			BackupInstance (0ms)
-			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (70ms)
-		EndReloadAssembly (2626ms)
-			LoadAssemblies (147ms)
-			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (580ms)
-			ReleaseScriptCaches (2ms)
-			RebuildScriptCaches (85ms)
-			SetupLoadedEditorAssemblies (1704ms)
-				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (46ms)
-				SetLoadedEditorAssemblies (1ms)
-				RefreshPlugins (2ms)
-				BeforeProcessingInitializeOnLoad (126ms)
-				ProcessInitializeOnLoadAttributes (1108ms)
-				ProcessInitializeOnLoadMethodAttributes (411ms)
-				AfterProcessingInitializeOnLoad (9ms)
-				EditorAssembliesLoaded (1ms)
-			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (10ms)
-Platform modules already initialized, skipping
-Shader 'MoreMountains/MMRipple': fallback shader 'Particle/AlphaBlended' not found
-Refreshing native plugins compatible for Editor in 10.01 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 6023 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 53 unused Assets / (1.4 MB). Loaded Objects now: 6807.
-Memory consumption went from 404.0 MB to 402.5 MB.
-Total: 27.769500 ms (FindLiveObjects: 0.627400 ms CreateObjectMapping: 0.514200 ms MarkObjects: 25.982700 ms  DeleteObjects: 0.643200 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.016129 seconds.
-Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image C:\Users\fuyca\Desktop\Projects\TimberCraft\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
-Symbol file LoadedFromMemory doesn't match image C:\Users\fuyca\Desktop\Projects\TimberCraft\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
-Native extension for WindowsStandalone target not found
-Native extension for iOS target not found
-Native extension for Android target not found
-Refreshing native plugins compatible for Editor in 2.26 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-System.TypeInitializationException: The type initializer for 'Doozy.Engine.Utils.DoozyPath' threw an exception. ---> System.ArgumentException: The specified path is not of a legal form (empty).
-  at System.IO.Path.InsecureGetFullPath (System.String path) [0x00025] in <a40b0ad4a868437393ad434631fb6ff1>:0 
-  at System.IO.Path.GetFullPath (System.String path) [0x00000] in <a40b0ad4a868437393ad434631fb6ff1>:0 
-  at System.IO.FileInfo..ctor (System.String originalPath, System.String fullPath, System.String fileName, System.Boolean isNormalized) [0x00024] in <a40b0ad4a868437393ad434631fb6ff1>:0 
-  at System.IO.FileInfo..ctor (System.String fileName) [0x00000] in <a40b0ad4a868437393ad434631fb6ff1>:0 
-  at (wrapper remoting-invoke-with-check) System.IO.FileInfo..ctor(string)
-  at Doozy.Engine.Utils.DoozyPath.get_BasePath () [0x0003b] in C:\Users\fuyca\Desktop\Projects\TimberCraft\Assets\Doozy\Engine\Utils\DoozyPath.cs:158 
-  at Doozy.Engine.Utils.DoozyPath..cctor () [0x00000] in C:\Users\fuyca\Desktop\Projects\TimberCraft\Assets\Doozy\Engine\Utils\DoozyPath.cs:62 
-   --- End of inner exception stack trace ---
-  at Doozy.Editor.Internal.ProcessorsSettings.get_Instance () [0x00018] in C:\Users\fuyca\Desktop\Projects\TimberCraft\Assets\Doozy\Editor\Internal\ProcessorsSettings.cs:23 
-  at Doozy.Editor.Internal.DoozyAssetsProcessor.ExecuteProcessor () [0x0003f] in C:\Users\fuyca\Desktop\Projects\TimberCraft\Assets\Doozy\Editor\Internal\DoozyAssetsProcessor.cs:44 
-  at Doozy.Editor.Internal.DoozyAssetsProcessor..cctor () [0x00001] in C:\Users\fuyca\Desktop\Projects\TimberCraft\Assets\Doozy\Editor\Internal\DoozyAssetsProcessor.cs:25 
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:LogError (object)
-UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
-
-System.TypeInitializationException: The type initializer for 'Doozy.Engine.Utils.DoozyPath' threw an exception. ---> System.ArgumentException: The specified path is not of a legal form (empty).
-  at System.IO.Path.InsecureGetFullPath (System.String path) [0x00025] in <a40b0ad4a868437393ad434631fb6ff1>:0 
-  at System.IO.Path.GetFullPath (System.String path) [0x00000] in <a40b0ad4a868437393ad434631fb6ff1>:0 
-  at System.IO.FileInfo..ctor (System.String originalPath, System.String fullPath, System.String fileName, System.Boolean isNormalized) [0x00024] in <a40b0ad4a868437393ad434631fb6ff1>:0 
-  at System.IO.FileInfo..ctor (System.String fileName) [0x00000] in <a40b0ad4a868437393ad434631fb6ff1>:0 
-  at (wrapper remoting-invoke-with-check) System.IO.FileInfo..ctor(string)
-  at Doozy.Engine.Utils.DoozyPath.get_BasePath () [0x0003b] in C:\Users\fuyca\Desktop\Projects\TimberCraft\Assets\Doozy\Engine\Utils\DoozyPath.cs:158 
-  at Doozy.Engine.Utils.DoozyPath..cctor () [0x00000] in C:\Users\fuyca\Desktop\Projects\TimberCraft\Assets\Doozy\Engine\Utils\DoozyPath.cs:62 
-   --- End of inner exception stack trace ---
-  at Doozy.Editor.Internal.ProcessorsSettings.get_Instance () [0x00018] in C:\Users\fuyca\Desktop\Projects\TimberCraft\Assets\Doozy\Editor\Internal\ProcessorsSettings.cs:23 
-  at Doozy.Editor.Internal.FoldersProcessor.ExecuteProcessor () [0x0000c] in C:\Users\fuyca\Desktop\Projects\TimberCraft\Assets\Doozy\Editor\Internal\FoldersProcessor.cs:20 
-  at Doozy.Editor.Internal.FoldersProcessor..cctor () [0x00001] in C:\Users\fuyca\Desktop\Projects\TimberCraft\Assets\Doozy\Editor\Internal\FoldersProcessor.cs:15 
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:LogError (object)
-UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
-
-Mono: successfully reloaded assembly
-- Completed reload, in  3.125 seconds
-Domain Reload Profiling:
-	ReloadAssembly (3126ms)
-		BeginReloadAssembly (214ms)
-			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (7ms)
-			BackupInstance (0ms)
-			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (72ms)
-		EndReloadAssembly (2755ms)
-			LoadAssemblies (138ms)
-			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (564ms)
-			ReleaseScriptCaches (2ms)
-			RebuildScriptCaches (88ms)
-			SetupLoadedEditorAssemblies (1823ms)
-				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (42ms)
-				SetLoadedEditorAssemblies (1ms)
-				RefreshPlugins (2ms)
-				BeforeProcessingInitializeOnLoad (123ms)
-				ProcessInitializeOnLoadAttributes (1045ms)
-				ProcessInitializeOnLoadMethodAttributes (598ms)
+				RefreshPlugins (5ms)
+				BeforeProcessingInitializeOnLoad (177ms)
+				ProcessInitializeOnLoadAttributes (1488ms)
+				ProcessInitializeOnLoadMethodAttributes (608ms)
 				AfterProcessingInitializeOnLoad (11ms)
-				EditorAssembliesLoaded (1ms)
-			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (10ms)
-Platform modules already initialized, skipping
-Shader 'MoreMountains/MMRipple': fallback shader 'Particle/AlphaBlended' not found
-Refreshing native plugins compatible for Editor in 9.33 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 6023 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 53 unused Assets / (1.4 MB). Loaded Objects now: 6822.
-Memory consumption went from 404.0 MB to 402.6 MB.
-Total: 35.838300 ms (FindLiveObjects: 1.073900 ms CreateObjectMapping: 0.994400 ms MarkObjects: 32.908300 ms  DeleteObjects: 0.859800 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.051823 seconds.
-Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image C:\Users\fuyca\Desktop\Projects\TimberCraft\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
-Symbol file LoadedFromMemory doesn't match image C:\Users\fuyca\Desktop\Projects\TimberCraft\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
-Native extension for WindowsStandalone target not found
-Native extension for iOS target not found
-Native extension for Android target not found
-Refreshing native plugins compatible for Editor in 2.47 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-System.TypeInitializationException: The type initializer for 'Doozy.Engine.Utils.DoozyPath' threw an exception. ---> System.ArgumentException: The specified path is not of a legal form (empty).
-  at System.IO.Path.InsecureGetFullPath (System.String path) [0x00025] in <a40b0ad4a868437393ad434631fb6ff1>:0 
-  at System.IO.Path.GetFullPath (System.String path) [0x00000] in <a40b0ad4a868437393ad434631fb6ff1>:0 
-  at System.IO.FileInfo..ctor (System.String originalPath, System.String fullPath, System.String fileName, System.Boolean isNormalized) [0x00024] in <a40b0ad4a868437393ad434631fb6ff1>:0 
-  at System.IO.FileInfo..ctor (System.String fileName) [0x00000] in <a40b0ad4a868437393ad434631fb6ff1>:0 
-  at (wrapper remoting-invoke-with-check) System.IO.FileInfo..ctor(string)
-  at Doozy.Engine.Utils.DoozyPath.get_BasePath () [0x0003b] in C:\Users\fuyca\Desktop\Projects\TimberCraft\Assets\Doozy\Engine\Utils\DoozyPath.cs:158 
-  at Doozy.Engine.Utils.DoozyPath..cctor () [0x00000] in C:\Users\fuyca\Desktop\Projects\TimberCraft\Assets\Doozy\Engine\Utils\DoozyPath.cs:62 
-   --- End of inner exception stack trace ---
-  at Doozy.Editor.Internal.ProcessorsSettings.get_Instance () [0x00018] in C:\Users\fuyca\Desktop\Projects\TimberCraft\Assets\Doozy\Editor\Internal\ProcessorsSettings.cs:23 
-  at Doozy.Editor.Internal.DoozyAssetsProcessor.ExecuteProcessor () [0x0003f] in C:\Users\fuyca\Desktop\Projects\TimberCraft\Assets\Doozy\Editor\Internal\DoozyAssetsProcessor.cs:44 
-  at Doozy.Editor.Internal.DoozyAssetsProcessor..cctor () [0x00001] in C:\Users\fuyca\Desktop\Projects\TimberCraft\Assets\Doozy\Editor\Internal\DoozyAssetsProcessor.cs:25 
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:LogError (object)
-UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
-
-System.TypeInitializationException: The type initializer for 'Doozy.Engine.Utils.DoozyPath' threw an exception. ---> System.ArgumentException: The specified path is not of a legal form (empty).
-  at System.IO.Path.InsecureGetFullPath (System.String path) [0x00025] in <a40b0ad4a868437393ad434631fb6ff1>:0 
-  at System.IO.Path.GetFullPath (System.String path) [0x00000] in <a40b0ad4a868437393ad434631fb6ff1>:0 
-  at System.IO.FileInfo..ctor (System.String originalPath, System.String fullPath, System.String fileName, System.Boolean isNormalized) [0x00024] in <a40b0ad4a868437393ad434631fb6ff1>:0 
-  at System.IO.FileInfo..ctor (System.String fileName) [0x00000] in <a40b0ad4a868437393ad434631fb6ff1>:0 
-  at (wrapper remoting-invoke-with-check) System.IO.FileInfo..ctor(string)
-  at Doozy.Engine.Utils.DoozyPath.get_BasePath () [0x0003b] in C:\Users\fuyca\Desktop\Projects\TimberCraft\Assets\Doozy\Engine\Utils\DoozyPath.cs:158 
-  at Doozy.Engine.Utils.DoozyPath..cctor () [0x00000] in C:\Users\fuyca\Desktop\Projects\TimberCraft\Assets\Doozy\Engine\Utils\DoozyPath.cs:62 
-   --- End of inner exception stack trace ---
-  at Doozy.Editor.Internal.ProcessorsSettings.get_Instance () [0x00018] in C:\Users\fuyca\Desktop\Projects\TimberCraft\Assets\Doozy\Editor\Internal\ProcessorsSettings.cs:23 
-  at Doozy.Editor.Internal.FoldersProcessor.ExecuteProcessor () [0x0000c] in C:\Users\fuyca\Desktop\Projects\TimberCraft\Assets\Doozy\Editor\Internal\FoldersProcessor.cs:20 
-  at Doozy.Editor.Internal.FoldersProcessor..cctor () [0x00001] in C:\Users\fuyca\Desktop\Projects\TimberCraft\Assets\Doozy\Editor\Internal\FoldersProcessor.cs:15 
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:LogError (object)
-UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
-
-Mono: successfully reloaded assembly
-- Completed reload, in 17.842 seconds
-Domain Reload Profiling:
-	ReloadAssembly (17845ms)
-		BeginReloadAssembly (12031ms)
-			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (171ms)
-			BackupInstance (0ms)
-			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (1142ms)
-		EndReloadAssembly (5539ms)
-			LoadAssemblies (12197ms)
-			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (823ms)
-			ReleaseScriptCaches (8ms)
-			RebuildScriptCaches (180ms)
-			SetupLoadedEditorAssemblies (2207ms)
-				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (58ms)
-				SetLoadedEditorAssemblies (1ms)
-				RefreshPlugins (3ms)
-				BeforeProcessingInitializeOnLoad (143ms)
-				ProcessInitializeOnLoadAttributes (1233ms)
-				ProcessInitializeOnLoadMethodAttributes (758ms)
-				AfterProcessingInitializeOnLoad (10ms)
 				EditorAssembliesLoaded (2ms)
 			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (12ms)
+			AwakeInstancesAfterBackupRestoration (13ms)
 Platform modules already initialized, skipping
 Shader 'MoreMountains/MMRipple': fallback shader 'Particle/AlphaBlended' not found
-Refreshing native plugins compatible for Editor in 9.97 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 7.86 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 6041 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 61 unused Assets / (3.3 MB). Loaded Objects now: 6847.
-Memory consumption went from 407.2 MB to 404.0 MB.
-Total: 41.753300 ms (FindLiveObjects: 1.001900 ms CreateObjectMapping: 0.585900 ms MarkObjects: 39.056600 ms  DeleteObjects: 1.096300 ms)
+Unloading 6034 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 54 unused Assets / (1.4 MB). Loaded Objects now: 6691.
+Memory consumption went from 423.8 MB to 422.4 MB.
+Total: 46.681800 ms (FindLiveObjects: 0.655600 ms CreateObjectMapping: 0.592600 ms MarkObjects: 44.870700 ms  DeleteObjects: 0.560700 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
@@ -1424,14 +278,14 @@ AssetImportParameters requested are different than current active one (requested
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.012368 seconds.
+Registered in 0.017231 seconds.
 Begin MonoManager ReloadAssembly
 Symbol file LoadedFromMemory doesn't match image C:\Users\fuyca\Desktop\Projects\TimberCraft\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
 Symbol file LoadedFromMemory doesn't match image C:\Users\fuyca\Desktop\Projects\TimberCraft\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
 Native extension for WindowsStandalone target not found
 Native extension for iOS target not found
 Native extension for Android target not found
-Refreshing native plugins compatible for Editor in 2.20 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 2.53 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 System.TypeInitializationException: The type initializer for 'Doozy.Engine.Utils.DoozyPath' threw an exception. ---> System.ArgumentException: The specified path is not of a legal form (empty).
   at System.IO.Path.InsecureGetFullPath (System.String path) [0x00025] in <a40b0ad4a868437393ad434631fb6ff1>:0 
@@ -1470,548 +324,41 @@ UnityEngine.Debug:LogError (object)
 UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
 
 Mono: successfully reloaded assembly
-- Completed reload, in  3.161 seconds
+- Completed reload, in  3.757 seconds
 Domain Reload Profiling:
-	ReloadAssembly (3162ms)
-		BeginReloadAssembly (227ms)
-			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (7ms)
-			BackupInstance (0ms)
-			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (76ms)
-		EndReloadAssembly (2773ms)
-			LoadAssemblies (147ms)
-			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (581ms)
-			ReleaseScriptCaches (2ms)
-			RebuildScriptCaches (86ms)
-			SetupLoadedEditorAssemblies (1841ms)
-				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (49ms)
-				SetLoadedEditorAssemblies (1ms)
-				RefreshPlugins (2ms)
-				BeforeProcessingInitializeOnLoad (117ms)
-				ProcessInitializeOnLoadAttributes (1126ms)
-				ProcessInitializeOnLoadMethodAttributes (533ms)
-				AfterProcessingInitializeOnLoad (12ms)
-				EditorAssembliesLoaded (1ms)
-			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (11ms)
-Platform modules already initialized, skipping
-Shader 'MoreMountains/MMRipple': fallback shader 'Particle/AlphaBlended' not found
-Refreshing native plugins compatible for Editor in 7.94 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 6041 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 61 unused Assets / (3.3 MB). Loaded Objects now: 6862.
-Memory consumption went from 407.2 MB to 404.0 MB.
-Total: 37.747300 ms (FindLiveObjects: 0.856500 ms CreateObjectMapping: 0.759600 ms MarkObjects: 34.805400 ms  DeleteObjects: 1.324400 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.015113 seconds.
-Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image C:\Users\fuyca\Desktop\Projects\TimberCraft\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
-Symbol file LoadedFromMemory doesn't match image C:\Users\fuyca\Desktop\Projects\TimberCraft\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
-Native extension for WindowsStandalone target not found
-Native extension for iOS target not found
-Native extension for Android target not found
-Refreshing native plugins compatible for Editor in 2.36 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-System.TypeInitializationException: The type initializer for 'Doozy.Engine.Utils.DoozyPath' threw an exception. ---> System.ArgumentException: The specified path is not of a legal form (empty).
-  at System.IO.Path.InsecureGetFullPath (System.String path) [0x00025] in <a40b0ad4a868437393ad434631fb6ff1>:0 
-  at System.IO.Path.GetFullPath (System.String path) [0x00000] in <a40b0ad4a868437393ad434631fb6ff1>:0 
-  at System.IO.FileInfo..ctor (System.String originalPath, System.String fullPath, System.String fileName, System.Boolean isNormalized) [0x00024] in <a40b0ad4a868437393ad434631fb6ff1>:0 
-  at System.IO.FileInfo..ctor (System.String fileName) [0x00000] in <a40b0ad4a868437393ad434631fb6ff1>:0 
-  at (wrapper remoting-invoke-with-check) System.IO.FileInfo..ctor(string)
-  at Doozy.Engine.Utils.DoozyPath.get_BasePath () [0x0003b] in C:\Users\fuyca\Desktop\Projects\TimberCraft\Assets\Doozy\Engine\Utils\DoozyPath.cs:158 
-  at Doozy.Engine.Utils.DoozyPath..cctor () [0x00000] in C:\Users\fuyca\Desktop\Projects\TimberCraft\Assets\Doozy\Engine\Utils\DoozyPath.cs:62 
-   --- End of inner exception stack trace ---
-  at Doozy.Editor.Internal.ProcessorsSettings.get_Instance () [0x00018] in C:\Users\fuyca\Desktop\Projects\TimberCraft\Assets\Doozy\Editor\Internal\ProcessorsSettings.cs:23 
-  at Doozy.Editor.Internal.DoozyAssetsProcessor.ExecuteProcessor () [0x0003f] in C:\Users\fuyca\Desktop\Projects\TimberCraft\Assets\Doozy\Editor\Internal\DoozyAssetsProcessor.cs:44 
-  at Doozy.Editor.Internal.DoozyAssetsProcessor..cctor () [0x00001] in C:\Users\fuyca\Desktop\Projects\TimberCraft\Assets\Doozy\Editor\Internal\DoozyAssetsProcessor.cs:25 
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:LogError (object)
-UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
-
-System.TypeInitializationException: The type initializer for 'Doozy.Engine.Utils.DoozyPath' threw an exception. ---> System.ArgumentException: The specified path is not of a legal form (empty).
-  at System.IO.Path.InsecureGetFullPath (System.String path) [0x00025] in <a40b0ad4a868437393ad434631fb6ff1>:0 
-  at System.IO.Path.GetFullPath (System.String path) [0x00000] in <a40b0ad4a868437393ad434631fb6ff1>:0 
-  at System.IO.FileInfo..ctor (System.String originalPath, System.String fullPath, System.String fileName, System.Boolean isNormalized) [0x00024] in <a40b0ad4a868437393ad434631fb6ff1>:0 
-  at System.IO.FileInfo..ctor (System.String fileName) [0x00000] in <a40b0ad4a868437393ad434631fb6ff1>:0 
-  at (wrapper remoting-invoke-with-check) System.IO.FileInfo..ctor(string)
-  at Doozy.Engine.Utils.DoozyPath.get_BasePath () [0x0003b] in C:\Users\fuyca\Desktop\Projects\TimberCraft\Assets\Doozy\Engine\Utils\DoozyPath.cs:158 
-  at Doozy.Engine.Utils.DoozyPath..cctor () [0x00000] in C:\Users\fuyca\Desktop\Projects\TimberCraft\Assets\Doozy\Engine\Utils\DoozyPath.cs:62 
-   --- End of inner exception stack trace ---
-  at Doozy.Editor.Internal.ProcessorsSettings.get_Instance () [0x00018] in C:\Users\fuyca\Desktop\Projects\TimberCraft\Assets\Doozy\Editor\Internal\ProcessorsSettings.cs:23 
-  at Doozy.Editor.Internal.FoldersProcessor.ExecuteProcessor () [0x0000c] in C:\Users\fuyca\Desktop\Projects\TimberCraft\Assets\Doozy\Editor\Internal\FoldersProcessor.cs:20 
-  at Doozy.Editor.Internal.FoldersProcessor..cctor () [0x00001] in C:\Users\fuyca\Desktop\Projects\TimberCraft\Assets\Doozy\Editor\Internal\FoldersProcessor.cs:15 
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:LogError (object)
-UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
-
-Mono: successfully reloaded assembly
-- Completed reload, in  3.178 seconds
-Domain Reload Profiling:
-	ReloadAssembly (3180ms)
-		BeginReloadAssembly (244ms)
-			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (8ms)
-			BackupInstance (0ms)
-			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (87ms)
-		EndReloadAssembly (2775ms)
-			LoadAssemblies (148ms)
-			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (618ms)
-			ReleaseScriptCaches (2ms)
-			RebuildScriptCaches (94ms)
-			SetupLoadedEditorAssemblies (1776ms)
-				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (49ms)
-				SetLoadedEditorAssemblies (1ms)
-				RefreshPlugins (2ms)
-				BeforeProcessingInitializeOnLoad (126ms)
-				ProcessInitializeOnLoadAttributes (1063ms)
-				ProcessInitializeOnLoadMethodAttributes (520ms)
-				AfterProcessingInitializeOnLoad (14ms)
-				EditorAssembliesLoaded (2ms)
-			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (12ms)
-Platform modules already initialized, skipping
-Shader 'MoreMountains/MMRipple': fallback shader 'Particle/AlphaBlended' not found
-Refreshing native plugins compatible for Editor in 6.83 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 6041 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 61 unused Assets / (3.3 MB). Loaded Objects now: 6877.
-Memory consumption went from 407.3 MB to 404.0 MB.
-Total: 34.937100 ms (FindLiveObjects: 0.635100 ms CreateObjectMapping: 0.549000 ms MarkObjects: 32.152400 ms  DeleteObjects: 1.599100 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.018083 seconds.
-Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image C:\Users\fuyca\Desktop\Projects\TimberCraft\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
-Symbol file LoadedFromMemory doesn't match image C:\Users\fuyca\Desktop\Projects\TimberCraft\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
-Native extension for WindowsStandalone target not found
-Native extension for iOS target not found
-Native extension for Android target not found
-Refreshing native plugins compatible for Editor in 3.80 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-System.TypeInitializationException: The type initializer for 'Doozy.Engine.Utils.DoozyPath' threw an exception. ---> System.ArgumentException: The specified path is not of a legal form (empty).
-  at System.IO.Path.InsecureGetFullPath (System.String path) [0x00025] in <a40b0ad4a868437393ad434631fb6ff1>:0 
-  at System.IO.Path.GetFullPath (System.String path) [0x00000] in <a40b0ad4a868437393ad434631fb6ff1>:0 
-  at System.IO.FileInfo..ctor (System.String originalPath, System.String fullPath, System.String fileName, System.Boolean isNormalized) [0x00024] in <a40b0ad4a868437393ad434631fb6ff1>:0 
-  at System.IO.FileInfo..ctor (System.String fileName) [0x00000] in <a40b0ad4a868437393ad434631fb6ff1>:0 
-  at (wrapper remoting-invoke-with-check) System.IO.FileInfo..ctor(string)
-  at Doozy.Engine.Utils.DoozyPath.get_BasePath () [0x0003b] in C:\Users\fuyca\Desktop\Projects\TimberCraft\Assets\Doozy\Engine\Utils\DoozyPath.cs:158 
-  at Doozy.Engine.Utils.DoozyPath..cctor () [0x00000] in C:\Users\fuyca\Desktop\Projects\TimberCraft\Assets\Doozy\Engine\Utils\DoozyPath.cs:62 
-   --- End of inner exception stack trace ---
-  at Doozy.Editor.Internal.ProcessorsSettings.get_Instance () [0x00018] in C:\Users\fuyca\Desktop\Projects\TimberCraft\Assets\Doozy\Editor\Internal\ProcessorsSettings.cs:23 
-  at Doozy.Editor.Internal.DoozyAssetsProcessor.ExecuteProcessor () [0x0003f] in C:\Users\fuyca\Desktop\Projects\TimberCraft\Assets\Doozy\Editor\Internal\DoozyAssetsProcessor.cs:44 
-  at Doozy.Editor.Internal.DoozyAssetsProcessor..cctor () [0x00001] in C:\Users\fuyca\Desktop\Projects\TimberCraft\Assets\Doozy\Editor\Internal\DoozyAssetsProcessor.cs:25 
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:LogError (object)
-UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
-
-System.TypeInitializationException: The type initializer for 'Doozy.Engine.Utils.DoozyPath' threw an exception. ---> System.ArgumentException: The specified path is not of a legal form (empty).
-  at System.IO.Path.InsecureGetFullPath (System.String path) [0x00025] in <a40b0ad4a868437393ad434631fb6ff1>:0 
-  at System.IO.Path.GetFullPath (System.String path) [0x00000] in <a40b0ad4a868437393ad434631fb6ff1>:0 
-  at System.IO.FileInfo..ctor (System.String originalPath, System.String fullPath, System.String fileName, System.Boolean isNormalized) [0x00024] in <a40b0ad4a868437393ad434631fb6ff1>:0 
-  at System.IO.FileInfo..ctor (System.String fileName) [0x00000] in <a40b0ad4a868437393ad434631fb6ff1>:0 
-  at (wrapper remoting-invoke-with-check) System.IO.FileInfo..ctor(string)
-  at Doozy.Engine.Utils.DoozyPath.get_BasePath () [0x0003b] in C:\Users\fuyca\Desktop\Projects\TimberCraft\Assets\Doozy\Engine\Utils\DoozyPath.cs:158 
-  at Doozy.Engine.Utils.DoozyPath..cctor () [0x00000] in C:\Users\fuyca\Desktop\Projects\TimberCraft\Assets\Doozy\Engine\Utils\DoozyPath.cs:62 
-   --- End of inner exception stack trace ---
-  at Doozy.Editor.Internal.ProcessorsSettings.get_Instance () [0x00018] in C:\Users\fuyca\Desktop\Projects\TimberCraft\Assets\Doozy\Editor\Internal\ProcessorsSettings.cs:23 
-  at Doozy.Editor.Internal.FoldersProcessor.ExecuteProcessor () [0x0000c] in C:\Users\fuyca\Desktop\Projects\TimberCraft\Assets\Doozy\Editor\Internal\FoldersProcessor.cs:20 
-  at Doozy.Editor.Internal.FoldersProcessor..cctor () [0x00001] in C:\Users\fuyca\Desktop\Projects\TimberCraft\Assets\Doozy\Editor\Internal\FoldersProcessor.cs:15 
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:LogError (object)
-UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
-
-Mono: successfully reloaded assembly
-- Completed reload, in  3.227 seconds
-Domain Reload Profiling:
-	ReloadAssembly (3228ms)
-		BeginReloadAssembly (247ms)
-			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (7ms)
-			BackupInstance (0ms)
-			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (85ms)
-		EndReloadAssembly (2810ms)
-			LoadAssemblies (158ms)
-			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (800ms)
-			ReleaseScriptCaches (3ms)
-			RebuildScriptCaches (95ms)
-			SetupLoadedEditorAssemblies (1640ms)
-				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (58ms)
-				SetLoadedEditorAssemblies (1ms)
-				RefreshPlugins (4ms)
-				BeforeProcessingInitializeOnLoad (115ms)
-				ProcessInitializeOnLoadAttributes (1007ms)
-				ProcessInitializeOnLoadMethodAttributes (445ms)
-				AfterProcessingInitializeOnLoad (8ms)
-				EditorAssembliesLoaded (1ms)
-			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (9ms)
-Platform modules already initialized, skipping
-Shader 'MoreMountains/MMRipple': fallback shader 'Particle/AlphaBlended' not found
-Refreshing native plugins compatible for Editor in 7.81 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 6041 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 61 unused Assets / (3.3 MB). Loaded Objects now: 6892.
-Memory consumption went from 407.3 MB to 404.0 MB.
-Total: 37.735300 ms (FindLiveObjects: 0.744600 ms CreateObjectMapping: 0.643900 ms MarkObjects: 34.828700 ms  DeleteObjects: 1.516100 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.011746 seconds.
-Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image C:\Users\fuyca\Desktop\Projects\TimberCraft\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
-Symbol file LoadedFromMemory doesn't match image C:\Users\fuyca\Desktop\Projects\TimberCraft\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
-Native extension for WindowsStandalone target not found
-Native extension for iOS target not found
-Native extension for Android target not found
-Refreshing native plugins compatible for Editor in 2.60 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-System.TypeInitializationException: The type initializer for 'Doozy.Engine.Utils.DoozyPath' threw an exception. ---> System.ArgumentException: The specified path is not of a legal form (empty).
-  at System.IO.Path.InsecureGetFullPath (System.String path) [0x00025] in <a40b0ad4a868437393ad434631fb6ff1>:0 
-  at System.IO.Path.GetFullPath (System.String path) [0x00000] in <a40b0ad4a868437393ad434631fb6ff1>:0 
-  at System.IO.FileInfo..ctor (System.String originalPath, System.String fullPath, System.String fileName, System.Boolean isNormalized) [0x00024] in <a40b0ad4a868437393ad434631fb6ff1>:0 
-  at System.IO.FileInfo..ctor (System.String fileName) [0x00000] in <a40b0ad4a868437393ad434631fb6ff1>:0 
-  at (wrapper remoting-invoke-with-check) System.IO.FileInfo..ctor(string)
-  at Doozy.Engine.Utils.DoozyPath.get_BasePath () [0x0003b] in C:\Users\fuyca\Desktop\Projects\TimberCraft\Assets\Doozy\Engine\Utils\DoozyPath.cs:158 
-  at Doozy.Engine.Utils.DoozyPath..cctor () [0x00000] in C:\Users\fuyca\Desktop\Projects\TimberCraft\Assets\Doozy\Engine\Utils\DoozyPath.cs:62 
-   --- End of inner exception stack trace ---
-  at Doozy.Editor.Internal.ProcessorsSettings.get_Instance () [0x00018] in C:\Users\fuyca\Desktop\Projects\TimberCraft\Assets\Doozy\Editor\Internal\ProcessorsSettings.cs:23 
-  at Doozy.Editor.Internal.DoozyAssetsProcessor.ExecuteProcessor () [0x0003f] in C:\Users\fuyca\Desktop\Projects\TimberCraft\Assets\Doozy\Editor\Internal\DoozyAssetsProcessor.cs:44 
-  at Doozy.Editor.Internal.DoozyAssetsProcessor..cctor () [0x00001] in C:\Users\fuyca\Desktop\Projects\TimberCraft\Assets\Doozy\Editor\Internal\DoozyAssetsProcessor.cs:25 
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:LogError (object)
-UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
-
-System.TypeInitializationException: The type initializer for 'Doozy.Engine.Utils.DoozyPath' threw an exception. ---> System.ArgumentException: The specified path is not of a legal form (empty).
-  at System.IO.Path.InsecureGetFullPath (System.String path) [0x00025] in <a40b0ad4a868437393ad434631fb6ff1>:0 
-  at System.IO.Path.GetFullPath (System.String path) [0x00000] in <a40b0ad4a868437393ad434631fb6ff1>:0 
-  at System.IO.FileInfo..ctor (System.String originalPath, System.String fullPath, System.String fileName, System.Boolean isNormalized) [0x00024] in <a40b0ad4a868437393ad434631fb6ff1>:0 
-  at System.IO.FileInfo..ctor (System.String fileName) [0x00000] in <a40b0ad4a868437393ad434631fb6ff1>:0 
-  at (wrapper remoting-invoke-with-check) System.IO.FileInfo..ctor(string)
-  at Doozy.Engine.Utils.DoozyPath.get_BasePath () [0x0003b] in C:\Users\fuyca\Desktop\Projects\TimberCraft\Assets\Doozy\Engine\Utils\DoozyPath.cs:158 
-  at Doozy.Engine.Utils.DoozyPath..cctor () [0x00000] in C:\Users\fuyca\Desktop\Projects\TimberCraft\Assets\Doozy\Engine\Utils\DoozyPath.cs:62 
-   --- End of inner exception stack trace ---
-  at Doozy.Editor.Internal.ProcessorsSettings.get_Instance () [0x00018] in C:\Users\fuyca\Desktop\Projects\TimberCraft\Assets\Doozy\Editor\Internal\ProcessorsSettings.cs:23 
-  at Doozy.Editor.Internal.FoldersProcessor.ExecuteProcessor () [0x0000c] in C:\Users\fuyca\Desktop\Projects\TimberCraft\Assets\Doozy\Editor\Internal\FoldersProcessor.cs:20 
-  at Doozy.Editor.Internal.FoldersProcessor..cctor () [0x00001] in C:\Users\fuyca\Desktop\Projects\TimberCraft\Assets\Doozy\Editor\Internal\FoldersProcessor.cs:15 
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:LogError (object)
-UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
-
-
-=================================================================
-	Native Crash Reporting
-=================================================================
-Got a UNKNOWN while executing native code. This usually indicates
-a fatal error in the mono runtime or one of the native libraries 
-used by your application.
-=================================================================
-
-=================================================================
-	Managed Stacktrace:
-=================================================================
-	  at <unknown> <0xffffffff>
-	  at System.Object:__icall_wrapper_ves_icall_object_new_specific <0x000c2>
-	  at System.Globalization.CultureInfo:CreateCulture <0x0022a>
-	  at System.Reflection.AssemblyName:FillName <0x003da>
-	  at System.Reflection.AssemblyName:Create <0x0020a>
-	  at System.Reflection.RuntimeAssembly:GetName <0x00102>
-	  at System.Reflection.Assembly:GetName <0x0006e>
-	  at UnityEditor.UIElements.UXMLEditorFactories:.cctor <0x0088c>
-	  at System.Object:runtime_invoke_void <0x00184>
-	  at <unknown> <0xffffffff>
-	  at System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor <0x000c1>
-	  at System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor <0x0019a>
-	  at UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes <0x00652>
-	  at <Module>:runtime_invoke_void_object <0x0018a>
-=================================================================
-Mono: successfully reloaded assembly
-- Completed reload, in  3.185 seconds
-Domain Reload Profiling:
-	ReloadAssembly (3186ms)
-		BeginReloadAssembly (235ms)
+	ReloadAssembly (3758ms)
+		BeginReloadAssembly (303ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (11ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (78ms)
-		EndReloadAssembly (2786ms)
-			LoadAssemblies (161ms)
+			CreateAndSetChildDomain (100ms)
+		EndReloadAssembly (3274ms)
+			LoadAssemblies (229ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (671ms)
+			SetupTypeCache (909ms)
 			ReleaseScriptCaches (2ms)
-			RebuildScriptCaches (103ms)
-			SetupLoadedEditorAssemblies (1722ms)
+			RebuildScriptCaches (121ms)
+			SetupLoadedEditorAssemblies (1857ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (54ms)
+				InitializePlatformSupportModulesInManaged (52ms)
 				SetLoadedEditorAssemblies (1ms)
 				RefreshPlugins (3ms)
-				BeforeProcessingInitializeOnLoad (131ms)
-				ProcessInitializeOnLoadAttributes (1072ms)
-				ProcessInitializeOnLoadMethodAttributes (452ms)
-				AfterProcessingInitializeOnLoad (8ms)
-				EditorAssembliesLoaded (1ms)
-			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (9ms)
-Platform modules already initialized, skipping
-Shader 'MoreMountains/MMRipple': fallback shader 'Particle/AlphaBlended' not found
-Refreshing native plugins compatible for Editor in 7.44 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 6041 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 61 unused Assets / (3.3 MB). Loaded Objects now: 6907.
-Memory consumption went from 407.3 MB to 404.1 MB.
-Total: 30.600100 ms (FindLiveObjects: 0.658200 ms CreateObjectMapping: 0.643000 ms MarkObjects: 27.279000 ms  DeleteObjects: 2.018300 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.012487 seconds.
-Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image C:\Users\fuyca\Desktop\Projects\TimberCraft\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
-Symbol file LoadedFromMemory doesn't match image C:\Users\fuyca\Desktop\Projects\TimberCraft\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
-Native extension for WindowsStandalone target not found
-Native extension for iOS target not found
-Native extension for Android target not found
-Refreshing native plugins compatible for Editor in 3.55 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-System.TypeInitializationException: The type initializer for 'Doozy.Engine.Utils.DoozyPath' threw an exception. ---> System.ArgumentException: The specified path is not of a legal form (empty).
-  at System.IO.Path.InsecureGetFullPath (System.String path) [0x00025] in <a40b0ad4a868437393ad434631fb6ff1>:0 
-  at System.IO.Path.GetFullPath (System.String path) [0x00000] in <a40b0ad4a868437393ad434631fb6ff1>:0 
-  at System.IO.FileInfo..ctor (System.String originalPath, System.String fullPath, System.String fileName, System.Boolean isNormalized) [0x00024] in <a40b0ad4a868437393ad434631fb6ff1>:0 
-  at System.IO.FileInfo..ctor (System.String fileName) [0x00000] in <a40b0ad4a868437393ad434631fb6ff1>:0 
-  at (wrapper remoting-invoke-with-check) System.IO.FileInfo..ctor(string)
-  at Doozy.Engine.Utils.DoozyPath.get_BasePath () [0x0003b] in C:\Users\fuyca\Desktop\Projects\TimberCraft\Assets\Doozy\Engine\Utils\DoozyPath.cs:158 
-  at Doozy.Engine.Utils.DoozyPath..cctor () [0x00000] in C:\Users\fuyca\Desktop\Projects\TimberCraft\Assets\Doozy\Engine\Utils\DoozyPath.cs:62 
-   --- End of inner exception stack trace ---
-  at Doozy.Editor.Internal.ProcessorsSettings.get_Instance () [0x00018] in C:\Users\fuyca\Desktop\Projects\TimberCraft\Assets\Doozy\Editor\Internal\ProcessorsSettings.cs:23 
-  at Doozy.Editor.Internal.DoozyAssetsProcessor.ExecuteProcessor () [0x0003f] in C:\Users\fuyca\Desktop\Projects\TimberCraft\Assets\Doozy\Editor\Internal\DoozyAssetsProcessor.cs:44 
-  at Doozy.Editor.Internal.DoozyAssetsProcessor..cctor () [0x00001] in C:\Users\fuyca\Desktop\Projects\TimberCraft\Assets\Doozy\Editor\Internal\DoozyAssetsProcessor.cs:25 
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:LogError (object)
-UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
-
-System.TypeInitializationException: The type initializer for 'Doozy.Engine.Utils.DoozyPath' threw an exception. ---> System.ArgumentException: The specified path is not of a legal form (empty).
-  at System.IO.Path.InsecureGetFullPath (System.String path) [0x00025] in <a40b0ad4a868437393ad434631fb6ff1>:0 
-  at System.IO.Path.GetFullPath (System.String path) [0x00000] in <a40b0ad4a868437393ad434631fb6ff1>:0 
-  at System.IO.FileInfo..ctor (System.String originalPath, System.String fullPath, System.String fileName, System.Boolean isNormalized) [0x00024] in <a40b0ad4a868437393ad434631fb6ff1>:0 
-  at System.IO.FileInfo..ctor (System.String fileName) [0x00000] in <a40b0ad4a868437393ad434631fb6ff1>:0 
-  at (wrapper remoting-invoke-with-check) System.IO.FileInfo..ctor(string)
-  at Doozy.Engine.Utils.DoozyPath.get_BasePath () [0x0003b] in C:\Users\fuyca\Desktop\Projects\TimberCraft\Assets\Doozy\Engine\Utils\DoozyPath.cs:158 
-  at Doozy.Engine.Utils.DoozyPath..cctor () [0x00000] in C:\Users\fuyca\Desktop\Projects\TimberCraft\Assets\Doozy\Engine\Utils\DoozyPath.cs:62 
-   --- End of inner exception stack trace ---
-  at Doozy.Editor.Internal.ProcessorsSettings.get_Instance () [0x00018] in C:\Users\fuyca\Desktop\Projects\TimberCraft\Assets\Doozy\Editor\Internal\ProcessorsSettings.cs:23 
-  at Doozy.Editor.Internal.FoldersProcessor.ExecuteProcessor () [0x0000c] in C:\Users\fuyca\Desktop\Projects\TimberCraft\Assets\Doozy\Editor\Internal\FoldersProcessor.cs:20 
-  at Doozy.Editor.Internal.FoldersProcessor..cctor () [0x00001] in C:\Users\fuyca\Desktop\Projects\TimberCraft\Assets\Doozy\Editor\Internal\FoldersProcessor.cs:15 
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:LogError (object)
-UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
-
-Mono: successfully reloaded assembly
-- Completed reload, in  2.911 seconds
-Domain Reload Profiling:
-	ReloadAssembly (2913ms)
-		BeginReloadAssembly (225ms)
-			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (7ms)
-			BackupInstance (0ms)
-			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (70ms)
-		EndReloadAssembly (2548ms)
-			LoadAssemblies (147ms)
-			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (565ms)
-			ReleaseScriptCaches (2ms)
-			RebuildScriptCaches (98ms)
-			SetupLoadedEditorAssemblies (1630ms)
-				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (43ms)
-				SetLoadedEditorAssemblies (1ms)
-				RefreshPlugins (4ms)
-				BeforeProcessingInitializeOnLoad (112ms)
-				ProcessInitializeOnLoadAttributes (1009ms)
-				ProcessInitializeOnLoadMethodAttributes (452ms)
-				AfterProcessingInitializeOnLoad (8ms)
-				EditorAssembliesLoaded (1ms)
-			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (11ms)
-Platform modules already initialized, skipping
-Shader 'MoreMountains/MMRipple': fallback shader 'Particle/AlphaBlended' not found
-Refreshing native plugins compatible for Editor in 9.55 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 6041 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 61 unused Assets / (3.3 MB). Loaded Objects now: 6922.
-Memory consumption went from 407.3 MB to 404.1 MB.
-Total: 41.719700 ms (FindLiveObjects: 0.739800 ms CreateObjectMapping: 0.660100 ms MarkObjects: 38.893700 ms  DeleteObjects: 1.424200 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.012561 seconds.
-Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image C:\Users\fuyca\Desktop\Projects\TimberCraft\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
-Symbol file LoadedFromMemory doesn't match image C:\Users\fuyca\Desktop\Projects\TimberCraft\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
-Native extension for WindowsStandalone target not found
-Native extension for iOS target not found
-Native extension for Android target not found
-Refreshing native plugins compatible for Editor in 2.17 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-System.TypeInitializationException: The type initializer for 'Doozy.Engine.Utils.DoozyPath' threw an exception. ---> System.ArgumentException: The specified path is not of a legal form (empty).
-  at System.IO.Path.InsecureGetFullPath (System.String path) [0x00025] in <a40b0ad4a868437393ad434631fb6ff1>:0 
-  at System.IO.Path.GetFullPath (System.String path) [0x00000] in <a40b0ad4a868437393ad434631fb6ff1>:0 
-  at System.IO.FileInfo..ctor (System.String originalPath, System.String fullPath, System.String fileName, System.Boolean isNormalized) [0x00024] in <a40b0ad4a868437393ad434631fb6ff1>:0 
-  at System.IO.FileInfo..ctor (System.String fileName) [0x00000] in <a40b0ad4a868437393ad434631fb6ff1>:0 
-  at (wrapper remoting-invoke-with-check) System.IO.FileInfo..ctor(string)
-  at Doozy.Engine.Utils.DoozyPath.get_BasePath () [0x0003b] in C:\Users\fuyca\Desktop\Projects\TimberCraft\Assets\Doozy\Engine\Utils\DoozyPath.cs:158 
-  at Doozy.Engine.Utils.DoozyPath..cctor () [0x00000] in C:\Users\fuyca\Desktop\Projects\TimberCraft\Assets\Doozy\Engine\Utils\DoozyPath.cs:62 
-   --- End of inner exception stack trace ---
-  at Doozy.Editor.Internal.ProcessorsSettings.get_Instance () [0x00018] in C:\Users\fuyca\Desktop\Projects\TimberCraft\Assets\Doozy\Editor\Internal\ProcessorsSettings.cs:23 
-  at Doozy.Editor.Internal.DoozyAssetsProcessor.ExecuteProcessor () [0x0003f] in C:\Users\fuyca\Desktop\Projects\TimberCraft\Assets\Doozy\Editor\Internal\DoozyAssetsProcessor.cs:44 
-  at Doozy.Editor.Internal.DoozyAssetsProcessor..cctor () [0x00001] in C:\Users\fuyca\Desktop\Projects\TimberCraft\Assets\Doozy\Editor\Internal\DoozyAssetsProcessor.cs:25 
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:LogError (object)
-UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
-
-System.TypeInitializationException: The type initializer for 'Doozy.Engine.Utils.DoozyPath' threw an exception. ---> System.ArgumentException: The specified path is not of a legal form (empty).
-  at System.IO.Path.InsecureGetFullPath (System.String path) [0x00025] in <a40b0ad4a868437393ad434631fb6ff1>:0 
-  at System.IO.Path.GetFullPath (System.String path) [0x00000] in <a40b0ad4a868437393ad434631fb6ff1>:0 
-  at System.IO.FileInfo..ctor (System.String originalPath, System.String fullPath, System.String fileName, System.Boolean isNormalized) [0x00024] in <a40b0ad4a868437393ad434631fb6ff1>:0 
-  at System.IO.FileInfo..ctor (System.String fileName) [0x00000] in <a40b0ad4a868437393ad434631fb6ff1>:0 
-  at (wrapper remoting-invoke-with-check) System.IO.FileInfo..ctor(string)
-  at Doozy.Engine.Utils.DoozyPath.get_BasePath () [0x0003b] in C:\Users\fuyca\Desktop\Projects\TimberCraft\Assets\Doozy\Engine\Utils\DoozyPath.cs:158 
-  at Doozy.Engine.Utils.DoozyPath..cctor () [0x00000] in C:\Users\fuyca\Desktop\Projects\TimberCraft\Assets\Doozy\Engine\Utils\DoozyPath.cs:62 
-   --- End of inner exception stack trace ---
-  at Doozy.Editor.Internal.ProcessorsSettings.get_Instance () [0x00018] in C:\Users\fuyca\Desktop\Projects\TimberCraft\Assets\Doozy\Editor\Internal\ProcessorsSettings.cs:23 
-  at Doozy.Editor.Internal.FoldersProcessor.ExecuteProcessor () [0x0000c] in C:\Users\fuyca\Desktop\Projects\TimberCraft\Assets\Doozy\Editor\Internal\FoldersProcessor.cs:20 
-  at Doozy.Editor.Internal.FoldersProcessor..cctor () [0x00001] in C:\Users\fuyca\Desktop\Projects\TimberCraft\Assets\Doozy\Editor\Internal\FoldersProcessor.cs:15 
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:LogError (object)
-UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
-
-Mono: successfully reloaded assembly
-- Completed reload, in  2.990 seconds
-Domain Reload Profiling:
-	ReloadAssembly (2991ms)
-		BeginReloadAssembly (256ms)
-			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (7ms)
-			BackupInstance (0ms)
-			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (83ms)
-		EndReloadAssembly (2575ms)
-			LoadAssemblies (140ms)
-			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (593ms)
-			ReleaseScriptCaches (2ms)
-			RebuildScriptCaches (100ms)
-			SetupLoadedEditorAssemblies (1621ms)
-				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (41ms)
-				SetLoadedEditorAssemblies (1ms)
-				RefreshPlugins (2ms)
-				BeforeProcessingInitializeOnLoad (116ms)
-				ProcessInitializeOnLoadAttributes (972ms)
-				ProcessInitializeOnLoadMethodAttributes (480ms)
+				BeforeProcessingInitializeOnLoad (144ms)
+				ProcessInitializeOnLoadAttributes (1198ms)
+				ProcessInitializeOnLoadMethodAttributes (449ms)
 				AfterProcessingInitializeOnLoad (9ms)
 				EditorAssembliesLoaded (1ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (10ms)
 Platform modules already initialized, skipping
 Shader 'MoreMountains/MMRipple': fallback shader 'Particle/AlphaBlended' not found
-Refreshing native plugins compatible for Editor in 7.61 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 9.02 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 6041 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 61 unused Assets / (3.3 MB). Loaded Objects now: 6937.
-Memory consumption went from 407.4 MB to 404.1 MB.
-Total: 37.859800 ms (FindLiveObjects: 0.691600 ms CreateObjectMapping: 0.606000 ms MarkObjects: 35.411400 ms  DeleteObjects: 1.149300 ms)
+Unloading 6034 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 53 unused Assets / (1.4 MB). Loaded Objects now: 6706.
+Memory consumption went from 423.8 MB to 422.4 MB.
+Total: 35.478600 ms (FindLiveObjects: 0.792100 ms CreateObjectMapping: 0.632200 ms MarkObjects: 33.527300 ms  DeleteObjects: 0.524800 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
