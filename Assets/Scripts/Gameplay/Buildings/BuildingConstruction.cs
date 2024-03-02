@@ -71,6 +71,11 @@ namespace Gameplay.Buildings
             buildingsSaveData[_id].CurrentlyConstructionNeededResourceNumber = CurrentlyNeededResourceQuantity;
         }
 
+        public void Unlock()
+        {
+            OnProgressCouldNotBeLoaded();
+        }
+
         public void BuildWith(int resourceQuantity, Action onBuilt)
         {
             if (_shouldSetCounter && !_buildingResourceCounter.CanScale)

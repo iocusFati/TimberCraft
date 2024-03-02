@@ -219,6 +219,7 @@
      <Compile Include="Assets\Scripts\Gameplay\Player\TriggerInteraction.cs" />
      <Compile Include="Assets\Doozy\Engine\UI\Enums\TargetOrientation.cs" />
      <Compile Include="Assets\Scripts\Infrastructure\Services\Pool\IPoolService.cs" />
+     <Compile Include="Assets\Scripts\Gameplay\GameFlow\EntryTutorial.cs" />
      <Compile Include="Assets\Scripts\Infrastructure\StaticData\BuildingsData\MainHouseUpgradeData.cs" />
      <Compile Include="Assets\Scripts\Gameplay\Bots\StateMachine\States\MineResourceLumberjackBotState.cs" />
      <Compile Include="Assets\Scripts\UI\Buttons\ButtonDisabler.cs" />
@@ -403,6 +404,7 @@
      <Compile Include="Assets\Doozy\Engine\Events\ColorEvent.cs" />
      <Compile Include="Assets\Doozy\Engine\UI\Input\KeyToGameEvent.cs" />
      <Compile Include="Assets\Doozy\Engine\UI\UIToggle\UIToggleSettings.cs" />
+     <Compile Include="Assets\Scripts\Gameplay\GameFlow\BuildingDiscover.cs" />
      <Compile Include="Assets\Doozy\Engine\Events\GameObjectEvent.cs" />
      <Compile Include="Assets\MeshBaker\Examples\SceneRuntimeExample\MB_ExampleMover.cs" />
      <Compile Include="Assets\Scripts\Gameplay\Locations\MainLocation.cs" />
@@ -627,6 +629,7 @@
      <Folder Include="Assets\Doozy\Examples\Fonts\Montserrat" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.4\Lib\Editor\PlasticSCM\Localization\configurehelper.es.txt" />
      <Folder Include="Assets\Scripts\Infrastructure\Services\Input" />
+     <Folder Include="Assets\Scripts\Gameplay\GameFlow" />
      <Folder Include="Assets\Doozy\Examples\Fonts\Permanent_Marker" />
      <Folder Include="Library\PackageCache\com.unity.modules.assetbundle@1.0.0" />
      <Folder Include="Assets\Doozy\Engine\UI\Resources\UIAnimations\Loop" />

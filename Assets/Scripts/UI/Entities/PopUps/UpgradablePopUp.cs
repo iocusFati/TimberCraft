@@ -38,7 +38,15 @@ namespace UI.Entities.PopUps
 
         public void LoadProgress(PlayerProgress progress)
         {
-            int loadedLevel = progress.GetBuildingSaveData(_id).BuildingLevel;
+            BuildingSaveData buildingSaveData = progress.GetBuildingSaveData(_id);
+
+            if (buildingSaveData is null)
+            {
+                OnProgressCouldNotBeLoaded();
+                return;
+            }
+            
+            int loadedLevel = buildingSaveData.BuildingLevel;
 
             if (loadedLevel != 0)
                 _currentLevel = loadedLevel;

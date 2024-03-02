@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using Gameplay.Resource;
 using Infrastructure.Services.Guid;
 using Infrastructure.Services.SaveLoad;
@@ -25,6 +26,8 @@ namespace Gameplay.Buildings
         [OdinSerialize] private List<(GameObject Stage, int ResourceQuantity)> _constructionStagesAndResources;
 
         protected ISaveLoadService _saveLoadService;
+        
+        public event Action OnBuiltEvent;
 
         private BuildingConstruction BuildingConstruction { get; set; }
         public Transform ReceiveResourceTransform => _receiveResourceTransform;
@@ -40,10 +43,12 @@ namespace Gameplay.Buildings
         public void Construct(ISaveLoadService saveLoadService, IGuidService guidService)
         {
             _saveLoadService = saveLoadService;
-            
+
             string id = GetID(guidService);
-            
+
             BuildingConstruction = new BuildingConstruction(id, _constructionStagesAndResources, _resourceCounter);
+            
+            _saveLoadService.Register(BuildingConstruction);
         }
 
         private string GetID(IGuidService guidService)
@@ -58,9 +63,10 @@ namespace Gameplay.Buildings
             }
         }
 
-        private void Start()
+        public void Unlock()
         {
-            _saveLoadService.Register(BuildingConstruction);
+            gameObject.SetActive(true);
+            BuildingConstruction.Unlock();
         }
 
         public void ReceiveResource(int resourceQuantity)
@@ -75,9 +81,7 @@ namespace Gameplay.Buildings
             BuildingConstruction.BuildWith(100000, OnBuilt);
         }
 
-        protected virtual void OnBuilt()
-        {
-            
-        }
+        protected virtual void OnBuilt() => 
+            OnBuiltEvent?.Invoke();
     }
 }

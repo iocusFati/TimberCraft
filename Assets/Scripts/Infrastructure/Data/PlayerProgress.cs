@@ -1,13 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
+using Gameplay.Buildings;
 using Gameplay.Resource;
 
 namespace Infrastructure.Data
 {
     public class PlayerProgress
     {
+        public bool EntryTutorialWasCompleted;
+        
         public Dictionary<string, BuildingSaveData> BuildingsSaveData = new();
         public Dictionary<ResourceType, int> CollectedResources = new();
+        public List<string> UnlockedBuildingsIds;
 
         public bool WasLoaded { get; set; }
 

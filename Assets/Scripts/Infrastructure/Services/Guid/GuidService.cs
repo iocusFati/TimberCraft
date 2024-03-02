@@ -17,6 +17,11 @@ namespace Infrastructure.Services.Guid
                 : string.Empty;
         }
 
+        public List<GameObject> GetGameObjectFor(string id)
+        {
+            return _guids.FirstOrDefault(guidPair => guidPair.Value == id).Key;
+        }
+
         private bool ListIsContainingObj(GameObject obj, out List<GameObject> keyList)
         {
             keyList = _guids.Keys.FirstOrDefault(list => list.Contains(obj));
