@@ -2,6 +2,7 @@
 using DG.Tweening;
 using Infrastructure.Services.Pool;
 using Infrastructure.Services.StaticDataService;
+using Infrastructure.StaticData.ResourcesData;
 using MoreMountains.Feedbacks;
 using Sirenix.OdinInspector;
 using UnityEngine;
@@ -36,6 +37,7 @@ namespace Gameplay.Resource
         public ResourceType Type;
 
         private float _collectDuration;
+        private float _collectScaleTo;
         private Vector3 _modelInitialScale;
         private Vector3 _initialScale;
 
@@ -48,7 +50,10 @@ namespace Gameplay.Resource
         [Inject]
         public void Construct(IStaticDataService staticData)
         {
-            _collectDuration = staticData.ResourcesConfig.DropoutCollectDuration;
+            ResourcesConfig resourcesConfig = staticData.ResourcesConfig;
+            
+            _collectDuration = resourcesConfig.DropoutCollectDuration;
+            _collectScaleTo = resourcesConfig.CollectScaleTo;
         }
 
         private void Awake()
@@ -81,7 +86,7 @@ namespace Gameplay.Resource
 
         public void GetCollectedAndReleasedTo(Transform to, Action<DropoutResource> OnCollected)
         {
-            // transform.DOScale(Vector3.zero, _collectDuration);
+            transform.DOScale(_collectScaleTo, _collectDuration).SetEase(Ease.InCubic);
             
             GetCollectedTo(to, () =>
             {

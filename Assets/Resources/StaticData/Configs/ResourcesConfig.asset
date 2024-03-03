@@ -15,6 +15,9 @@ MonoBehaviour:
   _fadeDuration: 1
   _restoreTreeAfter: 3
   _dropoutCollectDuration: 0.4
+  _minDropoutsPerExtract: 3
+  _maxDropoutsPerExtract: 4
+  _collectScaleTo: 0.1
   _deliverResourceDuration: 0.3
   _timeGapBetweenResourcesDelivery: 0.1
   _woodUnitsPerCoin: 7

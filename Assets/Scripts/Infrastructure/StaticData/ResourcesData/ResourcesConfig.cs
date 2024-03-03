@@ -16,6 +16,7 @@ namespace Infrastructure.StaticData.ResourcesData
         [SerializeField] private float _dropoutCollectDuration;
         [SerializeField] private int _minDropoutsPerExtract = 3;
         [SerializeField] private int _maxDropoutsPerExtract = 4;
+        [SerializeField] private float _collectScaleTo;
 
         [Header("Resource sharing")]
         [SerializeField] private float _deliverResourceDuration;
@@ -56,7 +57,9 @@ namespace Infrastructure.StaticData.ResourcesData
         public float SourceAppearDuration => _sourceAppearDuration;
 
         public AnimationCurve SourceAppearCurve => _sourceAppearCurve;
-        public int RandomDropoutsPerExtract => Random.Range(_minDropoutsPerExtract, _maxDropoutsPerExtract); 
+        public int RandomDropoutsPerExtract => Random.Range(_minDropoutsPerExtract, _maxDropoutsPerExtract);
+
+        public float CollectScaleTo => _collectScaleTo;
 
         public int GetResourceUnitsPerCoin(ResourceType resourceType)
         {
