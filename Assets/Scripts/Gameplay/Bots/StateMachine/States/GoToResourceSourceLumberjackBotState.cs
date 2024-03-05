@@ -68,7 +68,7 @@ namespace Gameplay.Bots.StateMachine.States
 
         private void BringResourcesToHut()
         {
-            _targetResource.LeaveMining();
+            _targetResource.StopMining();
             _botStateMachine.Enter<BringResourcesToHutLumberjackBotState>();
         }
 

@@ -40,15 +40,27 @@ namespace Gameplay.Resource
             List<Transform> segments = (List<Transform>)segmentsFieldInfo.GetValue(tree);
             segments.Clear();
 
+            SpawnSegments(segments);
+            SpawnTreeTip(segments, type, tree);
+        }
+
+        private void SpawnSegments(List<Transform> segments)
+        {
             for (int index = 0; index < _resourcesCount; index++)
             {
                 GameObject resource = Instantiate(_resourcePrefab, _resourceParent);
 
+                ConstantForce resourceForce = resource.GetComponent<ConstantForce>();
+                resourceForce.force = new Vector3(0, -3 * (4 - _resourcesCount + index + 1), 0);
+                
                 resource.transform.localPosition += new Vector3(0, _distanceBetweenResources * index, 0);
                 
                 segments.Add(resource.transform);
             }
+        }
 
+        private void SpawnTreeTip(List<Transform> segments, Type type, Tree tree)
+        {
             GameObject treeTip = Instantiate(_treeTipPrefab, _treeTipParent);
             
             _treeTipParent.transform.position = segments[^1].position + new Vector3(0, _distanceBetweenResourceAndTip);

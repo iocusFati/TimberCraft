@@ -37,6 +37,8 @@ MonoBehaviour:
     - Lofelt.NiceVibrations
     - Lofelt.NiceVibrations.Demo
     - MeshBakerCore
+    - MK.Toon
+    - MK.Toon.Examples
     - MoreMountains.Feedbacks
     - MoreMountains.Feedbacks.Authorizations
     - MoreMountains.Feedbacks.Cinemachine

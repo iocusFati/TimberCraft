@@ -81,6 +81,22 @@ namespace Gameplay.Player
             }
         }
 
+        protected override void OnTriggerInteractionEntered(Collider other)
+        {
+            base.OnTriggerInteractionEntered(other);
+            
+            if (other.CompareTag(Tags.ResourceSource)) 
+                _resourceSourceCache.Get(other.gameObject).StartMining();
+        }
+
+        protected override void OnTriggerInteractionExited(Collider other)
+        {
+            base.OnTriggerInteractionExited(other);
+            
+            if (other.CompareTag(Tags.ResourceSource)) 
+                _resourceSourceCache.Get(other.gameObject).StopMining();
+        }
+
         protected override void OnTriggerInteractionStayed(Collider other)
         {
             base.OnTriggerInteractionStayed(other);

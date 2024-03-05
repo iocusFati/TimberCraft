@@ -11,12 +11,12 @@ namespace Gameplay.Player
 
         private void OnTriggerEnter(Collider other)
         {
-            OnTriggerEntered.Invoke(other);
+            OnTriggerEntered?.Invoke(other);
         }
 
         private void OnTriggerExit(Collider other)
         {
-            OnTriggerExited.Invoke(other);
+            OnTriggerExited?.Invoke(other);
         }
 
         private void OnTriggerStay(Collider other)

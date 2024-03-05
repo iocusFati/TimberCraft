@@ -11,6 +11,8 @@ namespace Utils
         //Particles
         public const string WoodHitParticle = "Prefabs/Particles/WoodImpact";
         public const string StoneHitParticle = "Prefabs/Particles/StoneImpact";
+        public const string LeavesParticle = "Prefabs/Particles/LeavesParticle";
+        public const string OnLandedParticle = "Prefabs/Particles/OnLandedParticle";
 
         public const string LogPrefab = "Prefabs/ResourceDropouts/Log";
         public const string StoneBlockPrefab = "Prefabs/ResourceDropouts/StoneBlock";

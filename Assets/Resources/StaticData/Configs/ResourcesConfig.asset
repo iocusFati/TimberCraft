@@ -25,6 +25,8 @@ MonoBehaviour:
   _goldUnitsPerCoin: 3
   _treeFadeDuration: 1.7
   _fadeDelay: 1
+  _onLandedVFXModifier: 0.09
+  _onLandedBaseVFXSize: {x: 0.1, y: 0.2}
   _tryToFindResourceAgainTime: 2
   _sourceAppearDuration: 0
   _sourceAppearCurve:

@@ -6,5 +6,6 @@
         public const string BuildingTrigger = "BuildingTrigger";
         public const string ResourceSource = "ResourceSource";
         public const string Resource = "Resource";
+        public const string TreeTip = "TreeTip";
     }
 }

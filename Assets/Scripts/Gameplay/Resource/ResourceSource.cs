@@ -6,7 +6,6 @@ using Gameplay.Resource.StoneFolder;
 using Infrastructure.Services.Pool;
 using Infrastructure.Services.StaticDataService;
 using Infrastructure.StaticData.ResourcesData;
-using JetBrains.Annotations;
 using MoreMountains.Feedbacks;
 using UnityEngine;
 using Zenject;
@@ -25,7 +24,7 @@ namespace Gameplay.Resource
         private ResourcesConfig _resourcesConfig;
 
         protected BasePool<DropoutResource> _logPool;
-        protected BasePool<ParticleSystem> _particlePool;
+        protected ParticlePool _hitParticlePool;
 
         protected Transform[] _segmentsCopy;
         protected Dictionary<GameObject,Collider> _segmentColliders;
@@ -74,10 +73,10 @@ namespace Gameplay.Resource
             ExtractDropouts();
         }
 
-        public void StartMining() => 
+        public virtual void StartMining() => 
             CurrentState = ResourceSourceState.BeingMined;
 
-        public void LeaveMining() => 
+        public virtual void StopMining() => 
             CurrentState = ResourceSourceState.Untouched;
 
         public bool CanBeMinedByBotWithType(ResourceType botTargetResourceType) =>
@@ -101,7 +100,7 @@ namespace Gameplay.Resource
 
         protected virtual void PlayHitParticle(Vector3 hitPoint, Transform hitTransform)
         {
-            ParticleSystem particle = _particlePool.Get();
+            ParticleSystem particle = _hitParticlePool.Get();
             Vector3 position = _hitParticleAppearAt.position;
             
             particle.transform.position = new Vector3(position.x, hitPoint.y, position.z);

@@ -64,4 +64,10 @@ namespace UI.Entities.Windows
             }
         }
     }
+
+    public enum UIAppearAnimations
+    {
+        None,
+        Bouncy,
+    }
 }

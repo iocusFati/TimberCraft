@@ -14,7 +14,7 @@ namespace Gameplay.Resource.StoneFolder
         [Inject]
         public void Construct(IPoolService poolService, IStaticDataService staticData)
         {
-            _particlePool = poolService.StoneHitParticlesPool;
+            _hitParticlePool = poolService.StoneHitParticlesPool;
             _logPool = poolService.DropoutsPool[ResourceType.Stone];
             
             _restoreSourceAfter = staticData.ResourcesConfig.RestoreTreeAfter;

@@ -1,7 +1,5 @@
 using Gameplay.Locations;
 using Infrastructure.Factories;
-using Infrastructure.Factories.BotFactoryFolder;
-using Infrastructure.Factories.Location;
 using Infrastructure.Factories.PlayerFactoryFolder;
 using Infrastructure.Services.SaveLoad;
 using Infrastructure.States.Interfaces;
@@ -18,8 +16,6 @@ namespace Infrastructure.States
         private readonly SceneLoader _sceneLoader;
         
         private readonly PlayerFactory _playerFactory;
-        private readonly LocationFactory _locationFactory;
-        private readonly BotFactory _botFactory;
         private readonly IUIFactory _uiFactory;
 
         private Vector3 _initialPoint;
@@ -36,8 +32,6 @@ namespace Infrastructure.States
             _uiFactory = uiFactory;
 
             _playerFactory = factoriesHolder.PlayerFactory;
-            _locationFactory = factoriesHolder.LocationFactory;
-            _botFactory = factoriesHolder.BotFactory;
         }
 
         public void Enter(string payload)

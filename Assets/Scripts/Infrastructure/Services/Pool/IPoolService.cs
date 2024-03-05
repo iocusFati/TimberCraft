@@ -8,7 +8,9 @@ namespace Infrastructure.Services.Pool
     public interface IPoolService : IService
     {
         Dictionary<ResourceType, DropoutPool> DropoutsPool { get; }
-        WoodHitParticlesPool WoodHitParticlesPool { get; }
-        BasePool<ParticleSystem> StoneHitParticlesPool { get; }
+        ParticlePool WoodHitParticlesPool { get; }
+        ParticlePool StoneHitParticlesPool { get; }
+        ParticlePool LeavesParticlesPool { get; }
+        ParticlePool OnLandedParticlesPool { get; }
     }
 }
