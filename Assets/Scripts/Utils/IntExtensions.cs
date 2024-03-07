@@ -1,4 +1,6 @@
-﻿namespace Utils
+﻿using System;
+
+namespace Utils
 {
     public static class IntExtensions
     {
@@ -14,5 +16,8 @@
                 return number.ToString();
             }
         }
+
+        public static int ToPositiveNegativeInt(this bool boolean) => 
+            boolean ? 1 : -1;
     }
 }

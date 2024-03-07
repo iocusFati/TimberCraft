@@ -10,6 +10,7 @@ using Infrastructure.Services.Cache;
 using Infrastructure.Services.Input;
 using Infrastructure.Services.Pool;
 using Infrastructure.Services.StaticDataService;
+using Infrastructure.StaticData.CameraData;
 using UnityEngine;
 using Utils;
 using Zenject;
@@ -18,14 +19,18 @@ namespace Gameplay.Player
 {
     public class Player : LumberjackBase
     {
-        [SerializeField] private Transform _playerCameraLookAt;
         [SerializeField] private Transform _resourcesSpawnTransform;
         [SerializeField] private CharacterMovement _characterMovement;
 
-        private PlayerMovement _playerMovement;
+        [Header("Camera")]
+        [SerializeField] private Transform _playerCameraLookAt;
+
         private bool _isMoving;
-        private PlayerResourceShare _resourceShare;
         
+        private PlayerMovement _playerMovement;
+        private PlayerResourceShare _resourceShare;
+        private CameraSway _cameraSway;
+
         public CinemachineVirtualCamera PlayerCamera { get; private set; }
 
         [Inject]
@@ -58,7 +63,7 @@ namespace Gameplay.Player
 
             Move(movementVector);
         }
-
+        
         private void OnTriggerEnter(Collider other)
         {
             if (other.CompareTag(Tags.BuildingTrigger))

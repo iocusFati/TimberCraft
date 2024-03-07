@@ -41,13 +41,13 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Library\PackageCache\com.unity.probuilder@5.0.7\AssetIdRemapUtility\Editor\AssemblyInfo.cs" />
      <Compile Include="Library\PackageCache\com.unity.probuilder@5.0.7\AssetIdRemapUtility\Editor\PackageImporter.cs" />
-     <Compile Include="Library\PackageCache\com.unity.probuilder@5.0.7\AssetIdRemapUtility\Editor\AssetId.cs" />
-     <Compile Include="Library\PackageCache\com.unity.probuilder@5.0.7\AssetIdRemapUtility\Editor\AssetIdRemapBuilderEditor.cs" />
      <Compile Include="Library\PackageCache\com.unity.probuilder@5.0.7\AssetIdRemapUtility\Editor\AssetIdRemapBuilderTreeView.cs" />
-     <Compile Include="Library\PackageCache\com.unity.probuilder@5.0.7\AssetIdRemapUtility\Editor\AssetTreeView.cs" />
+     <Compile Include="Library\PackageCache\com.unity.probuilder@5.0.7\AssetIdRemapUtility\Editor\AssetIdRemapBuilderEditor.cs" />
      <Compile Include="Library\PackageCache\com.unity.probuilder@5.0.7\AssetIdRemapUtility\Editor\AssetIdRemapEditor.cs" />
+     <Compile Include="Library\PackageCache\com.unity.probuilder@5.0.7\AssetIdRemapUtility\Editor\AssetTreeView.cs" />
+     <Compile Include="Library\PackageCache\com.unity.probuilder@5.0.7\AssetIdRemapUtility\Editor\AssemblyInfo.cs" />
+     <Compile Include="Library\PackageCache\com.unity.probuilder@5.0.7\AssetIdRemapUtility\Editor\AssetId.cs" />
      <Folder Include="Library\PackageCache\com.unity.probuilder@5.0.7\AssetIdRemapUtility\Editor" />
      <None Include="Library\PackageCache\com.unity.probuilder@5.0.7\AssetIdRemapUtility\Editor\Unity.ProBuilder.AssetIdRemapUtility.asmdef" />
      <Reference Include="UnityEngine">

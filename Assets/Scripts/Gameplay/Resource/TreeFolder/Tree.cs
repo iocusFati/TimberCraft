@@ -78,16 +78,18 @@ namespace Gameplay.Resource
             _stumpCollider = _stumpTriggerCheck.GetComponent<Collider>();
 
             InitializeInitialPositions();
-
-
+            
             _stumpCollider.enabled = false;
             _stumpTriggerCheck.OnTriggerEntered += StumpTriggerEnterKickedIn;
         }
 
         private void StumpTriggerEnterKickedIn(Collider obj)
         {
-            if (obj.CompareTag(Tags.Resource) || obj.CompareTag(Tags.TreeTip)) 
+            if (obj.CompareTag(Tags.Resource) || obj.CompareTag(Tags.TreeTip))
+            {
                 SpawnLandParticle();
+                SpawnLeavesParticle();
+            }
         }
 
         public override void GetDamage(Vector3 hitPoint, Transform hitTransform, out bool resourceSourceDestroyed)
@@ -95,8 +97,6 @@ namespace Gameplay.Resource
             _stumpCollider.enabled = true;
 
             base.GetDamage(hitPoint, hitTransform, out resourceSourceDestroyed);
-
-            SpawnLeavesParticle();
         }
         
         public void SetKinematic(bool kinematic)

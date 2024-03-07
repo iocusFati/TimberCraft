@@ -156,8 +156,8 @@
      <Compile Include="Assets\Plugins\Feel\MMTools\Tools\MMAttributes\MMHiddenAttribute.cs" />
      <Compile Include="Assets\Plugins\Feel\MMTools\Tools\MMGyroscope\MMGyroscope.cs" />
      <Compile Include="Assets\Plugins\Feel\MMTools\Tools\MMAudio\MMPlaylist\MMPlaylist.cs" />
-     <Compile Include="Assets\Plugins\Feel\MMTools\Tools\MMActivation\MMTriggerFilter.cs" />
      <Compile Include="Assets\Plugins\Feel\MMTools\Tools\MMSaveLoad\MMSaveLoadManager.cs" />
+     <Compile Include="Assets\Plugins\Feel\MMTools\Tools\MMActivation\MMTriggerFilter.cs" />
      <Compile Include="Assets\Plugins\Feel\MMTools\Tools\MMTime\MMCooldown.cs" />
      <Compile Include="Assets\Plugins\Feel\MMTools\Tools\MMDebugMenu\Scripts\UIClasses\MMDebugMenuSpriteReplace.cs" />
      <Compile Include="Assets\Plugins\Feel\MMTools\Tools\MMSaveLoad\MMPersistenceManager.cs" />
@@ -310,8 +310,8 @@
      <Compile Include="Assets\Plugins\Feel\MMTools\Tools\MMAttributes\MMInspectorButtonAttribute.cs" />
      <Compile Include="Assets\Plugins\Feel\MMTools\Tools\MMSingletons\MMPersistentSingleton.cs" />
      <Compile Include="Assets\Plugins\Feel\MMTools\Tools\MMGUI\MMGetFocusOnEnable.cs" />
-     <Compile Include="Assets\Plugins\Feel\MMTools\Tools\MMHelpers\MMMaths.cs" />
      <Compile Include="Assets\Plugins\Feel\MMTools\Tools\MMDebugMenu\Scripts\MMDebugMenuItems\MMDebugMenuItemText.cs" />
+     <Compile Include="Assets\Plugins\Feel\MMTools\Tools\MMHelpers\MMMaths.cs" />
      <Compile Include="Assets\Plugins\Feel\MMTools\Tools\MMRadio\MMRadioReceiver.cs" />
      <Compile Include="Assets\Plugins\Feel\MMTools\Tools\MMPhysics\MMRigidbodyCenterOfMass.cs" />
      <Compile Include="Assets\Plugins\Feel\MMTools\Tools\MMObservable\MMObservable.cs" />

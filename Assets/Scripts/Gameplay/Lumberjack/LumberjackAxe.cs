@@ -21,6 +21,7 @@ namespace Gameplay.Lumberjack
         private int _stoneMaxDamagesPerSwing;
 
         private ResourceType _targetResourceType = ResourceType.None;
+        private Collider _collider;
 
         private readonly List<GameObject> _damagedSources = new();
 
@@ -33,7 +34,12 @@ namespace Gameplay.Lumberjack
             _treeMaxDamagesPerSwing = playerConfig.TreeMaxDamagesPerSwing;
             _stoneMaxDamagesPerSwing = playerConfig.StoneMaxDamagesPerSwing;
         }
-        
+
+        private void Awake()
+        {
+            _collider = GetComponent<Collider>();
+        }
+
         private void OnTriggerEnter(Collider other)
         {
             if (!_disableHitCheck && other.CompareTag(Tags.Resource))
@@ -58,6 +64,7 @@ namespace Gameplay.Lumberjack
         public void DisableHitCheck(bool disable)
         {
             _disableHitCheck = disable;
+            _collider.enabled = !disable;
         }
 
         private void TryDamageSource(Collider other, ResourceSource resourceSource)

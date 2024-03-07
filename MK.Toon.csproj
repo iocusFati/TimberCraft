@@ -41,12 +41,12 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\_MK\MKToon\Scripts\Properties.cs" />
-     <Compile Include="Assets\_MK\MKToon\Scripts\Uniform.cs" />
+     <Compile Include="Assets\_MK\MKToon\Scripts\Uniforms.cs" />
+     <Compile Include="Assets\_MK\MKToon\Scripts\Common.cs" />
      <Compile Include="Assets\_MK\MKToon\Scripts\Property.cs" />
      <Compile Include="Assets\_MK\MKToon\Scripts\Keywords.cs" />
-     <Compile Include="Assets\_MK\MKToon\Scripts\Common.cs" />
-     <Compile Include="Assets\_MK\MKToon\Scripts\Uniforms.cs" />
+     <Compile Include="Assets\_MK\MKToon\Scripts\Uniform.cs" />
+     <Compile Include="Assets\_MK\MKToon\Scripts\Properties.cs" />
      <Folder Include="Assets\_MK\MKToon\Builtin\Iridescence" />
      <Folder Include="Assets\_MK\MKToon\Builtin\Drawn" />
      <None Include="Assets\_MK\MKToon\Shader\Lib\Core.hlsl" />

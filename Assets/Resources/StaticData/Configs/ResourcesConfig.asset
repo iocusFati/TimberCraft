@@ -12,7 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a37cfc16414c45288f184450489fc7d5, type: 3}
   m_Name: ResourcesConfig
   m_EditorClassIdentifier: 
-  _fadeDuration: 1
   _restoreTreeAfter: 3
   _dropoutCollectDuration: 0.4
   _minDropoutsPerExtract: 3
@@ -25,31 +24,12 @@ MonoBehaviour:
   _goldUnitsPerCoin: 3
   _treeFadeDuration: 1.7
   _fadeDelay: 1
-  _onLandedVFXModifier: 0.09
-  _onLandedBaseVFXSize: {x: 0.1, y: 0.2}
+  _onLandedBaseVFXSpeedModifier: 0.6
+  _onLandedVFXSpeedMultiplier: 0.45
+  _onLandedVFXBaseSimulationSpeed: 1
+  _onLandedVFXSimulationSpeedMultiplier: 0.11
+  _onLandedVFXBaseRadius: 0.27
+  _onLandedVFXTreeTipRadius: 1.4
+  _onLandedBaseVFXSize: {x: 0.18, y: 0.24}
+  _onLandedVFXSizeModifier: 0.13
   _tryToFindResourceAgainTime: 2
-  _sourceAppearDuration: 0
-  _sourceAppearCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 2
-      outSlope: 2
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    - serializedVersion: 3
-      time: 1
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4

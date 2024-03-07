@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Reflection;
+using Infrastructure.StaticData.ResourcesData;
 using Sirenix.OdinInspector;
 using UnityEditor;
 using UnityEngine;
@@ -27,6 +28,7 @@ namespace Gameplay.Resource
         [Header("Materials")]
         [SerializeField] private Material _treeTipMaterial;
 
+        [SerializeField] private TreeCreateConfig _treeCreateConfig;
 
         [Button]
         public void SpawnTree()
@@ -49,9 +51,14 @@ namespace Gameplay.Resource
             for (int index = 0; index < _resourcesCount; index++)
             {
                 GameObject resource = Instantiate(_resourcePrefab, _resourceParent);
-
                 ConstantForce resourceForce = resource.GetComponent<ConstantForce>();
-                resourceForce.force = new Vector3(0, -3 * (4 - _resourcesCount + index + 1), 0);
+                Rigidbody resourceRB = resource.GetComponent<Rigidbody>();
+
+                resourceForce.force = new Vector3(
+                    0, -_treeCreateConfig.ForcePerSegment * (4 - _resourcesCount + index + 1), 0);
+                
+                resourceRB.mass = 
+                    _treeCreateConfig.MaxMass - _treeCreateConfig.MassPerSegment * (4 - _resourcesCount + index + 1); 
                 
                 resource.transform.localPosition += new Vector3(0, _distanceBetweenResources * index, 0);
                 
@@ -62,11 +69,14 @@ namespace Gameplay.Resource
         private void SpawnTreeTip(List<Transform> segments, Type type, Tree tree)
         {
             GameObject treeTip = Instantiate(_treeTipPrefab, _treeTipParent);
-            
+            MeshRenderer treeTipMeshRenderer = treeTip.GetComponent<MeshRenderer>();
+            Rigidbody treeTipRB = treeTip.GetComponentInParent<Rigidbody>();
+
             _treeTipParent.transform.position = segments[^1].position + new Vector3(0, _distanceBetweenResourceAndTip);
 
-            MeshRenderer treeTipMeshRenderer = treeTip.GetComponent<MeshRenderer>();
             treeTipMeshRenderer.material = _treeTipMaterial;
+
+            treeTipRB.mass = _treeCreateConfig.TreeTipMass;
             
             FieldInfo meshRendererFieldInfo = 
                 type.GetField("_treeTipMeshRenderer", BindingFlags.NonPublic | BindingFlags.Instance);
