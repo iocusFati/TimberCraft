@@ -849,6 +849,10 @@
       <Project>{590637a5-e179-5c5a-801a-3c4f573bbec2}</Project>
       <Name>Unity.TextMeshPro.Player</Name>
     </ProjectReference>
+    <ProjectReference Include="Unity.RenderPipelines.Core.Runtime.Player.csproj">
+      <Project>{dfa32be4-d870-289c-dde2-fa8cb82da0b8}</Project>
+      <Name>Unity.RenderPipelines.Core.Runtime.Player</Name>
+    </ProjectReference>
     <ProjectReference Include="Unity.Postprocessing.Runtime.Player.csproj">
       <Project>{65696eab-817a-9327-a047-367e32ad6f5f}</Project>
       <Name>Unity.Postprocessing.Runtime.Player</Name>

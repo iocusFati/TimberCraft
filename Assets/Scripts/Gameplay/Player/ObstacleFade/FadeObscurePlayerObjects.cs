@@ -22,17 +22,19 @@ namespace Gameplay.Player.ObstacleFade
         private float _fadeDuration = 1;
     
         [Header("Read Only Data")]
-        [SerializeField]
-        private List<MeshRenderer> _objectsBlockingView = new();
+        private readonly List<IObscurablePlayer> _objectsBlockingView = new();
         
         private Camera _camera;
         private Transform _playerTransform;
-        private CacheContainer<MeshRenderer> _obscureViewObjectsCache;
+        private CacheContainer<IObscurablePlayer> _obscureViewObjectsCache;
 
-        private readonly Dictionary<MeshRenderer, Tween> _activeTweens = new();
-        private readonly HashSet<MeshRenderer> _checkDisabledObjects = new();
+        private readonly Dictionary<IObscurablePlayer, Tween> _activeFadeOutTweens = new();
+        private readonly Dictionary<IObscurablePlayer, Tween> _activeFadeInTweens = new();
+        private readonly HashSet<IObscurablePlayer> _checkDisabledObjects = new();
 
         private readonly RaycastHit[] Hits = new RaycastHit[5];
+
+        private static readonly int Alpha = Shader.PropertyToID("_Alpha");
 
         private GameObject[] HitsObjects => Hits.Select(hit => hit.collider?.gameObject).ToArray();
 
@@ -54,23 +56,23 @@ namespace Gameplay.Player.ObstacleFade
             _camera = Camera.main;
         }
 
-        public void DisableCheckFor(MeshRenderer meshRenderer)
+        public void DisableCheckFor(IObscurablePlayer obscurable)
         {
-            _checkDisabledObjects.Add(meshRenderer);
+            _checkDisabledObjects.Add(obscurable);
             
-            KillTweenIfActiveExistsFor(meshRenderer);
+            KillTweenIfActiveExistsFor(obscurable);
         }
 
-        public void EnableCheckFor(MeshRenderer meshRenderer) => 
-            _checkDisabledObjects.Remove(meshRenderer);
+        public void EnableCheckFor(IObscurablePlayer obscurable) => 
+            _checkDisabledObjects.Remove(obscurable);
 
-        private void KillTweenIfActiveExistsFor(MeshRenderer meshRenderer)
+        private void KillTweenIfActiveExistsFor(IObscurablePlayer obscurable)
         {
-            if (_objectsBlockingView.Contains(meshRenderer))
+            if (_objectsBlockingView.Contains(obscurable))
             {
-                _objectsBlockingView.Remove(meshRenderer);
+                _objectsBlockingView.Remove(obscurable);
 
-                if (_activeTweens.Remove(meshRenderer, out var tween)) 
+                if (_activeFadeOutTweens.Remove(obscurable, out var tween)) 
                     tween.Kill();
             }
         }
@@ -91,25 +93,25 @@ namespace Gameplay.Player.ObstacleFade
                 {
                     for (int i = 0; i < hits; i++)
                     {
-                        MeshRenderer obscureMeshRenderer = _obscureViewObjectsCache.Get(Hits[i].collider.gameObject);
+                        IObscurablePlayer obscurable = _obscureViewObjectsCache.Get(Hits[i].collider.gameObject);
 
-                        if (_checkDisabledObjects.Contains(obscureMeshRenderer))
+                        if (_checkDisabledObjects.Contains(obscurable) || _objectsBlockingView.Contains(obscurable))
                             continue;
 
-                        if(_activeTweens.TryGetValue(obscureMeshRenderer, out var activeTween))
+                        if (_activeFadeInTweens.TryGetValue(obscurable, out var activeTween))
                         {
                             activeTween.Kill();
                             
-                            _activeTweens.Remove(obscureMeshRenderer);
-                            _objectsBlockingView.Remove(obscureMeshRenderer);
-                        }
+                            DitherObscurable(obscurable);
 
-                        Tween tween = obscureMeshRenderer.material
-                            .DOFade(_fadedAlpha, _fadeDuration)
-                            .OnComplete(() => RemoveTween(obscureMeshRenderer));
+                            _activeFadeInTweens.Remove(obscurable);
+                        }
+                        else if(!_activeFadeOutTweens.ContainsKey(obscurable))
+                        {
+                            DitherObscurable(obscurable);
+                        }
                         
-                        _activeTweens.Add(obscureMeshRenderer, tween);
-                        _objectsBlockingView.Add(obscureMeshRenderer);
+                        _objectsBlockingView.Add(obscurable);
                     }
                 }
     
@@ -121,9 +123,39 @@ namespace Gameplay.Player.ObstacleFade
             }
         }
 
-        private void RemoveTween(MeshRenderer meshRenderer, bool killTween = false)
+        private Tween ChangeAlpha(IObscurablePlayer obscurable, Dictionary<IObscurablePlayer,Tween> tweens,
+            float fadedAlpha)
         {
-            _activeTweens.Remove(meshRenderer, out Tween tween);
+            float ditherAlpha = 0;
+            
+            Tween tween = DOTween
+                .To(() => ditherAlpha, value => ditherAlpha = value, fadedAlpha, _fadeDuration)
+                .OnUpdate(() => obscurable.ObscureMesh.material.SetFloat(Alpha, ditherAlpha))
+                .OnComplete(() => RemoveTween(obscurable, tweens));
+            
+            tweens.Add(obscurable, tween);
+
+            return tween;
+        }
+
+        private void DitherObscurable(IObscurablePlayer obscurable)
+        {
+            obscurable.MainGO.SetActive(false);
+            obscurable.DitherGO.SetActive(true);
+            Tween tween = ChangeAlpha(obscurable, _activeFadeOutTweens, _fadedAlpha);
+
+            // Tween tween = obscurable.Meshmaterial
+            //     .DOFade(_fadedAlpha, _fadeDuration)
+            //     .OnComplete(() => RemoveTween(obscurable));
+            
+            _objectsBlockingView.Add(obscurable);
+        }
+
+        private void RemoveTween(IObscurablePlayer obscurable,
+            Dictionary<IObscurablePlayer, Tween> tweens,
+            bool killTween = false)
+        {
+            tweens.Remove(obscurable, out Tween tween);
 
             if (killTween) 
                 tween.Kill();
@@ -131,25 +163,33 @@ namespace Gameplay.Player.ObstacleFade
 
         private void FadeObjectsNoLongerBeingHit()
         {
-            MeshRenderer[] notObscuringObjects = NotObscuringObjects().ToArray();
+            IObscurablePlayer[] notObscuringObjects = NotObscuringObjects().ToArray();
             
             for (int i = 0; i < notObscuringObjects.Length; i++)
             {
-                MeshRenderer blockingRenderer = notObscuringObjects[i];
+                if (_activeFadeInTweens.ContainsKey(notObscuringObjects[i]))
+                    continue;
                 
-                RemoveTween(blockingRenderer, true);
+                IObscurablePlayer obscurable = notObscuringObjects[i];
+                
+                obscurable.MainGO.SetActive(true);
+                obscurable.DitherGO.SetActive(false);
+                
+                RemoveTween(obscurable, _activeFadeOutTweens, true);
 
-                Tween tween = blockingRenderer.material
-                    .DOFade(1, _fadeDuration)
-                    .OnComplete(() => _activeTweens.Remove(blockingRenderer));
-                _activeTweens.Add(blockingRenderer, tween);
+                ChangeAlpha(obscurable, _activeFadeInTweens, 0);
+                
+                // Tween tween = obscurable.material
+                //     .DOFade(1, _fadeDuration)
+                //     .OnComplete(() => _activeTweens.Remove(obscurable));
 
-                _objectsBlockingView.Remove(blockingRenderer);
+                _objectsBlockingView.Remove(obscurable);
             }
         }
 
-        private IEnumerable<MeshRenderer> NotObscuringObjects() => 
-            _objectsBlockingView.Where(blockingRenderer => !HitsObjects.Contains(blockingRenderer.gameObject));
+        private IEnumerable<IObscurablePlayer> NotObscuringObjects() => 
+            _objectsBlockingView.Where(blockingRenderer => 
+                !HitsObjects.Contains(blockingRenderer.BlockerGO));
 
         private void ClearHits()
         {

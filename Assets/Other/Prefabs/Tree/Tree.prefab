@@ -524,7 +524,8 @@ GameObject:
   - component: {fileID: 748897384080229956}
   - component: {fileID: 2003592849955706682}
   - component: {fileID: 5666891780069640186}
-  m_Layer: 10
+  - component: {fileID: 2849494423555304316}
+  m_Layer: 14
   m_Name: TreeTip_1
   m_TagString: TreeTip
   m_Icon: {fileID: 0}
@@ -588,6 +589,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 3, y: 1, z: 3}
   m_Center: {x: 0, y: -0.43, z: 0}
+--- !u!65 &2849494423555304316
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1516059126258096681}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3.8436127, y: 4.3791676, z: 0.5050645}
+  m_Center: {x: -0.22809792, y: -0.41, z: -0.78021526}
 --- !u!1 &4687408333503671447
 GameObject:
   m_ObjectHideFlags: 0
@@ -968,10 +982,11 @@ MonoBehaviour:
   _segments:
   - {fileID: 0}
   - {fileID: 0}
-  _treeTipMeshRenderer: {fileID: 0}
   _leavesParticleSpawn: {fileID: 6575677235458486043}
   _stump: {fileID: 8284640355975606558}
   _stumpTriggerCheck: {fileID: 7087105959052431331}
+  _treeTipObscureMeshRenderer: {fileID: 0}
+  _mainGo: {fileID: 0}
 --- !u!114 &8952710052462148222
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -991,7 +1006,7 @@ MonoBehaviour:
   _distanceBetweenResourceAndTip: 2.57
   _resourceParent: {fileID: 3692383612373984479}
   _treeTipParent: {fileID: 2376072269217046408}
-  _treeTipMaterial: {fileID: 2100000, guid: 8850e391778cb794d90d153ed3e3e3e8, type: 2}
+  _treeTipDitherMaterial: {fileID: 2100000, guid: 8850e391778cb794d90d153ed3e3e3e8, type: 2}
   _treeCreateConfig: {fileID: 11400000, guid: 114bf7fc614ba3547b9d6179c3f08332, type: 2}
 --- !u!136 &6189845528549112374
 CapsuleCollider:

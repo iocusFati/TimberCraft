@@ -779,6 +779,10 @@
      </Reference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="Unity.RenderPipelines.Core.Runtime.csproj">
+      <Project>{271312c1-a7d1-47ae-1b13-40151bf5ffdc}</Project>
+      <Name>Unity.RenderPipelines.Core.Runtime</Name>
+    </ProjectReference>
     <ProjectReference Include="MoreMountains.Feedbacks.csproj">
       <Project>{917a30b7-277a-48fa-e6d3-5cc90713daa2}</Project>
       <Name>MoreMountains.Feedbacks</Name>

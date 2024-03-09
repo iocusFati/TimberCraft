@@ -719,6 +719,10 @@
       <Project>{65696eab-817a-9327-a047-367e32ad6f5f}</Project>
       <Name>Unity.Postprocessing.Runtime.Player</Name>
     </ProjectReference>
+    <ProjectReference Include="Unity.RenderPipelines.Core.Runtime.Player.csproj">
+      <Project>{dfa32be4-d870-289c-dde2-fa8cb82da0b8}</Project>
+      <Name>Unity.RenderPipelines.Core.Runtime.Player</Name>
+    </ProjectReference>
     <ProjectReference Include="Unity.InputSystem.Player.csproj">
       <Project>{c94fbf21-e458-f460-8e31-87239911c4ed}</Project>
       <Name>Unity.InputSystem.Player</Name>

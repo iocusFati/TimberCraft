@@ -82,6 +82,7 @@
      <Compile Include="Assets\Scripts\Gameplay\Buildings\UpgradableBuilding.cs" />
      <Compile Include="Assets\Scripts\UI\Entities\HUD_Folder\HUD.cs" />
      <Compile Include="Assets\Other\KriptoFX\MuzzleFlashes\Scripts\FPSRandomRotateAngle.cs" />
+     <Compile Include="Assets\Scripts\Infrastructure\StaticData\CameraData\CameraSwayConfig.cs" />
      <Compile Include="Assets\Scripts\UI\Entities\PopUps\MainHousePopUp.cs" />
      <Compile Include="Assets\Scripts\Infrastructure\StaticData\LumberjackData\LumberjackBotConfig.cs" />
      <Compile Include="Assets\MeshBaker\Examples\SceneRuntimeExample\MB_ExampleSkinnedMeshDescription.cs" />
@@ -206,7 +207,7 @@
      <Compile Include="Assets\Scripts\Infrastructure\Services\Input\MobileInput.cs" />
      <Compile Include="Assets\Scripts\Utils\Constants.cs" />
      <Compile Include="Assets\Scripts\Infrastructure\Services\Input\IInputService.cs" />
-     <Compile Include="Assets\Scripts\Infrastructure\StaticData\CameraData\CameraSwayConfig.cs" />
+     <Compile Include="Assets\Scripts\Gameplay\Player\ObstacleFade\IObscurablePlayer.cs" />
      <Reference Include="UnityEngine">
      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.25f1\Editor\Data\PlaybackEngines\AndroidPlayer\Variations\mono\Managed\UnityEngine.dll</HintPath>
      </Reference>
@@ -801,6 +802,62 @@
       <Project>{bbd360f0-2369-b486-35aa-38cd8cc029d6}</Project>
       <Name>Assembly-CSharp-firstpass.Player</Name>
     </ProjectReference>
+    <ProjectReference Include="Unity.ProBuilder.Player.csproj">
+      <Project>{495f6a8f-5e0d-0a8a-da32-ffa2944b9caa}</Project>
+      <Name>Unity.ProBuilder.Player</Name>
+    </ProjectReference>
+    <ProjectReference Include="MoreMountains.Feedbacks.URP.Player.csproj">
+      <Project>{e13f7d12-4fa1-749d-5971-6800cd67b971}</Project>
+      <Name>MoreMountains.Feedbacks.URP.Player</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.InputSystem.Player.csproj">
+      <Project>{c94fbf21-e458-f460-8e31-87239911c4ed}</Project>
+      <Name>Unity.InputSystem.Player</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.RenderPipelines.Core.ShaderLibrary.Player.csproj">
+      <Project>{f61d80b3-e2e2-7a87-c134-44f78da89706}</Project>
+      <Name>Unity.RenderPipelines.Core.ShaderLibrary.Player</Name>
+    </ProjectReference>
+    <ProjectReference Include="UnityEngine.UI.Player.csproj">
+      <Project>{ffddfe77-9d36-6b39-9ff3-1dedaeb93596}</Project>
+      <Name>UnityEngine.UI.Player</Name>
+    </ProjectReference>
+    <ProjectReference Include="MoreMountains.Feedbacks.PostProcessing.Player.csproj">
+      <Project>{b5acc3ca-520e-3b8c-f407-56f4a5ba8649}</Project>
+      <Name>MoreMountains.Feedbacks.PostProcessing.Player</Name>
+    </ProjectReference>
+    <ProjectReference Include="Cinemachine.Player.csproj">
+      <Project>{47973b4f-93a5-290f-0b8d-bba041ba1ce4}</Project>
+      <Name>Cinemachine.Player</Name>
+    </ProjectReference>
+    <ProjectReference Include="MoreMountains.Feedbacks.NiceVibrations.Player.csproj">
+      <Project>{791e8128-72aa-3374-2d4d-b93fbbcdd71e}</Project>
+      <Name>MoreMountains.Feedbacks.NiceVibrations.Player</Name>
+    </ProjectReference>
+    <ProjectReference Include="MeshBakerCore.Player.csproj">
+      <Project>{1354b362-5c9f-aeff-6130-22f74cc2d629}</Project>
+      <Name>MeshBakerCore.Player</Name>
+    </ProjectReference>
+    <ProjectReference Include="Zenject.Player.csproj">
+      <Project>{0c65196b-e0ba-4e45-c0ac-ad1d92ec41cd}</Project>
+      <Name>Zenject.Player</Name>
+    </ProjectReference>
+    <ProjectReference Include="MK.Toon.Player.csproj">
+      <Project>{334107be-b97b-9567-44a5-97bfc27d60b0}</Project>
+      <Name>MK.Toon.Player</Name>
+    </ProjectReference>
+    <ProjectReference Include="MoreMountains.Feedbacks.TextMeshPro.Player.csproj">
+      <Project>{d2e030c4-d337-ec93-8909-aa40ac615d43}</Project>
+      <Name>MoreMountains.Feedbacks.TextMeshPro.Player</Name>
+    </ProjectReference>
+    <ProjectReference Include="Lofelt.NiceVibrations.Demo.Player.csproj">
+      <Project>{44ee7ebf-a2e0-71bd-4098-3a12187ee79a}</Project>
+      <Name>Lofelt.NiceVibrations.Demo.Player</Name>
+    </ProjectReference>
+    <ProjectReference Include="MoreMountains.Feedbacks.Cinemachine.Player.csproj">
+      <Project>{e636f1f1-d0ba-1d74-19bb-a402f90b30b8}</Project>
+      <Name>MoreMountains.Feedbacks.Cinemachine.Player</Name>
+    </ProjectReference>
     <ProjectReference Include="MoreMountains.Feedbacks.HDRP.Player.csproj">
       <Project>{a697767c-7746-5e4e-cd2f-24726b565403}</Project>
       <Name>MoreMountains.Feedbacks.HDRP.Player</Name>
@@ -821,21 +878,9 @@
       <Project>{1aea1d74-c883-124c-1efe-ebf4e58a44f0}</Project>
       <Name>MK.Toon.Examples.Player</Name>
     </ProjectReference>
-    <ProjectReference Include="Unity.ProBuilder.Player.csproj">
-      <Project>{495f6a8f-5e0d-0a8a-da32-ffa2944b9caa}</Project>
-      <Name>Unity.ProBuilder.Player</Name>
-    </ProjectReference>
-    <ProjectReference Include="MoreMountains.Feedbacks.URP.Player.csproj">
-      <Project>{e13f7d12-4fa1-749d-5971-6800cd67b971}</Project>
-      <Name>MoreMountains.Feedbacks.URP.Player</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.InputSystem.Player.csproj">
-      <Project>{c94fbf21-e458-f460-8e31-87239911c4ed}</Project>
-      <Name>Unity.InputSystem.Player</Name>
-    </ProjectReference>
-    <ProjectReference Include="UnityEngine.UI.Player.csproj">
-      <Project>{ffddfe77-9d36-6b39-9ff3-1dedaeb93596}</Project>
-      <Name>UnityEngine.UI.Player</Name>
+    <ProjectReference Include="Unity.RenderPipelines.Core.Runtime.Player.csproj">
+      <Project>{dfa32be4-d870-289c-dde2-fa8cb82da0b8}</Project>
+      <Name>Unity.RenderPipelines.Core.Runtime.Player</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.VisualScripting.Flow.Player.csproj">
       <Project>{945ed572-57e4-e8fc-7133-0316dcf5c7fc}</Project>
@@ -849,57 +894,29 @@
       <Project>{4abf54bb-ee00-a00f-ff98-3dbbdd909c86}</Project>
       <Name>MoreMountains.Feedbacks.MMTools.Player</Name>
     </ProjectReference>
-    <ProjectReference Include="MoreMountains.Feedbacks.PostProcessing.Player.csproj">
-      <Project>{b5acc3ca-520e-3b8c-f407-56f4a5ba8649}</Project>
-      <Name>MoreMountains.Feedbacks.PostProcessing.Player</Name>
-    </ProjectReference>
-    <ProjectReference Include="Cinemachine.Player.csproj">
-      <Project>{47973b4f-93a5-290f-0b8d-bba041ba1ce4}</Project>
-      <Name>Cinemachine.Player</Name>
-    </ProjectReference>
-    <ProjectReference Include="MoreMountains.Feedbacks.NiceVibrations.Player.csproj">
-      <Project>{791e8128-72aa-3374-2d4d-b93fbbcdd71e}</Project>
-      <Name>MoreMountains.Feedbacks.NiceVibrations.Player</Name>
+    <ProjectReference Include="AstarPathfindingProject.Player.csproj">
+      <Project>{5bf4adad-ac67-1bc5-cab9-a4caa73044ae}</Project>
+      <Name>AstarPathfindingProject.Player</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.Postprocessing.Runtime.Player.csproj">
       <Project>{65696eab-817a-9327-a047-367e32ad6f5f}</Project>
       <Name>Unity.Postprocessing.Runtime.Player</Name>
     </ProjectReference>
-    <ProjectReference Include="MeshBakerCore.Player.csproj">
-      <Project>{1354b362-5c9f-aeff-6130-22f74cc2d629}</Project>
-      <Name>MeshBakerCore.Player</Name>
-    </ProjectReference>
     <ProjectReference Include="SimpleInput.Runtime.Player.csproj">
       <Project>{2db20ea8-4d6c-5bba-e320-323d95cea084}</Project>
       <Name>SimpleInput.Runtime.Player</Name>
-    </ProjectReference>
-    <ProjectReference Include="AstarPathfindingProject.Player.csproj">
-      <Project>{5bf4adad-ac67-1bc5-cab9-a4caa73044ae}</Project>
-      <Name>AstarPathfindingProject.Player</Name>
     </ProjectReference>
     <ProjectReference Include="MoreMountains.Feedbacks.Player.csproj">
       <Project>{51808121-8046-b784-1c70-81dc706c1a37}</Project>
       <Name>MoreMountains.Feedbacks.Player</Name>
     </ProjectReference>
-    <ProjectReference Include="Zenject.Player.csproj">
-      <Project>{0c65196b-e0ba-4e45-c0ac-ad1d92ec41cd}</Project>
-      <Name>Zenject.Player</Name>
+    <ProjectReference Include="Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.Player.csproj">
+      <Project>{511406f6-4c04-e02b-2e2b-aeb8700f4757}</Project>
+      <Name>Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.Player</Name>
     </ProjectReference>
     <ProjectReference Include="Lofelt.NiceVibrations.Player.csproj">
       <Project>{478f72ec-fb52-dee1-23f0-e8014788ccfc}</Project>
       <Name>Lofelt.NiceVibrations.Player</Name>
-    </ProjectReference>
-    <ProjectReference Include="MK.Toon.Player.csproj">
-      <Project>{334107be-b97b-9567-44a5-97bfc27d60b0}</Project>
-      <Name>MK.Toon.Player</Name>
-    </ProjectReference>
-    <ProjectReference Include="MoreMountains.Feedbacks.TextMeshPro.Player.csproj">
-      <Project>{d2e030c4-d337-ec93-8909-aa40ac615d43}</Project>
-      <Name>MoreMountains.Feedbacks.TextMeshPro.Player</Name>
-    </ProjectReference>
-    <ProjectReference Include="Lofelt.NiceVibrations.Demo.Player.csproj">
-      <Project>{44ee7ebf-a2e0-71bd-4098-3a12187ee79a}</Project>
-      <Name>Lofelt.NiceVibrations.Demo.Player</Name>
     </ProjectReference>
     <ProjectReference Include="MoreMountains.Tools.Player.csproj">
       <Project>{6037fafe-5826-2b43-3f36-2b452226ec30}</Project>
@@ -908,10 +925,6 @@
     <ProjectReference Include="Unity.VisualScripting.State.Player.csproj">
       <Project>{ea8a7aa2-c584-f7ea-8cc1-7be2df8494e1}</Project>
       <Name>Unity.VisualScripting.State.Player</Name>
-    </ProjectReference>
-    <ProjectReference Include="MoreMountains.Feedbacks.Cinemachine.Player.csproj">
-      <Project>{e636f1f1-d0ba-1d74-19bb-a402f90b30b8}</Project>
-      <Name>MoreMountains.Feedbacks.Cinemachine.Player</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

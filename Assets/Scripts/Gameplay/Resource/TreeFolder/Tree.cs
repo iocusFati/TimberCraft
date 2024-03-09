@@ -14,13 +14,16 @@ using Zenject;
 
 namespace Gameplay.Resource
 {
-    public class Tree : ResourceSource
+    public class Tree : ResourceSource, IObscurablePlayer
     {
         [Header("Tree")]
-        [SerializeField] private MeshRenderer _treeTipMeshRenderer;
         [SerializeField] private Transform _leavesParticleSpawn;
         [SerializeField] private Transform _stump;
         [SerializeField] private TriggerInteraction _stumpTriggerCheck;
+        
+        [Header("Tree tip")]
+        [SerializeField] private MeshRenderer _treeTipObscureMeshRenderer;
+        [SerializeField] private GameObject _mainGo;
 
         private float _fadeDuration;
         private float _fadeDelay;
@@ -45,6 +48,12 @@ namespace Gameplay.Resource
 
         private List<Rigidbody> _segmentForces;
         private readonly Dictionary<Transform, Vector3> _segmentPositions = new();
+
+        public MeshRenderer ObscureMesh => _treeTipObscureMeshRenderer;
+
+        public GameObject MainGO => _mainGo;
+        public GameObject DitherGO => _treeTipObscureMeshRenderer.gameObject;
+        public GameObject BlockerGO => _treeTip.gameObject;
 
         [Inject]
         public void Construct(IPoolService poolService,
@@ -73,7 +82,7 @@ namespace Gameplay.Resource
 
         private void Start()
         {
-            _treeTip = _treeTipMeshRenderer.transform.parent;
+            _treeTip = _treeTipObscureMeshRenderer.transform.parent;
             _treeTipRB = _treeTip.GetComponent<Rigidbody>();
             _stumpCollider = _stumpTriggerCheck.GetComponent<Collider>();
 
@@ -159,14 +168,14 @@ namespace Gameplay.Resource
 
         private void TreeTipFadeOut()
         {
-            _fadeObscurePlayerObjects.DisableCheckFor(_treeTipMeshRenderer);
+            _fadeObscurePlayerObjects.DisableCheckFor(this);
             
-            _treeTipMeshRenderer.material
+            _treeTipObscureMeshRenderer.material
                 .DOFade(0, _fadeDuration)
                 .OnComplete(() =>
                 {
                     _treeTip.gameObject.SetActive(false);
-                    _fadeObscurePlayerObjects.EnableCheckFor(_treeTipMeshRenderer);
+                    _fadeObscurePlayerObjects.EnableCheckFor(this);
                 });
         }
 
@@ -175,7 +184,7 @@ namespace Gameplay.Resource
             _treeTip.gameObject.SetActive(true);
             _treeTip.transform.localPosition = _treeTipInitialPosition;
 
-            _treeTipMeshRenderer.material.DOFade(1, 0);
+            _treeTipObscureMeshRenderer.material.DOFade(1, 0);
         }
 
         private void InitializeSegmentPositionsDictionary()

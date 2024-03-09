@@ -664,6 +664,10 @@
      </Reference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="Unity.RenderPipelines.Core.Runtime.Player.csproj">
+      <Project>{dfa32be4-d870-289c-dde2-fa8cb82da0b8}</Project>
+      <Name>Unity.RenderPipelines.Core.Runtime.Player</Name>
+    </ProjectReference>
     <ProjectReference Include="MoreMountains.Feedbacks.Player.csproj">
       <Project>{51808121-8046-b784-1c70-81dc706c1a37}</Project>
       <Name>MoreMountains.Feedbacks.Player</Name>

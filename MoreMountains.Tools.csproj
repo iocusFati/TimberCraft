@@ -1209,6 +1209,10 @@
       <Project>{d7fcd1d5-2c88-ff4b-0bae-81966a44cf4a}</Project>
       <Name>Unity.TextMeshPro</Name>
     </ProjectReference>
+    <ProjectReference Include="Unity.RenderPipelines.Core.Runtime.csproj">
+      <Project>{271312c1-a7d1-47ae-1b13-40151bf5ffdc}</Project>
+      <Name>Unity.RenderPipelines.Core.Runtime</Name>
+    </ProjectReference>
     <ProjectReference Include="Unity.Postprocessing.Runtime.csproj">
       <Project>{4a73b5b0-25a0-8fb5-d4dd-aae878df6674}</Project>
       <Name>Unity.Postprocessing.Runtime</Name>

@@ -862,6 +862,14 @@
       <Project>{6bd4c4ba-6cb5-12f6-7f35-eb3ab726c7de}</Project>
       <Name>Unity.Postprocessing.Editor</Name>
     </ProjectReference>
+    <ProjectReference Include="Unity.RenderPipelines.Core.Runtime.csproj">
+      <Project>{271312c1-a7d1-47ae-1b13-40151bf5ffdc}</Project>
+      <Name>Unity.RenderPipelines.Core.Runtime</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.RenderPipelines.Core.Editor.csproj">
+      <Project>{ec391d19-7031-2b3f-444a-d813b8f1281e}</Project>
+      <Name>Unity.RenderPipelines.Core.Editor</Name>
+    </ProjectReference>
     <ProjectReference Include="Unity.InputSystem.csproj">
       <Project>{cf320d45-1cc5-c4c1-09fe-796a12882d5e}</Project>
       <Name>Unity.InputSystem</Name>
@@ -874,13 +882,13 @@
       <Project>{b6739f46-78b4-952f-f72d-cac5921dcf74}</Project>
       <Name>UnityEngine.UI</Name>
     </ProjectReference>
-    <ProjectReference Include="UnityEngine.TestRunner.csproj">
-      <Project>{03d26f84-64eb-9d04-dad2-8777f5deac09}</Project>
-      <Name>UnityEngine.TestRunner</Name>
-    </ProjectReference>
     <ProjectReference Include="UnityEditor.TestRunner.csproj">
       <Project>{ce1948f3-3310-152b-b4d8-5aaf89cd3a59}</Project>
       <Name>UnityEditor.TestRunner</Name>
+    </ProjectReference>
+    <ProjectReference Include="UnityEngine.TestRunner.csproj">
+      <Project>{03d26f84-64eb-9d04-dad2-8777f5deac09}</Project>
+      <Name>UnityEngine.TestRunner</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

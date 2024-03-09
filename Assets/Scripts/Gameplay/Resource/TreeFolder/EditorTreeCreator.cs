@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using System.Reflection;
 using Infrastructure.StaticData.ResourcesData;
 using Sirenix.OdinInspector;
-using UnityEditor;
 using UnityEngine;
+using UnityEngine.Serialization;
 using Utils;
 
 namespace Gameplay.Resource
@@ -25,9 +25,9 @@ namespace Gameplay.Resource
         [SerializeField] private Transform _resourceParent;
         [SerializeField] private Transform _treeTipParent;
 
+        [FormerlySerializedAs("_treeTipMaterial")]
         [Header("Materials")]
-        [SerializeField] private Material _treeTipMaterial;
-
+        [SerializeField] private Material _treeTipDitherMaterial;
         [SerializeField] private TreeCreateConfig _treeCreateConfig;
 
         [Button]
@@ -69,18 +69,24 @@ namespace Gameplay.Resource
         private void SpawnTreeTip(List<Transform> segments, Type type, Tree tree)
         {
             GameObject treeTip = Instantiate(_treeTipPrefab, _treeTipParent);
-            MeshRenderer treeTipMeshRenderer = treeTip.GetComponent<MeshRenderer>();
+            GameObject treeTipDither = Instantiate(_treeTipPrefab, _treeTipParent);
+            MeshRenderer treeTipDitherMeshRenderer = treeTipDither.GetComponent<MeshRenderer>();
             Rigidbody treeTipRB = treeTip.GetComponentInParent<Rigidbody>();
 
             _treeTipParent.transform.position = segments[^1].position + new Vector3(0, _distanceBetweenResourceAndTip);
 
-            treeTipMeshRenderer.material = _treeTipMaterial;
+            treeTipDither.SetActive(false);
+            treeTipDitherMeshRenderer.material = _treeTipDitherMaterial;
 
             treeTipRB.mass = _treeCreateConfig.TreeTipMass;
             
             FieldInfo meshRendererFieldInfo = 
-                type.GetField("_treeTipMeshRenderer", BindingFlags.NonPublic | BindingFlags.Instance);
-            meshRendererFieldInfo.SetValue(tree, treeTipMeshRenderer);
+                type.GetField("_treeTipObscureMeshRenderer", BindingFlags.NonPublic | BindingFlags.Instance);
+            meshRendererFieldInfo.SetValue(tree, treeTipDitherMeshRenderer);
+            
+            FieldInfo mainGOFieldInfo = 
+                type.GetField("_mainGo", BindingFlags.NonPublic | BindingFlags.Instance);
+            mainGOFieldInfo.SetValue(tree, treeTip);
         }
 
         private void ClearTree()
