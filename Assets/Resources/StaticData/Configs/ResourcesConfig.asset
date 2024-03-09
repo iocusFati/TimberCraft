@@ -24,6 +24,7 @@ MonoBehaviour:
   _goldUnitsPerCoin: 3
   _treeFadeDuration: 1.7
   _fadeDelay: 1
+  _activeImpulseSourceDistance: 3
   _onLandedBaseVFXSpeedModifier: 0.6
   _onLandedVFXSpeedMultiplier: 0.45
   _onLandedVFXBaseSimulationSpeed: 1

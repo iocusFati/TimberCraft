@@ -220,7 +220,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _AdvancedTab: 0
+    - _AdvancedTab: 1
     - _AlbedoMapIntensity: 1
     - _AlphaClipping: 0
     - _AlphaCutoff: 0.5
@@ -350,7 +350,7 @@ Material:
     - _SrcBlend: 1
     - _Stencil: 1
     - _StencilBox: 0
-    - _StencilComp: 0
+    - _StencilComp: 8
     - _StencilFail: 0
     - _StencilID: 0
     - _StencilOn: 0
