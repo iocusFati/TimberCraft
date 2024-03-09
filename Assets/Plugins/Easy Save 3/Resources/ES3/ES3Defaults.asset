@@ -39,6 +39,7 @@ MonoBehaviour:
     - MeshBakerCore
     - MK.Toon
     - MK.Toon.Examples
+    - MK.Toon.URP
     - MoreMountains.Feedbacks
     - MoreMountains.Feedbacks.Authorizations
     - MoreMountains.Feedbacks.Cinemachine

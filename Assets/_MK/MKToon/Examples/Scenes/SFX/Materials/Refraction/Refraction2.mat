@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Refraction2
-  m_Shader: {fileID: 4800000, guid: 7a48df71a0b096d4cb32bfa5043c6ee0, type: 3}
+  m_Shader: {fileID: 4800000, guid: d99e0f389b1a84a4c8ac98863b78095b, type: 3}
   m_ShaderKeywords: _MK_ARTISTIC_ANIMATION_STUTTER _MK_BLEND_CUSTOM _MK_DETAIL_BLEND_MIX
     _MK_DETAIL_NORMAL_MAP _MK_ENVIRONMENT_REFLECTIONS_ADVANCED _MK_INDEX_OF_REFRACTION
     _MK_LIGHT_CEL _MK_RECEIVE_SHADOWS _MK_REFRACTION_DISTORTION_MAP _MK_SPECULAR_ISOTROPIC
@@ -169,6 +169,18 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - unity_Lightmaps:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_LightmapsInd:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_ShadowMasks:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     m_Floats:
     - _AdvancedTab: 1
     - _AlbedoMapIntensity: 1
@@ -283,8 +295,8 @@ Material:
     - _ZTest: 4
     - _ZWrite: 1
     m_Colors:
-    - _AlbedoColor: {r: 0.7490196, g: 0.85882354, b: 0.21960777, a: 1}
-    - _Color: {r: 0.7490196, g: 0.85882354, b: 0.21960774, a: 1}
+    - _AlbedoColor: {r: 0.7490196, g: 0.85882354, b: 0.21960771, a: 1}
+    - _Color: {r: 0.7490196, g: 0.85882354, b: 0.21960768, a: 1}
     - _DetailColor: {r: 1, g: 1, b: 1, a: 1}
     - _DissolveBorderColor: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}

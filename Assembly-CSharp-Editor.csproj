@@ -987,10 +987,6 @@
       <Project>{63326ff2-4731-9a57-9407-d20810182902}</Project>
       <Name>Unity.ProBuilder.Editor</Name>
     </ProjectReference>
-    <ProjectReference Include="Unity.Postprocessing.Editor.csproj">
-      <Project>{6bd4c4ba-6cb5-12f6-7f35-eb3ab726c7de}</Project>
-      <Name>Unity.Postprocessing.Editor</Name>
-    </ProjectReference>
     <ProjectReference Include="Unity.PlasticSCM.Editor.csproj">
       <Project>{7e5ddd76-ccea-783b-fd6f-fcb9da63b211}</Project>
       <Name>Unity.PlasticSCM.Editor</Name>
@@ -1010,10 +1006,6 @@
     <ProjectReference Include="AstarPathfindingProject.csproj">
       <Project>{bcdd1eee-e690-9a23-ce82-7c1d614c39b4}</Project>
       <Name>AstarPathfindingProject</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.Postprocessing.Runtime.csproj">
-      <Project>{4a73b5b0-25a0-8fb5-d4dd-aae878df6674}</Project>
-      <Name>Unity.Postprocessing.Runtime</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.ProBuilder.AssetIdRemapUtility.csproj">
       <Project>{b4f76a92-518d-563b-94d3-48639e541a28}</Project>
@@ -1062,6 +1054,54 @@
     <ProjectReference Include="Unity.VisualScripting.State.csproj">
       <Project>{57a7ca95-e4de-a076-fc65-d53a46d9c2e0}</Project>
       <Name>Unity.VisualScripting.State</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.RenderPipelines.Universal.Shaders.csproj">
+      <Project>{1deee5eb-abbf-a3de-4db0-8f2fe1088ef8}</Project>
+      <Name>Unity.RenderPipelines.Universal.Shaders</Name>
+    </ProjectReference>
+    <ProjectReference Include="PPv2URPConverters.csproj">
+      <Project>{b9011734-c650-d560-8431-01b6bce30755}</Project>
+      <Name>PPv2URPConverters</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.RenderPipelines.Universal.Editor.csproj">
+      <Project>{c647a2cf-53e7-0b97-5e7e-030c8d45fe88}</Project>
+      <Name>Unity.RenderPipelines.Universal.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Mathematics.Editor.csproj">
+      <Project>{04e49e86-8dbe-d5ff-10d6-04171a349791}</Project>
+      <Name>Unity.Mathematics.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.RenderPipeline.Universal.ShaderLibrary.csproj">
+      <Project>{165ea4d3-b4b4-1ca5-43bf-20cbb348013f}</Project>
+      <Name>Unity.RenderPipeline.Universal.ShaderLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Mathematics.csproj">
+      <Project>{b5fb3846-c3fe-a1c6-db1b-2bdb73c35467}</Project>
+      <Name>Unity.Mathematics</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Burst.csproj">
+      <Project>{a3ccd114-967e-587a-4abb-aca493464dc7}</Project>
+      <Name>Unity.Burst</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.RenderPipelines.Universal.Runtime.csproj">
+      <Project>{9722a2cd-0787-7619-26f9-10dad2a5bf95}</Project>
+      <Name>Unity.RenderPipelines.Universal.Runtime</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Burst.Editor.csproj">
+      <Project>{6e3d31d8-6209-f4b8-d7af-6c2db0c10e30}</Project>
+      <Name>Unity.Burst.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Sirenix.OdinInspector.Modules.UnityMathematics.csproj">
+      <Project>{41621639-f7bc-b827-2aa9-661a3cee90a5}</Project>
+      <Name>Sirenix.OdinInspector.Modules.UnityMathematics</Name>
+    </ProjectReference>
+    <ProjectReference Include="MK.Toon.URP.csproj">
+      <Project>{c3316e12-eee7-ccc0-d1b9-2a8d4784f9a6}</Project>
+      <Name>MK.Toon.URP</Name>
+    </ProjectReference>
+    <ProjectReference Include="MK.Toon.URP.Editor.csproj">
+      <Project>{ca86a341-5f73-f2d5-c871-52c11e46b9ac}</Project>
+      <Name>MK.Toon.URP.Editor</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

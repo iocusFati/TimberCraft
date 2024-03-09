@@ -208,6 +208,12 @@
      <Compile Include="Assets\Scripts\Utils\Constants.cs" />
      <Compile Include="Assets\Scripts\Infrastructure\Services\Input\IInputService.cs" />
      <Compile Include="Assets\Scripts\Gameplay\Player\ObstacleFade\IObscurablePlayer.cs" />
+     <Compile Include="Assets\Other\KriptoFX\MuzzleFlashes\Scripts\Demo\FPS_MouseLook.cs" />
+     <Compile Include="Assets\Other\KriptoFX\MuzzleFlashes\Scripts\Demo\FPSDemoReactivator.cs" />
+     <Compile Include="Assets\Other\KriptoFX\MuzzleFlashes\Scripts\Demo\FPS_RigidbodyFirstPersonController.cs" />
+     <Compile Include="Assets\Other\KriptoFX\MuzzleFlashes\Scripts\Demo\FPSDemoGUI.cs" />
+     <Compile Include="Assets\Other\KriptoFX\MuzzleFlashes\Scripts\Demo\FPSFireManager.cs" />
+     <Compile Include="Assets\Other\KriptoFX\MuzzleFlashes\Scripts\Rendering\FPS_PerPlatformSettings.cs" />
      <Reference Include="UnityEngine">
      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.25f1\Editor\Data\PlaybackEngines\AndroidPlayer\Variations\mono\Managed\UnityEngine.dll</HintPath>
      </Reference>
@@ -898,10 +904,6 @@
       <Project>{5bf4adad-ac67-1bc5-cab9-a4caa73044ae}</Project>
       <Name>AstarPathfindingProject.Player</Name>
     </ProjectReference>
-    <ProjectReference Include="Unity.Postprocessing.Runtime.Player.csproj">
-      <Project>{65696eab-817a-9327-a047-367e32ad6f5f}</Project>
-      <Name>Unity.Postprocessing.Runtime.Player</Name>
-    </ProjectReference>
     <ProjectReference Include="SimpleInput.Runtime.Player.csproj">
       <Project>{2db20ea8-4d6c-5bba-e320-323d95cea084}</Project>
       <Name>SimpleInput.Runtime.Player</Name>
@@ -925,6 +927,30 @@
     <ProjectReference Include="Unity.VisualScripting.State.Player.csproj">
       <Project>{ea8a7aa2-c584-f7ea-8cc1-7be2df8494e1}</Project>
       <Name>Unity.VisualScripting.State.Player</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.RenderPipelines.Universal.Shaders.Player.csproj">
+      <Project>{5dfa39ba-2647-839c-c66b-a7ebfa6289b7}</Project>
+      <Name>Unity.RenderPipelines.Universal.Shaders.Player</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.RenderPipeline.Universal.ShaderLibrary.Player.csproj">
+      <Project>{d6da0bf7-e126-da2e-b764-59d27037b500}</Project>
+      <Name>Unity.RenderPipeline.Universal.ShaderLibrary.Player</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Mathematics.Player.csproj">
+      <Project>{9ec804ae-8527-f5ed-0363-2ef2ce8536cb}</Project>
+      <Name>Unity.Mathematics.Player</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Burst.Player.csproj">
+      <Project>{b3c2ceca-ee48-1af5-303c-feb38782e689}</Project>
+      <Name>Unity.Burst.Player</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.RenderPipelines.Universal.Runtime.Player.csproj">
+      <Project>{07710b93-a430-7ed8-fb7d-e10b314b9efb}</Project>
+      <Name>Unity.RenderPipelines.Universal.Runtime.Player</Name>
+    </ProjectReference>
+    <ProjectReference Include="MK.Toon.URP.Player.csproj">
+      <Project>{2e06f354-6c78-85d6-73e4-b8c9ad44a75d}</Project>
+      <Name>MK.Toon.URP.Player</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

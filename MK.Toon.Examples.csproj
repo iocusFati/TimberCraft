@@ -1029,10 +1029,6 @@
      </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="Unity.Postprocessing.Runtime.csproj">
-      <Project>{4a73b5b0-25a0-8fb5-d4dd-aae878df6674}</Project>
-      <Name>Unity.Postprocessing.Runtime</Name>
-    </ProjectReference>
     <ProjectReference Include="MK.Toon.csproj">
       <Project>{6cf8dcff-8122-9bb8-fd2e-fc7cc393acbe}</Project>
       <Name>MK.Toon</Name>

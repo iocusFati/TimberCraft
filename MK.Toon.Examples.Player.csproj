@@ -652,10 +652,6 @@
      </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="Unity.Postprocessing.Runtime.Player.csproj">
-      <Project>{65696eab-817a-9327-a047-367e32ad6f5f}</Project>
-      <Name>Unity.Postprocessing.Runtime.Player</Name>
-    </ProjectReference>
     <ProjectReference Include="MK.Toon.Player.csproj">
       <Project>{334107be-b97b-9567-44a5-97bfc27d60b0}</Project>
       <Name>MK.Toon.Player</Name>
