@@ -26,6 +26,8 @@ namespace Infrastructure.StaticData.ResourcesData
 
         [SerializeField, FoldoutGroup("Tree")] private float _treeFadeDuration;
         [SerializeField, FoldoutGroup("Tree")] private float _fadeDelay;
+        [SerializeField, FoldoutGroup("Tree")] private float _activeImpulseSourceDistance;
+
         
         [Title("On landed particle", TitleAlignment = TitleAlignments.Centered), Space]
         [Title("Speed", HorizontalLine = false)]
@@ -80,6 +82,8 @@ namespace Infrastructure.StaticData.ResourcesData
         public float OnLandedVFXBaseRadius => _onLandedVFXBaseRadius;
 
         public float OnLandedVFXTreeTipRadius => _onLandedVFXTreeTipRadius;
+
+        public float ActiveImpulseSourceDistance => _activeImpulseSourceDistance;
 
         public int GetResourceUnitsPerCoin(ResourceType resourceType)
         {

@@ -21,7 +21,7 @@ namespace Gameplay.Resource
 
         protected float _restoreSourceAfter;
         private int _resourcesValue;
-        private ResourcesConfig _resourcesConfig;
+        protected ResourcesConfig _resourcesConfig;
 
         protected BasePool<DropoutResource> _logPool;
         protected ParticlePool _hitParticlePool;

@@ -13,13 +13,9 @@ namespace Gameplay.Player.ObstacleFade
     { 
         [SerializeField]
         private LayerMask LayerMask;
-        [SerializeField]
-        private float _fadedAlpha = 0.33f;
-    
+        
         [SerializeField]
         private float ChecksPerSecond = 10;
-        [SerializeField]
-        private float _fadeDuration = 1;
     
         [Header("Read Only Data")]
         private readonly List<IObscurablePlayer> _objectsBlockingView = new();
@@ -60,7 +56,10 @@ namespace Gameplay.Player.ObstacleFade
         {
             _checkDisabledObjects.Add(obscurable);
             
-            KillTweenIfActiveExistsFor(obscurable);
+            obscurable.MainGO.SetActive(true);
+            obscurable.DitherGO.SetActive(false);
+            
+            // KillTweenIfActiveExistsFor(obscurable);
         }
 
         public void EnableCheckFor(IObscurablePlayer obscurable) => 
@@ -98,20 +97,7 @@ namespace Gameplay.Player.ObstacleFade
                         if (_checkDisabledObjects.Contains(obscurable) || _objectsBlockingView.Contains(obscurable))
                             continue;
 
-                        if (_activeFadeInTweens.TryGetValue(obscurable, out var activeTween))
-                        {
-                            activeTween.Kill();
-                            
-                            DitherObscurable(obscurable);
-
-                            _activeFadeInTweens.Remove(obscurable);
-                        }
-                        else if(!_activeFadeOutTweens.ContainsKey(obscurable))
-                        {
-                            DitherObscurable(obscurable);
-                        }
-                        
-                        _objectsBlockingView.Add(obscurable);
+                        DitherObscurable(obscurable);
                     }
                 }
     
@@ -123,26 +109,11 @@ namespace Gameplay.Player.ObstacleFade
             }
         }
 
-        private Tween ChangeAlpha(IObscurablePlayer obscurable, Dictionary<IObscurablePlayer,Tween> tweens,
-            float fadedAlpha)
-        {
-            float ditherAlpha = 0;
-            
-            Tween tween = DOTween
-                .To(() => ditherAlpha, value => ditherAlpha = value, fadedAlpha, _fadeDuration)
-                .OnUpdate(() => obscurable.ObscureMesh.material.SetFloat(Alpha, ditherAlpha))
-                .OnComplete(() => RemoveTween(obscurable, tweens));
-            
-            tweens.Add(obscurable, tween);
-
-            return tween;
-        }
-
         private void DitherObscurable(IObscurablePlayer obscurable)
         {
             obscurable.MainGO.SetActive(false);
             obscurable.DitherGO.SetActive(true);
-            Tween tween = ChangeAlpha(obscurable, _activeFadeOutTweens, _fadedAlpha);
+            // Tween tween = ChangeAlpha(obscurable, _activeFadeOutTweens, _fadedAlpha);
 
             // Tween tween = obscurable.Meshmaterial
             //     .DOFade(_fadedAlpha, _fadeDuration)
@@ -151,33 +122,23 @@ namespace Gameplay.Player.ObstacleFade
             _objectsBlockingView.Add(obscurable);
         }
 
-        private void RemoveTween(IObscurablePlayer obscurable,
-            Dictionary<IObscurablePlayer, Tween> tweens,
-            bool killTween = false)
-        {
-            tweens.Remove(obscurable, out Tween tween);
-
-            if (killTween) 
-                tween.Kill();
-        }
-
         private void FadeObjectsNoLongerBeingHit()
         {
             IObscurablePlayer[] notObscuringObjects = NotObscuringObjects().ToArray();
             
             for (int i = 0; i < notObscuringObjects.Length; i++)
             {
-                if (_activeFadeInTweens.ContainsKey(notObscuringObjects[i]))
-                    continue;
+                // if (_activeFadeInTweens.ContainsKey(notObscuringObjects[i]))
+                //     continue;
                 
                 IObscurablePlayer obscurable = notObscuringObjects[i];
                 
                 obscurable.MainGO.SetActive(true);
                 obscurable.DitherGO.SetActive(false);
                 
-                RemoveTween(obscurable, _activeFadeOutTweens, true);
+                // RemoveTween(obscurable, _activeFadeOutTweens, true);
 
-                ChangeAlpha(obscurable, _activeFadeInTweens, 0);
+                // ChangeAlpha(obscurable, _activeFadeInTweens, 0);
                 
                 // Tween tween = obscurable.material
                 //     .DOFade(1, _fadeDuration)

@@ -2,9 +2,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using Cinemachine;
 using DG.Tweening;
 using Gameplay.Player;
 using Gameplay.Player.ObstacleFade;
+using Infrastructure.Factories;
+using Infrastructure.Factories.PlayerFactoryFolder;
 using Infrastructure.Services.Pool;
 using Infrastructure.Services.StaticDataService;
 using Infrastructure.StaticData.ResourcesData;
@@ -45,9 +48,12 @@ namespace Gameplay.Resource
         private Transform _treeTip;
         private Rigidbody _treeTipRB;
         private Collider _stumpCollider;
+        private Transform _playerTransform;
+        private CinemachineCollisionImpulseSource _stumpImpulseSource;
 
         private List<Rigidbody> _segmentForces;
         private readonly Dictionary<Transform, Vector3> _segmentPositions = new();
+        private Dictionary<Transform, CinemachineCollisionImpulseSource> _segmentCinemachineSignalSources;
 
         public MeshRenderer ObscureMesh => _treeTipObscureMeshRenderer;
 
@@ -58,26 +64,28 @@ namespace Gameplay.Resource
         [Inject]
         public void Construct(IPoolService poolService,
             IStaticDataService staticData,
-            FadeObscurePlayerObjects fadeObscurePlayerObjects)
+            FadeObscurePlayerObjects fadeObscurePlayerObjects, 
+            IFactoriesHolderService factoriesHolder)
         {
             _hitParticlePool = poolService.WoodHitParticlesPool;
             _leavesParticlePool = poolService.LeavesParticlesPool;
             _onLandedParticlePool = poolService.OnLandedParticlesPool;
             _logPool = poolService.DropoutsPool[ResourceType.Wood];
             _fadeObscurePlayerObjects = fadeObscurePlayerObjects;
+            
+            _restoreSourceAfter = _resourcesConfig.RestoreTreeAfter;
+            _fadeDuration = _resourcesConfig.TreeFadeDuration;
+            _fadeDelay = _resourcesConfig.FadeDelay;
+            _onLandedVFXSizeModifier = _resourcesConfig.OnLandedVFXSizeModifier;
+            _onLandedVFXSpeedMultiplier = _resourcesConfig.OnLandedVFXSpeedMultiplier;
+            _baseOnLandedVFXSpeedModifier = _resourcesConfig.OnLandedBaseVFXSpeedModifier;
+            _onLandedBaseVFXSize = _resourcesConfig.OnLandedBaseVFXSize;
+            _onLandedVFXBaseSimulationSpeed = _resourcesConfig.OnLandedVFXBaseSimulationSpeed;
+            _onLandedVFXSimulationSpeedMultiplier = _resourcesConfig.OnLandedVFXSimulationSpeedMultiplier;
+            _onLandedVFXBaseRadius = _resourcesConfig.OnLandedVFXBaseRadius;
+            _onLandedVFXTreeTipRadius = _resourcesConfig.OnLandedVFXTreeTipRadius;
 
-            ResourcesConfig resourcesConfig = staticData.ResourcesConfig;
-            _restoreSourceAfter = resourcesConfig.RestoreTreeAfter;
-            _fadeDuration = resourcesConfig.TreeFadeDuration;
-            _fadeDelay = resourcesConfig.FadeDelay;
-            _onLandedVFXSizeModifier = resourcesConfig.OnLandedVFXSizeModifier;
-            _onLandedVFXSpeedMultiplier = resourcesConfig.OnLandedVFXSpeedMultiplier;
-            _baseOnLandedVFXSpeedModifier = resourcesConfig.OnLandedBaseVFXSpeedModifier;
-            _onLandedBaseVFXSize = resourcesConfig.OnLandedBaseVFXSize;
-            _onLandedVFXBaseSimulationSpeed = resourcesConfig.OnLandedVFXBaseSimulationSpeed;
-            _onLandedVFXSimulationSpeedMultiplier = resourcesConfig.OnLandedVFXSimulationSpeedMultiplier;
-            _onLandedVFXBaseRadius = resourcesConfig.OnLandedVFXBaseRadius;
-            _onLandedVFXTreeTipRadius = resourcesConfig.OnLandedVFXTreeTipRadius;
+            factoriesHolder.PlayerFactory.OnPlayerCreated += player => _playerTransform = player.transform;
         }
 
         private void Start()
@@ -89,7 +97,11 @@ namespace Gameplay.Resource
             InitializeInitialPositions();
             
             _stumpCollider.enabled = false;
+            _stumpImpulseSource = _stump.GetComponent<CinemachineCollisionImpulseSource>();
             _stumpTriggerCheck.OnTriggerEntered += StumpTriggerEnterKickedIn;
+
+            _segmentCinemachineSignalSources = _segments.ToDictionary(segment => segment,
+                segment => segment.GetComponent<CinemachineCollisionImpulseSource>());
         }
 
         private void StumpTriggerEnterKickedIn(Collider obj)
@@ -114,6 +126,27 @@ namespace Gameplay.Resource
                 segment.isKinematic = kinematic;
 
             _treeTipRB.isKinematic = kinematic;
+        }
+
+        public override void StartMining()
+        {
+            base.StartMining();
+
+            Vector3 treePosition = new Vector3(transform.position.x, _playerTransform.position.y, transform.position.z);
+            
+            EnableSignals(IsCloseEnoughToEmitSignal());
+
+            bool IsCloseEnoughToEmitSignal() => 
+                Vector3.Distance(treePosition, _playerTransform.position) <
+                _resourcesConfig.ActiveImpulseSourceDistance;
+        }
+
+        private void EnableSignals(bool enable)
+        {
+            foreach (var segment in _segments) 
+                _segmentCinemachineSignalSources[segment].enabled = enable;
+
+            _stumpImpulseSource.enabled = enable;
         }
 
         protected override void OnLastStageDestroyed()
@@ -168,7 +201,7 @@ namespace Gameplay.Resource
 
         private void TreeTipFadeOut()
         {
-            _fadeObscurePlayerObjects.DisableCheckFor(this);
+            // _fadeObscurePlayerObjects.DisableCheckFor(this);
             
             _treeTipObscureMeshRenderer.material
                 .DOFade(0, _fadeDuration)
@@ -184,7 +217,7 @@ namespace Gameplay.Resource
             _treeTip.gameObject.SetActive(true);
             _treeTip.transform.localPosition = _treeTipInitialPosition;
 
-            _treeTipObscureMeshRenderer.material.DOFade(1, 0);
+            // _treeTipObscureMeshRenderer.material.DOFade(1, 0);
         }
 
         private void InitializeSegmentPositionsDictionary()
