@@ -107,10 +107,10 @@
      <Compile Include="Library\PackageCache\com.unity.shadergraph@12.1.11\Editor\Data\Nodes\RedirectNode.cs" />
      <Compile Include="Library\PackageCache\com.unity.shadergraph@12.1.11\Editor\DefaultShaderIncludes.cs" />
      <Compile Include="Library\PackageCache\com.unity.shadergraph@12.1.11\Editor\Data\Nodes\Artistic\Normal\NormalReconstructZNode.cs" />
-     <Compile Include="Library\PackageCache\com.unity.shadergraph@12.1.11\Editor\Importers\ShaderSubGraphImporterEditor.cs" />
      <Compile Include="Library\PackageCache\com.unity.shadergraph@12.1.11\Editor\Data\Interfaces\IMayRequireTransform.cs" />
      <Compile Include="Library\PackageCache\com.unity.shadergraph@12.1.11\Editor\Data\Nodes\Math\Advanced\ModuloNode.cs" />
      <Compile Include="Library\PackageCache\com.unity.shadergraph@12.1.11\Editor\Drawing\Views\Slots\UVSlotControlView.cs" />
+     <Compile Include="Library\PackageCache\com.unity.shadergraph@12.1.11\Editor\Importers\ShaderSubGraphImporterEditor.cs" />
      <Compile Include="Library\PackageCache\com.unity.shadergraph@12.1.11\Editor\Data\Nodes\Math\Range\OneMinusNode.cs" />
      <Compile Include="Library\PackageCache\com.unity.shadergraph@12.1.11\Editor\Generation\Enumerations\KeywordShaderStage.cs" />
      <Compile Include="Library\PackageCache\com.unity.shadergraph@12.1.11\Editor\Data\Nodes\Input\Geometry\UVNode.cs" />
@@ -134,8 +134,8 @@
      <Compile Include="Library\PackageCache\com.unity.shadergraph@12.1.11\Editor\Data\Nodes\Math\Basic\SubtractNode.cs" />
      <Compile Include="Library\PackageCache\com.unity.shadergraph@12.1.11\Editor\Data\Graphs\GraphData.cs" />
      <Compile Include="Library\PackageCache\com.unity.shadergraph@12.1.11\Editor\Data\Nodes\Math\Wave\TriangleWaveNode.cs" />
-     <Compile Include="Library\PackageCache\com.unity.shadergraph@12.1.11\Editor\Data\Nodes\Input\Lighting\BakedGINode.cs" />
      <Compile Include="Library\PackageCache\com.unity.shadergraph@12.1.11\Editor\Data\Nodes\Math\Trigonometry\HyperbolicCosineNode.cs" />
+     <Compile Include="Library\PackageCache\com.unity.shadergraph@12.1.11\Editor\Data\Nodes\Input\Lighting\BakedGINode.cs" />
      <Compile Include="Library\PackageCache\com.unity.shadergraph@12.1.11\Editor\Drawing\Controls\ChannelEnumControl.cs" />
      <Compile Include="Library\PackageCache\com.unity.shadergraph@12.1.11\Editor\Data\Nodes\Input\Geometry\VertexColorNode.cs" />
      <Compile Include="Library\PackageCache\com.unity.shadergraph@12.1.11\Editor\Data\Nodes\Artistic\Blend\BlendNode.cs" />
@@ -684,10 +684,10 @@
      <Compile Include="Library\PackageCache\com.unity.shadergraph@12.1.11\Editor\Data\Graphs\Texture2DMaterialSlot.cs" />
      <Compile Include="Library\PackageCache\com.unity.shadergraph@12.1.11\Editor\Data\Util\UvChannel.cs" />
      <Compile Include="Library\PackageCache\com.unity.shadergraph@12.1.11\Editor\Drawing\Colors\UserColors.cs" />
-     <Compile Include="Library\PackageCache\com.unity.shadergraph@12.1.11\Editor\Data\Nodes\Input\Basic\SliderNode.cs" />
      <Compile Include="Library\PackageCache\com.unity.shadergraph@12.1.11\Editor\Drawing\Controls\EnumControl.cs" />
      <Compile Include="Library\PackageCache\com.unity.shadergraph@12.1.11\Editor\Data\Legacy\StickyNoteData0.cs" />
      <Compile Include="Library\PackageCache\com.unity.shadergraph@12.1.11\Editor\Data\Graphs\Texture2DInputMaterialSlot.cs" />
+     <Compile Include="Library\PackageCache\com.unity.shadergraph@12.1.11\Editor\Data\Nodes\Input\Basic\SliderNode.cs" />
      <Folder Include="Library\PackageCache\com.unity.shadergraph@12.1.11\Editor\Data\Nodes" />
      <None Include="Library\PackageCache\com.unity.shadergraph@12.1.11\Editor\Resources\Styles\SGBlackboard.uss" />
      <Folder Include="Library\PackageCache\com.unity.shadergraph@12.1.11\Editor\Data\Interfaces\Graph" />

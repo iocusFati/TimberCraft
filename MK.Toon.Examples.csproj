@@ -329,6 +329,7 @@
      <Folder Include="Assets\_MK\MKToon\Examples\Scenes\SFX\Materials\Stencil" />
      <Folder Include="Assets\_MK\MKToon\Examples\Scenes\Sheep\Style4\Flower" />
      <Folder Include="Assets\_MK\MKToon\Examples\Scenes\FlyingIsle\Materials\Paper" />
+     <Folder Include="Assets\_MK\MKToon\Examples\VolumeURP" />
      <Folder Include="Assets\_MK\MKToon\Examples\Scenes\Spectate\Materials\Floor\ShaderBallMaterials\ArtisticSketchThinSS" />
      <Folder Include="Assets\_MK\MKToon\Examples\Scenes\Spectate\Materials\Floor\ShaderBallMaterials\Iridescence0" />
      <Folder Include="Assets\_MK\MKToon\Examples\Scenes\Spectate\Materials\Floor\ShaderBallMaterials\RimSplit" />

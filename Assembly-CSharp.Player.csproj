@@ -42,18 +42,20 @@
   </PropertyGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\Gameplay\Resource\TreeFolder\Tree.cs" />
+     <Compile Include="Assets\Beautify\URP\Demo\DemoSources\Scripts\ToggleDoF.cs" />
      <Compile Include="Assets\Other\KriptoFX\MuzzleFlashes\Scripts\Rendering\FPS_UseLight.cs" />
      <Compile Include="Assets\Scripts\Infrastructure\StaticData\uiData\UIConfig.cs" />
      <Compile Include="Assets\Scripts\UI\Factory\IUIEntity.cs" />
      <Compile Include="Assets\Scripts\Gameplay\Bots\StateMachine\States\GoToResourceSourceLumberjackBotState.cs" />
      <Compile Include="Assets\Scripts\UI\BillboardEffect.cs" />
+     <Compile Include="Assets\Beautify\URP\Demo\DemoSources\Scripts\LUTBlending.cs" />
      <Compile Include="Assets\Scripts\Infrastructure\Services\SaveLoad\ISaveLoadService.cs" />
      <Compile Include="Assets\MeshBaker\Examples\Scripts\MB_MigrateMaterialsToDifferentPipeline.cs" />
      <Compile Include="Assets\Scripts\Infrastructure\States\StateMachine.cs" />
      <Compile Include="Assets\Scripts\Infrastructure\States\LoadProgressState.cs" />
      <Compile Include="Assets\Scripts\Infrastructure\StatesFactory.cs" />
      <Compile Include="Assets\Scripts\Infrastructure\StaticData\BuildingsData\MinionHutUpgradeData.cs" />
-     <Compile Include="Assets\StylizedWater\Scripts\StylizedWaterShadowCaster.cs" />
+     <Compile Include="Assets\Other\KriptoFX\MuzzleFlashes\Scripts\Demo\FPS_MouseLook.cs" />
      <Compile Include="Assets\Scripts\UI\Buttons\BuyButtonDisabler.cs" />
      <Compile Include="Assets\Other\KriptoFX\MuzzleFlashes\Scripts\FPSLightCurves.cs" />
      <Compile Include="Assets\Scripts\Utils\Tags.cs" />
@@ -63,6 +65,7 @@
      <Compile Include="Assets\Scripts\Utils\AssetPaths.cs" />
      <Compile Include="Assets\Scripts\Gameplay\Buildings\ResourcesShop.cs" />
      <Compile Include="Assets\Scripts\Infrastructure\Services\Input\StandaloneInput.cs" />
+     <Compile Include="Assets\Beautify\URP\Demo\DemoSources\Scripts\SphereAnimator.cs" />
      <Compile Include="Assets\Scripts\Gameplay\Bots\StateMachine\States\BringResourcesToHutLumberjackBotState.cs" />
      <Compile Include="Assets\Scripts\Infrastructure\Services\SaveLoad\SaveLoadService.cs" />
      <Compile Include="Assets\Scripts\UI\Factory\UIFactory.cs" />
@@ -70,11 +73,11 @@
      <Compile Include="Assets\Scripts\Infrastructure\Services\Guid\GuidService.cs" />
      <Compile Include="Assets\Scripts\UI\ResourceCounter.cs" />
      <Compile Include="Assets\Scripts\Infrastructure\Services\StaticDataService\IStaticDataService.cs" />
+     <Compile Include="Assets\Other\KriptoFX\MuzzleFlashes\Scripts\Demo\FPS_RigidbodyFirstPersonController.cs" />
      <Compile Include="Assets\Scripts\Gameplay\Buildings\MainHouse.cs" />
      <Compile Include="Assets\Scripts\Infrastructure\Services\Pool\ParticlePool.cs" />
      <Compile Include="Assets\Scripts\Infrastructure\StaticData\BuildingsData\MinionHutLevelUpgrade.cs" />
      <Compile Include="Assets\Scripts\Infrastructure\Services\SaveLoad\OnExitSave.cs" />
-     <Compile Include="Assets\StylizedWater\Scripts\StylizedWaterUtilities.cs" />
      <Compile Include="Assets\Scripts\Infrastructure\Installers\BootstrapInstaller.cs" />
      <Compile Include="Assets\Scripts\Gameplay\Player\Animation\LumberjackAnimator.cs" />
      <Compile Include="Assets\Scripts\Gameplay\Cameras\CameraSway.cs" />
@@ -87,6 +90,7 @@
      <Compile Include="Assets\Scripts\Infrastructure\StaticData\LumberjackData\LumberjackBotConfig.cs" />
      <Compile Include="Assets\MeshBaker\Examples\SceneRuntimeExample\MB_ExampleSkinnedMeshDescription.cs" />
      <Compile Include="Assets\Scripts\Infrastructure\StaticData\LumberjackData\PlayerConfig.cs" />
+     <Compile Include="Assets\Beautify\URP\Demo\DemoSources\Scripts\CameraAnimator.cs" />
      <Compile Include="Assets\Scripts\Gameplay\Resource\ResourcesSelling.cs" />
      <Compile Include="Assets\Scripts\Utils\TransformExtensions.cs" />
      <Compile Include="Assets\Scripts\Infrastructure\Bootstrapper.cs" />
@@ -94,6 +98,7 @@
      <Compile Include="Assets\Other\_Gloomy_Hyper\Script\MouseOrbitImproved.cs" />
      <Compile Include="Assets\Scripts\Infrastructure\Factories\IFactoriesHolderService.cs" />
      <Compile Include="Assets\Scripts\Infrastructure\Services\Pool\Particle\ParticleComplete.cs" />
+     <Compile Include="Assets\Scripts\Gameplay\Player\ObstacleFade\IObscurablePlayer.cs" />
      <Compile Include="Assets\Other\KriptoFX\MuzzleFlashes\Scripts\MaterialType.cs" />
      <Compile Include="Assets\Other\KriptoFX\MuzzleFlashes\Scripts\Rendering\FPS_CustomLight.cs" />
      <Compile Include="Assets\Scripts\Infrastructure\Data\PlayerProgress.cs" />
@@ -114,11 +119,10 @@
      <Compile Include="Assets\Scripts\UI\Buttons\ButtonDisabler.cs" />
      <Compile Include="Assets\Scripts\UI\Mediator\IUIMediator.cs" />
      <Compile Include="Assets\Other\KriptoFX\MuzzleFlashes\Scripts\FPSShaderColorGradient.cs" />
+     <Compile Include="Assets\Other\KriptoFX\MuzzleFlashes\Scripts\Demo\FPSFireManager.cs" />
      <Compile Include="Assets\Scripts\Infrastructure\States\Interfaces\IStateMachine.cs" />
-     <Compile Include="Assets\StylizedWater\Scripts\EnableDepthBuffer.cs" />
      <Compile Include="Assets\Scripts\Gameplay\Resource\TreeFolder\EditorTreeCreator.cs" />
      <Compile Include="Assets\Scripts\Gameplay\Cameras\IGameCameraController.cs" />
-     <Compile Include="Assets\StylizedWater\Scripts\StylizedWaterBlur.cs" />
      <Compile Include="Assets\Other\_Gloomy_Hyper\Script\CharacterSelect.cs" />
      <Compile Include="Assets\Scripts\UI\Entities\PopUps\MinionHutPopUp.cs" />
      <Compile Include="Assets\Scripts\Infrastructure\Services\PersistentProgress\PersistentProgressService.cs" />
@@ -146,8 +150,7 @@
      <Compile Include="Assets\Scripts\Gameplay\Cameras\GameCameraStateController.cs" />
      <Compile Include="Assets\MeshBaker\Examples\SceneRuntimeExample\MB_Example.cs" />
      <Compile Include="Assets\Scripts\Gameplay\Buildings\Building.cs" />
-     <Compile Include="Assets\StylizedWater\Scripts\StylizedWaterRenderer.cs" />
-     <Compile Include="Assets\StylizedWater\Scripts\StylizedWaterResources.cs" />
+     <Compile Include="Assets\Other\KriptoFX\MuzzleFlashes\Scripts\Rendering\FPS_PerPlatformSettings.cs" />
      <Compile Include="Assets\Scripts\Infrastructure\StaticData\ResourcesData\ResourcesConfig.cs" />
      <Compile Include="Assets\Other\KriptoFX\MuzzleFlashes\Scripts\FPS_Decal.cs" />
      <Compile Include="Assets\Scripts\Infrastructure\Services\PersistentProgress\ISavedProgress.cs" />
@@ -156,6 +159,7 @@
      <Compile Include="Assets\Scripts\Infrastructure\Services\StaticDataService\StaticDataService.cs" />
      <Compile Include="Assets\MeshBaker\Examples\PrepareObjectsForDynamicBatching\MB_PrepareObjectsForDynamicBatchingDescription.cs" />
      <Compile Include="Assets\Scripts\Infrastructure\Factories\PlayerFactoryFolder\PlayerFactory.cs" />
+     <Compile Include="Assets\Other\KriptoFX\MuzzleFlashes\Scripts\Demo\FPSDemoGUI.cs" />
      <Compile Include="Assets\Scripts\Infrastructure\SceneLoader.cs" />
      <Compile Include="Assets\Scripts\Infrastructure\Services\Cache\CacheContainer.cs" />
      <Compile Include="Assets\Scripts\Infrastructure\States\Interfaces\IPayloadedState.cs" />
@@ -190,12 +194,13 @@
      <Compile Include="Assets\Scripts\UI\Buttons\UpgradeButtonDisabler.cs" />
      <Compile Include="Assets\Scripts\Gameplay\Resource\IResourcesSelling.cs" />
      <Compile Include="Assets\Scripts\Infrastructure\Services\Input\InputService.cs" />
+     <Compile Include="Assets\Beautify\URP\Demo\DemoSources\Scripts\Demo.cs" />
      <Compile Include="Assets\MeshBaker\Examples\SwitchBakedObjectsTexture\MB_SwitchBakedObjectsTexture.cs" />
      <Compile Include="Assets\Scripts\Infrastructure\States\Interfaces\IExitState.cs" />
      <Compile Include="Assets\Scripts\Gameplay\Player\Player.cs" />
      <Compile Include="Assets\Scripts\Infrastructure\Factories\BotFactoryFolder\BotFactory.cs" />
+     <Compile Include="Assets\Other\KriptoFX\MuzzleFlashes\Scripts\Demo\FPSDemoReactivator.cs" />
      <Compile Include="Assets\MeshBaker\Examples\BakeTexturesAtRuntime\BakeTexturesAtRuntime.cs" />
-     <Compile Include="Assets\StylizedWater\Scripts\StylizedWater.cs" />
      <Compile Include="Assets\Scripts\Utils\IntExtensions.cs" />
      <Compile Include="Assets\Scripts\Infrastructure\Services\Pool\PoolService.cs" />
      <Compile Include="Assets\Scripts\Gameplay\Bots\StateMachine\States\IsOnTheWayToResourceSourceLumberjackBotState.cs" />
@@ -207,13 +212,6 @@
      <Compile Include="Assets\Scripts\Infrastructure\Services\Input\MobileInput.cs" />
      <Compile Include="Assets\Scripts\Utils\Constants.cs" />
      <Compile Include="Assets\Scripts\Infrastructure\Services\Input\IInputService.cs" />
-     <Compile Include="Assets\Scripts\Gameplay\Player\ObstacleFade\IObscurablePlayer.cs" />
-     <Compile Include="Assets\Other\KriptoFX\MuzzleFlashes\Scripts\Demo\FPS_MouseLook.cs" />
-     <Compile Include="Assets\Other\KriptoFX\MuzzleFlashes\Scripts\Demo\FPSDemoReactivator.cs" />
-     <Compile Include="Assets\Other\KriptoFX\MuzzleFlashes\Scripts\Demo\FPS_RigidbodyFirstPersonController.cs" />
-     <Compile Include="Assets\Other\KriptoFX\MuzzleFlashes\Scripts\Demo\FPSDemoGUI.cs" />
-     <Compile Include="Assets\Other\KriptoFX\MuzzleFlashes\Scripts\Demo\FPSFireManager.cs" />
-     <Compile Include="Assets\Other\KriptoFX\MuzzleFlashes\Scripts\Rendering\FPS_PerPlatformSettings.cs" />
      <Reference Include="UnityEngine">
      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.25f1\Editor\Data\PlaybackEngines\AndroidPlayer\Variations\mono\Managed\UnityEngine.dll</HintPath>
      </Reference>
@@ -808,6 +806,14 @@
       <Project>{bbd360f0-2369-b486-35aa-38cd8cc029d6}</Project>
       <Name>Assembly-CSharp-firstpass.Player</Name>
     </ProjectReference>
+    <ProjectReference Include="Unity.RenderPipelines.Universal.Shaders.Player.csproj">
+      <Project>{5dfa39ba-2647-839c-c66b-a7ebfa6289b7}</Project>
+      <Name>Unity.RenderPipelines.Universal.Shaders.Player</Name>
+    </ProjectReference>
+    <ProjectReference Include="MK.Toon.URP.Player.csproj">
+      <Project>{2e06f354-6c78-85d6-73e4-b8c9ad44a75d}</Project>
+      <Name>MK.Toon.URP.Player</Name>
+    </ProjectReference>
     <ProjectReference Include="Unity.ProBuilder.Player.csproj">
       <Project>{495f6a8f-5e0d-0a8a-da32-ffa2944b9caa}</Project>
       <Name>Unity.ProBuilder.Player</Name>
@@ -848,6 +854,10 @@
       <Project>{0c65196b-e0ba-4e45-c0ac-ad1d92ec41cd}</Project>
       <Name>Zenject.Player</Name>
     </ProjectReference>
+    <ProjectReference Include="Unity.RenderPipeline.Universal.ShaderLibrary.Player.csproj">
+      <Project>{d6da0bf7-e126-da2e-b764-59d27037b500}</Project>
+      <Name>Unity.RenderPipeline.Universal.ShaderLibrary.Player</Name>
+    </ProjectReference>
     <ProjectReference Include="MK.Toon.Player.csproj">
       <Project>{334107be-b97b-9567-44a5-97bfc27d60b0}</Project>
       <Name>MK.Toon.Player</Name>
@@ -867,6 +877,10 @@
     <ProjectReference Include="MoreMountains.Feedbacks.HDRP.Player.csproj">
       <Project>{a697767c-7746-5e4e-cd2f-24726b565403}</Project>
       <Name>MoreMountains.Feedbacks.HDRP.Player</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.RenderPipelines.Universal.Runtime.Player.csproj">
+      <Project>{07710b93-a430-7ed8-fb7d-e10b314b9efb}</Project>
+      <Name>Unity.RenderPipelines.Universal.Runtime.Player</Name>
     </ProjectReference>
     <ProjectReference Include="MoreMountains.Feedbacks.Authorizations.Player.csproj">
       <Project>{748fa1b6-5aad-ace1-79d6-a59157009043}</Project>
@@ -900,6 +914,14 @@
       <Project>{4abf54bb-ee00-a00f-ff98-3dbbdd909c86}</Project>
       <Name>MoreMountains.Feedbacks.MMTools.Player</Name>
     </ProjectReference>
+    <ProjectReference Include="Unity.Mathematics.Player.csproj">
+      <Project>{9ec804ae-8527-f5ed-0363-2ef2ce8536cb}</Project>
+      <Name>Unity.Mathematics.Player</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Burst.Player.csproj">
+      <Project>{b3c2ceca-ee48-1af5-303c-feb38782e689}</Project>
+      <Name>Unity.Burst.Player</Name>
+    </ProjectReference>
     <ProjectReference Include="AstarPathfindingProject.Player.csproj">
       <Project>{5bf4adad-ac67-1bc5-cab9-a4caa73044ae}</Project>
       <Name>AstarPathfindingProject.Player</Name>
@@ -912,13 +934,13 @@
       <Project>{51808121-8046-b784-1c70-81dc706c1a37}</Project>
       <Name>MoreMountains.Feedbacks.Player</Name>
     </ProjectReference>
-    <ProjectReference Include="Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.Player.csproj">
-      <Project>{511406f6-4c04-e02b-2e2b-aeb8700f4757}</Project>
-      <Name>Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.Player</Name>
-    </ProjectReference>
     <ProjectReference Include="Lofelt.NiceVibrations.Player.csproj">
       <Project>{478f72ec-fb52-dee1-23f0-e8014788ccfc}</Project>
       <Name>Lofelt.NiceVibrations.Player</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.Player.csproj">
+      <Project>{511406f6-4c04-e02b-2e2b-aeb8700f4757}</Project>
+      <Name>Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.Player</Name>
     </ProjectReference>
     <ProjectReference Include="MoreMountains.Tools.Player.csproj">
       <Project>{6037fafe-5826-2b43-3f36-2b452226ec30}</Project>
@@ -927,30 +949,6 @@
     <ProjectReference Include="Unity.VisualScripting.State.Player.csproj">
       <Project>{ea8a7aa2-c584-f7ea-8cc1-7be2df8494e1}</Project>
       <Name>Unity.VisualScripting.State.Player</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.RenderPipelines.Universal.Shaders.Player.csproj">
-      <Project>{5dfa39ba-2647-839c-c66b-a7ebfa6289b7}</Project>
-      <Name>Unity.RenderPipelines.Universal.Shaders.Player</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.RenderPipeline.Universal.ShaderLibrary.Player.csproj">
-      <Project>{d6da0bf7-e126-da2e-b764-59d27037b500}</Project>
-      <Name>Unity.RenderPipeline.Universal.ShaderLibrary.Player</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.Mathematics.Player.csproj">
-      <Project>{9ec804ae-8527-f5ed-0363-2ef2ce8536cb}</Project>
-      <Name>Unity.Mathematics.Player</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.Burst.Player.csproj">
-      <Project>{b3c2ceca-ee48-1af5-303c-feb38782e689}</Project>
-      <Name>Unity.Burst.Player</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.RenderPipelines.Universal.Runtime.Player.csproj">
-      <Project>{07710b93-a430-7ed8-fb7d-e10b314b9efb}</Project>
-      <Name>Unity.RenderPipelines.Universal.Runtime.Player</Name>
-    </ProjectReference>
-    <ProjectReference Include="MK.Toon.URP.Player.csproj">
-      <Project>{2e06f354-6c78-85d6-73e4-b8c9ad44a75d}</Project>
-      <Name>MK.Toon.URP.Player</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

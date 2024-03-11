@@ -65,8 +65,8 @@
      <Compile Include="Assets\AstarPathfindingProject\Core\Misc\WorkItemProcessor.cs" />
      <Compile Include="Assets\AstarPathfindingProject\Pathfinders\FleePath.cs" />
      <Compile Include="Assets\AstarPathfindingProject\Generators\Utilities\Voxels\VoxelUtility.cs" />
-     <Compile Include="Assets\AstarPathfindingProject\RVO\RVOSimulator.cs" />
      <Compile Include="Assets\AstarPathfindingProject\Generators\NavmeshBase.cs" />
+     <Compile Include="Assets\AstarPathfindingProject\RVO\RVOSimulator.cs" />
      <Compile Include="Assets\AstarPathfindingProject\Utilities\Funnel.cs" />
      <Compile Include="Assets\AstarPathfindingProject\Pathfinders\FloodPath.cs" />
      <Compile Include="Assets\AstarPathfindingProject\RVO\RVOController.cs" />

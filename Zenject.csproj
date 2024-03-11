@@ -126,9 +126,9 @@
      <Compile Include="Assets\Plugins\Zenject\Source\Validation\ValidationMarker.cs" />
      <Compile Include="Assets\Plugins\Zenject\Source\Internal\Log.cs" />
      <Compile Include="Assets\Plugins\Zenject\Source\Internal\Func.cs" />
-     <Compile Include="Assets\Plugins\Zenject\Source\Factories\PrefabResourceFactory.cs" />
      <Compile Include="Assets\Plugins\Zenject\Source\Binding\Finalizers\SubContainerPrefabBindingFinalizer.cs" />
      <Compile Include="Assets\Plugins\Zenject\Source\Main\SingletonMarkRegistry.cs" />
+     <Compile Include="Assets\Plugins\Zenject\Source\Factories\PrefabResourceFactory.cs" />
      <Compile Include="Assets\Plugins\Zenject\Source\Providers\ComponentProviders\AddToGameObjectComponentProviders\AddToExistingGameObjectComponentProvider.cs" />
      <Compile Include="Assets\Plugins\Zenject\Source\Util\ActionInstaller.cs" />
      <Compile Include="Assets\Plugins\Zenject\Source\Util\ExecutionOrderInstaller.cs" />

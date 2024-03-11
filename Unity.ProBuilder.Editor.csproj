@@ -110,8 +110,8 @@
      <Compile Include="Library\PackageCache\com.unity.probuilder@5.0.7\Editor\EditorCore\MenuToolToggle.cs" />
      <Compile Include="Library\PackageCache\com.unity.probuilder@5.0.7\Editor\MenuActions\Interaction\ToggleDragRectMode.cs" />
      <Compile Include="Library\PackageCache\com.unity.probuilder@5.0.7\Editor\EditorCore\CutTool.cs" />
-     <Compile Include="Library\PackageCache\com.unity.probuilder@5.0.7\Editor\EditorCore\ToolbarGroup.cs" />
      <Compile Include="Library\PackageCache\com.unity.probuilder@5.0.7\Editor\EditorCore\ProBuilderShapeEditor.cs" />
+     <Compile Include="Library\PackageCache\com.unity.probuilder@5.0.7\Editor\EditorCore\ToolbarGroup.cs" />
      <Compile Include="Library\PackageCache\com.unity.probuilder@5.0.7\Editor\MenuActions\Object\ProBuilderize.cs" />
      <Compile Include="Library\PackageCache\com.unity.probuilder@5.0.7\Editor\EditorCore\VertexManipulationTool.cs" />
      <Compile Include="Library\PackageCache\com.unity.probuilder@5.0.7\Editor\EditorCore\EditorToolsContexts.cs" />

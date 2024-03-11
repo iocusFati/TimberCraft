@@ -208,8 +208,8 @@
      <Compile Include="Assets\Plugins\Easy Save 3\Scripts\Types\Unity Types\Component Types\ES3Type_PolygonCollider2D.cs" />
      <Compile Include="Assets\Plugins\Easy Save 3\Scripts\Types\Unity Types\ES3Type_ForceOverLifetimeModule.cs" />
      <Compile Include="Assets\Plugins\Easy Save 3\Scripts\Types\Unity Types\ES3Type_Rect.cs" />
-     <Compile Include="Assets\Plugins\Easy Save 3\Scripts\Types\Unity Types\ES3Type_SubEmittersModule.cs" />
      <Compile Include="Assets\Plugins\Easy Save 3\Scripts\Types\Primitive Types\ES3Type_long.cs" />
+     <Compile Include="Assets\Plugins\Easy Save 3\Scripts\Types\Unity Types\ES3Type_SubEmittersModule.cs" />
      <Compile Include="Assets\Plugins\Easy Save 3\Scripts\Types\ES3Type.cs" />
      <Compile Include="Assets\Plugins\Easy Save 3\Scripts\Debugging\ES3Debug.cs" />
      <Compile Include="Assets\Plugins\Easy Save 3\Scripts\Types\Primitive Types\ES3Type_DateTime.cs" />
@@ -814,6 +814,14 @@
      </Reference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="Unity.RenderPipelines.Universal.Shaders.Player.csproj">
+      <Project>{5dfa39ba-2647-839c-c66b-a7ebfa6289b7}</Project>
+      <Name>Unity.RenderPipelines.Universal.Shaders.Player</Name>
+    </ProjectReference>
+    <ProjectReference Include="MK.Toon.URP.Player.csproj">
+      <Project>{2e06f354-6c78-85d6-73e4-b8c9ad44a75d}</Project>
+      <Name>MK.Toon.URP.Player</Name>
+    </ProjectReference>
     <ProjectReference Include="Unity.ProBuilder.Player.csproj">
       <Project>{495f6a8f-5e0d-0a8a-da32-ffa2944b9caa}</Project>
       <Name>Unity.ProBuilder.Player</Name>
@@ -854,6 +862,10 @@
       <Project>{0c65196b-e0ba-4e45-c0ac-ad1d92ec41cd}</Project>
       <Name>Zenject.Player</Name>
     </ProjectReference>
+    <ProjectReference Include="Unity.RenderPipeline.Universal.ShaderLibrary.Player.csproj">
+      <Project>{d6da0bf7-e126-da2e-b764-59d27037b500}</Project>
+      <Name>Unity.RenderPipeline.Universal.ShaderLibrary.Player</Name>
+    </ProjectReference>
     <ProjectReference Include="MK.Toon.Player.csproj">
       <Project>{334107be-b97b-9567-44a5-97bfc27d60b0}</Project>
       <Name>MK.Toon.Player</Name>
@@ -873,6 +885,10 @@
     <ProjectReference Include="MoreMountains.Feedbacks.HDRP.Player.csproj">
       <Project>{a697767c-7746-5e4e-cd2f-24726b565403}</Project>
       <Name>MoreMountains.Feedbacks.HDRP.Player</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.RenderPipelines.Universal.Runtime.Player.csproj">
+      <Project>{07710b93-a430-7ed8-fb7d-e10b314b9efb}</Project>
+      <Name>Unity.RenderPipelines.Universal.Runtime.Player</Name>
     </ProjectReference>
     <ProjectReference Include="MoreMountains.Feedbacks.Authorizations.Player.csproj">
       <Project>{748fa1b6-5aad-ace1-79d6-a59157009043}</Project>
@@ -906,6 +922,14 @@
       <Project>{4abf54bb-ee00-a00f-ff98-3dbbdd909c86}</Project>
       <Name>MoreMountains.Feedbacks.MMTools.Player</Name>
     </ProjectReference>
+    <ProjectReference Include="Unity.Mathematics.Player.csproj">
+      <Project>{9ec804ae-8527-f5ed-0363-2ef2ce8536cb}</Project>
+      <Name>Unity.Mathematics.Player</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Burst.Player.csproj">
+      <Project>{b3c2ceca-ee48-1af5-303c-feb38782e689}</Project>
+      <Name>Unity.Burst.Player</Name>
+    </ProjectReference>
     <ProjectReference Include="AstarPathfindingProject.Player.csproj">
       <Project>{5bf4adad-ac67-1bc5-cab9-a4caa73044ae}</Project>
       <Name>AstarPathfindingProject.Player</Name>
@@ -918,13 +942,13 @@
       <Project>{51808121-8046-b784-1c70-81dc706c1a37}</Project>
       <Name>MoreMountains.Feedbacks.Player</Name>
     </ProjectReference>
-    <ProjectReference Include="Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.Player.csproj">
-      <Project>{511406f6-4c04-e02b-2e2b-aeb8700f4757}</Project>
-      <Name>Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.Player</Name>
-    </ProjectReference>
     <ProjectReference Include="Lofelt.NiceVibrations.Player.csproj">
       <Project>{478f72ec-fb52-dee1-23f0-e8014788ccfc}</Project>
       <Name>Lofelt.NiceVibrations.Player</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.Player.csproj">
+      <Project>{511406f6-4c04-e02b-2e2b-aeb8700f4757}</Project>
+      <Name>Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.Player</Name>
     </ProjectReference>
     <ProjectReference Include="MoreMountains.Tools.Player.csproj">
       <Project>{6037fafe-5826-2b43-3f36-2b452226ec30}</Project>
@@ -933,30 +957,6 @@
     <ProjectReference Include="Unity.VisualScripting.State.Player.csproj">
       <Project>{ea8a7aa2-c584-f7ea-8cc1-7be2df8494e1}</Project>
       <Name>Unity.VisualScripting.State.Player</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.RenderPipelines.Universal.Shaders.Player.csproj">
-      <Project>{5dfa39ba-2647-839c-c66b-a7ebfa6289b7}</Project>
-      <Name>Unity.RenderPipelines.Universal.Shaders.Player</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.RenderPipeline.Universal.ShaderLibrary.Player.csproj">
-      <Project>{d6da0bf7-e126-da2e-b764-59d27037b500}</Project>
-      <Name>Unity.RenderPipeline.Universal.ShaderLibrary.Player</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.Mathematics.Player.csproj">
-      <Project>{9ec804ae-8527-f5ed-0363-2ef2ce8536cb}</Project>
-      <Name>Unity.Mathematics.Player</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.Burst.Player.csproj">
-      <Project>{b3c2ceca-ee48-1af5-303c-feb38782e689}</Project>
-      <Name>Unity.Burst.Player</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.RenderPipelines.Universal.Runtime.Player.csproj">
-      <Project>{07710b93-a430-7ed8-fb7d-e10b314b9efb}</Project>
-      <Name>Unity.RenderPipelines.Universal.Runtime.Player</Name>
-    </ProjectReference>
-    <ProjectReference Include="MK.Toon.URP.Player.csproj">
-      <Project>{2e06f354-6c78-85d6-73e4-b8c9ad44a75d}</Project>
-      <Name>MK.Toon.URP.Player</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

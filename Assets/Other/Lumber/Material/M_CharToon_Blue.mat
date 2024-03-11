@@ -13,7 +13,6 @@ Material:
   - _MK_ARTISTIC_ANIMATION_STUTTER
   - _MK_COLOR_GRADING_ALBEDO
   - _MK_DISSOLVE_BORDER_COLOR
-  - _MK_ENVIRONMENT_REFLECTIONS_AMBIENT
   - _MK_LIGHT_CEL
   - _MK_OUTLINE_HULL_CLIP
   - _MK_OUTLINE_NOISE
@@ -289,7 +288,7 @@ Material:
     - _DrawnMapScale: 1
     - _DstBlend: 0
     - _EmissiveRim: 0
-    - _EnvironmentReflections: 1
+    - _EnvironmentReflections: 0
     - _FakeHighlightIntensity: 0.5
     - _FresnelHighlights: 1
     - _GlossMapScale: 1
@@ -337,7 +336,7 @@ Material:
     - _OutlineOffsetX: 3
     - _OutlineOffsetY: 0
     - _OutlineOn: 2
-    - _OutlineSize: 40
+    - _OutlineSize: 20
     - _OutlineStencilComp: 0
     - _OutlineStencilID: 0
     - _OutlineStencilOp: 0
@@ -404,13 +403,13 @@ Material:
     - _ZTest: 4
     - _ZWrite: 1
     m_Colors:
-    - _AlbedoColor: {r: 0, g: 0.8235294, b: 1, a: 1}
-    - _Color: {r: 0, g: 0.8235294, b: 1, a: 1}
+    - _AlbedoColor: {r: 0.013207495, g: 0.7792107, b: 1, a: 1}
+    - _Color: {r: 0.013207494, g: 0.7792107, b: 1, a: 1}
     - _DetailColor: {r: 1, g: 1, b: 1, a: 1}
     - _DissolveBorderColor: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _GoochBrightColor: {r: 0.82452834, g: 1, b: 0.8672106, a: 1}
-    - _GoochDarkColor: {r: 0, g: 0, b: 0, a: 1}
+    - _GoochBrightColor: {r: 0.9811321, g: 0.9811321, b: 0.9811321, a: 1}
+    - _GoochDarkColor: {r: 0, g: 0.6366148, b: 0.6792453, a: 1}
     - _HighlightRampColor: {r: 1, g: 1, b: 1, a: 1}
     - _IndirectColor: {r: 0.7, g: 0.7, b: 0.7, a: 1}
     - _IridescenceColor: {r: 1, g: 1, b: 1, a: 0.5}
