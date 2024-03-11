@@ -30,7 +30,8 @@ ModelImporter:
     animationScaleError: 0.5
     animationWrapMode: 0
     extraExposedTransformPaths: []
-    extraUserProperties: []
+    extraUserProperties:
+    - '#BAKERY{"meshName":["Cube.001"],"padding":[30],"unwrapper":[0]}'
     clipAnimations: []
     isReadable: 0
   meshes:
@@ -88,7 +89,7 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    globalScale: 1.05
+    globalScale: 105
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 1

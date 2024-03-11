@@ -33,6 +33,7 @@ MonoBehaviour:
     - Assembly-CSharp
     - Assembly-CSharp-firstpass
     - AstarPathfindingProject
+    - BakeryRuntimeAssembly
     - Cinemachine
     - Lofelt.NiceVibrations
     - Lofelt.NiceVibrations.Demo

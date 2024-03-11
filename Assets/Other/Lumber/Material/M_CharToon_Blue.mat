@@ -12,7 +12,6 @@ Material:
   m_ValidKeywords:
   - _MK_ARTISTIC_ANIMATION_STUTTER
   - _MK_COLOR_GRADING_ALBEDO
-  - _MK_DISSOLVE_BORDER_COLOR
   - _MK_LIGHT_CEL
   - _MK_OUTLINE_HULL_CLIP
   - _MK_OUTLINE_NOISE
@@ -265,7 +264,7 @@ Material:
     - _Brightness: 1
     - _BumpScale: 1
     - _ColorGrading: 1
-    - _Contrast: 1.5
+    - _Contrast: 2.61
     - _Cull: 2
     - _Cutoff: 0.5
     - _DetailBlend: 0
@@ -279,7 +278,7 @@ Material:
     - _Diffuse: 0
     - _DiffuseSmoothness: 0.447
     - _DiffuseThresholdOffset: 0.25
-    - _Dissolve: 2
+    - _Dissolve: 0
     - _DissolveAmount: 0.5
     - _DissolveBorderSize: 0.25
     - _DissolveMapScale: 1
@@ -363,10 +362,10 @@ Material:
     - _SSSBox: 0
     - _SSSOn: 0
     - _SSScale: 1
-    - _Saturation: 1
+    - _Saturation: 1.31
     - _ShadowIntensity: 0.694
     - _SketchMapScale: 1
-    - _Smoothness: 0.24
+    - _Smoothness: 0.226
     - _SmoothnessTextureChannel: 0
     - _SpMode: 0
     - _Specular: 1
@@ -374,7 +373,7 @@ Material:
     - _SpecularHighlights: 1
     - _SpecularIntensity: 1
     - _SpecularOn: 0
-    - _SpecularSmoothness: 0
+    - _SpecularSmoothness: 0.31
     - _SpecularThresholdOffset: 0.25
     - _SrcBlend: 1
     - _Stencil: 1
@@ -403,13 +402,13 @@ Material:
     - _ZTest: 4
     - _ZWrite: 1
     m_Colors:
-    - _AlbedoColor: {r: 0.013207495, g: 0.7792107, b: 1, a: 1}
-    - _Color: {r: 0.013207494, g: 0.7792107, b: 1, a: 1}
+    - _AlbedoColor: {r: 0.5415094, g: 0.89776903, b: 1, a: 1}
+    - _Color: {r: 0.5415094, g: 0.89776903, b: 1, a: 1}
     - _DetailColor: {r: 1, g: 1, b: 1, a: 1}
     - _DissolveBorderColor: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _GoochBrightColor: {r: 0.9811321, g: 0.9811321, b: 0.9811321, a: 1}
-    - _GoochDarkColor: {r: 0, g: 0.6366148, b: 0.6792453, a: 1}
+    - _GoochDarkColor: {r: 0, g: 0.5082012, b: 0.754717, a: 1}
     - _HighlightRampColor: {r: 1, g: 1, b: 1, a: 1}
     - _IndirectColor: {r: 0.7, g: 0.7, b: 0.7, a: 1}
     - _IridescenceColor: {r: 1, g: 1, b: 1, a: 0.5}
@@ -422,6 +421,6 @@ Material:
     - _RimColor: {r: 1, g: 1, b: 1, a: 1}
     - _RimDarkColor: {r: 0, g: 0, b: 0, a: 1}
     - _SSColor: {r: 0, g: 0, b: 0, a: 0}
-    - _SpecularColor: {r: 0.20312497, g: 0.20312497, b: 0.20312497, a: 1}
+    - _SpecularColor: {r: 0.3207547, g: 0.3207547, b: 0.3207547, a: 1}
     - _VertexAnimationFrequency: {r: 2.5, g: 2.5, b: 2.5, a: 1}
   m_BuildTextureStacks: []
