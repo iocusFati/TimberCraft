@@ -32,9 +32,19 @@ namespace Infrastructure.Services.Pool
             _assets = assets;
         }
 
+        public void Initialize(int initialSpawnCount = 5)
+        {
+            for (int i = 0; i < initialSpawnCount; i++)
+            {
+                TPoolable pooled = Get();
+            }
+            
+            ReleaseAll();
+        }
+
         protected abstract TPoolable Spawn();
 
-        public TPoolable Get()
+        public virtual TPoolable Get()
         {
             TPoolable poolable = Pool.Get();
             _activePoolables.Add(poolable);

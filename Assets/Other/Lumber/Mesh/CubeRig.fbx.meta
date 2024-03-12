@@ -33,7 +33,7 @@ ModelImporter:
     extraUserProperties:
     - '#BAKERY{"meshName":["Cube.001"],"padding":[30],"unwrapper":[0]}'
     clipAnimations: []
-    isReadable: 0
+    isReadable: 1
   meshes:
     lODScreenPercentages: []
     globalScale: 105

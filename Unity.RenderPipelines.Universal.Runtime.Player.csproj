@@ -55,7 +55,6 @@
      <Compile Include="Library\PackageCache\com.unity.render-pipelines.universal@12.1.11\Runtime\ForwardLights.cs" />
      <Compile Include="Library\PackageCache\com.unity.render-pipelines.universal@12.1.11\Runtime\2D\Light2DManager.cs" />
      <Compile Include="Library\PackageCache\com.unity.render-pipelines.universal@12.1.11\Runtime\DeferredShaderData.cs" />
-     <Compile Include="Assets\Beautify\URP\Runtime\BeautifyRendererFeature.cs" />
      <Compile Include="Library\PackageCache\com.unity.render-pipelines.universal@12.1.11\Runtime\Overrides\ColorLookup.cs" />
      <Compile Include="Library\PackageCache\com.unity.render-pipelines.universal@12.1.11\Runtime\Data\XRSystemData.cs" />
      <Compile Include="Library\PackageCache\com.unity.render-pipelines.universal@12.1.11\Runtime\SampleCount.cs" />
@@ -123,7 +122,6 @@
      <Compile Include="Library\PackageCache\com.unity.render-pipelines.universal@12.1.11\Runtime\XR\XRLayout.cs" />
      <Compile Include="Library\PackageCache\com.unity.render-pipelines.universal@12.1.11\Runtime\Passes\DeferredPass.cs" />
      <Compile Include="Library\PackageCache\com.unity.render-pipelines.universal@12.1.11\Runtime\RendererFeatures\ScreenSpaceAmbientOcclusion.cs" />
-     <Compile Include="Assets\Beautify\URP\Runtime\BeautifySettings.cs" />
      <Compile Include="Library\PackageCache\com.unity.render-pipelines.universal@12.1.11\Runtime\Debug\DebugDisplaySettingsPanel.cs" />
      <Compile Include="Library\PackageCache\com.unity.render-pipelines.universal@12.1.11\Runtime\Decal\DBuffer\DecalForwardEmissivePass.cs" />
      <Compile Include="Library\PackageCache\com.unity.render-pipelines.universal@12.1.11\Runtime\DeferredLights.cs" />
@@ -145,7 +143,6 @@
      <Compile Include="Library\PackageCache\com.unity.render-pipelines.universal@12.1.11\Runtime\Debug\IDebugDisplaySettingsPanel.cs" />
      <Compile Include="Library\PackageCache\com.unity.render-pipelines.universal@12.1.11\Runtime\Documentation.cs" />
      <Compile Include="Library\PackageCache\com.unity.render-pipelines.universal@12.1.11\Runtime\UniversalAdditionalCameraData.cs" />
-     <Compile Include="Assets\Beautify\URP\Runtime\Beautify.cs" />
      <Compile Include="Library\PackageCache\com.unity.render-pipelines.universal@12.1.11\Runtime\External\LibTessDotNet\Dict.cs" />
      <Compile Include="Library\PackageCache\com.unity.render-pipelines.universal@12.1.11\Runtime\RendererFeatures\ScreenSpaceShadows.cs" />
      <Compile Include="Library\PackageCache\com.unity.render-pipelines.universal@12.1.11\Runtime\Tiling\SliceCullingJob.cs" />
@@ -431,6 +428,9 @@
      </Reference>
      <Reference Include="Pathfinding.Poly2Tri">
      <HintPath>C:\Users\fuyca\Desktop\Projects\TimberCraft\Assets\AstarPathfindingProject\Plugins\Poly2Tri\Pathfinding.Poly2Tri.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.Collections.LowLevel.ILSupport">
+     <HintPath>C:\Users\fuyca\Desktop\Projects\TimberCraft\Library\PackageCache\com.unity.collections@1.2.4\Unity.Collections.LowLevel.ILSupport\Unity.Collections.LowLevel.ILSupport.dll</HintPath>
      </Reference>
      <Reference Include="netstandard">
      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.25f1\Editor\Data\NetStandard\ref\2.1.0\netstandard.dll</HintPath>

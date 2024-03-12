@@ -100,10 +100,9 @@ namespace Gameplay.Resource
 
         protected virtual void PlayHitParticle(Vector3 hitPoint, Transform hitTransform)
         {
-            ParticleSystem particle = _hitParticlePool.Get();
             Vector3 position = _hitParticleAppearAt.position;
+            ParticleSystem particle = _hitParticlePool.Get(new Vector3(position.x, hitPoint.y, position.z));
             
-            particle.transform.position = new Vector3(position.x, hitPoint.y, position.z);
             particle.transform.rotation = hitTransform.rotation;
 
         }

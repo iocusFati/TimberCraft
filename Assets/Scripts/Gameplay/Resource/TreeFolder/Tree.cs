@@ -7,10 +7,8 @@ using DG.Tweening;
 using Gameplay.Player;
 using Gameplay.Player.ObstacleFade;
 using Infrastructure.Factories;
-using Infrastructure.Factories.PlayerFactoryFolder;
 using Infrastructure.Services.Pool;
 using Infrastructure.Services.StaticDataService;
-using Infrastructure.StaticData.ResourcesData;
 using UnityEngine;
 using Utils;
 using Zenject;
@@ -109,7 +107,7 @@ namespace Gameplay.Resource
             if (obj.CompareTag(Tags.Resource) || obj.CompareTag(Tags.TreeTip))
             {
                 SpawnLandParticle();
-                SpawnLeavesParticle();
+                // SpawnLeavesParticle();
             }
         }
 
@@ -166,15 +164,12 @@ namespace Gameplay.Resource
             base.RestoreSource();
         }
 
-        private void SpawnLeavesParticle()
-        {
-            ParticleSystem leavesParticle = _leavesParticlePool.Get();
-            leavesParticle.transform.position = _leavesParticleSpawn.position;
-        }
+        private void SpawnLeavesParticle() => 
+            _leavesParticlePool.Get(_leavesParticleSpawn.position);
 
         private void SpawnLandParticle()
         {
-            ParticleSystem onLandedParticle = _onLandedParticlePool.Get();
+            ParticleSystem onLandedParticle = _onLandedParticlePool.Get(_stump.position);
             ParticleSystem.MainModule mainModule = onLandedParticle.main;
             ParticleSystem.ShapeModule shapeModule = onLandedParticle.shape;
 

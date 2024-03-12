@@ -42,13 +42,11 @@
   </PropertyGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\Gameplay\Resource\TreeFolder\Tree.cs" />
-     <Compile Include="Assets\Beautify\URP\Demo\DemoSources\Scripts\ToggleDoF.cs" />
      <Compile Include="Assets\Other\KriptoFX\MuzzleFlashes\Scripts\Rendering\FPS_UseLight.cs" />
      <Compile Include="Assets\Scripts\Infrastructure\StaticData\uiData\UIConfig.cs" />
      <Compile Include="Assets\Scripts\UI\Factory\IUIEntity.cs" />
      <Compile Include="Assets\Scripts\Gameplay\Bots\StateMachine\States\GoToResourceSourceLumberjackBotState.cs" />
      <Compile Include="Assets\Scripts\UI\BillboardEffect.cs" />
-     <Compile Include="Assets\Beautify\URP\Demo\DemoSources\Scripts\LUTBlending.cs" />
      <Compile Include="Assets\Scripts\Infrastructure\Services\SaveLoad\ISaveLoadService.cs" />
      <Compile Include="Assets\MeshBaker\Examples\Scripts\MB_MigrateMaterialsToDifferentPipeline.cs" />
      <Compile Include="Assets\Scripts\Infrastructure\States\StateMachine.cs" />
@@ -65,7 +63,6 @@
      <Compile Include="Assets\Scripts\Utils\AssetPaths.cs" />
      <Compile Include="Assets\Scripts\Gameplay\Buildings\ResourcesShop.cs" />
      <Compile Include="Assets\Scripts\Infrastructure\Services\Input\StandaloneInput.cs" />
-     <Compile Include="Assets\Beautify\URP\Demo\DemoSources\Scripts\SphereAnimator.cs" />
      <Compile Include="Assets\Scripts\Gameplay\Bots\StateMachine\States\BringResourcesToHutLumberjackBotState.cs" />
      <Compile Include="Assets\Scripts\Infrastructure\Services\SaveLoad\SaveLoadService.cs" />
      <Compile Include="Assets\Scripts\UI\Factory\UIFactory.cs" />
@@ -90,14 +87,13 @@
      <Compile Include="Assets\Scripts\Infrastructure\StaticData\LumberjackData\LumberjackBotConfig.cs" />
      <Compile Include="Assets\MeshBaker\Examples\SceneRuntimeExample\MB_ExampleSkinnedMeshDescription.cs" />
      <Compile Include="Assets\Scripts\Infrastructure\StaticData\LumberjackData\PlayerConfig.cs" />
-     <Compile Include="Assets\Beautify\URP\Demo\DemoSources\Scripts\CameraAnimator.cs" />
      <Compile Include="Assets\Scripts\Gameplay\Resource\ResourcesSelling.cs" />
      <Compile Include="Assets\Scripts\Utils\TransformExtensions.cs" />
      <Compile Include="Assets\Scripts\Infrastructure\Bootstrapper.cs" />
      <Compile Include="Assets\Scripts\Infrastructure\Services\Cache\ICacheService.cs" />
      <Compile Include="Assets\Other\_Gloomy_Hyper\Script\MouseOrbitImproved.cs" />
      <Compile Include="Assets\Scripts\Infrastructure\Factories\IFactoriesHolderService.cs" />
-     <Compile Include="Assets\Scripts\Infrastructure\Services\Pool\Particle\ParticleComplete.cs" />
+     <Compile Include="Assets\Scripts\Infrastructure\Services\Pool\Particle\ParticleRender.cs" />
      <Compile Include="Assets\Scripts\Gameplay\Player\ObstacleFade\IObscurablePlayer.cs" />
      <Compile Include="Assets\Other\KriptoFX\MuzzleFlashes\Scripts\MaterialType.cs" />
      <Compile Include="Assets\Other\KriptoFX\MuzzleFlashes\Scripts\Rendering\FPS_CustomLight.cs" />
@@ -194,7 +190,6 @@
      <Compile Include="Assets\Scripts\UI\Buttons\UpgradeButtonDisabler.cs" />
      <Compile Include="Assets\Scripts\Gameplay\Resource\IResourcesSelling.cs" />
      <Compile Include="Assets\Scripts\Infrastructure\Services\Input\InputService.cs" />
-     <Compile Include="Assets\Beautify\URP\Demo\DemoSources\Scripts\Demo.cs" />
      <Compile Include="Assets\MeshBaker\Examples\SwitchBakedObjectsTexture\MB_SwitchBakedObjectsTexture.cs" />
      <Compile Include="Assets\Scripts\Infrastructure\States\Interfaces\IExitState.cs" />
      <Compile Include="Assets\Scripts\Gameplay\Player\Player.cs" />
@@ -433,6 +428,9 @@
      </Reference>
      <Reference Include="Pathfinding.Poly2Tri">
      <HintPath>C:\Users\fuyca\Desktop\Projects\TimberCraft\Assets\AstarPathfindingProject\Plugins\Poly2Tri\Pathfinding.Poly2Tri.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.Collections.LowLevel.ILSupport">
+     <HintPath>C:\Users\fuyca\Desktop\Projects\TimberCraft\Library\PackageCache\com.unity.collections@1.2.4\Unity.Collections.LowLevel.ILSupport\Unity.Collections.LowLevel.ILSupport.dll</HintPath>
      </Reference>
      <Reference Include="netstandard">
      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.25f1\Editor\Data\NetStandard\ref\2.1.0\netstandard.dll</HintPath>
@@ -953,6 +951,10 @@
     <ProjectReference Include="BakeryRuntimeAssembly.Player.csproj">
       <Project>{71ab9ec1-5750-31af-9ace-cec3e83d9219}</Project>
       <Name>BakeryRuntimeAssembly.Player</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Collections.Player.csproj">
+      <Project>{08b9268d-31ea-64ba-5078-4994ecb073e7}</Project>
+      <Name>Unity.Collections.Player</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

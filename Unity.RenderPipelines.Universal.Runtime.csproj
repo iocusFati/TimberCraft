@@ -55,7 +55,6 @@
      <Compile Include="Library\PackageCache\com.unity.render-pipelines.universal@12.1.11\Runtime\ForwardLights.cs" />
      <Compile Include="Library\PackageCache\com.unity.render-pipelines.universal@12.1.11\Runtime\2D\Light2DManager.cs" />
      <Compile Include="Library\PackageCache\com.unity.render-pipelines.universal@12.1.11\Runtime\DeferredShaderData.cs" />
-     <Compile Include="Assets\Beautify\URP\Runtime\BeautifyRendererFeature.cs" />
      <Compile Include="Library\PackageCache\com.unity.render-pipelines.universal@12.1.11\Runtime\Overrides\ColorLookup.cs" />
      <Compile Include="Library\PackageCache\com.unity.render-pipelines.universal@12.1.11\Runtime\Data\XRSystemData.cs" />
      <Compile Include="Library\PackageCache\com.unity.render-pipelines.universal@12.1.11\Runtime\SampleCount.cs" />
@@ -123,7 +122,6 @@
      <Compile Include="Library\PackageCache\com.unity.render-pipelines.universal@12.1.11\Runtime\XR\XRLayout.cs" />
      <Compile Include="Library\PackageCache\com.unity.render-pipelines.universal@12.1.11\Runtime\Passes\DeferredPass.cs" />
      <Compile Include="Library\PackageCache\com.unity.render-pipelines.universal@12.1.11\Runtime\RendererFeatures\ScreenSpaceAmbientOcclusion.cs" />
-     <Compile Include="Assets\Beautify\URP\Runtime\BeautifySettings.cs" />
      <Compile Include="Library\PackageCache\com.unity.render-pipelines.universal@12.1.11\Runtime\Debug\DebugDisplaySettingsPanel.cs" />
      <Compile Include="Library\PackageCache\com.unity.render-pipelines.universal@12.1.11\Runtime\Decal\DBuffer\DecalForwardEmissivePass.cs" />
      <Compile Include="Library\PackageCache\com.unity.render-pipelines.universal@12.1.11\Runtime\DeferredLights.cs" />
@@ -145,7 +143,6 @@
      <Compile Include="Library\PackageCache\com.unity.render-pipelines.universal@12.1.11\Runtime\Debug\IDebugDisplaySettingsPanel.cs" />
      <Compile Include="Library\PackageCache\com.unity.render-pipelines.universal@12.1.11\Runtime\Documentation.cs" />
      <Compile Include="Library\PackageCache\com.unity.render-pipelines.universal@12.1.11\Runtime\UniversalAdditionalCameraData.cs" />
-     <Compile Include="Assets\Beautify\URP\Runtime\Beautify.cs" />
      <Compile Include="Library\PackageCache\com.unity.render-pipelines.universal@12.1.11\Runtime\External\LibTessDotNet\Dict.cs" />
      <Compile Include="Library\PackageCache\com.unity.render-pipelines.universal@12.1.11\Runtime\RendererFeatures\ScreenSpaceShadows.cs" />
      <Compile Include="Library\PackageCache\com.unity.render-pipelines.universal@12.1.11\Runtime\Tiling\SliceCullingJob.cs" />
@@ -210,33 +207,21 @@
      <Compile Include="Library\PackageCache\com.unity.render-pipelines.universal@12.1.11\Runtime\MotionVectors.cs" />
      <Compile Include="Library\PackageCache\com.unity.render-pipelines.universal@12.1.11\Runtime\2D\UTess2D\PlanarGraph.cs" />
      <Compile Include="Library\PackageCache\com.unity.render-pipelines.universal@12.1.11\Runtime\PostProcessUtils.cs" />
-     <Folder Include="Assets\Beautify\URP\Runtime\Resources\Textures" />
      <Folder Include="Library\PackageCache\com.unity.render-pipelines.universal@12.1.11\Runtime\Materials\PhysicalMaterial3DsMax" />
      <Folder Include="Library\PackageCache\com.unity.render-pipelines.universal@12.1.11\Runtime\2D\Data" />
      <None Include="Library\PackageCache\com.unity.render-pipelines.universal@12.1.11\Runtime\Decal\DBuffer\DBufferClear.shader" />
-     <None Include="Assets\Beautify\URP\Runtime\Resources\Shaders\BeautifyColorTemp.hlsl" />
      <Folder Include="Library\PackageCache\com.unity.render-pipelines.universal@12.1.11\Runtime\Decal" />
-     <None Include="Assets\Beautify\URP\Runtime\Resources\Shaders\BeautifyCommon.hlsl" />
      <Folder Include="Library\PackageCache\com.unity.render-pipelines.universal@12.1.11\Runtime\Debug" />
-     <None Include="Assets\Beautify\URP\Runtime\BeautifyAsmRef.asmref" />
      <Folder Include="Library\PackageCache\com.unity.render-pipelines.universal@12.1.11\Runtime\External" />
-     <None Include="Assets\Beautify\URP\Runtime\Resources\Shaders\BeautifyPPSSF.hlsl" />
      <Folder Include="Library\PackageCache\com.unity.render-pipelines.universal@12.1.11\Runtime\VFXGraph\Shaders" />
-     <Folder Include="Assets\Beautify\URP\Runtime" />
      <Folder Include="Library\PackageCache\com.unity.render-pipelines.universal@12.1.11\Runtime\Passes" />
-     <None Include="Assets\Beautify\URP\Runtime\Resources\Shaders\DepthOnly.shader" />
-     <None Include="Assets\Beautify\URP\Runtime\Resources\Shaders\BeautifyPPSEA.hlsl" />
-     <Folder Include="Assets\Beautify\URP\Runtime\Resources\Shaders" />
      <None Include="Library\PackageCache\com.unity.render-pipelines.universal@12.1.11\Runtime\VFXGraph\Shaders\VFXDefines.hlsl" />
      <None Include="Library\PackageCache\com.unity.render-pipelines.universal@12.1.11\Runtime\VFXGraph\Shaders\VFXLit.hlsl" />
      <Folder Include="Library\PackageCache\com.unity.render-pipelines.universal@12.1.11\Runtime\XR" />
      <None Include="Library\PackageCache\com.unity.render-pipelines.universal@12.1.11\Runtime\Unity.RenderPipelines.Universal.Runtime.asmdef" />
      <None Include="Library\PackageCache\com.unity.render-pipelines.universal@12.1.11\Runtime\External\LibTessDotNet\LICENSE.txt" />
-     <None Include="Assets\Beautify\URP\Runtime\Resources\Shaders\BeautifyCore.shader" />
-     <None Include="Assets\Beautify\URP\Runtime\Resources\Shaders\BeautifyCore.hlsl" />
      <Folder Include="Library\PackageCache\com.unity.render-pipelines.universal@12.1.11\Runtime\Data" />
      <Folder Include="Library\PackageCache\com.unity.render-pipelines.universal@12.1.11\Runtime\Decal\DBuffer" />
-     <None Include="Assets\Beautify\URP\Runtime\Resources\Shaders\BeautifyPPSOutline.hlsl" />
      <Folder Include="Library\PackageCache\com.unity.render-pipelines.universal@12.1.11\Runtime\2D\Passes" />
      <None Include="Library\PackageCache\com.unity.render-pipelines.universal@12.1.11\Runtime\VFXGraph\Shaders\VFXCommon.hlsl" />
      <Folder Include="Library\PackageCache\com.unity.render-pipelines.universal@12.1.11\Runtime\Decal\ScreenSpace" />
@@ -245,18 +230,12 @@
      <Folder Include="Library\PackageCache\com.unity.render-pipelines.universal@12.1.11\Runtime\Tiling" />
      <Folder Include="Library\PackageCache\com.unity.render-pipelines.universal@12.1.11\Runtime\RendererFeatures" />
      <Folder Include="Library\PackageCache\com.unity.render-pipelines.universal@12.1.11\Runtime" />
-     <None Include="Assets\Beautify\URP\Runtime\Resources\Shaders\BeautifyACESFitted.hlsl" />
      <Folder Include="Library\PackageCache\com.unity.render-pipelines.universal@12.1.11\Runtime\Materials\ArnoldStandardSurface" />
      <Folder Include="Library\PackageCache\com.unity.render-pipelines.universal@12.1.11\Runtime\Decal\Entities" />
      <None Include="Library\PackageCache\com.unity.render-pipelines.universal@12.1.11\Runtime\VFXGraph\Shaders\VFXLitPixelOutput.hlsl" />
      <Folder Include="Library\PackageCache\com.unity.render-pipelines.universal@12.1.11\Runtime\VFXGraph" />
      <Folder Include="Library\PackageCache\com.unity.render-pipelines.universal@12.1.11\Runtime\Overrides" />
-     <None Include="Assets\Beautify\URP\Runtime\Resources\Shaders\BeautifyPPSLum.hlsl" />
-     <None Include="Assets\Beautify\URP\Runtime\Resources\Shaders\BeautifyDistortion.hlsl" />
-     <Folder Include="Assets\Beautify\URP\Runtime\Resources" />
      <Folder Include="Library\PackageCache\com.unity.render-pipelines.universal@12.1.11\Runtime\2D\Data\Textures" />
-     <None Include="Assets\Beautify\URP\Runtime\Resources\Shaders\BeautifyPPSDoF.hlsl" />
-     <None Include="Assets\Beautify\URP\Runtime\Resources\Shaders\BeautifyCAberration.hlsl" />
      <Folder Include="Library\PackageCache\com.unity.render-pipelines.universal@12.1.11\Runtime\External\LibTessDotNet" />
      <Folder Include="Library\PackageCache\com.unity.render-pipelines.universal@12.1.11\Runtime\2D\Shadows" />
      <Folder Include="Library\PackageCache\com.unity.render-pipelines.universal@12.1.11\Runtime\2D" />
@@ -575,6 +554,9 @@
      </Reference>
      <Reference Include="Sirenix.Utilities.Editor">
      <HintPath>C:\Users\fuyca\Desktop\Projects\TimberCraft\Assets\Plugins\Sirenix\Assemblies\Sirenix.Utilities.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.Collections.LowLevel.ILSupport">
+     <HintPath>C:\Users\fuyca\Desktop\Projects\TimberCraft\Library\PackageCache\com.unity.collections@1.2.4\Unity.Collections.LowLevel.ILSupport\Unity.Collections.LowLevel.ILSupport.dll</HintPath>
      </Reference>
      <Reference Include="UnityEditor.iOS.Extensions.Xcode">
      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.25f1\Editor\Data\PlaybackEngines\iOSSupport\UnityEditor.iOS.Extensions.Xcode.dll</HintPath>

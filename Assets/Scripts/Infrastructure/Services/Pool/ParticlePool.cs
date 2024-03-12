@@ -13,13 +13,25 @@ namespace Infrastructure.Services.Pool
         {
             _particlePath = particlePath;
         }
+        
+        public ParticleSystem Get(Vector3 stumpPosition)
+        {
+            ParticleSystem particleSystem = base.Get();
+
+            particleSystem.transform.position = stumpPosition;
+
+            ParticleRender particleRender = particleSystem.GetComponent<ParticleRender>();
+            particleRender.DisableIfNotVisible();
+            
+            return particleSystem;
+        }
 
         protected override ParticleSystem Spawn()
         {
-            ParticleComplete particleComplete = _assets.Instantiate<ParticleComplete>(_particlePath);
-            ParticleSystem particleSystem = particleComplete.GetComponent<ParticleSystem>();
+            ParticleRender particleRender = _assets.Instantiate<ParticleRender>(_particlePath);
+            ParticleSystem particleSystem = particleRender.GetComponent<ParticleSystem>();
 
-            particleComplete.SetRelease(() => Release(particleSystem));
+            particleRender.SetRelease(() => Release(particleSystem));
 
             return particleSystem;
         }

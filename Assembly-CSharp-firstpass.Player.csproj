@@ -446,6 +446,9 @@
      <Reference Include="Pathfinding.Poly2Tri">
      <HintPath>C:\Users\fuyca\Desktop\Projects\TimberCraft\Assets\AstarPathfindingProject\Plugins\Poly2Tri\Pathfinding.Poly2Tri.dll</HintPath>
      </Reference>
+     <Reference Include="Unity.Collections.LowLevel.ILSupport">
+     <HintPath>C:\Users\fuyca\Desktop\Projects\TimberCraft\Library\PackageCache\com.unity.collections@1.2.4\Unity.Collections.LowLevel.ILSupport\Unity.Collections.LowLevel.ILSupport.dll</HintPath>
+     </Reference>
      <Reference Include="netstandard">
      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.25f1\Editor\Data\NetStandard\ref\2.1.0\netstandard.dll</HintPath>
      </Reference>
@@ -961,6 +964,10 @@
     <ProjectReference Include="BakeryRuntimeAssembly.Player.csproj">
       <Project>{71ab9ec1-5750-31af-9ace-cec3e83d9219}</Project>
       <Name>BakeryRuntimeAssembly.Player</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Collections.Player.csproj">
+      <Project>{08b9268d-31ea-64ba-5078-4994ecb073e7}</Project>
+      <Name>Unity.Collections.Player</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

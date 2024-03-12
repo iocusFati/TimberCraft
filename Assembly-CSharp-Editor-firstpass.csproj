@@ -404,6 +404,9 @@
      <Reference Include="Sirenix.Utilities.Editor">
      <HintPath>C:\Users\fuyca\Desktop\Projects\TimberCraft\Assets\Plugins\Sirenix\Assemblies\Sirenix.Utilities.Editor.dll</HintPath>
      </Reference>
+     <Reference Include="Unity.Collections.LowLevel.ILSupport">
+     <HintPath>C:\Users\fuyca\Desktop\Projects\TimberCraft\Library\PackageCache\com.unity.collections@1.2.4\Unity.Collections.LowLevel.ILSupport\Unity.Collections.LowLevel.ILSupport.dll</HintPath>
+     </Reference>
      <Reference Include="nunit.framework">
      <HintPath>C:\Users\fuyca\Desktop\Projects\TimberCraft\Library\PackageCache\com.unity.ext.nunit@1.0.6\net35\unity-custom\nunit.framework.dll</HintPath>
      </Reference>
@@ -1127,6 +1130,10 @@
     <ProjectReference Include="BakeryEditorAssembly.csproj">
       <Project>{d94c296a-719a-da49-2368-73e11214917c}</Project>
       <Name>BakeryEditorAssembly</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Collections.csproj">
+      <Project>{4027b9a6-9ef4-e530-0b6e-ebd05929feef}</Project>
+      <Name>Unity.Collections</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
