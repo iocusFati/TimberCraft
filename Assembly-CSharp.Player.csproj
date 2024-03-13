@@ -399,6 +399,9 @@
      <Reference Include="UnityEngine.XRModule">
      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.25f1\Editor\Data\PlaybackEngines\AndroidPlayer\Variations\mono\Managed\UnityEngine.XRModule.dll</HintPath>
      </Reference>
+     <Reference Include="Unity.Collections.LowLevel.ILSupport">
+     <HintPath>C:\Users\fuyca\Desktop\Projects\TimberCraft\Library\PackageCache\com.unity.collections@1.2.4\Unity.Collections.LowLevel.ILSupport\Unity.Collections.LowLevel.ILSupport.dll</HintPath>
+     </Reference>
      <Reference Include="Zenject-usage">
      <HintPath>C:\Users\fuyca\Desktop\Projects\TimberCraft\Assets\Plugins\Zenject\Source\Usage\Zenject-usage.dll</HintPath>
      </Reference>
@@ -411,26 +414,23 @@
      <Reference Include="Sirenix.Serialization.Config">
      <HintPath>C:\Users\fuyca\Desktop\Projects\TimberCraft\Assets\Plugins\Sirenix\Assemblies\Sirenix.Serialization.Config.dll</HintPath>
      </Reference>
-     <Reference Include="Sirenix.Serialization">
-     <HintPath>C:\Users\fuyca\Desktop\Projects\TimberCraft\Assets\Plugins\Sirenix\Assemblies\NoEmitAndNoEditor\Sirenix.Serialization.dll</HintPath>
+     <Reference Include="DOTween">
+     <HintPath>C:\Users\fuyca\Desktop\Projects\TimberCraft\Assets\Plugins\Demigiant\DOTween\DOTween.dll</HintPath>
      </Reference>
      <Reference Include="Pathfinding.ClipperLib">
      <HintPath>C:\Users\fuyca\Desktop\Projects\TimberCraft\Assets\AstarPathfindingProject\Plugins\Clipper\Pathfinding.ClipperLib.dll</HintPath>
      </Reference>
+     <Reference Include="Sirenix.Serialization">
+     <HintPath>C:\Users\fuyca\Desktop\Projects\TimberCraft\Assets\Plugins\Sirenix\Assemblies\NoEmitAndNoEditor\Sirenix.Serialization.dll</HintPath>
+     </Reference>
      <Reference Include="Unity.VisualScripting.Antlr3.Runtime">
      <HintPath>C:\Users\fuyca\Desktop\Projects\TimberCraft\Library\PackageCache\com.unity.visualscripting@1.8.0\Runtime\VisualScripting.Flow\Dependencies\NCalc\Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
-     </Reference>
-     <Reference Include="DOTween">
-     <HintPath>C:\Users\fuyca\Desktop\Projects\TimberCraft\Assets\Plugins\Demigiant\DOTween\DOTween.dll</HintPath>
      </Reference>
      <Reference Include="Sirenix.Utilities">
      <HintPath>C:\Users\fuyca\Desktop\Projects\TimberCraft\Assets\Plugins\Sirenix\Assemblies\NoEmitAndNoEditor\Sirenix.Utilities.dll</HintPath>
      </Reference>
      <Reference Include="Pathfinding.Poly2Tri">
      <HintPath>C:\Users\fuyca\Desktop\Projects\TimberCraft\Assets\AstarPathfindingProject\Plugins\Poly2Tri\Pathfinding.Poly2Tri.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.Collections.LowLevel.ILSupport">
-     <HintPath>C:\Users\fuyca\Desktop\Projects\TimberCraft\Library\PackageCache\com.unity.collections@1.2.4\Unity.Collections.LowLevel.ILSupport\Unity.Collections.LowLevel.ILSupport.dll</HintPath>
      </Reference>
      <Reference Include="netstandard">
      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.25f1\Editor\Data\NetStandard\ref\2.1.0\netstandard.dll</HintPath>
@@ -804,6 +804,10 @@
       <Project>{bbd360f0-2369-b486-35aa-38cd8cc029d6}</Project>
       <Name>Assembly-CSharp-firstpass.Player</Name>
     </ProjectReference>
+    <ProjectReference Include="BakeryRuntimeAssembly.Player.csproj">
+      <Project>{71ab9ec1-5750-31af-9ace-cec3e83d9219}</Project>
+      <Name>BakeryRuntimeAssembly.Player</Name>
+    </ProjectReference>
     <ProjectReference Include="Unity.RenderPipelines.Universal.Shaders.Player.csproj">
       <Project>{5dfa39ba-2647-839c-c66b-a7ebfa6289b7}</Project>
       <Name>Unity.RenderPipelines.Universal.Shaders.Player</Name>
@@ -863,6 +867,10 @@
     <ProjectReference Include="MoreMountains.Feedbacks.TextMeshPro.Player.csproj">
       <Project>{d2e030c4-d337-ec93-8909-aa40ac615d43}</Project>
       <Name>MoreMountains.Feedbacks.TextMeshPro.Player</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Collections.Player.csproj">
+      <Project>{08b9268d-31ea-64ba-5078-4994ecb073e7}</Project>
+      <Name>Unity.Collections.Player</Name>
     </ProjectReference>
     <ProjectReference Include="Lofelt.NiceVibrations.Demo.Player.csproj">
       <Project>{44ee7ebf-a2e0-71bd-4098-3a12187ee79a}</Project>
@@ -947,14 +955,6 @@
     <ProjectReference Include="Unity.VisualScripting.State.Player.csproj">
       <Project>{ea8a7aa2-c584-f7ea-8cc1-7be2df8494e1}</Project>
       <Name>Unity.VisualScripting.State.Player</Name>
-    </ProjectReference>
-    <ProjectReference Include="BakeryRuntimeAssembly.Player.csproj">
-      <Project>{71ab9ec1-5750-31af-9ace-cec3e83d9219}</Project>
-      <Name>BakeryRuntimeAssembly.Player</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.Collections.Player.csproj">
-      <Project>{08b9268d-31ea-64ba-5078-4994ecb073e7}</Project>
-      <Name>Unity.Collections.Player</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

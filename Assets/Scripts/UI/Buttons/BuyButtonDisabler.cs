@@ -13,14 +13,11 @@ namespace UI.Buttons
         public void Construct(IStaticDataService staticData, IResourcesSelling resourcesSelling)
         {
             _resourcesSelling = resourcesSelling;
-            
-            _resourceUnitsPerCoin = staticData.ResourcesConfig.GetResourceUnitsPerCoin(_resourceType);
         }
         
         protected override bool CanBuy(int newResourceCount)
         {
-            int sellResourceCount = 
-                _resourcesSelling.GetSellResourceCount(_resourceType, _resourceUnitsPerCoin, out _);
+            int sellResourceCount = _resourcesSelling.GetMaxSellResourceCount(_resourceType);
 
             return sellResourceCount != 0;
         }

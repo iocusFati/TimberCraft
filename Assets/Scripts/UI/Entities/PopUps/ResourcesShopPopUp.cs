@@ -14,7 +14,6 @@ namespace UI.Entities.PopUps
     public class ResourcesShopPopUp : Window
     {
         [Title("Resources shop", titleAlignment: TitleAlignments.Centered)]
-        [SerializeField] private Button _sellResourceButton;
         [SerializeField] private ResourceType _resourceType;
         
         [Header("Text")]
@@ -24,16 +23,17 @@ namespace UI.Entities.PopUps
         private IGameResourceStorage _gameResourceStorage;
 
         private int _resourceUnitsPerCoin;
-        private ResourcesSelling _resourcesSelling;
+        
+        private IResourcesSelling _resourcesSelling;
 
         [Inject]
-        public void Construct(IGameResourceStorage gameResourceStorage, IStaticDataService staticData)
+        public void Construct(IGameResourceStorage gameResourceStorage, IStaticDataService staticData,
+            IResourcesSelling resourcesSelling)
         {
             _gameResourceStorage = gameResourceStorage;
+            _resourcesSelling = resourcesSelling;
 
             _resourceUnitsPerCoin = staticData.ResourcesConfig.GetResourceUnitsPerCoin(_resourceType);
-
-            _resourcesSelling = new ResourcesSelling(gameResourceStorage);
 
             SubscribeToResourceCountChange();
         }
@@ -41,24 +41,21 @@ namespace UI.Entities.PopUps
         private void Awake()
         {
             SetNewResourceCount();
-            
-            _sellResourceButton.onClick
-                .AddListener(() =>_resourcesSelling.SellAllPossibleOfType(_resourceType, _resourceUnitsPerCoin));
         }
 
         private void SetNewResourceCount(int newResourceCount)
         {
-            int sellResourceCount = 
-                _resourcesSelling.GetSellResourceCount(_resourceType, _resourceUnitsPerCoin, out int receiveCoins);
-
-            if (sellResourceCount == 0)
-            {
-                sellResourceCount = _resourceUnitsPerCoin;
-                receiveCoins = 1;
-            }
-            
-            _resourceCountText.text = sellResourceCount.ToString();
-            _coinsCountText.text = receiveCoins.ToString();
+            // int sellResourceCount = 
+            //     _resourcesSelling.GetMaxSellResourceCount(_resourceType, out int receiveCoins);
+            //
+            // if (sellResourceCount == 0)
+            // {
+            //     sellResourceCount = _resourceUnitsPerCoin;
+            //     receiveCoins = 1;
+            // }
+            //
+            // _resourceCountText.text = sellResourceCount.ToString();
+            // _coinsCountText.text = receiveCoins.ToString();
         }
         
         private void SetNewResourceCount()

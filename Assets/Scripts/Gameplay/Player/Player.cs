@@ -28,10 +28,10 @@ namespace Gameplay.Player
         private bool _isMoving;
         
         private PlayerMovement _playerMovement;
-        private PlayerResourceShare _resourceShare;
         private CameraSway _cameraSway;
 
         public CinemachineVirtualCamera PlayerCamera { get; private set; }
+        public PlayerResourceShare ResourceShare { get; private set; }
 
         [Inject]
         public void Construct(IInputService inputService,
@@ -44,7 +44,7 @@ namespace Gameplay.Player
             base.Construct(inputService, staticData, cacheService, coroutineRunner, gameResourceStorage);
             
             _playerMovement = new PlayerMovement(_characterMovement, inputService, staticData.PlayerConfig, transform);
-            _resourceShare = new PlayerResourceShare(gameResourceStorage, _resourcesSpawnTransform,
+            ResourceShare = new PlayerResourceShare(gameResourceStorage, _resourcesSpawnTransform,
                 staticData.PlayerConfig, poolService, coroutineRunner);
         }
 
@@ -102,7 +102,7 @@ namespace Gameplay.Player
                 _resourceSourceCache.Get(other.gameObject).StopMining();
         }
 
-        protected override void OnTriggerInteractionStayed(Collider other)
+        protected override async void OnTriggerInteractionStayed(Collider other)
         {
             base.OnTriggerInteractionStayed(other);
             
@@ -111,7 +111,7 @@ namespace Gameplay.Player
                 Building building = _cacheService.Buildings.Get(other.gameObject);
 
                 if (!building.IsBuilt) 
-                    _resourceShare.ShareForConstructionWith(building);
+                    await ResourceShare.ShareResourcesForConstructionWith(building);
             }
         }
 

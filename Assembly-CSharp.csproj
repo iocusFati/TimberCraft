@@ -209,6 +209,7 @@
      <Compile Include="Assets\Scripts\Infrastructure\Services\Input\IInputService.cs" />
      <Folder Include="Assets" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.4\Lib\Editor\PlasticSCM\Localization\mergetool.ja.txt" />
+     <Folder Include="Assets\ZerinLabs_shaderPack_CartoonWater\particleSystems" />
      <Folder Include="Assets\GUI PRO Kit - Simple Casual\Sprite\Component\Button\Button_Custom" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.4\Lib\Editor\PlasticSCM\Localization\images.zh-Hans.txt" />
      <None Include="Library\PackageCache\com.unity.probuilder@5.0.7\Content\Shader\ReferenceUnlit.shader" />
@@ -498,12 +499,14 @@
      <Folder Include="Library\PackageCache\com.unity.textmeshpro@3.0.6\Scripts" />
      <Folder Include="Assets\Scripts\Infrastructure\Factories\BotFactoryFolder" />
      <Folder Include="Assets\MeshBaker\Examples\PrepareObjectsForDynamicBatching" />
+     <Folder Include="Assets\ZerinLabs_shaderPack_CartoonWater\animation" />
      <Folder Include="Library\PackageCache\com.unity.visualscripting@1.8.0\Runtime" />
      <Folder Include="Assets\ZerinLabs_shaderPack_CartoonWater" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.4\Lib\Editor\PlasticSCM\Localization\basecommands.en.txt" />
      <Folder Include="Library\PackageCache\com.unity.modules.vr@1.0.0" />
      <Folder Include="Assets\Resources\Prefabs\Player" />
      <Folder Include="Assets\Scripts\Infrastructure\StaticData\BuildingsData" />
+     <Folder Include="Assets\ZerinLabs_shaderPack_CartoonWater\Scenes" />
      <Folder Include="Library\PackageCache\com.unity.testtools.codecoverage@1.2.3" />
      <Folder Include="Library\PackageCache\com.unity.probuilder@5.0.7\Content\Icons\UVEditor" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.4\Lib\Editor\PlasticSCM\Localization\images.ko.txt" />
@@ -842,6 +845,7 @@
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.4\Lib\Editor\PlasticSCM\Localization\workspaceserver.ja.txt" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.4\Lib\Editor\PlasticSCM\Localization\mergetool.ko.txt" />
      <Folder Include="Assets\Other\_Gloomy_Hyper\Animations" />
+     <Folder Include="Assets\ZerinLabs_shaderPack_CartoonWater\rendering" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.4\Lib\Editor\PlasticSCM\Localization\clientcommon.ko.txt" />
      <Folder Include="Library\PackageCache\com.unity.visualscripting@1.8.0\Editor" />
      <None Include="Library\PackageCache\com.unity.collections@1.2.4\ValidationExceptions.json" />
@@ -1134,11 +1138,11 @@
      <Reference Include="Sirenix.Reflection.Editor">
      <HintPath>C:\Users\fuyca\Desktop\Projects\TimberCraft\Assets\Plugins\Sirenix\Assemblies\Sirenix.Reflection.Editor.dll</HintPath>
      </Reference>
+     <Reference Include="Unity.Collections.LowLevel.ILSupport">
+     <HintPath>C:\Users\fuyca\Desktop\Projects\TimberCraft\Library\PackageCache\com.unity.collections@1.2.4\Unity.Collections.LowLevel.ILSupport\Unity.Collections.LowLevel.ILSupport.dll</HintPath>
+     </Reference>
      <Reference Include="Zenject-usage">
      <HintPath>C:\Users\fuyca\Desktop\Projects\TimberCraft\Assets\Plugins\Zenject\Source\Usage\Zenject-usage.dll</HintPath>
-     </Reference>
-     <Reference Include="Sirenix.OdinInspector.Editor">
-     <HintPath>C:\Users\fuyca\Desktop\Projects\TimberCraft\Assets\Plugins\Sirenix\Assemblies\Sirenix.OdinInspector.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Sirenix.OdinInspector.Attributes">
      <HintPath>C:\Users\fuyca\Desktop\Projects\TimberCraft\Assets\Plugins\Sirenix\Assemblies\Sirenix.OdinInspector.Attributes.dll</HintPath>
@@ -1149,32 +1153,32 @@
      <Reference Include="Sirenix.Serialization.Config">
      <HintPath>C:\Users\fuyca\Desktop\Projects\TimberCraft\Assets\Plugins\Sirenix\Assemblies\Sirenix.Serialization.Config.dll</HintPath>
      </Reference>
-     <Reference Include="Sirenix.Utilities">
-     <HintPath>C:\Users\fuyca\Desktop\Projects\TimberCraft\Assets\Plugins\Sirenix\Assemblies\Sirenix.Utilities.dll</HintPath>
+     <Reference Include="DOTween">
+     <HintPath>C:\Users\fuyca\Desktop\Projects\TimberCraft\Assets\Plugins\Demigiant\DOTween\DOTween.dll</HintPath>
      </Reference>
      <Reference Include="Pathfinding.ClipperLib">
      <HintPath>C:\Users\fuyca\Desktop\Projects\TimberCraft\Assets\AstarPathfindingProject\Plugins\Clipper\Pathfinding.ClipperLib.dll</HintPath>
      </Reference>
-     <Reference Include="Unity.VisualScripting.Antlr3.Runtime">
-     <HintPath>C:\Users\fuyca\Desktop\Projects\TimberCraft\Library\PackageCache\com.unity.visualscripting@1.8.0\Runtime\VisualScripting.Flow\Dependencies\NCalc\Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
-     </Reference>
-     <Reference Include="DOTween">
-     <HintPath>C:\Users\fuyca\Desktop\Projects\TimberCraft\Assets\Plugins\Demigiant\DOTween\DOTween.dll</HintPath>
-     </Reference>
      <Reference Include="ReportGeneratorMerged">
      <HintPath>C:\Users\fuyca\Desktop\Projects\TimberCraft\Library\PackageCache\com.unity.testtools.codecoverage@1.2.3\lib\ReportGenerator\ReportGeneratorMerged.dll</HintPath>
+     </Reference>
+     <Reference Include="Sirenix.Utilities.Editor">
+     <HintPath>C:\Users\fuyca\Desktop\Projects\TimberCraft\Assets\Plugins\Sirenix\Assemblies\Sirenix.Utilities.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Sirenix.OdinInspector.Editor">
+     <HintPath>C:\Users\fuyca\Desktop\Projects\TimberCraft\Assets\Plugins\Sirenix\Assemblies\Sirenix.OdinInspector.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Sirenix.Utilities">
+     <HintPath>C:\Users\fuyca\Desktop\Projects\TimberCraft\Assets\Plugins\Sirenix\Assemblies\Sirenix.Utilities.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.VisualScripting.Antlr3.Runtime">
+     <HintPath>C:\Users\fuyca\Desktop\Projects\TimberCraft\Library\PackageCache\com.unity.visualscripting@1.8.0\Runtime\VisualScripting.Flow\Dependencies\NCalc\Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
      </Reference>
      <Reference Include="Sirenix.Serialization">
      <HintPath>C:\Users\fuyca\Desktop\Projects\TimberCraft\Assets\Plugins\Sirenix\Assemblies\Sirenix.Serialization.dll</HintPath>
      </Reference>
      <Reference Include="Pathfinding.Poly2Tri">
      <HintPath>C:\Users\fuyca\Desktop\Projects\TimberCraft\Assets\AstarPathfindingProject\Plugins\Poly2Tri\Pathfinding.Poly2Tri.dll</HintPath>
-     </Reference>
-     <Reference Include="Sirenix.Utilities.Editor">
-     <HintPath>C:\Users\fuyca\Desktop\Projects\TimberCraft\Assets\Plugins\Sirenix\Assemblies\Sirenix.Utilities.Editor.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.Collections.LowLevel.ILSupport">
-     <HintPath>C:\Users\fuyca\Desktop\Projects\TimberCraft\Library\PackageCache\com.unity.collections@1.2.4\Unity.Collections.LowLevel.ILSupport\Unity.Collections.LowLevel.ILSupport.dll</HintPath>
      </Reference>
      <Reference Include="UnityEditor.iOS.Extensions.Xcode">
      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.25f1\Editor\Data\PlaybackEngines\iOSSupport\UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
@@ -1560,6 +1564,10 @@
       <Project>{83ede911-2dd3-1851-d131-7a424b1911d5}</Project>
       <Name>Assembly-CSharp-firstpass</Name>
     </ProjectReference>
+    <ProjectReference Include="BakeryRuntimeAssembly.csproj">
+      <Project>{59e33a63-480c-6022-6858-83edb01dccc6}</Project>
+      <Name>BakeryRuntimeAssembly</Name>
+    </ProjectReference>
     <ProjectReference Include="Lofelt.NiceVibrations.Editor.csproj">
       <Project>{321d1274-8c47-b399-aae9-044e954b2feb}</Project>
       <Name>Lofelt.NiceVibrations.Editor</Name>
@@ -1568,13 +1576,13 @@
       <Project>{52f36ed4-2372-20c6-0006-ac047aaaa8fb}</Project>
       <Name>MoreMountains.Tools.Editor</Name>
     </ProjectReference>
-    <ProjectReference Include="Unity.VSCode.Editor.csproj">
-      <Project>{0aa9cffc-94c3-7b9e-007a-a2145f3f5b20}</Project>
-      <Name>Unity.VSCode.Editor</Name>
-    </ProjectReference>
     <ProjectReference Include="Unity.RenderPipelines.Universal.Shaders.csproj">
       <Project>{1deee5eb-abbf-a3de-4db0-8f2fe1088ef8}</Project>
       <Name>Unity.RenderPipelines.Universal.Shaders</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.VSCode.Editor.csproj">
+      <Project>{0aa9cffc-94c3-7b9e-007a-a2145f3f5b20}</Project>
+      <Name>Unity.VSCode.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.TextMeshPro.Editor.csproj">
       <Project>{3fd38167-37ec-101c-051b-62370a1c10de}</Project>
@@ -1652,6 +1660,10 @@
       <Project>{b6739f46-78b4-952f-f72d-cac5921dcf74}</Project>
       <Name>UnityEngine.UI</Name>
     </ProjectReference>
+    <ProjectReference Include="BakeryEditorAssembly.csproj">
+      <Project>{d94c296a-719a-da49-2368-73e11214917c}</Project>
+      <Name>BakeryEditorAssembly</Name>
+    </ProjectReference>
     <ProjectReference Include="Sirenix.OdinInspector.Modules.UnityMathematics.csproj">
       <Project>{41621639-f7bc-b827-2aa9-661a3cee90a5}</Project>
       <Name>Sirenix.OdinInspector.Modules.UnityMathematics</Name>
@@ -1719,6 +1731,10 @@
     <ProjectReference Include="AstarPathfindingProjectEditor.csproj">
       <Project>{2a5ac264-893a-1478-e6b3-a41069fd4b6f}</Project>
       <Name>AstarPathfindingProjectEditor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Collections.csproj">
+      <Project>{4027b9a6-9ef4-e530-0b6e-ebd05929feef}</Project>
+      <Name>Unity.Collections</Name>
     </ProjectReference>
     <ProjectReference Include="Lofelt.NiceVibrations.Demo.csproj">
       <Project>{1d82a972-6773-9259-42c4-04e944f07f93}</Project>
@@ -1871,18 +1887,6 @@
     <ProjectReference Include="Unity.VisualScripting.State.csproj">
       <Project>{57a7ca95-e4de-a076-fc65-d53a46d9c2e0}</Project>
       <Name>Unity.VisualScripting.State</Name>
-    </ProjectReference>
-    <ProjectReference Include="BakeryRuntimeAssembly.csproj">
-      <Project>{59e33a63-480c-6022-6858-83edb01dccc6}</Project>
-      <Name>BakeryRuntimeAssembly</Name>
-    </ProjectReference>
-    <ProjectReference Include="BakeryEditorAssembly.csproj">
-      <Project>{d94c296a-719a-da49-2368-73e11214917c}</Project>
-      <Name>BakeryEditorAssembly</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.Collections.csproj">
-      <Project>{4027b9a6-9ef4-e530-0b6e-ebd05929feef}</Project>
-      <Name>Unity.Collections</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -1,5 +1,5 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using System.Threading.Tasks;
 using Gameplay.Buildings;
 using Gameplay.Resource;
 using Gameplay.Resource.ResourceStorage;
@@ -8,6 +8,7 @@ using Infrastructure.Services.Pool;
 using Infrastructure.StaticData.LumberjackData;
 using MoreMountains.Feedbacks;
 using UnityEngine;
+using Task = System.Threading.Tasks.Task;
 
 namespace Gameplay.Player
 {
@@ -45,19 +46,26 @@ namespace Gameplay.Player
             _dropoutsPool = poolService.DropoutsPool;
         }
 
-        public void ShareForConstructionWith(IResourceBuildingReceivable receivable)
+        public async Task ShareResourcesForConstructionWith(IResourceBuildingReceivable receivable) => 
+            await ShareResourcesWith(receivable, true);
+
+        public async Task<bool> ShareResourcesWith(IResourceBuildingReceivable receivable, bool isForConstruction,
+            int? specifiedResourceCount = null)
         {
-            if (!_canShare || receivable.NeededResources <= 0)
-                return;
-            
+            int neededResources = specifiedResourceCount ?? receivable.NeededResources;
             ResourceType resourceType = receivable.ConstructionResourceType;
 
-            if (!TryShareResourceForConstruction(receivable, resourceType))
-                return;
+            if (!_canShare || neededResources <= 0)
+                return false;
+
+            if (!TryShareResource(receivable, neededResources, resourceType, isForConstruction))
+                return false;
             
             AnimateShare(receivable, resourceType);
-            
-            _coroutineRunner.StartCoroutine(WaitForCooldown());
+
+            await WaitForCooldown();
+
+            return true;
         }
 
         private void OnResourceDelivered(DropoutResource resource)
@@ -76,28 +84,29 @@ namespace Gameplay.Player
                 OnResourceDelivered);
         }
 
-        private bool TryShareResourceForConstruction(IResourceBuildingReceivable receivable, ResourceType resourceType)
+        private bool TryShareResource(IResourceBuildingReceivable receivable, int shareQuantity,
+            ResourceType resourceType, bool shouldReceive)
         {
-            int resourceShareQuantity = receivable.NeededResources < _resourcesInOneDropout 
-                ? receivable.NeededResources
+            int resourceShareQuantity = shareQuantity < _resourcesInOneDropout 
+                ? shareQuantity
                 : _resourcesInOneDropout;
 
             if (!_gameResourceStorage.TryGiveResource(resourceType, resourceShareQuantity))
                 return false;
-            
-            receivable.ReceiveResource(resourceShareQuantity);
+
+            if (shouldReceive) 
+                receivable.ReceiveResource(resourceShareQuantity);
 
             return true;
         }
 
-        private IEnumerator WaitForCooldown()
+        private async Task WaitForCooldown()
         {
             _canShare = false;
-            
-            yield return new WaitForSeconds(_cooldown);
+
+            await Task.Delay((int)(_cooldown * 1000));
 
             _canShare = true;
-            Debug.Log(_canShare);
         }
     }
 }
