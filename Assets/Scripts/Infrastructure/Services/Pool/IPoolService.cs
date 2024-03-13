@@ -1,7 +1,5 @@
 ﻿using System.Collections.Generic;
 using Gameplay.Resource;
-using Infrastructure.States;
-using UnityEngine;
 
 namespace Infrastructure.Services.Pool
 {
@@ -12,5 +10,6 @@ namespace Infrastructure.Services.Pool
         ParticlePool StoneHitParticlesPool { get; }
         ParticlePool LeavesParticlesPool { get; }
         ParticlePool OnLandedParticlesPool { get; }
+        void Initialize();
     }
 }

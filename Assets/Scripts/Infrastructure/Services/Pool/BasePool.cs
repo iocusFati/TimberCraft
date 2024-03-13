@@ -36,7 +36,7 @@ namespace Infrastructure.Services.Pool
         {
             for (int i = 0; i < initialSpawnCount; i++)
             {
-                TPoolable pooled = Get();
+                Get();
             }
             
             ReleaseAll();

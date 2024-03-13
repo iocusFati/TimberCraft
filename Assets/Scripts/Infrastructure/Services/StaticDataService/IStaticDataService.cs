@@ -1,5 +1,6 @@
 ﻿using Infrastructure.StaticData.BuildingsData;
 using Infrastructure.StaticData.LumberjackData;
+using Infrastructure.StaticData.PoolData;
 using Infrastructure.StaticData.ResourcesData;
 using Infrastructure.StaticData.uiData;
 
@@ -14,5 +15,6 @@ namespace Infrastructure.Services.StaticDataService
         BuildingsConfig BuildingsConfig { get; }
         MinionHutUpgradeData MinionHutUpgradeData { get; }
         MainHouseUpgradeData MainHouseUpgradeData { get; }
+        PoolConfig PoolConfig { get; }
     }
 }

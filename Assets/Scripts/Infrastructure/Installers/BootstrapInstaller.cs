@@ -96,14 +96,14 @@ namespace Infrastructure.Installers
         
         private void BindPoolService()
         {
-            PoolService poolService = new PoolService(Container.Resolve<IAssets>());
+            PoolService poolService = Container.Instantiate<PoolService>();
             
             Container
                 .Bind<IPoolService>()
                 .FromInstance(poolService)
                 .AsSingle();
             
-            poolService.Initialize();
+            poolService.CreatePools();
         }
 
         private void BindUIHolder(out UIHolder uiHolder)

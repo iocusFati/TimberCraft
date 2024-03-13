@@ -1,6 +1,7 @@
 using Gameplay.Locations;
 using Infrastructure.Factories;
 using Infrastructure.Factories.PlayerFactoryFolder;
+using Infrastructure.Services.Pool;
 using Infrastructure.Services.SaveLoad;
 using Infrastructure.States.Interfaces;
 using UI.Factory;
@@ -14,7 +15,8 @@ namespace Infrastructure.States
         private readonly ISaveLoadService _saveLoadService;
         private readonly IStateMachine _gameStateMachine;
         private readonly SceneLoader _sceneLoader;
-        
+        private IPoolService _poolService;
+
         private readonly PlayerFactory _playerFactory;
         private readonly IUIFactory _uiFactory;
 
@@ -22,14 +24,16 @@ namespace Infrastructure.States
 
         public LoadLevelState(IStateMachine gameStateMachine,
             ISaveLoadService saveLoadService,
-            IFactoriesHolderService factoriesHolder, 
-            IUIFactory uiFactory, 
-            SceneLoader sceneLoader)
+            IFactoriesHolderService factoriesHolder,
+            IUIFactory uiFactory,
+            SceneLoader sceneLoader, 
+            IPoolService poolService)
         {
             _gameStateMachine = gameStateMachine;
             _saveLoadService = saveLoadService;
             _sceneLoader = sceneLoader;
             _uiFactory = uiFactory;
+            _poolService = poolService;
 
             _playerFactory = factoriesHolder.PlayerFactory;
         }
@@ -56,6 +60,7 @@ namespace Infrastructure.States
             MainLocation mainLocation = Object.FindObjectOfType<MainLocation>();
             mainLocation.Initialize();
 
+            _poolService.Initialize();
             _playerFactory.CreatePlayer(mainLocation.PlayerInitialPosition);
             _uiFactory.CreateHUD();
             

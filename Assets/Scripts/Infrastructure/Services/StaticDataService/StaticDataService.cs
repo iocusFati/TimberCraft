@@ -1,5 +1,6 @@
 ﻿using Infrastructure.StaticData.BuildingsData;
 using Infrastructure.StaticData.LumberjackData;
+using Infrastructure.StaticData.PoolData;
 using Infrastructure.StaticData.ResourcesData;
 using Infrastructure.StaticData.uiData;
 using UnityEngine;
@@ -16,6 +17,7 @@ namespace Infrastructure.Services.StaticDataService
         public BuildingsConfig BuildingsConfig { get; private set; }
         public MinionHutUpgradeData MinionHutUpgradeData { get; private set; }
         public MainHouseUpgradeData MainHouseUpgradeData { get; private set; }
+        public PoolConfig PoolConfig { get; set; }
 
 
         public void Initialize()
@@ -27,7 +29,11 @@ namespace Infrastructure.Services.StaticDataService
             InitializeBuildingsConfig();
             InitializeMinionHutUpgradeData();
             InitializeMainHouseUpgradeData();
+            InitializePoolConfig();
         }
+
+        private void InitializePoolConfig() => 
+            PoolConfig = Resources.Load<PoolConfig>(AssetPaths.PoolConfig);
 
         private void InitializePlayerConfig() => 
             PlayerConfig = Resources.Load<PlayerConfig>(AssetPaths.PlayerConfig);
