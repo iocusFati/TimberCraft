@@ -59,7 +59,7 @@ namespace Gameplay.Buildings
         {
             base.Upgrade();
 
-            MinionHutLevelUpgrade previousUpgradeData = GetLevelUpgradeData(_currentLevel - 1);
+            MinionHutLevelUpgrade previousUpgradeData = GetLevelUpgradeData(_currentLevel);
             
             PayForUpgrade(previousUpgradeData.Cost);
             
@@ -80,7 +80,7 @@ namespace Gameplay.Buildings
         {
             MinionHutLevelUpgrade previousUpgradeData = level == 1
                     ? new MinionHutLevelUpgrade()
-                    : GetLevelUpgradeData(level);
+                    : GetLevelUpgradeData(level - 1);
             
             MinionHutLevelUpgrade currentUpgradeData = GetLevelUpgradeData(level);
             

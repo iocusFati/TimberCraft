@@ -47,7 +47,7 @@ namespace UI.Entities.PopUps
         {
             base.SetLevel(level);
             
-            MinionHutLevelUpgrade currentLevelUpgrade = _minionHutUpgradeData.LevelUpgrades[level];
+            MinionHutLevelUpgrade currentLevelUpgrade = GetUpgradeData(level);
 
             _minionsQuantityText.text = currentLevelUpgrade.MinionsQuantity.ToString();
             _lootQuantityText.text = currentLevelUpgrade.LootQuantity.ToString();
@@ -55,7 +55,7 @@ namespace UI.Entities.PopUps
             if (IsTheLastLevel(level)) 
                 return;
             
-            MinionHutLevelUpgrade nextLevelUpgrade = _minionHutUpgradeData.LevelUpgrades[level + 1];
+            MinionHutLevelUpgrade nextLevelUpgrade = GetUpgradeData(level + 1);
             
             int minionsQuantityDifference = 
                 nextLevelUpgrade.MinionsQuantity - currentLevelUpgrade.MinionsQuantity;
@@ -72,6 +72,9 @@ namespace UI.Entities.PopUps
 
             _costText.text = nextLevelUpgrade.Cost.ToString();
         }
+
+        private MinionHutLevelUpgrade GetUpgradeData(int level) => 
+            _minionHutUpgradeData.LevelUpgrades[level - 1];
 
         private bool IsTheLastLevel(int level)
         {
