@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Cinemachine;
+using Cysharp.Threading.Tasks;
 using DG.Tweening;
 using Gameplay.Player;
 using Gameplay.Player.ObstacleFade;
@@ -112,7 +113,7 @@ namespace Gameplay.Resource
             }
         }
 
-        public override async Task<bool> GetDamage(Vector3 hitPoint, Transform hitTransform)
+        public override async UniTask<bool> GetDamage(Vector3 hitPoint, Transform hitTransform)
         {
             _stumpCollider.enabled = true;
 

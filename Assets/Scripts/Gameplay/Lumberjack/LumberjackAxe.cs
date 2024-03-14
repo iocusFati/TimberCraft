@@ -1,11 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
+using Cysharp.Threading.Tasks;
 using Gameplay.Resource;
 using Infrastructure.Services.Cache;
 using Infrastructure.Services.StaticDataService;
 using Infrastructure.StaticData.LumberjackData;
+using MoreMountains.Feedbacks;
 using UnityEngine;
 using Utils;
 using Zenject;
@@ -15,7 +16,7 @@ namespace Gameplay.Lumberjack
     public class LumberjackAxe : MonoBehaviour
     {
         private CacheContainer<ResourceSource> _resourceSourcesCache;
-        
+
         private bool _disableHitCheck = true;
 
         private int _treeMaxDamagesPerSwing;
@@ -68,13 +69,14 @@ namespace Gameplay.Lumberjack
             _collider.enabled = !disable;
         }
 
-        private async Task TryDamageSource(Collider other, ResourceSource resourceSource)
+        private async UniTask TryDamageSource(Collider other, ResourceSource resourceSource)
         {
             if ((_targetResourceType == ResourceType.None ||
                  resourceSource.CanBeMinedByBotWithType(_targetResourceType)) &&
                 !HaveBeenDamagedTooMuchTimes(resourceSource))
             {
                 await resourceSource.GetDamage(hitPoint: other.ClosestPoint(transform.position), hitTransform: transform);
+                
                 _damagedSources.Add(resourceSource.gameObject);
             }
         }

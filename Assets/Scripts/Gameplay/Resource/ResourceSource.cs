@@ -57,7 +57,7 @@ namespace Gameplay.Resource
             SetResourceType();
         }
 
-        public virtual async Task<bool> GetDamage(Vector3 hitPoint, Transform hitTransform)
+        public virtual async UniTask<bool> GetDamage(Vector3 hitPoint, Transform hitTransform)
         {
             await WaitForStageDestroyAsync();
             

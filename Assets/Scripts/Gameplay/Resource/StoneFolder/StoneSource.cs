@@ -55,7 +55,7 @@ namespace Gameplay.Resource.StoneFolder
             RestoreSegments();
         }
 
-        public override async Task<bool> GetDamage(Vector3 hitPoint, Transform hitTransform)
+        public override async UniTask<bool> GetDamage(Vector3 hitPoint, Transform hitTransform)
         {
             _damageFeedback.PlayFeedbacks();
             
