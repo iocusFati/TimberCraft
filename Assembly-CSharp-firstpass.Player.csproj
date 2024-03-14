@@ -969,6 +969,26 @@
       <Project>{ea8a7aa2-c584-f7ea-8cc1-7be2df8494e1}</Project>
       <Name>Unity.VisualScripting.State.Player</Name>
     </ProjectReference>
+    <ProjectReference Include="UniTask.Addressables.Player.csproj">
+      <Project>{c7f5c926-d172-8595-ad9e-756383e88d3c}</Project>
+      <Name>UniTask.Addressables.Player</Name>
+    </ProjectReference>
+    <ProjectReference Include="UniTask.DOTween.Player.csproj">
+      <Project>{4ba6ac55-f93c-32cf-389b-3c2b02090529}</Project>
+      <Name>UniTask.DOTween.Player</Name>
+    </ProjectReference>
+    <ProjectReference Include="UniTask.Player.csproj">
+      <Project>{6ab34727-f48d-f5f7-577d-f8b445ce3a7d}</Project>
+      <Name>UniTask.Player</Name>
+    </ProjectReference>
+    <ProjectReference Include="UniTask.TextMeshPro.Player.csproj">
+      <Project>{f2ac4251-5772-1a65-955e-1d0cc6cb5535}</Project>
+      <Name>UniTask.TextMeshPro.Player</Name>
+    </ProjectReference>
+    <ProjectReference Include="UniTask.Linq.Player.csproj">
+      <Project>{8520ad79-0244-aadd-c3c3-220be88aa9dc}</Project>
+      <Name>UniTask.Linq.Player</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

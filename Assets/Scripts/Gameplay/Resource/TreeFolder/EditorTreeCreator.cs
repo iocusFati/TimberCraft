@@ -24,10 +24,11 @@ namespace Gameplay.Resource
         [Header("Parents")]
         [SerializeField] private Transform _resourceParent;
         [SerializeField] private Transform _treeTipParent;
-
-        [FormerlySerializedAs("_treeTipMaterial")]
+        
         [Header("Materials")]
         [SerializeField] private Material _treeTipDitherMaterial;
+        [SerializeField] private Material _treeTipMaterial;
+
         [SerializeField] private TreeCreateConfig _treeCreateConfig;
 
         [Button]
@@ -70,12 +71,15 @@ namespace Gameplay.Resource
         {
             GameObject treeTip = Instantiate(_treeTipPrefab, _treeTipParent);
             GameObject treeTipDither = Instantiate(_treeTipPrefab, _treeTipParent);
+            MeshRenderer treeTipMeshRenderer = treeTip.GetComponent<MeshRenderer>();
             MeshRenderer treeTipDitherMeshRenderer = treeTipDither.GetComponent<MeshRenderer>();
             Rigidbody treeTipRB = treeTip.GetComponentInParent<Rigidbody>();
 
             _treeTipParent.transform.position = segments[^1].position + new Vector3(0, _distanceBetweenResourceAndTip);
 
             treeTipDither.SetActive(false);
+            
+            treeTipMeshRenderer.material = _treeTipMaterial;
             treeTipDitherMeshRenderer.material = _treeTipDitherMaterial;
 
             treeTipRB.mass = _treeCreateConfig.TreeTipMass;

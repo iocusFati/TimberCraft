@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9f3db8bc2214bee9183b0f933d7bae8, type: 3}
   m_Name: PoolConfig
   m_EditorClassIdentifier: 
-  _particleInitialSpawnNumber: 0
-  _dropoutInitialSpawnNumber: 0
+  _particleInitialSpawnNumber: 4
+  _dropoutInitialSpawnNumber: 15

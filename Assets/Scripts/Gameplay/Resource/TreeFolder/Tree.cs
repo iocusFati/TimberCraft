@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 using Cinemachine;
 using DG.Tweening;
 using Gameplay.Player;
@@ -111,11 +112,11 @@ namespace Gameplay.Resource
             }
         }
 
-        public override void GetDamage(Vector3 hitPoint, Transform hitTransform, out bool resourceSourceDestroyed)
+        public override async Task<bool> GetDamage(Vector3 hitPoint, Transform hitTransform)
         {
             _stumpCollider.enabled = true;
 
-            base.GetDamage(hitPoint, hitTransform, out resourceSourceDestroyed);
+            return await base.GetDamage(hitPoint, hitTransform);
         }
         
         public void SetKinematic(bool kinematic)

@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using Gameplay.Player;
 using Gameplay.Player.Animation;
@@ -9,7 +10,9 @@ using Infrastructure.Services.Cache;
 using Infrastructure.Services.Input;
 using Infrastructure.Services.StaticDataService;
 using MoreMountains.Feedbacks;
+using Sirenix.OdinInspector;
 using UnityEngine;
+using UnityEngine.Serialization;
 using Utils;
 using Zenject;
 
@@ -27,7 +30,11 @@ namespace Gameplay.Lumberjack
         [SerializeField] protected LumberjackAxeEnabler _lumberjackAxeEnabler;
         [SerializeField] protected LumberjackAxe _lumberjackAxe;
         [SerializeField] protected Transform _resourceCollector;
-        [SerializeField] protected MMFloatingTextSpawner _textSpawner;
+        
+        [Header("Text spawners")]
+        [SerializeField] private bool _spawnFloatingText;
+        [SerializeField, ShowIf("_spawnFloatingText")] private MMFloatingTextSpawner _textSpawnerWood;
+        [SerializeField, ShowIf("_spawnFloatingText")] private MMFloatingTextSpawner _textSpawnerStone;
 
         protected LumberjackAnimator _lumberjackAnimator;
 
@@ -35,7 +42,7 @@ namespace Gameplay.Lumberjack
         protected ICacheService _cacheService;
         protected IGameResourceStorage _gameResourceStorage;
         protected CacheContainer<ResourceSource> _resourceSourceCache;
-        
+
         private ResourceSource _currentlyMinedResourceSource;
 
         private readonly HashSet<GameObject> _enteredResources = new();
@@ -144,8 +151,26 @@ namespace Gameplay.Lumberjack
 
         protected void OnDropoutCollected(DropoutResource dropoutResource)
         {
+            if (_spawnFloatingText)
+            {
+                SpawnFloatingText(dropoutResource);
+            }
+        }
+
+        private void SpawnFloatingText(DropoutResource dropoutResource)
+        {
             string text = $"+{dropoutResource.ResourceValue}";
-            _textSpawner.Spawn(text, dropoutResource.transform.position, Vector3.forward);
+            switch (dropoutResource.Type)
+            {
+                case ResourceType.Wood:
+                    _textSpawnerWood.Spawn(text, dropoutResource.transform.position, Vector3.forward);
+                    break;
+                case ResourceType.Stone:
+                    _textSpawnerStone.Spawn(text, dropoutResource.transform.position, Vector3.forward);
+                    break;
+                default:
+                    throw new ArgumentOutOfRangeException();
+            }
         }
 
         private DropoutResource CachedDropout(Component resourceSourceCollider) => 

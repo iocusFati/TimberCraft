@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 using Gameplay.Resource;
 using Infrastructure.Services.Cache;
 using Infrastructure.Services.StaticDataService;
@@ -40,13 +41,13 @@ namespace Gameplay.Lumberjack
             _collider = GetComponent<Collider>();
         }
 
-        private void OnTriggerEnter(Collider other)
+        private async void OnTriggerEnter(Collider other)
         {
             if (!_disableHitCheck && other.CompareTag(Tags.Resource))
             {
                 ResourceSource resourceSource = _resourceSourcesCache.Get(other.gameObject);
 
-                TryDamageSource(other, resourceSource);
+                await TryDamageSource(other, resourceSource);
             }
         }
 
@@ -67,13 +68,13 @@ namespace Gameplay.Lumberjack
             _collider.enabled = !disable;
         }
 
-        private void TryDamageSource(Collider other, ResourceSource resourceSource)
+        private async Task TryDamageSource(Collider other, ResourceSource resourceSource)
         {
             if ((_targetResourceType == ResourceType.None ||
                  resourceSource.CanBeMinedByBotWithType(_targetResourceType)) &&
                 !HaveBeenDamagedTooMuchTimes(resourceSource))
             {
-                resourceSource.GetDamage(hitPoint: other.ClosestPoint(transform.position), transform, out _);
+                await resourceSource.GetDamage(hitPoint: other.ClosestPoint(transform.position), hitTransform: transform);
                 _damagedSources.Add(resourceSource.gameObject);
             }
         }

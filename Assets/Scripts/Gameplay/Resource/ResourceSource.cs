@@ -2,6 +2,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
+using Cysharp.Threading.Tasks;
 using Gameplay.Resource.StoneFolder;
 using Infrastructure.Services.Pool;
 using Infrastructure.Services.StaticDataService;
@@ -31,6 +33,7 @@ namespace Gameplay.Resource
 
         public ResourceSourceState CurrentState { get; private set; } = ResourceSourceState.Untouched;
         public ResourceType Type { get; private set; }
+        protected Transform[] InactiveSegments => _segmentsCopy.Except(_segments).ToArray();
 
         public event Action<ResourceSource> OnResourceMined;
 
@@ -49,29 +52,32 @@ namespace Gameplay.Resource
             ExtractSegmentColliders();
         }
 
-        private void Awake()
+        protected virtual void Awake()
         {
             SetResourceType();
         }
 
-        public virtual void GetDamage(Vector3 hitPoint, Transform hitTransform, out bool resourceSourceDestroyed)
+        public virtual async Task<bool> GetDamage(Vector3 hitPoint, Transform hitTransform)
         {
+            await WaitForStageDestroyAsync();
+            
             PlayHitParticle(hitPoint, hitTransform);
-
             DestroyStage();
-
+            ExtractDropouts();
+            
             if (_segments.Count == 0)
             {
                 OnLastStageDestroyed();
-                resourceSourceDestroyed = true;
+                return true;
             }
             else
             {
-                resourceSourceDestroyed = false;
+                return false;
             }
-
-            ExtractDropouts();
         }
+
+        protected virtual UniTask WaitForStageDestroyAsync() => 
+            UniTask.CompletedTask;
 
         public virtual void StartMining() => 
             CurrentState = ResourceSourceState.BeingMined;

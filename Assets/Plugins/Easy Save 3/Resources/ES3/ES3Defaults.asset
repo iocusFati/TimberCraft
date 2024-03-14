@@ -52,6 +52,11 @@ MonoBehaviour:
     - MoreMountains.Feedbacks.URP
     - MoreMountains.Tools
     - SimpleInput.Runtime
+    - UniTask
+    - UniTask.Addressables
+    - UniTask.DOTween
+    - UniTask.Linq
+    - UniTask.TextMeshPro
     - Zenject
     showAdvancedSettings: 0
   addMgrToSceneAutomatically: 0

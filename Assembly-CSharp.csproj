@@ -51,6 +51,7 @@
      <Compile Include="Assets\MeshBaker\Examples\Scripts\MB_MigrateMaterialsToDifferentPipeline.cs" />
      <Compile Include="Assets\Scripts\Infrastructure\States\StateMachine.cs" />
      <Compile Include="Assets\Scripts\Infrastructure\States\LoadProgressState.cs" />
+     <Compile Include="Assets\Scripts\Infrastructure\StaticData\PoolData\PoolConfig.cs" />
      <Compile Include="Assets\Scripts\Infrastructure\StatesFactory.cs" />
      <Compile Include="Assets\Scripts\Infrastructure\StaticData\BuildingsData\MinionHutUpgradeData.cs" />
      <Compile Include="Assets\Other\KriptoFX\MuzzleFlashes\Scripts\Demo\FPS_MouseLook.cs" />
@@ -207,7 +208,6 @@
      <Compile Include="Assets\Scripts\Infrastructure\Services\Input\MobileInput.cs" />
      <Compile Include="Assets\Scripts\Utils\Constants.cs" />
      <Compile Include="Assets\Scripts\Infrastructure\Services\Input\IInputService.cs" />
-     <Compile Include="Assets\Scripts\Infrastructure\StaticData\PoolData\PoolConfig.cs" />
      <Folder Include="Assets" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.4\Lib\Editor\PlasticSCM\Localization\mergetool.ja.txt" />
      <Folder Include="Assets\ZerinLabs_shaderPack_CartoonWater\particleSystems" />
@@ -275,7 +275,7 @@
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.4\Lib\Editor\PlasticSCM\Localization\cm.es.txt" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.4\Lib\Editor\PlasticSCM\Localization\basecommands.ko.txt" />
      <None Include="Library\PackageCache\com.unity.probuilder@5.0.7\Content\Shader\DiffuseVertexColor.shader" />
-     <Folder Include="Library\PackageCache\com.unity.ide.rider@3.0.21\Rider" />
+     <Folder Include="Library\PackageCache\com.unity.ide.rider@3.0.28\Rider" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.4\Lib\Editor\PlasticSCM\Localization\semantic.zh-Hant.txt" />
      <Folder Include="Assets\Other\JMO Assets\WarFX\Mobile\Materials\Smoke" />
      <Folder Include="Assets\Other\Mesh\Buildings\MinionHut\Phase2" />
@@ -288,6 +288,7 @@
      <Folder Include="Assets\Other\Prefabs" />
      <Folder Include="Library\PackageCache\com.unity.textmeshpro@3.0.6\Editor Resources" />
      <Folder Include="Assets\Other\_Gloomy_Hyper\Script" />
+     <None Include="Library\PackageCache\com.cysharp.unitask@809d23edae\package.json" />
      <Folder Include="Assets\Other\Shaders" />
      <Folder Include="Assets\Other\KriptoFX\MuzzleFlashes\Models\Broadleaf_Desktop 1 Materials\LOD0" />
      <Folder Include="Library\PackageCache\com.unity.probuilder@5.0.7\Content\Icons\Tools\ShapeTool\on" />
@@ -475,7 +476,7 @@
      <Folder Include="Assets\GUI PRO Kit - Simple Casual\Sprite\Component\Slider\Slider_Demo_Dark" />
      <Folder Include="Library\PackageCache\com.unity.probuilder@5.0.7\Content\Resources\Cursors" />
      <Folder Include="Library\PackageCache\com.unity.modules.subsystems@1.0.0" />
-     <None Include="Library\PackageCache\com.unity.ide.rider@3.0.21\package.json" />
+     <None Include="Library\PackageCache\com.unity.ide.rider@3.0.28\package.json" />
      <Folder Include="Assets\GUI PRO Kit - Simple Casual\Sprite\Component\Icon_PictoIcons_(x2)" />
      <Folder Include="Assets\MeshBaker\Examples\CharacterCustomization\Output" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.4\Lib\Editor\PlasticSCM\Localization\i3.zh-Hans.txt" />
@@ -538,6 +539,7 @@
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.4\Lib\Editor\PlasticSCM\Localization\binmergetool.zh-Hant.txt" />
      <Folder Include="Assets\Other\KriptoFX\MuzzleFlashes\Models\Broadleaf_Desktop 1 Materials\LOD2" />
      <Folder Include="Assets\GUI PRO Kit - Simple Casual\Prefabs" />
+     <Folder Include="Library\PackageCache\com.cysharp.unitask@809d23edae" />
      <Folder Include="Assets\GUI PRO Kit - Simple Casual\Prefabs\Prefabs_Component_Frames" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.4\Lib\Editor\PlasticSCM\Localization\plastic-gui.en.txt" />
      <Folder Include="Library\PackageCache\com.unity.shadergraph@12.1.11" />
@@ -669,7 +671,7 @@
      <None Include="Library\PackageCache\com.unity.modules.uielementsnative@1.0.0\package.json" />
      <Folder Include="Assets\Other\Lumber\AnimationClip" />
      <Folder Include="Assets\BakeryLightmaps" />
-     <Folder Include="Library\PackageCache\com.unity.ide.rider@3.0.21" />
+     <Folder Include="Library\PackageCache\com.unity.ide.rider@3.0.28" />
      <None Include="Library\PackageCache\com.unity.modules.unitywebrequestwww@1.0.0\package.json" />
      <Folder Include="Assets\Other\Lumber\Shader" />
      <Folder Include="Assets\GUI PRO Kit - Simple Casual\Sprite\Demo\Demo_Character" />
@@ -1889,6 +1891,26 @@
     <ProjectReference Include="Unity.VisualScripting.State.csproj">
       <Project>{57a7ca95-e4de-a076-fc65-d53a46d9c2e0}</Project>
       <Name>Unity.VisualScripting.State</Name>
+    </ProjectReference>
+    <ProjectReference Include="UniTask.Addressables.csproj">
+      <Project>{42ce38e3-725f-6d63-5f8f-146c2c9cb39e}</Project>
+      <Name>UniTask.Addressables</Name>
+    </ProjectReference>
+    <ProjectReference Include="UniTask.DOTween.csproj">
+      <Project>{f4285073-35ae-e45b-f9ed-1ae66eb2d488}</Project>
+      <Name>UniTask.DOTween</Name>
+    </ProjectReference>
+    <ProjectReference Include="UniTask.csproj">
+      <Project>{24cce9aa-47c2-f3b6-9eac-24ab0beb85d5}</Project>
+      <Name>UniTask</Name>
+    </ProjectReference>
+    <ProjectReference Include="UniTask.TextMeshPro.csproj">
+      <Project>{cdf51015-9db8-81fa-32bc-d4c2ad232c84}</Project>
+      <Name>UniTask.TextMeshPro</Name>
+    </ProjectReference>
+    <ProjectReference Include="UniTask.Linq.csproj">
+      <Project>{72e807b2-1329-e642-a311-ae5353e017ab}</Project>
+      <Name>UniTask.Linq</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
