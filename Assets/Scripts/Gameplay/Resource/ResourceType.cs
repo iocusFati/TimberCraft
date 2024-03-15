@@ -6,6 +6,7 @@
         Wood = 1,
         Stone = 2,
         Gold = 3,
-        Coin = 4
+        Coin = 4,
+        All = 5
     }
 }

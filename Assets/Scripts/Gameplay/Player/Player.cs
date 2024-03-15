@@ -1,4 +1,5 @@
 ﻿using Cinemachine;
+using Cysharp.Threading.Tasks;
 using ECM.Components;
 using Gameplay.Buildings;
 using Gameplay.Lumberjack;
@@ -10,7 +11,6 @@ using Infrastructure.Services.Cache;
 using Infrastructure.Services.Input;
 using Infrastructure.Services.Pool;
 using Infrastructure.Services.StaticDataService;
-using Infrastructure.StaticData.CameraData;
 using UnityEngine;
 using Utils;
 using Zenject;
@@ -45,8 +45,11 @@ namespace Gameplay.Player
             
             _playerMovement = new PlayerMovement(_characterMovement, inputService, staticData.PlayerConfig, transform);
             ResourceShare = new PlayerResourceShare(gameResourceStorage, _resourcesSpawnTransform,
-                staticData.PlayerConfig, poolService, coroutineRunner);
+                staticData.PlayerConfig, poolService);
         }
+
+        private void Awake() => 
+            _cameraSway = GetComponent<CameraSway>();
 
         protected override void Start()
         {
@@ -110,15 +113,20 @@ namespace Gameplay.Player
             {
                 Building building = _cacheService.Buildings.Get(other.gameObject);
 
-                if (!building.IsBuilt) 
+                if (!building.ResourcesEnough) 
                     await ResourceShare.ShareResourcesForConstructionWith(building);
             }
         }
 
+        public override void StartAxeSwing()
+        {
+            base.StartAxeSwing();
+            
+            _cameraSway.Sway();
+        }
+
         protected override void CollectDropout(DropoutResource dropout)
         {
-            base.CollectDropout(dropout);
-            
             dropout.GetCollectedAndReleasedTo(_resourceCollector, OnDropoutCollected);
             _gameResourceStorage.TakeResource(dropout.Type, dropout.ResourceValue);
         }

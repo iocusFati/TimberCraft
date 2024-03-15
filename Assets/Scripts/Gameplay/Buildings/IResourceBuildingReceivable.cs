@@ -9,6 +9,7 @@ namespace Gameplay.Buildings
         ResourceType ConstructionResourceType { get; }
         int NeededResources { get; }
 
-        void ReceiveResource(int resourceQuantity);
+        void ReceiveResource();
+        void PromiseResource(int resourceShareQuantity);
     }
 }

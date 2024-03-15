@@ -5,6 +5,7 @@ using Gameplay.Resource.ResourceStorage;
 using Infrastructure.Factories;
 using Infrastructure.Services.StaticDataService;
 using Infrastructure.StaticData.ResourcesData;
+using UnityEngine;
 
 namespace Gameplay.Resource
 {
@@ -47,7 +48,9 @@ namespace Gameplay.Resource
                 if (!shared) 
                     await Task.Delay(2000);
 
-                SellResource(resourceType, resourceUnitsPerCoin);
+                int additionalResources = GetAdditionalResourcesForSelling(resourceType, resourceUnitsPerCoin);
+
+                SellResource(resourceType, resourceUnitsPerCoin + additionalResources);
             }
         }
 
@@ -57,6 +60,15 @@ namespace Gameplay.Resource
             
             _gameResourceStorage.TryGiveResource(resourceType, sellResourceCount);
             _gameResourceStorage.TakeResource(ResourceType.Coin, coinsReceived);
+        }
+
+        private int GetAdditionalResourcesForSelling(ResourceType resourceType, int resourceUnitsPerCoin)
+        {
+            //for accelerating selling, when there too many resources 
+            int additionalResources = Mathf.FloorToInt(_gameResourceStorage.GetResourceCountOfType(resourceType) *
+                                                       _resourcesConfig.SellResourcesSpeedModifier);
+            additionalResources = Mathf.Max(resourceUnitsPerCoin, additionalResources);
+            return additionalResources;
         }
 
         private int GetResourceUnitsPerCoin(ResourceType type) => 

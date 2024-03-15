@@ -35,6 +35,7 @@ namespace Gameplay.Buildings
         
         public bool IsBuilt => BuildingConstruction.IsBuilt;
         public int NeededResources => BuildingConstruction.CurrentlyNeededResourceQuantity;
+        public bool ResourcesEnough => BuildingConstruction.ResourcesEnough;
 
         public abstract void InteractWithPlayer();
         public abstract void StopInteractingWithPlayer();
@@ -69,16 +70,22 @@ namespace Gameplay.Buildings
             BuildingConstruction.Unlock();
         }
 
-        public void ReceiveResource(int resourceQuantity)
+        public void ReceiveResource()
         {
             if (!BuildingConstruction.IsBuilt)
-                BuildingConstruction.BuildWith(resourceQuantity, OnBuilt);
+                BuildingConstruction.BuildWith(OnBuilt);
+        }
+
+        public void PromiseResource(int resourceQuantity)
+        {
+            BuildingConstruction.PromiseToDeliverResources(resourceQuantity);
         }
 
         [Button]
         public void BuildInstantly()
         {
-            BuildingConstruction.BuildWith(100000, OnBuilt);
+            BuildingConstruction.PromiseToDeliverResources(1000);
+            BuildingConstruction.BuildWith(OnBuilt);
         }
 
         protected virtual void OnBuilt() => 

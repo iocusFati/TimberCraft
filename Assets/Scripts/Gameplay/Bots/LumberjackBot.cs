@@ -5,7 +5,6 @@ using Gameplay.Locations;
 using Gameplay.Lumberjack;
 using Gameplay.Resource;
 using Gameplay.Resource.ResourceStorage;
-using Gameplay.Resource.StoneFolder;
 using Infrastructure;
 using Infrastructure.Services.Cache;
 using Infrastructure.Services.Input;
@@ -15,7 +14,6 @@ using Pathfinding;
 using UnityEngine;
 using Utils;
 using Zenject;
-using Tree = Gameplay.Resource.Tree;
 
 namespace Gameplay.Bots
 {
@@ -56,15 +54,16 @@ namespace Gameplay.Bots
         private void Awake()
         {
             _aiPath = GetComponent<AIPath>();
-
-            _lumberjackAxe.SetTargetResourceType(TargetResourceType);
         }
 
         public void Initialize(ResourceSourcesHolder island, MinionHut hut)
         {
             _botStateMachine = new LumberjackBotStateMachine();
-            TargetResourceType = hut.ConstructionResourceType;
+
             _hut = hut;
+            
+            TargetResourceType = hut.ConstructionResourceType;
+            _lumberjackAxe.SetTargetResourceType(TargetResourceType);
 
             RegisterBotStates(island, _aiPath);
             
@@ -86,8 +85,6 @@ namespace Gameplay.Bots
         
         protected override void CollectDropout(DropoutResource dropout)
         {
-            base.CollectDropout(dropout);
-
             if (BotStorage.IsFull)
             {
                 dropout.GetCollectedAndReleasedTo(_resourceCollector, OnDropoutCollected);

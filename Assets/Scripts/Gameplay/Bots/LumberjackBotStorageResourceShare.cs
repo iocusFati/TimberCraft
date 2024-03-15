@@ -1,4 +1,7 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
+using System.Threading.Tasks;
+using Cysharp.Threading.Tasks;
 using Gameplay.Buildings;
 using Gameplay.Lumberjack;
 using Gameplay.Resource;
@@ -60,8 +63,7 @@ namespace Gameplay.Bots
 
                 _currentAnimationDirection = (PositivityEnum)((int)_currentAnimationDirection * -1);
 
-                resource.PlayShareAnimationTo(
-                    shareWithBuilding.ReceiveResourceTransform.position, _currentAnimationDirection, OnResourceDelivered);
+                AnimateShare(shareWithBuilding, resource, onCompleted: () => resource.Release()).Forget();
 
                 yield return new WaitForSeconds(_timeGapBetweenResourcesDelivery);
             }
@@ -69,9 +71,14 @@ namespace Gameplay.Bots
             _isSharing = false;
         }
 
-        private void OnResourceDelivered(DropoutResource resource)
+        private async UniTaskVoid AnimateShare(IResourceBuildingReceivable shareWithBuilding, 
+            DropoutResource resource,
+            Action onCompleted)
         {
-            resource.Release();
+            await resource.PlayShareAnimationTo(shareWithBuilding.ReceiveResourceTransform.position,
+                _currentAnimationDirection);
+
+            onCompleted.Invoke();
         }
     }
 }

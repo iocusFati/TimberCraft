@@ -15,6 +15,8 @@ namespace Gameplay.Lumberjack
 {
     public class LumberjackAxe : MonoBehaviour
     {
+        [SerializeField] private TrailRenderer _axeTrail;
+        
         private CacheContainer<ResourceSource> _resourceSourcesCache;
 
         private bool _disableHitCheck = true;
@@ -22,7 +24,7 @@ namespace Gameplay.Lumberjack
         private int _treeMaxDamagesPerSwing;
         private int _stoneMaxDamagesPerSwing;
 
-        private ResourceType _targetResourceType = ResourceType.None;
+        private ResourceType _targetResourceType = ResourceType.All;
         private Collider _collider;
 
         private readonly List<GameObject> _damagedSources = new();
@@ -47,7 +49,7 @@ namespace Gameplay.Lumberjack
             if (!_disableHitCheck && other.CompareTag(Tags.Resource))
             {
                 ResourceSource resourceSource = _resourceSourcesCache.Get(other.gameObject);
-
+                
                 await TryDamageSource(other, resourceSource);
             }
         }
@@ -67,11 +69,12 @@ namespace Gameplay.Lumberjack
         {
             _disableHitCheck = disable;
             _collider.enabled = !disable;
+            _axeTrail.emitting = !disable;
         }
 
         private async UniTask TryDamageSource(Collider other, ResourceSource resourceSource)
         {
-            if ((_targetResourceType == ResourceType.None ||
+            if ((_targetResourceType == ResourceType.All ||
                  resourceSource.CanBeMinedByBotWithType(_targetResourceType)) &&
                 !HaveBeenDamagedTooMuchTimes(resourceSource))
             {

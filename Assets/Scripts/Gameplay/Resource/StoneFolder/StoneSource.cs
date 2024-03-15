@@ -29,7 +29,7 @@ namespace Gameplay.Resource.StoneFolder
             _hitParticlePool = poolService.StoneHitParticlesPool;
             _logPool = poolService.DropoutsPool[ResourceType.Stone];
             
-            _restoreSourceAfter = staticData.ResourcesConfig.RestoreTreeAfter;
+            _restoreSourceAfter = staticData.ResourcesConfig.RestoreSourceAfter;
         }
 
         protected override void Awake()

@@ -2,7 +2,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 using Cysharp.Threading.Tasks;
 using Gameplay.Resource.StoneFolder;
 using Infrastructure.Services.Pool;
@@ -86,10 +85,7 @@ namespace Gameplay.Resource
             CurrentState = ResourceSourceState.Untouched;
 
         public bool CanBeMinedByBotWithType(ResourceType botTargetResourceType) =>
-            (Type == ResourceType.Wood 
-                && botTargetResourceType == ResourceType.Wood) 
-            || Type == ResourceType.Stone 
-                && botTargetResourceType == ResourceType.Stone;
+            Type == botTargetResourceType || botTargetResourceType == ResourceType.All;
 
         protected virtual void ExtractDropouts()
         {
@@ -101,6 +97,8 @@ namespace Gameplay.Resource
 
                 dropout.SetTargetPositionFor_MMF_Feedback(transform.position);
                 dropout.FeedbackPlayer.PlayFeedbacks();
+                
+                dropout.SetReleaseTimer().Forget();
             }
         }
 

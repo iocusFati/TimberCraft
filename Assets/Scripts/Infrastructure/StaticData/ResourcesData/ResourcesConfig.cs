@@ -2,7 +2,6 @@
 using Gameplay.Resource;
 using Sirenix.OdinInspector;
 using UnityEngine;
-using UnityEngine.Serialization;
 using Random = UnityEngine.Random;
 
 namespace Infrastructure.StaticData.ResourcesData
@@ -10,12 +9,15 @@ namespace Infrastructure.StaticData.ResourcesData
     [CreateAssetMenu(fileName = "ResourcesConfig", menuName = "StaticData/Configs/ResourcesConfig")]
     public class ResourcesConfig : ScriptableObject
     {
-        [SerializeField] private float _restoreTreeAfter;
+        [SerializeField, FoldoutGroup("General")] private float _restoreSourceAfter;
         
         [SerializeField, FoldoutGroup("Dropout")] private float _dropoutCollectDuration;
         [SerializeField, FoldoutGroup("Dropout")] private int _minDropoutsPerExtract = 3;
         [SerializeField, FoldoutGroup("Dropout")] private int _maxDropoutsPerExtract = 4;
         [SerializeField, FoldoutGroup("Dropout")] private float _collectScaleTo;
+        [SerializeField, FoldoutGroup("Dropout")] private float _dropoutFadeOutTime;
+        [SerializeField, FoldoutGroup("Dropout")] private float _dropoutFadeOutDuration;
+
         
         [SerializeField, FoldoutGroup("Resource share")] private float _deliverResourceDuration;
         [SerializeField, FoldoutGroup("Resource share")] private float _timeGapBetweenResourcesDelivery;
@@ -23,11 +25,11 @@ namespace Infrastructure.StaticData.ResourcesData
         [SerializeField, FoldoutGroup("Resource selling")] private int _woodUnitsPerCoin;
         [SerializeField, FoldoutGroup("Resource selling")] private int _stoneUnitsPerCoin;
         [SerializeField, FoldoutGroup("Resource selling")] private int _goldUnitsPerCoin;
+        [SerializeField, FoldoutGroup("Resource selling")] private float _sellResourcesSpeedModifier;
 
         [SerializeField, FoldoutGroup("Tree")] private float _treeFadeDuration;
         [SerializeField, FoldoutGroup("Tree")] private float _fadeDelay;
         [SerializeField, FoldoutGroup("Tree")] private float _activeImpulseSourceDistance;
-
         
         [Title("On landed particle", TitleAlignment = TitleAlignments.Centered), Space]
         [Title("Speed", HorizontalLine = false)]
@@ -49,7 +51,7 @@ namespace Infrastructure.StaticData.ResourcesData
 
         [SerializeField, FoldoutGroup("Bot")] private float _tryToFindResourceAgainTime;
 
-        public float RestoreTreeAfter => _restoreTreeAfter;
+        public float RestoreSourceAfter => _restoreSourceAfter;
 
         public float DropoutCollectDuration => _dropoutCollectDuration;
 
@@ -84,6 +86,12 @@ namespace Infrastructure.StaticData.ResourcesData
         public float OnLandedVFXTreeTipRadius => _onLandedVFXTreeTipRadius;
 
         public float ActiveImpulseSourceDistance => _activeImpulseSourceDistance;
+
+        public float SellResourcesSpeedModifier => _sellResourcesSpeedModifier;
+
+        public float DropoutFadeOutTime => _dropoutFadeOutTime;
+
+        public float DropoutFadeOutDuration => _dropoutFadeOutDuration;
 
         public int GetResourceUnitsPerCoin(ResourceType resourceType)
         {

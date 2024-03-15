@@ -95,7 +95,7 @@ namespace MoreMountains.Feedbacks
 		public bool AnimateY;
 		[MMFEnumCondition("Mode", (int)Modes.ToDestinationAlongCurve)]
 		[MMFCondition("AnimateY", true)]
-		public float MaxHeight;
+		public float AdditionalHeight;
 		/// the acceleration of the movement
 		[Tooltip("the acceleration of the movement")]
 		[MMFCondition("AnimateY", true)]
@@ -339,7 +339,7 @@ namespace MoreMountains.Feedbacks
 				float height = 0;
 				if (AnimateY)
 				{
-					height = AnimatePositionTweenY.Evaluate(linearTime);
+					height = AnimatePositionTweenY.Evaluate(linearTime) + AdditionalHeight;
 					// height = Mathf.Lerp(0f, MaxHeight, heightTime);
 				}
 

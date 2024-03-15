@@ -1,4 +1,7 @@
 ﻿using System;
+using System.Threading;
+using System.Threading.Tasks;
+using Cysharp.Threading.Tasks;
 using DG.Tweening;
 using Infrastructure.Services.Pool;
 using Infrastructure.Services.StaticDataService;
@@ -43,6 +46,8 @@ namespace Gameplay.Resource
 
         private Release _release;
         private MMF_Position _shareAnimationFeedback;
+        private ResourcesConfig _resourcesConfig;
+        private CancellationTokenSource _fadeOutCancellationSource;
 
         public bool IsCollected { get; private set; }
         public int ResourceValue { get; set; }
@@ -50,18 +55,37 @@ namespace Gameplay.Resource
         [Inject]
         public void Construct(IStaticDataService staticData)
         {
-            ResourcesConfig resourcesConfig = staticData.ResourcesConfig;
+            _resourcesConfig = staticData.ResourcesConfig;
             
-            _collectDuration = resourcesConfig.DropoutCollectDuration;
-            _collectScaleTo = resourcesConfig.CollectScaleTo;
+            _collectDuration = _resourcesConfig.DropoutCollectDuration;
+            _collectScaleTo = _resourcesConfig.CollectScaleTo;
         }
 
         private void Awake()
         {
+            _fadeOutCancellationSource = new CancellationTokenSource();
+            
             _modelInitialScale = _model.localScale;
             _initialScale = transform.localScale;
 
             _shareAnimationFeedback = _shareFeedbackPlayer.GetFeedbackOfType<MMF_Position>(_shareFeedbackPositionName);
+        }
+
+        public async UniTaskVoid SetReleaseTimer() => 
+            await ReleaseSelfIfNotCollectedInTime();
+
+        private async UniTask ReleaseSelfIfNotCollectedInTime()
+        {
+            _fadeOutCancellationSource = new CancellationTokenSource();
+            
+            await UniTask.Delay(TimeSpan.FromSeconds(_resourcesConfig.DropoutFadeOutTime),
+                cancellationToken: _fadeOutCancellationSource.Token);
+
+            await UniTask.WhenAll(
+                transform.DOScale(0, _resourcesConfig.DropoutFadeOutDuration)
+                    .WithCancellation(_fadeOutCancellationSource.Token));
+            
+            Release();
         }
 
         public void SetReleaseDelegate(Release release) => 
@@ -102,15 +126,18 @@ namespace Gameplay.Resource
             transform.DOLocalRotate(Vector3.zero, _collectDuration);
         }
 
-        public void PlayShareAnimationTo(Vector3 target,
-            PositivityEnum animationDirection,
-            Action<DropoutResource> onResourceDelivered)
+        public async UniTask PlayShareAnimationTo(Vector3 target,
+            PositivityEnum animationDirection)
         {
+            CancellationTokenSource tokenSource = new CancellationTokenSource();
+            CancellationToken token = tokenSource.Token;
+
             Destination.position = target;
             _shareAnimationFeedback.AnimationDirectionX = animationDirection;
-            
+
             _shareFeedbackPlayer.PlayFeedbacks();
-            _shareFeedbackPlayer.Events.OnComplete.AddListener(() => onResourceDelivered.Invoke(this));
+            
+            await _shareFeedbackPlayer.Events.OnComplete.OnInvokeAsync(token);
         }
 
         private void GetCollectedTo(Transform to, Action onComplete = null)
@@ -124,6 +151,8 @@ namespace Gameplay.Resource
             FeedbackPlayer.StopFeedbacks();
             IsCollected = true;
             _collider.enabled = false;
+            
+            _fadeOutCancellationSource.Cancel();
         }
 
         private Vector3 FindDropPosition(Vector3 originPosition)

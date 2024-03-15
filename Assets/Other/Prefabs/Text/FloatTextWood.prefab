@@ -320,7 +320,7 @@ MonoBehaviour:
             m_RotationOrder: 4
           Initialized: 1
         AnimateY: 0
-        MaxHeight: 0
+        AdditionalHeight: 0
         AnimatePositionTweenY:
           MMTweenDefinitionType: 1
           MMTweenCurve: 4
@@ -1231,7 +1231,7 @@ MonoBehaviour:
             m_RotationOrder: 4
           Initialized: 0
         AnimateY: 1
-        MaxHeight: 0
+        AdditionalHeight: 0
         AnimatePositionTweenY:
           MMTweenDefinitionType: 1
           MMTweenCurve: 4

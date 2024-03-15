@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using Gameplay.Player;
 using Gameplay.Player.Animation;
 using Gameplay.Resource;
@@ -12,7 +11,6 @@ using Infrastructure.Services.StaticDataService;
 using MoreMountains.Feedbacks;
 using Sirenix.OdinInspector;
 using UnityEngine;
-using UnityEngine.Serialization;
 using Utils;
 using Zenject;
 
@@ -21,7 +19,6 @@ namespace Gameplay.Lumberjack
     public class LumberjackBase : MonoBehaviour
     {
         protected const string PlayerCameraTag = "PlayerCamera";
-        private const string ResourceTag = "Resource";
         private const string ResourceDropoutTag = "ResourceDropout";
 
         [SerializeField] private Animator _animator;
@@ -122,6 +119,11 @@ namespace Gameplay.Lumberjack
             
         }
 
+        public virtual void StartAxeSwing()
+        {
+            
+        }
+
         protected virtual void CollectDropout(DropoutResource dropout)
         {
             
@@ -180,17 +182,6 @@ namespace Gameplay.Lumberjack
         {
             _lumberjackAnimator.StopChopping();
             _lumberjackAxeEnabler.DisableAxeCollider();
-        }
-
-        private void ClearInactiveObjects(HashSet<GameObject> hashSet)
-        {
-            HashSet<GameObject> objectsToRemove = new HashSet<GameObject>();
-
-            foreach (var obj in hashSet.Where(obj => !obj.activeSelf)) 
-                objectsToRemove.Add(obj);
-
-            foreach (GameObject objToRemove in objectsToRemove) 
-                hashSet.Remove(objToRemove);
         }
     }
 }

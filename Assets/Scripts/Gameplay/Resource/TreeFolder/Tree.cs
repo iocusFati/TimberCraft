@@ -73,7 +73,7 @@ namespace Gameplay.Resource
             _logPool = poolService.DropoutsPool[ResourceType.Wood];
             _fadeObscurePlayerObjects = fadeObscurePlayerObjects;
             
-            _restoreSourceAfter = _resourcesConfig.RestoreTreeAfter;
+            _restoreSourceAfter = _resourcesConfig.RestoreSourceAfter;
             _fadeDuration = _resourcesConfig.TreeFadeDuration;
             _fadeDelay = _resourcesConfig.FadeDelay;
             _onLandedVFXSizeModifier = _resourcesConfig.OnLandedVFXSizeModifier;

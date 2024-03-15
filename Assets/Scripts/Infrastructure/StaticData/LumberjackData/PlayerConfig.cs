@@ -10,7 +10,6 @@ namespace Infrastructure.StaticData.LumberjackData
         
         [Header("Resources")]
         [SerializeField] private int _resourcesInOneDropout;
-        [SerializeField] private float _deliverResourceDuration;
         [SerializeField] private float _resourceDeliveryCooldown;
         
         [Header("Axe")]
@@ -19,7 +18,6 @@ namespace Infrastructure.StaticData.LumberjackData
 
         public float MovementSpeed => _movementSpeed;
         public int ResourcesInOneDropout => _resourcesInOneDropout;
-        public float DeliverResourceDuration => _deliverResourceDuration;
         public float ResourceDeliveryCooldown => _resourceDeliveryCooldown;
 
         public int TreeMaxDamagesPerSwing => _treeMaxDamagesPerSwing;

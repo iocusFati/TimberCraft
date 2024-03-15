@@ -16,7 +16,6 @@ namespace Gameplay.Buildings
     public class MinionHut : UpgradableBuilding
     {
         [Header("Minion hut")]
-        public Transform TriggerZoneTransform;
         public Transform SpawnBotsTransform;
 
         private IUIMediator _uiMediator;

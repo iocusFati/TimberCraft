@@ -14,7 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _movementSpeed: 10
   _resourcesInOneDropout: 7
-  _deliverResourceDuration: 1
-  _resourceDeliveryCooldown: 0.2
+  _resourceDeliveryCooldown: 0.14
   _treeMaxDamagesPerSwing: 1
   _stoneMaxDamagesPerSwing: 1

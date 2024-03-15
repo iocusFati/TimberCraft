@@ -21,6 +21,7 @@ namespace Gameplay.Buildings
 
         public bool IsBuilt { get; private set; }
         public int CurrentlyNeededResourceQuantity { get; private set; }
+        public bool ResourcesEnough => CurrentlyNeededResourceQuantity <= 0;
 
 
         public BuildingConstruction(
@@ -76,12 +77,15 @@ namespace Gameplay.Buildings
             OnProgressCouldNotBeLoaded();
         }
 
-        public void BuildWith(int resourceQuantity, Action onBuilt)
+        public void PromiseToDeliverResources(int resourceQuantity)
+        {
+            CurrentlyNeededResourceQuantity -= resourceQuantity;
+        }
+
+        public void BuildWith(Action onBuilt)
         {
             if (_shouldSetCounter && !_buildingResourceCounter.CanScale)
                 return;
-            
-            CurrentlyNeededResourceQuantity -= resourceQuantity;
             
             if (_shouldSetCounter) 
                 _buildingResourceCounter.SetCountWith(CurrentlyNeededResourceQuantity);
@@ -91,7 +95,7 @@ namespace Gameplay.Buildings
                 LevelUp();
             }
 
-            if (CurrentlyNeededResourceQuantity <= 0)
+            if (CurrentlyNeededResourceQuantity <= 0 && _currentStageIndex == _stagesAndResourcesNeeded.Count - 1)
             {
                 FinishConstruction();
                 onBuilt.Invoke();

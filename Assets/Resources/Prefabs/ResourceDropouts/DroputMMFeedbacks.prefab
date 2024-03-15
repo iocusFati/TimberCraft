@@ -206,7 +206,7 @@ MonoBehaviour:
         AnimateRotationTarget: {fileID: 0}
         Mode: 1
         RotationSpace: 1
-        AnimateRotationDuration: 1
+        AnimateRotationDuration: 0.85
         RemapCurveZero: 0
         RemapCurveOne: 70
         AnimateX: 1
@@ -296,7 +296,7 @@ MonoBehaviour:
             m_PostInfinity: 2
             m_RotationOrder: 4
           Initialized: 0
-        AllowAdditivePlays: 0
+        AllowAdditivePlays: 1
         DetermineRotationOnPlay: 0
         ToDestinationSpace: 0
         DestinationAngles: {x: 0, y: 180, z: 0}
@@ -424,7 +424,7 @@ MonoBehaviour:
         Mode: 3
         Space: 0
         RandomizeRemap: 0
-        AnimatePositionDuration: 1.1
+        AnimatePositionDuration: 1.15
         AnimatePositionTween:
           MMTweenDefinitionType: 1
           MMTweenCurve: 4
@@ -506,7 +506,7 @@ MonoBehaviour:
             m_RotationOrder: 4
           Initialized: 0
         AnimateY: 1
-        MaxHeight: 1.4
+        AdditionalHeight: 0
         AnimatePositionTweenY:
           MMTweenDefinitionType: 1
           MMTweenCurve: 4
@@ -524,7 +524,7 @@ MonoBehaviour:
               outWeight: 0.32978678
             - serializedVersion: 3
               time: 0.3916672
-              value: 2.1
+              value: 2.5
               inSlope: 0
               outSlope: 0
               tangentMode: 0
@@ -676,7 +676,7 @@ MonoBehaviour:
         AnimateRotationTarget: {fileID: 0}
         Mode: 2
         RotationSpace: 0
-        AnimateRotationDuration: 0.3
+        AnimateRotationDuration: 0.35
         RemapCurveZero: 0
         RemapCurveOne: 360
         AnimateX: 1
@@ -766,7 +766,7 @@ MonoBehaviour:
             m_PostInfinity: 2
             m_RotationOrder: 4
           Initialized: 0
-        AllowAdditivePlays: 0
+        AllowAdditivePlays: 1
         DetermineRotationOnPlay: 1
         ToDestinationSpace: 0
         DestinationAngles: {x: 0, y: 0, z: 0}
@@ -1192,7 +1192,7 @@ MonoBehaviour:
         RemapRangeFalloff: {x: 0, y: 1}
         Owner: {fileID: 5870961109831585524}
         DebugActive: 0
-        PauseDuration: 0.8
+        PauseDuration: 0.85
         RandomizePauseDuration: 0
         MinPauseDuration: 1
         MaxPauseDuration: 3
@@ -1215,7 +1215,7 @@ MonoBehaviour:
           TimescaleMode: 0
           ExcludeFromHoldingPauses: 0
           ContributeToTotalDuration: 1
-          InitialDelay: 0.6
+          InitialDelay: 0.75
           CooldownDuration: 0
           InterruptsOnStop: 1
           NumberOfRepeats: 0
@@ -1346,7 +1346,7 @@ MonoBehaviour:
   AutoPlayOnEnable: 0
   ForceTimescaleMode: 0
   ForcedTimescaleMode: 1
-  DurationMultiplier: 0.8
+  DurationMultiplier: 1
   RandomizeDuration: 0
   RandomDurationMultiplier: {x: 0.5, y: 1.5}
   DisplayFullDurationDetails: 0
@@ -1493,7 +1493,7 @@ MonoBehaviour:
         AnimateRotationTarget: {fileID: 0}
         Mode: 1
         RotationSpace: 1
-        AnimateRotationDuration: 1
+        AnimateRotationDuration: 0.6
         RemapCurveZero: 0
         RemapCurveOne: 60
         AnimateX: 1
@@ -1711,7 +1711,7 @@ MonoBehaviour:
         Mode: 3
         Space: 0
         RandomizeRemap: 0
-        AnimatePositionDuration: 0.8
+        AnimatePositionDuration: 0.6
         AnimatePositionTween:
           MMTweenDefinitionType: 1
           MMTweenCurve: 4
@@ -1784,7 +1784,7 @@ MonoBehaviour:
             m_RotationOrder: 4
           Initialized: 0
         AnimateY: 1
-        MaxHeight: 1.4
+        AdditionalHeight: 0
         AnimatePositionTweenY:
           MMTweenDefinitionType: 1
           MMTweenCurve: 4

@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4586280528437201}
   - component: {fileID: -4040889225786598761}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: StoneBlock
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -51,8 +51,8 @@ MonoBehaviour:
   FeedbackPlayer: {fileID: 7688321296116131234}
   _shareFeedbackPlayer: {fileID: 2503259574643987684}
   _shareFeedbackPositionName: ReachTargetPosition
-  _minRandomizeDropOffset: 0.45
-  _maxRandomizeDropOffset: 0.6
+  _minRandomizeDropOffset: 1.8
+  _maxRandomizeDropOffset: 2
   _dropToHeight: 0.3
   _baseDistanceToTargetPosition: 2
   Destination: {fileID: 8087018489029648283}
@@ -152,7 +152,7 @@ BoxCollider:
   m_GameObject: {fileID: 1290352081532163}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 99.99998, y: 99.99998, z: 99.99997}
   m_Center: {x: 0, y: 0, z: 0}
@@ -166,7 +166,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7850890752547196292}
   - component: {fileID: 6629163407978217429}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: DropOutFeedback
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -662,7 +662,7 @@ MonoBehaviour:
             m_RotationOrder: 4
           Initialized: 0
         AnimateY: 1
-        MaxHeight: 1.4
+        AdditionalHeight: 0
         AnimatePositionTweenY:
           MMTweenDefinitionType: 1
           MMTweenCurve: 4
@@ -1475,7 +1475,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8087018489029648283}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Destination
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1506,7 +1506,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8087018489725368000}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: MMFeedbacks
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1536,6 +1536,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4586280528437201}
     m_Modifications:
+    - target: {fileID: 117535991866359550, guid: d816c74316bb4d74f99759d6d6b48b63, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1834902577091166128, guid: d816c74316bb4d74f99759d6d6b48b63, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 1834902577091166130, guid: d816c74316bb4d74f99759d6d6b48b63, type: 3}
       propertyPath: managedReferences[7720866926617690112].AnimateRotationTarget
       value: 
@@ -1596,9 +1604,17 @@ PrefabInstance:
       propertyPath: managedReferences[7720866453238841344].PlayEvents.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: set_enabled
       objectReference: {fileID: 0}
+    - target: {fileID: 5870961109831585524, guid: d816c74316bb4d74f99759d6d6b48b63, type: 3}
+      propertyPath: managedReferences[7720866453238841344].PlayEvents.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: UnityEngine.Collider, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 8844085060042917856, guid: d816c74316bb4d74f99759d6d6b48b63, type: 3}
       propertyPath: m_Name
       value: DroputMMFeedbacks
+      objectReference: {fileID: 0}
+    - target: {fileID: 8844085060042917856, guid: d816c74316bb4d74f99759d6d6b48b63, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 8844085060042917857, guid: d816c74316bb4d74f99759d6d6b48b63, type: 3}
       propertyPath: m_RootOrder

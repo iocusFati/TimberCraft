@@ -297,7 +297,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7190668251471397322}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Destination
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -329,7 +329,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1322499907129141886}
   - component: {fileID: 7532798474572112577}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Log
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -369,8 +369,8 @@ MonoBehaviour:
   FeedbackPlayer: {fileID: 5192432849232208260}
   _shareFeedbackPlayer: {fileID: 1809617090}
   _shareFeedbackPositionName: ReachTargetPosition
-  _minRandomizeDropOffset: 1
-  _maxRandomizeDropOffset: 1.5
+  _minRandomizeDropOffset: 1.8
+  _maxRandomizeDropOffset: 2
   _dropToHeight: 0.3
   _baseDistanceToTargetPosition: 2
   Destination: {fileID: 7190668251471397322}
@@ -384,6 +384,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1322499907129141886}
     m_Modifications:
+    - target: {fileID: 117535991866359550, guid: d816c74316bb4d74f99759d6d6b48b63, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1834902577091166128, guid: d816c74316bb4d74f99759d6d6b48b63, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 1834902577091166130, guid: d816c74316bb4d74f99759d6d6b48b63, type: 3}
       propertyPath: managedReferences[7720866926617690112].AnimateRotationTarget
       value: 
@@ -396,6 +404,18 @@ PrefabInstance:
       propertyPath: managedReferences[7720866926617690113].DestinationPositionTransform
       value: 
       objectReference: {fileID: 7190668251471397322}
+    - target: {fileID: 5870961109831585524, guid: d816c74316bb4d74f99759d6d6b48b63, type: 3}
+      propertyPath: FeedbacksList.Array.data[0]
+      value: 882436860760555538
+      objectReference: {fileID: 0}
+    - target: {fileID: 5870961109831585524, guid: d816c74316bb4d74f99759d6d6b48b63, type: 3}
+      propertyPath: FeedbacksList.Array.data[1]
+      value: 7720866429926899712
+      objectReference: {fileID: 0}
+    - target: {fileID: 5870961109831585524, guid: d816c74316bb4d74f99759d6d6b48b63, type: 3}
+      propertyPath: managedReferences[882436860760555538].AllowAdditivePlays
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5870961109831585524, guid: d816c74316bb4d74f99759d6d6b48b63, type: 3}
       propertyPath: managedReferences[882436860760555538].AnimateRotationTarget
       value: 
@@ -417,12 +437,32 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 7190668251471397322}
     - target: {fileID: 5870961109831585524, guid: d816c74316bb4d74f99759d6d6b48b63, type: 3}
+      propertyPath: managedReferences[7720866453238841344].PlayEvents.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5870961109831585524, guid: d816c74316bb4d74f99759d6d6b48b63, type: 3}
       propertyPath: managedReferences[7720866453238841344].PlayEvents.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 6084266664511514431}
+    - target: {fileID: 5870961109831585524, guid: d816c74316bb4d74f99759d6d6b48b63, type: 3}
+      propertyPath: managedReferences[7720866453238841344].PlayEvents.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: set_enabled
+      objectReference: {fileID: 0}
+    - target: {fileID: 5870961109831585524, guid: d816c74316bb4d74f99759d6d6b48b63, type: 3}
+      propertyPath: managedReferences[7720866453238841344].PlayEvents.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: UnityEngine.Collider, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 5870961109831585524, guid: d816c74316bb4d74f99759d6d6b48b63, type: 3}
+      propertyPath: managedReferences[7720866453238841344].PlayEvents.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 8844085060042917856, guid: d816c74316bb4d74f99759d6d6b48b63, type: 3}
       propertyPath: m_Name
       value: DroputMMFeedbacks
+      objectReference: {fileID: 0}
+    - target: {fileID: 8844085060042917856, guid: d816c74316bb4d74f99759d6d6b48b63, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 8844085060042917857, guid: d816c74316bb4d74f99759d6d6b48b63, type: 3}
       propertyPath: m_RootOrder

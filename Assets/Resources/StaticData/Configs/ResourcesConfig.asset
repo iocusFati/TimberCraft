@@ -12,16 +12,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a37cfc16414c45288f184450489fc7d5, type: 3}
   m_Name: ResourcesConfig
   m_EditorClassIdentifier: 
-  _restoreTreeAfter: 3
-  _dropoutCollectDuration: 0.4
-  _minDropoutsPerExtract: 3
-  _maxDropoutsPerExtract: 4
+  _restoreSourceAfter: 7
+  _dropoutCollectDuration: 0.2
+  _minDropoutsPerExtract: 2
+  _maxDropoutsPerExtract: 3
   _collectScaleTo: 0.1
+  _dropoutFadeOutTime: 5
+  _dropoutFadeOutDuration: 1
   _deliverResourceDuration: 0.3
   _timeGapBetweenResourcesDelivery: 0.1
   _woodUnitsPerCoin: 7
   _stoneUnitsPerCoin: 5
   _goldUnitsPerCoin: 3
+  _sellResourcesSpeedModifier: 0.04
   _treeFadeDuration: 1.7
   _fadeDelay: 1
   _activeImpulseSourceDistance: 3

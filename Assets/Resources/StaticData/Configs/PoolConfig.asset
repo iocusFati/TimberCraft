@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: PoolConfig
   m_EditorClassIdentifier: 
   _particleInitialSpawnNumber: 4
-  _dropoutInitialSpawnNumber: 15
+  _dropoutInitialSpawnNumber: 25
