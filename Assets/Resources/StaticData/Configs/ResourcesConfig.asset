@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: ResourcesConfig
   m_EditorClassIdentifier: 
   _restoreSourceAfter: 7
-  _dropoutCollectDuration: 0.2
+  _dropoutCollectDuration: 0.3
   _minDropoutsPerExtract: 2
   _maxDropoutsPerExtract: 3
   _collectScaleTo: 0.1

@@ -162,8 +162,10 @@ namespace Gameplay.Resource
 
             float dropPositionX = Random.Range(0, distanceToDropPosition);
             float dropPositionZ = distanceToDropPosition - dropPositionX;
+
+            int randomSign = Random.Range(0, 2) * 2 - 1; ;
             
-            return originPosition + new Vector3(dropPositionX, _dropToHeight, dropPositionZ);
+            return originPosition + new Vector3(dropPositionX * randomSign, _dropToHeight, dropPositionZ);
         }
     }
 }
