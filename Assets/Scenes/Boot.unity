@@ -237,7 +237,7 @@ MonoBehaviour:
   openPrefabs: 0
   prefabs: []
   idRef:
-    _Keys: 8980c40fa658b95645b03f939ec99754f03def8d1009bc0f61c7c2a2fe15967fcebd9422aedb2e49359d94b6ce9d2f47078e28311695bb6c3cd3addf9517582fe7409ea4a246fd140fa65973740640000af55773c2376938605dce9e7b3c9f2d02275e82890ddf4c0a3b307101745a3f6febdd90c4b70842f8c43ccea920116aab1fa9c44c82873d14aee88b6ecbf251d766a27ae77b8b00c80d7db036b1027db0681d51eb060346d05e69c70995453eb721b898e92bd8158922a72ecb47873ab166db05ada06623
+    _Keys: 8980c40fa658b95645b03f939ec99754f03def8d1009bc0f61c7c2a2fe15967fcebd9422aedb2e49359d94b6ce9d2f47078e28311695bb6c3cd3addf9517582fe7409ea4a246fd140fa65973740640000af55773c2376938605dce9e7b3c9f2d02275e82890ddf4c0a3b307101745a3f6febdd90c4b70842f8c43ccea920116aab1fa9c44c82873d14aee88b6ecbf251d766a27ae77b8b00c80d7db036b1027db0681d51eb060346d05e69c70995453eb721b898e92bd8158922a72ecb47873ab166db05ada066230a83d021175f85619cb7dc22e788c927
     _Values:
     - {fileID: 963194225}
     - {fileID: 963194226}
@@ -264,6 +264,8 @@ MonoBehaviour:
     - {fileID: 150242359}
     - {fileID: 150242361}
     - {fileID: 150242360}
+    - {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
+    - {fileID: 705507996}
 --- !u!4 &345341117
 Transform:
   m_ObjectHideFlags: 0
@@ -308,6 +310,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d660f4dbb9934c3ea327901d76b9d2d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _resolutionFactor: 0
 --- !u!4 &625244943
 Transform:
   m_ObjectHideFlags: 0
@@ -333,6 +336,7 @@ GameObject:
   m_Component:
   - component: {fileID: 705507995}
   - component: {fileID: 705507994}
+  - component: {fileID: 705507996}
   m_Layer: 0
   m_Name: Directional Light
   m_TagString: Untagged
@@ -417,6 +421,26 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!114 &705507996
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 705507993}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Version: 1
+  m_UsePipelineSettings: 1
+  m_AdditionalLightsShadowResolutionTier: 2
+  m_LightLayerMask: 1
+  m_CustomShadowLayers: 0
+  m_ShadowLayerMask: 1
+  m_LightCookieSize: {x: 1, y: 1}
+  m_LightCookieOffset: {x: 0, y: 0}
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
