@@ -41,41 +41,41 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Library\PackageCache\com.unity.postprocessing@3.4.0\PostProcessing\Editor\PostProcessDebugEditor.cs" />
+    <Compile Include="Library\PackageCache\com.unity.postprocessing@3.4.0\PostProcessing\Editor\Utils\GlobalSettings.cs" />
     <Compile Include="Library\PackageCache\com.unity.postprocessing@3.4.0\PostProcessing\Editor\Effects\MotionBlurEditor.cs" />
     <Compile Include="Library\PackageCache\com.unity.postprocessing@3.4.0\PostProcessing\Editor\Effects\ChromaticAberrationEditor.cs" />
-    <Compile Include="Library\PackageCache\com.unity.postprocessing@3.4.0\PostProcessing\Editor\Tools\ProfileFactory.cs" />
-    <Compile Include="Library\PackageCache\com.unity.postprocessing@3.4.0\PostProcessing\Editor\Decorators\AttributeDecorator.cs" />
-    <Compile Include="Library\PackageCache\com.unity.postprocessing@3.4.0\PostProcessing\Editor\Effects\BloomEditor.cs" />
-    <Compile Include="Library\PackageCache\com.unity.postprocessing@3.4.0\PostProcessing\Editor\Tools\VolumeFactory.cs" />
-    <Compile Include="Library\PackageCache\com.unity.postprocessing@3.4.0\PostProcessing\Editor\PostProcessLayerEditor.cs" />
-    <Compile Include="Library\PackageCache\com.unity.postprocessing@3.4.0\PostProcessing\Editor\Effects\AmbientOcclusionEditor.cs" />
     <Compile Include="Library\PackageCache\com.unity.postprocessing@3.4.0\PostProcessing\Editor\Tools\CubeLutAssetFactory.cs" />
-    <Compile Include="Library\PackageCache\com.unity.postprocessing@3.4.0\PostProcessing\Editor\PostProcessProfileEditor.cs" />
-    <Compile Include="Library\PackageCache\com.unity.postprocessing@3.4.0\PostProcessing\Editor\PostProcessDebugEditor.cs" />
-    <Compile Include="Library\PackageCache\com.unity.postprocessing@3.4.0\PostProcessing\Editor\Attributes\PostProcessEditorAttribute.cs" />
-    <Compile Include="Library\PackageCache\com.unity.postprocessing@3.4.0\PostProcessing\Editor\Effects\AutoExposureEditor.cs" />
+    <Compile Include="Library\PackageCache\com.unity.postprocessing@3.4.0\PostProcessing\Editor\PostProcessEffectEditor.cs" />
+    <Compile Include="Library\PackageCache\com.unity.postprocessing@3.4.0\PostProcessing\Editor\Effects\DefaultPostProcessEffectEditor.cs" />
+    <Compile Include="Library\PackageCache\com.unity.postprocessing@3.4.0\PostProcessing\Editor\Tools\VolumeFactory.cs" />
     <Compile Include="Library\PackageCache\com.unity.postprocessing@3.4.0\PostProcessing\Editor\Utils\EditorUtilities.cs" />
-    <Compile Include="Library\PackageCache\com.unity.postprocessing@3.4.0\PostProcessing\Editor\PostProcessVolumeEditor.cs" />
-    <Compile Include="Library\PackageCache\com.unity.postprocessing@3.4.0\PostProcessing\Editor\Effects\ScreenSpaceReflectionsEditor.cs" />
-    <Compile Include="Library\PackageCache\com.unity.postprocessing@3.4.0\PostProcessing\Editor\Utils\GlobalSettings.cs" />
-    <Compile Include="Library\PackageCache\com.unity.postprocessing@3.4.0\PostProcessing\Editor\Effects\ColorGradingEditor.cs" />
     <Compile Include="Library\PackageCache\com.unity.postprocessing@3.4.0\PostProcessing\Editor\Utils\CurveEditor.cs" />
+    <Compile Include="Library\PackageCache\com.unity.postprocessing@3.4.0\PostProcessing\Editor\Tools\DefineSetter.cs" />
+    <Compile Include="Library\PackageCache\com.unity.postprocessing@3.4.0\PostProcessing\Editor\Tools\ResourceAssetFactory.cs" />
+    <Compile Include="Library\PackageCache\com.unity.postprocessing@3.4.0\PostProcessing\Editor\Attributes\DecoratorAttribute.cs" />
+    <Compile Include="Library\PackageCache\com.unity.postprocessing@3.4.0\PostProcessing\Editor\PostProcessVolumeEditor.cs" />
+    <Compile Include="Library\PackageCache\com.unity.postprocessing@3.4.0\PostProcessing\Editor\Tools\CubeLutAssetImporter.cs" />
+    <Compile Include="Library\PackageCache\com.unity.postprocessing@3.4.0\PostProcessing\Editor\Effects\ScreenSpaceReflectionsEditor.cs" />
+    <Compile Include="Library\PackageCache\com.unity.postprocessing@3.4.0\PostProcessing\Editor\Decorators\TrackballDecorator.cs" />
+    <Compile Include="Library\PackageCache\com.unity.postprocessing@3.4.0\PostProcessing\Editor\Effects\AmbientOcclusionEditor.cs" />
+    <Compile Include="Library\PackageCache\com.unity.postprocessing@3.4.0\PostProcessing\Editor\BaseEditor.cs" />
+    <Compile Include="Library\PackageCache\com.unity.postprocessing@3.4.0\PostProcessing\Editor\Tools\ProfileFactory.cs" />
+    <Compile Include="Library\PackageCache\com.unity.postprocessing@3.4.0\PostProcessing\Editor\Effects\ColorGradingEditor.cs" />
+    <Compile Include="Library\PackageCache\com.unity.postprocessing@3.4.0\PostProcessing\Editor\Effects\AutoExposureEditor.cs" />
     <Compile Include="Library\PackageCache\com.unity.postprocessing@3.4.0\PostProcessing\Editor\Utils\SerializedParameterOverride.cs" />
     <Compile Include="Library\PackageCache\com.unity.postprocessing@3.4.0\PostProcessing\Editor\PostProcessEffectBaseEditor.cs" />
-    <Compile Include="Library\PackageCache\com.unity.postprocessing@3.4.0\PostProcessing\Editor\EffectListEditor.cs" />
-    <Compile Include="Library\PackageCache\com.unity.postprocessing@3.4.0\PostProcessing\Editor\Utils\Styling.cs" />
-    <Compile Include="Library\PackageCache\com.unity.postprocessing@3.4.0\PostProcessing\Editor\Tools\DefineSetter.cs" />
+    <Compile Include="Library\PackageCache\com.unity.postprocessing@3.4.0\PostProcessing\Editor\Effects\BloomEditor.cs" />
     <Compile Include="Library\PackageCache\com.unity.postprocessing@3.4.0\PostProcessing\Editor\Decorators\Decorators.cs" />
+    <Compile Include="Library\PackageCache\com.unity.postprocessing@3.4.0\PostProcessing\Editor\PostProcessLayerEditor.cs" />
+    <Compile Include="Library\PackageCache\com.unity.postprocessing@3.4.0\PostProcessing\Editor\Attributes\PostProcessEditorAttribute.cs" />
+    <Compile Include="Library\PackageCache\com.unity.postprocessing@3.4.0\PostProcessing\Editor\Effects\LensDistortionEditor.cs" />
+    <Compile Include="Library\PackageCache\com.unity.postprocessing@3.4.0\PostProcessing\Editor\Decorators\AttributeDecorator.cs" />
+    <Compile Include="Library\PackageCache\com.unity.postprocessing@3.4.0\PostProcessing\Editor\PostProcessProfileEditor.cs" />
     <Compile Include="Library\PackageCache\com.unity.postprocessing@3.4.0\PostProcessing\Editor\Effects\DepthOfFieldEditor.cs" />
     <Compile Include="Library\PackageCache\com.unity.postprocessing@3.4.0\PostProcessing\Editor\Effects\VignetteEditor.cs" />
-    <Compile Include="Library\PackageCache\com.unity.postprocessing@3.4.0\PostProcessing\Editor\Effects\LensDistortionEditor.cs" />
-    <Compile Include="Library\PackageCache\com.unity.postprocessing@3.4.0\PostProcessing\Editor\Decorators\TrackballDecorator.cs" />
-    <Compile Include="Library\PackageCache\com.unity.postprocessing@3.4.0\PostProcessing\Editor\PostProcessEffectEditor.cs" />
-    <Compile Include="Library\PackageCache\com.unity.postprocessing@3.4.0\PostProcessing\Editor\BaseEditor.cs" />
-    <Compile Include="Library\PackageCache\com.unity.postprocessing@3.4.0\PostProcessing\Editor\Attributes\DecoratorAttribute.cs" />
-    <Compile Include="Library\PackageCache\com.unity.postprocessing@3.4.0\PostProcessing\Editor\Tools\CubeLutAssetImporter.cs" />
-    <Compile Include="Library\PackageCache\com.unity.postprocessing@3.4.0\PostProcessing\Editor\Effects\DefaultPostProcessEffectEditor.cs" />
-    <Compile Include="Library\PackageCache\com.unity.postprocessing@3.4.0\PostProcessing\Editor\Tools\ResourceAssetFactory.cs" />
+    <Compile Include="Library\PackageCache\com.unity.postprocessing@3.4.0\PostProcessing\Editor\EffectListEditor.cs" />
+    <Compile Include="Library\PackageCache\com.unity.postprocessing@3.4.0\PostProcessing\Editor\Utils\Styling.cs" />
     <None Include="Library\PackageCache\com.unity.postprocessing@3.4.0\PostProcessing\Editor\Unity.Postprocessing.Editor.asmdef" />
     <Reference Include="UnityEngine">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.25f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
@@ -401,11 +401,11 @@
     <Reference Include="Unity.VisualScripting.Antlr3.Runtime">
       <HintPath>C:\Users\fuyca\Desktop\Projects\TimberCraft\Library\PackageCache\com.unity.visualscripting@1.8.0\Runtime\VisualScripting.Flow\Dependencies\NCalc\Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
     </Reference>
-    <Reference Include="Sirenix.Serialization">
-      <HintPath>C:\Users\fuyca\Desktop\Projects\TimberCraft\Assets\Plugins\Sirenix\Assemblies\Sirenix.Serialization.dll</HintPath>
-    </Reference>
     <Reference Include="Pathfinding.Poly2Tri">
       <HintPath>C:\Users\fuyca\Desktop\Projects\TimberCraft\Assets\AstarPathfindingProject\Plugins\Poly2Tri\Pathfinding.Poly2Tri.dll</HintPath>
+    </Reference>
+    <Reference Include="Sirenix.Serialization">
+      <HintPath>C:\Users\fuyca\Desktop\Projects\TimberCraft\Assets\Plugins\Sirenix\Assemblies\Sirenix.Serialization.dll</HintPath>
     </Reference>
     <Reference Include="nunit.framework">
       <HintPath>C:\Users\fuyca\Desktop\Projects\TimberCraft\Library\PackageCache\com.unity.ext.nunit@1.0.6\net35\unity-custom\nunit.framework.dll</HintPath>

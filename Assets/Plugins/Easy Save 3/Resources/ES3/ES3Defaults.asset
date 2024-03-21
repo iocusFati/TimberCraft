@@ -52,6 +52,8 @@ MonoBehaviour:
     - MoreMountains.Feedbacks.URP
     - MoreMountains.Tools
     - SimpleInput.Runtime
+    - UniRx
+    - UniRx.Examples
     - UniTask
     - UniTask.Addressables
     - UniTask.DOTween

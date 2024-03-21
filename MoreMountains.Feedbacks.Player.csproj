@@ -100,8 +100,8 @@
     <Compile Include="Assets\Plugins\Feel\MMFeedbacks\MMFeedbacks\Feedbacks\Legacy\MMFeedbackSetActive.cs" />
     <Compile Include="Assets\Plugins\Feel\MMFeedbacks\MMFeedbacks\Feedbacks\MMF_HoldingPause.cs" />
     <Compile Include="Assets\Plugins\Feel\MMFeedbacks\MMFeedbacks\Feedbacks\Legacy\MMFeedbackAnimation.cs" />
-    <Compile Include="Assets\Plugins\Feel\MMFeedbacks\MMFeedbacks\Feedbacks\Legacy\MMFeedbackAudioSourcePitch.cs" />
     <Compile Include="Assets\Plugins\Feel\MMFeedbacks\MMFeedbacks\Feedbacks\Legacy\MMFeedbackWiggle.cs" />
+    <Compile Include="Assets\Plugins\Feel\MMFeedbacks\MMFeedbacks\Feedbacks\Legacy\MMFeedbackAudioSourcePitch.cs" />
     <Compile Include="Assets\Plugins\Feel\MMFeedbacks\MMFeedbacks\Feedbacks\MMF_SetActive.cs" />
     <Compile Include="Assets\Plugins\Feel\MMFeedbacks\MMFeedbacks\Feedbacks\MMF_GraphicCrossFade.cs" />
     <Compile Include="Assets\Plugins\Feel\MMFeedbacks\MMFeedbacks\Shakers\MMScaleShaker.cs" />

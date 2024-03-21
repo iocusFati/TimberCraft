@@ -3,6 +3,7 @@ using Infrastructure.StaticData.LumberjackData;
 using Infrastructure.StaticData.PoolData;
 using Infrastructure.StaticData.ResourcesData;
 using Infrastructure.StaticData.uiData;
+using Infrastructure.StaticData.WindData;
 using UnityEngine;
 using Utils;
 
@@ -17,7 +18,8 @@ namespace Infrastructure.Services.StaticDataService
         public BuildingsConfig BuildingsConfig { get; private set; }
         public MinionHutUpgradeData MinionHutUpgradeData { get; private set; }
         public MainHouseUpgradeData MainHouseUpgradeData { get; private set; }
-        public PoolConfig PoolConfig { get; set; }
+        public PoolConfig PoolConfig { get; private set; }
+        public WindSimulationConfig WindConfig { get; private set; }
 
 
         public void Initialize()
@@ -30,6 +32,7 @@ namespace Infrastructure.Services.StaticDataService
             InitializeMinionHutUpgradeData();
             InitializeMainHouseUpgradeData();
             InitializePoolConfig();
+            InitializeWindConfig();
         }
 
         private void InitializePoolConfig() => 
@@ -55,5 +58,8 @@ namespace Infrastructure.Services.StaticDataService
         
         private void InitializeMainHouseUpgradeData() => 
             MainHouseUpgradeData = Resources.Load<MainHouseUpgradeData>(AssetPaths.MainHouseUpgradeData);
+        
+        private void InitializeWindConfig() => 
+            WindConfig = Resources.Load<WindSimulationConfig>(AssetPaths.WindConfig);
     }
 }

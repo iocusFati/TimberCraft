@@ -48,6 +48,7 @@
     <Compile Include="Assets\Scripts\Gameplay\Bots\StateMachine\States\GoToResourceSourceLumberjackBotState.cs" />
     <Compile Include="Assets\Scripts\UI\BillboardEffect.cs" />
     <Compile Include="Assets\Scripts\Infrastructure\Services\SaveLoad\ISaveLoadService.cs" />
+    <Compile Include="Assets\Scripts\Infrastructure\StaticData\WindData\BlownByWindConfigurableJoint.cs" />
     <Compile Include="Assets\MeshBaker\Examples\Scripts\MB_MigrateMaterialsToDifferentPipeline.cs" />
     <Compile Include="Assets\Scripts\Infrastructure\States\StateMachine.cs" />
     <Compile Include="Assets\Scripts\Infrastructure\States\LoadProgressState.cs" />
@@ -94,6 +95,7 @@
     <Compile Include="Assets\Scripts\Infrastructure\Services\Cache\ICacheService.cs" />
     <Compile Include="Assets\Other\_Gloomy_Hyper\Script\MouseOrbitImproved.cs" />
     <Compile Include="Assets\Scripts\Infrastructure\Factories\IFactoriesHolderService.cs" />
+    <Compile Include="Assets\Scripts\Gameplay\Wind\WindSimulator.cs" />
     <Compile Include="Assets\Scripts\Infrastructure\Services\Pool\Particle\ParticleRender.cs" />
     <Compile Include="Assets\Scripts\Gameplay\Player\ObstacleFade\IObscurablePlayer.cs" />
     <Compile Include="Assets\Other\KriptoFX\MuzzleFlashes\Scripts\MaterialType.cs" />
@@ -101,6 +103,7 @@
     <Compile Include="Assets\Scripts\Infrastructure\Data\PlayerProgress.cs" />
     <Compile Include="Assets\Scripts\UI\Entities\PopUps\UIAnimation.cs" />
     <Compile Include="Assets\Scripts\Infrastructure\Factories\FactoriesHolderService.cs" />
+    <Compile Include="Assets\Scripts\Gameplay\Wind\IWindEffectable.cs" />
     <Compile Include="Assets\Scripts\Gameplay\Lumberjack\LumberjackBase.cs" />
     <Compile Include="Assets\Scripts\UI\Factory\IUIHolder.cs" />
     <Compile Include="Assets\Scripts\UI\Factory\IUIFactory.cs" />
@@ -166,6 +169,7 @@
     <Compile Include="Assets\Scripts\Gameplay\Resource\ResourceStorage\IGameResourceStorage.cs" />
     <Compile Include="Assets\Scripts\Infrastructure\States\GameStateMachine.cs" />
     <Compile Include="Assets\Scripts\Gameplay\Locations\ResourceSourcesHolder.cs" />
+    <Compile Include="Assets\Scripts\Infrastructure\StaticData\WindData\WindSimulationConfig.cs" />
     <Compile Include="Assets\GUI PRO Kit - Simple Casual\Scripts\PanelControlSimpleCasual.cs" />
     <Compile Include="Assets\Scripts\Gameplay\Player\Animation\LumberjackAnimationIdleState.cs" />
     <Compile Include="Assets\Scripts\Gameplay\Player\PlayerMovement.cs" />
@@ -200,6 +204,7 @@
     <Compile Include="Assets\Scripts\Utils\IntExtensions.cs" />
     <Compile Include="Assets\Scripts\Infrastructure\Services\Pool\PoolService.cs" />
     <Compile Include="Assets\Scripts\Gameplay\Bots\StateMachine\States\IsOnTheWayToResourceSourceLumberjackBotState.cs" />
+    <Compile Include="Assets\Scripts\Utils\ConfigurableJointExtensions.cs" />
     <Compile Include="Assets\Scripts\Gameplay\Buildings\BuildingConstruction.cs" />
     <Compile Include="Assets\MeshBaker\Examples\CharacterCustomization\MB_SwapShirts.cs" />
     <Compile Include="Assets\Scripts\Gameplay\Buildings\IResourceBuildingReceivable.cs" />
@@ -815,11 +820,11 @@
     <Reference Include="Unity.VisualScripting.Antlr3.Runtime">
       <HintPath>C:\Users\fuyca\Desktop\Projects\TimberCraft\Library\PackageCache\com.unity.visualscripting@1.8.0\Runtime\VisualScripting.Flow\Dependencies\NCalc\Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
     </Reference>
-    <Reference Include="Sirenix.Serialization">
-      <HintPath>C:\Users\fuyca\Desktop\Projects\TimberCraft\Assets\Plugins\Sirenix\Assemblies\Sirenix.Serialization.dll</HintPath>
-    </Reference>
     <Reference Include="Pathfinding.Poly2Tri">
       <HintPath>C:\Users\fuyca\Desktop\Projects\TimberCraft\Assets\AstarPathfindingProject\Plugins\Poly2Tri\Pathfinding.Poly2Tri.dll</HintPath>
+    </Reference>
+    <Reference Include="Sirenix.Serialization">
+      <HintPath>C:\Users\fuyca\Desktop\Projects\TimberCraft\Assets\Plugins\Sirenix\Assemblies\Sirenix.Serialization.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.iOS.Extensions.Xcode">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.25f1\Editor\Data\PlaybackEngines\iOSSupport\UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
@@ -1213,6 +1218,10 @@
       <Project>{321d1274-8c47-b399-aae9-044e954b2feb}</Project>
       <Name>Lofelt.NiceVibrations.Editor</Name>
     </ProjectReference>
+    <ProjectReference Include="Unity.InternalAPIEngineBridge.001.csproj">
+      <Project>{9f303ceb-9007-8bb7-ae28-9c68beecca38}</Project>
+      <Name>Unity.InternalAPIEngineBridge.001</Name>
+    </ProjectReference>
     <ProjectReference Include="MoreMountains.Tools.Editor.csproj">
       <Project>{52f36ed4-2372-20c6-0006-ac047aaaa8fb}</Project>
       <Name>MoreMountains.Tools.Editor</Name>
@@ -1253,13 +1262,17 @@
       <Project>{5d62152e-8f2c-1b31-41cc-76dbb23015dc}</Project>
       <Name>Unity.Searcher.Editor</Name>
     </ProjectReference>
-    <ProjectReference Include="Unity.VisualScripting.SettingsProvider.Editor.csproj">
-      <Project>{c37748b8-c6f5-ed7c-f7bc-b4b56aaec76e}</Project>
-      <Name>Unity.VisualScripting.SettingsProvider.Editor</Name>
+    <ProjectReference Include="Unity.2D.IK.Editor.csproj">
+      <Project>{7d0a26d3-963c-a6f6-0399-8574dd5309b3}</Project>
+      <Name>Unity.2D.IK.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="MK.Toon.URP.csproj">
       <Project>{c3316e12-eee7-ccc0-d1b9-2a8d4784f9a6}</Project>
       <Name>MK.Toon.URP</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.VisualScripting.SettingsProvider.Editor.csproj">
+      <Project>{c37748b8-c6f5-ed7c-f7bc-b4b56aaec76e}</Project>
+      <Name>Unity.VisualScripting.SettingsProvider.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.ProBuilder.csproj">
       <Project>{f2713379-7715-e46d-a0fb-834d3fed480e}</Project>
@@ -1317,9 +1330,9 @@
       <Project>{de1524d5-76cb-224e-310b-fd791bac2978}</Project>
       <Name>Unity.EditorCoroutines.Editor</Name>
     </ProjectReference>
-    <ProjectReference Include="MoreMountains.Feedbacks.PostProcessing.csproj">
-      <Project>{a342fd42-3ab4-dbf4-6b9c-1159fd031875}</Project>
-      <Name>MoreMountains.Feedbacks.PostProcessing</Name>
+    <ProjectReference Include="Unity.2D.IK.Runtime.csproj">
+      <Project>{83c602c1-2d35-8e94-7b1f-49aab8009f7b}</Project>
+      <Name>Unity.2D.IK.Runtime</Name>
     </ProjectReference>
     <ProjectReference Include="UniTask.TextMeshPro.csproj">
       <Project>{cdf51015-9db8-81fa-32bc-d4c2ad232c84}</Project>
@@ -1328,6 +1341,10 @@
     <ProjectReference Include="Unity.ShaderGraph.Editor.csproj">
       <Project>{53f8671c-f2f6-94a7-6e7d-b19bb4ff3edc}</Project>
       <Name>Unity.ShaderGraph.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="MoreMountains.Feedbacks.PostProcessing.csproj">
+      <Project>{a342fd42-3ab4-dbf4-6b9c-1159fd031875}</Project>
+      <Name>MoreMountains.Feedbacks.PostProcessing</Name>
     </ProjectReference>
     <ProjectReference Include="Cinemachine.csproj">
       <Project>{ac085090-bd7c-4516-a0ef-c3e4e873ac45}</Project>
@@ -1385,6 +1402,10 @@
       <Project>{1d82a972-6773-9259-42c4-04e944f07f93}</Project>
       <Name>Lofelt.NiceVibrations.Demo</Name>
     </ProjectReference>
+    <ProjectReference Include="Unity.2D.Common.Editor.csproj">
+      <Project>{67952cf0-9ca4-7b4d-601e-0bd250fdb5f0}</Project>
+      <Name>Unity.2D.Common.Editor</Name>
+    </ProjectReference>
     <ProjectReference Include="UniTask.Addressables.csproj">
       <Project>{42ce38e3-725f-6d63-5f8f-146c2c9cb39e}</Project>
       <Name>UniTask.Addressables</Name>
@@ -1396,6 +1417,10 @@
     <ProjectReference Include="Unity.VisualScripting.Flow.Editor.csproj">
       <Project>{ea37b351-ee9a-ac8f-6bb6-4dcb549b1fb1}</Project>
       <Name>Unity.VisualScripting.Flow.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.2D.Animation.Editor.csproj">
+      <Project>{500aeb22-1395-38ea-dab1-bbfce51994b5}</Project>
+      <Name>Unity.2D.Animation.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="MoreMountains.Feedbacks.HDRP.csproj">
       <Project>{f2534ac6-73b4-1490-6dc9-947773cd2c0a}</Project>
@@ -1449,9 +1474,13 @@
       <Project>{b3b7435b-3922-9f9d-7522-7ff260cb14ed}</Project>
       <Name>MK.Toon.Examples</Name>
     </ProjectReference>
-    <ProjectReference Include="Unity.RenderPipelines.Core.Runtime.csproj">
-      <Project>{271312c1-a7d1-47ae-1b13-40151bf5ffdc}</Project>
-      <Name>Unity.RenderPipelines.Core.Runtime</Name>
+    <ProjectReference Include="Unity.2D.Sprite.Editor.csproj">
+      <Project>{c0452311-c521-b8e1-26cd-f5ae9fc8ced9}</Project>
+      <Name>Unity.2D.Sprite.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.InternalAPIEditorBridge.001.csproj">
+      <Project>{4092b3b6-e3f3-cde9-8b5d-7aa28ddb2a9e}</Project>
+      <Name>Unity.InternalAPIEditorBridge.001</Name>
     </ProjectReference>
     <ProjectReference Include="UniTask.DOTween.csproj">
       <Project>{f4285073-35ae-e45b-f9ed-1ae66eb2d488}</Project>
@@ -1461,17 +1490,25 @@
       <Project>{63326ff2-4731-9a57-9407-d20810182902}</Project>
       <Name>Unity.ProBuilder.Editor</Name>
     </ProjectReference>
+    <ProjectReference Include="Unity.Postprocessing.Editor.csproj">
+      <Project>{6bd4c4ba-6cb5-12f6-7f35-eb3ab726c7de}</Project>
+      <Name>Unity.Postprocessing.Editor</Name>
+    </ProjectReference>
     <ProjectReference Include="Unity.VisualScripting.Flow.csproj">
       <Project>{aaf03966-2d4d-c6c7-e726-1599f574adaf}</Project>
       <Name>Unity.VisualScripting.Flow</Name>
+    </ProjectReference>
+    <ProjectReference Include="UniTask.Linq.csproj">
+      <Project>{72e807b2-1329-e642-a311-ae5353e017ab}</Project>
+      <Name>UniTask.Linq</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.PlasticSCM.Editor.csproj">
       <Project>{7e5ddd76-ccea-783b-fd6f-fcb9da63b211}</Project>
       <Name>Unity.PlasticSCM.Editor</Name>
     </ProjectReference>
-    <ProjectReference Include="UniTask.Linq.csproj">
-      <Project>{72e807b2-1329-e642-a311-ae5353e017ab}</Project>
-      <Name>UniTask.Linq</Name>
+    <ProjectReference Include="Unity.RenderPipelines.Core.Runtime.csproj">
+      <Project>{271312c1-a7d1-47ae-1b13-40151bf5ffdc}</Project>
+      <Name>Unity.RenderPipelines.Core.Runtime</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.VisualScripting.Core.csproj">
       <Project>{2fac6370-1547-e0d5-31f9-7181424cee0b}</Project>
@@ -1493,13 +1530,13 @@
       <Project>{bcdd1eee-e690-9a23-ce82-7c1d614c39b4}</Project>
       <Name>AstarPathfindingProject</Name>
     </ProjectReference>
+    <ProjectReference Include="Unity.Postprocessing.Runtime.csproj">
+      <Project>{4a73b5b0-25a0-8fb5-d4dd-aae878df6674}</Project>
+      <Name>Unity.Postprocessing.Runtime</Name>
+    </ProjectReference>
     <ProjectReference Include="Unity.RenderPipelines.Universal.Editor.csproj">
       <Project>{c647a2cf-53e7-0b97-5e7e-030c8d45fe88}</Project>
       <Name>Unity.RenderPipelines.Universal.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.ProBuilder.AssetIdRemapUtility.csproj">
-      <Project>{b4f76a92-518d-563b-94d3-48639e541a28}</Project>
-      <Name>Unity.ProBuilder.AssetIdRemapUtility</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.VisualScripting.Shared.Editor.csproj">
       <Project>{25ae2cd6-3b1d-61d7-18d7-0e0e06a9c8d8}</Project>
@@ -1508,6 +1545,10 @@
     <ProjectReference Include="SimpleInput.Runtime.csproj">
       <Project>{e693776b-ef12-909c-e425-c21e8cb4435b}</Project>
       <Name>SimpleInput.Runtime</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.2D.Animation.Runtime.csproj">
+      <Project>{0d3b4c13-397a-33c5-5ecb-3b379fd1c619}</Project>
+      <Name>Unity.2D.Animation.Runtime</Name>
     </ProjectReference>
     <ProjectReference Include="MoreMountains.Feedbacks.csproj">
       <Project>{917a30b7-277a-48fa-e6d3-5cc90713daa2}</Project>
@@ -1524,6 +1565,14 @@
     <ProjectReference Include="Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.csproj">
       <Project>{b1f9a957-83d5-ca87-bf80-15c6259bb15f}</Project>
       <Name>Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.ProBuilder.AssetIdRemapUtility.csproj">
+      <Project>{b4f76a92-518d-563b-94d3-48639e541a28}</Project>
+      <Name>Unity.ProBuilder.AssetIdRemapUtility</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.2D.Common.Runtime.csproj">
+      <Project>{17cfc765-2124-c1cc-a04e-5afabfe13f73}</Project>
+      <Name>Unity.2D.Common.Runtime</Name>
     </ProjectReference>
     <ProjectReference Include="UniTask.csproj">
       <Project>{24cce9aa-47c2-f3b6-9eac-24ab0beb85d5}</Project>
@@ -1549,49 +1598,9 @@
       <Project>{57a7ca95-e4de-a076-fc65-d53a46d9c2e0}</Project>
       <Name>Unity.VisualScripting.State</Name>
     </ProjectReference>
-    <ProjectReference Include="Unity.2D.IK.Editor.csproj">
-      <Project>{7d0a26d3-963c-a6f6-0399-8574dd5309b3}</Project>
-      <Name>Unity.2D.IK.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.2D.Animation.Editor.csproj">
-      <Project>{500aeb22-1395-38ea-dab1-bbfce51994b5}</Project>
-      <Name>Unity.2D.Animation.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.2D.Animation.Runtime.csproj">
-      <Project>{0d3b4c13-397a-33c5-5ecb-3b379fd1c619}</Project>
-      <Name>Unity.2D.Animation.Runtime</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.2D.Common.Runtime.csproj">
-      <Project>{17cfc765-2124-c1cc-a04e-5afabfe13f73}</Project>
-      <Name>Unity.2D.Common.Runtime</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.InternalAPIEngineBridge.001.csproj">
-      <Project>{9f303ceb-9007-8bb7-ae28-9c68beecca38}</Project>
-      <Name>Unity.InternalAPIEngineBridge.001</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.Postprocessing.Editor.csproj">
-      <Project>{6bd4c4ba-6cb5-12f6-7f35-eb3ab726c7de}</Project>
-      <Name>Unity.Postprocessing.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.2D.IK.Runtime.csproj">
-      <Project>{83c602c1-2d35-8e94-7b1f-49aab8009f7b}</Project>
-      <Name>Unity.2D.IK.Runtime</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.2D.Common.Editor.csproj">
-      <Project>{67952cf0-9ca4-7b4d-601e-0bd250fdb5f0}</Project>
-      <Name>Unity.2D.Common.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.InternalAPIEditorBridge.001.csproj">
-      <Project>{4092b3b6-e3f3-cde9-8b5d-7aa28ddb2a9e}</Project>
-      <Name>Unity.InternalAPIEditorBridge.001</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.2D.Sprite.Editor.csproj">
-      <Project>{c0452311-c521-b8e1-26cd-f5ae9fc8ced9}</Project>
-      <Name>Unity.2D.Sprite.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.Postprocessing.Runtime.csproj">
-      <Project>{4a73b5b0-25a0-8fb5-d4dd-aae878df6674}</Project>
-      <Name>Unity.Postprocessing.Runtime</Name>
+    <ProjectReference Include="UniRx.csproj">
+      <Project>{56c63ea5-3f4b-5891-dfb2-d23881ae4503}</Project>
+      <Name>UniRx</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -48,6 +48,7 @@
     <Compile Include="Assets\Scripts\Gameplay\Bots\StateMachine\States\GoToResourceSourceLumberjackBotState.cs" />
     <Compile Include="Assets\Scripts\UI\BillboardEffect.cs" />
     <Compile Include="Assets\Scripts\Infrastructure\Services\SaveLoad\ISaveLoadService.cs" />
+    <Compile Include="Assets\Scripts\Infrastructure\StaticData\WindData\BlownByWindConfigurableJoint.cs" />
     <Compile Include="Assets\MeshBaker\Examples\Scripts\MB_MigrateMaterialsToDifferentPipeline.cs" />
     <Compile Include="Assets\Scripts\Infrastructure\States\StateMachine.cs" />
     <Compile Include="Assets\Scripts\Infrastructure\States\LoadProgressState.cs" />
@@ -94,6 +95,7 @@
     <Compile Include="Assets\Scripts\Infrastructure\Services\Cache\ICacheService.cs" />
     <Compile Include="Assets\Other\_Gloomy_Hyper\Script\MouseOrbitImproved.cs" />
     <Compile Include="Assets\Scripts\Infrastructure\Factories\IFactoriesHolderService.cs" />
+    <Compile Include="Assets\Scripts\Gameplay\Wind\WindSimulator.cs" />
     <Compile Include="Assets\Scripts\Infrastructure\Services\Pool\Particle\ParticleRender.cs" />
     <Compile Include="Assets\Scripts\Gameplay\Player\ObstacleFade\IObscurablePlayer.cs" />
     <Compile Include="Assets\Other\KriptoFX\MuzzleFlashes\Scripts\MaterialType.cs" />
@@ -101,6 +103,7 @@
     <Compile Include="Assets\Scripts\Infrastructure\Data\PlayerProgress.cs" />
     <Compile Include="Assets\Scripts\UI\Entities\PopUps\UIAnimation.cs" />
     <Compile Include="Assets\Scripts\Infrastructure\Factories\FactoriesHolderService.cs" />
+    <Compile Include="Assets\Scripts\Gameplay\Wind\IWindEffectable.cs" />
     <Compile Include="Assets\Scripts\Gameplay\Lumberjack\LumberjackBase.cs" />
     <Compile Include="Assets\Scripts\UI\Factory\IUIHolder.cs" />
     <Compile Include="Assets\Scripts\UI\Factory\IUIFactory.cs" />
@@ -166,6 +169,7 @@
     <Compile Include="Assets\Scripts\Gameplay\Resource\ResourceStorage\IGameResourceStorage.cs" />
     <Compile Include="Assets\Scripts\Infrastructure\States\GameStateMachine.cs" />
     <Compile Include="Assets\Scripts\Gameplay\Locations\ResourceSourcesHolder.cs" />
+    <Compile Include="Assets\Scripts\Infrastructure\StaticData\WindData\WindSimulationConfig.cs" />
     <Compile Include="Assets\GUI PRO Kit - Simple Casual\Scripts\PanelControlSimpleCasual.cs" />
     <Compile Include="Assets\Scripts\Gameplay\Player\Animation\LumberjackAnimationIdleState.cs" />
     <Compile Include="Assets\Scripts\Gameplay\Player\PlayerMovement.cs" />
@@ -200,6 +204,7 @@
     <Compile Include="Assets\Scripts\Utils\IntExtensions.cs" />
     <Compile Include="Assets\Scripts\Infrastructure\Services\Pool\PoolService.cs" />
     <Compile Include="Assets\Scripts\Gameplay\Bots\StateMachine\States\IsOnTheWayToResourceSourceLumberjackBotState.cs" />
+    <Compile Include="Assets\Scripts\Utils\ConfigurableJointExtensions.cs" />
     <Compile Include="Assets\Scripts\Gameplay\Buildings\BuildingConstruction.cs" />
     <Compile Include="Assets\MeshBaker\Examples\CharacterCustomization\MB_SwapShirts.cs" />
     <Compile Include="Assets\Scripts\Gameplay\Buildings\IResourceBuildingReceivable.cs" />
@@ -809,6 +814,10 @@
       <Project>{71ab9ec1-5750-31af-9ace-cec3e83d9219}</Project>
       <Name>BakeryRuntimeAssembly.Player</Name>
     </ProjectReference>
+    <ProjectReference Include="Unity.InternalAPIEngineBridge.001.Player.csproj">
+      <Project>{636fa944-f620-64b1-5352-bfbe299c68f0}</Project>
+      <Name>Unity.InternalAPIEngineBridge.001.Player</Name>
+    </ProjectReference>
     <ProjectReference Include="Unity.RenderPipelines.Universal.Shaders.Player.csproj">
       <Project>{5dfa39ba-2647-839c-c66b-a7ebfa6289b7}</Project>
       <Name>Unity.RenderPipelines.Universal.Shaders.Player</Name>
@@ -837,13 +846,17 @@
       <Project>{ffddfe77-9d36-6b39-9ff3-1dedaeb93596}</Project>
       <Name>UnityEngine.UI.Player</Name>
     </ProjectReference>
-    <ProjectReference Include="MoreMountains.Feedbacks.PostProcessing.Player.csproj">
-      <Project>{b5acc3ca-520e-3b8c-f407-56f4a5ba8649}</Project>
-      <Name>MoreMountains.Feedbacks.PostProcessing.Player</Name>
+    <ProjectReference Include="Unity.2D.IK.Runtime.Player.csproj">
+      <Project>{d084eba0-8b57-e06e-4de7-921e7a15c1d5}</Project>
+      <Name>Unity.2D.IK.Runtime.Player</Name>
     </ProjectReference>
     <ProjectReference Include="UniTask.TextMeshPro.Player.csproj">
       <Project>{f2ac4251-5772-1a65-955e-1d0cc6cb5535}</Project>
       <Name>UniTask.TextMeshPro.Player</Name>
+    </ProjectReference>
+    <ProjectReference Include="MoreMountains.Feedbacks.PostProcessing.Player.csproj">
+      <Project>{b5acc3ca-520e-3b8c-f407-56f4a5ba8649}</Project>
+      <Name>MoreMountains.Feedbacks.PostProcessing.Player</Name>
     </ProjectReference>
     <ProjectReference Include="Cinemachine.Player.csproj">
       <Project>{47973b4f-93a5-290f-0b8d-bba041ba1ce4}</Project>
@@ -913,10 +926,6 @@
       <Project>{1aea1d74-c883-124c-1efe-ebf4e58a44f0}</Project>
       <Name>MK.Toon.Examples.Player</Name>
     </ProjectReference>
-    <ProjectReference Include="Unity.RenderPipelines.Core.Runtime.Player.csproj">
-      <Project>{dfa32be4-d870-289c-dde2-fa8cb82da0b8}</Project>
-      <Name>Unity.RenderPipelines.Core.Runtime.Player</Name>
-    </ProjectReference>
     <ProjectReference Include="UniTask.DOTween.Player.csproj">
       <Project>{4ba6ac55-f93c-32cf-389b-3c2b02090529}</Project>
       <Name>UniTask.DOTween.Player</Name>
@@ -928,6 +937,10 @@
     <ProjectReference Include="UniTask.Linq.Player.csproj">
       <Project>{8520ad79-0244-aadd-c3c3-220be88aa9dc}</Project>
       <Name>UniTask.Linq.Player</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.RenderPipelines.Core.Runtime.Player.csproj">
+      <Project>{dfa32be4-d870-289c-dde2-fa8cb82da0b8}</Project>
+      <Name>Unity.RenderPipelines.Core.Runtime.Player</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.VisualScripting.Core.Player.csproj">
       <Project>{91fac7e9-538d-43e6-cb8a-64a3ede9a0a1}</Project>
@@ -949,9 +962,17 @@
       <Project>{5bf4adad-ac67-1bc5-cab9-a4caa73044ae}</Project>
       <Name>AstarPathfindingProject.Player</Name>
     </ProjectReference>
+    <ProjectReference Include="Unity.Postprocessing.Runtime.Player.csproj">
+      <Project>{65696eab-817a-9327-a047-367e32ad6f5f}</Project>
+      <Name>Unity.Postprocessing.Runtime.Player</Name>
+    </ProjectReference>
     <ProjectReference Include="SimpleInput.Runtime.Player.csproj">
       <Project>{2db20ea8-4d6c-5bba-e320-323d95cea084}</Project>
       <Name>SimpleInput.Runtime.Player</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.2D.Animation.Runtime.Player.csproj">
+      <Project>{159c18b2-3de6-6715-e25d-fcab4fa0d509}</Project>
+      <Name>Unity.2D.Animation.Runtime.Player</Name>
     </ProjectReference>
     <ProjectReference Include="MoreMountains.Feedbacks.Player.csproj">
       <Project>{51808121-8046-b784-1c70-81dc706c1a37}</Project>
@@ -965,6 +986,10 @@
       <Project>{511406f6-4c04-e02b-2e2b-aeb8700f4757}</Project>
       <Name>Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.Player</Name>
     </ProjectReference>
+    <ProjectReference Include="Unity.2D.Common.Runtime.Player.csproj">
+      <Project>{42c61695-6514-ccc4-66fc-a748742627ea}</Project>
+      <Name>Unity.2D.Common.Runtime.Player</Name>
+    </ProjectReference>
     <ProjectReference Include="UniTask.Player.csproj">
       <Project>{6ab34727-f48d-f5f7-577d-f8b445ce3a7d}</Project>
       <Name>UniTask.Player</Name>
@@ -977,25 +1002,9 @@
       <Project>{ea8a7aa2-c584-f7ea-8cc1-7be2df8494e1}</Project>
       <Name>Unity.VisualScripting.State.Player</Name>
     </ProjectReference>
-    <ProjectReference Include="Unity.2D.Animation.Runtime.Player.csproj">
-      <Project>{159c18b2-3de6-6715-e25d-fcab4fa0d509}</Project>
-      <Name>Unity.2D.Animation.Runtime.Player</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.2D.Common.Runtime.Player.csproj">
-      <Project>{42c61695-6514-ccc4-66fc-a748742627ea}</Project>
-      <Name>Unity.2D.Common.Runtime.Player</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.InternalAPIEngineBridge.001.Player.csproj">
-      <Project>{636fa944-f620-64b1-5352-bfbe299c68f0}</Project>
-      <Name>Unity.InternalAPIEngineBridge.001.Player</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.2D.IK.Runtime.Player.csproj">
-      <Project>{d084eba0-8b57-e06e-4de7-921e7a15c1d5}</Project>
-      <Name>Unity.2D.IK.Runtime.Player</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.Postprocessing.Runtime.Player.csproj">
-      <Project>{65696eab-817a-9327-a047-367e32ad6f5f}</Project>
-      <Name>Unity.Postprocessing.Runtime.Player</Name>
+    <ProjectReference Include="UniRx.Player.csproj">
+      <Project>{3697c3d9-0fe4-4f18-6f26-d9d2cd0f14dc}</Project>
+      <Name>UniRx.Player</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -3,6 +3,7 @@ using Infrastructure.StaticData.LumberjackData;
 using Infrastructure.StaticData.PoolData;
 using Infrastructure.StaticData.ResourcesData;
 using Infrastructure.StaticData.uiData;
+using Infrastructure.StaticData.WindData;
 
 namespace Infrastructure.Services.StaticDataService
 {
@@ -16,5 +17,6 @@ namespace Infrastructure.Services.StaticDataService
         MinionHutUpgradeData MinionHutUpgradeData { get; }
         MainHouseUpgradeData MainHouseUpgradeData { get; }
         PoolConfig PoolConfig { get; }
+        WindSimulationConfig WindConfig { get; }
     }
 }
