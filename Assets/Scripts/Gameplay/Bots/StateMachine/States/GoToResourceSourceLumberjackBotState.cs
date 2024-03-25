@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using Cysharp.Threading.Tasks;
 using Gameplay.Environment.Locations;
 using Gameplay.Lumberjack;
 using Gameplay.Player.Animation;
@@ -56,9 +57,17 @@ namespace Gameplay.Bots.StateMachine.States
 
             _targetResource.StartMining();
             _aiPath.destination = _targetResource.transform.position;
-            _lumberjackAnimator.Run();
+            
+            SetRunAnimation();
             
             _botStateMachine.Enter<IsOnTheWayToResourceSourceLumberjackBotState, ResourceSource>(_targetResource);
+        }
+
+        private async UniTaskVoid SetRunAnimation()
+        {
+            await UniTask.WaitUntil(() => _aiPath.velocity.magnitude > 0.1f);
+            
+            _lumberjackAnimator.Run();
         }
 
         public void Exit()
