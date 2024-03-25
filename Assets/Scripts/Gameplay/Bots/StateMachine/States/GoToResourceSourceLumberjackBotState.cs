@@ -1,5 +1,5 @@
 ﻿using System.Collections;
-using Gameplay.Locations;
+using Gameplay.Environment.Locations;
 using Gameplay.Lumberjack;
 using Gameplay.Player.Animation;
 using Gameplay.Resource;

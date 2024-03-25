@@ -19,7 +19,7 @@ namespace Infrastructure.Services.StaticDataService
         public MinionHutUpgradeData MinionHutUpgradeData { get; private set; }
         public MainHouseUpgradeData MainHouseUpgradeData { get; private set; }
         public PoolConfig PoolConfig { get; private set; }
-        public WindSimulationConfig WindConfig { get; private set; }
+        public EnvironmentConfig EnvironmentConfig { get; private set; }
 
 
         public void Initialize()
@@ -32,7 +32,7 @@ namespace Infrastructure.Services.StaticDataService
             InitializeMinionHutUpgradeData();
             InitializeMainHouseUpgradeData();
             InitializePoolConfig();
-            InitializeWindConfig();
+            InitializeEnvironmentConfig();
         }
 
         private void InitializePoolConfig() => 
@@ -59,7 +59,7 @@ namespace Infrastructure.Services.StaticDataService
         private void InitializeMainHouseUpgradeData() => 
             MainHouseUpgradeData = Resources.Load<MainHouseUpgradeData>(AssetPaths.MainHouseUpgradeData);
         
-        private void InitializeWindConfig() => 
-            WindConfig = Resources.Load<WindSimulationConfig>(AssetPaths.WindConfig);
+        private void InitializeEnvironmentConfig() => 
+            EnvironmentConfig = Resources.Load<EnvironmentConfig>(AssetPaths.EnvironmentConfig);
     }
 }

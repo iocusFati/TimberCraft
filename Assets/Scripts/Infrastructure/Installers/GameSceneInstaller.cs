@@ -1,5 +1,5 @@
 ﻿using Gameplay.Buildings;
-using Gameplay.Locations;
+using Gameplay.Environment.Locations;
 using Gameplay.Player.ObstacleFade;
 using Gameplay.Resource;
 using Infrastructure.Services.Guid;

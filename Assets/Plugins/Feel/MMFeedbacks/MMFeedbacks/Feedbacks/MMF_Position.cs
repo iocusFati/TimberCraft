@@ -354,7 +354,7 @@ namespace MoreMountains.Feedbacks
 				float randomOutputMultiplier = RandomizeOutput ? randomMultiplier : 1;
 				
 				AnimatePositionTarget.transform.position =
-					Vector3.Lerp(start, finish, linearTime) + 
+					Vector3.Lerp(start, DestinationPositionTransform.position, linearTime) + 
 					new Vector3(xLerp, height, zLerp) * randomOutputMultiplier;
 
 				yield return null;

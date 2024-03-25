@@ -1,5 +1,5 @@
 ﻿using Gameplay.Buildings;
-using Gameplay.Locations;
+using Gameplay.Environment.Buildings;
 using Gameplay.Player.Animation;
 using Infrastructure.States.Interfaces;
 using Pathfinding;

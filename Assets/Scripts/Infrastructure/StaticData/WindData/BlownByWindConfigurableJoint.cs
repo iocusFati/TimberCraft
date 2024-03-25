@@ -1,6 +1,6 @@
 ﻿using System.Collections;
 using System.Threading;
-using Gameplay.Wind;
+using Gameplay.Environment.Wind;
 using Infrastructure.Services.StaticDataService;
 using UnityEngine;
 using Zenject;
@@ -15,7 +15,7 @@ namespace Infrastructure.StaticData.WindData
         [SerializeField] private float _startReducingForceTime;
         [SerializeField] private float _hitHeight = 1.5f;
 
-        private WindSimulationConfig _windConfig;
+        private EnvironmentConfig _windConfig;
 
         private float _windDuration;
 
@@ -27,7 +27,7 @@ namespace Infrastructure.StaticData.WindData
         [Inject]
         public void Construct(IStaticDataService staticData)
         {
-            _windConfig = staticData.WindConfig;
+            _windConfig = staticData.EnvironmentConfig;
             _windDuration = _windConfig.CycleCount * _windConfig.RepeatInterval;
         }
         

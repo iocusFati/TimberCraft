@@ -57,13 +57,15 @@
     <Compile Include="Assets\Scripts\Infrastructure\StaticData\BuildingsData\MinionHutUpgradeData.cs" />
     <Compile Include="Assets\Other\KriptoFX\MuzzleFlashes\Scripts\Demo\FPS_MouseLook.cs" />
     <Compile Include="Assets\Scripts\UI\Buttons\BuyButtonDisabler.cs" />
+    <Compile Include="Assets\Scripts\Gameplay\Environment\BirdAI\BirdSpawn.cs" />
     <Compile Include="Assets\Other\KriptoFX\MuzzleFlashes\Scripts\FPSLightCurves.cs" />
+    <Compile Include="Assets\Scripts\Utils\CameraExtensions.cs" />
     <Compile Include="Assets\Scripts\Utils\Tags.cs" />
     <Compile Include="Assets\Scripts\Infrastructure\Ticker.cs" />
     <Compile Include="Assets\Scripts\Gameplay\Resource\DropoutResource.cs" />
     <Compile Include="Assets\Scripts\Gameplay\Lumberjack\LumberjackBotStorage.cs" />
     <Compile Include="Assets\Scripts\Utils\AssetPaths.cs" />
-    <Compile Include="Assets\Scripts\Gameplay\Buildings\ResourcesShop.cs" />
+    <Compile Include="Assets\Scripts\Gameplay\Environment\Buildings\ResourcesShop.cs" />
     <Compile Include="Assets\Scripts\Infrastructure\Services\Input\StandaloneInput.cs" />
     <Compile Include="Assets\Scripts\Gameplay\Bots\StateMachine\States\BringResourcesToHutLumberjackBotState.cs" />
     <Compile Include="Assets\Scripts\Infrastructure\Services\SaveLoad\SaveLoadService.cs" />
@@ -73,21 +75,23 @@
     <Compile Include="Assets\Scripts\UI\ResourceCounter.cs" />
     <Compile Include="Assets\Scripts\Infrastructure\Services\StaticDataService\IStaticDataService.cs" />
     <Compile Include="Assets\Other\KriptoFX\MuzzleFlashes\Scripts\Demo\FPS_RigidbodyFirstPersonController.cs" />
-    <Compile Include="Assets\Scripts\Gameplay\Buildings\MainHouse.cs" />
+    <Compile Include="Assets\Scripts\Gameplay\Environment\Buildings\MainHouse.cs" />
     <Compile Include="Assets\Scripts\Infrastructure\Services\Pool\ParticlePool.cs" />
     <Compile Include="Assets\Scripts\Infrastructure\StaticData\BuildingsData\MinionHutLevelUpgrade.cs" />
     <Compile Include="Assets\Scripts\Infrastructure\Services\SaveLoad\OnExitSave.cs" />
+    <Compile Include="Assets\Quirky Series - Birds Bundle\_Scripts\Demo.cs" />
     <Compile Include="Assets\Scripts\Infrastructure\Installers\BootstrapInstaller.cs" />
     <Compile Include="Assets\Scripts\Gameplay\Player\Animation\LumberjackAnimator.cs" />
     <Compile Include="Assets\Scripts\Gameplay\Cameras\CameraSway.cs" />
     <Compile Include="Assets\Scripts\Infrastructure\Services\IService.cs" />
-    <Compile Include="Assets\Scripts\Gameplay\Buildings\UpgradableBuilding.cs" />
+    <Compile Include="Assets\Scripts\Gameplay\Environment\Buildings\UpgradableBuilding.cs" />
     <Compile Include="Assets\Scripts\UI\Entities\HUD_Folder\HUD.cs" />
     <Compile Include="Assets\Other\KriptoFX\MuzzleFlashes\Scripts\FPSRandomRotateAngle.cs" />
     <Compile Include="Assets\Scripts\Infrastructure\StaticData\CameraData\CameraSwayConfig.cs" />
     <Compile Include="Assets\Scripts\UI\Entities\PopUps\MainHousePopUp.cs" />
     <Compile Include="Assets\Scripts\Infrastructure\StaticData\LumberjackData\LumberjackBotConfig.cs" />
     <Compile Include="Assets\MeshBaker\Examples\SceneRuntimeExample\MB_ExampleSkinnedMeshDescription.cs" />
+    <Compile Include="Assets\Scripts\Utils\ListExtensions.cs" />
     <Compile Include="Assets\Scripts\Infrastructure\StaticData\LumberjackData\PlayerConfig.cs" />
     <Compile Include="Assets\Scripts\Gameplay\Resource\ResourcesSelling.cs" />
     <Compile Include="Assets\Scripts\Utils\TransformExtensions.cs" />
@@ -95,7 +99,7 @@
     <Compile Include="Assets\Scripts\Infrastructure\Services\Cache\ICacheService.cs" />
     <Compile Include="Assets\Other\_Gloomy_Hyper\Script\MouseOrbitImproved.cs" />
     <Compile Include="Assets\Scripts\Infrastructure\Factories\IFactoriesHolderService.cs" />
-    <Compile Include="Assets\Scripts\Gameplay\Wind\WindSimulator.cs" />
+    <Compile Include="Assets\Scripts\Gameplay\Environment\Wind\WindSimulator.cs" />
     <Compile Include="Assets\Scripts\Infrastructure\Services\Pool\Particle\ParticleRender.cs" />
     <Compile Include="Assets\Scripts\Gameplay\Player\ObstacleFade\IObscurablePlayer.cs" />
     <Compile Include="Assets\Other\KriptoFX\MuzzleFlashes\Scripts\MaterialType.cs" />
@@ -103,9 +107,10 @@
     <Compile Include="Assets\Scripts\Infrastructure\Data\PlayerProgress.cs" />
     <Compile Include="Assets\Scripts\UI\Entities\PopUps\UIAnimation.cs" />
     <Compile Include="Assets\Scripts\Infrastructure\Factories\FactoriesHolderService.cs" />
-    <Compile Include="Assets\Scripts\Gameplay\Wind\IWindEffectable.cs" />
+    <Compile Include="Assets\Scripts\Gameplay\Environment\Wind\IWindEffectable.cs" />
     <Compile Include="Assets\Scripts\Gameplay\Lumberjack\LumberjackBase.cs" />
     <Compile Include="Assets\Scripts\UI\Factory\IUIHolder.cs" />
+    <Compile Include="Assets\Scripts\Gameplay\CustomTriggers\ICustomTrigger.cs" />
     <Compile Include="Assets\Scripts\UI\Factory\IUIFactory.cs" />
     <Compile Include="Assets\Scripts\Infrastructure\Installers\GameSceneInstaller.cs" />
     <Compile Include="Assets\Scripts\Gameplay\Resource\ResourceSource.cs" />
@@ -134,7 +139,7 @@
     <Compile Include="Assets\Scripts\Infrastructure\States\GameLoopState.cs" />
     <Compile Include="Assets\Scripts\Infrastructure\Services\AllServices.cs" />
     <Compile Include="Assets\Scripts\Infrastructure\Services\Pool\BasePool.cs" />
-    <Compile Include="Assets\Scripts\Gameplay\Buildings\DecorationBuilding.cs" />
+    <Compile Include="Assets\Scripts\Gameplay\Environment\Buildings\DecorationBuilding.cs" />
     <Compile Include="Assets\Scripts\Infrastructure\AssetProviderService\AssetProvider.cs" />
     <Compile Include="Assets\Scripts\Infrastructure\AssetProviderService\IAssets.cs" />
     <Compile Include="Assets\GUI PRO Kit - Simple Casual\Scripts\PanelSimpleCasual.cs" />
@@ -149,7 +154,7 @@
     <Compile Include="Assets\Scripts\UI\Entities\PopUps\UpgradablePopUp.cs" />
     <Compile Include="Assets\Scripts\Gameplay\Cameras\GameCameraStateController.cs" />
     <Compile Include="Assets\MeshBaker\Examples\SceneRuntimeExample\MB_Example.cs" />
-    <Compile Include="Assets\Scripts\Gameplay\Buildings\Building.cs" />
+    <Compile Include="Assets\Scripts\Gameplay\Environment\Buildings\Building.cs" />
     <Compile Include="Assets\Other\KriptoFX\MuzzleFlashes\Scripts\Rendering\FPS_PerPlatformSettings.cs" />
     <Compile Include="Assets\Scripts\Infrastructure\StaticData\ResourcesData\ResourcesConfig.cs" />
     <Compile Include="Assets\Other\KriptoFX\MuzzleFlashes\Scripts\FPS_Decal.cs" />
@@ -168,28 +173,29 @@
     <Compile Include="Assets\Scripts\Infrastructure\Services\Guid\IGuidService.cs" />
     <Compile Include="Assets\Scripts\Gameplay\Resource\ResourceStorage\IGameResourceStorage.cs" />
     <Compile Include="Assets\Scripts\Infrastructure\States\GameStateMachine.cs" />
-    <Compile Include="Assets\Scripts\Gameplay\Locations\ResourceSourcesHolder.cs" />
-    <Compile Include="Assets\Scripts\Infrastructure\StaticData\WindData\WindSimulationConfig.cs" />
+    <Compile Include="Assets\Scripts\Gameplay\Environment\Locations\ResourceSourcesHolder.cs" />
+    <Compile Include="Assets\Scripts\Infrastructure\StaticData\WindData\EnvironmentConfig.cs" />
     <Compile Include="Assets\GUI PRO Kit - Simple Casual\Scripts\PanelControlSimpleCasual.cs" />
     <Compile Include="Assets\Scripts\Gameplay\Player\Animation\LumberjackAnimationIdleState.cs" />
     <Compile Include="Assets\Scripts\Gameplay\Player\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\Gameplay\Bots\LumberjackBotStorageResourceShare.cs" />
     <Compile Include="Assets\Scripts\UI\Animation\UIDisappearAnimation.cs" />
-    <Compile Include="Assets\Scripts\Gameplay\Buildings\MinionHut.cs" />
-    <Compile Include="Assets\Scripts\Gameplay\Locations\Island.cs" />
+    <Compile Include="Assets\Scripts\Gameplay\Environment\Buildings\MinionHut.cs" />
+    <Compile Include="Assets\Scripts\Gameplay\Environment\Locations\Island.cs" />
     <Compile Include="Assets\Scripts\Gameplay\Resource\StoneFolder\StoneSource.cs" />
     <Compile Include="Assets\Scripts\Infrastructure\States\GameLostState.cs" />
     <Compile Include="Assets\Scripts\Infrastructure\States\LoadLevelState.cs" />
     <Compile Include="Assets\Scripts\Gameplay\Player\ObstacleFade\FadeObscurePlayerObjects.cs" />
     <Compile Include="Assets\Scripts\Gameplay\Bots\StateMachine\LumberjackBotStateMachine.cs" />
     <Compile Include="Assets\Scripts\Infrastructure\Factories\PlayerFactoryFolder\IPlayerFactory.cs" />
+    <Compile Include="Assets\Scripts\Gameplay\CustomTriggers\HitAnotherCustomTrigger.cs" />
     <Compile Include="Assets\Other\KriptoFX\MuzzleFlashes\Scripts\FPSShaderFloatCurves.cs" />
     <Compile Include="Assets\Scripts\Gameplay\Player\Animation\LumberjackAnimationRunState.cs" />
     <Compile Include="Assets\Scripts\UI\Mediator\UIMediator.cs" />
     <Compile Include="Assets\Scripts\Gameplay\Resource\ResourceSourceState.cs" />
     <Compile Include="Assets\Scripts\Gameplay\GameFlow\BuildingDiscover.cs" />
     <Compile Include="Assets\MeshBaker\Examples\SceneRuntimeExample\MB_ExampleMover.cs" />
-    <Compile Include="Assets\Scripts\Gameplay\Locations\MainLocation.cs" />
+    <Compile Include="Assets\Scripts\Gameplay\Environment\Locations\MainLocation.cs" />
     <Compile Include="Assets\Scripts\UI\Factory\UIHolder.cs" />
     <Compile Include="Assets\Scripts\Infrastructure\StaticData\BuildingsData\BuildingsConfig.cs" />
     <Compile Include="Assets\Scripts\UI\Buttons\UpgradeButtonDisabler.cs" />
@@ -205,9 +211,10 @@
     <Compile Include="Assets\Scripts\Infrastructure\Services\Pool\PoolService.cs" />
     <Compile Include="Assets\Scripts\Gameplay\Bots\StateMachine\States\IsOnTheWayToResourceSourceLumberjackBotState.cs" />
     <Compile Include="Assets\Scripts\Utils\ConfigurableJointExtensions.cs" />
-    <Compile Include="Assets\Scripts\Gameplay\Buildings\BuildingConstruction.cs" />
+    <Compile Include="Assets\Scripts\Gameplay\Environment\BirdAI\Bird.cs" />
+    <Compile Include="Assets\Scripts\Gameplay\Environment\Buildings\BuildingConstruction.cs" />
     <Compile Include="Assets\MeshBaker\Examples\CharacterCustomization\MB_SwapShirts.cs" />
-    <Compile Include="Assets\Scripts\Gameplay\Buildings\IResourceBuildingReceivable.cs" />
+    <Compile Include="Assets\Scripts\Gameplay\Environment\Buildings\IResourceBuildingReceivable.cs" />
     <Compile Include="Assets\MeshBaker\Examples\SkinnedMeshRenderer\MB_SkinnedMeshSceneController.cs" />
     <Compile Include="Assets\Scripts\Infrastructure\ICoroutineRunner.cs" />
     <Compile Include="Assets\Scripts\Infrastructure\Services\Input\MobileInput.cs" />
@@ -954,6 +961,10 @@
       <Project>{9ec804ae-8527-f5ed-0363-2ef2ce8536cb}</Project>
       <Name>Unity.Mathematics.Player</Name>
     </ProjectReference>
+    <ProjectReference Include="UniRx.Player.csproj">
+      <Project>{3697c3d9-0fe4-4f18-6f26-d9d2cd0f14dc}</Project>
+      <Name>UniRx.Player</Name>
+    </ProjectReference>
     <ProjectReference Include="Unity.Burst.Player.csproj">
       <Project>{b3c2ceca-ee48-1af5-303c-feb38782e689}</Project>
       <Name>Unity.Burst.Player</Name>
@@ -1001,10 +1012,6 @@
     <ProjectReference Include="Unity.VisualScripting.State.Player.csproj">
       <Project>{ea8a7aa2-c584-f7ea-8cc1-7be2df8494e1}</Project>
       <Name>Unity.VisualScripting.State.Player</Name>
-    </ProjectReference>
-    <ProjectReference Include="UniRx.Player.csproj">
-      <Project>{3697c3d9-0fe4-4f18-6f26-d9d2cd0f14dc}</Project>
-      <Name>UniRx.Player</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

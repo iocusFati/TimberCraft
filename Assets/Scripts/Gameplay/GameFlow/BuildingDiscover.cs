@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using Gameplay.Buildings;
+using Gameplay.Environment.Buildings;
 using Infrastructure.Data;
 using Infrastructure.Services.Guid;
 using Infrastructure.Services.PersistentProgress;

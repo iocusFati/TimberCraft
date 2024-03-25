@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using Utils;
 
 namespace Infrastructure.Services.Pool.Particle
 {
@@ -41,7 +42,7 @@ namespace Infrastructure.Services.Pool.Particle
             Vector3 cameraToObject = transform.position - _mainCamera.transform.position;
             float dot = Vector3.Dot(cameraToObject, _mainCamera.transform.forward);
             
-            if (dot < 0 || !IsWithinViewport(transform.position))
+            if (dot < 0 || !_mainCamera.IsWithinViewport(transform.position))
             {
                 Debug.Log(gameObject.name + " is not visible to the camera.");
                 return false;
@@ -51,13 +52,6 @@ namespace Infrastructure.Services.Pool.Particle
                 Debug.Log(gameObject.name + " is visible to the camera.");
                 return true;
             }
-        }
-
-        private bool IsWithinViewport(Vector3 worldPosition)
-        {
-            Vector3 viewportPoint = _mainCamera.WorldToViewportPoint(worldPosition);
-            
-            return (viewportPoint.x is >= 0 and <= 1 && viewportPoint.y is >= 0 and <= 1 && viewportPoint.z >= 0);
         }
     }
 }

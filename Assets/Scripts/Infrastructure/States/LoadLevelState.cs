@@ -1,4 +1,4 @@
-using Gameplay.Locations;
+using Gameplay.Environment.Locations;
 using Infrastructure.Factories;
 using Infrastructure.Factories.PlayerFactoryFolder;
 using Infrastructure.Services.Pool;

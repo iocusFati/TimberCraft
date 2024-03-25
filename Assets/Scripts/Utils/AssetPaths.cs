@@ -25,7 +25,7 @@ namespace Utils
         public const string UIConfig = "StaticData/Configs/UIConfig";
         public const string BuildingsConfig = "StaticData/Configs/BuildingsConfig";
         public const string PoolConfig = "StaticData/Configs/PoolConfig";
-        public const string WindConfig = "StaticData/Configs/WindSimulationConfig";
+        public const string EnvironmentConfig = "StaticData/Configs/EnvironmentConfig";
 
         public const string MinionHutUpgradeData = "StaticData/GameData/MinionHutUpgradeData";
         public const string MainHouseUpgradeData = "StaticData/GameData/MainHouseUpgradeData";

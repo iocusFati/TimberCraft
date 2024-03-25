@@ -3,6 +3,7 @@ using System.Collections;
 using System.Threading.Tasks;
 using Cysharp.Threading.Tasks;
 using Gameplay.Buildings;
+using Gameplay.Environment.Buildings;
 using Gameplay.Lumberjack;
 using Gameplay.Resource;
 using Gameplay.Resource.ResourceStorage;

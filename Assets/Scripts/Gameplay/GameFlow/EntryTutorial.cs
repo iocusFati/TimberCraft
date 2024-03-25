@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using Gameplay.Buildings;
+using Gameplay.Environment.Buildings;
 using Infrastructure.Data;
 using Infrastructure.Services.PersistentProgress;
 using Infrastructure.Services.SaveLoad;

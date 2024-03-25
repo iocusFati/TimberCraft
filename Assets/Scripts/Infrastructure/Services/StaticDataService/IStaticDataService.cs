@@ -17,6 +17,6 @@ namespace Infrastructure.Services.StaticDataService
         MinionHutUpgradeData MinionHutUpgradeData { get; }
         MainHouseUpgradeData MainHouseUpgradeData { get; }
         PoolConfig PoolConfig { get; }
-        WindSimulationConfig WindConfig { get; }
+        EnvironmentConfig EnvironmentConfig { get; }
     }
 }

@@ -961,6 +961,10 @@
       <Project>{9ec804ae-8527-f5ed-0363-2ef2ce8536cb}</Project>
       <Name>Unity.Mathematics.Player</Name>
     </ProjectReference>
+    <ProjectReference Include="UniRx.Player.csproj">
+      <Project>{3697c3d9-0fe4-4f18-6f26-d9d2cd0f14dc}</Project>
+      <Name>UniRx.Player</Name>
+    </ProjectReference>
     <ProjectReference Include="Unity.Burst.Player.csproj">
       <Project>{b3c2ceca-ee48-1af5-303c-feb38782e689}</Project>
       <Name>Unity.Burst.Player</Name>
@@ -1008,10 +1012,6 @@
     <ProjectReference Include="Unity.VisualScripting.State.Player.csproj">
       <Project>{ea8a7aa2-c584-f7ea-8cc1-7be2df8494e1}</Project>
       <Name>Unity.VisualScripting.State.Player</Name>
-    </ProjectReference>
-    <ProjectReference Include="UniRx.Player.csproj">
-      <Project>{3697c3d9-0fe4-4f18-6f26-d9d2cd0f14dc}</Project>
-      <Name>UniRx.Player</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

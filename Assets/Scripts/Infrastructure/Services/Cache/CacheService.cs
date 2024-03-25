@@ -1,4 +1,5 @@
 ﻿using Gameplay.Buildings;
+using Gameplay.Environment.Buildings;
 using Gameplay.Player.ObstacleFade;
 using Gameplay.Resource;
 using UnityEngine;

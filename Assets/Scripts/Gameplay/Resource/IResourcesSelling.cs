@@ -1,5 +1,6 @@
 ﻿using System.Threading.Tasks;
 using Gameplay.Buildings;
+using Gameplay.Environment.Buildings;
 
 namespace Gameplay.Resource
 {
