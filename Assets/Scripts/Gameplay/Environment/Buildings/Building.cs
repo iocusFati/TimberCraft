@@ -15,8 +15,8 @@ namespace Gameplay.Environment.Buildings
     public abstract class Building : SerializedMonoBehaviour, IResourceBuildingReceivable
     {
         [Header("Main building")] 
-        
         [SerializeField] private Transform _receiveResourceTransform;
+        [SerializeField] private bool _isUnlockedByDefault;
         [SerializeField] private bool _useServiceGuid = true;
         [SerializeField] private bool _resourceCounterNeeded;
         
@@ -26,7 +26,7 @@ namespace Gameplay.Environment.Buildings
         [OdinSerialize] private List<(GameObject Stage, int ResourceQuantity)> _constructionStagesAndResources;
 
         protected ISaveLoadService _saveLoadService;
-        
+
         public event Action OnBuiltEvent;
 
         private BuildingConstruction BuildingConstruction { get; set; }
@@ -36,6 +36,8 @@ namespace Gameplay.Environment.Buildings
         public bool IsBuilt => BuildingConstruction.IsBuilt;
         public int NeededResources => BuildingConstruction.CurrentlyNeededResourceQuantity;
         public bool ResourcesEnough => BuildingConstruction.ResourcesEnough;
+
+        public bool IsUnlockedByDefault => _isUnlockedByDefault;
 
         public abstract void InteractWithPlayer();
         public abstract void StopInteractingWithPlayer();

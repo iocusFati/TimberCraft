@@ -779,9 +779,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9160606819224266867}
+  - component: {fileID: 446294262540447400}
   m_Layer: 0
   m_Name: Parent
-  m_TagString: Untagged
+  m_TagString: Resource
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -801,6 +802,19 @@ Transform:
   m_Father: {fileID: 9168819762506981486}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: -0, z: -0}
+--- !u!65 &446294262540447400
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9166027036158613173}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.7991354, y: 2.6077926, z: 2.2498534}
+  m_Center: {x: -0.11710095, y: 0.1204806, z: 0.46056554}
 --- !u!1 &9166641011858430989
 GameObject:
   m_ObjectHideFlags: 0
@@ -815,7 +829,7 @@ GameObject:
   - component: {fileID: 1293840753927365524}
   m_Layer: 0
   m_Name: Stone_Grey_1
-  m_TagString: Untagged
+  m_TagString: ResourceSource
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

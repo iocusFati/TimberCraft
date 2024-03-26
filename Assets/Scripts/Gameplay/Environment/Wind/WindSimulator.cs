@@ -44,7 +44,6 @@ namespace Gameplay.Environment.Wind
         {
             IDisposable blowStream = Observable.Timer(GetRandomCooldown())
                 .Where(_ => CheckForPlayer())
-                .First()
                 .Subscribe(_ => SimulateWind())
                 .AddTo(_disposer);
         }

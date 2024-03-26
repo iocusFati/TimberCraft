@@ -80,16 +80,16 @@ namespace Gameplay.Resource.StoneFolder
 
         protected override void DestroyStage()
         {
-            _segmentColliders[_segments[0].gameObject].enabled = false;
+            // _segmentColliders[_segments[0].gameObject].enabled = false;
             _segmentFlickerPairs[_segments[0]].Active = false;
 
             //first segment is removed from _segments here
             base.DestroyStage();
             
-            if (_segments.Count > 0) 
-                _segmentColliders[_segments[0].gameObject].enabled = true;
-            else
-                _segmentColliders[_segmentsCopy[0].gameObject].enabled = true;
+            // if (_segments.Count == 0) 
+            //     _segmentColliders[_segments[0].gameObject].enabled = true;
+            // else
+            //     _segmentColliders[_segmentsCopy[0].gameObject].enabled = true;
         }
 
         private void InitializeDamageFeedback()
