@@ -1,5 +1,6 @@
 ﻿using Infrastructure.AssetProviderService;
 using UI.Entities.HUD_Folder;
+using UI.Entities.Windows;
 using UnityEngine;
 using Utils;
 using Zenject;
@@ -38,11 +39,15 @@ namespace UI.Factory
             return hud;
         }
 
+        public void CreateCurtain() => 
+            CreateUIEntity<Curtain>(AssetPaths.Curtain);
+
         private TEntity CreateUIEntity<TEntity>(string path, Canvas parent = null) where TEntity : Component, IUIEntity
         {
-            parent = SetParentIfNull();
-
-            TEntity entity = _instantiator.InstantiatePrefabResourceForComponent<TEntity>(path, parent.transform);
+            TEntity entity = parent is not null 
+                ? _instantiator.InstantiatePrefabResourceForComponent<TEntity>(path, parent.transform) 
+                : _instantiator.InstantiatePrefabResourceForComponent<TEntity>(path);
+            
             _uiContainer.RegisterUIEntity(entity);
 
             return entity;

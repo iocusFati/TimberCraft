@@ -58,9 +58,9 @@ namespace Gameplay.Bots.StateMachine.States
             _targetResource.StartMining();
             _aiPath.destination = _targetResource.transform.position;
             
-            SetRunAnimation();
-            
             _botStateMachine.Enter<IsOnTheWayToResourceSourceLumberjackBotState, ResourceSource>(_targetResource);
+            
+            SetRunAnimation().Forget();
         }
 
         private async UniTaskVoid SetRunAnimation()

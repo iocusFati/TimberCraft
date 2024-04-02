@@ -48,6 +48,7 @@ namespace Gameplay.Resource
         private MMF_Position _shareAnimationFeedback;
         private ResourcesConfig _resourcesConfig;
         private CancellationTokenSource _fadeOutCancellationSource;
+        private Quaternion _initialModelRotation;
 
         public bool IsCollected { get; private set; }
         public int ResourceValue { get; set; }
@@ -67,6 +68,7 @@ namespace Gameplay.Resource
             
             _modelInitialScale = _model.localScale;
             _initialScale = transform.localScale;
+            _initialModelRotation = _model.rotation;
 
             _shareAnimationFeedback = _shareFeedbackPlayer.GetFeedbackOfType<MMF_Position>(_shareFeedbackPositionName);
         }
@@ -102,7 +104,7 @@ namespace Gameplay.Resource
             transform.localScale = _initialScale;
             _model.localScale = _modelInitialScale;
             _model.localPosition = Vector3.zero;
-            _model.localRotation = Quaternion.identity;
+            _model.localRotation = _initialModelRotation;
             _collider.enabled = false;
 
             IsCollected = false;

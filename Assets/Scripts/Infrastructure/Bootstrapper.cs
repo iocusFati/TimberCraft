@@ -1,5 +1,6 @@
 ﻿using Infrastructure.States;
 using Infrastructure.States.Interfaces;
+using UI.Factory;
 using UnityEngine;
 using Zenject;
 
@@ -11,16 +12,19 @@ namespace Infrastructure
         
         private IStateMachine _gameStateMachine;
         private StatesFactory _statesFactory;
+        private IUIFactory _uiFactory;
 
         [Inject]
-        public void Construct(IStateMachine gameStateMachine, StatesFactory statesFactory)
+        public void Construct(IStateMachine gameStateMachine, StatesFactory statesFactory, IUIFactory uiFactory)
         {
             _gameStateMachine = gameStateMachine;
             _statesFactory = statesFactory;
+            _uiFactory = uiFactory;
         }
 
         private void Start()
         {
+            _uiFactory.CreateCurtain();
             RegisterStatesForStateMachine();
             SetupResolution();
         }

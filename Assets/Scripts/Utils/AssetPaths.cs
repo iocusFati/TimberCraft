@@ -7,6 +7,7 @@ namespace Utils
 
         public const string UIRoot = "Prefabs/UI/UIRoot";
         public const string HUD = "Prefabs/UI/HUD";
+        public const string Curtain = "Prefabs/UI/Curtain";
 
         //Particles
         public const string WoodHitParticle = "Prefabs/Particles/WoodImpact";

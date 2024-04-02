@@ -15,12 +15,13 @@ namespace Gameplay.Resource.StoneFolder
         [Header("Stone")]
         [SerializeField] private List<Transform> _particlePositions;
         [SerializeField] private GameObject _stoneMark;
+        [SerializeField] private Collider _damageTrigger;
         
         [Header("Feedbacks")]
         [SerializeField] private MMF_Player _damageFeedback;
 
         private MMF_Events _delayHitEvent;
-        
+
         private readonly Dictionary<Transform, MMF_Flicker> _segmentFlickerPairs = new();
 
         [Inject]
@@ -76,6 +77,7 @@ namespace Gameplay.Resource.StoneFolder
             base.OnLastStageDestroyed();
             
             _stoneMark.SetActive(true);
+            _damageTrigger.enabled = false;
         }
 
         protected override void DestroyStage()
@@ -109,6 +111,8 @@ namespace Gameplay.Resource.StoneFolder
 
         private void RestoreSegments()
         {
+            _damageTrigger.enabled = true;
+            
             foreach (var segment in _segmentsCopy)
             {
                 segment.gameObject.SetActive(true);

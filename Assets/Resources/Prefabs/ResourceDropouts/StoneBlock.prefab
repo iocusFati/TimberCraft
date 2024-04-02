@@ -25,7 +25,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2006436338197125084}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -19.743809, y: 3.83, z: 36.35196}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -84,14 +84,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2006611107528754241}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.003, y: 0.003, z: 0.0069999998}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2003033695649427091}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: -0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!33 &1991932731896774201
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -1063,7 +1063,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5870961109831585524, guid: d816c74316bb4d74f99759d6d6b48b63, type: 3}
       propertyPath: managedReferences[6611061492125532167].RemapCurveOne
-      value: 50
+      value: 80
       objectReference: {fileID: 0}
     - target: {fileID: 5870961109831585524, guid: d816c74316bb4d74f99759d6d6b48b63, type: 3}
       propertyPath: managedReferences[6611061492125532167].RotationSpace
@@ -1723,7 +1723,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5870961109831585524, guid: d816c74316bb4d74f99759d6d6b48b63, type: 3}
       propertyPath: managedReferences[6611061492125532168].AdditionalHeight
-      value: 1.8
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5870961109831585524, guid: d816c74316bb4d74f99759d6d6b48b63, type: 3}
       propertyPath: managedReferences[6611061492125532168].RelativePosition
@@ -6731,7 +6731,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5870961109831585524, guid: d816c74316bb4d74f99759d6d6b48b63, type: 3}
       propertyPath: managedReferences[6611061492125532168].AnimatePositionTweenY.Curve.m_Curve.Array.data[1].value
-      value: 1.4
+      value: 2.5
       objectReference: {fileID: 0}
     - target: {fileID: 5870961109831585524, guid: d816c74316bb4d74f99759d6d6b48b63, type: 3}
       propertyPath: managedReferences[6611061492125532168].AnimatePositionTweenY.Curve.m_Curve.Array.data[2].value
@@ -7099,7 +7099,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5870961109831585524, guid: d816c74316bb4d74f99759d6d6b48b63, type: 3}
       propertyPath: managedReferences[6611061492125532168].AnimatePositionTweenY.Curve.m_Curve.Array.data[2].inSlope
-      value: -2.4275048
+      value: -11.996784
       objectReference: {fileID: 0}
     - target: {fileID: 5870961109831585524, guid: d816c74316bb4d74f99759d6d6b48b63, type: 3}
       propertyPath: managedReferences[6611061492125532168].AnimatePositionTweenZ.Curve.m_Curve.Array.data[0].inSlope
@@ -7543,11 +7543,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5870961109831585524, guid: d816c74316bb4d74f99759d6d6b48b63, type: 3}
       propertyPath: managedReferences[6611061492125532168].AnimatePositionTweenY.Curve.m_Curve.Array.data[2].inWeight
-      value: 0.17804758
+      value: 0.0479452
       objectReference: {fileID: 0}
     - target: {fileID: 5870961109831585524, guid: d816c74316bb4d74f99759d6d6b48b63, type: 3}
       propertyPath: managedReferences[6611061492125532168].AnimatePositionTweenY.Curve.m_Curve.Array.data[2].outSlope
-      value: -2.4275048
+      value: -11.996784
       objectReference: {fileID: 0}
     - target: {fileID: 5870961109831585524, guid: d816c74316bb4d74f99759d6d6b48b63, type: 3}
       propertyPath: managedReferences[6611061492125532168].AnimatePositionTweenZ.Curve.m_Curve.Array.data[0].inWeight

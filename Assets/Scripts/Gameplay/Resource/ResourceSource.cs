@@ -28,7 +28,7 @@ namespace Gameplay.Resource
         protected ParticlePool _hitParticlePool;
 
         protected Transform[] _segmentsCopy;
-        protected Dictionary<GameObject,Collider> _segmentColliders;
+        // protected Dictionary<GameObject,Collider> _segmentColliders;
 
         public ResourceSourceState CurrentState { get; private set; } = ResourceSourceState.Untouched;
         public ResourceType Type { get; private set; }
@@ -42,7 +42,7 @@ namespace Gameplay.Resource
             _resourcesConfig = staticData.ResourcesConfig;
         }
         
-        public void Construct(int resourcesValue)
+        public virtual void Construct(int resourcesValue)
         {
             _resourcesValue = resourcesValue;
 
@@ -143,9 +143,9 @@ namespace Gameplay.Resource
                 .Select(segment => segment.GetComponent<Collider>())
                 .ToArray();
             
-            _segmentColliders = segmentColliders.ToDictionary(
-                keySelector => keySelector.gameObject, 
-                segmentCollider => segmentCollider);
+            // _segmentColliders = segmentColliders.ToDictionary(
+            //     keySelector => keySelector.gameObject, 
+            //     segmentCollider => segmentCollider);
         }
 
         private void SetResourceType()
