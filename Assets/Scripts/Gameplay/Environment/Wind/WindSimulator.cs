@@ -36,9 +36,13 @@ namespace Gameplay.Environment.Wind
         {
             _disposer = new CompositeDisposable();
             PlayerLayer = LayerMask.GetMask("PlayerBody");
-            
-            BlowWindInTime();
         }
+
+        private void OnEnable() => 
+            BlowWindInTime();
+
+        private void OnDisable() => 
+            _disposer.Clear();
 
         private void BlowWindInTime()
         {

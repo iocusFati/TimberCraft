@@ -1,4 +1,5 @@
 ﻿using System.Threading.Tasks;
+using Cysharp.Threading.Tasks;
 using Gameplay.Buildings;
 using Gameplay.Environment.Buildings;
 using Gameplay.Player;
@@ -37,21 +38,25 @@ namespace Gameplay.Resource
             return sellResourcesCount;
         }
 
-        public async Task TrySellToReceiveCoins(ResourceType resourceType, int coinsReceived,
+        public async UniTask TrySellToReceiveCoins(ResourceType resourceType, int coinsReceived,
             IResourceBuildingReceivable receivable)
         {
             for (int i = 0; i < coinsReceived; i++)
             {
                 int resourceUnitsPerCoin = GetResourceUnitsPerCoin(resourceType);
             
-                bool shared = await _playerSharing.ShareResourcesWith(receivable, false, resourceUnitsPerCoin);
+                bool shared = await _playerSharing.ShareResourcesWith(receivable, false, resourceUnitsPerCoin,
+                    OnResourceShared);
 
                 if (!shared) 
                     await Task.Delay(2000);
 
-                int additionalResources = GetAdditionalResourcesForSelling(resourceType, resourceUnitsPerCoin);
+                void OnResourceShared()
+                {
+                    int additionalResources = GetAdditionalResourcesForSelling(resourceType, resourceUnitsPerCoin);
 
-                SellResource(resourceType, resourceUnitsPerCoin + additionalResources);
+                    SellResource(resourceType, resourceUnitsPerCoin + additionalResources);
+                }
             }
         }
 
@@ -59,7 +64,7 @@ namespace Gameplay.Resource
         {
             int coinsReceived = sellResourceCount / GetResourceUnitsPerCoin(resourceType);
             
-            _gameResourceStorage.TryGiveResource(resourceType, sellResourceCount);
+            // _gameResourceStorage.TryGiveResource(resourceType, sellResourceCount);
             _gameResourceStorage.TakeResource(ResourceType.Coin, coinsReceived);
         }
 

@@ -237,7 +237,7 @@ MonoBehaviour:
   openPrefabs: 0
   prefabs: []
   idRef:
-    _Keys: 8980c40fa658b95645b03f939ec99754f03def8d1009bc0f61c7c2a2fe15967fcebd9422aedb2e49359d94b6ce9d2f47078e28311695bb6c3cd3addf9517582fe7409ea4a246fd140fa65973740640000af55773c2376938605dce9e7b3c9f2d02275e82890ddf4c0a3b307101745a3f6febdd90c4b70842f8c43ccea920116aab1fa9c44c82873d14aee88b6ecbf251d766a27ae77b8b00c80d7db036b1027db0681d51eb060346d05e69c70995453eb721b898e92bd8158922a72ecb47873ab166db05ada066230a83d021175f85619cb7dc22e788c927
+    _Keys: 8980c40fa658b95645b03f939ec99754f03def8d1009bc0f61c7c2a2fe15967fcebd9422aedb2e49359d94b6ce9d2f47078e28311695bb6c3cd3addf9517582fe7409ea4a246fd140fa65973740640000af55773c2376938605dce9e7b3c9f2d02275e82890ddf4c0a3b307101745a3f6febdd90c4b70842f8c43ccea920116aab1fa9c44c82873d14aee88b6ecbf251d766a27ae77b8b00c80d7db036b1027db0681d51eb060346d05e69c70995453eb721b898e92bd8158922a72ecb47873ab166db05ada066230a83d021175f85619cb7dc22e788c92761e67a41f4d89100dc46172c8d8da35be652360dc31ab940694de7f33997ea1ce164109f0cd08f1048383cc1e9f21e439d3ed3ea318ec27f0fcbc1a5991e2219585d9b6ef3fd826eaa87ab2cf99a04102710020730d5137aea55a0628f1c80301e20ad9efcb8084fe8e686ee3d3e18740488e5f7e1aa862036c354c16d7e2d4b32482ae716b3e057de2a29db5e803d2827141fd7465ea549c81104cc081ec01f
     _Values:
     - {fileID: 963194225}
     - {fileID: 963194226}
@@ -266,6 +266,26 @@ MonoBehaviour:
     - {fileID: 150242360}
     - {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
     - {fileID: 705507996}
+    - {fileID: 8859867468381549450, guid: 098f82254d214384ebcbb99342c1d7de, type: 3}
+    - {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
+    - {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
+    - {fileID: 3220190420518446644, guid: 098f82254d214384ebcbb99342c1d7de, type: 3}
+    - {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+    - {fileID: 1261581576420114325, guid: 098f82254d214384ebcbb99342c1d7de, type: 3}
+    - {fileID: 10753, guid: 0000000000000000f000000000000000, type: 0}
+    - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+    - {fileID: 21300000, guid: 2a07ad9ab292b144cb0b64871518c92a, type: 3}
+    - {fileID: 2800000, guid: 2a07ad9ab292b144cb0b64871518c92a, type: 3}
+    - {fileID: 11500000, guid: 454ad449c3c640ba9e8105a5b4459c48, type: 3}
+    - {fileID: 7720108990510785263, guid: 098f82254d214384ebcbb99342c1d7de, type: 3}
+    - {fileID: 4288170764761924618, guid: 098f82254d214384ebcbb99342c1d7de, type: 3}
+    - {fileID: 4840097439797758467, guid: 098f82254d214384ebcbb99342c1d7de, type: 3}
+    - {fileID: 3101972014265379412, guid: 098f82254d214384ebcbb99342c1d7de, type: 3}
+    - {fileID: 8062842624254466183, guid: 098f82254d214384ebcbb99342c1d7de, type: 3}
+    - {fileID: 325086146657633774, guid: 098f82254d214384ebcbb99342c1d7de, type: 3}
+    - {fileID: 1514034443288733041, guid: 098f82254d214384ebcbb99342c1d7de, type: 3}
+    - {fileID: 963194229}
+    - {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
 --- !u!4 &345341117
 Transform:
   m_ObjectHideFlags: 0
@@ -452,6 +472,7 @@ GameObject:
   - component: {fileID: 963194228}
   - component: {fileID: 963194227}
   - component: {fileID: 963194226}
+  - component: {fileID: 963194229}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -525,6 +546,39 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &963194229
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 963194225}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_RenderShadows: 1
+  m_RequiresDepthTextureOption: 2
+  m_RequiresOpaqueTextureOption: 2
+  m_CameraType: 0
+  m_Cameras: []
+  m_RendererIndex: -1
+  m_VolumeLayerMask:
+    serializedVersion: 2
+    m_Bits: 1
+  m_VolumeTrigger: {fileID: 0}
+  m_VolumeFrameworkUpdateModeOption: 2
+  m_RenderPostProcessing: 0
+  m_Antialiasing: 0
+  m_AntialiasingQuality: 2
+  m_StopNaN: 0
+  m_Dithering: 0
+  m_ClearDepth: 1
+  m_AllowXRRendering: 1
+  m_RequiresDepthTexture: 0
+  m_RequiresColorTexture: 0
+  m_Version: 2
 --- !u!1 &1591628938
 GameObject:
   m_ObjectHideFlags: 0

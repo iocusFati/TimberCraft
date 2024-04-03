@@ -15,6 +15,7 @@ MonoBehaviour:
   modifiedAssetPathList:
   - Assets/Bakery/examples/content/sponza/sponza.FBX
   - Assets/Other/Lumber/Mesh/CubeRig.fbx
+  - Assets/Other/Low_Poly_Environment_World/Content/Models/model_polytope_long_grass_patch.fbx
   modifiedAssetPaddingHash: d6a958ffd2f23a06
   modifiedMeshList: []
   modifiedMeshPaddingList: 
@@ -401,6 +402,10 @@ MonoBehaviour:
   - meshName:
     - Cube.001
     padding: 1e000000
+    unwrapper: 00000000
+  - meshName:
+    - model_polytope_long_grass_patch
+    padding: a0000000
     unwrapper: 00000000
   assetList:
   - Assets/Bakery/examples/content/sponza/bush.FBX

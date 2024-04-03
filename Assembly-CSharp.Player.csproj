@@ -206,6 +206,7 @@
     <Compile Include="Assets\Scripts\Gameplay\Player\Player.cs" />
     <Compile Include="Assets\Scripts\Infrastructure\Factories\BotFactoryFolder\BotFactory.cs" />
     <Compile Include="Assets\Other\KriptoFX\MuzzleFlashes\Scripts\Demo\FPSDemoReactivator.cs" />
+    <Compile Include="Assets\Scripts\UI\Entities\Windows\Curtain.cs" />
     <Compile Include="Assets\MeshBaker\Examples\BakeTexturesAtRuntime\BakeTexturesAtRuntime.cs" />
     <Compile Include="Assets\Scripts\Utils\IntExtensions.cs" />
     <Compile Include="Assets\Scripts\Infrastructure\Services\Pool\PoolService.cs" />
@@ -220,7 +221,6 @@
     <Compile Include="Assets\Scripts\Infrastructure\Services\Input\MobileInput.cs" />
     <Compile Include="Assets\Scripts\Utils\Constants.cs" />
     <Compile Include="Assets\Scripts\Infrastructure\Services\Input\IInputService.cs" />
-    <Compile Include="Assets\Scripts\UI\Entities\Windows\Curtain.cs" />
     <Reference Include="UnityEngine">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.25f1\Editor\Data\PlaybackEngines\AndroidPlayer\Variations\mono\Managed\UnityEngine.dll</HintPath>
     </Reference>

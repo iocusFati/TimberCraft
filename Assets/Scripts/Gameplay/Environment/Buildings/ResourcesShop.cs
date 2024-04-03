@@ -1,4 +1,5 @@
 ﻿using System.Threading.Tasks;
+using Cysharp.Threading.Tasks;
 using Gameplay.Player;
 using Gameplay.Resource;
 using Infrastructure.Factories;
@@ -42,7 +43,7 @@ namespace Gameplay.Environment.Buildings
             _stopInteractionWithPlayer = true;
         }
 
-        public async Task BuyResourcesFromPlayer()
+        public async UniTask BuyResourcesFromPlayer()
         {
             while (!_stopInteractionWithPlayer)
             {

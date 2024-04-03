@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Threading.Tasks;
 using Cysharp.Threading.Tasks;
-using Gameplay.Buildings;
 using Gameplay.Environment.Buildings;
 using Gameplay.Resource;
 using Gameplay.Resource.ResourceStorage;
@@ -47,8 +45,9 @@ namespace Gameplay.Player
         public async UniTask ShareResourcesForConstructionWith(IResourceBuildingReceivable receivable) => 
             await ShareResourcesWith(receivable, true);
 
-        public async Task<bool> ShareResourcesWith(IResourceBuildingReceivable receivable, bool isForConstruction,
-            int? specifiedResourceCount = null)
+        public async UniTask<bool> ShareResourcesWith(IResourceBuildingReceivable receivable, bool isForConstruction,
+            int? specifiedResourceCount = null,
+            Action onResourceDelivered = null)
         {
             int neededResources = specifiedResourceCount ?? receivable.NeededResources;
             ResourceType resourceType = receivable.ConstructionResourceType;
@@ -59,20 +58,26 @@ namespace Gameplay.Player
             DropoutResource dropoutResource = _dropoutsPool[resourceType].Get();
 
             receivable.PromiseResource(shareQuantity);
-            
-            AnimateShare(receivable, dropoutResource, 
-                () => OnResourceDelivered(receivable, isForConstruction, dropoutResource))
-                .Forget();
 
+
+            AnimateShare(receivable, dropoutResource, () =>
+            {
+                OnResourceDelivered(receivable, isForConstruction, dropoutResource, shareQuantity);
+                onResourceDelivered?.Invoke();
+            })
+                .Forget();
+            
             await WaitForCooldown();
 
             return true;
         }
 
-        private static void OnResourceDelivered(IResourceBuildingReceivable receivable, bool isForConstruction,
-            DropoutResource dropoutResource)
+        private void OnResourceDelivered(IResourceBuildingReceivable receivable, bool isForConstruction,
+            DropoutResource dropoutResource, int resourceShareQuantity)
         {
             dropoutResource.Release();
+
+            _gameResourceStorage.TryGiveResource(dropoutResource.Type, resourceShareQuantity);
 
             if (isForConstruction) 
                 receivable.ReceiveResource();
@@ -85,8 +90,8 @@ namespace Gameplay.Player
                    ResourcesExistInResourceHolder(neededResources, resourceType, isForConstruction, out resourceShareQuantity);
         }
 
-        private async UniTaskVoid AnimateShare(IResourceBuildingReceivable receivable, DropoutResource resource,
-            Action onDelivered)
+        private async UniTask AnimateShare(IResourceBuildingReceivable receivable, DropoutResource resource,
+            Action onFinishedAnimation)
         {
             resource.transform.position = _resourcesSpawnTransform.position;
 
@@ -94,7 +99,7 @@ namespace Gameplay.Player
             
             await resource.PlayShareAnimationTo(receivable.ReceiveResourceTransform.position, _currentAnimationDirection);
             
-            onDelivered.Invoke();
+            onFinishedAnimation.Invoke();
         }
 
         private PositivityEnum GetAnimationDirection() =>
