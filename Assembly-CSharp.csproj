@@ -26,7 +26,7 @@
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
     <OutputPath>Temp\Bin\Debug\Assembly-CSharp\</OutputPath>
-    <DefineConstants>UNITY_2021_3_25;UNITY_2021_3;UNITY_2021;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_2017_1_OR_NEWER;UNITY_2017_2_OR_NEWER;UNITY_2017_3_OR_NEWER;UNITY_2017_4_OR_NEWER;UNITY_2018_1_OR_NEWER;UNITY_2018_2_OR_NEWER;UNITY_2018_3_OR_NEWER;UNITY_2018_4_OR_NEWER;UNITY_2019_1_OR_NEWER;UNITY_2019_2_OR_NEWER;UNITY_2019_3_OR_NEWER;UNITY_2019_4_OR_NEWER;UNITY_2020_1_OR_NEWER;UNITY_2020_2_OR_NEWER;UNITY_2020_3_OR_NEWER;UNITY_2021_1_OR_NEWER;UNITY_2021_2_OR_NEWER;UNITY_2021_3_OR_NEWER;UNITY_INCLUDE_TESTS;ENABLE_AR;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_EVENT_QUEUE;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_TEXTURE_STREAMING;ENABLE_UNET;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_VR;ENABLE_WEBCAM;ENABLE_UNITYWEBREQUEST;ENABLE_WWW;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_COLLAB_SOFTLOCKS;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_SERVICES_USE_WEBREQUEST;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_CLOUD_SERVICES_NATIVE_CRASH_REPORTING;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_HUB_LICENSE;ENABLE_WEBSOCKET_CLIENT;ENABLE_DIRECTOR_AUDIO;ENABLE_DIRECTOR_TEXTURE;ENABLE_MANAGED_JOBS;ENABLE_MANAGED_TRANSFORM_JOBS;ENABLE_MANAGED_ANIMATION_JOBS;ENABLE_MANAGED_AUDIO_JOBS;ENABLE_RUNTIME_PERMISSIONS;ENABLE_ENGINE_CODE_STRIPPING;ENABLE_ONSCREEN_KEYBOARD;ENABLE_MANAGED_UNITYTLS;INCLUDE_DYNAMIC_GI;ENABLE_SCRIPTING_GC_WBARRIERS;PLATFORM_SUPPORTS_MONO;ENABLE_VIDEO;ENABLE_ACCELERATOR_CLIENT_DEBUGGING;PLATFORM_ANDROID;TEXTCORE_1_0_OR_NEWER;UNITY_ANDROID;UNITY_ANDROID_API;ENABLE_EGL;ENABLE_NETWORK;ENABLE_RUNTIME_GI;ENABLE_CRUNCH_TEXTURE_COMPRESSION;UNITY_CAN_SHOW_SPLASH_SCREEN;UNITY_HAS_GOOGLEVR;UNITY_HAS_TANGO;ENABLE_SPATIALTRACKING;ENABLE_ETC_COMPRESSION;PLATFORM_EXTENDS_VULKAN_DEVICE;PLATFORM_HAS_MULTIPLE_SWAPCHAINS;UNITY_ANDROID_SUPPORTS_SHADOWFILES;PLATFORM_UPDATES_TIME_OUTSIDE_OF_PLAYER_LOOP;ENABLE_UNITYADS_RUNTIME;UNITY_UNITYADS_API;ENABLE_MONO;NET_STANDARD_2_0;NET_STANDARD;NET_STANDARD_2_1;NETSTANDARD;NETSTANDARD2_1;ENABLE_PROFILER;DEBUG;TRACE;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_WIN;ENABLE_UNITY_COLLECTIONS_CHECKS;ENABLE_BURST_AOT;UNITY_TEAM_LICENSE;ENABLE_CUSTOM_RENDER_TEXTURE;ENABLE_DIRECTOR;ENABLE_LOCALIZATION;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_TILEMAP;ENABLE_TIMELINE;ENABLE_INPUT_SYSTEM;ENABLE_LEGACY_INPUT_MANAGER;TEXTCORE_FONT_ENGINE_1_5_OR_NEWER;UNITY_POST_PROCESSING_STACK_V2;MOREMOUNTAINS_NICEVIBRATIONS_INSTALLED;ODIN_INSPECTOR;ODIN_INSPECTOR_3;ODIN_INSPECTOR_3_1;UNITY_VISUAL_SCRIPTING;BAKERY_INCLUDED;UNITASK_DOTWEEN_SUPPORT;CSHARP_7_OR_LATER;CSHARP_7_3_OR_NEWER</DefineConstants>
+    <DefineConstants>UNITY_2021_3_25;UNITY_2021_3;UNITY_2021;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_2017_1_OR_NEWER;UNITY_2017_2_OR_NEWER;UNITY_2017_3_OR_NEWER;UNITY_2017_4_OR_NEWER;UNITY_2018_1_OR_NEWER;UNITY_2018_2_OR_NEWER;UNITY_2018_3_OR_NEWER;UNITY_2018_4_OR_NEWER;UNITY_2019_1_OR_NEWER;UNITY_2019_2_OR_NEWER;UNITY_2019_3_OR_NEWER;UNITY_2019_4_OR_NEWER;UNITY_2020_1_OR_NEWER;UNITY_2020_2_OR_NEWER;UNITY_2020_3_OR_NEWER;UNITY_2021_1_OR_NEWER;UNITY_2021_2_OR_NEWER;UNITY_2021_3_OR_NEWER;UNITY_INCLUDE_TESTS;ENABLE_AR;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_EVENT_QUEUE;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_TEXTURE_STREAMING;ENABLE_UNET;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_VR;ENABLE_WEBCAM;ENABLE_UNITYWEBREQUEST;ENABLE_WWW;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_COLLAB_SOFTLOCKS;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_SERVICES_USE_WEBREQUEST;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_CLOUD_SERVICES_NATIVE_CRASH_REPORTING;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_HUB_LICENSE;ENABLE_WEBSOCKET_CLIENT;ENABLE_DIRECTOR_AUDIO;ENABLE_DIRECTOR_TEXTURE;ENABLE_MANAGED_JOBS;ENABLE_MANAGED_TRANSFORM_JOBS;ENABLE_MANAGED_ANIMATION_JOBS;ENABLE_MANAGED_AUDIO_JOBS;ENABLE_RUNTIME_PERMISSIONS;ENABLE_ENGINE_CODE_STRIPPING;ENABLE_ONSCREEN_KEYBOARD;ENABLE_MANAGED_UNITYTLS;INCLUDE_DYNAMIC_GI;ENABLE_SCRIPTING_GC_WBARRIERS;PLATFORM_SUPPORTS_MONO;ENABLE_VIDEO;ENABLE_ACCELERATOR_CLIENT_DEBUGGING;PLATFORM_ANDROID;TEXTCORE_1_0_OR_NEWER;UNITY_ANDROID;UNITY_ANDROID_API;ENABLE_EGL;ENABLE_NETWORK;ENABLE_RUNTIME_GI;ENABLE_CRUNCH_TEXTURE_COMPRESSION;UNITY_CAN_SHOW_SPLASH_SCREEN;UNITY_HAS_GOOGLEVR;UNITY_HAS_TANGO;ENABLE_SPATIALTRACKING;ENABLE_ETC_COMPRESSION;PLATFORM_EXTENDS_VULKAN_DEVICE;PLATFORM_HAS_MULTIPLE_SWAPCHAINS;UNITY_ANDROID_SUPPORTS_SHADOWFILES;PLATFORM_UPDATES_TIME_OUTSIDE_OF_PLAYER_LOOP;ENABLE_UNITYADS_RUNTIME;UNITY_UNITYADS_API;ENABLE_MONO;NET_STANDARD_2_0;NET_STANDARD;NET_STANDARD_2_1;NETSTANDARD;NETSTANDARD2_1;ENABLE_PROFILER;DEBUG;TRACE;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_WIN;ENABLE_UNITY_COLLECTIONS_CHECKS;ENABLE_BURST_AOT;UNITY_TEAM_LICENSE;ENABLE_CUSTOM_RENDER_TEXTURE;ENABLE_DIRECTOR;ENABLE_LOCALIZATION;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_TILEMAP;ENABLE_TIMELINE;ENABLE_INPUT_SYSTEM;ENABLE_LEGACY_INPUT_MANAGER;TEXTCORE_FONT_ENGINE_1_5_OR_NEWER;UNITY_POST_PROCESSING_STACK_V2;MOREMOUNTAINS_NICEVIBRATIONS_INSTALLED;ODIN_INSPECTOR;ODIN_INSPECTOR_3;ODIN_INSPECTOR_3_1;UNITY_VISUAL_SCRIPTING;BAKERY_INCLUDED;UNITASK_DOTWEEN_SUPPORT;DISTANT_LANDS;COZY_WEATHER;COZY_URP;CSHARP_7_OR_LATER;CSHARP_7_3_OR_NEWER</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <NoWarn>0169,0649</NoWarn>
@@ -48,6 +48,7 @@
     <Compile Include="Assets\Scripts\Gameplay\Bots\StateMachine\States\GoToResourceSourceLumberjackBotState.cs" />
     <Compile Include="Assets\Scripts\UI\BillboardEffect.cs" />
     <Compile Include="Assets\Scripts\Infrastructure\Services\SaveLoad\ISaveLoadService.cs" />
+    <Compile Include="Assets\Scripts\Infrastructure\StaticData\WindData\BlownByWindConfigurableJoint.cs" />
     <Compile Include="Assets\MeshBaker\Examples\Scripts\MB_MigrateMaterialsToDifferentPipeline.cs" />
     <Compile Include="Assets\Scripts\Infrastructure\States\StateMachine.cs" />
     <Compile Include="Assets\Scripts\Infrastructure\States\LoadProgressState.cs" />
@@ -56,13 +57,15 @@
     <Compile Include="Assets\Scripts\Infrastructure\StaticData\BuildingsData\MinionHutUpgradeData.cs" />
     <Compile Include="Assets\Other\KriptoFX\MuzzleFlashes\Scripts\Demo\FPS_MouseLook.cs" />
     <Compile Include="Assets\Scripts\UI\Buttons\BuyButtonDisabler.cs" />
+    <Compile Include="Assets\Scripts\Gameplay\Environment\BirdAI\BirdSpawn.cs" />
     <Compile Include="Assets\Other\KriptoFX\MuzzleFlashes\Scripts\FPSLightCurves.cs" />
+    <Compile Include="Assets\Scripts\Utils\CameraExtensions.cs" />
     <Compile Include="Assets\Scripts\Utils\Tags.cs" />
     <Compile Include="Assets\Scripts\Infrastructure\Ticker.cs" />
     <Compile Include="Assets\Scripts\Gameplay\Resource\DropoutResource.cs" />
     <Compile Include="Assets\Scripts\Gameplay\Lumberjack\LumberjackBotStorage.cs" />
     <Compile Include="Assets\Scripts\Utils\AssetPaths.cs" />
-    <Compile Include="Assets\Scripts\Gameplay\Buildings\ResourcesShop.cs" />
+    <Compile Include="Assets\Scripts\Gameplay\Environment\Buildings\ResourcesShop.cs" />
     <Compile Include="Assets\Scripts\Infrastructure\Services\Input\StandaloneInput.cs" />
     <Compile Include="Assets\Scripts\Gameplay\Bots\StateMachine\States\BringResourcesToHutLumberjackBotState.cs" />
     <Compile Include="Assets\Scripts\Infrastructure\Services\SaveLoad\SaveLoadService.cs" />
@@ -72,21 +75,23 @@
     <Compile Include="Assets\Scripts\UI\ResourceCounter.cs" />
     <Compile Include="Assets\Scripts\Infrastructure\Services\StaticDataService\IStaticDataService.cs" />
     <Compile Include="Assets\Other\KriptoFX\MuzzleFlashes\Scripts\Demo\FPS_RigidbodyFirstPersonController.cs" />
-    <Compile Include="Assets\Scripts\Gameplay\Buildings\MainHouse.cs" />
+    <Compile Include="Assets\Scripts\Gameplay\Environment\Buildings\MainHouse.cs" />
     <Compile Include="Assets\Scripts\Infrastructure\Services\Pool\ParticlePool.cs" />
     <Compile Include="Assets\Scripts\Infrastructure\StaticData\BuildingsData\MinionHutLevelUpgrade.cs" />
     <Compile Include="Assets\Scripts\Infrastructure\Services\SaveLoad\OnExitSave.cs" />
+    <Compile Include="Assets\Quirky Series - Birds Bundle\_Scripts\Demo.cs" />
     <Compile Include="Assets\Scripts\Infrastructure\Installers\BootstrapInstaller.cs" />
     <Compile Include="Assets\Scripts\Gameplay\Player\Animation\LumberjackAnimator.cs" />
     <Compile Include="Assets\Scripts\Gameplay\Cameras\CameraSway.cs" />
     <Compile Include="Assets\Scripts\Infrastructure\Services\IService.cs" />
-    <Compile Include="Assets\Scripts\Gameplay\Buildings\UpgradableBuilding.cs" />
+    <Compile Include="Assets\Scripts\Gameplay\Environment\Buildings\UpgradableBuilding.cs" />
     <Compile Include="Assets\Scripts\UI\Entities\HUD_Folder\HUD.cs" />
     <Compile Include="Assets\Other\KriptoFX\MuzzleFlashes\Scripts\FPSRandomRotateAngle.cs" />
     <Compile Include="Assets\Scripts\Infrastructure\StaticData\CameraData\CameraSwayConfig.cs" />
     <Compile Include="Assets\Scripts\UI\Entities\PopUps\MainHousePopUp.cs" />
     <Compile Include="Assets\Scripts\Infrastructure\StaticData\LumberjackData\LumberjackBotConfig.cs" />
     <Compile Include="Assets\MeshBaker\Examples\SceneRuntimeExample\MB_ExampleSkinnedMeshDescription.cs" />
+    <Compile Include="Assets\Scripts\Utils\ListExtensions.cs" />
     <Compile Include="Assets\Scripts\Infrastructure\StaticData\LumberjackData\PlayerConfig.cs" />
     <Compile Include="Assets\Scripts\Gameplay\Resource\ResourcesSelling.cs" />
     <Compile Include="Assets\Scripts\Utils\TransformExtensions.cs" />
@@ -94,6 +99,7 @@
     <Compile Include="Assets\Scripts\Infrastructure\Services\Cache\ICacheService.cs" />
     <Compile Include="Assets\Other\_Gloomy_Hyper\Script\MouseOrbitImproved.cs" />
     <Compile Include="Assets\Scripts\Infrastructure\Factories\IFactoriesHolderService.cs" />
+    <Compile Include="Assets\Scripts\Gameplay\Environment\Wind\WindSimulator.cs" />
     <Compile Include="Assets\Scripts\Infrastructure\Services\Pool\Particle\ParticleRender.cs" />
     <Compile Include="Assets\Scripts\Gameplay\Player\ObstacleFade\IObscurablePlayer.cs" />
     <Compile Include="Assets\Other\KriptoFX\MuzzleFlashes\Scripts\MaterialType.cs" />
@@ -101,8 +107,10 @@
     <Compile Include="Assets\Scripts\Infrastructure\Data\PlayerProgress.cs" />
     <Compile Include="Assets\Scripts\UI\Entities\PopUps\UIAnimation.cs" />
     <Compile Include="Assets\Scripts\Infrastructure\Factories\FactoriesHolderService.cs" />
+    <Compile Include="Assets\Scripts\Gameplay\Environment\Wind\IWindEffectable.cs" />
     <Compile Include="Assets\Scripts\Gameplay\Lumberjack\LumberjackBase.cs" />
     <Compile Include="Assets\Scripts\UI\Factory\IUIHolder.cs" />
+    <Compile Include="Assets\Scripts\Gameplay\CustomTriggers\ICustomTrigger.cs" />
     <Compile Include="Assets\Scripts\UI\Factory\IUIFactory.cs" />
     <Compile Include="Assets\Scripts\Infrastructure\Installers\GameSceneInstaller.cs" />
     <Compile Include="Assets\Scripts\Gameplay\Resource\ResourceSource.cs" />
@@ -131,7 +139,7 @@
     <Compile Include="Assets\Scripts\Infrastructure\States\GameLoopState.cs" />
     <Compile Include="Assets\Scripts\Infrastructure\Services\AllServices.cs" />
     <Compile Include="Assets\Scripts\Infrastructure\Services\Pool\BasePool.cs" />
-    <Compile Include="Assets\Scripts\Gameplay\Buildings\DecorationBuilding.cs" />
+    <Compile Include="Assets\Scripts\Gameplay\Environment\Buildings\DecorationBuilding.cs" />
     <Compile Include="Assets\Scripts\Infrastructure\AssetProviderService\AssetProvider.cs" />
     <Compile Include="Assets\Scripts\Infrastructure\AssetProviderService\IAssets.cs" />
     <Compile Include="Assets\GUI PRO Kit - Simple Casual\Scripts\PanelSimpleCasual.cs" />
@@ -146,7 +154,7 @@
     <Compile Include="Assets\Scripts\UI\Entities\PopUps\UpgradablePopUp.cs" />
     <Compile Include="Assets\Scripts\Gameplay\Cameras\GameCameraStateController.cs" />
     <Compile Include="Assets\MeshBaker\Examples\SceneRuntimeExample\MB_Example.cs" />
-    <Compile Include="Assets\Scripts\Gameplay\Buildings\Building.cs" />
+    <Compile Include="Assets\Scripts\Gameplay\Environment\Buildings\Building.cs" />
     <Compile Include="Assets\Other\KriptoFX\MuzzleFlashes\Scripts\Rendering\FPS_PerPlatformSettings.cs" />
     <Compile Include="Assets\Scripts\Infrastructure\StaticData\ResourcesData\ResourcesConfig.cs" />
     <Compile Include="Assets\Other\KriptoFX\MuzzleFlashes\Scripts\FPS_Decal.cs" />
@@ -165,27 +173,29 @@
     <Compile Include="Assets\Scripts\Infrastructure\Services\Guid\IGuidService.cs" />
     <Compile Include="Assets\Scripts\Gameplay\Resource\ResourceStorage\IGameResourceStorage.cs" />
     <Compile Include="Assets\Scripts\Infrastructure\States\GameStateMachine.cs" />
-    <Compile Include="Assets\Scripts\Gameplay\Locations\ResourceSourcesHolder.cs" />
+    <Compile Include="Assets\Scripts\Gameplay\Environment\Locations\ResourceSourcesHolder.cs" />
+    <Compile Include="Assets\Scripts\Infrastructure\StaticData\WindData\EnvironmentConfig.cs" />
     <Compile Include="Assets\GUI PRO Kit - Simple Casual\Scripts\PanelControlSimpleCasual.cs" />
     <Compile Include="Assets\Scripts\Gameplay\Player\Animation\LumberjackAnimationIdleState.cs" />
     <Compile Include="Assets\Scripts\Gameplay\Player\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\Gameplay\Bots\LumberjackBotStorageResourceShare.cs" />
     <Compile Include="Assets\Scripts\UI\Animation\UIDisappearAnimation.cs" />
-    <Compile Include="Assets\Scripts\Gameplay\Buildings\MinionHut.cs" />
-    <Compile Include="Assets\Scripts\Gameplay\Locations\Island.cs" />
+    <Compile Include="Assets\Scripts\Gameplay\Environment\Buildings\MinionHut.cs" />
+    <Compile Include="Assets\Scripts\Gameplay\Environment\Locations\Island.cs" />
     <Compile Include="Assets\Scripts\Gameplay\Resource\StoneFolder\StoneSource.cs" />
     <Compile Include="Assets\Scripts\Infrastructure\States\GameLostState.cs" />
     <Compile Include="Assets\Scripts\Infrastructure\States\LoadLevelState.cs" />
     <Compile Include="Assets\Scripts\Gameplay\Player\ObstacleFade\FadeObscurePlayerObjects.cs" />
     <Compile Include="Assets\Scripts\Gameplay\Bots\StateMachine\LumberjackBotStateMachine.cs" />
     <Compile Include="Assets\Scripts\Infrastructure\Factories\PlayerFactoryFolder\IPlayerFactory.cs" />
+    <Compile Include="Assets\Scripts\Gameplay\CustomTriggers\HitAnotherCustomTrigger.cs" />
     <Compile Include="Assets\Other\KriptoFX\MuzzleFlashes\Scripts\FPSShaderFloatCurves.cs" />
     <Compile Include="Assets\Scripts\Gameplay\Player\Animation\LumberjackAnimationRunState.cs" />
     <Compile Include="Assets\Scripts\UI\Mediator\UIMediator.cs" />
     <Compile Include="Assets\Scripts\Gameplay\Resource\ResourceSourceState.cs" />
     <Compile Include="Assets\Scripts\Gameplay\GameFlow\BuildingDiscover.cs" />
     <Compile Include="Assets\MeshBaker\Examples\SceneRuntimeExample\MB_ExampleMover.cs" />
-    <Compile Include="Assets\Scripts\Gameplay\Locations\MainLocation.cs" />
+    <Compile Include="Assets\Scripts\Gameplay\Environment\Locations\MainLocation.cs" />
     <Compile Include="Assets\Scripts\UI\Factory\UIHolder.cs" />
     <Compile Include="Assets\Scripts\Infrastructure\StaticData\BuildingsData\BuildingsConfig.cs" />
     <Compile Include="Assets\Scripts\UI\Buttons\UpgradeButtonDisabler.cs" />
@@ -196,13 +206,16 @@
     <Compile Include="Assets\Scripts\Gameplay\Player\Player.cs" />
     <Compile Include="Assets\Scripts\Infrastructure\Factories\BotFactoryFolder\BotFactory.cs" />
     <Compile Include="Assets\Other\KriptoFX\MuzzleFlashes\Scripts\Demo\FPSDemoReactivator.cs" />
+    <Compile Include="Assets\Scripts\UI\Entities\Windows\Curtain.cs" />
     <Compile Include="Assets\MeshBaker\Examples\BakeTexturesAtRuntime\BakeTexturesAtRuntime.cs" />
     <Compile Include="Assets\Scripts\Utils\IntExtensions.cs" />
     <Compile Include="Assets\Scripts\Infrastructure\Services\Pool\PoolService.cs" />
     <Compile Include="Assets\Scripts\Gameplay\Bots\StateMachine\States\IsOnTheWayToResourceSourceLumberjackBotState.cs" />
-    <Compile Include="Assets\Scripts\Gameplay\Buildings\BuildingConstruction.cs" />
+    <Compile Include="Assets\Scripts\Utils\ConfigurableJointExtensions.cs" />
+    <Compile Include="Assets\Scripts\Gameplay\Environment\BirdAI\Bird.cs" />
+    <Compile Include="Assets\Scripts\Gameplay\Environment\Buildings\BuildingConstruction.cs" />
     <Compile Include="Assets\MeshBaker\Examples\CharacterCustomization\MB_SwapShirts.cs" />
-    <Compile Include="Assets\Scripts\Gameplay\Buildings\IResourceBuildingReceivable.cs" />
+    <Compile Include="Assets\Scripts\Gameplay\Environment\Buildings\IResourceBuildingReceivable.cs" />
     <Compile Include="Assets\MeshBaker\Examples\SkinnedMeshRenderer\MB_SkinnedMeshSceneController.cs" />
     <Compile Include="Assets\Scripts\Infrastructure\ICoroutineRunner.cs" />
     <Compile Include="Assets\Scripts\Infrastructure\Services\Input\MobileInput.cs" />
@@ -210,20 +223,25 @@
     <Compile Include="Assets\Scripts\Infrastructure\Services\Input\IInputService.cs" />
     <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.4\Lib\Editor\PlasticSCM\Localization\mergetool.ja.txt" />
     <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.4\Lib\Editor\PlasticSCM\Localization\images.zh-Hans.txt" />
+    <None Include="Library\PackageCache\com.unity.postprocessing@3.4.0\PostProcessing\Shaders\StdLib.hlsl" />
     <None Include="Library\PackageCache\com.unity.probuilder@5.0.7\Content\Shader\ReferenceUnlit.shader" />
+    <None Include="Library\PackageCache\com.unity.postprocessing@3.4.0\PostProcessing\Shaders\Debug\Waveform.shader" />
     <None Include="Library\PackageCache\com.unity.settings-manager@1.0.3\package.json" />
     <None Include="Library\PackageCache\com.unity.modules.subsystems@1.0.0\package.json" />
     <None Include="Library\PackageCache\com.unity.render-pipelines.universal@12.1.11\package.json" />
     <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.4\Lib\Editor\PlasticSCM\Localization\guihelp.zh-Hant.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
     <None Include="Library\PackageCache\com.unity.modules.jsonserialize@1.0.0\package.json" />
+    <None Include="Library\PackageCache\com.unity.postprocessing@3.4.0\PostProcessing\Shaders\Builtins\MultiScaleVOUpsample.compute" />
     <None Include="Library\PackageCache\com.unity.modules.screencapture@1.0.0\package.json" />
     <None Include="Library\PackageCache\com.unity.modules.cloth@1.0.0\package.json" />
     <None Include="Library\PackageCache\com.unity.probuilder@5.0.7\Content\Shader\NormalPreview.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
     <None Include="Assets\Other\KriptoFX\MuzzleFlashes\Shaders\FPSLazer.shader" />
+    <None Include="Library\PackageCache\com.unity.postprocessing@3.4.0\PostProcessing\Shaders\Builtins\Distortion.hlsl" />
     <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.4\Lib\Editor\PlasticSCM\Localization\plastic-gui.zh-Hant.txt" />
     <None Include="Library\PackageCache\com.unity.modules.unitywebrequesttexture@1.0.0\package.json" />
+    <None Include="Library\PackageCache\com.unity.postprocessing@3.4.0\PostProcessing\Shaders\Builtins\ExposureHistogram.hlsl" />
     <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.4\Lib\Editor\PlasticSCM\Localization\images.es.txt" />
     <None Include="Library\PackageCache\com.unity.inputsystem@1.5.1\package.json" />
     <None Include="Library\PackageCache\com.unity.modules.ai@1.0.0\package.json" />
@@ -232,28 +250,45 @@
     <None Include="Library\PackageCache\com.unity.collections@1.2.4\Unity.Collections.LowLevel.ILSupport\README.txt" />
     <None Include="Library\PackageCache\com.unity.inputsystem@1.5.1\ValidationConfig.json" />
     <None Include="Assets\Other\KriptoFX\MuzzleFlashes\Shaders\Particles.shader" />
+    <None Include="Library\PackageCache\com.unity.postprocessing@3.4.0\PostProcessing\Shaders\Builtins\Texture3DLerp.compute" />
     <None Include="Library\PackageCache\com.unity.ugui@1.0.0\package.json" />
+    <None Include="Library\PackageCache\com.unity.postprocessing@3.4.0\PostProcessing\Shaders\Builtins\DeferredFog.shader" />
+    <None Include="Library\PackageCache\com.unity.postprocessing@3.4.0\PostProcessing\Shaders\Builtins\TemporalAntialiasing.shader" />
     <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.4\Lib\Editor\PlasticSCM\Localization\mergetool.es.txt" />
     <None Include="Library\PackageCache\com.unity.ext.nunit@1.0.6\package.json" />
     <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.4\Lib\Editor\PlasticSCM\Localization\basecommands.es.txt" />
     <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.4\Lib\Editor\PlasticSCM\Localization\cm.es.txt" />
     <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.4\Lib\Editor\PlasticSCM\Localization\basecommands.ko.txt" />
+    <None Include="Library\PackageCache\com.unity.postprocessing@3.4.0\PostProcessing\Shaders\Builtins\FastApproximateAntialiasing.hlsl" />
+    <None Include="Library\PackageCache\com.unity.postprocessing@3.4.0\PostProcessing\Shaders\Builtins\SubpixelMorphologicalAntialiasing.shader" />
     <None Include="Library\PackageCache\com.unity.probuilder@5.0.7\Content\Shader\DiffuseVertexColor.shader" />
     <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.4\Lib\Editor\PlasticSCM\Localization\semantic.zh-Hant.txt" />
     <None Include="Library\PackageCache\com.unity.probuilder@5.0.7\validationExceptions.json" />
+    <None Include="Assets\PolygonNatureBiomes\PNB_Core\Shaders\SyntyStudios_Basic_LOD_Shader.shader" />
+    <None Include="Library\PackageCache\com.unity.postprocessing@3.4.0\PostProcessing\Shaders\Builtins\Dithering.hlsl" />
+    <None Include="Library\PackageCache\com.unity.postprocessing@3.4.0\PostProcessing\Shaders\Builtins\Bloom.shader" />
     <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.4\Lib\Editor\PlasticSCM\Localization\clientcommon.es.txt" />
     <None Include="Library\PackageCache\com.cysharp.unitask@809d23edae\package.json" />
     <None Include="Library\PackageCache\com.unity.modules.assetbundle@1.0.0\package.json" />
+    <None Include="Library\PackageCache\com.unity.postprocessing@3.4.0\PostProcessing\Shaders\Debug\Vectorscope.compute" />
+    <None Include="Library\PackageCache\com.unity.postprocessing@3.4.0\PostProcessing\Shaders\Sampling.hlsl" />
+    <None Include="Assets\PolygonNatureBiomes\PNB_Meadow_Forest\Scene\README.txt" />
+    <None Include="Library\PackageCache\com.unity.postprocessing@3.4.0\PostProcessing\Shaders\Builtins\CopyStdFromTexArray.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
     <None Include="Library\PackageCache\com.unity.textmeshpro@3.0.6\package.json" />
     <None Include="Library\PackageCache\com.unity.probuilder@5.0.7\Content\Shader\LineBillboard.shader" />
+    <None Include="Assets\Quirky Series - Birds Bundle\_Shader\SoftSurface.shader" />
+    <None Include="Library\PackageCache\com.unity.postprocessing@3.4.0\PostProcessing\Shaders\Builtins\Lut3DBaker.compute" />
     <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.4\Lib\Editor\PlasticSCM\Localization\guihelp.ja.txt" />
     <None Include="Library\PackageCache\com.unity.modules.imgui@1.0.0\package.json" />
     <None Include="Library\PackageCache\com.unity.modules.tilemap@1.0.0\package.json" />
+    <None Include="Library\PackageCache\com.unity.postprocessing@3.4.0\PostProcessing\Shaders\Debug\Waveform.compute" />
     <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.4\Lib\Editor\PlasticSCM\Localization\xdiff.ja.txt" />
     <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.4\Lib\Editor\PlasticSCM\Localization\configurehelper.es.txt" />
     <None Include="Library\PackageCache\com.unity.probuilder@5.0.7\Content\Shader\VertexPicker.shader" />
+    <None Include="Assets\PolygonNatureBiomes\PNB_Core\README.txt" />
     <None Include="Library\PackageCache\com.unity.timeline@1.6.5\package.json" />
+    <None Include="Library\PackageCache\com.unity.postprocessing@3.4.0\PostProcessing\Shaders\API\PSSL.hlsl" />
     <None Include="Assets\Other\_Gloomy_Hyper\Shaders\Toon_Character.shader" />
     <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.4\Lib\Editor\PlasticSCM\Localization\configurehelper.en.txt" />
     <None Include="Library\PackageCache\com.unity.probuilder@5.0.7\Content\Shader\DiffuseTextureBlend.shader" />
@@ -261,8 +296,10 @@
     <None Include="Assets\Other\KriptoFX\MuzzleFlashes\Shaders\Rocks.shader" />
     <None Include="Library\PackageCache\com.unity.cinemachine@2.8.9\ValidationExceptions.json" />
     <None Include="Assets\MeshBaker\Resources\Shaders\AlbedoShader.shader" />
+    <None Include="Assets\PolygonNatureBiomes\PNB_Core\Shaders\SyntyStudios_CloudShader_NoFog.shader" />
     <None Include="Library\PackageCache\com.unity.ide.visualstudio@2.0.18\ValidationConfig.json" />
     <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.4\Lib\Editor\PlasticSCM\Localization\basecommands.zh-Hant.txt" />
+    <None Include="Library\PackageCache\com.unity.postprocessing@3.4.0\PostProcessing\Shaders\Debug\LightMeter.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Mobile.cginc" />
     <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.4\Lib\Editor\PlasticSCM\Localization\cm-help.es.txt" />
     <None Include="Library\PackageCache\com.unity.modules.terrainphysics@1.0.0\package.json" />
@@ -272,6 +309,10 @@
     <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.4\Lib\Editor\PlasticSCM\Localization\differences.zh-Hant.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF SSD.shader" />
     <None Include="Library\PackageCache\com.unity.probuilder@5.0.7\Content\Shader\UnlitSolidColor.shader" />
+    <None Include="Library\PackageCache\com.unity.postprocessing@3.4.0\PostProcessing\Shaders\Builtins\AutoExposure.compute" />
+    <None Include="Library\PackageCache\com.unity.postprocessing@3.4.0\PostProcessing\Shaders\Builtins\MultiScaleVORender.compute" />
+    <None Include="Library\PackageCache\com.unity.postprocessing@3.4.0\PostProcessing\Shaders\Builtins\Texture2DLerp.shader" />
+    <None Include="Library\PackageCache\com.unity.postprocessing@3.4.0\PostProcessing\Shaders\Builtins\SubpixelMorphologicalAntialiasingBridge.hlsl" />
     <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.4\Lib\Editor\PlasticSCM\Localization\plastic-gui.ko.txt" />
     <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.4\Lib\Editor\PlasticSCM\Localization\basecommands.ja.txt" />
     <None Include="Library\PackageCache\com.unity.visualscripting@1.8.0\package.json" />
@@ -280,7 +321,11 @@
     <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.4\package.json" />
     <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.4\Lib\Editor\PlasticSCM\Localization\xdiff.zh-Hans.txt" />
     <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.4\Lib\Editor\PlasticSCM\Localization\xdiff.ko.txt" />
+    <None Include="Library\PackageCache\com.unity.postprocessing@3.4.0\PostProcessing\Shaders\Builtins\DiskKernels.hlsl" />
     <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.4\Lib\Editor\PlasticSCM\Localization\clientcommon.ja.txt" />
+    <None Include="Library\PackageCache\com.unity.postprocessing@3.4.0\PostProcessing\Shaders\API\D3D11.hlsl" />
+    <None Include="Library\PackageCache\com.unity.postprocessing@3.4.0\PostProcessing\Shaders\Builtins\MultiScaleVODownsample2.compute" />
+    <None Include="Library\PackageCache\com.unity.postprocessing@3.4.0\PostProcessing\Shaders\Builtins\ScalableAO.hlsl" />
     <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.4\Lib\Editor\PlasticSCM\Localization\basecommands.zh-Hans.txt" />
     <None Include="Library\PackageCache\com.unity.textmeshpro@3.0.6\PackageConversionData.json" />
     <None Include="Library\PackageCache\com.unity.modules.unitywebrequestassetbundle@1.0.0\package.json" />
@@ -294,7 +339,9 @@
     <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.4\Lib\Editor\PlasticSCM\Localization\workspaceserver.ko.txt" />
     <None Include="Library\PackageCache\com.unity.render-pipelines.core@12.1.11\ValidationConfig.json" />
     <None Include="Library\PackageCache\com.unity.render-pipelines.core@12.1.11\package.json" />
+    <None Include="Assets\PolygonNatureBiomes\PNB_Core\Shaders\SyntyStudios_CloudShader.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader" />
+    <None Include="Library\PackageCache\com.unity.postprocessing@3.4.0\PostProcessing\Shaders\API\WebGPU.hlsl" />
     <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.4\Lib\Editor\PlasticSCM\Localization\plastic-gui.zh-Hans.txt" />
     <None Include="Library\PackageCache\com.unity.modules.imageconversion@1.0.0\package.json" />
     <None Include="Library\PackageCache\com.unity.textmeshpro@3.0.6\ValidationExceptions.json" />
@@ -306,6 +353,8 @@
     <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.4\Lib\Editor\PlasticSCM\Localization\commontypes.es.txt" />
     <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.4\Lib\Editor\PlasticSCM\Localization\images.zh-Hant.txt" />
     <None Include="Library\PackageCache\com.unity.modules.unityanalytics@1.0.0\package.json" />
+    <None Include="Assets\PolygonNatureBiomes\PNB_Core\Shaders\SyntyStudios_VegitationShader.shader" />
+    <None Include="Assets\PolygonNatureBiomes\PNB_Core\Shaders\SyntyStudios_Triplanar_Basic.shader" />
     <None Include="Library\PackageCache\com.unity.ide.rider@3.0.28\package.json" />
     <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.4\Lib\Editor\PlasticSCM\Localization\i3.zh-Hans.txt" />
     <None Include="Library\PackageCache\com.unity.searcher@4.9.1\package.json" />
@@ -315,35 +364,51 @@
     <None Include="Library\PackageCache\com.unity.test-framework@1.1.31\package.json" />
     <None Include="Library\PackageCache\com.unity.probuilder@5.0.7\Content\Shader\VertexShader.shader" />
     <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.4\Lib\Editor\PlasticSCM\Localization\basecommands.en.txt" />
+    <None Include="Library\PackageCache\com.unity.postprocessing@3.4.0\package.json" />
+    <None Include="Assets\PolygonNatureBiomes\PNB_Core\Shaders\SyntyStudios_WaterShader.shader" />
     <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.4\Lib\Editor\PlasticSCM\Localization\images.ko.txt" />
     <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.4\Lib\Editor\PlasticSCM\Localization\workspaceserver.es.txt" />
     <None Include="Assets\Other\KriptoFX\MuzzleFlashes\Shaders\FPS_UberDecal.shader" />
     <None Include="Library\PackageCache\com.unity.performance.profile-analyzer@1.2.2\package.json" />
+    <None Include="Library\PackageCache\com.unity.postprocessing@3.4.0\PostProcessing\Shaders\Builtins\MultiScaleVO.shader" />
     <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.4\Lib\Editor\PlasticSCM\Localization\cm-help.en.txt" />
     <None Include="Library\PackageCache\com.unity.modules.particlesystem@1.0.0\package.json" />
     <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.4\Lib\Editor\PlasticSCM\Localization\binmergetool.ko.txt" />
     <None Include="Assets\MeshBaker\Examples\Shaders\UnlitTextureArrays.shader" />
+    <None Include="Library\PackageCache\com.unity.postprocessing@3.4.0\PostProcessing\Shaders\Debug\Vectorscope.shader" />
+    <None Include="Library\PackageCache\com.unity.postprocessing@3.4.0\PostProcessing\Shaders\API\D3D9.hlsl" />
     <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.4\Lib\Editor\PlasticSCM\Localization\mergetool.en.txt" />
     <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.4\Lib\Editor\PlasticSCM\Localization\workspaceserver.zh-Hans.txt" />
+    <None Include="Assets\PolygonNatureBiomes\PNB_Core\Shaders\SyntyStudios_Skybox.shader" />
     <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.4\Lib\Editor\PlasticSCM\Localization\binmergetool.zh-Hant.txt" />
+    <None Include="Library\PackageCache\com.unity.postprocessing@3.4.0\PostProcessing\Shaders\Builtins\ScalableAO.shader" />
+    <None Include="Library\PackageCache\com.unity.postprocessing@3.4.0\PostProcessing\Shaders\ACES.hlsl" />
     <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.4\Lib\Editor\PlasticSCM\Localization\plastic-gui.en.txt" />
+    <None Include="Library\PackageCache\com.unity.postprocessing@3.4.0\PostProcessing\Shaders\Builtins\FinalPass.shader" />
     <None Include="Library\PackageCache\com.unity.modules.physics2d@1.0.0\package.json" />
+    <None Include="Library\PackageCache\com.unity.postprocessing@3.4.0\PostProcessing\Shaders\Debug\Histogram.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface.shader" />
     <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.4\Lib\Editor\PlasticSCM\Localization\differences.zh-Hans.txt" />
     <None Include="Library\PackageCache\com.unity.modules.vr@1.0.0\package.json" />
+    <None Include="Library\PackageCache\com.unity.postprocessing@3.4.0\PostProcessing\Shaders\Debug\Histogram.compute" />
+    <None Include="Library\PackageCache\com.unity.postprocessing@3.4.0\PostProcessing\Shaders\API\Switch.hlsl" />
     <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.4\Lib\Editor\PlasticSCM\Localization\binmergetool.en.txt" />
     <None Include="Assets\Other\_Gloomy_Hyper\Shaders\AlphaMask.shader" />
     <None Include="Library\PackageCache\com.unity.visualscripting@1.8.0\ValidationExceptions.json" />
+    <None Include="Library\PackageCache\com.unity.postprocessing@3.4.0\PostProcessing\Shaders\API\Metal.hlsl" />
+    <None Include="Library\PackageCache\com.unity.postprocessing@3.4.0\PostProcessing\Shaders\Builtins\Uber.shader" />
     <None Include="Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
     <None Include="Library\PackageCache\com.unity.probuilder@5.0.7\Content\Upgrade\AssetIdRemap-4_0_0.json" />
     <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.4\Lib\Editor\PlasticSCM\Localization\configurehelper.zh-Hant.txt" />
     <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.4\Lib\Editor\PlasticSCM\Localization\cm-help.zh-Hans.txt" />
     <None Include="Assets\Other\KriptoFX\MuzzleFlashes\Shaders\AlphaBlendedAnim.shader" />
+    <None Include="Library\PackageCache\com.unity.2d.common@6.0.7\package.json" />
     <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.4\Lib\Editor\PlasticSCM\Localization\semantic.ko.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF.shader" />
     <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.4\Lib\Editor\PlasticSCM\Localization\workspaceserver.en.txt" />
     <None Include="Library\PackageCache\com.unity.ide.visualstudio@2.0.18\ValidationExceptions.json" />
+    <None Include="Library\PackageCache\com.unity.postprocessing@3.4.0\PostProcessing\Shaders\xRLib.hlsl" />
     <None Include="Assets\Other\Lumber\Shader\StylizedWater_Mobile.shader" />
     <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.4\Lib\Editor\PlasticSCM\Localization\cm-help.zh-Hant.txt" />
     <None Include="Library\PackageCache\com.unity.cinemachine@2.8.9\license.txt" />
@@ -356,30 +421,38 @@
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
     <None Include="Library\PackageCache\com.unity.modules.umbra@1.0.0\package.json" />
     <None Include="Library\PackageCache\com.unity.probuilder@5.0.7\Content\Shader\SmoothingPreview.shader" />
+    <None Include="Library\PackageCache\com.unity.postprocessing@3.4.0\PostProcessing\Shaders\Builtins\CopyStdFromDoubleWide.shader" />
     <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.4\Lib\Editor\PlasticSCM\Localization\i3.zh-Hant.txt" />
     <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.4\Lib\Editor\PlasticSCM\Localization\cm.ko.txt" />
     <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.4\Lib\Editor\PlasticSCM\Localization\guihelp.zh-Hans.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Properties.cginc" />
     <None Include="Library\PackageCache\com.unity.probuilder@5.0.7\package.json" />
     <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.4\Lib\Editor\PlasticSCM\FileSystemWatcherLicense.txt" />
+    <None Include="Library\PackageCache\com.unity.postprocessing@3.4.0\PostProcessing\Shaders\Debug\Overlays.shader" />
     <None Include="Assets\Other\KriptoFX\MuzzleFlashes\Shaders\FPSGlowAdditive.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Surface.cginc" />
+    <None Include="Library\PackageCache\com.unity.postprocessing@3.4.0\PostProcessing\Shaders\API\PSP2.hlsl" />
     <None Include="Assets\MeshBaker\Resources\Shaders\NormalMapShader.shader" />
     <None Include="Library\PackageCache\com.unity.inputsystem@1.5.1\ValidationExceptions.json" />
     <None Include="Library\PackageCache\com.unity.modules.audio@1.0.0\package.json" />
     <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.4\Lib\Editor\PlasticSCM\Localization\cm-help.ko.txt" />
+    <None Include="Library\PackageCache\com.unity.postprocessing@3.4.0\PostProcessing\Shaders\Builtins\ScreenSpaceReflections.shader" />
     <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.4\Lib\Editor\PlasticSCM\Localization\cm-help.ja.txt" />
     <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.4\Lib\Editor\PlasticSCM\Localization\clientcommon.en.txt" />
     <None Include="Library\PackageCache\com.unity.modules.physics@1.0.0\package.json" />
     <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.4\Lib\Editor\PlasticSCM\Localization\binmergetool.zh-Hans.txt" />
     <None Include="Assets\Other\KriptoFX\MuzzleFlashes\Shaders\FPSDistortionGlass.shader" />
     <None Include="Library\PackageCache\com.unity.render-pipelines.universal@12.1.11\ValidationExceptions.json" />
+    <None Include="Library\PackageCache\com.unity.postprocessing@3.4.0\PostProcessing\Shaders\Builtins\DepthOfField.hlsl" />
     <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.4\Lib\Editor\PlasticSCM\Localization\i3.es.txt" />
+    <None Include="Library\PackageCache\com.unity.postprocessing@3.4.0\PostProcessing\Shaders\Builtins\DiscardAlpha.shader" />
     <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.4\Lib\Editor\PlasticSCM\Localization\mergetool.zh-Hans.txt" />
     <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.4\Lib\Editor\PlasticSCM\Localization\commontypes.zh-Hant.txt" />
     <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.4\Lib\Editor\PlasticSCM\Localization\differences.ko.txt" />
     <None Include="Library\PackageCache\com.unity.probuilder@5.0.7\Content\Shader\ProBuilderCG.cginc" />
     <None Include="Library\PackageCache\com.unity.modules.vehicles@1.0.0\package.json" />
+    <None Include="Library\PackageCache\com.unity.postprocessing@3.4.0\PostProcessing\Shaders\API\OpenGL.hlsl" />
+    <None Include="Library\PackageCache\com.unity.postprocessing@3.4.0\PostProcessing\Shaders\Builtins\Lut2DBaker.shader" />
     <None Include="Assets\Other\KriptoFX\MuzzleFlashes\Readme.txt" />
     <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.4\Lib\Editor\PlasticSCM\Localization\plastic-gui.es.txt" />
     <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.4\Lib\Editor\PlasticSCM\Localization\images.en.txt" />
@@ -389,7 +462,9 @@
     <None Include="Library\PackageCache\com.unity.modules.unitywebrequestwww@1.0.0\package.json" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
     <None Include="Library\PackageCache\com.unity.modules.unitywebrequestaudio@1.0.0\package.json" />
+    <None Include="Library\PackageCache\com.unity.postprocessing@3.4.0\PostProcessing\Shaders\Builtins\CopyStd.shader" />
     <None Include="Assets\MeshBaker\MeshBakerWorkingFolder\DONT_DELETE.txt" />
+    <None Include="Library\PackageCache\com.unity.postprocessing@3.4.0\PostProcessing\Shaders\Editor\CurveGrid.shader" />
     <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.4\Lib\Editor\PlasticSCM\Localization\binmergetool.es.txt" />
     <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.4\Lib\Editor\PlasticSCM\Localization\cm.ja.txt" />
     <None Include="Library\PackageCache\com.unity.textmeshpro@3.0.6\Editor Resources\Shaders\TMP_SDF_SSD.cginc" />
@@ -399,9 +474,13 @@
     <None Include="Assets\Other\KriptoFX\MuzzleFlashes\Shaders\FPSDistortionParticles.shader" />
     <None Include="Library\PackageCache\com.unity.probuilder@5.0.7\Content\Shader\StandardVertexColor.shader" />
     <None Include="Library\PackageCache\com.unity.modules.xr@1.0.0\package.json" />
+    <None Include="Library\PackageCache\com.unity.postprocessing@3.4.0\PostProcessing\Shaders\Builtins\MotionBlur.shader" />
     <None Include="Library\PackageCache\com.unity.textmeshpro@3.0.6\Editor Resources\Shaders\TMP_Properties.cginc" />
+    <None Include="Library\PackageCache\com.unity.postprocessing@3.4.0\PostProcessing\Shaders\Builtins\MultiScaleVODownsample1.compute" />
     <None Include="Assets\Other\KriptoFX\MuzzleFlashes\Shaders\FPSDistortionWaterParticles.shader" />
+    <None Include="Library\PackageCache\com.unity.postprocessing@3.4.0\PostProcessing\Shaders\Builtins\Fog.hlsl" />
     <None Include="Library\PackageCache\com.unity.probuilder@5.0.7\Content\Shader\PointBillboard.shader" />
+    <None Include="Library\PackageCache\com.unity.postprocessing@3.4.0\PostProcessing\Shaders\Builtins\ExposureHistogram.compute" />
     <None Include="Library\PackageCache\com.unity.textmeshpro@3.0.6\Editor Resources\Shaders\TMP_SDF Internal Editor.shader" />
     <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.4\Lib\Editor\PlasticSCM\Localization\xdiff.es.txt" />
     <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.4\Lib\Editor\PlasticSCM\Localization\configurehelper.zh-Hans.txt" />
@@ -412,27 +491,41 @@
     <None Include="Library\PackageCache\com.unity.modules.director@1.0.0\package.json" />
     <None Include="Library\PackageCache\com.unity.ide.vscode@1.2.5\ValidationExceptions.json" />
     <None Include="Library\PackageCache\com.unity.visualscripting@1.8.0\ValidationConfig.json" />
+    <None Include="Library\PackageCache\com.unity.postprocessing@3.4.0\PostProcessing\Shaders\Builtins\GrainBaker.shader" />
+    <None Include="Assets\PolygonNatureBiomes\PNB_Core\Shaders\SyntyStudios_Skybox_NoFog.shader" />
     <None Include="Assets\Other\Lumber\Shader\Hidden_Cibbi&apos;s shaders_Toony Standard_Outlined.shader" />
     <None Include="Library\PackageCache\com.unity.modules.terrain@1.0.0\package.json" />
+    <None Include="Library\PackageCache\com.unity.postprocessing@3.4.0\PostProcessing\Shaders\Builtins\GaussianDownsample.compute" />
     <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.4\Lib\Editor\PlasticSCM\Localization\commontypes.ko.txt" />
     <None Include="Library\PackageCache\com.unity.cinemachine@2.8.9\package.json" />
+    <None Include="Library\PackageCache\com.unity.2d.sprite@1.0.0\package.json" />
     <None Include="Assets\Other\Lumber\Resources\shaders\TextMeshPro_Bitmap.shader" />
+    <None Include="Library\PackageCache\com.unity.postprocessing@3.4.0\PostProcessing\Shaders\Builtins\ScreenSpaceReflections.hlsl" />
     <None Include="Library\PackageCache\com.unity.collections@1.2.4\package.json" />
     <None Include="Assets\MeshBaker\Examples\CharacterCustomization\CreditForModel.txt" />
     <None Include="Library\PackageCache\com.unity.modules.androidjni@1.0.0\package.json" />
+    <None Include="Library\PackageCache\com.unity.postprocessing@3.4.0\PostProcessing\Shaders\API\XboxOne.hlsl" />
+    <None Include="Library\PackageCache\com.unity.postprocessing@3.4.0\PostProcessing\Shaders\Builtins\Copy.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF Overlay.shader" />
     <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.4\Lib\Editor\PlasticSCM\Localization\commontypes.ja.txt" />
+    <None Include="Library\PackageCache\com.unity.postprocessing@3.4.0\PostProcessing\Shaders\API\D3D12.hlsl" />
     <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.4\Lib\Editor\PlasticSCM\Localization\configurehelper.ko.txt" />
+    <None Include="Library\PackageCache\com.unity.postprocessing@3.4.0\PostProcessing\Shaders\Builtins\DepthOfField.shader" />
     <None Include="Library\PackageCache\com.unity.textmeshpro@3.0.6\PackageConversionData_Assets.json" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader" />
+    <None Include="Library\PackageCache\com.unity.postprocessing@3.4.0\PostProcessing\Shaders\Builtins\SubpixelMorphologicalAntialiasing.hlsl" />
     <None Include="Library\PackageCache\com.unity.mathematics@1.2.6\ValidationExceptions.json" />
     <None Include="Assets\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
     <None Include="Library\PackageCache\com.unity.modules.animation@1.0.0\package.json" />
+    <None Include="Library\PackageCache\com.unity.2d.animation@7.1.0\package.json" />
     <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.4\Lib\Editor\PlasticSCM\Localization\guihelp.es.txt" />
     <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.4\Lib\Editor\PlasticSCM\Localization\differences.en.txt" />
     <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.4\Lib\Editor\PlasticSCM\Localization\workspaceserver.ja.txt" />
     <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.4\Lib\Editor\PlasticSCM\Localization\mergetool.ko.txt" />
+    <None Include="Assets\Quirky Series - Birds Bundle\_Shader\ToonRamp.shader" />
+    <None Include="Library\PackageCache\com.unity.postprocessing@3.4.0\PostProcessing\Shaders\Editor\Trackball.shader" />
     <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.4\Lib\Editor\PlasticSCM\Localization\clientcommon.ko.txt" />
+    <None Include="Library\PackageCache\com.unity.postprocessing@3.4.0\PostProcessing\Shaders\Editor\ConvertToLog.shader" />
     <None Include="Library\PackageCache\com.unity.collections@1.2.4\ValidationExceptions.json" />
     <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.4\Lib\Editor\PlasticSCM\Localization\i3.ja.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile.shader" />
@@ -441,6 +534,7 @@
     <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.4\Lib\Editor\PlasticSCM\Localization\cm.zh-Hans.txt" />
     <None Include="Library\PackageCache\com.unity.render-pipelines.universal@12.1.11\ValidationConfig.json" />
     <None Include="Library\PackageCache\com.unity.modules.unitywebrequest@1.0.0\package.json" />
+    <None Include="Library\PackageCache\com.unity.postprocessing@3.4.0\PostProcessing\Shaders\API\Vulkan.hlsl" />
     <None Include="Library\PackageCache\com.unity.modules.uielements@1.0.0\package.json" />
     <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.4\Lib\Editor\PlasticSCM\Localization\plastic-gui.ja.txt" />
     <None Include="Library\PackageCache\com.unity.burst@1.8.4\package.json" />
@@ -449,6 +543,7 @@
     <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.4\Lib\Editor\PlasticSCM\Localization\workspaceserver.zh-Hant.txt" />
     <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.4\Lib\Editor\PlasticSCM\Localization\cm.zh-Hant.txt" />
     <None Include="Library\PackageCache\com.unity.collab-proxy@2.0.4\Lib\Editor\PlasticSCM\Localization\xdiff.en.txt" />
+    <None Include="Library\PackageCache\com.unity.postprocessing@3.4.0\PostProcessing\Shaders\Colors.hlsl" />
     <None Include="Assets\TextMesh Pro\Sprites\EmojiOne.json" />
     <None Include="Assets\Other\Lumber\Shader\Custom_GroundShader.shader" />
     <None Include="Library\PackageCache\com.unity.modules.ui@1.0.0\package.json" />
@@ -735,11 +830,11 @@
     <Reference Include="Unity.VisualScripting.Antlr3.Runtime">
       <HintPath>C:\Users\fuyca\Desktop\Projects\TimberCraft\Library\PackageCache\com.unity.visualscripting@1.8.0\Runtime\VisualScripting.Flow\Dependencies\NCalc\Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
     </Reference>
-    <Reference Include="Sirenix.Serialization">
-      <HintPath>C:\Users\fuyca\Desktop\Projects\TimberCraft\Assets\Plugins\Sirenix\Assemblies\Sirenix.Serialization.dll</HintPath>
-    </Reference>
     <Reference Include="Pathfinding.Poly2Tri">
       <HintPath>C:\Users\fuyca\Desktop\Projects\TimberCraft\Assets\AstarPathfindingProject\Plugins\Poly2Tri\Pathfinding.Poly2Tri.dll</HintPath>
+    </Reference>
+    <Reference Include="Sirenix.Serialization">
+      <HintPath>C:\Users\fuyca\Desktop\Projects\TimberCraft\Assets\Plugins\Sirenix\Assemblies\Sirenix.Serialization.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.iOS.Extensions.Xcode">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.25f1\Editor\Data\PlaybackEngines\iOSSupport\UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
@@ -1133,6 +1228,10 @@
       <Project>{321d1274-8c47-b399-aae9-044e954b2feb}</Project>
       <Name>Lofelt.NiceVibrations.Editor</Name>
     </ProjectReference>
+    <ProjectReference Include="Unity.InternalAPIEngineBridge.001.csproj">
+      <Project>{9f303ceb-9007-8bb7-ae28-9c68beecca38}</Project>
+      <Name>Unity.InternalAPIEngineBridge.001</Name>
+    </ProjectReference>
     <ProjectReference Include="MoreMountains.Tools.Editor.csproj">
       <Project>{52f36ed4-2372-20c6-0006-ac047aaaa8fb}</Project>
       <Name>MoreMountains.Tools.Editor</Name>
@@ -1173,13 +1272,17 @@
       <Project>{5d62152e-8f2c-1b31-41cc-76dbb23015dc}</Project>
       <Name>Unity.Searcher.Editor</Name>
     </ProjectReference>
-    <ProjectReference Include="Unity.VisualScripting.SettingsProvider.Editor.csproj">
-      <Project>{c37748b8-c6f5-ed7c-f7bc-b4b56aaec76e}</Project>
-      <Name>Unity.VisualScripting.SettingsProvider.Editor</Name>
+    <ProjectReference Include="Unity.2D.IK.Editor.csproj">
+      <Project>{7d0a26d3-963c-a6f6-0399-8574dd5309b3}</Project>
+      <Name>Unity.2D.IK.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="MK.Toon.URP.csproj">
       <Project>{c3316e12-eee7-ccc0-d1b9-2a8d4784f9a6}</Project>
       <Name>MK.Toon.URP</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.VisualScripting.SettingsProvider.Editor.csproj">
+      <Project>{c37748b8-c6f5-ed7c-f7bc-b4b56aaec76e}</Project>
+      <Name>Unity.VisualScripting.SettingsProvider.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.ProBuilder.csproj">
       <Project>{f2713379-7715-e46d-a0fb-834d3fed480e}</Project>
@@ -1237,9 +1340,9 @@
       <Project>{de1524d5-76cb-224e-310b-fd791bac2978}</Project>
       <Name>Unity.EditorCoroutines.Editor</Name>
     </ProjectReference>
-    <ProjectReference Include="MoreMountains.Feedbacks.PostProcessing.csproj">
-      <Project>{a342fd42-3ab4-dbf4-6b9c-1159fd031875}</Project>
-      <Name>MoreMountains.Feedbacks.PostProcessing</Name>
+    <ProjectReference Include="Unity.2D.IK.Runtime.csproj">
+      <Project>{83c602c1-2d35-8e94-7b1f-49aab8009f7b}</Project>
+      <Name>Unity.2D.IK.Runtime</Name>
     </ProjectReference>
     <ProjectReference Include="UniTask.TextMeshPro.csproj">
       <Project>{cdf51015-9db8-81fa-32bc-d4c2ad232c84}</Project>
@@ -1248,6 +1351,10 @@
     <ProjectReference Include="Unity.ShaderGraph.Editor.csproj">
       <Project>{53f8671c-f2f6-94a7-6e7d-b19bb4ff3edc}</Project>
       <Name>Unity.ShaderGraph.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="MoreMountains.Feedbacks.PostProcessing.csproj">
+      <Project>{a342fd42-3ab4-dbf4-6b9c-1159fd031875}</Project>
+      <Name>MoreMountains.Feedbacks.PostProcessing</Name>
     </ProjectReference>
     <ProjectReference Include="Cinemachine.csproj">
       <Project>{ac085090-bd7c-4516-a0ef-c3e4e873ac45}</Project>
@@ -1305,6 +1412,10 @@
       <Project>{1d82a972-6773-9259-42c4-04e944f07f93}</Project>
       <Name>Lofelt.NiceVibrations.Demo</Name>
     </ProjectReference>
+    <ProjectReference Include="Unity.2D.Common.Editor.csproj">
+      <Project>{67952cf0-9ca4-7b4d-601e-0bd250fdb5f0}</Project>
+      <Name>Unity.2D.Common.Editor</Name>
+    </ProjectReference>
     <ProjectReference Include="UniTask.Addressables.csproj">
       <Project>{42ce38e3-725f-6d63-5f8f-146c2c9cb39e}</Project>
       <Name>UniTask.Addressables</Name>
@@ -1316,6 +1427,10 @@
     <ProjectReference Include="Unity.VisualScripting.Flow.Editor.csproj">
       <Project>{ea37b351-ee9a-ac8f-6bb6-4dcb549b1fb1}</Project>
       <Name>Unity.VisualScripting.Flow.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.2D.Animation.Editor.csproj">
+      <Project>{500aeb22-1395-38ea-dab1-bbfce51994b5}</Project>
+      <Name>Unity.2D.Animation.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="MoreMountains.Feedbacks.HDRP.csproj">
       <Project>{f2534ac6-73b4-1490-6dc9-947773cd2c0a}</Project>
@@ -1369,9 +1484,13 @@
       <Project>{b3b7435b-3922-9f9d-7522-7ff260cb14ed}</Project>
       <Name>MK.Toon.Examples</Name>
     </ProjectReference>
-    <ProjectReference Include="Unity.RenderPipelines.Core.Runtime.csproj">
-      <Project>{271312c1-a7d1-47ae-1b13-40151bf5ffdc}</Project>
-      <Name>Unity.RenderPipelines.Core.Runtime</Name>
+    <ProjectReference Include="Unity.2D.Sprite.Editor.csproj">
+      <Project>{c0452311-c521-b8e1-26cd-f5ae9fc8ced9}</Project>
+      <Name>Unity.2D.Sprite.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.InternalAPIEditorBridge.001.csproj">
+      <Project>{4092b3b6-e3f3-cde9-8b5d-7aa28ddb2a9e}</Project>
+      <Name>Unity.InternalAPIEditorBridge.001</Name>
     </ProjectReference>
     <ProjectReference Include="UniTask.DOTween.csproj">
       <Project>{f4285073-35ae-e45b-f9ed-1ae66eb2d488}</Project>
@@ -1381,17 +1500,25 @@
       <Project>{63326ff2-4731-9a57-9407-d20810182902}</Project>
       <Name>Unity.ProBuilder.Editor</Name>
     </ProjectReference>
+    <ProjectReference Include="Unity.Postprocessing.Editor.csproj">
+      <Project>{6bd4c4ba-6cb5-12f6-7f35-eb3ab726c7de}</Project>
+      <Name>Unity.Postprocessing.Editor</Name>
+    </ProjectReference>
     <ProjectReference Include="Unity.VisualScripting.Flow.csproj">
       <Project>{aaf03966-2d4d-c6c7-e726-1599f574adaf}</Project>
       <Name>Unity.VisualScripting.Flow</Name>
+    </ProjectReference>
+    <ProjectReference Include="UniTask.Linq.csproj">
+      <Project>{72e807b2-1329-e642-a311-ae5353e017ab}</Project>
+      <Name>UniTask.Linq</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.PlasticSCM.Editor.csproj">
       <Project>{7e5ddd76-ccea-783b-fd6f-fcb9da63b211}</Project>
       <Name>Unity.PlasticSCM.Editor</Name>
     </ProjectReference>
-    <ProjectReference Include="UniTask.Linq.csproj">
-      <Project>{72e807b2-1329-e642-a311-ae5353e017ab}</Project>
-      <Name>UniTask.Linq</Name>
+    <ProjectReference Include="Unity.RenderPipelines.Core.Runtime.csproj">
+      <Project>{271312c1-a7d1-47ae-1b13-40151bf5ffdc}</Project>
+      <Name>Unity.RenderPipelines.Core.Runtime</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.VisualScripting.Core.csproj">
       <Project>{2fac6370-1547-e0d5-31f9-7181424cee0b}</Project>
@@ -1405,6 +1532,10 @@
       <Project>{b5fb3846-c3fe-a1c6-db1b-2bdb73c35467}</Project>
       <Name>Unity.Mathematics</Name>
     </ProjectReference>
+    <ProjectReference Include="UniRx.csproj">
+      <Project>{56c63ea5-3f4b-5891-dfb2-d23881ae4503}</Project>
+      <Name>UniRx</Name>
+    </ProjectReference>
     <ProjectReference Include="Unity.Burst.csproj">
       <Project>{a3ccd114-967e-587a-4abb-aca493464dc7}</Project>
       <Name>Unity.Burst</Name>
@@ -1413,13 +1544,13 @@
       <Project>{bcdd1eee-e690-9a23-ce82-7c1d614c39b4}</Project>
       <Name>AstarPathfindingProject</Name>
     </ProjectReference>
+    <ProjectReference Include="Unity.Postprocessing.Runtime.csproj">
+      <Project>{4a73b5b0-25a0-8fb5-d4dd-aae878df6674}</Project>
+      <Name>Unity.Postprocessing.Runtime</Name>
+    </ProjectReference>
     <ProjectReference Include="Unity.RenderPipelines.Universal.Editor.csproj">
       <Project>{c647a2cf-53e7-0b97-5e7e-030c8d45fe88}</Project>
       <Name>Unity.RenderPipelines.Universal.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.ProBuilder.AssetIdRemapUtility.csproj">
-      <Project>{b4f76a92-518d-563b-94d3-48639e541a28}</Project>
-      <Name>Unity.ProBuilder.AssetIdRemapUtility</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.VisualScripting.Shared.Editor.csproj">
       <Project>{25ae2cd6-3b1d-61d7-18d7-0e0e06a9c8d8}</Project>
@@ -1428,6 +1559,10 @@
     <ProjectReference Include="SimpleInput.Runtime.csproj">
       <Project>{e693776b-ef12-909c-e425-c21e8cb4435b}</Project>
       <Name>SimpleInput.Runtime</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.2D.Animation.Runtime.csproj">
+      <Project>{0d3b4c13-397a-33c5-5ecb-3b379fd1c619}</Project>
+      <Name>Unity.2D.Animation.Runtime</Name>
     </ProjectReference>
     <ProjectReference Include="MoreMountains.Feedbacks.csproj">
       <Project>{917a30b7-277a-48fa-e6d3-5cc90713daa2}</Project>
@@ -1444,6 +1579,14 @@
     <ProjectReference Include="Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.csproj">
       <Project>{b1f9a957-83d5-ca87-bf80-15c6259bb15f}</Project>
       <Name>Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.ProBuilder.AssetIdRemapUtility.csproj">
+      <Project>{b4f76a92-518d-563b-94d3-48639e541a28}</Project>
+      <Name>Unity.ProBuilder.AssetIdRemapUtility</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.2D.Common.Runtime.csproj">
+      <Project>{17cfc765-2124-c1cc-a04e-5afabfe13f73}</Project>
+      <Name>Unity.2D.Common.Runtime</Name>
     </ProjectReference>
     <ProjectReference Include="UniTask.csproj">
       <Project>{24cce9aa-47c2-f3b6-9eac-24ab0beb85d5}</Project>

@@ -2,6 +2,7 @@
 using Cysharp.Threading.Tasks;
 using ECM.Components;
 using Gameplay.Buildings;
+using Gameplay.Environment.Buildings;
 using Gameplay.Lumberjack;
 using Gameplay.Player.Animation;
 using Gameplay.Resource;

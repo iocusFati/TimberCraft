@@ -1,6 +1,7 @@
 ﻿using Gameplay.Bots;
 using Gameplay.Buildings;
-using Gameplay.Locations;
+using Gameplay.Environment.Buildings;
+using Gameplay.Environment.Locations;
 using Infrastructure.AssetProviderService;
 using Infrastructure.States;
 using UnityEngine;

@@ -1,7 +1,8 @@
 ﻿using Gameplay.Bots.StateMachine;
 using Gameplay.Bots.StateMachine.States;
 using Gameplay.Buildings;
-using Gameplay.Locations;
+using Gameplay.Environment.Buildings;
+using Gameplay.Environment.Locations;
 using Gameplay.Lumberjack;
 using Gameplay.Resource;
 using Gameplay.Resource.ResourceStorage;

@@ -26,7 +26,7 @@
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
     <OutputPath>Temp\Bin\Debug\Assembly-CSharp\Player\</OutputPath>
-    <DefineConstants>UNITY_2021_3_25;UNITY_2021_3;UNITY_2021;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_2017_1_OR_NEWER;UNITY_2017_2_OR_NEWER;UNITY_2017_3_OR_NEWER;UNITY_2017_4_OR_NEWER;UNITY_2018_1_OR_NEWER;UNITY_2018_2_OR_NEWER;UNITY_2018_3_OR_NEWER;UNITY_2018_4_OR_NEWER;UNITY_2019_1_OR_NEWER;UNITY_2019_2_OR_NEWER;UNITY_2019_3_OR_NEWER;UNITY_2019_4_OR_NEWER;UNITY_2020_1_OR_NEWER;UNITY_2020_2_OR_NEWER;UNITY_2020_3_OR_NEWER;UNITY_2021_1_OR_NEWER;UNITY_2021_2_OR_NEWER;UNITY_2021_3_OR_NEWER;UNITY_INCLUDE_TESTS;ENABLE_AR;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_EVENT_QUEUE;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_TEXTURE_STREAMING;ENABLE_UNET;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_VR;ENABLE_WEBCAM;ENABLE_UNITYWEBREQUEST;ENABLE_WWW;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_COLLAB_SOFTLOCKS;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_SERVICES_USE_WEBREQUEST;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_CLOUD_SERVICES_NATIVE_CRASH_REPORTING;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_HUB_LICENSE;ENABLE_WEBSOCKET_CLIENT;ENABLE_DIRECTOR_AUDIO;ENABLE_DIRECTOR_TEXTURE;ENABLE_MANAGED_JOBS;ENABLE_MANAGED_TRANSFORM_JOBS;ENABLE_MANAGED_ANIMATION_JOBS;ENABLE_MANAGED_AUDIO_JOBS;ENABLE_RUNTIME_PERMISSIONS;ENABLE_ENGINE_CODE_STRIPPING;ENABLE_ONSCREEN_KEYBOARD;ENABLE_MANAGED_UNITYTLS;INCLUDE_DYNAMIC_GI;ENABLE_SCRIPTING_GC_WBARRIERS;PLATFORM_SUPPORTS_MONO;ENABLE_VIDEO;ENABLE_ACCELERATOR_CLIENT_DEBUGGING;PLATFORM_ANDROID;TEXTCORE_1_0_OR_NEWER;UNITY_ANDROID;UNITY_ANDROID_API;ENABLE_EGL;ENABLE_NETWORK;ENABLE_RUNTIME_GI;ENABLE_CRUNCH_TEXTURE_COMPRESSION;UNITY_CAN_SHOW_SPLASH_SCREEN;UNITY_HAS_GOOGLEVR;UNITY_HAS_TANGO;ENABLE_SPATIALTRACKING;ENABLE_ETC_COMPRESSION;PLATFORM_EXTENDS_VULKAN_DEVICE;PLATFORM_HAS_MULTIPLE_SWAPCHAINS;UNITY_ANDROID_SUPPORTS_SHADOWFILES;PLATFORM_UPDATES_TIME_OUTSIDE_OF_PLAYER_LOOP;ENABLE_UNITYADS_RUNTIME;UNITY_UNITYADS_API;ENABLE_MONO;NET_STANDARD_2_0;NET_STANDARD;NET_STANDARD_2_1;NETSTANDARD;NETSTANDARD2_1;ENABLE_CUSTOM_RENDER_TEXTURE;ENABLE_DIRECTOR;ENABLE_LOCALIZATION;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_TILEMAP;ENABLE_TIMELINE;ENABLE_INPUT_SYSTEM;ENABLE_LEGACY_INPUT_MANAGER;TEXTCORE_FONT_ENGINE_1_5_OR_NEWER;UNITY_POST_PROCESSING_STACK_V2;MOREMOUNTAINS_NICEVIBRATIONS_INSTALLED;ODIN_INSPECTOR;ODIN_INSPECTOR_3;ODIN_INSPECTOR_3_1;UNITY_VISUAL_SCRIPTING;BAKERY_INCLUDED;UNITASK_DOTWEEN_SUPPORT;CSHARP_7_OR_LATER;CSHARP_7_3_OR_NEWER</DefineConstants>
+    <DefineConstants>UNITY_2021_3_25;UNITY_2021_3;UNITY_2021;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_2017_1_OR_NEWER;UNITY_2017_2_OR_NEWER;UNITY_2017_3_OR_NEWER;UNITY_2017_4_OR_NEWER;UNITY_2018_1_OR_NEWER;UNITY_2018_2_OR_NEWER;UNITY_2018_3_OR_NEWER;UNITY_2018_4_OR_NEWER;UNITY_2019_1_OR_NEWER;UNITY_2019_2_OR_NEWER;UNITY_2019_3_OR_NEWER;UNITY_2019_4_OR_NEWER;UNITY_2020_1_OR_NEWER;UNITY_2020_2_OR_NEWER;UNITY_2020_3_OR_NEWER;UNITY_2021_1_OR_NEWER;UNITY_2021_2_OR_NEWER;UNITY_2021_3_OR_NEWER;UNITY_INCLUDE_TESTS;ENABLE_AR;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_EVENT_QUEUE;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_TEXTURE_STREAMING;ENABLE_UNET;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_VR;ENABLE_WEBCAM;ENABLE_UNITYWEBREQUEST;ENABLE_WWW;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_COLLAB_SOFTLOCKS;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_SERVICES_USE_WEBREQUEST;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_CLOUD_SERVICES_NATIVE_CRASH_REPORTING;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_HUB_LICENSE;ENABLE_WEBSOCKET_CLIENT;ENABLE_DIRECTOR_AUDIO;ENABLE_DIRECTOR_TEXTURE;ENABLE_MANAGED_JOBS;ENABLE_MANAGED_TRANSFORM_JOBS;ENABLE_MANAGED_ANIMATION_JOBS;ENABLE_MANAGED_AUDIO_JOBS;ENABLE_RUNTIME_PERMISSIONS;ENABLE_ENGINE_CODE_STRIPPING;ENABLE_ONSCREEN_KEYBOARD;ENABLE_MANAGED_UNITYTLS;INCLUDE_DYNAMIC_GI;ENABLE_SCRIPTING_GC_WBARRIERS;PLATFORM_SUPPORTS_MONO;ENABLE_VIDEO;ENABLE_ACCELERATOR_CLIENT_DEBUGGING;PLATFORM_ANDROID;TEXTCORE_1_0_OR_NEWER;UNITY_ANDROID;UNITY_ANDROID_API;ENABLE_EGL;ENABLE_NETWORK;ENABLE_RUNTIME_GI;ENABLE_CRUNCH_TEXTURE_COMPRESSION;UNITY_CAN_SHOW_SPLASH_SCREEN;UNITY_HAS_GOOGLEVR;UNITY_HAS_TANGO;ENABLE_SPATIALTRACKING;ENABLE_ETC_COMPRESSION;PLATFORM_EXTENDS_VULKAN_DEVICE;PLATFORM_HAS_MULTIPLE_SWAPCHAINS;UNITY_ANDROID_SUPPORTS_SHADOWFILES;PLATFORM_UPDATES_TIME_OUTSIDE_OF_PLAYER_LOOP;ENABLE_UNITYADS_RUNTIME;UNITY_UNITYADS_API;ENABLE_MONO;NET_STANDARD_2_0;NET_STANDARD;NET_STANDARD_2_1;NETSTANDARD;NETSTANDARD2_1;ENABLE_CUSTOM_RENDER_TEXTURE;ENABLE_DIRECTOR;ENABLE_LOCALIZATION;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_TILEMAP;ENABLE_TIMELINE;ENABLE_INPUT_SYSTEM;ENABLE_LEGACY_INPUT_MANAGER;TEXTCORE_FONT_ENGINE_1_5_OR_NEWER;UNITY_POST_PROCESSING_STACK_V2;MOREMOUNTAINS_NICEVIBRATIONS_INSTALLED;ODIN_INSPECTOR;ODIN_INSPECTOR_3;ODIN_INSPECTOR_3_1;UNITY_VISUAL_SCRIPTING;BAKERY_INCLUDED;UNITASK_DOTWEEN_SUPPORT;DISTANT_LANDS;COZY_WEATHER;COZY_URP;CSHARP_7_OR_LATER;CSHARP_7_3_OR_NEWER</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <NoWarn>0169,0649</NoWarn>
@@ -48,6 +48,7 @@
     <Compile Include="Assets\Scripts\Gameplay\Bots\StateMachine\States\GoToResourceSourceLumberjackBotState.cs" />
     <Compile Include="Assets\Scripts\UI\BillboardEffect.cs" />
     <Compile Include="Assets\Scripts\Infrastructure\Services\SaveLoad\ISaveLoadService.cs" />
+    <Compile Include="Assets\Scripts\Infrastructure\StaticData\WindData\BlownByWindConfigurableJoint.cs" />
     <Compile Include="Assets\MeshBaker\Examples\Scripts\MB_MigrateMaterialsToDifferentPipeline.cs" />
     <Compile Include="Assets\Scripts\Infrastructure\States\StateMachine.cs" />
     <Compile Include="Assets\Scripts\Infrastructure\States\LoadProgressState.cs" />
@@ -56,13 +57,15 @@
     <Compile Include="Assets\Scripts\Infrastructure\StaticData\BuildingsData\MinionHutUpgradeData.cs" />
     <Compile Include="Assets\Other\KriptoFX\MuzzleFlashes\Scripts\Demo\FPS_MouseLook.cs" />
     <Compile Include="Assets\Scripts\UI\Buttons\BuyButtonDisabler.cs" />
+    <Compile Include="Assets\Scripts\Gameplay\Environment\BirdAI\BirdSpawn.cs" />
     <Compile Include="Assets\Other\KriptoFX\MuzzleFlashes\Scripts\FPSLightCurves.cs" />
+    <Compile Include="Assets\Scripts\Utils\CameraExtensions.cs" />
     <Compile Include="Assets\Scripts\Utils\Tags.cs" />
     <Compile Include="Assets\Scripts\Infrastructure\Ticker.cs" />
     <Compile Include="Assets\Scripts\Gameplay\Resource\DropoutResource.cs" />
     <Compile Include="Assets\Scripts\Gameplay\Lumberjack\LumberjackBotStorage.cs" />
     <Compile Include="Assets\Scripts\Utils\AssetPaths.cs" />
-    <Compile Include="Assets\Scripts\Gameplay\Buildings\ResourcesShop.cs" />
+    <Compile Include="Assets\Scripts\Gameplay\Environment\Buildings\ResourcesShop.cs" />
     <Compile Include="Assets\Scripts\Infrastructure\Services\Input\StandaloneInput.cs" />
     <Compile Include="Assets\Scripts\Gameplay\Bots\StateMachine\States\BringResourcesToHutLumberjackBotState.cs" />
     <Compile Include="Assets\Scripts\Infrastructure\Services\SaveLoad\SaveLoadService.cs" />
@@ -72,21 +75,23 @@
     <Compile Include="Assets\Scripts\UI\ResourceCounter.cs" />
     <Compile Include="Assets\Scripts\Infrastructure\Services\StaticDataService\IStaticDataService.cs" />
     <Compile Include="Assets\Other\KriptoFX\MuzzleFlashes\Scripts\Demo\FPS_RigidbodyFirstPersonController.cs" />
-    <Compile Include="Assets\Scripts\Gameplay\Buildings\MainHouse.cs" />
+    <Compile Include="Assets\Scripts\Gameplay\Environment\Buildings\MainHouse.cs" />
     <Compile Include="Assets\Scripts\Infrastructure\Services\Pool\ParticlePool.cs" />
     <Compile Include="Assets\Scripts\Infrastructure\StaticData\BuildingsData\MinionHutLevelUpgrade.cs" />
     <Compile Include="Assets\Scripts\Infrastructure\Services\SaveLoad\OnExitSave.cs" />
+    <Compile Include="Assets\Quirky Series - Birds Bundle\_Scripts\Demo.cs" />
     <Compile Include="Assets\Scripts\Infrastructure\Installers\BootstrapInstaller.cs" />
     <Compile Include="Assets\Scripts\Gameplay\Player\Animation\LumberjackAnimator.cs" />
     <Compile Include="Assets\Scripts\Gameplay\Cameras\CameraSway.cs" />
     <Compile Include="Assets\Scripts\Infrastructure\Services\IService.cs" />
-    <Compile Include="Assets\Scripts\Gameplay\Buildings\UpgradableBuilding.cs" />
+    <Compile Include="Assets\Scripts\Gameplay\Environment\Buildings\UpgradableBuilding.cs" />
     <Compile Include="Assets\Scripts\UI\Entities\HUD_Folder\HUD.cs" />
     <Compile Include="Assets\Other\KriptoFX\MuzzleFlashes\Scripts\FPSRandomRotateAngle.cs" />
     <Compile Include="Assets\Scripts\Infrastructure\StaticData\CameraData\CameraSwayConfig.cs" />
     <Compile Include="Assets\Scripts\UI\Entities\PopUps\MainHousePopUp.cs" />
     <Compile Include="Assets\Scripts\Infrastructure\StaticData\LumberjackData\LumberjackBotConfig.cs" />
     <Compile Include="Assets\MeshBaker\Examples\SceneRuntimeExample\MB_ExampleSkinnedMeshDescription.cs" />
+    <Compile Include="Assets\Scripts\Utils\ListExtensions.cs" />
     <Compile Include="Assets\Scripts\Infrastructure\StaticData\LumberjackData\PlayerConfig.cs" />
     <Compile Include="Assets\Scripts\Gameplay\Resource\ResourcesSelling.cs" />
     <Compile Include="Assets\Scripts\Utils\TransformExtensions.cs" />
@@ -94,6 +99,7 @@
     <Compile Include="Assets\Scripts\Infrastructure\Services\Cache\ICacheService.cs" />
     <Compile Include="Assets\Other\_Gloomy_Hyper\Script\MouseOrbitImproved.cs" />
     <Compile Include="Assets\Scripts\Infrastructure\Factories\IFactoriesHolderService.cs" />
+    <Compile Include="Assets\Scripts\Gameplay\Environment\Wind\WindSimulator.cs" />
     <Compile Include="Assets\Scripts\Infrastructure\Services\Pool\Particle\ParticleRender.cs" />
     <Compile Include="Assets\Scripts\Gameplay\Player\ObstacleFade\IObscurablePlayer.cs" />
     <Compile Include="Assets\Other\KriptoFX\MuzzleFlashes\Scripts\MaterialType.cs" />
@@ -101,8 +107,10 @@
     <Compile Include="Assets\Scripts\Infrastructure\Data\PlayerProgress.cs" />
     <Compile Include="Assets\Scripts\UI\Entities\PopUps\UIAnimation.cs" />
     <Compile Include="Assets\Scripts\Infrastructure\Factories\FactoriesHolderService.cs" />
+    <Compile Include="Assets\Scripts\Gameplay\Environment\Wind\IWindEffectable.cs" />
     <Compile Include="Assets\Scripts\Gameplay\Lumberjack\LumberjackBase.cs" />
     <Compile Include="Assets\Scripts\UI\Factory\IUIHolder.cs" />
+    <Compile Include="Assets\Scripts\Gameplay\CustomTriggers\ICustomTrigger.cs" />
     <Compile Include="Assets\Scripts\UI\Factory\IUIFactory.cs" />
     <Compile Include="Assets\Scripts\Infrastructure\Installers\GameSceneInstaller.cs" />
     <Compile Include="Assets\Scripts\Gameplay\Resource\ResourceSource.cs" />
@@ -131,7 +139,7 @@
     <Compile Include="Assets\Scripts\Infrastructure\States\GameLoopState.cs" />
     <Compile Include="Assets\Scripts\Infrastructure\Services\AllServices.cs" />
     <Compile Include="Assets\Scripts\Infrastructure\Services\Pool\BasePool.cs" />
-    <Compile Include="Assets\Scripts\Gameplay\Buildings\DecorationBuilding.cs" />
+    <Compile Include="Assets\Scripts\Gameplay\Environment\Buildings\DecorationBuilding.cs" />
     <Compile Include="Assets\Scripts\Infrastructure\AssetProviderService\AssetProvider.cs" />
     <Compile Include="Assets\Scripts\Infrastructure\AssetProviderService\IAssets.cs" />
     <Compile Include="Assets\GUI PRO Kit - Simple Casual\Scripts\PanelSimpleCasual.cs" />
@@ -146,7 +154,7 @@
     <Compile Include="Assets\Scripts\UI\Entities\PopUps\UpgradablePopUp.cs" />
     <Compile Include="Assets\Scripts\Gameplay\Cameras\GameCameraStateController.cs" />
     <Compile Include="Assets\MeshBaker\Examples\SceneRuntimeExample\MB_Example.cs" />
-    <Compile Include="Assets\Scripts\Gameplay\Buildings\Building.cs" />
+    <Compile Include="Assets\Scripts\Gameplay\Environment\Buildings\Building.cs" />
     <Compile Include="Assets\Other\KriptoFX\MuzzleFlashes\Scripts\Rendering\FPS_PerPlatformSettings.cs" />
     <Compile Include="Assets\Scripts\Infrastructure\StaticData\ResourcesData\ResourcesConfig.cs" />
     <Compile Include="Assets\Other\KriptoFX\MuzzleFlashes\Scripts\FPS_Decal.cs" />
@@ -165,27 +173,29 @@
     <Compile Include="Assets\Scripts\Infrastructure\Services\Guid\IGuidService.cs" />
     <Compile Include="Assets\Scripts\Gameplay\Resource\ResourceStorage\IGameResourceStorage.cs" />
     <Compile Include="Assets\Scripts\Infrastructure\States\GameStateMachine.cs" />
-    <Compile Include="Assets\Scripts\Gameplay\Locations\ResourceSourcesHolder.cs" />
+    <Compile Include="Assets\Scripts\Gameplay\Environment\Locations\ResourceSourcesHolder.cs" />
+    <Compile Include="Assets\Scripts\Infrastructure\StaticData\WindData\EnvironmentConfig.cs" />
     <Compile Include="Assets\GUI PRO Kit - Simple Casual\Scripts\PanelControlSimpleCasual.cs" />
     <Compile Include="Assets\Scripts\Gameplay\Player\Animation\LumberjackAnimationIdleState.cs" />
     <Compile Include="Assets\Scripts\Gameplay\Player\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\Gameplay\Bots\LumberjackBotStorageResourceShare.cs" />
     <Compile Include="Assets\Scripts\UI\Animation\UIDisappearAnimation.cs" />
-    <Compile Include="Assets\Scripts\Gameplay\Buildings\MinionHut.cs" />
-    <Compile Include="Assets\Scripts\Gameplay\Locations\Island.cs" />
+    <Compile Include="Assets\Scripts\Gameplay\Environment\Buildings\MinionHut.cs" />
+    <Compile Include="Assets\Scripts\Gameplay\Environment\Locations\Island.cs" />
     <Compile Include="Assets\Scripts\Gameplay\Resource\StoneFolder\StoneSource.cs" />
     <Compile Include="Assets\Scripts\Infrastructure\States\GameLostState.cs" />
     <Compile Include="Assets\Scripts\Infrastructure\States\LoadLevelState.cs" />
     <Compile Include="Assets\Scripts\Gameplay\Player\ObstacleFade\FadeObscurePlayerObjects.cs" />
     <Compile Include="Assets\Scripts\Gameplay\Bots\StateMachine\LumberjackBotStateMachine.cs" />
     <Compile Include="Assets\Scripts\Infrastructure\Factories\PlayerFactoryFolder\IPlayerFactory.cs" />
+    <Compile Include="Assets\Scripts\Gameplay\CustomTriggers\HitAnotherCustomTrigger.cs" />
     <Compile Include="Assets\Other\KriptoFX\MuzzleFlashes\Scripts\FPSShaderFloatCurves.cs" />
     <Compile Include="Assets\Scripts\Gameplay\Player\Animation\LumberjackAnimationRunState.cs" />
     <Compile Include="Assets\Scripts\UI\Mediator\UIMediator.cs" />
     <Compile Include="Assets\Scripts\Gameplay\Resource\ResourceSourceState.cs" />
     <Compile Include="Assets\Scripts\Gameplay\GameFlow\BuildingDiscover.cs" />
     <Compile Include="Assets\MeshBaker\Examples\SceneRuntimeExample\MB_ExampleMover.cs" />
-    <Compile Include="Assets\Scripts\Gameplay\Locations\MainLocation.cs" />
+    <Compile Include="Assets\Scripts\Gameplay\Environment\Locations\MainLocation.cs" />
     <Compile Include="Assets\Scripts\UI\Factory\UIHolder.cs" />
     <Compile Include="Assets\Scripts\Infrastructure\StaticData\BuildingsData\BuildingsConfig.cs" />
     <Compile Include="Assets\Scripts\UI\Buttons\UpgradeButtonDisabler.cs" />
@@ -196,13 +206,16 @@
     <Compile Include="Assets\Scripts\Gameplay\Player\Player.cs" />
     <Compile Include="Assets\Scripts\Infrastructure\Factories\BotFactoryFolder\BotFactory.cs" />
     <Compile Include="Assets\Other\KriptoFX\MuzzleFlashes\Scripts\Demo\FPSDemoReactivator.cs" />
+    <Compile Include="Assets\Scripts\UI\Entities\Windows\Curtain.cs" />
     <Compile Include="Assets\MeshBaker\Examples\BakeTexturesAtRuntime\BakeTexturesAtRuntime.cs" />
     <Compile Include="Assets\Scripts\Utils\IntExtensions.cs" />
     <Compile Include="Assets\Scripts\Infrastructure\Services\Pool\PoolService.cs" />
     <Compile Include="Assets\Scripts\Gameplay\Bots\StateMachine\States\IsOnTheWayToResourceSourceLumberjackBotState.cs" />
-    <Compile Include="Assets\Scripts\Gameplay\Buildings\BuildingConstruction.cs" />
+    <Compile Include="Assets\Scripts\Utils\ConfigurableJointExtensions.cs" />
+    <Compile Include="Assets\Scripts\Gameplay\Environment\BirdAI\Bird.cs" />
+    <Compile Include="Assets\Scripts\Gameplay\Environment\Buildings\BuildingConstruction.cs" />
     <Compile Include="Assets\MeshBaker\Examples\CharacterCustomization\MB_SwapShirts.cs" />
-    <Compile Include="Assets\Scripts\Gameplay\Buildings\IResourceBuildingReceivable.cs" />
+    <Compile Include="Assets\Scripts\Gameplay\Environment\Buildings\IResourceBuildingReceivable.cs" />
     <Compile Include="Assets\MeshBaker\Examples\SkinnedMeshRenderer\MB_SkinnedMeshSceneController.cs" />
     <Compile Include="Assets\Scripts\Infrastructure\ICoroutineRunner.cs" />
     <Compile Include="Assets\Scripts\Infrastructure\Services\Input\MobileInput.cs" />
@@ -809,6 +822,10 @@
       <Project>{71ab9ec1-5750-31af-9ace-cec3e83d9219}</Project>
       <Name>BakeryRuntimeAssembly.Player</Name>
     </ProjectReference>
+    <ProjectReference Include="Unity.InternalAPIEngineBridge.001.Player.csproj">
+      <Project>{636fa944-f620-64b1-5352-bfbe299c68f0}</Project>
+      <Name>Unity.InternalAPIEngineBridge.001.Player</Name>
+    </ProjectReference>
     <ProjectReference Include="Unity.RenderPipelines.Universal.Shaders.Player.csproj">
       <Project>{5dfa39ba-2647-839c-c66b-a7ebfa6289b7}</Project>
       <Name>Unity.RenderPipelines.Universal.Shaders.Player</Name>
@@ -837,13 +854,17 @@
       <Project>{ffddfe77-9d36-6b39-9ff3-1dedaeb93596}</Project>
       <Name>UnityEngine.UI.Player</Name>
     </ProjectReference>
-    <ProjectReference Include="MoreMountains.Feedbacks.PostProcessing.Player.csproj">
-      <Project>{b5acc3ca-520e-3b8c-f407-56f4a5ba8649}</Project>
-      <Name>MoreMountains.Feedbacks.PostProcessing.Player</Name>
+    <ProjectReference Include="Unity.2D.IK.Runtime.Player.csproj">
+      <Project>{d084eba0-8b57-e06e-4de7-921e7a15c1d5}</Project>
+      <Name>Unity.2D.IK.Runtime.Player</Name>
     </ProjectReference>
     <ProjectReference Include="UniTask.TextMeshPro.Player.csproj">
       <Project>{f2ac4251-5772-1a65-955e-1d0cc6cb5535}</Project>
       <Name>UniTask.TextMeshPro.Player</Name>
+    </ProjectReference>
+    <ProjectReference Include="MoreMountains.Feedbacks.PostProcessing.Player.csproj">
+      <Project>{b5acc3ca-520e-3b8c-f407-56f4a5ba8649}</Project>
+      <Name>MoreMountains.Feedbacks.PostProcessing.Player</Name>
     </ProjectReference>
     <ProjectReference Include="Cinemachine.Player.csproj">
       <Project>{47973b4f-93a5-290f-0b8d-bba041ba1ce4}</Project>
@@ -913,10 +934,6 @@
       <Project>{1aea1d74-c883-124c-1efe-ebf4e58a44f0}</Project>
       <Name>MK.Toon.Examples.Player</Name>
     </ProjectReference>
-    <ProjectReference Include="Unity.RenderPipelines.Core.Runtime.Player.csproj">
-      <Project>{dfa32be4-d870-289c-dde2-fa8cb82da0b8}</Project>
-      <Name>Unity.RenderPipelines.Core.Runtime.Player</Name>
-    </ProjectReference>
     <ProjectReference Include="UniTask.DOTween.Player.csproj">
       <Project>{4ba6ac55-f93c-32cf-389b-3c2b02090529}</Project>
       <Name>UniTask.DOTween.Player</Name>
@@ -928,6 +945,10 @@
     <ProjectReference Include="UniTask.Linq.Player.csproj">
       <Project>{8520ad79-0244-aadd-c3c3-220be88aa9dc}</Project>
       <Name>UniTask.Linq.Player</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.RenderPipelines.Core.Runtime.Player.csproj">
+      <Project>{dfa32be4-d870-289c-dde2-fa8cb82da0b8}</Project>
+      <Name>Unity.RenderPipelines.Core.Runtime.Player</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.VisualScripting.Core.Player.csproj">
       <Project>{91fac7e9-538d-43e6-cb8a-64a3ede9a0a1}</Project>
@@ -941,6 +962,10 @@
       <Project>{9ec804ae-8527-f5ed-0363-2ef2ce8536cb}</Project>
       <Name>Unity.Mathematics.Player</Name>
     </ProjectReference>
+    <ProjectReference Include="UniRx.Player.csproj">
+      <Project>{3697c3d9-0fe4-4f18-6f26-d9d2cd0f14dc}</Project>
+      <Name>UniRx.Player</Name>
+    </ProjectReference>
     <ProjectReference Include="Unity.Burst.Player.csproj">
       <Project>{b3c2ceca-ee48-1af5-303c-feb38782e689}</Project>
       <Name>Unity.Burst.Player</Name>
@@ -949,9 +974,17 @@
       <Project>{5bf4adad-ac67-1bc5-cab9-a4caa73044ae}</Project>
       <Name>AstarPathfindingProject.Player</Name>
     </ProjectReference>
+    <ProjectReference Include="Unity.Postprocessing.Runtime.Player.csproj">
+      <Project>{65696eab-817a-9327-a047-367e32ad6f5f}</Project>
+      <Name>Unity.Postprocessing.Runtime.Player</Name>
+    </ProjectReference>
     <ProjectReference Include="SimpleInput.Runtime.Player.csproj">
       <Project>{2db20ea8-4d6c-5bba-e320-323d95cea084}</Project>
       <Name>SimpleInput.Runtime.Player</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.2D.Animation.Runtime.Player.csproj">
+      <Project>{159c18b2-3de6-6715-e25d-fcab4fa0d509}</Project>
+      <Name>Unity.2D.Animation.Runtime.Player</Name>
     </ProjectReference>
     <ProjectReference Include="MoreMountains.Feedbacks.Player.csproj">
       <Project>{51808121-8046-b784-1c70-81dc706c1a37}</Project>
@@ -964,6 +997,10 @@
     <ProjectReference Include="Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.Player.csproj">
       <Project>{511406f6-4c04-e02b-2e2b-aeb8700f4757}</Project>
       <Name>Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.Player</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.2D.Common.Runtime.Player.csproj">
+      <Project>{42c61695-6514-ccc4-66fc-a748742627ea}</Project>
+      <Name>Unity.2D.Common.Runtime.Player</Name>
     </ProjectReference>
     <ProjectReference Include="UniTask.Player.csproj">
       <Project>{6ab34727-f48d-f5f7-577d-f8b445ce3a7d}</Project>

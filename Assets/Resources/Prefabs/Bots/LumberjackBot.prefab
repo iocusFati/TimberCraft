@@ -3086,7 +3086,7 @@ GameObject:
   - component: {fileID: 8175809991821591049}
   m_Layer: 13
   m_Name: LumberjackBot
-  m_TagString: Player
+  m_TagString: Minion
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3216,9 +3216,9 @@ MonoBehaviour:
   targetCompatibility: {fileID: 0}
   maxAcceleration: -2.5
   rotationSpeed: 360
-  slowdownDistance: 0.8
-  pickNextWaypointDist: 1
-  endReachedDistance: 1
+  slowdownDistance: 2
+  pickNextWaypointDist: 0.7
+  endReachedDistance: 0.9
   alwaysDrawGizmos: 1
   slowWhenNotFacingTarget: 1
   whenCloseToDestination: 0
@@ -10325,6 +10325,10 @@ PrefabInstance:
     - target: {fileID: 8939146047705298039, guid: 03b7f8764c7693945a50b7b9aa238826, type: 3}
       propertyPath: m_Name
       value: Weapon
+      objectReference: {fileID: 0}
+    - target: {fileID: 8939146047705298039, guid: 03b7f8764c7693945a50b7b9aa238826, type: 3}
+      propertyPath: m_TagString
+      value: Minion
       objectReference: {fileID: 0}
     - target: {fileID: 8942933849688378211, guid: 03b7f8764c7693945a50b7b9aa238826, type: 3}
       propertyPath: m_RootOrder

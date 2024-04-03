@@ -1,5 +1,5 @@
 ﻿using System.Collections.Generic;
-using Gameplay.Buildings;
+using Gameplay.Environment.Buildings;
 using Infrastructure.Data;
 using Infrastructure.Services.PersistentProgress;
 using Infrastructure.Services.SaveLoad;
@@ -13,10 +13,8 @@ namespace Gameplay.GameFlow
         [SerializeField] private BuildingDiscover _buildingDiscover;
         [SerializeField] private MainHouse _mainHouse;
         
-        [SerializeField] private Transform _treesParent;
-        [SerializeField] private GameObject _fence;
-
         [SerializeField] private List<GameObject> _showInTheBeginningObjects;
+        [SerializeField] private List<GameObject> _showOnTutorialComplete;
 
         private bool _tutorialCompleted;
 
@@ -48,32 +46,28 @@ namespace Gameplay.GameFlow
         {
             _buildingDiscover.UnlockWithKey(_mainHouse);
             _mainHouse.OnBuiltEvent += FinishTutorial;
-            
-            _fence.SetActive(false);
 
-            ShowTrees(false);
+            ShowTutorialCompleteObjects(false);
             ShowTutorialObjects();
         }
 
         private void FinishTutorial()
         {
-            ShowTrees(true);
-            
-            _fence.SetActive(true);
+            ShowTutorialCompleteObjects(true);
 
             _tutorialCompleted = true;
+        }
+
+        private void ShowTutorialCompleteObjects(bool show)
+        {
+            foreach (var objectToShow in _showOnTutorialComplete) 
+                objectToShow.SetActive(show);
         }
 
         private void ShowTutorialObjects()
         {
             foreach (GameObject showInTheBeginningObject in _showInTheBeginningObjects) 
                 showInTheBeginningObject.SetActive(true);
-        }
-
-        private void ShowTrees(bool hide)
-        {
-            foreach (Transform tree in _treesParent) 
-                tree.gameObject.SetActive(hide);
         }
     }
 }

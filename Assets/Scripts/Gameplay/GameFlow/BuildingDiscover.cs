@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using Gameplay.Buildings;
+using Gameplay.Environment.Buildings;
 using Infrastructure.Data;
 using Infrastructure.Services.Guid;
 using Infrastructure.Services.PersistentProgress;
@@ -50,17 +51,22 @@ namespace Gameplay.GameFlow
 
         public void LoadProgress(PlayerProgress progress)
         {
-            List<IEnumerable<Building>> buildingsOutOfProgress = GetBuildingsOutOfProgress(progress).ToList();
-
-            List<Building> unlockedBuildingsList = buildingsOutOfProgress
-                .SelectMany(list => list)
-                .ToList();
+            List<Building> unlockedBuildings = GetBuildingsFromProgress(progress).ToList();
+            AddUnlockedByDefaultBuildings(unlockedBuildings);
             
-            _unlockedBuildings = new HashSet<Building>(unlockedBuildingsList);
+            _unlockedBuildings = new HashSet<Building>(unlockedBuildings);
             
-            SubscribeToOnBuilt(unlockedBuildingsList[^1]);
+            SubscribeToOnBuilt(unlockedBuildings[^1]);
 
             HideAllLocked();
+        }
+
+        private void AddUnlockedByDefaultBuildings(List<Building> buildingsOutOfProgress)
+        {
+            buildingsOutOfProgress
+                .AddRange(_buildings
+                    .Where(pair => pair.Key.IsUnlockedByDefault)
+                    .Select(pair => pair.Key));
         }
 
         public void UpdateProgress(PlayerProgress progress)
@@ -68,12 +74,14 @@ namespace Gameplay.GameFlow
             progress.UnlockedBuildingsIds = UnlockedBuildingsIds;
         }
 
-        private IEnumerable<IEnumerable<Building>> GetBuildingsOutOfProgress(PlayerProgress progress)
+        private List<Building> GetBuildingsFromProgress(PlayerProgress progress)
         {
             return progress.UnlockedBuildingsIds
                 .Select(id => _guidService.GetGameObjectFor(id)
                     .Select(building => building.GetComponent<Building>())
-                    .Where(building => building is not null));
+                    .Where(building => building is not null))
+                .SelectMany(list => list)
+                .ToList();
         }
 
         private void HideAllLocked()

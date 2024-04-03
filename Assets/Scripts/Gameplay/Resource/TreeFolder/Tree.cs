@@ -97,9 +97,15 @@ namespace Gameplay.Resource
             InitializeInitialPositions();
             
             _stumpCollider.enabled = false;
-            _stumpImpulseSource = _stump.GetComponent<CinemachineCollisionImpulseSource>();
             _stumpTriggerCheck.OnTriggerEntered += StumpTriggerEnterKickedIn;
+        }
 
+        public override void Construct(int resourcesValue)
+        {
+            base.Construct(resourcesValue);
+            
+            _stumpImpulseSource = _stump.GetComponent<CinemachineCollisionImpulseSource>();
+            
             _segmentCinemachineSignalSources = _segments.ToDictionary(segment => segment,
                 segment => segment.GetComponent<CinemachineCollisionImpulseSource>());
         }
@@ -143,8 +149,22 @@ namespace Gameplay.Resource
 
         private void EnableSignals(bool enable)
         {
-            foreach (var segment in _segments) 
+            foreach (var segment in _segments)
+            {
+                if (_segmentCinemachineSignalSources is null)
+                {
+                    _segmentCinemachineSignalSources = _segments.ToDictionary(segment => segment,
+                        impulseSegment => impulseSegment.GetComponent<CinemachineCollisionImpulseSource>());
+
+                    Debug.LogError(this);
+                }
+                if (_segmentCinemachineSignalSources[segment] is null)
+                {
+                    Debug.LogError(this);
+                    continue;
+                }
                 _segmentCinemachineSignalSources[segment].enabled = enable;
+            }
 
             _stumpImpulseSource.enabled = enable;
         }

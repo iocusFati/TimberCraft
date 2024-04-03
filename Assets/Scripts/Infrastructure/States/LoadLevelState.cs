@@ -1,9 +1,10 @@
-using Gameplay.Locations;
+using Gameplay.Environment.Locations;
 using Infrastructure.Factories;
 using Infrastructure.Factories.PlayerFactoryFolder;
 using Infrastructure.Services.Pool;
 using Infrastructure.Services.SaveLoad;
 using Infrastructure.States.Interfaces;
+using UI.Entities.Windows;
 using UI.Factory;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -57,6 +58,8 @@ namespace Infrastructure.States
 
         private void OnLoaded()
         {
+            Curtain.Instance.Hide();
+            
             MainLocation mainLocation = Object.FindObjectOfType<MainLocation>();
             mainLocation.Initialize();
 

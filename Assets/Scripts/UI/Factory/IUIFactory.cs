@@ -7,5 +7,6 @@ namespace UI.Factory
     {
         void CreateGameUIRoot();
         HUD CreateHUD();
+        void CreateCurtain();
     }
 }

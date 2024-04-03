@@ -15,7 +15,7 @@ namespace MoreMountains.Feedbacks
 		/// a static bool used to disable all feedbacks of this type at once
 		public static bool FeedbackTypeAuthorized = true;
 		/// the possible modes for this feedback (Absolute : always follow the curve from start to finish, Additive : add to the values found when this feedback gets played)
-		public enum Modes { Absolute, Additive, ToDestination }
+		public enum Modes { Absolute, Additive, ToDestination, ToDestinationDynamic }
 		/// the timescale modes this feedback can operate on
 		public enum TimeScales { Scaled, Unscaled }
 
@@ -91,6 +91,8 @@ namespace MoreMountains.Feedbacks
 		public bool DetermineRotationOnPlay = false;
         
 		[Header("To Destination")]
+		[MMFEnumCondition("Mode", (int)Modes.ToDestinationDynamic)]
+		public Transform Destination;
 		/// the space in which the ToDestination mode should operate 
 		[Tooltip("the space in which the ToDestination mode should operate")]
 		[MMFEnumCondition("Mode", (int)Modes.ToDestination)]
@@ -101,7 +103,7 @@ namespace MoreMountains.Feedbacks
 		public Vector3 DestinationAngles = new Vector3(0f, 180f, 0f);
 		/// how the x part of the rotation should animate over time, in degrees
 		[Tooltip("how the x part of the rotation should animate over time, in degrees")]
-		[MMFEnumCondition("Mode", (int)Modes.ToDestination)]
+		[MMFEnumCondition("Mode", (int)Modes.ToDestination, (int)Modes.ToDestinationDynamic)]
 		public MMTweenType ToDestinationTween = new MMTweenType(MMTween.MMTweenCurve.EaseInQuintic);
 		
 		/// the duration of this feedback is the duration of the rotation
@@ -159,13 +161,13 @@ namespace MoreMountains.Feedbacks
 			float intensityMultiplier = ComputeIntensity(feedbacksIntensity, position);
 			if (Active || Owner.AutoPlayOnEnable)
 			{
+				if (!AllowAdditivePlays && (_coroutine != null))
+				{
+					return;
+				}
+
 				if ((Mode == Modes.Absolute) || (Mode == Modes.Additive))
 				{
-					if (!AllowAdditivePlays && (_coroutine != null))
-					{
-						return;
-					}
-
 					if (DetermineRotationOnPlay && NormalPlayDirection)
 					{
 						GetInitialRotation();
@@ -175,13 +177,15 @@ namespace MoreMountains.Feedbacks
 				}
 				else if (Mode == Modes.ToDestination)
 				{
-					if (!AllowAdditivePlays && (_coroutine != null))
-					{
-						return;
-					}
+					
 					if (DetermineRotationOnPlay && NormalPlayDirection) { GetInitialRotation(); }
 					ClearCoroutine();
 					_coroutine = Owner.StartCoroutine(RotateToDestination());
+				}
+				else if (Mode == Modes.ToDestinationDynamic)
+				{
+					ClearCoroutine();
+					_coroutine = Owner.StartCoroutine(RotateTowardTarget());
 				}
 			}
 		}
@@ -192,6 +196,28 @@ namespace MoreMountains.Feedbacks
 			{
 				Owner.StopCoroutine(_coroutine);
 				_coroutine = null;
+			}
+		}
+
+		private IEnumerator RotateTowardTarget()
+		{
+			float journey = 0;
+			
+			while (journey >= 0 && FeedbackDuration > 0 && 
+			       journey < FeedbackDuration)
+			{
+				float percent = Mathf.Clamp01(journey / FeedbackDuration);
+				percent = ToDestinationTween.Evaluate(percent);
+			
+				Vector3 directionToTarget = Destination.position - AnimateRotationTarget.position;
+				Quaternion targetRotation = Quaternion.LookRotation(directionToTarget);
+				
+				AnimateRotationTarget.rotation = Quaternion.Lerp(AnimateRotationTarget.rotation, targetRotation,
+					percent);
+
+				journey += FeedbackDeltaTime;
+
+				yield return null;
 			}
 		}
 

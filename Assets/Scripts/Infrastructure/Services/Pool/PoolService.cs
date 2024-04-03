@@ -56,7 +56,7 @@ namespace Infrastructure.Services.Pool
 
         private void InitializeOnLandedParticles() => 
             OnLandedParticlesPool = new ParticlePool(_assets, AssetPaths.OnLandedParticle);
-
+        
         private void InitializeDropoutsPool() =>
             DropoutsPool = new Dictionary<ResourceType, DropoutPool>
             {

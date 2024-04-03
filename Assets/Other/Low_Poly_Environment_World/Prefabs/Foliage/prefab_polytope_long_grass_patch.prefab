@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1309095466835327010}
+  - component: {fileID: 5862373179125232099}
   m_Layer: 0
   m_Name: prefab_polytope_long_grass_patch
   m_TagString: Untagged
@@ -26,11 +27,31 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 641093680535036344}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!205 &5862373179125232099
+LODGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2213927420041437447}
+  serializedVersion: 2
+  m_LocalReferencePoint: {x: 0, y: 0, z: 0}
+  m_Size: 1
+  m_FadeMode: 0
+  m_AnimateCrossFading: 0
+  m_LastLODIsBillboard: 0
+  m_LODs:
+  - screenRelativeHeight: 0.021905962
+    fadeTransitionWidth: 0
+    renderers:
+    - renderer: {fileID: 641093680537330520}
+  m_Enabled: 1
 --- !u!1001 &641093680535436088
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -42,9 +63,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: model_polytope_long_grass_patch
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 08516b86037192049b231f6a82a66620, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 08516b86037192049b231f6a82a66620, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 08516b86037192049b231f6a82a66620, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -3.69
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 08516b86037192049b231f6a82a66620, type: 3}
       propertyPath: m_LocalPosition.y
@@ -52,7 +81,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 08516b86037192049b231f6a82a66620, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 08516b86037192049b231f6a82a66620, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 08516b86037192049b231f6a82a66620, type: 3}
       propertyPath: m_LocalRotation.x
@@ -67,14 +100,6 @@ PrefabInstance:
       value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 08516b86037192049b231f6a82a66620, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 08516b86037192049b231f6a82a66620, type: 3}
-      propertyPath: m_RootOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 08516b86037192049b231f6a82a66620, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: 0
       objectReference: {fileID: 0}
@@ -86,11 +111,19 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: 08516b86037192049b231f6a82a66620, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 08516b86037192049b231f6a82a66620, type: 3}
 --- !u!4 &641093680535036344 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 400000, guid: 08516b86037192049b231f6a82a66620,
-    type: 3}
+  m_CorrespondingSourceObject: {fileID: 400000, guid: 08516b86037192049b231f6a82a66620, type: 3}
+  m_PrefabInstance: {fileID: 641093680535436088}
+  m_PrefabAsset: {fileID: 0}
+--- !u!23 &641093680537330520 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 2300000, guid: 08516b86037192049b231f6a82a66620, type: 3}
   m_PrefabInstance: {fileID: 641093680535436088}
   m_PrefabAsset: {fileID: 0}

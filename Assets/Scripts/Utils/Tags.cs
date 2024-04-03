@@ -7,5 +7,6 @@
         public const string ResourceSource = "ResourceSource";
         public const string Resource = "Resource";
         public const string TreeTip = "TreeTip";
+        public const string Player = "Player";
     }
 }

@@ -7,6 +7,7 @@ namespace Utils
 
         public const string UIRoot = "Prefabs/UI/UIRoot";
         public const string HUD = "Prefabs/UI/HUD";
+        public const string Curtain = "Prefabs/UI/Curtain";
 
         //Particles
         public const string WoodHitParticle = "Prefabs/Particles/WoodImpact";
@@ -25,6 +26,7 @@ namespace Utils
         public const string UIConfig = "StaticData/Configs/UIConfig";
         public const string BuildingsConfig = "StaticData/Configs/BuildingsConfig";
         public const string PoolConfig = "StaticData/Configs/PoolConfig";
+        public const string EnvironmentConfig = "StaticData/Configs/EnvironmentConfig";
 
         public const string MinionHutUpgradeData = "StaticData/GameData/MinionHutUpgradeData";
         public const string MainHouseUpgradeData = "StaticData/GameData/MainHouseUpgradeData";

@@ -1,4 +1,5 @@
 ﻿using Gameplay.Buildings;
+using Gameplay.Environment.Buildings;
 
 namespace UI.Mediator
 {
