@@ -15,4 +15,5 @@ MonoBehaviour:
   modifiedAssetPathList:
   - Assets/Bakery/examples/content/sponza/sponza.FBX
   - Assets/Other/Lumber/Mesh/CubeRig.fbx
-  modifiedAssetPaddingHash: d6a958ffd2f23a06
+  - Assets/Other/Low_Poly_Environment_World/Content/Models/model_polytope_long_grass_patch.fbx
+  modifiedAssetPaddingHash: d6a958ffd2f23a0600b309ce

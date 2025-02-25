@@ -51,6 +51,7 @@ MonoBehaviour:
     - MoreMountains.Feedbacks.TextMeshPro
     - MoreMountains.Feedbacks.URP
     - MoreMountains.Tools
+    - Purchasing.Common
     - SimpleInput.Runtime
     - UniRx
     - UniRx.Examples

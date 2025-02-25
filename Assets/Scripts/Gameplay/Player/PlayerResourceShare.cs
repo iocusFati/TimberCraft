@@ -116,7 +116,6 @@ namespace Gameplay.Player
                 ? shareQuantity
                 : _resourcesInOneDropout;
 
-
             if (isForConstruction && existingResources < resourceShareQuantity && existingResources > 0)
                 resourceShareQuantity = existingResources;
             
